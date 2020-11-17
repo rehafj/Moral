@@ -1,0 +1,759 @@
+[
+                      {
+                           "type": "Farmhand",
+                           "personID": 5,
+                           "companyID": 3,
+                           "shift": "day",
+                           "hiring": 251,
+                           "precededBy": -1,
+                           "succeededBy": -1,
+                           "hiredAsFavor": false,
+                           "vocation": "farmhand",
+                           "level": 1
+                      },
+                      {
+                           "type": "Brewer",
+                           "personID": 5,
+                           "companyID": 55,
+                           "shift": "day",
+                           "hiring": 336,
+                           "precededBy": -1,
+                           "succeededBy": -1,
+                           "hiredAsFavor": false,
+                           "vocation": "brewer",
+                           "level": 2
+                      },
+
+                      {
+                           "type": "Teacher",
+                           "personID": 7,
+                           "companyID": 37,
+                           "shift": "day",
+                           "hiring": 235,
+                           "precededBy": -1,
+                           "succeededBy": -1,
+                           "hiredAsFavor": false,
+                           "vocation": "teacher",
+                           "level": 2
+                      },
+                      {
+                           "type": "Teacher",
+                           "personID": 7,
+                           "companyID": 37,
+                           "shift": "day",
+                           "hiring": 328,
+                           "precededBy": -1,
+                           "succeededBy": -1,
+                           "hiredAsFavor": false,
+                           "vocation": "teacher",
+                           "level": 2
+                      },
+                      {
+                           "type": "Teacher",
+                           "personID": 7,
+                           "companyID": 37,
+                           "shift": "day",
+                           "hiring": 372,
+                           "precededBy": -1,
+                           "succeededBy": -1,
+                           "hiredAsFavor": false,
+                           "vocation": "teacher",
+                           "level": 2
+                      },
+                      {
+                           "type": "Farmer",
+                           "personID": 12,
+                           "companyID": 9,
+                           "shift": "day",
+                           "hiring": -1,
+                           "precededBy": -1,
+                           "succeededBy": -1,
+                           "hiredAsFavor": false,
+                           "vocation": "farmer",
+                           "level": 2
+                      },
+                      {
+                           "type": "Farmhand",
+                           "personID": 12,
+                           "companyID": 14,
+                           "shift": "day",
+                           "hiring": 123,
+                           "precededBy": -1,
+                           "succeededBy": -1,
+                           "hiredAsFavor": false,
+                           "vocation": "farmhand",
+                           "level": 1
+                      },
+                      {
+                           "type": "Engineer",
+                           "personID": 12,
+                           "companyID": 29,
+                           "shift": "day",
+                           "hiring": 185,
+                           "precededBy": -1,
+                           "succeededBy": -1,
+                           "hiredAsFavor": false,
+                           "vocation": "engineer",
+                           "level": 4
+                      },
+
+                      {
+                           "type": "Miner",
+                           "personID": 28,
+                           "companyID": 29,
+                           "shift": "day",
+                           "hiring": 252,
+                           "precededBy": -1,
+                           "succeededBy": -1,
+                           "hiredAsFavor": false,
+                           "vocation": "miner",
+                           "level": 1
+                      },
+                      {
+                           "type": "Distiller",
+                           "personID": 28,
+                           "companyID": 51,
+                           "shift": "day",
+                           "hiring": 308,
+                           "precededBy": -1,
+                           "succeededBy": -1,
+                           "hiredAsFavor": false,
+                           "vocation": "distiller",
+                           "level": 2
+                      },
+
+                      {
+                           "type": "Farmhand",
+                           "personID": 26,
+                           "companyID": 17,
+                           "shift": "day",
+                           "hiring": 73,
+                           "precededBy": -1,
+                           "succeededBy": 96,
+                           "hiredAsFavor": false,
+                           "vocation": "farmhand",
+                           "level": 1
+                      },
+                      {
+                           "type": "Cooper",
+                           "personID": 26,
+                           "companyID": 51,
+                           "shift": "day",
+                           "hiring": 313,
+                           "precededBy": -1,
+                           "succeededBy": -1,
+                           "hiredAsFavor": false,
+                           "vocation": "cooper",
+                           "level": 2
+                      },
+
+                      {
+                           "type": "Farmhand",
+                           "personID": 32,
+                           "companyID": 20,
+                           "shift": "day",
+                           "hiring": 86,
+                           "precededBy": -1,
+                           "succeededBy": -1,
+                           "hiredAsFavor": false,
+                           "vocation": "farmhand",
+                           "level": 1
+                      },
+                      {
+                           "type": "Farmhand",
+                           "personID": 32,
+                           "companyID": 0,
+                           "shift": "day",
+                           "hiring": 147,
+                           "precededBy": -1,
+                           "succeededBy": -1,
+                           "hiredAsFavor": false,
+                           "vocation": "farmhand",
+                           "level": 1
+                      },
+                      {
+                           "type": "Farmer",
+                           "personID": 32,
+                           "companyID": 0,
+                           "shift": "day",
+                           "hiring": 506,
+                           "precededBy": 2,
+                           "succeededBy": 45,
+                           "hiredAsFavor": false,
+                           "vocation": "farmer",
+                           "level": 2
+                      },
+                      {
+                           "type": "Principal",
+                           "personID": 32,
+                           "companyID": 37,
+                           "shift": "day",
+                           "hiring": 644,
+                           "precededBy": 0,
+                           "succeededBy": -1,
+                           "hiredAsFavor": false,
+                           "vocation": "principal",
+                           "level": 3
+                      },
+
+                      {
+                           "type": "Farmhand",
+                           "personID": 13,
+                           "companyID": 9,
+                           "shift": "day",
+                           "hiring": 40,
+                           "precededBy": -1,
+                           "succeededBy": -1,
+                           "hiredAsFavor": false,
+                           "vocation": "farmhand",
+                           "level": 1
+                      },
+                      {
+                           "type": "Farmhand",
+                           "personID": 13,
+                           "companyID": 14,
+                           "shift": "day",
+                           "hiring": 124,
+                           "precededBy": -1,
+                           "succeededBy": -1,
+                           "hiredAsFavor": false,
+                           "vocation": "farmhand",
+                           "level": 1
+                      },
+                      {
+                           "type": "Manager",
+                           "personID": 13,
+                           "companyID": 46,
+                           "shift": "night",
+                           "hiring": 501,
+                           "precededBy": -1,
+                           "succeededBy": -1,
+                           "hiredAsFavor": false,
+                           "vocation": "manager",
+                           "level": 2
+                      },
+
+
+                      {
+                           "type": "Mortician",
+                           "personID": 34,
+                           "companyID": 23,
+                           "shift": "day",
+                           "hiring": 90,
+                           "precededBy": -1,
+                           "succeededBy": 2,
+                           "hiredAsFavor": false,
+                           "vocation": "mortician",
+                           "level": 3,
+                           "body_interments": []
+                      },
+
+
+                      {
+                           "type": "Farmhand",
+                           "personID": 11,
+                           "companyID": 6,
+                           "shift": "day",
+                           "hiring": 30,
+                           "precededBy": -1,
+                           "succeededBy": -1,
+                           "hiredAsFavor": false,
+                           "vocation": "farmhand",
+                           "level": 1
+                      },
+
+                      {
+                           "type": "Secretary",
+                           "personID": 15,
+                           "companyID": 41,
+                           "shift": "day",
+                           "hiring": 267,
+                           "precededBy": 10,
+                           "succeededBy": -1,
+                           "hiredAsFavor": false,
+                           "vocation": "secretary",
+                           "level": 1
+                      },
+
+
+                      {
+                           "type": "Farmer",
+                           "personID": 24,
+                           "companyID": 17,
+                           "shift": "day",
+                           "hiring": -1,
+                           "precededBy": -1,
+                           "succeededBy": -1,
+                           "hiredAsFavor": false,
+                           "vocation": "farmer",
+                           "level": 2
+                      },
+
+                      {
+                           "type": "Farmer",
+                           "personID": 3,
+                           "companyID": 3,
+                           "shift": "day",
+                           "hiring": -1,
+                           "precededBy": -1,
+                           "succeededBy": 69,
+                           "hiredAsFavor": false,
+                           "vocation": "farmer",
+                           "level": 2
+                      },
+
+                      {
+                           "type": "Secretary",
+                           "personID": 25,
+                           "companyID": 77,
+                           "shift": "day",
+                           "hiring": 660,
+                           "precededBy": -1,
+                           "succeededBy": -1,
+                           "hiredAsFavor": false,
+                           "vocation": "secretary",
+                           "level": 1
+                      },
+
+
+                      {
+                           "type": "Farmer",
+                           "personID": 9,
+                           "companyID": 6,
+                           "shift": "day",
+                           "hiring": -1,
+                           "precededBy": -1,
+                           "succeededBy": -1,
+                           "hiredAsFavor": false,
+                           "vocation": "farmer",
+                           "level": 2
+                      },
+
+
+                      {
+                           "type": "HotelMaid",
+                           "personID": 4,
+                           "companyID": 97,
+                           "shift": "day",
+                           "hiring": 671,
+                           "precededBy": -1,
+                           "succeededBy": -1,
+                           "hiredAsFavor": false,
+                           "vocation": "hotel maid",
+                           "level": 1
+                      },
+
+
+
+                      {
+                           "type": "Farmhand",
+                           "personID": 23,
+                           "companyID": 14,
+                           "shift": "day",
+                           "hiring": 250,
+                           "precededBy": -1,
+                           "succeededBy": -1,
+                           "hiredAsFavor": false,
+                           "vocation": "farmhand",
+                           "level": 1
+                      },
+                      {
+                           "type": "Janitor",
+                           "personID": 23,
+                           "companyID": 51,
+                           "shift": "night",
+                           "hiring": 498,
+                           "precededBy": -1,
+                           "succeededBy": -1,
+                           "hiredAsFavor": false,
+                           "vocation": "janitor",
+                           "level": 1
+                      },
+
+                      {
+                           "type": "Teacher",
+                           "personID": 10,
+                           "companyID": 37,
+                           "shift": "day",
+                           "hiring": 222,
+                           "precededBy": -1,
+                           "succeededBy": 1,
+                           "hiredAsFavor": false,
+                           "vocation": "teacher",
+                           "level": 2
+                      },
+                      {
+                           "type": "Secretary",
+                           "personID": 10,
+                           "companyID": 41,
+                           "shift": "day",
+                           "hiring": 247,
+                           "precededBy": -1,
+                           "succeededBy": 15,
+                           "hiredAsFavor": false,
+                           "vocation": "secretary",
+                           "level": 1
+                      },
+                      {
+                           "type": "Teacher",
+                           "personID": 10,
+                           "companyID": 37,
+                           "shift": "day",
+                           "hiring": 266,
+                           "precededBy": 30,
+                           "succeededBy": 88,
+                           "hiredAsFavor": false,
+                           "vocation": "teacher",
+                           "level": 2
+                      },
+
+                      {
+                           "type": "Nurse",
+                           "personID": 27,
+                           "companyID": 37,
+                           "shift": "day",
+                           "hiring": 223,
+                           "precededBy": -1,
+                           "succeededBy": -1,
+                           "hiredAsFavor": false,
+                           "vocation": "nurse",
+                           "level": 2
+                      },
+
+                      {
+                           "type": "Secretary",
+                           "personID": 33,
+                           "companyID": 81,
+                           "shift": "day",
+                           "hiring": 589,
+                           "precededBy": 88,
+                           "succeededBy": -1,
+                           "hiredAsFavor": false,
+                           "vocation": "secretary",
+                           "level": 1
+                      },
+
+                      {
+                           "type": "Janitor",
+                           "personID": 31,
+                           "companyID": 37,
+                           "shift": "night",
+                           "hiring": 249,
+                           "precededBy": -1,
+                           "succeededBy": -1,
+                           "hiredAsFavor": false,
+                           "vocation": "janitor",
+                           "level": 1
+                      },
+                      {
+                           "type": "Firefighter",
+                           "personID": 31,
+                           "companyID": 74,
+                           "shift": "day",
+                           "hiring": 507,
+                           "precededBy": -1,
+                           "succeededBy": 78,
+                           "hiredAsFavor": false,
+                           "vocation": "firefighter",
+                           "level": 2
+                      },
+
+                      {
+                           "type": "Farmhand",
+                           "personID": 21,
+                           "companyID": 14,
+                           "shift": "day",
+                           "hiring": 61,
+                           "precededBy": -1,
+                           "succeededBy": -1,
+                           "hiredAsFavor": false,
+                           "vocation": "farmhand",
+                           "level": 1
+                      },
+                      {
+                           "type": "Cashier",
+                           "personID": 21,
+                           "companyID": 35,
+                           "shift": "day",
+                           "hiring": 502,
+                           "precededBy": -1,
+                           "succeededBy": -1,
+                           "hiredAsFavor": false,
+                           "vocation": "cashier",
+                           "level": 1
+                      },
+
+                      {
+                           "type": "Farmhand",
+                           "personID": 2,
+                           "companyID": 0,
+                           "shift": "day",
+                           "hiring": 6,
+                           "precededBy": -1,
+                           "succeededBy": 78,
+                           "hiredAsFavor": false,
+                           "vocation": "farmhand",
+                           "level": 1
+                      },
+                      {
+                           "type": "Farmer",
+                           "personID": 2,
+                           "companyID": 0,
+                           "shift": "day",
+                           "hiring": 225,
+                           "precededBy": 0,
+                           "succeededBy": 32,
+                           "hiredAsFavor": false,
+                           "vocation": "farmer",
+                           "level": 2
+                      },
+                      {
+                           "type": "Mortician",
+                           "personID": 2,
+                           "companyID": 23,
+                           "shift": "day",
+                           "hiring": 505,
+                           "precededBy": 34,
+                           "succeededBy": -1,
+                           "hiredAsFavor": false,
+                           "vocation": "mortician",
+                           "level": 3,
+                           "body_interments": [
+                                550,
+                                651,
+                                687,
+                                614,
+                                627
+                           ]
+                      },
+
+
+
+                      {
+                           "type": "Farmhand",
+                           "personID": 6,
+                           "companyID": 3,
+                           "shift": "day",
+                           "hiring": 20,
+                           "precededBy": -1,
+                           "succeededBy": -1,
+                           "hiredAsFavor": false,
+                           "vocation": "farmhand",
+                           "level": 1
+                      },
+
+
+                      {
+                           "type": "Teacher",
+                           "personID": 30,
+                           "companyID": 37,
+                           "shift": "day",
+                           "hiring": 221,
+                           "precededBy": -1,
+                           "succeededBy": 10,
+                           "hiredAsFavor": false,
+                           "vocation": "teacher",
+                           "level": 2
+                      },
+                      {
+                           "type": "Secretary",
+                           "personID": 30,
+                           "companyID": 77,
+                           "shift": "day",
+                           "hiring": 540,
+                           "precededBy": -1,
+                           "succeededBy": -1,
+                           "hiredAsFavor": false,
+                           "vocation": "secretary",
+                           "level": 1
+                      },
+                      {
+                           "type": "Teacher",
+                           "personID": 30,
+                           "companyID": 37,
+                           "shift": "day",
+                           "hiring": 585,
+                           "precededBy": 1,
+                           "succeededBy": -1,
+                           "hiredAsFavor": false,
+                           "vocation": "teacher",
+                           "level": 2
+                      },
+
+                      {
+                           "type": "Farmer",
+                           "personID": 19,
+                           "companyID": 14,
+                           "shift": "day",
+                           "hiring": -1,
+                           "precededBy": -1,
+                           "succeededBy": -1,
+                           "hiredAsFavor": false,
+                           "vocation": "farmer",
+                           "level": 2
+                      },
+                      {
+                           "type": "Brewer",
+                           "personID": 19,
+                           "companyID": 55,
+                           "shift": "day",
+                           "hiring": 500,
+                           "precededBy": -1,
+                           "succeededBy": -1,
+                           "hiredAsFavor": false,
+                           "vocation": "brewer",
+                           "level": 2
+                      },
+
+                      {
+                           "type": "Groundskeeper",
+                           "personID": 35,
+                           "companyID": 23,
+                           "shift": "night",
+                           "hiring": 94,
+                           "precededBy": -1,
+                           "succeededBy": -1,
+                           "hiredAsFavor": false,
+                           "vocation": "groundskeeper",
+                           "level": 1
+                      },
+
+                      {
+                           "type": "Farmer",
+                           "personID": 14,
+                           "companyID": 11,
+                           "shift": "day",
+                           "hiring": -1,
+                           "precededBy": -1,
+                           "succeededBy": 55,
+                           "hiredAsFavor": false,
+                           "vocation": "farmer",
+                           "level": 2
+                      },
+
+                      {
+                           "type": "Secretary",
+                           "personID": 20,
+                           "companyID": 77,
+                           "shift": "day",
+                           "hiring": 686,
+                           "precededBy": -1,
+                           "succeededBy": -1,
+                           "hiredAsFavor": false,
+                           "vocation": "secretary",
+                           "level": 1
+                      },
+
+
+                      {
+                           "type": "Teacher",
+                           "personID": 1,
+                           "companyID": 37,
+                           "shift": "day",
+                           "hiring": 240,
+                           "precededBy": 10,
+                           "succeededBy": 30,
+                           "hiredAsFavor": false,
+                           "vocation": "teacher",
+                           "level": 2
+                      },
+
+                      {
+                           "type": "Farmhand",
+                           "personID": 16,
+                           "companyID": 11,
+                           "shift": "day",
+                           "hiring": 153,
+                           "precededBy": -1,
+                           "succeededBy": -1,
+                           "hiredAsFavor": false,
+                           "vocation": "farmhand",
+                           "level": 1
+                      },
+                      {
+                           "type": "Janitor",
+                           "personID": 16,
+                           "companyID": 81,
+                           "shift": "night",
+                           "hiring": 641,
+                           "precededBy": -1,
+                           "succeededBy": -1,
+                           "hiredAsFavor": false,
+                           "vocation": "janitor",
+                           "level": 1
+                      },
+                      {
+                           "type": "Farmhand",
+                           "personID": 18,
+                           "companyID": 11,
+                           "shift": "day",
+                           "hiring": 49,
+                           "precededBy": -1,
+                           "succeededBy": -1,
+                           "hiredAsFavor": false,
+                           "vocation": "farmhand",
+                           "level": 1
+                      },
+                      {
+                           "type": "Cashier",
+                           "personID": 18,
+                           "companyID": 90,
+                           "shift": "day",
+                           "hiring": 642,
+                           "precededBy": -1,
+                           "succeededBy": -1,
+                           "hiredAsFavor": false,
+                           "vocation": "cashier",
+                           "level": 1
+                      },
+
+                      {
+                           "type": "Farmer",
+                           "personID": 0,
+                           "companyID": 0,
+                           "shift": "day",
+                           "hiring": -1,
+                           "precededBy": -1,
+                           "succeededBy": 2,
+                           "hiredAsFavor": false,
+                           "vocation": "farmer",
+                           "level": 2
+                      },
+                      {
+                           "type": "Principal",
+                           "personID": 0,
+                           "companyID": 37,
+                           "shift": "day",
+                           "hiring": 224,
+                           "precededBy": -1,
+                           "succeededBy": 32,
+                           "hiredAsFavor": false,
+                           "vocation": "principal",
+                           "level": 3
+                      },
+
+                      {
+                           "type": "Farmer",
+                           "personID": 29,
+                           "companyID": 20,
+                           "shift": "day",
+                           "hiring": -1,
+                           "precededBy": -1,
+                           "succeededBy": -1,
+                           "hiredAsFavor": false,
+                           "vocation": "farmer",
+                           "level": 2
+                      },
+                      {
+                           "type": "Farmhand",
+                           "personID": 29,
+                           "companyID": 0,
+                           "shift": "day",
+                           "hiring": 148,
+                           "precededBy": -1,
+                           "succeededBy": -1,
+                           "hiredAsFavor": false,
+                           "vocation": "farmhand",
+                           "level": 1
+                      }
+     ]

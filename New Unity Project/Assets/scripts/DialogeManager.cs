@@ -30,7 +30,8 @@ public class DialogeManager : MonoBehaviour
         //manual for testing purp
         dialougNodes[0].setConnectedNodes(dialougNodes[1], dialougNodes[2]);
         GuidialougText.text = dialougNodes[0].GetDialougText();
-        for(int i=0;i< optionText.Count(); i++)
+        
+        for(int i=0;i < optionText.Count()-1; i++)
         {
             if(dialougNodes[0].getNodeOptiontext(i)==null)
                 return;

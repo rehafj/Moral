@@ -1,0 +1,626 @@
+[
+      {
+          "placeID": 90,
+          "type": "Bakery",
+          "serviceesOffered": [
+               "baked goods"
+          ],
+          "townName": "St. Mary's",
+          "formerEmployees": [],
+          "formerOwners": [],
+          "nameOfPlace": "5th Street Baking Co.",
+          "peopleWorkingHereByID": [
+               79,
+               151,
+               93
+          ],
+          "iSoutOfBusiness": false
+     },
+      {
+           "placeID": 81,
+          "type": "CityHall",
+          "serviceesOffered": [],
+          "townName": "St. Mary's",
+          "formerEmployees": [
+               88
+          ],
+          "formerOwners": [],
+          "nameOfPlace": "St. Mary's City Hall",
+          "peopleWorkingHereByID": [
+               102
+          ],
+          "iSoutOfBusiness": false
+     },
+      {
+           "placeID": 46,
+          "type": "Restaurant",
+          "serviceesOffered": [
+               "restaurant"
+          ],
+          "townName": "St. Mary's",
+          "formerEmployees": [
+               90,
+               114,
+               101,
+               13
+          ],
+          "formerOwners": [],
+          "nameOfPlace": "Soul Depot",
+          "peopleWorkingHereByID": [
+               91,
+               85,
+               111,
+               40,
+               115,
+               89,
+               74
+          ],
+          "iSoutOfBusiness": false
+     },
+      {
+           "placeID": 35,
+          "type": "DrugStore",
+          "serviceesOffered": [
+               "medicine",
+               "confections"
+          ],
+          "townName": "St. Mary's",
+          "formerEmployees": [],
+          "formerOwners": [],
+          "nameOfPlace": "Efurd Drug Store",
+          "peopleWorkingHereByID": [
+               21,
+               73
+          ],
+          "iSoutOfBusiness": false
+     },
+      {
+           "placeID": 0,
+          "type": "Farm",
+          "serviceesOffered": [
+               "meat",
+               "dairy"
+          ],
+          "townName": "St. Mary's",
+          "formerEmployees": [
+               78,
+               2,
+               32,
+               32,
+               0,
+               2,
+               29
+          ],
+          "formerOwners": [
+               0,
+               2,
+               32
+          ],
+          "nameOfPlace": "Claude Tipple's farm",
+          "peopleWorkingHereByID": [
+               98,
+               155,
+               45
+          ],
+          "iSoutOfBusiness": false
+     },
+      {
+           "placeID": 26,
+          "type": "GeneralStore",
+          "serviceesOffered": [
+               "clothes",
+               "furniture",
+               "tools",
+               "confections"
+          ],
+          "townName": "St. Mary's",
+          "formerEmployees": [
+               45
+          ],
+          "formerOwners": [],
+          "nameOfPlace": "Hanz General Store",
+          "peopleWorkingHereByID": [
+               65,
+               87,
+               3,
+               41,
+               13
+          ],
+          "iSoutOfBusiness": false
+     },
+      {
+           "placeID": 3,
+          "type": "Farm",
+          "serviceesOffered": [
+               "meat",
+               "dairy"
+          ],
+          "townName": "St. Mary's",
+          "formerEmployees": [
+               5,
+               3,
+               48,
+               69
+          ],
+          "formerOwners": [
+               3
+          ],
+          "nameOfPlace": "Sidney Milem's farm",
+          "peopleWorkingHereByID": [
+               37,
+               69,
+               6
+          ],
+          "iSoutOfBusiness": false
+     },
+      {
+           "placeID": 92,
+          "type": "Dairy",
+          "serviceesOffered": [
+               "dairy"
+          ],
+          "townName": "St. Mary's",
+          "formerEmployees": [],
+          "formerOwners": [],
+          "nameOfPlace": "7th Street Dairy",
+          "peopleWorkingHereByID": [
+               152,
+               153
+          ],
+          "iSoutOfBusiness": false
+     },
+      {
+           "placeID": 99,
+          "type": "Inn",
+          "serviceesOffered": [],
+          "townName": "St. Mary's",
+          "formerEmployees": [],
+          "formerOwners": [],
+          "nameOfPlace": "6th Street Inn",
+          "peopleWorkingHereByID": [
+               157
+          ],
+          "iSoutOfBusiness": false
+     },
+      {
+           "placeID": 51,
+          "type": "Distillery",
+          "serviceesOffered": [],
+          "townName": "St. Mary's",
+          "formerEmployees": [
+               47
+          ],
+          "formerOwners": [],
+          "nameOfPlace": "7th Street Distillery",
+          "peopleWorkingHereByID": [
+               94,
+               95,
+               28,
+               26,
+               52,
+               58
+          ],
+          "iSoutOfBusiness": false
+     },
+      {
+           "placeID": 65,
+          "type": "Foundry",
+          "serviceesOffered": [],
+          "townName": "St. Mary's",
+          "formerEmployees": [],
+          "formerOwners": [],
+          "nameOfPlace": "Dow Foundry",
+          "peopleWorkingHereByID": [
+               59,
+               110,
+               101,
+               55
+          ],
+          "iSoutOfBusiness": false
+     },
+      {
+           "placeID": 55,
+          "type": "Brewery",
+          "serviceesOffered": [],
+          "townName": "St. Mary's",
+          "formerEmployees": [],
+          "formerOwners": [],
+          "nameOfPlace": "6th Street Brewery",
+          "peopleWorkingHereByID": [
+               5,
+               90,
+               99,
+               100,
+               19
+          ],
+          "iSoutOfBusiness": false
+     },
+      {
+           "placeID": 74,
+          "type": "FireStation",
+          "serviceesOffered": [],
+          "townName": "St. Mary's",
+          "formerEmployees": [
+               112,
+               112,
+               112,
+               112,
+               112,
+               31
+          ],
+          "formerOwners": [],
+          "nameOfPlace": "St. Mary's Fire Dept.",
+          "peopleWorkingHereByID": [
+               78,
+               112
+          ],
+          "iSoutOfBusiness": false
+     },
+      {
+           "placeID": 41,
+          "type": "RealtyFirm",
+          "serviceesOffered": [],
+          "townName": "St. Mary's",
+          "formerEmployees": [
+               10
+          ],
+          "formerOwners": [],
+          "nameOfPlace": "Pittsburg Avenue Realty",
+          "peopleWorkingHereByID": [
+               15,
+               83
+          ],
+          "iSoutOfBusiness": false
+     },
+      {
+           "placeID": 98,
+          "type": "Bakery",
+          "serviceesOffered": [
+               "baked goods"
+          ],
+          "townName": "St. Mary's",
+          "formerEmployees": [],
+          "formerOwners": [],
+          "nameOfPlace": "Tipple Baking Co.",
+          "peopleWorkingHereByID": [],
+          "iSoutOfBusiness": false
+     },
+      {
+           "placeID": 97,
+          "type": "Hotel",
+          "serviceesOffered": [
+               "restaurant",
+               "bar"
+          ],
+          "townName": "St. Mary's",
+          "formerEmployees": [],
+          "formerOwners": [],
+          "nameOfPlace": "Ruby Avenue Hotel",
+          "peopleWorkingHereByID": [
+               42,
+               114,
+               4,
+               104,
+               156
+          ],
+          "iSoutOfBusiness": false
+     },
+      {
+           "placeID": 37,
+          "type": "School",
+          "serviceesOffered": [],
+          "townName": "St. Mary's",
+          "formerEmployees": [
+               30,
+               7,
+               0,
+               7,
+               88,
+               1,
+               10,
+               31,
+               10
+          ],
+          "formerOwners": [],
+          "nameOfPlace": "St. Mary's K-12 School",
+          "peopleWorkingHereByID": [
+               7,
+               125,
+               32,
+               123,
+               120,
+               133,
+               138,
+               122,
+               131,
+               136,
+               118,
+               129,
+               27,
+               77,
+               124,
+               127,
+               135,
+               119,
+               137,
+               117,
+               128,
+               121,
+               130,
+               30,
+               107,
+               132
+          ],
+          "iSoutOfBusiness": false
+     },
+      {
+           "placeID": 82,
+          "type": "Restaurant",
+          "serviceesOffered": [
+               "restaurant"
+          ],
+          "townName": "St. Mary's",
+          "formerEmployees": [],
+          "formerOwners": [],
+          "nameOfPlace": "The Brime",
+          "peopleWorkingHereByID": [
+               142,
+               141,
+               143
+          ],
+          "iSoutOfBusiness": false
+     },
+      {
+           "placeID": 29,
+          "type": "CoalMine",
+          "serviceesOffered": [],
+          "townName": "St. Mary's",
+          "formerEmployees": [
+               63,
+               28
+          ],
+          "formerOwners": [],
+          "nameOfPlace": "Acuff Coal Mine",
+          "peopleWorkingHereByID": [
+               126,
+               62,
+               12,
+               64
+          ],
+          "iSoutOfBusiness": false
+     },
+      {
+           "placeID": 79,
+          "type": "GroceryStore",
+          "serviceesOffered": [
+               "baked goods",
+               "meat",
+               "confections",
+               "dairy"
+          ],
+          "townName": "St. Mary's",
+          "formerEmployees": [],
+          "formerOwners": [],
+          "nameOfPlace": "Pittsburg Avenue Groceries",
+          "peopleWorkingHereByID": [
+               139,
+               140
+          ],
+          "iSoutOfBusiness": false
+     },
+      {
+           "placeID": 17,
+          "type": "Farm",
+          "serviceesOffered": [
+               "meat",
+               "dairy"
+          ],
+          "townName": "St. Mary's",
+          "formerEmployees": [
+               26
+          ],
+          "formerOwners": [],
+          "nameOfPlace": "Edward Mondor's farm",
+          "peopleWorkingHereByID": [
+               38,
+               24,
+               57,
+               96,
+               84
+          ],
+          "iSoutOfBusiness": false
+     },
+      {
+           "placeID": 23,
+          "type": "Cemetery",
+          "serviceesOffered": [
+               "business.Cemetery"
+          ],
+          "townName": "St. Mary's",
+          "formerEmployees": [
+               34
+          ],
+          "formerOwners": [],
+          "nameOfPlace": "St. Mary's Cemetery",
+          "peopleWorkingHereByID": [
+               2
+          ],
+          "iSoutOfBusiness": false
+     },
+      {
+           "placeID": 77,
+          "type": "DentistOffice",
+          "serviceesOffered": [
+               "dentist"
+          ],
+          "townName": "St. Mary's",
+          "formerEmployees": [
+               30,
+               25,
+               60,
+               20,
+               60
+          ],
+          "formerOwners": [],
+          "nameOfPlace": "Lile Dentistry",
+          "peopleWorkingHereByID": [
+               134
+          ],
+          "iSoutOfBusiness": false
+     },
+      {
+           "placeID": 88,
+          "type": "Barbershop",
+          "serviceesOffered": [
+               "haircut"
+          ],
+          "townName": "St. Mary's",
+          "formerEmployees": [],
+          "formerOwners": [],
+          "nameOfPlace": "4th Street Barbershop",
+          "peopleWorkingHereByID": [
+               146
+          ],
+          "iSoutOfBusiness": false
+     },
+      {
+           "placeID": 6,
+          "type": "Farm",
+          "serviceesOffered": [
+               "meat",
+               "dairy"
+          ],
+          "townName": "St. Mary's",
+          "formerEmployees": [],
+          "formerOwners": [],
+          "nameOfPlace": "Alexander Skeel's farm",
+          "peopleWorkingHereByID": [
+               11,
+               81,
+               9,
+               61
+          ],
+          "iSoutOfBusiness": false
+     },
+      {
+           "placeID": 14,
+          "type": "Farm",
+          "serviceesOffered": [
+               "meat",
+               "dairy"
+          ],
+          "townName": "St. Mary's",
+          "formerEmployees": [
+               21,
+               76,
+               23,
+               12,
+               13,
+               19,
+               40
+          ],
+          "formerOwners": [
+               19
+          ],
+          "nameOfPlace": "Clyde Weathersbee's farm",
+          "peopleWorkingHereByID": [],
+          "iSoutOfBusiness": true
+     },
+      {
+           "placeID": 20,
+          "type": "Farm",
+          "serviceesOffered": [
+               "meat",
+               "dairy"
+          ],
+          "townName": "St. Mary's",
+          "formerEmployees": [
+               32,
+               29
+          ],
+          "formerOwners": [
+               29
+          ],
+          "nameOfPlace": "Henry Patchell's farm",
+          "peopleWorkingHereByID": [],
+          "iSoutOfBusiness": true
+     },
+      {
+           "placeID": 11,
+          "type": "Farm",
+          "serviceesOffered": [
+               "meat",
+               "dairy"
+          ],
+          "townName": "St. Mary's",
+          "formerEmployees": [
+               16,
+               18,
+               59,
+               55,
+               55,
+               14
+          ],
+          "formerOwners": [
+               14,
+               55
+          ],
+          "nameOfPlace": "Robert Hearn's farm",
+          "peopleWorkingHereByID": [],
+          "iSoutOfBusiness": true
+     },
+      {
+           "placeID": 9,
+          "type": "Farm",
+          "serviceesOffered": [
+               "meat",
+               "dairy"
+          ],
+          "townName": "St. Mary's",
+          "formerEmployees": [
+               12,
+               13
+          ],
+          "formerOwners": [
+               12
+          ],
+          "nameOfPlace": "James Eimers's farm",
+          "peopleWorkingHereByID": [],
+          "iSoutOfBusiness": true
+     },
+      {
+           "placeID": 43,
+          "type": "BlacksmithShop",
+          "serviceesOffered": [
+               "tools"
+          ],
+          "townName": "St. Mary's",
+          "formerEmployees": [
+               87
+          ],
+          "formerOwners": [
+               87
+          ],
+          "nameOfPlace": "Breaud Blacksmith Shop",
+          "peopleWorkingHereByID": [],
+          "iSoutOfBusiness": true
+     },
+      {
+           "placeID": 68,
+          "type": "ConstructionFirm",
+          "serviceesOffered": [],
+          "townName": "St. Mary's",
+          "formerEmployees": [
+               114,
+               42,
+               116,
+               115
+          ],
+          "formerOwners": [
+               114
+          ],
+          "nameOfPlace": "Schonauer Construction",
+          "peopleWorkingHereByID": [],
+          "iSoutOfBusiness": true
+     }
+]
