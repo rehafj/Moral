@@ -15,19 +15,19 @@ public class JsonLoader : MonoBehaviour
     //note to self: comment and uncomment below depending on what is needed in final version 
 
     [SerializeField]
-    private List<TownCharacter> backgroundcharacters = new List<TownCharacter>();
+    public  List<TownCharacter> backgroundcharacters = new List<TownCharacter>();
     [SerializeField]
-    private List<Occupations> listofOccupations = new List<Occupations>();
+    public List<Occupations> listofOccupations = new List<Occupations>();
     [SerializeField]
-    private List<TwoniePersonalities> listOfPersonalities = new List<TwoniePersonalities>();
+    public  List<TwoniePersonalities> listOfPersonalities = new List<TwoniePersonalities>();
     [SerializeField]
-    private List<TownieRoutine> listOfPersonRutines = new List<TownieRoutine>();
+    public List<TownieRoutine> listOfPersonRutines = new List<TownieRoutine>();
     [SerializeField]
-    private List<TownEvents> ListOfEventsInTown = new List<TownEvents>();
+    public List<TownEvents> ListOfEventsInTown = new List<TownEvents>();
     [SerializeField]
-    private GeneralTownInformation TownInformation = new GeneralTownInformation();
+    public GeneralTownInformation TownInformation = new GeneralTownInformation();
     [SerializeField]
-    private List<TownPlaces> listOfTownLocations = new List<TownPlaces>();
+    public List<TownPlaces> listOfTownLocations = new List<TownPlaces>();
 
     const string FILEXTEN = @".json";
     //comment and uncomment below depending on what is needed in final version 
