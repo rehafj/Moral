@@ -21,8 +21,5 @@ public class CharacterManager : MonoBehaviour
         
     }
 
-    string returnNameOFpersonWithHighopennses()
-    {
-        return "x";
-    }
+ 
 }

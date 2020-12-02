@@ -14,7 +14,7 @@ public class Character
 
     public enum personalValue //perhaps make this have values instead of a dictionary later... 
     {
-        Aultirusum, Cander, Coop, Lawful, Loyal, Trustworthy, Boldness, Calm
+        Aultirusum, Cander, Coop, Lawful, Loyal, Trustworthy, Boldness, Calm, 
     }
 
     public enum emotionalState

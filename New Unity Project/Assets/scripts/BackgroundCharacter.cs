@@ -2,15 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
-public class BackgroundCharacter : MonoBehaviour
+using System;
+
+public class BackgroundCharacter  :  MonoBehaviour
 {//org lists later and move them to their own objects 
     public JsonLoader jsn;
+
+    public List<InterestingCharacters> characters = new List<InterestingCharacters>();
+    public List<InterestingCharacters> filtredCharacters = new List<InterestingCharacters>();
+
+    Dictionary<int, int> bestfrinedList;
+    Dictionary<int, List<int>> LoveIntrests;
+
     // Start is called before the first frame update
     void Start()
     {
         JsonLoader jsn = gameObject.GetComponent<JsonLoader>();
-        Debug.Log(jsn.listOfPersonalities.Count);
-        
+       
     }
 
     // Update is called once per frame
@@ -18,19 +26,302 @@ public class BackgroundCharacter : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
-            int x = returnHighestOpenValueID();
-            Debug.Log("!!!" + returnAcharacterName(x));
+            /* int x = returnHighestOpenValueID();
+             Debug.Log("!!!" + returnAcharacterName(x));*/  //debug checks! 
+                                                            //findBestFriends();
+                                                            // findEnemiesOFBestFriends();
+                                                            // loveIntrest();
+                                                            //returnIntoList(jsn.backgroundcharacters);
+            setInitialIntrestingCharacters();
+            flagInterestingCharactersWithOccupations();
+            flagCharactersWithPersonalityPossibilites();
+            filterCharacters();
+            printAllCharacterValues();
+
+
         }
     }
 
-    int  returnHighestOpenValueID() //make this genertic for all people ---
+    public void filterCharacters() {
+        
+        foreach( InterestingCharacters c in characters)
+        {
+            int trueCounter = 0;
+            foreach (bool entry in c.characterFlags.Values)
+            {
+                if(entry == true)
+                {
+                    trueCounter++;
+                }
+            
+            }
+            if (trueCounter > 4) //if 4 gives us a total of 54 characters... 
+            {
+                filtredCharacters.Add(c);
+
+            }
+        }
+    }
+
+
+    private void printAllCharacterValues()
+    {
+        foreach(InterestingCharacters c in filtredCharacters)
+        { //in story streucture bring outr flags and check if a and b are true about a character how does my cnpc react ? 
+            /*  if(c.characterFlags["InLoveWirhAnothersspuce"] ==true && c.characterFlags["WillActOnLove"] == true)
+              {
+                  Debug.Log("will act on love! even if it hurts ppl :0 "); //perhaps the character should have their own field called true to your heart 
+              }*///wow 45 ppl will love another's spuce out of them 7 will act on it :0 
+
+            Debug.Log("the characte +r" + c.fullName);
+                foreach (KeyValuePair<string, bool> kvp in c.characterFlags)
+            {
+                if(kvp.Value == true)
+                {
+                    Debug.Log(string.Format("Key = {0}, Value = {1}", kvp.Key, kvp.Value));
+
+                }
+
+            }
+        }
+    }
+
+    void setInitialIntrestingCharacters()//i is the main one 
+    {
+        InterestingCharacters character = new InterestingCharacters();
+        for (int i = 0; i < jsn.backgroundcharacters.Count; i++)
+        {
+            character.personID = jsn.backgroundcharacters[i].id;
+            character.fullName = jsn.backgroundcharacters[i].firstName + " " + jsn.backgroundcharacters[i].lastName;
+            character = new InterestingCharacters();
+
+            //checks for a single character flags
+            checkIfAnIntconditionIsMet(jsn.backgroundcharacters[i].departureEventID, "departed", character);
+            checkIfAnIntconditionIsMet(jsn.backgroundcharacters[i].kids.Length, "familyPerson", character);
+            checkIfAnIntconditionIsMet(jsn.backgroundcharacters[i].friendsId.Length, "socialLife", character);
+            checkIfAnIntconditionIsMet(jsn.backgroundcharacters[i].enemiesId.Length > 1, "hasalotofenemies", character);
+            checkIfAnIntconditionIsMet(jsn.backgroundcharacters[i].isCollegeGraduate, "hasalotofenemies", character);
+            checkIfAnIntconditionIsMet(jsn.backgroundcharacters[i].widowed && (!jsn.backgroundcharacters[i].grieving), "widowedbutnotgrieving", character);
+            checkIfAnIntconditionIsMet(jsn.backgroundcharacters[i].adult && (!jsn.backgroundcharacters[i].inWorkForce), "adultbutnotworking", character);
+            checkIfAnIntconditionIsMet(jsn.backgroundcharacters[i].isPregnant && (!jsn.backgroundcharacters[i].weddingRingOnFinger), "pregnantbutnotengaged", character);
+            checkIfAnIntconditionIsMet(jsn.backgroundcharacters[i].neighborsID.Length > 0 && (jsn.backgroundcharacters[i].friendsId.Length >2), "loner", character);
+            checkIfAnIntconditionIsMet(jsn.backgroundcharacters[i].money > 10, "IsWealthy", character);
+
+
+            for (int j = 0; j < jsn.backgroundcharacters.Count - 1; j++)
+            {
+
+                if (i != j)
+                {
+
+                    checkIfAnIntconditionIsMet(jsn.backgroundcharacters[i].bestFriendiD,
+                        jsn.backgroundcharacters[j].id, "hasAbestFriend", character);
+
+
+                    checkLoveTraingle(jsn.backgroundcharacters[i].loveInterest, jsn.backgroundcharacters[j].spouse,
+                                           jsn.backgroundcharacters[j].significantOther, jsn.backgroundcharacters[j].id,
+                                            "InLoveWirhAnothersspuce", character);
+
+                  /*  checkLoveTraingle(jsn.backgroundcharacters[i].id,
+                                            jsn.backgroundcharacters[j].id, jsn.backgroundcharacters[i].spouse, "InLovewithspouseoffriend", character);
+                    *///this yeilds no reuslultys with bbfs
+                    checkifbestfriendwithanenmey(jsn.backgroundcharacters[i].bestFriendiD, jsn.backgroundcharacters[j].id,
+                        jsn.backgroundcharacters[i].friendsId, jsn.backgroundcharacters[j].enemiesId,
+                        "friendwithabestfriendsenemy", character);
+
+                    //checkIFadultery()//TODO
+                }
+            }
+            characters.Add(character);
+        }
+    }
+
+    void flagInterestingCharactersWithOccupations()
+    {
+        foreach (InterestingCharacters character in characters)
+        {
+            int i = 0;
+            foreach (Occupations oc in jsn.listofOccupations)
+                {
+                
+                if (character.personID == oc.personID)
+                {  // to check if a character has multiplejobs in diffrient fields 
+                    if (oc.type == "Farmhand" || oc.type == "Farmer")
+                    { character.characterFlags["butcherRole"] = true; i++; }
+                    if (oc.type == "Brewer" || oc.type == "Distiller")
+                    { character.characterFlags["WorksInAlcohol"] = true; i++; }
+                    if (oc.type == "Teacher" || oc.type == "Principal")
+                    { character.characterFlags["Teachingrole"] = true; i++; }
+                    if (oc.type == "Cooper" || oc.type == "Miner")
+                    { character.characterFlags["polluterRole"] = true; i++; }
+                    if (oc.type == "Secretary" || oc.type == "Cashier")
+                    { character.characterFlags["generalJobs"] = true; i++; }
+                    if (oc.type == "Manager")
+                    { character.characterFlags["advancedCareer"] = true; i++; }
+                    if (oc.type == "HotelMaid" || oc.type == "Janitor" || oc.type == "Groundskeeper")
+                    { character.characterFlags["CustodianJobs"] = true; i++; }
+                    if (oc.type == "Engineer")
+                    { character.characterFlags["advancedCareer"] = true; i++; }
+                    if (oc.type == "Firefighter")
+                    { character.characterFlags["riskTaker"] = true; i++; }
+                    if (oc.type == "Nurse")
+                    { character.characterFlags["healerRole"] = true; i++; }
+                    if (i > 2) { character.characterFlags["flipflop"] = true; //character has 3 jobs! 
+                    }
+                }
+            }
+        }
+    }
+
+    void flagCharactersWithPersonalityPossibilites()//handles things like will act on love so later we can compare if 
+    {
+        foreach (InterestingCharacters character in characters)
+        {
+            foreach (TwoniePersonalities personalityOnFive in jsn.listOfPersonalities)
+            {
+                if(character.personID == personalityOnFive.personID)//if its the same person i am looking at
+                {
+                     checkIfAnIntconditionIsMet(character.characterFlags["InLoveWirhAnothersspuce"]  && (personalityOnFive.lowNeuroticism 
+                            || personalityOnFive.highAgreeableness), "WillActOnLove", character);
+                    /// did this instead of charge 
+
+                    checkIfAnIntconditionIsMet(character.characterFlags["IsWealthy"] &&
+                        personalityOnFive.lowAgreeableness, "IsRichButNotGenrous", character);
+
+                }
+            }
+
+        }
+    }
+        /*   if (oc.type == "Teacher") --- > thinking of unions and stuff like that --- 
+                          { character.characterFlags["butcherRole"] = true; i++; }*/
+    private void checkifbestfriendwithanenmey(int id, int bestFriendiD, int[] personFriend,  int[] enemiesOfFriend ,  string flag, InterestingCharacters character)
+     {       //i is best friends with j and 
+        
+            
+        foreach( int enemyID in enemiesOfFriend)
+         {
+            if (id == bestFriendiD && personFriend.Contains(enemyID))
+            {
+                character.characterFlags[flag] = true;
+                break;
+            }
+
+         }
+    }
+    
+
+    //    void checkIfAnIntconditionIsMet<T>(T Item1, T Item2, string flag, InterestingCharacters character) where T : class
+
+
+    void checkIfAnIntconditionIsMet(int Item1, string flag, InterestingCharacters character)
+    {
+        if (Item1!=-1 && Item1 !=0)//do all of the checks 
+        {
+            character.characterFlags[flag] = true;
+            //Debug.Log("somone has this flag true "+ flag); //SOCIAL LIFE, FAMILY PERSON AND DEPARTED ALL ARE TURE 
+
+        }
+    }
+    void checkIfAnIntconditionIsMet(bool item1, string flag, InterestingCharacters character)
+    {
+        if (item1)//do all of the checks 
+        {
+            character.characterFlags[flag] = true;
+            //Debug.Log("somone has this flag true " + flag); //ALOT OF ENEMIES, WIDDOWED BUT NOT GRIEVING AND PREGNANT BUT NOT ENGAGED ALL TRUE 
+        }
+    }
+
+    void checkIfAnIntconditionIsMet(int Item1, int Item2, string flag, InterestingCharacters character) 
+    {
+        if (Item1 == Item2)//do all of the checks 
+        {
+            character.characterFlags[flag] = true;
+            //Debug.Log("somone has this flag true " + flag);
+        }
+    }
+    void checkLoveTraingle(int person, int bestfriend, int spuceofperson, string flag, InterestingCharacters character)
+    {
+        if (checkForNullValues(person, spuceofperson, bestfriend))
+        {
+            if (person == bestfriend && bestfriend == spuceofperson)//do all of the checks 
+            { //check charge! 
+                character.characterFlags[flag] = true;
+                Debug.Log("somone has this flag true " + flag); //NO ONE HAS A LOve traingle - check this logic out 
+            }
+            character.SetLoveTraingleValues(spuceofperson, bestfriend);
+        } 
+    }
+
+    /// <summary>
+    /// check if the main person's love intrest is another person's (J)  spouce and 
+    /// J's siignificantOther is their spouce
+    /// </summary>
+    void checkLoveTraingle(int IMainLoveInrestID, int JSpouce, int JsiginifcantOther, int jID , string flag, InterestingCharacters character)
+    {
+        if (checkForNullValues(IMainLoveInrestID, JSpouce, JsiginifcantOther))
+        {
+            
+            if (IMainLoveInrestID == JSpouce && JsiginifcantOther == JSpouce)
+            { 
+                character.characterFlags[flag] = true; 
+                //Debug.Log("DOES THIS HAPPEN?");
+                character.SetLoveTraingleValues(IMainLoveInrestID, jID);
+
+            }
+            
+        }
+    }
+    //DO A METHOD THAT CHECKS TEH CHARGE OF AN ITEM --- 
+    bool checkForNullValues(int i, int j, int k)
+    {
+        return (i != -1 && j != -1 && k != -1);
+    }
+    //perhaps make this generic 
+    private KeyValuePair<int,int> returnComparedItemsPairID(int selection, int i, int j) {
+
+
+        switch (selection)
+        {
+            case (1):
+                
+                return returnBestFriendsRecuprical(i, j);// add all comparrison arguments here - kibnda janky, but saves for now some repetion --- or use func<> 
+                
+            default: return returnBestFriendsRecuprical(i, j);
+              
+
+        }
+    }
+
+    private Dictionary<int, int> returnIntoList<T>(List<TownCharacter> aList, int comparrisonID)
+    {
+        Dictionary<int, int> dic = new Dictionary<int, int>();
+        dic.Add(1, 1);
+        for (int i = 0; i < aList.Count; i++)
+        {
+            for (int j = 0; j < aList.Count - 1; j++)
+            {
+                if (i != j && checkForNullValues(i, j))
+                {
+
+                    //dic.Add(returnBestFriendsRecuprical(i, j)); //(returnComparedItemsPairID(comparrisonID, i, j));// if the selected comparrison is true 
+
+
+                }
+                Debug.Log(aList[i].spouse);
+            }
+        }
+        return dic;
+
+    }
+    private void findEnemiesOFBestFriends() { }
+
+
+    int returnHighestOpenValueID() //make this genertic for all people ---
     {
         List<double> opennesVlues = new List<double>() ;
         int id=0;
         double maxValue=0;
-        // Debug.Log("does this print 1");
-
-
 
         foreach (TwoniePersonalities townie in jsn.listOfPersonalities)
         {
@@ -59,4 +350,92 @@ public class BackgroundCharacter : MonoBehaviour
         return "no id found ";
 
     }
+    KeyValuePair<int,int> returnBestFriendsRecuprical(int i, int j)
+    {
+        if ((jsn.backgroundcharacters[i].id == jsn.backgroundcharacters[j].bestFriendiD) &&
+            (jsn.backgroundcharacters[i].bestFriendiD == jsn.backgroundcharacters[j].id))
+        {             
+            return new KeyValuePair<int, int>(+jsn.backgroundcharacters[i].id, jsn.backgroundcharacters[j].id);
+        }
+        return new KeyValuePair<int, int>(-1, -1);
+
+    }//end of method 
+
+    void printBestFriendsRecuprical()
+    {
+        Debug.Log("any best friends?");
+        for (int i = 0; i < jsn.backgroundcharacters.Count; i++)
+        {
+            for (int j = 0; j < jsn.backgroundcharacters.Count - 1; j++)
+            {
+                if ((jsn.backgroundcharacters[i].id == jsn.backgroundcharacters[j].bestFriendiD) &&
+                     (jsn.backgroundcharacters[i].bestFriendiD == jsn.backgroundcharacters[j].id))
+                {
+                    Debug.Log("this person:  " + jsn.backgroundcharacters[i].id
+                        + " and person :" + jsn.backgroundcharacters[j].id +
+                        "are best friends~ ---- recepriocal relationships :d");
+                }
+   
+                if (jsn.backgroundcharacters[i].id == jsn.backgroundcharacters[j].bestFriendiD)
+                {
+                    Debug.Log("this person:  " + jsn.backgroundcharacters[i].id
+                        + "IS THE BEST FRIEND OF " + jsn.backgroundcharacters[j].id +
+                        "may not be recepriocal ");
+                }
+             
+             }
+        }
+     }//end of method 
+
+    void loveIntrest()
+    {
+        for (int i = 0; i < jsn.backgroundcharacters.Count; i++)
+        {
+            if (jsn.backgroundcharacters[i].loveInterest != jsn.backgroundcharacters[i].spouse)
+            {
+                Debug.Log(jsn.backgroundcharacters[i].firstName + "married to the person that is not their love intrest ");
+            }
+            for (int j = 0; j < jsn.backgroundcharacters.Count - 1; j++)
+            {
+                // Debug.Log("checking elemnt [" + i + "]with [" + j+"]");
+                if (i != j)// stop comparing the same elements 
+                {
+                    if (checkForNullValues(i, j))
+                    { 
+                        if ((jsn.backgroundcharacters[i].loveInterest == jsn.backgroundcharacters[j].spouse) &&
+                            (jsn.backgroundcharacters[j].significantOther == jsn.backgroundcharacters[j].spouse))
+                        {
+                            Debug.Log(jsn.backgroundcharacters[i].firstName + "has a thing for" +
+                                 jsn.backgroundcharacters[j].firstName + "s spouce !!!!!");
+                        }
+                    }
+                }
+               
+            }
+        }
+    }
+    //checkForNullValues(i, j)
+    private bool checkForNullValues(int i, int j)
+    {//perhaps do this with find or contains 
+
+        bool x = (jsn.backgroundcharacters[i].loveInterest != -1 &&
+        jsn.backgroundcharacters[i].significantOther != -1 &&
+        jsn.backgroundcharacters[j].significantOther != -1 &&
+        jsn.backgroundcharacters[j].spouse != -1);
+
+        return x;
+    }
 }
+
+
+
+/*
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ *  character.SetLoveTraingleValues(jsn.backgroundcharacters.
+                           Find(x=>x.id == jsn.backgroundcharacters[j]), ))
+ */
