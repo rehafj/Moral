@@ -4,16 +4,26 @@ using UnityEngine;
 
 [System.Serializable]
 public class ConversationalCharacter : MonoBehaviour
+
 {
-    public Dictionary<string, int> ConvCharacterMoralFactors = new Dictionary<string, int>();
+    public Dictionary<string, RatingVlaues> ConvCharacterMoralFactors = new Dictionary<string, RatingVlaues>();
     //att 2 --- 
     string[] keys = { "BTrueTYourHeart", "MoneyMaker", "Enviromentalist", "AnimalLover",
     "Teetotasler","BeKind"  ,"SchoolIsCool","LoverOfRisks"   ,"SupportingComunities", "LandISWhereThehrtIS","CarrerAboveAll", "FriendsAreTheJoyOFlife"
        , "Loner"  };
 
-    //this is hard coded for now, perhaps make it random 
-    public ConversationalCharacter(int[] thirteenValues )
+    public string ConversationalNpcName; 
+    public enum RatingVlaues
     {
+       High, Mid, Low
+    }
+
+    public RatingVlaues NpcValueFlag;
+  
+    //this is hard coded for now, perhaps make it random 
+    public ConversationalCharacter(string name ,RatingVlaues[] thirteenValues )
+    {
+        ConversationalNpcName = name;
         int i = 0;
       
         foreach(string s in keys)
@@ -24,7 +34,33 @@ public class ConversationalCharacter : MonoBehaviour
 
     }
 
+    //randomizing constructor /overloaded
+    public ConversationalCharacter(string name)
+    {
+        ConversationalNpcName = name;
+        int i = 0;
 
+        foreach (string s in keys)
+        {
+            int x = Random.Range(0, 3);
+            NpcValueFlag = getRandomNPCValue(x);
+            ConvCharacterMoralFactors.Add(s, NpcValueFlag);
+            i++;
+        }
+
+    }
+
+    private RatingVlaues getRandomNPCValue(int x)
+    {
+        switch (x)
+        {
+            case (0):
+                return RatingVlaues.Low;
+            case (1): return RatingVlaues.Low;
+            default:
+                return RatingVlaues.High;
+        }
+    }
 }
 /*
  * 

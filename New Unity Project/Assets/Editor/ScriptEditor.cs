@@ -12,12 +12,13 @@ public class ScriptEditor : Editor
         int i = 0;
         foreach(ConversationalCharacter c in ((CharacterManager)target).characters)
         {
-            EditorGUILayout.LabelField("conversational character" + i);//later add names...etc 
+            EditorGUILayout.LabelField("conversational character :\t" + c.ConversationalNpcName);//later add names...etc 
             i++;
             EditorGUILayout.Space();
             foreach (var p in c.ConvCharacterMoralFactors)              
             {
-                EditorGUILayout.IntField(p.Key, p.Value);
+                EditorGUILayout.LabelField(p.Key);
+                EditorGUILayout.EnumPopup( p.Value);
 /*                EditorGUILayout.LabelField(p.Key + " :  " + p.Value);
 */            }
 
