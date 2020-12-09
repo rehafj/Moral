@@ -18,7 +18,12 @@ public class BackgroundCharacter  :  MonoBehaviour
     void Start()
     {
         JsonLoader jsn = gameObject.GetComponent<JsonLoader>();
-       
+        setInitialIntrestingCharacters();
+        flagInterestingCharactersWithOccupations();
+        flagCharactersWithPersonalityPossibilites();
+        filterCharacters();
+        printAllCharacterValues();
+
     }
 
     // Update is called once per frame
@@ -32,14 +37,15 @@ public class BackgroundCharacter  :  MonoBehaviour
                                                             // findEnemiesOFBestFriends();
                                                             // loveIntrest();
                                                             //returnIntoList(jsn.backgroundcharacters);
-            setInitialIntrestingCharacters();
-            flagInterestingCharactersWithOccupations();
-            flagCharactersWithPersonalityPossibilites();
-            filterCharacters();
-            printAllCharacterValues();
+        
 
 
         }
+    }
+
+    public  List<InterestingCharacters> GetFiltredCharerList()
+    {
+        return filtredCharacters;
     }
 
     public void filterCharacters() {
@@ -73,12 +79,12 @@ public class BackgroundCharacter  :  MonoBehaviour
                   Debug.Log("will act on love! even if it hurts ppl :0 "); //perhaps the character should have their own field called true to your heart 
               }*///wow 45 ppl will love another's spuce out of them 7 will act on it :0 
 
-            Debug.Log("the characte +r" + c.fullName);
+           // Debug.Log("the characte +r" + c.fullName);
                 foreach (KeyValuePair<string, bool> kvp in c.characterFlags)
             {
                 if(kvp.Value == true)
                 {
-                    Debug.Log(string.Format("Key = {0}, Value = {1}", kvp.Key, kvp.Value));
+                   // Debug.Log(string.Format("Key = {0}, Value = {1}", kvp.Key, kvp.Value));
 
                 }
 
@@ -168,6 +174,7 @@ public class BackgroundCharacter  :  MonoBehaviour
                     { character.characterFlags["healerRole"] = true; i++; }
                     if (i > 2) { character.characterFlags["flipflop"] = true; //character has 3 jobs! 
                     }
+                    character.Lastoccupation = oc.type;
                 }
             }
         }

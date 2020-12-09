@@ -1,0 +1,131 @@
+[
+    {
+    "topic":"High_BTrueTYourHeart",
+    "NarrativeElements": {
+        "intro":"I do think that one should always be true to their heart",
+        "bodyOne":"I also think that a person's love knows no bound, I can't fault them",
+        "bodytwo":"Howevr I understand how it is when a person loves someone, I cannot fault them for that "}
+      },
+
+      {
+      "topic":"Mid_BTrueTYourHeart",
+      "NarrativeElements": {
+          "intro":"Love affairs are complicated and so are people",
+          "bodyOne":"I am unsure what to think about their love or if i have the right to even talk about it ",
+          "bodytwo":"I guess, I can understand, I feel torn. I'm not sure if I can excuse their love or not  "}
+        },
+
+        {
+        "topic":"Low_BTrueTYourHeart",
+        "NarrativeElements": {
+            "intro":"Love affairs are not complicated, I cannot excuse somone for liking somone in a relationship. unbelivable.",
+            "bodyOne":"I cannot excuse thier actions, LOVE? REALLY THAT IS NO EXCUSE TO RUIN SOMONE'S LIFE ",
+            "bodytwo":"Yet I do not think matters of love are worth ruining a home or even a friendship "}
+          },
+
+
+          {
+          "topic":"High_MoneyMaker",
+          "NarrativeElements": {
+              "intro":"Money Money monnneeey *sings*",
+              "bodyOne":"I Think they worked hard for their wealth so they are free to do what they want with it",
+              "bodytwo":"However, I admire a person that  works for their wealth and what they got. I trust their character"}
+            },
+
+            {
+            "topic":"Mid_MoneyMaker",
+            "NarrativeElements": {
+                "intro":"If we are talking about wealth I am nutural...",
+                "bodyOne":"I am unsure what to think about how they should act with their own money, it is not for me to decide ",
+                "bodytwo":"I guess, I can understand, I feel torn. I respect a selfmade person but it I also understand the need for generosity  "}
+              },
+
+              {
+              "topic":"Low_MoneyMaker",
+              "NarrativeElements": {
+                  "intro":"If a person is wealthy they should share that wealth! ",
+                  "bodyOne":"I cannot respect a person that comes in with so much money and does not share it among those in indeed",
+                  "bodytwo":"Yet I cannot respect a person that has that much wealth and does not even donate it"}
+                },
+
+
+
+                {
+                "topic":"High_Enviromentalist",
+                "NarrativeElements": {
+                    "intro":"mother earth is evreything, yet some of us do not treat her well",
+                    "bodyOne":"I cannot stand people working in industrties that just contribute to pullotion, I do not think it is excusable",
+                    "bodytwo":"However, I cannot respect a person that pullouts the earth.  "}
+                  },
+
+                  {
+                  "topic":"Mid_Enviromentalist",
+                  "NarrativeElements": {
+                      "intro":"nature or the advancment of man kind... ",
+                      "bodyOne":"I feel torn, one one hand, the earth is important on the other people should live their lives  ",
+                      "bodytwo":"I guess, I can understand, I feel torn. I respect a person working but kinda bumbed out it's in a bad feild. a  "}
+                    },
+
+                    {
+                    "topic":"Low_Enviromentalist",
+                    "NarrativeElements": {
+                        "intro":"pulotion is nonsense, it's just a hoax. a person has to work ",
+                        "bodyOne":"I Highly  respect a person that comes in and works, I don't belive one should be quit just cz their work 'harms the enviroemnt' ",
+                        "bodytwo":"Yet, I respect a person coming in and working, earning their place. besides saying somone should quit becasue their work'harms the enviroment' is silly. "}
+                      },
+
+
+
+                    {
+                    "topic":"High_AnimalLover",
+                    "NarrativeElements": {
+                        "intro":"WE SHOULD NEVER SACRIFICE ANIMALS FOR OUR OWN SAKE",
+                        "bodyOne":"I cannot stand people working in industrties that are just crul to animals. slautering them and caging them. Despicaele",
+                        "bodytwo":"However, I cannot respect a person's judgment if they kills animals for a living.  "}
+                      },
+
+                      {
+                      "topic":"Mid_AnimalLover",
+                      "NarrativeElements": {
+                          "intro":"I guess i'm ok with a person working in farm",
+                          "bodyOne":"I feel torn, one one hand, I get why people want to eat meat and work in those places but on the other can't people just go green? ",
+                          "bodytwo":"I guess, I can understand, why one would work in a farm but I still feel dissapointed. Humanity can do better "}
+                        },
+
+                        {
+                        "topic":"Low_AnimalLover",
+                        "NarrativeElements": {
+                            "intro":"so they kill an animal for their job, so what? we have to eat don't we? ",
+                            "bodyOne":"I Highly  respect a person that comes in and works, I don't belive one should  quit just cz their work is 'inhumane' people eat meat so what? ",
+                            "bodytwo":"Yet, I respect a person coming in and working, earning their place. besides people that judge a person  becasue their work is'against animal rights' is silly. "}
+                          },
+
+
+
+                    {
+                    "topic":"High_FamilyPerson",
+                    "NarrativeElements": {
+                        "intro":"I like that person, works hard for their family ",
+                        "bodyOne":"I fully support a family person, wokring for the wellfair of your family is one of the best traits us poeple have",
+                        "bodytwo":"However, I can understand I guess. they are a working family, and one has to provide for family first and formost.  "}
+                      },
+
+                      {
+                      "topic":"Mid_FamilyPerson",
+                      "NarrativeElements": {
+                          "intro":"I might not like them but I respect that they work to provide for their family",
+                          "bodyOne":"I feel torn, one one hand, I get why people might behave poorly, but if it's for providing for family I can understand it",
+                          "bodytwo":"I guess, I can understand, if that person had to do what they did to provide for family..."}
+                        },
+
+                        {
+                        "topic":"Low_FamilyPerson",
+                        "NarrativeElements": {
+                            "intro":"Just because they have to support their family does not mean they should work in immoral feilds",
+                            "bodyOne":"I Highly  disrespect a person that uses 'family' as an excuse to work at a place that can bring harm to the world",
+                            "bodytwo":"Yet, I disrespect a person using family as an excuse for thier immoral actions. there are always other options. "}
+                          },
+
+
+
+]

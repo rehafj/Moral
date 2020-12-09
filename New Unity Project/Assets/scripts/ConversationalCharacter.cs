@@ -9,7 +9,9 @@ public class ConversationalCharacter : MonoBehaviour
     public Dictionary<string, RatingVlaues> ConvCharacterMoralFactors = new Dictionary<string, RatingVlaues>();
     //att 2 --- 
     string[] keys = { "BTrueTYourHeart", "MoneyMaker", "Enviromentalist", "AnimalLover",
-    "Teetotasler","BeKind"  ,"SchoolIsCool","LoverOfRisks"   ,"SupportingComunities", "LandISWhereThehrtIS","CarrerAboveAll", "FriendsAreTheJoyOFlife"
+    "Teetotasler","FamilyPerson"  ,"SchoolIsCool","LoverOfRisks"   
+            ,"SupportingComunities", "LandISWhereThehrtIS","CarrerAboveAll", 
+        "FriendsAreTheJoyOFlife"
        , "Loner"  };
 
     public string ConversationalNpcName; 
@@ -28,6 +30,7 @@ public class ConversationalCharacter : MonoBehaviour
       
         foreach(string s in keys)
         {
+            //Debug.Log("moral value of :" + s + " is :" + thirteenValues[i]);
             ConvCharacterMoralFactors.Add(s, thirteenValues[i]);
             i++;
         }
@@ -61,6 +64,8 @@ public class ConversationalCharacter : MonoBehaviour
                 return RatingVlaues.High;
         }
     }
+
+
 }
 /*
  * 

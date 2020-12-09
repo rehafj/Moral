@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class x : MonoBehaviour
-{
+{/*
     //this is hardcoded for now but will change this structure later 
     // maybe xml, or inkl, or fungus...? 
      List<Dialoug> dialougNodes;
@@ -76,7 +76,7 @@ public class x : MonoBehaviour
     {
 
     }
-
+*/
 
     //remove the node, go to next node.. 
 }

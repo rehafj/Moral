@@ -4,6 +4,7 @@ using UnityEngine;
 using Newtonsoft.Json;
 using System.Linq;
 using System.IO;
+using System;
 
 
 //loader was modfied from a video tutorial explaning the json.net asset used in this class
@@ -29,6 +30,9 @@ public class JsonLoader : MonoBehaviour
     [SerializeField]
     public List<TownPlaces> listOfTownLocations = new List<TownPlaces>();
 
+    [SerializeField]
+    public List<DialougStructure> listOfConversations = new List<DialougStructure>();
+
     const string FILEXTEN = @".json";
     //comment and uncomment below depending on what is needed in final version 
     const string TOWNPEOPLEPATH = @"JSON/fullpeople";
@@ -39,7 +43,10 @@ public class JsonLoader : MonoBehaviour
     const string TOWNINFORMATION = @"JSON/townInformation";
     const string TOWNLOCATIONS = @"JSON/townPlaces";
 
-//working poeple --- is the teesting file used :) 
+    const string NARRATIVEPATH = @"JSON/SampleOpinTopics";
+
+
+    //working poeple --- is the teesting file used :) 
 
 
 
@@ -57,6 +64,16 @@ public class JsonLoader : MonoBehaviour
         ListOfEventsInTown = returnJsonAttributesIntoList<TownEvents>(EVENTSPATH);
         listOfTownLocations = returnJsonAttributesIntoList<TownPlaces>(TOWNLOCATIONS);
 
+        listOfConversations = returnJsonAttributesIntoList<DialougStructure>(NARRATIVEPATH);
+
+
+        //FOR TESTING-REMOVE ME 
+        PrintOutAConversation();
+    }
+
+    private void PrintOutAConversation()
+    {
+        Debug.Log(listOfConversations[0].topic + " : and the body of element 0 " + listOfConversations[0].NarrativeElements.bodytwo);
     }
 
     string returnFile(string path)

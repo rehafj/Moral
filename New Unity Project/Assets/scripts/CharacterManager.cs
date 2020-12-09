@@ -6,7 +6,7 @@ using UnityEngine;
 public class CharacterManager : MonoBehaviour
 {
     //public List<Character> characters;
-    public List<ConversationalCharacter> characters;
+    public  List<ConversationalCharacter> characters;
 
     ///tart is called before the first frame update
     void Start()
@@ -19,18 +19,13 @@ public class CharacterManager : MonoBehaviour
     private void setUp() ///this is hard coded but perhaps make values random in other runs 
     {
         characters.Add(new ConversationalCharacter("Tim", new ConversationalCharacter.RatingVlaues[] {
-            ConversationalCharacter.RatingVlaues.Mid,  ConversationalCharacter.RatingVlaues.Low,  ConversationalCharacter.RatingVlaues.Low,
+            ConversationalCharacter.RatingVlaues.High,  ConversationalCharacter.RatingVlaues.Low,  ConversationalCharacter.RatingVlaues.High,
             ConversationalCharacter.RatingVlaues.High, ConversationalCharacter.RatingVlaues.Low, ConversationalCharacter.RatingVlaues.Low,
             ConversationalCharacter.RatingVlaues.Low, ConversationalCharacter.RatingVlaues.High, ConversationalCharacter.RatingVlaues.High,
             ConversationalCharacter.RatingVlaues.Mid, ConversationalCharacter.RatingVlaues.High, ConversationalCharacter.RatingVlaues.High,
             ConversationalCharacter.RatingVlaues.Low}));
 
-        characters.Add(new ConversationalCharacter("Tom", new ConversationalCharacter.RatingVlaues[] {
-            ConversationalCharacter.RatingVlaues.Mid,  ConversationalCharacter.RatingVlaues.Low,  ConversationalCharacter.RatingVlaues.Low,
-            ConversationalCharacter.RatingVlaues.High, ConversationalCharacter.RatingVlaues.Low, ConversationalCharacter.RatingVlaues.Low,
-            ConversationalCharacter.RatingVlaues.Low, ConversationalCharacter.RatingVlaues.High, ConversationalCharacter.RatingVlaues.High,
-            ConversationalCharacter.RatingVlaues.Mid, ConversationalCharacter.RatingVlaues.High, ConversationalCharacter.RatingVlaues.High,
-            ConversationalCharacter.RatingVlaues.Low}));
+        characters.Add(new ConversationalCharacter("Tom"));
 
     }
 

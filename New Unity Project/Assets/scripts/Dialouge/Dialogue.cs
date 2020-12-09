@@ -7,8 +7,23 @@ using UnityEngine.UIElements;
 [System.Serializable]
 public class Dialoug 
 {
-    //used as a flag in type of conversation, mainly between NPC, NPC 
-    public enum DialougType
+   public string ButtonText;
+    public string dialougText;
+
+
+    public Dialoug(string option, string text)
+    {
+        ButtonText = option;
+        dialougText = text;
+    }
+}
+
+
+
+/* OLD CODE: 
+ * 
+ * 
+ *  public enum DialougType
     {
         Dilemma, introduction, informer, influintial, OneLiner
     }
@@ -62,20 +77,4 @@ public class Dialoug
     public void respond(Character character) {
     }
 
-
-
-
-
-
-
-
-    //maybe add something as a dialoug effect --- greater good? utitlitarian 
-    //i want what i want 
-    //
-    //
-    ////TODOadd dialougtree from json options 
-    //goal is to flag the coinversation that uis a dillima and show some NPC options for that conversation 
-
-
-
-}
+ */

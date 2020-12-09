@@ -19,9 +19,9 @@ public class InterestingCharacters : MonoBehaviour
     }
 
     LoveTraingle LoveTraingleIfOthersAreMarried;
-    LoveTraingle LoveTraingleBetweenFriends; 
+    LoveTraingle LoveTraingleBetweenFriends;
 
-
+    public string Lastoccupation;
     //maybe a couple of structs depending on the flag: D
 
     public InterestingCharacters()

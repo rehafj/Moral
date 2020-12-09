@@ -9,11 +9,11 @@ public class ScriptEditor : Editor
 
     public override void OnInspectorGUI()
     {
-        int i = 0;
+        //int i = 0;
         foreach(ConversationalCharacter c in ((CharacterManager)target).characters)
-        {
+          {
             EditorGUILayout.LabelField("conversational character :\t" + c.ConversationalNpcName);//later add names...etc 
-            i++;
+           // i++;
             EditorGUILayout.Space();
             foreach (var p in c.ConvCharacterMoralFactors)              
             {
