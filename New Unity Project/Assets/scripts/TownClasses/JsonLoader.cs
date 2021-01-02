@@ -73,7 +73,7 @@ public class JsonLoader : MonoBehaviour
 
     private void PrintOutAConversation()
     {
-        Debug.Log(listOfConversations[0].topic + " : and the body of element 0 " + listOfConversations[0].NarrativeElements.bodytwo);
+       // Debug.Log(listOfConversations[0].topic + " : and the body of element 0 " + listOfConversations[0].NarrativeElements.bodytwo);
     }
 
     string returnFile(string path)

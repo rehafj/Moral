@@ -7,14 +7,32 @@ using UnityEngine.UIElements;
 [System.Serializable]
 public class Dialoug 
 {
-   public string ButtonText;
+    public string ButtonText;
+    public string IntroducingATopicdialoug;
     public string dialougText;
+    public bool Explored; //just to test something
+
+    public Dialoug parent;
+    public List<Dialoug> children;
 
 
     public Dialoug(string option, string text)
     {
         ButtonText = option;
         dialougText = text;
+        Explored = false;
+    }
+
+    public int getHeight()
+    {
+        int height = 1;
+        Dialoug currentNode = this;
+        while (currentNode.parent != null)
+        {
+            height++;
+            currentNode = currentNode.parent;
+        }
+        return height;
     }
 }
 

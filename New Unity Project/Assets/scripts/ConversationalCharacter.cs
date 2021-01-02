@@ -70,8 +70,7 @@ public class ConversationalCharacter : MonoBehaviour
 /*
  * 
  * 
- * 
- *         {"BTrueTYourHeart", 0 },
+ * lis{"BTrueTYourHeart", 0 },
         {"MoneyMaker", 0 },
         {"Enviromentalist", 0 },
         {"AnimalLover", 0 },

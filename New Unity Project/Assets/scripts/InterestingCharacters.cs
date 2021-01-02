@@ -10,7 +10,7 @@ public class InterestingCharacters : MonoBehaviour
     public int lovedOneID;
     //public int bestfriendID;
     public string fullName;
-
+    List<TownCharacter> bgcharList;
     public struct LoveTraingle
     {
         public int LovedOneID;
@@ -85,11 +85,18 @@ public class InterestingCharacters : MonoBehaviour
         LoveTraingleIfOthersAreMarried.LovedOneID = lovedoneid;
       
     }
+
+    public string GetLoverName()
+    {
+        TownCharacter townie =   bgcharList.Find(x => x.id == lovedOneID);
+        return townie.firstName;
+
+    }
         
     // Start is called before the first frame update
     void Start()
     {
-        
+        bgcharList = FindObjectOfType<JsonLoader>().backgroundcharacters;
     }
 
     // Update is called once per frame

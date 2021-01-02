@@ -5,11 +5,14 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+//test
 
 [System.Serializable]
 public class DialogeManager : MonoBehaviour //TODO refactor this later, just for testing plopping things here for now 
 {
+    public Tree testingTree = new Tree(); //--using this one to test one branch out - generate these and place them in the big list of  tree/brance conversations  - using this 
 
+    List<Tree> allCharacterConversationsTrees = new List<Tree>();
 
 
     public List<Dialoug> fullCharacterRootNodes;
@@ -27,36 +30,283 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     ConversationalCharacter currentCNPC;
 
     //add a node to check if explored 
-    BackgroundCharacter bcg;
+    BackgroundCharacter bgchar;
 
-    //this is messy - move UI stuff to its own script me! 
+ 
+    List<String> currentThoughts;
+    string selectedOpnion;
+
+    public List<InterestingCharacters> conversedAboutCharectersList;
+
+
+
+    //ui stuff 
+    public string playerName = "playerName";
+    public GameObject InstructionsUI;
+    public Text instructionsText;
+
+    //this is messy - move UI stuff to its own script! 
     public Text GuicharacterName;
     public Text GuidialougText;
-    public Text[] optionText;
-
-
-
-
+    public Text[] CNPCoptionText;
     public Button[] PlayerButtons;
+   [SerializeField] bool isTyping;
 
 
+ 
+    InterestingCharacters currentIntrestingCharracter;
+    List<string> currentTopicsAboutCurrentCharacter;
 
-    public List<InterestingCharacters> conversedAboutChar;
+    string startingSceneText = "";
 
+
+    //for tests 
+    Tree TomsTree = new Tree();
+
+
+    public void Awake()
+    {
+
+        playerName = "Rehaf";
+        StartCoroutine(TypeInDialoug("hey there" + playerName +
+            " \n thanks for meeting me for brunch! Boy has the town been eventful lately! "));
+    }
     public void Start()
     {
-        bcg = FindObjectOfType<BackgroundCharacter>();
+        bgchar = FindObjectOfType<BackgroundCharacter>();
         jsn =FindObjectOfType<JsonLoader>();
+
+
+        disableorEnablePlayerButtons();
         AllOpinions = jsn.listOfConversations;
         currentCNPC = FindObjectOfType<CharacterManager>().characters[0]; //hard coded with tim for now 
-        OrgnizeCNPCOpinions();// TODO add a p[arm to send in the current cnpc instyead od hc
+        OrgnizeCNPCOpinions();
+        setUp();
 
-        conversedAboutChar = bcg.GetFiltredCharerList();
-        generateListOfPlayerOptions();
-        PickStartingNodes();
+       
+    }
+
+
+
+
+    Dialoug currentNode;
+    /// new code base here 
+    //////////////////////////////////////////////////////////////////////////////////////\
+    ///
+
+    public void setUp()
+    {
+        conversedAboutCharectersList = bgchar.GetFiltredCharerList();//fltred list of characters (with 5+ flags)
+        currentIntrestingCharracter = chooseaCharacterToTalkAbout(); //random for now but pops it out of the lkist if chosen
+        Dialoug node = new Dialoug("thikning about tom,","hmm I have been thinking about character X");
+        TomsTree.root = node;
+        Debug.Log(TomsTree.root.ButtonText);
+        TomsTree.root.children = returnListOfDialougNodes(currentIntrestingCharracter);
+        foreach(Dialoug s in TomsTree.root.children)
+        {
+            Debug.Log("current thoughts are" + s.ButtonText);
+        }
+        Debug.Log(TomsTree.root.children.Count);
+
+
+
+
+        //chjildren all remaningoptions 
+        // string chosenTopic = chooseAnInitialTopic(currentIntrestingCharracter);
+        // setUprootNodes();
+    }
+
+    Coroutine activeCorutine;
+
+    void DisplayNodeIntroTopic(Dialoug d)
+    {
+        StartCoroutine(TypeInDialoug(d.IntroducingATopicdialoug));
 
     }
 
+   
+    Dialoug choseADialougNode(List<Dialoug> bgCharacterNOdes)
+    {
+
+        int i = UnityEngine.Random.Range(0, bgCharacterNOdes.Count - 1);
+        Dialoug node = bgCharacterNOdes.ElementAt(i);
+        bgCharacterNOdes.RemoveAt(i);//que and deque from a list --- add logic on how to choose a better character - random for now 
+        currentNode = node;
+        return node;
+
+    }
+  
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            if(TomsTree.root.children.Count > 0)
+            {//cool works!  perhjaps before popping it out of que in display intro topic have it have child nodes about that topic, don't pop it out of list fix this me! 
+                DisplayplayCurrentOpinions(TomsTree); //for testing - later put all of these into a bigger tree collection
+                DisplayNodeIntroTopic(choseADialougNode(TomsTree.root.children));
+      
+            }
+
+
+        }
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            displayDialougOpinion();
+        }
+    }
+
+    private void displayDialougOpinion()
+    {
+        StopAllCoroutines();
+        StartCoroutine(TypeInDialoug(currentNode.dialougText));
+    }
+
+    private InterestingCharacters chooseaCharacterToTalkAbout()
+    {
+        int i = UnityEngine.Random.Range(0, conversedAboutCharectersList.Count - 1);
+        InterestingCharacters character = conversedAboutCharectersList.ElementAt(i);
+        conversedAboutCharectersList.RemoveAt(i);//que and deque from a list --- add logic on how to choose a better character - random for now 
+        return character;
+
+    }
+
+    private List<Dialoug> returnListOfDialougNodes( InterestingCharacters character) //change name later 
+    {
+        List<Dialoug> nodes = new List<Dialoug>();
+        foreach(KeyValuePair<string,bool> kvp in character.characterFlags)
+        {
+            if (kvp.Value)
+            {
+                Dialoug node = new Dialoug(
+                   translateOpinionIntoText(kvp.Key), 
+                   getInitialCNPCOpinionAsDialoug(kvp.Key, character));//general feelings about a topic 
+                //--- gives the general feelings about a thing, add to the same node the pther structure elements... 
+
+                node.IntroducingATopicdialoug =
+                    getIntroductionTopicString(kvp.Key, character);
+
+                nodes.Add(node);
+            }
+        }
+        return nodes;
+
+        //int i = UnityEngine.Random.Range(0, character.characterFlags.Count);
+
+    }
+
+    string returnIntroTopic(List<DialougStructure> opinions, string key) //the sent in list is of high./mid or low 
+    {//selecting intro and the first part of the body here --- 
+        foreach (DialougStructure op in opinions) //ex: all high opp
+        {
+            Debug.Log("-------"+ op.topic +" and the key wsas maped to" + mapToCNPCMoralFactor(key)); //error in mappuing check this out tomorrow ---- 
+            if (op.topic.Contains(mapToCNPCMoralFactor(key))) //get the translatiopn of they key but not ditect character keys..... 
+            {
+                selectedOpnion = op.topic.Split('_').Last();
+                Debug.Log("-------selectedOpnion" + selectedOpnion);
+
+                return op.NarrativeElements.intro; 
+            }
+        }
+        return "NO TOPIC WAS FOUND --- need to author topic for flag " + key;
+    }
+
+
+
+    private string getInitialCNPCOpinionAsDialoug(string key, InterestingCharacters character)
+    {//this is hard coded for now but later send in the conversational character 
+        Debug.Log(key);
+
+        Debug.Log(currentCNPC.ConvCharacterMoralFactors[mapToCNPCMoralFactor(key)]);//returns values high/med /l;ow of a key...
+        switch (currentCNPC.ConvCharacterMoralFactors[mapToCNPCMoralFactor(key)])
+        {
+            case ConversationalCharacter.RatingVlaues.High:
+                return returnIntroTopic(highVaueOpinions, key); //make this more generic - iof/else get topic or body (startingopinion) or contrasting one... nut need logic on each case i think of this is testign a thing for now 
+            case ConversationalCharacter.RatingVlaues.Mid:
+                return returnIntroTopic(midVaueOpinions, key);
+            default://low
+                return returnIntroTopic(lowVaueOpinions, key);
+        }
+    }
+
+    private string mapToCNPCMoralFactor(string key)
+    {
+        switch (key)
+    {
+            case ("departed"):
+                return "LandISWhereThehrtIS";
+
+            case ("familyPerson"):
+                return "FamilyPerson";
+
+            case ("InLovewithspouseoffriend"):
+            case ("pregnantbutnotengaged"):
+            case ("pregnantbutnotfromspuceorbutloveintrest"):
+            case ("InLoveWirhAnothersspuce"):
+            case ("WillActOnLove"):
+                return "BTrueTYourHeart";
+
+            case ("socialLife"):
+            case "FriendsAreTheJoyOFlife":
+            case ("friendwithabestfriendsenemy"):
+            case ("hasAbestFriend"):
+                return "FriendsAreTheJoyOFlife";
+
+            case ("loner"):
+                return "Loner";
+
+            case ("IsWealthy"):
+            case ("IsRichButNotGenrous"):
+            case ("flipflop"):
+                return "CarrerAboveAll";//add another klind of value here 
+
+            case ("WorksInAlcohol"):
+            case "Teetotasler":
+                return "Teetotasler";
+            case ("healerRole"):
+            case ("CustodianJobs"):
+                return "CarrerAboveAll";//change this into supporitng roles...
+            case ("Teachingrole"):
+                return "SchoolIsCool";
+
+
+            case ("polluterRole"):
+            case ("Enviromentalist"):
+                return"Enviromentalist";
+            case ("riskTaker"):
+            case ("LoverOfRisks"):
+                return "LoverOfRisks";
+            case ("advancedCareer"):
+            case ("hardWorker"):
+            case "CarrerAboveAll":
+                return "CarrerAboveAll";
+            case ("MoneyMaker"):
+                return "SupportingComunities";//change this
+            case ("SchoolIsCool"):
+            case ("butcherRole"):
+                return "AnimalLover";
+            case ("notworkingandrich"):
+            case ("adultbutnotworking"):
+            case ("widowedbutnotgrieving"):
+            case ("exploteative"):
+            case ("graduate"):
+            case ("hasalotofenemies"):
+            case ("generalJobs"):
+                return "Loner";////these do not have anything tied to em, need to update this
+            default:
+                return "missed a tag SOMEWHERE!" + key;
+
+    }
+     }
+    
+
+
+
+
+
+
+
+
+    // helper functions 
     private void OrgnizeCNPCOpinions()
     {
 
@@ -66,337 +316,361 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             {
                 highVaueOpinions.Add(op);
             }
-            if(op.topic.Contains("Mid"))
+            if (op.topic.Contains("Mid"))
             {
                 midVaueOpinions.Add(op);
             }
-            if(op.topic.Contains("Low"))
+            if (op.topic.Contains("Low"))
             {
                 lowVaueOpinions.Add(op);
             }
         }
     }
 
-    private void Update()
+
+    //gui stuff 
+    private void DisplayplayCurrentOpinions(Tree currentCharacterTree) //text fields
     {
-        printOpinions();
-        /*if (Input.GetKeyDown(KeyCode.A))
+        Debug.Log("has this been called?");
+        foreach (Text t in CNPCoptionText) //send in flags to check if player or npc and get the rioght translation out
         {
-            printCurrentNodes();
-        }*/
-    }
-
-    void printOpinions()
-    {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            foreach(DialougStructure op in AllOpinions)
-            {
-                if (op.topic.Contains("BTrueTYourHeart"))
-                {
-                    Debug.Log("findme"+op.NarrativeElements.bodyOne);
-                }
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-
-        }
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-
-        }
-    }
- 
-
-
-    void presentPlayerOptions(List<Dialoug> nodes)
-    {
-        int i = 0;
-        foreach (Button b in PlayerButtons)
-        {
-            b.GetComponentInChildren<Text>().text = nodes[i].ButtonText;
-            Debug.Log("helloworld"+ nodes[i].dialougText); //so the issue is wirth the node... says out of range
-            string s = nodes[i].dialougText;
-            b.onClick.AddListener(delegate { onClickPlayerOption(b, " " + s); });
-            i++;
-        }
-
-    }
-
-
-    void PickStartingNodes()
-    {
-        int i = 0;
-        foreach(Button b in PlayerButtons)
-        {
-            currentPlayerOptions.Add(fullCharacterRootNodes[i]);           
-            i++;
-        }
-        presentPlayerOptions(currentPlayerOptions);
-    }
-
-    //omnce explored flag it :) 
-
-    void clearOptions()
-    {
-        foreach(Button b in PlayerButtons)
-        {
-            b.onClick.RemoveAllListeners();
+            int r = UnityEngine.Random.Range(0, currentCharacterTree.root.children.Count - 1);
+            t.text = currentCharacterTree.root.children[r].ButtonText;
         }
     }
 
-    private void onClickPlayerOption(Button B, string s)
+    string getIntroductionTopicString(string key, InterestingCharacters character)
     {
-        Debug.Log("this button " + B.name + "was clicked");
-        GuidialougText.text = s;
-
-    }
-
-
-    //on button click via options remove the node ---- or move it to disabled nodes...
-    public void generateListOfPlayerOptions()
-    {
-        foreach(InterestingCharacters c in conversedAboutChar)
+        switch (key)
         {
-            fullCharacterRootNodes.Add(new Dialoug("what do you think of " + c.fullName + "?", 
-                setNodeDialoug(c)));
-          //  Debug.Log("testing" + c.fullName);
-        }
+            case ("departed"):
+            case "LandISWhereThehrtIS":
+                return "guess what I heard! " +character.fullName + " left town!, ";
+            case ("familyPerson"):
+                return "hmm, did you know that  "+ character.fullName + " has a "  
+                    +"family"; //to do add mcond stat for lar/small ,,,etc family 
 
-    }
+            //add more values for the ones below --- seprate core values perhaps?mainly tags are used for flavor text but they fall for one core value 
+            case ("InLovewithspouseoffriend"):
+                return "I heard that " + character.fullName + " is in love with thier spouce's friend! ";
+     
+            case ("pregnantbutnotfromspuceorbutloveintrest"):
+                return "I heard that " + character.fullName + "cheated on their siginificant cube with " + character.GetLoverName();
+            case ("InLoveWirhAnothersspuce"):
+                return "Not juding but I heard that " + character.fullName +  "IS IN LOVE WITH ANOTHER CUBE'S spouse " ;
+            case ("WillActOnLove"):
+                return "Not juding but I heard that " + character.fullName + "IS IN LOVE WITH ANOTHER CUBE that is not their spouce, a birdy told me they will act on it ><";
 
-    void printCurrentNodes()
-    {
-        foreach(Dialoug c in fullCharacterRootNodes)
-        {
-            Debug.Log(c.ButtonText);
-        }
-    }
+            case ("BTrueTYourHeart"):
+            case ("pregnantbutnotengaged"):
+                return "you know," +
+                    " I think people in this town might be too much into love afairs, " +
+                    "you would think we were in a dating sim of some kind..."; //TODO write specfic texts for scenarios 
 
-    private string setNodeDialoug(InterestingCharacters character)
-    {
-        string topic = generateDialougBasedOnTopic(character);
-        return topic;
-    }
-    string  generateDialougBasedOnTopic(InterestingCharacters character)
-    { 
 
-        switch (selectATopic(character)) //initial topic
-        {
-            case "butcherRole":// adding more cases for the same key on cnpc, why they are keyed diff ( ex: value for family and social might have common narrative elenmtns) 
-               return  checkValueOfCNPCAndReturnD("AnimalLover", character);//add something like this has been selected
-            case "WillActOnLove":
-                return checkValueOfCNPCAndReturnD("BTrueTYourHeart", character);
-            case "polluterRole":
-                return checkValueOfCNPCAndReturnD("Enviromentalist", character);
-            case "familyPerson":
-                return checkValueOfCNPCAndReturnD("FamilyPerson", character);
+            case ("socialLife"):
+            case "FriendsAreTheJoyOFlife":
+                return "oh oh " + playerName + "how is  " + character.fullName + "so popular!\n they sure have a lot of friends!"; // or they have a lot of fgriends 
+
+            case ("friendwithabestfriendsenemy"):
+                return "you know what is weird? " + playerName + "? \n   " + character.fullName + " is friends with thier friend's enemy :0"; // or they have a lot of fgriends 
+          
+            case ("hasAbestFriend"):
+                return  character.fullName + "'s best friend sure loves them! must be nice to have a best friend" ; // or they have a lot of fgriends 
+
+            case ("loner"):
+                return "I wonder why " +character.fullName + "lives alone...";
+            case ("hasalotofenemies"):
+                return "I wonder why " + character.fullName + "has alot of enemies... /// not assigned to a CNPC value yet";
+
+
+            case ("MoneyMaker"):
+            case ("IsWealthy"):
+                return " the " + character.fullName +
+                    "are wealthy apparently, like super wealthy.";
+            case ("IsRichButNotGenrous"):
+                return "the " + character.fullName + 
+                    "are wealthy apparently, like super wealthy... but also so not the giving type!";
+
+        
+            case ("WorksInAlcohol"):
+            case "Teetotasler":
+                return character.fullName + "wokrs in alchohol, wonder what that field is like";
+
+            case ("flipflop"):
+                return "they are so indecisive when it comes to their career! ";
+
+            case ("healerRole"):
+            case ("CustodianJobs"):
+            case ("SupportingComunities"):
+
+
+            case ("polluterRole"):
+            case ("Enviromentalist"):
+                return "You know what I want to talk about!" + character.fullName + "\'s job! \n I think they work as " + character.Lastoccupation;
+
+
+            case ("riskTaker"):
+            case ("LoverOfRisks"):
+
+            case ("generalJobs"):
+
+
+            case ("advancedCareer"):
+            case ("hardWorker"):
+            case "CarrerAboveAll":
+                return "You know what I want to talk about!" + character.fullName + "\'s job! \n moreso, I beliave that cube works so many hours! I htink they are a hardworking cube. ";
+
+            case ("Teachingrole"):
+            case ("SchoolIsCool"):
+
+            case ("butcherRole"):
+            case ("AnimalLover"):
+                return "You know what I want to talk about!" + character.fullName + "\'s job! \n I think they work as " + character.Lastoccupation;
+
+            case ("notworkingandrich"):
+            case ("adultbutnotworking"):
+            case ("widowedbutnotgrieving"):
+            case ("exploteative"):
+
+
+            case ("graduate"):
+                return "NOTAUTHORED";
             default:
-                break;
+                return "missed a tag SOMEWHERE!" + key +"was not authored";
+
+
         }
-        return "could not form a topic!";
     }
 
-    private string selectATopic(InterestingCharacters character)
+    //if occupation - then dialoug button - what baout where they work --- need to find some statments like the npc one but for players 
+    //for the NPC --- 
+
+    string translateOpinionIntoText(string key)
     {
-        if (checkForIntrestingTopics(character) != "")
+        switch (key)
         {
-            return checkForIntrestingTopics(character);
-        }
-        else
-        {
-            return FirstTopicFound(character);
-        }
+            case ("departed"):
+            case  "LandISWhereThehrtIS":
+                return "they left town...";
+            case ("familyPerson"):
+                return "..have a family..";
+            case ("InLovewithspouseoffriend"):
+            case ("BTrueTYourHeart"):
+            case ("pregnantbutnotengaged"):
+            case ("pregnantbutnotfromspuceorbutloveintrest"):
+            case ("InLoveWirhAnothersspuce"):
+            case ("WillActOnLove"):
+                return "matters of the heart...";
+            case ("socialLife"):
+            case "FriendsAreTheJoyOFlife":
+            case ("friendwithabestfriendsenemy"):
+            case ("hasAbestFriend"):
+                return ".. they sure are popular.."; // or they have a lot of fgriends 
+            case ("loner"):
+                return "...live alone...";
+               
+            case ("IsWealthy"):
+                return "wonder how rich ...";
+            case ("IsRichButNotGenrous"):
+                return "..selfish person... ";
+            case ("flipflop"):
+                return "they are so indecisive";
+            case ("WorksInAlcohol"):
+            case "Teetotasler":
+                return "they work with alcohol";
 
+            case ("healerRole"):
+            case ("CustodianJobs"):
+            case ("Teachingrole"):
+                return "they help people...";
+            case ("polluterRole"):
+            case ("Enviromentalist"):
+                return "not environmental friendly...";
+            case ("riskTaker"):
+            case ("LoverOfRisks"):
+                return "tough job..";
+            case ("advancedCareer"):
+            case ("hardWorker"):
+            case "CarrerAboveAll":
+            case ("MoneyMaker"):
+                return "..hard worker..";
+            case ("SchoolIsCool"):
+                return "they have a degree";
+
+            case ("butcherRole"):
+            case ("AnimalLover"):
+                return "..animal rights";
+
+            case ("notworkingandrich"):
+            case ("adultbutnotworking"):
+                return key +"NOT AUTHORED";
+            case ("widowedbutnotgrieving"):
+                return "wonder why they are not grieving...";
+            case ("exploteative"):
+            case ("graduate"):
+                return key + "NOT AUTHORED YET";
+            case ("hasalotofenemies"):
+                return "...they sure can't make friends";
+            case ("generalJobs"):
+            case ("SupportingComunities"):
+
+                return "what did they work in again...";
+
+
+            default:
+                return "missed a tag!" + key;
+
+        }
     }
 
-    private string checkValueOfCNPCAndReturnD(string key, InterestingCharacters character)
-    {//this is hard coded for now but later send in the conversational character 
-     // Debug.Log(currentCNPC.ConvCharacterMoralFactors[key]);
-        switch (currentCNPC.ConvCharacterMoralFactors[key])
-        {
-            case ConversationalCharacter.RatingVlaues.High:
-                //Debug.Log("TESTTT:" + returnIntroTopic(highVaueOpinions, key) +
-               // returnContrastingOpinion(highVaueOpinions, key, character));
-                return
-                returnIntroTopic(highVaueOpinions, key) +
-                returnContrastingOpinion(highVaueOpinions, key, character);
-            case ConversationalCharacter.RatingVlaues.Mid:
-                //Debug.Log("TESTTT:" + returnIntroTopic(midVaueOpinions, key) +
-           // returnContrastingOpinion(midVaueOpinions, key, character));
-                return returnIntroTopic(midVaueOpinions, key) +
-                returnContrastingOpinion(midVaueOpinions, key, character);
-            default://low
-                return returnIntroTopic(lowVaueOpinions, key) +
-                 returnContrastingOpinion(lowVaueOpinions, key, character);
-        }
-    }
-    //make this into one method  with the topic below --- 
-    //also introduce the key they are talking about with a character name --- 
-    //if occupation then talk about their occupation and their name ( like or displike ) and then append the rest of the dialoug node but fix the logic here 
-    //also bring up other topics about a character if that topic has been selected 
-    private string returnContrastingOpinion(List<DialougStructure> VaueOpinions,
-        string key, InterestingCharacters character)
+
+    //for the player 
+    string translatePlayerOptionIntoText(string key)
     {
-        //fix this logic for some things that make sense vyt for now i am just grabbing anoither high value op
-        foreach (DialougStructure op in VaueOpinions) //ex: all high opp
+        switch (key)
         {
-            if (!op.topic.Contains(key))
+            case ("departed"):
+            case "LandISWhereThehrtIS":
+                return "I heard they left town, I wonder if  that is true?";
+            case ("familyPerson"):
+                return "don't they have a family";
+            case ("InLovewithspouseoffriend"):
+            case ("BTrueTYourHeart"):
+            case ("pregnantbutnotengaged"):
+            case ("pregnantbutnotfromspuceorbutloveintrest"):
+            case ("InLoveWirhAnothersspuce"):
+            case ("WillActOnLove"):
+                return "what do you think of their love affair";
+            case ("socialLife"):
+            case "FriendsAreTheJoyOFlife":
+            case ("friendwithabestfriendsenemy"):
+            case ("hasAbestFriend"):
+                return "--- question about sdocial life "; // or they have a lot of fgriends 
+            case ("loner"):
+                return "q about the being alone";
+
+            case ("IsWealthy"):
+                return " are they rich";
+            case ("IsRichButNotGenrous"):
+                return "are they selfsihh";
+            case ("flipflop"):
+                return "are they indecisive";
+            case ("WorksInAlcohol"):
+            case "Teetotasler":
+                return "what do you oknow of their job?";
+
+            case ("healerRole"):
+            case ("CustodianJobs"):
+            case ("Teachingrole"):
+                return "what do you oknow of their job?";
+            case ("polluterRole"):
+            case ("Enviromentalist"):
+                return "what do you oknow of their job?";
+            case ("riskTaker"):
+            case ("LoverOfRisks"):
+                return "what do you oknow of their job?";
+            case ("advancedCareer"):
+            case ("hardWorker"):
+            case "CarrerAboveAll":
+            case ("MoneyMaker"):
+                return "what do you know about thei work ethics?";
+            case ("SchoolIsCool"):
+                return "what do you know about _school";
+
+            case ("butcherRole"):
+            case ("AnimalLover"):
+                return "animal question ";
+
+            case ("notworkingandrich"):
+            case ("adultbutnotworking"):
+            case ("widowedbutnotgrieving"):
+            case ("exploteative"):
+            case ("graduate"):
+            case ("hasalotofenemies"):
+            case ("generalJobs"):
+            case ("SupportingComunities"):
+
+                return "this case is not yet authored";
+
+
+            default:
+                return "missed a tag!" + key;
+
+        }
+    }
+
+
+
+    //UI stuff
+
+    public void setPlayerName(Text text)
+    {
+        playerName = text.text;
+        instructionsText.text = "thanks " + playerName + "!";
+        Invoke("disableInstructionsUI", 2);
+        //InstructionsUI.SetActive(false);
+    }
+
+    void disableInstructionsUI()
+    {
+        InstructionsUI.SetActive(false);
+    }
+
+   void disableorEnablePlayerButtons()
+    {
+       
+        foreach( Button b in PlayerButtons)
+        {
+            if (b.IsActive()) //if the button is active deactivate it
             {
-                return op.NarrativeElements.bodytwo; // change this si it does not rerun the first element but based on things that kinda make sense ( or random ) unsure --- 
-            }
-        }
-        throw new NotImplementedException();
-    }
-
-    string returnIntroTopic(List<DialougStructure> opinions, string key) //the sent in list is of high./mid or low 
-    {//selecting intro and the first part of the body here --- 
-        foreach (DialougStructure op in opinions) //ex: all high opp
-        {
-            if (op.topic.Contains(key))
-            {
-                //Debug.Log("findme" + op.NarrativeElements.intro);
-                return op.NarrativeElements.intro + op.NarrativeElements.bodyOne;
-            }
-        }
-        return "NO TOPIC WAS FOUND --- need to author these topics  " + key;
-    }
-
-    void assembleADialougString()
-    {
-        string s;
-    }
-
-
-    private string FirstTopicFound(InterestingCharacters character)
-    {
-        string s = "";
-        foreach (KeyValuePair<string, bool> kvp in character.characterFlags)
-        {
-            if (kvp.Value) //checking for the first topic that is true - set it as an inital topic 
-            {
-                s = kvp.Key;
-                return s;
+                b.gameObject.SetActive(false);
             }
             else
             {
-                s = "this character has no intresesting topics";
+                b.gameObject.SetActive(true);
             }
         }
-        return s;
     }
-
-    private string checkForIntrestingTopics(InterestingCharacters character) //return topic
-    { //make this into a switch stat - therse are the topics i wote things for... so searching for them first - 
-        if(character.characterFlags["WillActOnLove"] == true)
-        {
-            return "WillActOnLove";
-        }
-        if (character.characterFlags["polluterRole"] == true)
-        {
-            return "polluterRole";
-        }
-        if (character.characterFlags["butcherRole"] == true)
-        {
-            return "butcherRole";
-        }
-        if (character.characterFlags["familyPerson"] == true)
-        {
-            return "familyPerson";
-        }
-        else { return ""; }
-    }
-
-    public void GetListOfTalkedAboutNPC()
+    void enableClick()
     {
-
+        foreach (Button b in PlayerButtons)
+        {
+            if (isTyping) //if the button is active deactivate it
+            {
+                b.interactable =false;
+                
+            }
+            else
+            {
+                b.interactable = true;
+            }
+        }
     }
 
-    public void GetPlayerOptions()
+    bool checkCorutine;
+    IEnumerator TypeInDialoug(string dialkougText)
     {
-        //links to nodes 
+        for (int i = 0; i<= dialkougText.Length;  i++)
+        {
+            isTyping = true;
+            enableClick();
+            GuidialougText.text = dialkougText.Substring(0, i);
+             yield return new WaitForSeconds(0.05f);
+        }
+        isTyping = false;
+        enableClick();
+        activeCorutine = null;
+        checkCorutine = true;
     }
-
 }
 
+    
 
 
-/* OLD CODE 
- 
- 
- 
-         public void Start()
-        {        //for testing purp
-            dialougNodes.Add(addingNodeManually("greeting", "hello there! ", new float[] { 1, 3, 5, 7, 9, 7, 4, 10 }));
-            dialougNodes.Add(addingNodeManually("oh no", "just some random text ", new float[] { 1, 3, 5, 7, 9, 7, 4, 10 }));
-            dialougNodes.Add(addingNodeManually("what", "just some random text ", new float[] { 1, 3, 5, 7, 9, 7, 4, 10 }));
 
-        //Debug.Log(dialougNodes[0].GetDialougText());
+public class Tree
+{
+    public Dialoug root { get; set; }
+}
 
-        //manual for testing purp
-        dialougNodes[0].setConnectedNodes(dialougNodes[1], dialougNodes[2]);
-        GuidialougText.text = dialougNodes[0].GetDialougText();
-        
-        for(int i=0;i < optionText.Count()-1; i++)
-        {
-            if(dialougNodes[0].getNodeOptiontext(i)==null)
-                return;
-            optionText[i].text = dialougNodes[0].getNodeOptiontext(i);
-        }
-     
-
-    }
-
-    public void Update()
-        {
-        }
-
-        public void addDialougNode(Dialoug dNode)
-        {
-            if (dNode == null)
-                return;
-            dialougNodes.Add(dNode);
-        }
-
-
-        //ugly!! maybe just pass in a list of floats for each of the values instead two core ones? 
-        Dialoug addingNodeManually(string labe, string dText, float[] values)
-        {
-
-            Dialoug d = new Dialoug(
-            Dialoug.DialougType.introduction,
-            labe,
-            dText,
-            addValues(values));//need to add connected nodes --- 
-            return d;
-        }
-
-        //duplicated method - unify this into value system instead of character and dialoug one 
-        private List<KeyValuePair<Dialoug.DialougValue, float>> addValues(float[] values)
-        {
-            List<KeyValuePair<Dialoug.DialougValue, float>> listofValues =
-                new List<KeyValuePair<Dialoug.DialougValue, float>>();
-
-            int i = 0;
-            foreach (Dialoug.DialougValue Dvalue in Enum.GetValues(typeof(Dialoug.DialougValue)))
-            {
-                listofValues.Add((new KeyValuePair<Dialoug.DialougValue, float>
-                    (Dvalue, values[i])));
-                i++;
-            }
-
-            return listofValues;
-        }
-
-        void runNode(Dialoug node)
-        {
-
-        }
-
-
-        void getNextNode()
-        {
-
-        }
-*/
