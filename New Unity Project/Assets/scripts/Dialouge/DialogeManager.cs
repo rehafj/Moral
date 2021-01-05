@@ -52,8 +52,9 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     public Button[] PlayerButtons;
    [SerializeField] bool isTyping;
 
+    Coroutine currentCorutine;
 
- 
+
     InterestingCharacters currentIntrestingCharracter;
     List<string> currentTopicsAboutCurrentCharacter;
 
@@ -63,13 +64,10 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     //for tests 
     Tree TomsTree = new Tree();
 
-
+    Tree AllCharacterTrees = new Tree();//will hold branches...
     public void Awake()
     {
 
-        playerName = "Rehaf";
-        StartCoroutine(TypeInDialoug("hey there" + playerName +
-            " \n thanks for meeting me for brunch! Boy has the town been eventful lately! "));
     }
     public void Start()
     {
@@ -96,41 +94,61 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
     public void setUp()
     {
+        Dialoug introductionNode = new Dialoug("introduction", "hey there " + playerName +
+        " \n thanks for meeting me for brunch! Boy has the town been eventful lately! "); //move this into its file 
+
         conversedAboutCharectersList = bgchar.GetFiltredCharerList();//fltred list of characters (with 5+ flags)
-        currentIntrestingCharracter = chooseaCharacterToTalkAbout(); //random for now but pops it out of the lkist if chosen
-        Dialoug node = new Dialoug("thikning about tom,","hmm I have been thinking about character X");
+
+        //random for now but pops it out of the lkist if chose
+
+
+        //testing case: 
+        currentIntrestingCharracter = chooseaCharacterToTalkAbout();
+        Dialoug node = new Dialoug("thikning about " + currentIntrestingCharracter.fullName,
+            "hmm I have been thinking about the cube " + currentIntrestingCharracter.fullName); //base node of a character. 
         TomsTree.root = node;
-        Debug.Log(TomsTree.root.ButtonText);
         TomsTree.root.children = returnListOfDialougNodes(currentIntrestingCharracter);
-        foreach(Dialoug s in TomsTree.root.children)
-        {
-            Debug.Log("current thoughts are" + s.ButtonText);
-        }
-        Debug.Log(TomsTree.root.children.Count);
+        allCharacterConversationsTrees.Add(TomsTree);
+        DisplayplayCurrentOpinions(TomsTree);
+        currentNode = choseADialougNode(TomsTree.root.children);
+        currentCorutine = StartCoroutine(TypeInDialoug("hey there " + playerName +
+      " \n thanks for meeting me for brunch! Boy has the town been eventful lately! "));
+
+        StartCoroutine(WaitAndPrintcompoundedStatments(currentNode.IntroducingATopicdialoug, currentNode.dialougText));//so this works... but does nto when in larger scenartio.. 
+        //// -- end of testing case 
+
+
+        //DisplayThoughtBubbles();
+      
+       
 
 
 
-
-        //chjildren all remaningoptions 
-        // string chosenTopic = chooseAnInitialTopic(currentIntrestingCharracter);
-        // setUprootNodes();
     }
 
-    Coroutine activeCorutine;
 
-    void DisplayNodeIntroTopic(Dialoug d)
+    void setUpTrees()
     {
-        StartCoroutine(TypeInDialoug(d.IntroducingATopicdialoug));
+        foreach(InterestingCharacters character in conversedAboutCharectersList)
+        {
+            currentIntrestingCharracter = chooseaCharacterToTalkAbout(); //random for now but pops it out of the lkist if chose
+            Dialoug node = new Dialoug("thikning about " + currentIntrestingCharracter.fullName,
+           "hmm I have been thinking about the cube " + currentIntrestingCharracter.fullName); //base node of a character. 
+            Tree tree = new Tree();
+            tree.root = node;
+            tree.root.children = returnListOfDialougNodes(currentIntrestingCharracter);
+            allCharacterConversationsTrees.Add(TomsTree);
+        }
 
     }
 
-   
+
     Dialoug choseADialougNode(List<Dialoug> bgCharacterNOdes)
     {
 
         int i = UnityEngine.Random.Range(0, bgCharacterNOdes.Count - 1);
         Dialoug node = bgCharacterNOdes.ElementAt(i);
-        bgCharacterNOdes.RemoveAt(i);//que and deque from a list --- add logic on how to choose a better character - random for now 
+        bgCharacterNOdes.RemoveAt(i);//que and deque from a list ---OR FLAG VISITED add logic on how to choose a better character - random for now 
         currentNode = node;
         return node;
 
@@ -143,16 +161,17 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             if(TomsTree.root.children.Count > 0)
             {//cool works!  perhjaps before popping it out of que in display intro topic have it have child nodes about that topic, don't pop it out of list fix this me! 
                 DisplayplayCurrentOpinions(TomsTree); //for testing - later put all of these into a bigger tree collection
-                DisplayNodeIntroTopic(choseADialougNode(TomsTree.root.children));
-      
+                currentNode = choseADialougNode(TomsTree.root.children);
+                Debug.Log("hit");
+               StartCoroutine( WaitAndPrintcompoundedStatments(currentNode.IntroducingATopicdialoug, currentNode.dialougText));
             }
 
 
         }
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            displayDialougOpinion();
-        }
+/*            displayDialougOpinion();
+*/        }
     }
 
     private void displayDialougOpinion()
@@ -183,9 +202,10 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                 //--- gives the general feelings about a thing, add to the same node the pther structure elements... 
 
                 node.IntroducingATopicdialoug =
-                    getIntroductionTopicString(kvp.Key, character);
+                    getIntroductionTopicString(kvp.Key, character); //unbaised opening statment 
 
                 nodes.Add(node);
+
             }
         }
         return nodes;
@@ -198,7 +218,6 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     {//selecting intro and the first part of the body here --- 
         foreach (DialougStructure op in opinions) //ex: all high opp
         {
-            Debug.Log("-------"+ op.topic +" and the key wsas maped to" + mapToCNPCMoralFactor(key)); //error in mappuing check this out tomorrow ---- 
             if (op.topic.Contains(mapToCNPCMoralFactor(key))) //get the translatiopn of they key but not ditect character keys..... 
             {
                 selectedOpnion = op.topic.Split('_').Last();
@@ -299,13 +318,6 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
      }
     
 
-
-
-
-
-
-
-
     // helper functions 
     private void OrgnizeCNPCOpinions()
     {
@@ -331,7 +343,6 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     //gui stuff 
     private void DisplayplayCurrentOpinions(Tree currentCharacterTree) //text fields
     {
-        Debug.Log("has this been called?");
         foreach (Text t in CNPCoptionText) //send in flags to check if player or npc and get the rioght translation out
         {
             int r = UnityEngine.Random.Range(0, currentCharacterTree.root.children.Count - 1);
@@ -381,7 +392,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             case ("loner"):
                 return "I wonder why " +character.fullName + "lives alone...";
             case ("hasalotofenemies"):
-                return "I wonder why " + character.fullName + "has alot of enemies... /// not assigned to a CNPC value yet";
+                return "I wonder why " + character.fullName + "has alot of enemies... ///assigned to firinship is the joy of life";
 
 
             case ("MoneyMaker"):
@@ -615,9 +626,15 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     void disableInstructionsUI()
     {
         InstructionsUI.SetActive(false);
+        startTheInteraction();
     }
 
-   void disableorEnablePlayerButtons()
+    private void startTheInteraction()
+    {
+         setUp();
+    }
+
+    void disableorEnablePlayerButtons()
     {
        
         foreach( Button b in PlayerButtons)
@@ -648,9 +665,14 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         }
     }
 
-    bool checkCorutine;
+   [SerializeField] bool checkCorutine;
+    bool isItTypying()
+    {
+        return checkCorutine;
+    }
     IEnumerator TypeInDialoug(string dialkougText)
     {
+        checkCorutine = false;
         for (int i = 0; i<= dialkougText.Length;  i++)
         {
             isTyping = true;
@@ -660,8 +682,57 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         }
         isTyping = false;
         enableClick();
-        activeCorutine = null;
+        Debug.Log("i am ptring this in the loop");
+        yield return new WaitForSeconds(2);
+        Debug.Log("printging this after two seconds...");
+
         checkCorutine = true;
+    }
+
+    
+
+    IEnumerator waitAndPrint(Dialoug node)   //so this works... but does nto when in larger scenartio.. 
+    {
+
+        yield return currentCorutine;
+        currentCorutine = StartCoroutine(TypeInDialoug(node.dialougText));
+       
+    }
+    IEnumerator waitAndPrint(string text)   //so this works... but does nto when in larger scenartio.. 
+    {
+
+        yield return currentCorutine;
+        currentCorutine = StartCoroutine(TypeInDialoug(text));
+
+    }
+
+    IEnumerator WaitAndPrintcompoundedStatments(string textOne, string textTwo)   //so this works... but does nto when in larger scenartio.. 
+    {
+
+        yield return currentCorutine;
+        currentCorutine = StartCoroutine(TypeInDialoug(textOne));
+        yield return currentCorutine;
+        currentCorutine = StartCoroutine(TypeInDialoug(textTwo));
+    }
+    IEnumerator WaitAndPrintcompoundedStatments(Dialoug node1, Dialoug node2)   //so this works... but does nto when in larger scenartio.. 
+    {
+
+        yield return currentCorutine;
+        currentCorutine = StartCoroutine(TypeInDialoug(node1.dialougText)); 
+        yield return  currentCorutine;
+        currentCorutine = StartCoroutine(TypeInDialoug(node2.dialougText));
+    }
+    Coroutine DisplayNodeIntroTopic(Dialoug d)
+    {   
+        Coroutine c = StartCoroutine(TypeInDialoug(d.IntroducingATopicdialoug));
+        return c;
+
+    }
+
+    IEnumerator waitAndTest()
+    {
+        yield return new WaitUntil(() => isTyping == true);
+
     }
 }
 

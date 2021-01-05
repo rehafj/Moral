@@ -1,0 +1,709 @@
+fileFormatVersion: 2
+guid: 6dc2dc2ee93002a4aa51eb375e3d9fdb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8020143640844766479
+    second: spritesheet_0
+  - first:
+      213: -6251682230944352461
+    second: spritesheet_1
+  - first:
+      213: -1259408508766424310
+    second: spritesheet_2
+  - first:
+      213: -5962389079421231736
+    second: spritesheet_3
+  - first:
+      213: 2788568348960109317
+    second: spritesheet_4
+  - first:
+      213: 226702753830753226
+    second: spritesheet_5
+  - first:
+      213: -7921052967969465774
+    second: spritesheet_6
+  - first:
+      213: -1370661682523340017
+    second: spritesheet_7
+  - first:
+      213: -8152833354213521176
+    second: thought bubble_0
+  - first:
+      213: -3876728631501274240
+    second: thought bubble_1
+  - first:
+      213: 4989488732616952342
+    second: thought bubble_2
+  - first:
+      213: -8270753600830577393
+    second: thought bubble_3
+  - first:
+      213: -2938723576741822218
+    second: thought bubble_4
+  - first:
+      213: -1561071048160951848
+    second: thought bubble_5
+  - first:
+      213: -5903344130379972915
+    second: thought bubble_6
+  - first:
+      213: -7422924728691607346
+    second: thought bubble_7
+  - first:
+      213: -4052724629990928908
+    second: thought bubble_8
+  - first:
+      213: -4605151317786616149
+    second: thought bubble_9
+  - first:
+      213: 9009696879097360420
+    second: thought bubble_10
+  - first:
+      213: 5596759522482426409
+    second: thought bubble_11
+  - first:
+      213: 6666956164218705131
+    second: thought bubble_12
+  - first:
+      213: -8504292799756990811
+    second: thought bubble_13
+  - first:
+      213: 5687337876827883872
+    second: thought bubble_14
+  - first:
+      213: 6827213682210506713
+    second: thought bubble_15
+  - first:
+      213: 8323112118570199314
+    second: thought bubble_16
+  - first:
+      213: 1548955678215868728
+    second: thought bubble_17
+  - first:
+      213: 4785234901943382590
+    second: thought bubble_18
+  - first:
+      213: -453490617246090239
+    second: thought bubble_19
+  - first:
+      213: -7003211503441096894
+    second: thought bubble_20
+  - first:
+      213: -1498586220744527957
+    second: thought bubble_21
+  - first:
+      213: -434751157416645912
+    second: thought bubble_22
+  - first:
+      213: 1117578564173230049
+    second: thought bubble_23
+  - first:
+      213: -3260588300940572661
+    second: thought bubble_24
+  - first:
+      213: 6793681244714604294
+    second: thought bubble_25
+  - first:
+      213: 1399452686140048528
+    second: thought bubble_26
+  - first:
+      213: -44392411104277813
+    second: thought bubble_27
+  - first:
+      213: -737629105935735320
+    second: thought bubble_28
+  - first:
+      213: 3615170900883733233
+    second: thought bubble_29
+  - first:
+      213: 1322665306783851160
+    second: thought bubble_30
+  - first:
+      213: -2221984980556606974
+    second: thought bubble_31
+  - first:
+      213: -2029795014070110644
+    second: thought bubble_32
+  - first:
+      213: -7608032777428962253
+    second: thought bubble_33
+  - first:
+      213: -8413731332096194339
+    second: thought bubble_34
+  - first:
+      213: -1001797373380629552
+    second: thought bubble_35
+  - first:
+      213: -8273227090321977370
+    second: thought bubble_36
+  - first:
+      213: -9178039598875563494
+    second: thought bubble_37
+  - first:
+      213: -4787214256014170904
+    second: thought bubble_38
+  - first:
+      213: -7489561259789241263
+    second: thought bubble_39
+  - first:
+      213: 121674596302120704
+    second: thought bubble_40
+  - first:
+      213: -5533922825143145124
+    second: thought bubble_41
+  - first:
+      213: -157699771367958187
+    second: thought bubble_42
+  - first:
+      213: -2688570992691293462
+    second: thought bubble_43
+  - first:
+      213: -384624468826332722
+    second: thought bubble_44
+  - first:
+      213: -820053764770702547
+    second: thought bubble_45
+  - first:
+      213: 6962687253459842523
+    second: thought bubble_46
+  - first:
+      213: 129951553118606630
+    second: thought bubble_47
+  - first:
+      213: 7592691786984669215
+    second: thought bubble_48
+  - first:
+      213: -2636332780335564338
+    second: thought bubble_49
+  - first:
+      213: 8277023823371640863
+    second: thought bubble_50
+  - first:
+      213: 7381892742843496490
+    second: thought bubble_51
+  - first:
+      213: 2697592392412242899
+    second: thought bubble_52
+  - first:
+      213: -6741264674782600319
+    second: thought bubble_53
+  - first:
+      213: 3905457423206368398
+    second: thought bubble_54
+  - first:
+      213: -369185350973129834
+    second: thought bubble_55
+  - first:
+      213: -3593012246818135376
+    second: thought bubble_56
+  - first:
+      213: 8168834881631497381
+    second: thought bubble_57
+  - first:
+      213: -2271432138722977361
+    second: thought bubble_58
+  - first:
+      213: 290442844261862289
+    second: thought bubble_59
+  - first:
+      213: 7699369221990586753
+    second: thought bubble_60
+  - first:
+      213: -68022746208033548
+    second: thought bubble_61
+  - first:
+      213: 7000764287976631390
+    second: thought bubble_62
+  - first:
+      213: -3560271096792079918
+    second: thought bubble_63
+  - first:
+      213: -6005126115214504896
+    second: thought bubble_64
+  - first:
+      213: 976477438399868434
+    second: thought bubble_65
+  - first:
+      213: 6062892976196103617
+    second: thought bubble_66
+  - first:
+      213: 8707242518100671674
+    second: thought bubble_67
+  - first:
+      213: -9074003585520986880
+    second: thought bubble_68
+  - first:
+      213: 3492226932603635473
+    second: thought bubble_69
+  - first:
+      213: -1066567297102819368
+    second: thought bubble_70
+  - first:
+      213: 5356351922332432953
+    second: thought bubble_71
+  - first:
+      213: 8331046259839885415
+    second: thought bubble_72
+  - first:
+      213: -2701429443523091280
+    second: thought bubble_73
+  - first:
+      213: 5915268437938422774
+    second: thought bubble_74
+  - first:
+      213: 5532768109889623170
+    second: thought bubble_75
+  - first:
+      213: 3222309934370859816
+    second: thought bubble_76
+  - first:
+      213: 437156100676648607
+    second: thought bubble_77
+  - first:
+      213: 2305091929139718538
+    second: thought bubble_78
+  - first:
+      213: -5991947500318589026
+    second: thought bubble_79
+  - first:
+      213: -3314066756351282240
+    second: thought bubble_80
+  - first:
+      213: -6177118580762218157
+    second: thought bubble_81
+  - first:
+      213: -7261848718559620683
+    second: thought bubble_82
+  - first:
+      213: 812560960147509950
+    second: thought bubble_83
+  - first:
+      213: 706821782934730003
+    second: thought bubble_84
+  - first:
+      213: -5771936802956963308
+    second: thought bubble_85
+  - first:
+      213: -6663604373793800130
+    second: thought bubble_86
+  - first:
+      213: -345457365527061498
+    second: thought bubble_87
+  - first:
+      213: 643816188076961403
+    second: thought bubble_88
+  - first:
+      213: -8926807356008530889
+    second: thought bubble_89
+  - first:
+      213: 2183864237244795030
+    second: thought bubble_90
+  - first:
+      213: 8210592257350490470
+    second: thought bubble_91
+  - first:
+      213: 8625572056963207764
+    second: thought bubble_92
+  - first:
+      213: 6169397736674099918
+    second: thought bubble_93
+  - first:
+      213: 7879734654976839168
+    second: thought bubble_94
+  - first:
+      213: -4081813499620901053
+    second: thought bubble_95
+  - first:
+      213: -3140295111579397975
+    second: thought bubble_96
+  - first:
+      213: 8731463435730420295
+    second: thought bubble_97
+  - first:
+      213: -2103948254465932980
+    second: thought bubble_98
+  - first:
+      213: -4216624694114081732
+    second: thought bubble_99
+  - first:
+      213: 906108103674322453
+    second: thought bubble_100
+  - first:
+      213: 143254764857827788
+    second: thought bubble_101
+  - first:
+      213: -8095489637406656099
+    second: thought bubble_102
+  - first:
+      213: 5643039014809339300
+    second: thought bubble_103
+  - first:
+      213: -1851419601069251859
+    second: thought bubble_104
+  - first:
+      213: -9112718357484556238
+    second: thought bubble_105
+  - first:
+      213: -4708683748720979406
+    second: thought bubble_106
+  - first:
+      213: -321026532690010
+    second: thought bubble_107
+  - first:
+      213: -9013923698184416370
+    second: thought bubble_108
+  - first:
+      213: -875323416776846254
+    second: thought bubble_109
+  - first:
+      213: 56523846222299223
+    second: thought bubble_110
+  - first:
+      213: 3833031354577685618
+    second: thought bubble_111
+  - first:
+      213: -5642765082018301163
+    second: thought bubble_112
+  - first:
+      213: 5086244010400046055
+    second: thought bubble_113
+  - first:
+      213: -1428334499792040751
+    second: thought bubble_114
+  - first:
+      213: -7176271139216955149
+    second: thought bubble_115
+  - first:
+      213: 7847888121990809362
+    second: thought bubble_116
+  - first:
+      213: -936715733646404432
+    second: thought bubble_117
+  - first:
+      213: -5485936379701241124
+    second: thought bubble_118
+  - first:
+      213: -8227052781237650566
+    second: thought bubble_119
+  - first:
+      213: 4477246414511205938
+    second: thought bubble_120
+  - first:
+      213: 34778735509201065
+    second: thought bubble_121
+  - first:
+      213: -3211834714727970283
+    second: thought bubble_122
+  - first:
+      213: 7437387204782670033
+    second: thought bubble_123
+  - first:
+      213: -2533966547478169233
+    second: thought bubble_124
+  - first:
+      213: 1769849539198389570
+    second: thought bubble_125
+  - first:
+      213: -4992895023696199962
+    second: thought bubble_126
+  - first:
+      213: -46995102668271150
+    second: thought bubble_127
+  - first:
+      213: 4586253391656742090
+    second: thought bubble_128
+  - first:
+      213: 5581569006989421188
+    second: thought bubble_129
+  - first:
+      213: -3966687411979734579
+    second: thought bubble_130
+  - first:
+      213: -6753698370378788552
+    second: thought bubble_131
+  - first:
+      213: -7062621909649965883
+    second: thought bubble_132
+  - first:
+      213: -9179592928708834324
+    second: thought bubble_133
+  - first:
+      213: -5273958625965426866
+    second: thought bubble_134
+  - first:
+      213: -5494024105113117144
+    second: thought bubble_135
+  - first:
+      213: -3249833585961143717
+    second: thought bubble_136
+  - first:
+      213: -8506389606405721066
+    second: thought bubble_137
+  - first:
+      213: -9022929869524843100
+    second: thought bubble_138
+  - first:
+      213: -3514647673746422411
+    second: thought bubble_139
+  - first:
+      213: 8399417104866371236
+    second: thought bubble_140
+  - first:
+      213: -6286631768775116751
+    second: thought bubble_141
+  - first:
+      213: 5888237281099662912
+    second: thought bubble_142
+  - first:
+      213: -4771398684241099943
+    second: thought bubble_143
+  - first:
+      213: 5667607586257589597
+    second: thought bubble_144
+  - first:
+      213: 7747774732806665551
+    second: thought bubble_145
+  - first:
+      213: 4851616109584297280
+    second: thought bubble_146
+  - first:
+      213: 2157856091868974486
+    second: thought bubble_147
+  - first:
+      213: 1582620904841318702
+    second: thought bubble_148
+  - first:
+      213: -8832010874893034366
+    second: thought bubble_149
+  - first:
+      213: -4381522261640749977
+    second: thought bubble_150
+  - first:
+      213: -34264560845583566
+    second: thought bubble_151
+  - first:
+      213: 6611949820181029948
+    second: thought bubble_152
+  - first:
+      213: -7625985870986646520
+    second: thought bubble_153
+  - first:
+      213: -8985712526696246101
+    second: thought bubble_154
+  - first:
+      213: 6620910798046241080
+    second: thought bubble_155
+  - first:
+      213: 3058398261752577727
+    second: thought bubble_156
+  - first:
+      213: 164531322473472522
+    second: thought bubble_157
+  - first:
+      213: 6362798144151075323
+    second: thought bubble_0
+  - first:
+      213: 7254447085524178640
+    second: thought bubble_1
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: thought bubble_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 841
+        height: 508
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf9b3a753333d4850800000000000000
+      internalID: 6362798144151075323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thought bubble_1
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 1
+        width: 841
+        height: 508
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d659864039fca460800000000000000
+      internalID: 7254447085524178640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thought bubble_2
+      rect:
+        serializedVersion: 2
+        x: 1682
+        y: 1
+        width: 841
+        height: 508
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61a827e11993e3540800000000000000
+      internalID: 4989488732616952342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: a7f15e4946601884b8165af84d03f295
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
