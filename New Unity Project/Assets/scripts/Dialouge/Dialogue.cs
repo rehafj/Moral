@@ -15,6 +15,7 @@ public class Dialoug
     public string thoughtBubbleText;
     public bool Explored; //just to test something
 
+    public  List<string> ExploredHatedFacts;
     
     public Dialoug parent;
     public List<Dialoug> children;
@@ -37,6 +38,15 @@ public class Dialoug
             currentNode = currentNode.parent;
         }
         return height;
+    }
+    public string getRandomHatedFact()
+    {
+        int r = Random.Range(0, hatedFacts.Count);     
+        string hatedFact = hatedFacts[r];
+        hatedFacts.RemoveAt(r);
+        //ExploredHatedFacts.Add(hatedFact);
+        return hatedFact;
+        //TODO add something to check if all hated facts are done :d //size = 0S
     }
 }
 

@@ -191,7 +191,6 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         displayPlayerButtons(currentNode);
 
     }
-    //something is wrong here!!! 
     Dialoug choseADialougNode(List<Dialoug> bgCharacterNOdes)
     {
 
@@ -206,25 +205,15 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             {
                 d.Explored = true;
                 return d;
-
-            }
-            i++;
+            } i++;
             if (i >= bgCharacterNOdes.Count)//last element in the list 
             {
                 Debug.Log("last element of the list");
                 currentTree.FullyExplored = true;
-                break;
-
-            }
+                break;  }
         }
 
-     /*   bool fullyexplored = bgCharacterNOdes.All(x => x.Explored == false);
-        Debug.Log("valyue of fully explored?" + fullyexplored);
-        if (!fullyexplored)
-        {
-            currentTree.FullyExplored = true;
-
-        }*/
+     /*   bool fullyexplored = bgCharacterNOdes.All(x => x.Explored == false); */
        
         return currentNode;
 
@@ -255,53 +244,114 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     void displayPlayerButtons(Dialoug node) //hardcoded for now - do this for the current height of the tree --- 
     {
 
-       // Debug.Log(node.getHeight());//if the higfght is 2 then i can agree/ dissagree..etc with an option //height 1 then i am thinking aboyut the character ( height 2 is the flag / character topic) 
-                                    // StartCoroutine(waitAndEnableButtons());
-/*        disableorEnablePlayerButtons();
-*/
+        // Debug.Log(node.getHeight());//if the higfght is 2 then i can agree/ dissagree..etc with an option //height 1 then i am thinking aboyut the character ( height 2 is the flag / character topic) 
+        // StartCoroutine(waitAndEnableButtons());
+        /*        disableorEnablePlayerButtons();
+        */
+     
+
         if (node.getHeight() == 2)
         {
             setPlayerButtonText();
             //for testing 
+            foreach(Button b in PlayerButtons)
+            {
+                b.onClick.RemoveAllListeners();
+            }
             PlayerButtons[0].onClick.AddListener(playerAgrees);
+            PlayerButtons[1].onClick.AddListener(playerDissAgrees);
+            PlayerButtons[2].onClick.AddListener(askAboutAnotherCharacter);
+
         }
     }
 
-    private void setPlayerButtonText()
-    {
-        PlayerButtons[0].GetComponentInChildren<Text>().text = "I agree with whar you said ";
-        PlayerButtons[1].GetComponentInChildren<Text>().text = "I don't agree with you there";
-        PlayerButtons[2].GetComponentInChildren<Text>().text = "Dish more about that cube"; //pull from a list of random strings later //TODO
-        PlayerButtons[3].GetComponentInChildren<Text>().text = "you know what, lets talk about something else";
 
-
-    }
 
     void playerAgrees()
     {
         Debug.Log("player agreed!!!" + currentNode.ButtonText + "after i click on agree! " + currentNode.dialougText);
+        StartCoroutine(waitAndPrintAgreement(currentNode.agreementText));
+    }
 
-        StartCoroutine(waitAndPrint(currentNode.agreementText));
-        if (!currentTree.FullyExplored)
+    private void playerDissAgrees()
+    {
+        Debug.Log("player disagreed!" + currentNode.ButtonText + "after i click on agree! " + currentNode.dialougText);
+
+        StartCoroutine(waitAndPrintDisagreement(currentNode.getRandomHatedFact()));
+        setPlayerButtonTextDissagreement();
+    }
+
+    private void askAboutAnotherCharacter()
+    {
+        currentNode = currentNode.parent; //went up on height --- 
+        Debug.Log("checking:"+ currentNode.getHeight());
+        if (currentNode.getHeight() == 1)
         {
-            startAconversation(currentTree);//at 0 
-
-        } else
-        {
-
-            Debug.Log("Done with the tree");
+            setPlayerButtonTextCharacter();
+            askAboutAcharacter();
         }
 
-     /*   else
-        {
-            StartCoroutine(waitAndPrint("I think we talked enough about that cube "));
-            converseAboutNextCharacter();
-        }*/
-        //  if(currentNode.parent.children)
-        // startAconversation(null);
-        //start a conv
-        //loop back 
     }
+  
+    //refactor these --- 
+    private void setPlayerButtonText()
+    {
+        PlayerButtons[0].GetComponentInChildren<Text>().text = "I agree with " + currentNode.ButtonText;
+        PlayerButtons[1].GetComponentInChildren<Text>().text = "I don't agree with you there";
+        PlayerButtons[3].GetComponentInChildren<Text>().text = "Dish more about that cube"; //pull from a list of random strings later //TODO
+        PlayerButtons[2].GetComponentInChildren<Text>().text = "you know what, lets talk about something else";
+    }
+    private void setPlayerButtonTextDissagreement()
+    {
+        PlayerButtons[0].GetComponentInChildren<Text>().text = "yeah I guess you are right";
+        PlayerButtons[1].GetComponentInChildren<Text>().text = "I still don't agree with you there";
+        PlayerButtons[3].GetComponentInChildren<Text>().text = "Dish more about that cube"; //pull from a list of random strings later //TODO
+        PlayerButtons[2].GetComponentInChildren<Text>().text = "you know what, lets talk about something else";
+    }
+
+    private void setPlayerButtonTextCharacter()
+    {
+        int i = treeCounter;
+        foreach(Button b in PlayerButtons)
+        {
+            Debug.Log(allCharacterConversationsTrees[i].root.thoughtBubbleText);
+            b.GetComponentInChildren<Text>().text = "ask about" +
+                allCharacterConversationsTrees[i].root.thoughtBubbleText;
+                i++;
+        }
+        
+    }
+
+    private void askAboutAcharacter()
+    {
+        int i = treeCounter;
+        foreach (Button b in PlayerButtons)
+        {
+            b.onClick.RemoveAllListeners();
+        }
+        foreach (Button b in PlayerButtons)
+        {
+            Debug.Log(i);
+
+            b.onClick.AddListener(() => moveConversationToSelectedTree(i) );
+            i++;
+        }
+
+    }
+
+    private void moveConversationToSelectedTree(int treeIndex)
+    {
+        //fix this --- it is always 4 as an index! 
+        Debug.Log("index of the tree" + treeIndex);
+        currentTree = allCharacterConversationsTrees[treeIndex];
+        StopAllCoroutines();
+        GuidialougText.text = "";
+        Debug.Log("current tree explorting " + currentTree.root.thoughtBubbleText);
+        startAconversation(currentTree);
+    }
+
+
+
 
     void converseAboutNextCharacter()
     {
@@ -335,12 +385,11 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
     public void Update()
     {
-       // Debug.Log(currentTree.FullyExplored);
-        Debug.Log("INSIDE UPDATE --- CURNODE currentNode.ButtonText  " +currentNode.ButtonText + "  topic introduction: " + currentNode.IntroducingATopicdialoug
+    /*    Debug.Log("INSIDE UPDATE --- CURNODE currentNode.ButtonText  " +currentNode.ButtonText + "  topic introduction: " + currentNode.IntroducingATopicdialoug
             +"intro baised<dtext>"+ currentNode.dialougText +"a node's agreement"+currentNode.agreementText +"nodes dissagreement text"+ 
             currentNode.hatedFacts[0]+"fully explored this node"+currentNode.Explored);
         Debug.Log(treeCounter);
-
+*/
     }
 
     private void displayDialougOpinion()
@@ -937,11 +986,40 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         currentCorutine = StartCoroutine(TypeInDialoug(node.dialougText));
 
     }
-    IEnumerator waitAndPrint(string text)   //so this works... but does nto when in larger scenartio.. 
+    IEnumerator waitAndPrintAgreement(string text)   //so this works... but does nto when in larger scenartio.. 
     {
 
         yield return currentCorutine;
         currentCorutine = StartCoroutine(TypeInDialoug(text));
+        yield return currentCorutine;
+        if (!currentTree.FullyExplored)
+        {
+            startAconversation(currentTree);//at 0 
+        }
+        else
+        { 
+            Debug.Log("Done with the tree");
+            converseAboutNextCharacter();
+        }
+
+    }
+
+    IEnumerator waitAndPrintDisagreement(string text)   //so this works... but does nto when in larger scenartio.. 
+    {
+
+        yield return currentCorutine;
+        currentCorutine = StartCoroutine(TypeInDialoug(text));
+        yield return currentCorutine;
+        if(currentNode.hatedFacts.Count <= 0 && currentTree.FullyExplored)
+        {
+            //i.e. we walked about all the hated facts! 
+            converseAboutNextCharacter();
+        }
+        else
+        {
+            startAconversation(currentTree);
+        }
+    
 
     }
 
