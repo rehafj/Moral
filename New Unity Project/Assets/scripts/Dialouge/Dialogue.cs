@@ -9,16 +9,20 @@ public class Dialoug
 {
     public string ButtonText;
     public string IntroducingATopicdialoug;
-    public string dialougText;
+    public string dialougText; //main thoughts ( body1 in json)
+    public string agreementText; //i.e doubling down on it. 
+    public List<string> hatedFacts; //will contain things the npc hates about the character 
+    public string thoughtBubbleText;
     public bool Explored; //just to test something
 
+    
     public Dialoug parent;
     public List<Dialoug> children;
 
 
     public Dialoug(string option, string text)
     {
-        ButtonText = option;
+        thoughtBubbleText = option;
         dialougText = text;
         Explored = false;
     }

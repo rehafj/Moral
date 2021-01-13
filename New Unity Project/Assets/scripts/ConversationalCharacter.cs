@@ -12,9 +12,15 @@ public class ConversationalCharacter : MonoBehaviour
     "Teetotasler","FamilyPerson"  ,"SchoolIsCool","LoverOfRisks"   
             ,"SupportingComunities", "LandISWhereThehrtIS","CarrerAboveAll", 
         "FriendsAreTheJoyOFlife"
-       , "Loner"  };
+       , "Loner"};
 
     public string ConversationalNpcName; 
+
+    public enum emotion
+    {
+        happy, sad, angry, shocked, shy
+    }
+    public emotion CnpcEmotion;
     public enum RatingVlaues
     {
        High, Mid, Low

@@ -18,6 +18,7 @@ public class InterestingCharacters : MonoBehaviour
         public int MainPersonID;
     }
 
+
     LoveTraingle LoveTraingleIfOthersAreMarried;
     LoveTraingle LoveTraingleBetweenFriends;
 
@@ -86,13 +87,39 @@ public class InterestingCharacters : MonoBehaviour
       
     }
 
-    public string GetLoverName()
+    public string GetLoverName() //change this into something more generic 
     {
         TownCharacter townie =   bgcharList.Find(x => x.id == lovedOneID);
         return townie.firstName;
 
     }
-        
+
+
+    public bool HasJuicyMoralFacts()
+    {
+
+        if (characterFlags["InLovewithspouseoffriend"] || characterFlags["pregnantbutnotfromspuceorbutloveintrest"]
+            || characterFlags["butcherRole"] || characterFlags["IsRichButNotGenrous"])
+        {
+            return true;
+        }
+        else return false;
+    }
+
+    public int NumberOFFlags()
+    {
+        int size = 0;
+        foreach(KeyValuePair<string,bool> kvp in characterFlags)
+        {
+            if (kvp.Value)
+            {
+                size++;
+            }
+            
+        }
+        return size;
+    }
+
     // Start is called before the first frame update
     void Start()
     {

@@ -12,11 +12,12 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 {
     public Tree testingTree = new Tree(); //--using this one to test one branch out - generate these and place them in the big list of  tree/brance conversations  - using this 
 
-    List<Tree> allCharacterConversationsTrees = new List<Tree>();
-
+    public List<Tree> allCharacterConversationsTrees = new List<Tree>();
+    private Tree currentTree ;
 
     public List<Dialoug> fullCharacterRootNodes;
     public List<Dialoug> currentPlayerOptions;
+    public int treeCounter = 3;
 
     JsonLoader jsn;
 
@@ -32,7 +33,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     //add a node to check if explored 
     BackgroundCharacter bgchar;
 
- 
+
     List<String> currentThoughts;
     string selectedOpnion;
 
@@ -50,9 +51,10 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     public Text GuidialougText;
     public Text[] CNPCoptionText;
     public Button[] PlayerButtons;
-   [SerializeField] bool isTyping;
+    [SerializeField] bool isTyping;
 
     Coroutine currentCorutine;
+    Coroutine currentThoughtBubbleCorutine;
 
 
     InterestingCharacters currentIntrestingCharracter;
@@ -65,6 +67,10 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     Tree TomsTree = new Tree();
 
     Tree AllCharacterTrees = new Tree();//will hold branches...
+
+    delegate IEnumerator waitAndExecute(List<Tree> tree);
+    waitAndExecute MyMethodHolder;
+
     public void Awake()
     {
 
@@ -72,106 +78,269 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     public void Start()
     {
         bgchar = FindObjectOfType<BackgroundCharacter>();
-        jsn =FindObjectOfType<JsonLoader>();
+        jsn = FindObjectOfType<JsonLoader>();
 
 
-        disableorEnablePlayerButtons();
+        //disableorEnablePlayerButtons();
         AllOpinions = jsn.listOfConversations;
         currentCNPC = FindObjectOfType<CharacterManager>().characters[0]; //hard coded with tim for now 
         OrgnizeCNPCOpinions();
         setUp();
 
-       
+
     }
 
 
-
-
     Dialoug currentNode;
-    /// new code base here 
-    //////////////////////////////////////////////////////////////////////////////////////\
-    ///
+  
 
     public void setUp()
     {
         Dialoug introductionNode = new Dialoug("introduction", "hey there " + playerName +
         " \n thanks for meeting me for brunch! Boy has the town been eventful lately! "); //move this into its file 
 
-        conversedAboutCharectersList = bgchar.GetFiltredCharerList();//fltred list of characters (with 5+ flags)
-
-        //random for now but pops it out of the lkist if chose
+        conversedAboutCharectersList = sortCharactersToBringUp(bgchar.GetFiltredCharerList());//fltred list of characters (with 5+ flags)
 
 
-        //testing case: 
-        currentIntrestingCharracter = chooseaCharacterToTalkAbout();
-        Dialoug node = new Dialoug("thikning about " + currentIntrestingCharracter.fullName,
-            "hmm I have been thinking about the cube " + currentIntrestingCharracter.fullName); //base node of a character. 
-        TomsTree.root = node;
-        TomsTree.root.children = returnListOfDialougNodes(currentIntrestingCharracter);
-        allCharacterConversationsTrees.Add(TomsTree);
-        DisplayplayCurrentOpinions(TomsTree);
-        currentNode = choseADialougNode(TomsTree.root.children);
         currentCorutine = StartCoroutine(TypeInDialoug("hey there " + playerName +
       " \n thanks for meeting me for brunch! Boy has the town been eventful lately! "));
 
-        StartCoroutine(WaitAndPrintcompoundedStatments(currentNode.IntroducingATopicdialoug, currentNode.dialougText));//so this works... but does nto when in larger scenartio.. 
-        //// -- end of testing case 
-
-
-        //DisplayThoughtBubbles();
-      
-       
-
-
+        setUpTrees();
 
     }
 
 
     void setUpTrees()
     {
-        foreach(InterestingCharacters character in conversedAboutCharectersList)
+        foreach (InterestingCharacters character in conversedAboutCharectersList)
         {
-            currentIntrestingCharracter = chooseaCharacterToTalkAbout(); //random for now but pops it out of the lkist if chose
-            Dialoug node = new Dialoug("thikning about " + currentIntrestingCharracter.fullName,
-           "hmm I have been thinking about the cube " + currentIntrestingCharracter.fullName); //base node of a character. 
+
+            Dialoug node = new Dialoug("thikning about " + character.fullName,
+                         "hmm I have been thinking about the cube " + character.fullName);
             Tree tree = new Tree();
             tree.root = node;
-            tree.root.children = returnListOfDialougNodes(currentIntrestingCharracter);
-            allCharacterConversationsTrees.Add(TomsTree);
+            tree.root.children = returnListOfDialougNodes(character); //nodes with flags
+            foreach(Dialoug d in tree.root.children)
+            {
+                d.parent = tree.root;
+                d.hatedFacts = getThingsHatedAboutBNPC(d,character);
+              
+            }
+            allCharacterConversationsTrees.Add(tree);
+
+          
+        }
+        foreach( Tree  t in allCharacterConversationsTrees)
+        {
+
+
         }
 
+       
+        displayThoughts(allCharacterConversationsTrees);
+        currentTree = allCharacterConversationsTrees[treeCounter];
+       startAconversation(allCharacterConversationsTrees[treeCounter]);//the first cgharacter in the list - yhionking about character....etc 
+     
     }
 
+    private List<string> getThingsHatedAboutBNPC(Dialoug d, InterestingCharacters character)
+    {
+        List<string> hatedFactsAboutThisCharacter = new List<string>();
+        List<string> alreadyVistedFlags = new List<string>();
+        foreach (KeyValuePair<string, bool> kvp in character.characterFlags)
+        {
+            if (kvp.Value) //ex:love affairs 
+            {
+                if (!alreadyVistedFlags.Contains(mapToCNPCMoralFactor(kvp.Key)))
+                {
+                    if (mapToCNPCMoralFactor(kvp.Key) == "Enviromentalist" || mapToCNPCMoralFactor(kvp.Key) == "AnimalLover" ||
+                        mapToCNPCMoralFactor(kvp.Key) == "LandISWhereThehrtIS")
+                    { //only these two are kinda the oppasate
+                        string fact = returnTopicText(highVaueOpinions, kvp.Key, "CON");
+                        hatedFactsAboutThisCharacter.Add(fact);
+                    }
+                    else
+                    {
+                        string fact = returnTopicText(lowVaueOpinions, kvp.Key, "CON");
+                        hatedFactsAboutThisCharacter.Add(fact);
+                    }
+                }
 
+             alreadyVistedFlags.Add(mapToCNPCMoralFactor(kvp.Key));
+
+            }
+        }
+      /*  foreach(string s in hatedFactsAboutThisCharacter)
+        {
+            Debug.Log("the facts about " + character.fullName + "that our CNPC HATES" + s);
+        }*/
+        return hatedFactsAboutThisCharacter;
+
+    }
+    private void startAconversation(Tree chosenTree)
+    {
+
+        currentNode = choseADialougNode(chosenTree.root.children);//i.e we are still in the same tree
+
+            /* currentNode = choseADialougNode(chosenTree.root.children); //new node selection from another tree/branch 
+             currentTree = chosenTree;*/
+
+        StartCoroutine(WaitAndPrintcompoundedStatments(currentNode.IntroducingATopicdialoug,
+                   currentNode.dialougText));
+        DisplayplayCurrentOpinions(currentTree);
+        displayPlayerButtons(currentNode);
+
+    }
+    //something is wrong here!!! 
     Dialoug choseADialougNode(List<Dialoug> bgCharacterNOdes)
     {
 
-        int i = UnityEngine.Random.Range(0, bgCharacterNOdes.Count - 1);
-        Dialoug node = bgCharacterNOdes.ElementAt(i);
-        bgCharacterNOdes.RemoveAt(i);//que and deque from a list ---OR FLAG VISITED add logic on how to choose a better character - random for now 
-        currentNode = node;
-        return node;
+        // int r = UnityEngine.Random.Range(0, bgCharacterNOdes.Count - 1);
+        int i = 0;
+        foreach (Dialoug d in bgCharacterNOdes)
+        {
+            Debug.Log("list size is " + bgCharacterNOdes.Count) ;
+
+            Debug.Log("value of node" + d.ButtonText + "is "+ d.Explored + "value of counter"+i);
+            if (!d.Explored)//element is not explored 
+            {
+                d.Explored = true;
+                return d;
+
+            }
+            i++;
+            if (i >= bgCharacterNOdes.Count)//last element in the list 
+            {
+                Debug.Log("last element of the list");
+                currentTree.FullyExplored = true;
+                break;
+
+            }
+        }
+
+     /*   bool fullyexplored = bgCharacterNOdes.All(x => x.Explored == false);
+        Debug.Log("valyue of fully explored?" + fullyexplored);
+        if (!fullyexplored)
+        {
+            currentTree.FullyExplored = true;
+
+        }*/
+       
+        return currentNode;
 
     }
-  
+
+
+    //toDo --- update agree (on topic ) / disagree buttons (on topics) / cxhange topic - see other children in que - have a current tree act6ive = whaty dp you think ahout go to the main list of characters - first 4 elements ,,,   
+
+    void displayThoughts(Tree tree) //used for flags
+    {
+        int i = 0;
+        foreach (Text t in CNPCoptionText)
+        {
+            t.text = tree.root.children[i].thoughtBubbleText; //grabs first 4
+            i++;
+        }
+    }
+    void displayThoughts(List<Tree> tree) //used for general thinking about character 
+    {
+        int i = 0;
+        foreach (Text t in CNPCoptionText)
+        {
+            t.text = tree[i].root.thoughtBubbleText;
+            i++;
+        }
+    }
+
+    void displayPlayerButtons(Dialoug node) //hardcoded for now - do this for the current height of the tree --- 
+    {
+
+       // Debug.Log(node.getHeight());//if the higfght is 2 then i can agree/ dissagree..etc with an option //height 1 then i am thinking aboyut the character ( height 2 is the flag / character topic) 
+                                    // StartCoroutine(waitAndEnableButtons());
+/*        disableorEnablePlayerButtons();
+*/
+        if (node.getHeight() == 2)
+        {
+            setPlayerButtonText();
+            //for testing 
+            PlayerButtons[0].onClick.AddListener(playerAgrees);
+        }
+    }
+
+    private void setPlayerButtonText()
+    {
+        PlayerButtons[0].GetComponentInChildren<Text>().text = "I agree with whar you said ";
+        PlayerButtons[1].GetComponentInChildren<Text>().text = "I don't agree with you there";
+        PlayerButtons[2].GetComponentInChildren<Text>().text = "Dish more about that cube"; //pull from a list of random strings later //TODO
+        PlayerButtons[3].GetComponentInChildren<Text>().text = "you know what, lets talk about something else";
+
+
+    }
+
+    void playerAgrees()
+    {
+        Debug.Log("player agreed!!!" + currentNode.ButtonText + "after i click on agree! " + currentNode.dialougText);
+
+        StartCoroutine(waitAndPrint(currentNode.agreementText));
+        if (!currentTree.FullyExplored)
+        {
+            startAconversation(currentTree);//at 0 
+
+        } else
+        {
+
+            Debug.Log("Done with the tree");
+        }
+
+     /*   else
+        {
+            StartCoroutine(waitAndPrint("I think we talked enough about that cube "));
+            converseAboutNextCharacter();
+        }*/
+        //  if(currentNode.parent.children)
+        // startAconversation(null);
+        //start a conv
+        //loop back 
+    }
+
+    void converseAboutNextCharacter()
+    {
+        Debug.Log("this is called!");
+        treeCounter++;
+        startAconversation(allCharacterConversationsTrees[treeCounter]);//the first cgharacter in the list - yhionking about character....etc 
+
+    }
+
+
+    Dialoug choseACharacterTree()
+    {
+      //  int i = UnityEngine.Random.Range(0, allCharacterConversationsTrees.Count - 1); //do i want it to be random or just the next tree in the list cz they are sorted???
+        
+        if (!allCharacterConversationsTrees[treeCounter].FullyExplored)//currentTree.FullyExplored)
+        {
+            Debug.Log("you still hjavbe motr tyo do in this tree; --- can visit it later ");
+         
+        }
+        else //we fully explored the tree 
+        {
+            treeCounter++;
+            startAconversation(currentTree);
+            //go to another character. 
+        }
+
+        // bgCharacterNOdes.RemoveAt(i);//que and deque from a list ---OR FLAG VISITED add logic on how to choose a better character - random for now 
+        return currentNode;
+
+    }
+
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            if(TomsTree.root.children.Count > 0)
-            {//cool works!  perhjaps before popping it out of que in display intro topic have it have child nodes about that topic, don't pop it out of list fix this me! 
-                DisplayplayCurrentOpinions(TomsTree); //for testing - later put all of these into a bigger tree collection
-                currentNode = choseADialougNode(TomsTree.root.children);
-                Debug.Log("hit");
-               StartCoroutine( WaitAndPrintcompoundedStatments(currentNode.IntroducingATopicdialoug, currentNode.dialougText));
-            }
+       // Debug.Log(currentTree.FullyExplored);
+        Debug.Log("INSIDE UPDATE --- CURNODE currentNode.ButtonText  " +currentNode.ButtonText + "  topic introduction: " + currentNode.IntroducingATopicdialoug
+            +"intro baised<dtext>"+ currentNode.dialougText +"a node's agreement"+currentNode.agreementText +"nodes dissagreement text"+ 
+            currentNode.hatedFacts[0]+"fully explored this node"+currentNode.Explored);
+        Debug.Log(treeCounter);
 
-
-        }
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-/*            displayDialougOpinion();
-*/        }
     }
 
     private void displayDialougOpinion()
@@ -180,30 +349,67 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         StartCoroutine(TypeInDialoug(currentNode.dialougText));
     }
 
-    private InterestingCharacters chooseaCharacterToTalkAbout()
+    private List<InterestingCharacters> sortCharactersToBringUp(List<InterestingCharacters> characterList)
     {
-        int i = UnityEngine.Random.Range(0, conversedAboutCharectersList.Count - 1);
-        InterestingCharacters character = conversedAboutCharectersList.ElementAt(i);
-        conversedAboutCharectersList.RemoveAt(i);//que and deque from a list --- add logic on how to choose a better character - random for now 
-        return character;
+        InterestingCharacters chosenCharacter;
+        List<InterestingCharacters> sortedList = new List<InterestingCharacters>();
+
+        List<InterestingCharacters> priority = new List<InterestingCharacters>();
+        List<InterestingCharacters> secondary = new List<InterestingCharacters>();
+        List<InterestingCharacters> therest = new List<InterestingCharacters>();
+
+
+        for (int i = 0; i < characterList.Count - 1; i++)
+        {
+            chosenCharacter = characterList[i];
+
+            if (characterList[i].HasJuicyMoralFacts())
+            {
+                characterList.RemoveAt(i); priority.Add(chosenCharacter);
+            }
+            else if (characterList[i].NumberOFFlags() > 5)
+            {
+                characterList.RemoveAt(i); secondary.Add(chosenCharacter);
+            }
+            else
+            {
+                /*  int r = UnityEngine.Random.Range(0, characterList.Count - 1);
+                  chosenCharacter = characterList.ElementAt(r);*/
+                characterList.RemoveAt(i); therest.Add(chosenCharacter);
+
+            }
+
+        }
+        sortedList.AddRange(priority);
+        sortedList.AddRange(secondary);
+        sortedList.AddRange(therest);
+
+        //perhaps make some of those random.. 
+
+        return sortedList;
+
+
 
     }
 
-    private List<Dialoug> returnListOfDialougNodes( InterestingCharacters character) //change name later 
+    private List<Dialoug> returnListOfDialougNodes(InterestingCharacters character) //change name later 
     {
         List<Dialoug> nodes = new List<Dialoug>();
-        foreach(KeyValuePair<string,bool> kvp in character.characterFlags)
+        foreach (KeyValuePair<string, bool> kvp in character.characterFlags)
         {
             if (kvp.Value)
             {
                 Dialoug node = new Dialoug(
-                   translateOpinionIntoText(kvp.Key), 
-                   getInitialCNPCOpinionAsDialoug(kvp.Key, character));//general feelings about a topic 
+                   translateOpinionIntoText(kvp.Key),
+                   getInitialCNPCOpinionAsDialoug(kvp.Key, character, "INTRO"));//general feelings about a topic 
                 //--- gives the general feelings about a thing, add to the same node the pther structure elements... 
 
                 node.IntroducingATopicdialoug =
                     getIntroductionTopicString(kvp.Key, character); //unbaised opening statment 
+              
+                node.agreementText = getInitialCNPCOpinionAsDialoug(kvp.Key, character, "AGREE");//general feelings about a topic 
 
+                node.ButtonText = setPlayerButtonText(kvp.Key);
                 nodes.Add(node);
 
             }
@@ -214,43 +420,71 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
     }
 
-    string returnIntroTopic(List<DialougStructure> opinions, string key) //the sent in list is of high./mid or low 
+    private string setPlayerButtonText(string key)
+    {
+        //will change depeninding on input for now its set to just the key 
+        return key ; //will add logic about current cnpc thoughts and modding this later 
+    }
+
+    //2
+    string returnTopicText(List<DialougStructure> opinions, string key, string flag) //the sent in list is of high./mid or low 
     {//selecting intro and the first part of the body here --- 
         foreach (DialougStructure op in opinions) //ex: all high opp
         {
             if (op.topic.Contains(mapToCNPCMoralFactor(key))) //get the translatiopn of they key but not ditect character keys..... 
             {
                 selectedOpnion = op.topic.Split('_').Last();
-                Debug.Log("-------selectedOpnion" + selectedOpnion);
+                //Debug.Log("-------selectedOpnion" + selectedOpnion);
+                if (flag == "INTRO")
+                {
+                    return op.NarrativeElements.intro;
 
-                return op.NarrativeElements.intro; 
+                }
+                if (flag == "AGREE")
+                {
+                    return op.NarrativeElements.bodyOne;
+                }
+                if (flag == "CON")
+                {
+                    return op.NarrativeElements.bodytwo;
+
+                }
+
             }
         }
         return "NO TOPIC WAS FOUND --- need to author topic for flag " + key;
     }
 
 
-
-    private string getInitialCNPCOpinionAsDialoug(string key, InterestingCharacters character)
-    {//this is hard coded for now but later send in the conversational character 
-        Debug.Log(key);
-
-        Debug.Log(currentCNPC.ConvCharacterMoralFactors[mapToCNPCMoralFactor(key)]);//returns values high/med /l;ow of a key...
+    //1
+    private string getInitialCNPCOpinionAsDialoug(string key,
+        InterestingCharacters character, string flag)
+    {//this is hard coded for now but later send in the conversational character (talking with )
+    /*    Debug.Log("currentCNPC.ConvCharacterMoralFactors[mapToCNPCMoralFactor(key)] issss"
+            + mapToCNPCMoralFactor(key));*/
         switch (currentCNPC.ConvCharacterMoralFactors[mapToCNPCMoralFactor(key)])
         {
             case ConversationalCharacter.RatingVlaues.High:
-                return returnIntroTopic(highVaueOpinions, key); //make this more generic - iof/else get topic or body (startingopinion) or contrasting one... nut need logic on each case i think of this is testign a thing for now 
+                return returnTopicText(highVaueOpinions, key, flag); //make this more generic - iof/else get topic or body (startingopinion) or contrasting one... nut need logic on each case i think of this is testign a thing for now 
             case ConversationalCharacter.RatingVlaues.Mid:
-                return returnIntroTopic(midVaueOpinions, key);
+                return returnTopicText(midVaueOpinions, key, flag);
             default://low
-                return returnIntroTopic(lowVaueOpinions, key);
+                return returnTopicText(lowVaueOpinions, key, flag);
         }
+    }
+
+
+ 
+
+    private string ReturnAgreement(List<DialougStructure> highVaueOpinions, string key)
+    {
+        throw new NotImplementedException();
     }
 
     private string mapToCNPCMoralFactor(string key)
     {
         switch (key)
-    {
+        {
             case ("departed"):
                 return "LandISWhereThehrtIS";
 
@@ -287,10 +521,9 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             case ("Teachingrole"):
                 return "SchoolIsCool";
 
-
             case ("polluterRole"):
             case ("Enviromentalist"):
-                return"Enviromentalist";
+                return "Enviromentalist";
             case ("riskTaker"):
             case ("LoverOfRisks"):
                 return "LoverOfRisks";
@@ -314,9 +547,9 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             default:
                 return "missed a tag SOMEWHERE!" + key;
 
+        }
     }
-     }
-    
+
 
     // helper functions 
     private void OrgnizeCNPCOpinions()
@@ -346,7 +579,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         foreach (Text t in CNPCoptionText) //send in flags to check if player or npc and get the rioght translation out
         {
             int r = UnityEngine.Random.Range(0, currentCharacterTree.root.children.Count - 1);
-            t.text = currentCharacterTree.root.children[r].ButtonText;
+            t.text = currentCharacterTree.root.children[r].thoughtBubbleText;
         }
     }
 
@@ -356,19 +589,19 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         {
             case ("departed"):
             case "LandISWhereThehrtIS":
-                return "guess what I heard! " +character.fullName + " left town!, ";
+                return "guess what I heard! " + character.fullName + " left town!, ";
             case ("familyPerson"):
-                return "hmm, did you know that  "+ character.fullName + " has a "  
-                    +"family"; //to do add mcond stat for lar/small ,,,etc family 
+                return "hmm, did you know that  " + character.fullName + " has a "
+                    + "family"; //to do add mcond stat for lar/small ,,,etc family 
 
             //add more values for the ones below --- seprate core values perhaps?mainly tags are used for flavor text but they fall for one core value 
             case ("InLovewithspouseoffriend"):
                 return "I heard that " + character.fullName + " is in love with thier spouce's friend! ";
-     
+
             case ("pregnantbutnotfromspuceorbutloveintrest"):
                 return "I heard that " + character.fullName + "cheated on their siginificant cube with " + character.GetLoverName();
             case ("InLoveWirhAnothersspuce"):
-                return "Not juding but I heard that " + character.fullName +  "IS IN LOVE WITH ANOTHER CUBE'S spouse " ;
+                return "Not juding but I heard that " + character.fullName + "IS IN LOVE WITH ANOTHER CUBE'S spouse ";
             case ("WillActOnLove"):
                 return "Not juding but I heard that " + character.fullName + "IS IN LOVE WITH ANOTHER CUBE that is not their spouce, a birdy told me they will act on it ><";
 
@@ -385,12 +618,12 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
             case ("friendwithabestfriendsenemy"):
                 return "you know what is weird? " + playerName + "? \n   " + character.fullName + " is friends with thier friend's enemy :0"; // or they have a lot of fgriends 
-          
+
             case ("hasAbestFriend"):
-                return  character.fullName + "'s best friend sure loves them! must be nice to have a best friend" ; // or they have a lot of fgriends 
+                return character.fullName + "'s best friend sure loves them! must be nice to have a best friend"; // or they have a lot of fgriends 
 
             case ("loner"):
-                return "I wonder why " +character.fullName + "lives alone...";
+                return "I wonder why " + character.fullName + "lives alone...";
             case ("hasalotofenemies"):
                 return "I wonder why " + character.fullName + "has alot of enemies... ///assigned to firinship is the joy of life";
 
@@ -400,10 +633,10 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                 return " the " + character.fullName +
                     "are wealthy apparently, like super wealthy.";
             case ("IsRichButNotGenrous"):
-                return "the " + character.fullName + 
+                return "the " + character.fullName +
                     "are wealthy apparently, like super wealthy... but also so not the giving type!";
 
-        
+
             case ("WorksInAlcohol"):
             case "Teetotasler":
                 return character.fullName + "wokrs in alchohol, wonder what that field is like";
@@ -418,6 +651,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
             case ("polluterRole"):
             case ("Enviromentalist"):
+                //Debug.Log("wooooooow "+ key);
                 return "You know what I want to talk about!" + character.fullName + "\'s job! \n I think they work as " + character.Lastoccupation;
 
 
@@ -437,7 +671,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
             case ("butcherRole"):
             case ("AnimalLover"):
-                return "You know what I want to talk about!" + character.fullName + "\'s job! \n I think they work as " + character.Lastoccupation;
+                return "You know what I want to talk about!" + character.fullName + "\'s job! \n I think they work as " + character.Lastoccupation +"in a farm";
 
             case ("notworkingandrich"):
             case ("adultbutnotworking"):
@@ -448,7 +682,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             case ("graduate"):
                 return "NOTAUTHORED";
             default:
-                return "missed a tag SOMEWHERE!" + key +"was not authored";
+                return "missed a tag SOMEWHERE!" + key + "was not authored";
 
 
         }
@@ -462,7 +696,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         switch (key)
         {
             case ("departed"):
-            case  "LandISWhereThehrtIS":
+            case "LandISWhereThehrtIS":
                 return "they left town...";
             case ("familyPerson"):
                 return "..have a family..";
@@ -480,7 +714,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                 return ".. they sure are popular.."; // or they have a lot of fgriends 
             case ("loner"):
                 return "...live alone...";
-               
+
             case ("IsWealthy"):
                 return "wonder how rich ...";
             case ("IsRichButNotGenrous"):
@@ -515,7 +749,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
             case ("notworkingandrich"):
             case ("adultbutnotworking"):
-                return key +"NOT AUTHORED";
+                return key + "NOT AUTHORED";
             case ("widowedbutnotgrieving"):
                 return "wonder why they are not grieving...";
             case ("exploteative"):
@@ -631,13 +865,13 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
     private void startTheInteraction()
     {
-         setUp();
+        setUp();
     }
 
     void disableorEnablePlayerButtons()
     {
-       
-        foreach( Button b in PlayerButtons)
+
+        foreach (Button b in PlayerButtons)
         {
             if (b.IsActive()) //if the button is active deactivate it
             {
@@ -655,8 +889,8 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         {
             if (isTyping) //if the button is active deactivate it
             {
-                b.interactable =false;
-                
+                b.interactable = false;
+
             }
             else
             {
@@ -665,7 +899,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         }
     }
 
-   [SerializeField] bool checkCorutine;
+    [SerializeField] bool checkCorutine;
     bool isItTypying()
     {
         return checkCorutine;
@@ -673,30 +907,35 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     IEnumerator TypeInDialoug(string dialkougText)
     {
         checkCorutine = false;
-        for (int i = 0; i<= dialkougText.Length;  i++)
+        for (int i = 0; i <= dialkougText.Length; i++)
         {
             isTyping = true;
             enableClick();
             GuidialougText.text = dialkougText.Substring(0, i);
-             yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(0.05f);
         }
         isTyping = false;
         enableClick();
-        Debug.Log("i am ptring this in the loop");
+       // Debug.Log("i am ptring this in the loop");
         yield return new WaitForSeconds(2);
-        Debug.Log("printging this after two seconds...");
+        //Debug.Log("printging this after two seconds...");
 
         checkCorutine = true;
     }
 
-    
+    IEnumerator waitAndEnableButtons()
+    {
+        yield return currentCorutine;
+        Debug.Log("does this fucking print?");
+        disableorEnablePlayerButtons();
+    }
 
     IEnumerator waitAndPrint(Dialoug node)   //so this works... but does nto when in larger scenartio.. 
     {
 
         yield return currentCorutine;
         currentCorutine = StartCoroutine(TypeInDialoug(node.dialougText));
-       
+
     }
     IEnumerator waitAndPrint(string text)   //so this works... but does nto when in larger scenartio.. 
     {
@@ -718,12 +957,12 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     {
 
         yield return currentCorutine;
-        currentCorutine = StartCoroutine(TypeInDialoug(node1.dialougText)); 
-        yield return  currentCorutine;
+        currentCorutine = StartCoroutine(TypeInDialoug(node1.dialougText));
+        yield return currentCorutine;
         currentCorutine = StartCoroutine(TypeInDialoug(node2.dialougText));
     }
     Coroutine DisplayNodeIntroTopic(Dialoug d)
-    {   
+    {
         Coroutine c = StartCoroutine(TypeInDialoug(d.IntroducingATopicdialoug));
         return c;
 
@@ -734,14 +973,89 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         yield return new WaitUntil(() => isTyping == true);
 
     }
-}
 
-    
+
+
+
+
+ /*   private InterestingCharacters chooseaCharacterToTalkAbout()
+    {
+       
+
+
+
+    }*/
+
+}
 
 
 
 public class Tree
 {
     public Dialoug root { get; set; }
+    public bool FullyExplored = false;
 }
 
+/*   private InterestingCharacters chooseaCharacterToTalkAbout()
+    {
+        InterestingCharacters chosenCharacter; 
+
+        for(int i = 0; i < conversedAboutCharectersList.Count ; i++)
+        {
+            if (conversedAboutCharectersList[i].HasJuicyMoralFacts())
+            {
+                Debug.Log("found jucy characters ! ");
+                chosenCharacter = conversedAboutCharectersList[i];
+                conversedAboutCharectersList.RemoveAt(i);
+                return chosenCharacter;
+                
+            }
+            if (conversedAboutCharectersList[i].NumberOFFlags()> 5)
+            {
+                Debug.Log("found alot of things to talk about ");
+
+                chosenCharacter = conversedAboutCharectersList[i];
+                conversedAboutCharectersList.RemoveAt(i);
+                return chosenCharacter;
+            }
+            else
+            {
+                Debug.Log("found normies");
+
+                int r = UnityEngine.Random.Range(0, conversedAboutCharectersList.Count - 1);
+                //TODO add logic to choose most intresting characrer
+
+                 chosenCharacter = conversedAboutCharectersList.ElementAt(r);
+                conversedAboutCharectersList.RemoveAt(r);//que and deque from a list --- add logic on how to choose a better character - random for now 
+            }
+
+        }
+        return chosenCharacter;
+
+
+
+    }
+*/
+
+
+
+//random for now but pops it out of the lkist if chose
+
+
+//testing case: 
+/*      currentIntrestingCharracter = chooseaCharacterToTalkAbout();
+      Dialoug node = new Dialoug("thikning about " + currentIntrestingCharracter.fullName,
+          "hmm I have been thinking about the cube " + currentIntrestingCharracter.fullName); //base node of a character. 
+      TomsTree.root = node;
+      TomsTree.root.children = returnListOfDialougNodes(currentIntrestingCharracter);
+      allCharacterConversationsTrees.Add(TomsTree);
+      DisplayplayCurrentOpinions(TomsTree);
+      currentNode = choseADialougNode(TomsTree.root.children);
+      currentCorutine = StartCoroutine(TypeInDialoug("hey there " + playerName +
+    " \n thanks for meeting me for brunch! Boy has the town been eventful lately! "));
+
+      StartCoroutine(WaitAndPrintcompoundedStatments(currentNode.IntroducingATopicdialoug, currentNode.dialougText));//so this works... but does nto when in larger scenartio.. 
+         //// -- end of testing case 
+*/
+
+//DisplayThoughtBubbles();

@@ -302,7 +302,8 @@ public class x : MonoBehaviour
 
         foreach (DialougStructure op in AllOpinions)
         {
-            if (op.topic.Contains("High"))
+            if (op.topic
+"High"))
             {
                 highVaueOpinions.Add(op);
             }
@@ -645,3 +646,23 @@ public class x : MonoBehaviour
 
 
 */
+/*
+               if (!bgCharacterNOdes[i].Explored)
+               {
+                   Debug.Log("we still have more things to say about tghis character;");
+                   node = bgCharacterNOdes.ElementAt(i);
+                   bgCharacterNOdes[i].Explored = true;
+                   currentNode = node;
+                   return currentNode;
+               }
+               else
+               {
+
+                   if(i == bgCharacterNOdes.Count)
+                   {
+                       Debug.Log("we talked about evrything!!");
+
+                       currentTree.FullyExplored = true;
+
+                   }
+               }*/
