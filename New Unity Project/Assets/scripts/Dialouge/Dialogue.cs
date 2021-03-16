@@ -20,14 +20,20 @@ public class Dialoug
     public Dialoug parent;
     public List<Dialoug> children;
 
+    public List<string> factsOnTopic = new List<string>();
 
     public Dialoug(string option, string text)
     {
         thoughtBubbleText = option;
         dialougText = text;
         Explored = false;
+        factsOnTopic.Add("will randomly presrnt  a fact for the key" + option);
     }
 
+    public string GetAFact()
+    {
+        return factsOnTopic[0];
+    }
     public int getHeight()
     {
         int height = 1;
@@ -39,7 +45,7 @@ public class Dialoug
         }
         return height;
     }
-    public string getRandomHatedFact()
+    public string getRandomHatedFact() //pilinng on 
     {
         int r = Random.Range(0, hatedFacts.Count);     
         string hatedFact = hatedFacts[r];

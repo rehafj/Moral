@@ -1,0 +1,7 @@
+[
+  {"schema":"test",
+  "Modelelements":{
+    "matchingPatterns":["pattern1","pattern2"],
+     "arguments":["arguemnt1","argument2"]}
+   }
+ ]

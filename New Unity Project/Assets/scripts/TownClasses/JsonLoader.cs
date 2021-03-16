@@ -33,6 +33,10 @@ public class JsonLoader : MonoBehaviour
     [SerializeField]
     public List<DialougStructure> listOfConversations = new List<DialougStructure>();
 
+
+    [SerializeField]
+    public List<ModelArguements> listOfArguments = new List<ModelArguements>();
+
     const string FILEXTEN = @".json";
     //comment and uncomment below depending on what is needed in final version 
     const string TOWNPEOPLEPATH = @"JSON/fullpeople";
@@ -44,6 +48,9 @@ public class JsonLoader : MonoBehaviour
     const string TOWNLOCATIONS = @"JSON/townPlaces";
 
     const string NARRATIVEPATH = @"JSON/SampleOpinTopics";
+
+    const string MODELARGUEMNTS = @"JSON/StrictFatherArguments";
+
 
 
     //working poeple --- is the teesting file used :) 
@@ -66,6 +73,7 @@ public class JsonLoader : MonoBehaviour
 
         listOfConversations = returnJsonAttributesIntoList<DialougStructure>(NARRATIVEPATH);
 
+        listOfArguments = returnJsonAttributesIntoList<ModelArguements>(MODELARGUEMNTS);
 
         //FOR TESTING-REMOVE ME 
         PrintOutAConversation();
@@ -73,7 +81,7 @@ public class JsonLoader : MonoBehaviour
 
     private void PrintOutAConversation()
     {
-       // Debug.Log(listOfConversations[0].topic + " : and the body of element 0 " + listOfConversations[0].NarrativeElements.bodytwo);
+       // Debug.Log(listOfArguments[0].Modelelements.arguments[0]);
     }
 
     string returnFile(string path)

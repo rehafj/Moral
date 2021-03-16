@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoralSystems : MonoBehaviour
-{//use thisd class to set allVlaues for morality and then change it based on characters- when created - make it serlized for inspector 
+public class BoothControls : MonoBehaviour
+{
     // Start is called before the first frame update
     void Start()
     {
@@ -13,9 +13,7 @@ public class MoralSystems : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
 
-
+    }   // See Order of Execution for Event Functions for information on FixedUpdate() and Update() related to physics queries
 
 }

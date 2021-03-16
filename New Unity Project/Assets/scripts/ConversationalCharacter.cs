@@ -5,16 +5,39 @@ using UnityEngine;
 [System.Serializable]
 public class ConversationalCharacter : MonoBehaviour
 
+  
 {
+   
+
     public Dictionary<string, RatingVlaues> ConvCharacterMoralFactors = new Dictionary<string, RatingVlaues>();
     //att 2 --- 
     string[] keys = { "BTrueTYourHeart", "MoneyMaker", "Enviromentalist", "AnimalLover",
     "Teetotasler","FamilyPerson"  ,"SchoolIsCool","LoverOfRisks"   
             ,"SupportingComunities", "LandISWhereThehrtIS","CarrerAboveAll", 
         "FriendsAreTheJoyOFlife"
-       , "Loner"};
+       , "Loner"};//removed trbd for now 
 
-    public string ConversationalNpcName; 
+    public StrictFatherMorality FatherModel ;
+    public NurturantParentMorality MotherModel;
+
+    public string ConversationalNpcName;
+
+    [SerializeField] string moralFocus; // will equal one of the keys 
+
+    
+    public void setMoralFocusArea(string key)
+    {
+        moralFocus = key;
+    }
+
+    public bool IsMoralFocus(string flag)
+    {
+        if (moralFocus == flag)
+        {
+            return true;
+        }
+        else return false;
+    } 
 
     public enum emotion
     {
@@ -28,7 +51,6 @@ public class ConversationalCharacter : MonoBehaviour
 
     public RatingVlaues NpcValueFlag;
   
-    //this is hard coded for now, perhaps make it random 
     public ConversationalCharacter(string name ,RatingVlaues[] thirteenValues )
     {
         ConversationalNpcName = name;
@@ -36,16 +58,38 @@ public class ConversationalCharacter : MonoBehaviour
       
         foreach(string s in keys)
         {
-            //Debug.Log("moral value of :" + s + " is :" + thirteenValues[i]);
             ConvCharacterMoralFactors.Add(s, thirteenValues[i]);
+            
             i++;
         }
 
+        FatherModel = new StrictFatherMorality();
     }
+
+    public ConversationalCharacter(string name, RatingVlaues[] thirteenValues, string FocusArea)
+    {
+        ConversationalNpcName = name;
+        int i = 0;
+
+        foreach (string s in keys)
+        {
+            ConvCharacterMoralFactors.Add(s, thirteenValues[i]);
+
+            i++;
+        }
+
+        moralFocus = FocusArea;
+        FatherModel = new StrictFatherMorality();
+
+    }
+
 
     //randomizing constructor /overloaded
     public ConversationalCharacter(string name)
     {
+        List<string> tempHighVlaue = new List<string>();//used to set up moral focus on high value flags
+
+
         ConversationalNpcName = name;
         int i = 0;
 
@@ -54,8 +98,16 @@ public class ConversationalCharacter : MonoBehaviour
             int x = Random.Range(0, 3);
             NpcValueFlag = getRandomNPCValue(x);
             ConvCharacterMoralFactors.Add(s, NpcValueFlag);
+
+            if(NpcValueFlag == RatingVlaues.High) //again used for moral focus - will move this into it's opwn method soon 
+            {
+                tempHighVlaue.Add(s);
+            }
             i++;
         }
+        int index = UnityEngine.Random.Range(0, tempHighVlaue.Count);
+        setMoralFocusArea(tempHighVlaue[index]);
+        FatherModel = new StrictFatherMorality();
 
     }
 
@@ -71,7 +123,10 @@ public class ConversationalCharacter : MonoBehaviour
         }
     }
 
-
+    void chooseARandomModel()
+    {
+        FatherModel = new StrictFatherMorality(); // make it on a precentage but for now I do not have a mother model implemented 
+    }
 }
 /*
  * 

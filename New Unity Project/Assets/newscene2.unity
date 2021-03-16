@@ -1017,7 +1017,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ba3bbf9121e5894689765b765ee9f1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FatherModel: {fileID: 0}
   ConversationalNpcName: 
+  moralFocus: 
+  CnpcEmotion: 0
   NpcValueFlag: 0
 --- !u!1001 &523078939
 PrefabInstance:
@@ -3410,7 +3413,9 @@ MonoBehaviour:
     hatedFacts: []
     thoughtBubbleText: 
     Explored: 0
+    ExploredHatedFacts: []
     children: []
+    factsOnTopic: []
 --- !u!1 &1820380321
 GameObject:
   m_ObjectHideFlags: 0
@@ -3422,7 +3427,7 @@ GameObject:
   - component: {fileID: 1820380322}
   - component: {fileID: 1820380323}
   m_Layer: 0
-  m_Name: UIStuff
+  m_Name: UIStuffgamerunner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3458,6 +3463,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fullCharacterRootNodes: []
   currentPlayerOptions: []
+  treeCounter: 20
   AllOpinions: []
   conversedAboutCharectersList: []
   playerName: 

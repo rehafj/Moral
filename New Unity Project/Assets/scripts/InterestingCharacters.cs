@@ -40,19 +40,51 @@ public class InterestingCharacters : MonoBehaviour
         characterFlags.Add("notworkingandrich", false); // evryone is working in this sim.... 
         characterFlags.Add("loner", false); //found  no naibours and small friend ids
         characterFlags.Add("pregnantbutnotengaged", false);//found 1
-        characterFlags.Add("pregnantbutnotfromspuceorbutloveintrest", false); //TODO not in this run --- check if this ever gets sunmulated ? 
+        characterFlags.Add("pregnantbutnotfromspuceorbutloveintrest", false); //TODO not in this run --- check if this ever gets simulated ? 
         characterFlags.Add("hasAbestFriend", false);//found
         characterFlags.Add("InLoveWirhAnothersspuce", false);//found
         characterFlags.Add("IsWealthy", false);//found 
+    //    characterFlags.Add("IsYoungAndPregnant", false);//<16 and preg
+   /*     characterFlags.Add("worksWithFamily", false);
 
 
+        characterFlags.Add("hiredByAFamilymember", false);//as a favor 
+        characterFlags.Add("MovesAlot", false);
+        characterFlags.Add("getsFiredAlot", false);
+        characterFlags.Add("SusMovments", false);//loner and moves alot and
+        characterFlags.Add("RetiredYoung", false);
+        characterFlags.Add("DiedBeforeRetired", false);
+        characterFlags.Add("DevorcedManyPeople", false);
+        characterFlags.Add("marriedSomoneOlder", false); //what can i infer if a person is both conventional and reserved, kinda worried about topics...?
+        characterFlags.Add("marriedForLifeStyleNotLove", false); //what can i infer if a person is both conventional and reserved, kinda worried about topics...?
 
+*/
         //personalityrelated 
         characterFlags.Add("WillActOnLove", false);
         characterFlags.Add("IsRichButNotGenrous", false);
+  /*      characterFlags.Add("AdventureSeeker", false);
+        characterFlags.Add("liklyToHelpTheHomeless", false);
+        characterFlags.Add("isolated", false);
+        characterFlags.Add("WantsArtAsJob", false);
+        characterFlags.Add("ButcherButRegretful", false);
+        characterFlags.Add("TooTrustingOfEnemies", false);
+        characterFlags.Add("ArtSeller", false);
+        characterFlags.Add("selfMadeCubeByDedication", false);
+        characterFlags.Add("likedToExperinceCulture", false);
+        characterFlags.Add("doesNotGiveToThoseInNeed", false);//.i.e does not support comun
+        characterFlags.Add("supportsImmigration", false);
+        characterFlags.Add("conventional", false);
+        characterFlags.Add("reserved", false);
+
+*/
+
+
+
+
+
 
         //job based
-        characterFlags.Add("nepotism", false);//TODO hired as favor and by family (check company former owner) 
+        // characterFlags.Add("nepotism", false);//TODO hired as favor and by family (check company former owner) 
         characterFlags.Add("flipflop", false);//found
         characterFlags.Add("WorksInAlcohol", false); //found
         characterFlags.Add("healerRole", false);//found
@@ -64,7 +96,9 @@ public class InterestingCharacters : MonoBehaviour
         characterFlags.Add("hardWorker", false); //high level in job 
         characterFlags.Add("CustodianJobs", false); //high level in job 
         characterFlags.Add("generalJobs", false); //high level in job 
+      /*  characterFlags.Add("selfMadeCube", false);
 
+*/
 
 
 
@@ -73,7 +107,10 @@ public class InterestingCharacters : MonoBehaviour
 
 
 
-
+        //pregnancy low age 
+        // downer - prone to negative emotions 
+        //art ? 
+        // 
 
 
 
@@ -93,7 +130,6 @@ public class InterestingCharacters : MonoBehaviour
         return townie.firstName;
 
     }
-
 
     public bool HasJuicyMoralFacts()
     {
@@ -120,6 +156,7 @@ public class InterestingCharacters : MonoBehaviour
         return size;
     }
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -131,6 +168,8 @@ public class InterestingCharacters : MonoBehaviour
     {
         
     }
+
+
 }
 //ask about what adoptioneventID means ? they adopted or havber adopted 
 
