@@ -170,6 +170,93 @@ public class InterestingCharacters : MonoBehaviour
     }
 
 
+
+    public string GetStringTranslation(string key) //CHANGE THIS INTO regExp //post it note usage
+    {
+        switch (key)
+        {
+            case ("departed"):
+                return "apparently, they moved out of this town";
+            case ("familyPerson"):
+                return "looks like they have a large family";
+            case ("InLovewithspouseoffriend"):
+                return "apparently, this shape is in love with someone other than their spouce...";
+            case ("socialLife"):
+                return "someone likes to party, they have a thriving social life";
+            case ("hasalotofenemies"):
+                return "they apparently have alot of enemies";
+            case ("graduate"):
+                return "graduated from X";
+            case ("friendwithabestfriendsenemy"):
+                return "they are not that faithful to their friends";
+            case ("widowedbutnotgrieving"):
+                return "this shape was widowed, reports show they never really grived";
+            case ("adultbutnotworking"):
+                return "they are not part of the workforce";
+
+            case ("notworkingandrich"):
+                return "this shape is so rich and they do not  work";
+
+            case ("loner"):
+                return "this shape likes to keep to themselves";
+
+            case ("pregnantbutnotengaged"):
+                return "this shape is expecting";
+
+            case ("pregnantbutnotfromspuceorbutloveintrest"):
+                return "this shape is an adulturer ";
+            case ("hasAbestFriend"):
+                return "this shape has a best friend";
+
+            case ("InLoveWirhAnothersspuce"):
+                return "this shape is in love with a taken shape...";
+
+            case ("IsWealthy"):
+                return "this shape is super wealthy";
+
+            case ("WillActOnLove"):
+                return "this shape has been known to act out publicly, esp in matters of love";
+
+            case ("IsRichButNotGenrous"):
+                return "this shape is so wealthy but too bad they are not the philanthropist kind";
+
+            case ("flipflop"):
+                return "this shape changed careers alot";
+
+            case ("WorksInAlcohol"):
+                return "this shape works in alcholo";
+
+            case ("healerRole"):
+                return "this shape works in medicine! ";
+
+            case ("polluterRole"):
+                return "this shape work is not great for the enviroment ";
+
+            case ("riskTaker"):
+                return "this shape work is high risk ";
+
+            case ("butcherRole"):
+                return "this shape works at a farm ";
+
+            case ("Teachingrole"):
+                return "this shape teaches for a living";
+
+            case ("advancedCareer"):
+                 return "this shape managed to level up their career!";
+
+            case ("hardWorker"):
+                return "this shape is such a go getter! ";
+
+            case ("CustodianJobs"):
+                return "this shape works as a custodian";
+
+            case ("generalJobs"):
+                return "this shape is in the work force";
+            default:
+                return "nill";
+
+        }
+    }
 }
 //ask about what adoptioneventID means ? they adopted or havber adopted 
 

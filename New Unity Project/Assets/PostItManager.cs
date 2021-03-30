@@ -13,7 +13,6 @@ public class PostItManager : MonoBehaviour
 
      public List<PostIt> postItPanels;
 
-   
 
     void Start()
     {       

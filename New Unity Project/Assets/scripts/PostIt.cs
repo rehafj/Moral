@@ -7,7 +7,7 @@ public class PostIt : MonoBehaviour
 {
     public Sprite [] sprites;
 
-    public InterestingCharacters intChar = new InterestingCharacters(); //override this with next for when needed -
+    public InterestingCharacters intChar; //override this with next for when needed -
 
     public Viewer viwer;
     public string[] characterFlags;
@@ -15,21 +15,23 @@ public class PostIt : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        intChar = new InterestingCharacters();
         characterFlags = new string[5];
-        viwer = FindObjectOfType<Viewer>();
+        //viwer = FindObjectOfType<Viewer>();
         sprites = Resources.LoadAll<Sprite>("TownieImages/");
        
     }
 
     public void SetUp(InterestingCharacters chara)
     {
-        intChar = chara;
-        int i = 0;
+        this.intChar = chara;
+/*        Debug.Log(intChar.fullName + "hey hey hey");
+*/        int i = 0;
         foreach (KeyValuePair<string, bool> k in intChar.characterFlags)
         {
             if (i <= 4)
             {
-                Debug.Log(k.Key + characterFlags.Length);
+                //Debug.Log(k.Key + characterFlags.Length);
                 if (k.Value)
                 {
                     characterFlags[i] = k.Key;
@@ -54,13 +56,22 @@ public class PostIt : MonoBehaviour
         Debug.Log("clicked on ");
     }
     void OnMouseDown()
-    { 
+    {
+        viwer.gameObject.SetActive(true);
         Debug.Log("clicked on "+gameObject.name);
-        Debug.Log(intChar.fullName);
         Debug.Log(characterFlags[0]);
+        string[] postItStrings = new string[characterFlags.Length];
+        Debug.Log(intChar.fullName + "hey hey hey");
 
-        viwer.updateViewer(intChar.fullName, characterFlags, sprites[Random.Range(0, 4)]);
+        int i = 0;
+        foreach (string s in characterFlags)
+        {
+            postItStrings[i] =  intChar.GetStringTranslation(s); i++;
+        }
+        viwer.updateViewer(intChar.fullName, postItStrings, sprites[Random.Range(0, 4)]);
     }
 
+    
+    
 
 }

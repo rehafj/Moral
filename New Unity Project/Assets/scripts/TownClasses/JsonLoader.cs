@@ -5,8 +5,8 @@ using Newtonsoft.Json;
 using System.Linq;
 using System.IO;
 using System;
-
-
+using System.Text.RegularExpressions;
+using System.Reflection;
 //loader was modfied from a video tutorial explaning the json.net asset used in this class
 //found at https://www.youtube.com/watch?v=V8qf8GMT-b4&t=70s 
 //helper methods and string reading is coded after the tutorial. 
@@ -49,7 +49,7 @@ public class JsonLoader : MonoBehaviour
 
     const string NARRATIVEPATH = @"JSON/SampleOpinTopics";
 
-    const string MODELARGUEMNTS = @"JSON/StrictFatherArguments";
+    const string MODELARGUEMNTS = @"JSON/newSfma";
 
 
 
@@ -81,7 +81,40 @@ public class JsonLoader : MonoBehaviour
 
     private void PrintOutAConversation()
     {
-       // Debug.Log(listOfArguments[0].Modelelements.arguments[0]);
+        foreach (ModelArguements argument in listOfArguments)
+        {
+            Debug.Log("FFS - schema =   " + argument.schema + "surface values are " + argument.Surfacevalues[0].key  +" AND THE SUB VALUE KEY IS "+ argument.Surfacevalues[0].surfaceValueObj[0].subvalue);
+         
+        }
+
+        Debug.Log("testing this out " + testingOutSomething("highMoralBoundaries", "LoveIsForFools", "WillActOnLove"));
+    }
+
+    string testingOutSomething(string schemaName, string surfuaceValueKey, string subvalueKey)
+    {
+
+        foreach (ModelArguements argument in listOfArguments)
+        {
+            if(argument.schema== schemaName)
+            {
+                foreach(Surfacevalue S in argument.Surfacevalues)
+                {
+                    if(S.key == surfuaceValueKey)
+                    {
+                        foreach(SurfaceValueObj O in S.surfaceValueObj)
+                        {
+                            if(O.subvalue == subvalueKey)
+                            {
+                                return O.text;
+                            }
+                        }
+                    }
+                }
+            }
+         //   Debug.Log("FFS - schema =   " + argument.schema + "surface values are " + argument.Surfacevalues[0].key + " AND THE SUB VALUE KEY IS " + argument.Surfacevalues[0].surfaceValueObj[0].subvalue);
+
+        }
+        return "no text found!";
     }
 
     string returnFile(string path)
@@ -167,3 +200,111 @@ public class JsonLoader : MonoBehaviour
     }
 }
 
+
+
+
+//old code for reconverting classes into objs / uses reflection, trying other approuches TBD
+//  List<SFMA> sfma = new List<SFMA>();
+
+
+/*   for (int i =0; i < listOfArguments.Count; i++)
+   {
+       Type type = listOfArguments[i].Surfacevalues.GetType();
+       PropertyInfo[] properties = type.GetProperties();
+
+       SFMA temp = new SFMA();
+       temp.schema = listOfArguments[i].schema;
+
+
+       for(int j = 0; j< properties.Length; j++)
+       {
+           NewSurfaceValues tnsv = new NewSurfaceValues();
+           tnsv.surfaceValueName = properties[j].Name;
+           for(int z = 0; z< 2; z++)
+           {
+               newSubValues tempsubvalue = new newSubValues();
+               tempsubvalue.subValues = new KeyValuePair<string, string>("key", "value");
+               KeyValuePair<string, newSubValues> monika = new KeyValuePair<string, newSubValues>(properties[j].Name, tempsubvalue.subValues);
+               tnsv.listOfSubvalues.Add(monika);
+           }
+           temp.surfuceValues.Add(tnsv);
+       }
+       sfma.Add(temp);
+       foreach(SFMA S in sfma)
+       {
+           *//*foreach(NewSurfaceValues d in S.surfuceValues)
+           {
+               Debug.Log("please god let this print it right !" + S.surfuceValues);
+
+           }*//*
+
+       }
+
+     *//*  foreach (PropertyInfo property in properties)
+       {
+           Debug.Log("Name: " + property.Name + ", Value: " + property.GetValue(listOfArguments[0].Surfacevalues, null));
+
+       }*//*
+
+
+
+
+
+
+   }*/
+
+
+
+/*        Type type = listOfArguments[0].Surfacevalues.GetType();
+        PropertyInfo[] properties = type.GetProperties();
+
+        foreach (PropertyInfo property in properties)
+        {
+            Debug.Log("Name: " + property.Name + ", Value: " + property.GetValue(listOfArguments[0].Surfacevalues, null));
+        }*/
+
+/*
+        List<SFMA> sfma = new List<SFMA>();
+        List<NewSurfaceValues> newSurfaceValues = new List<NewSurfaceValues>();
+
+        foreach (ModelArguements modelArguements in listOfArguments)
+        {
+            SFMA temp = new SFMA();
+            temp.schema = modelArguements.schema;
+
+            for (int i = 0; i < listOfArguments.Count; i++) //go though all the list of arguments 
+            {
+                NewSurfaceValues newSurfaceValue = new NewSurfaceValues();
+                foreach (string s in newSurfaceValue.surfaceKeys)
+                {
+                }
+            }
+
+
+
+                sfma.Add(temp);
+        }
+
+        Debug.Log("new value is right here! yo "+sfma[1].schema);*/
+/*      foreach ( ModelArguements s in listOfArguments) //argument includes a schema and a list of surface values values 
+      {
+          SFMA temp = new SFMA();
+          temp.schema = s.schema;
+          for(int i =0; i <listOfArguments.Count; i++)
+          {
+              NewSurfaceValues t2 = new NewSurfaceValues();
+              for (int j = 0; j <= t2.surfaceKeys.Length ; j++)
+              {
+                  string x = t2.surfaceKeys[j];
+                  t2.surfaceValueName = s.Surfacevalues.
+                  //send it in as a key 
+                //  t2.listOfSubvalues.Add(s.Surfacevalues.AnAdventureWeSeek.friendwithabestfriendsenemy);
+              }
+
+
+          }
+          Debug.Log(s.Surfacevalues);
+      }*/
+
+//   Debug.Log(listOfArguments[0].Surfacevalues.AnAdventureWeSeek.WillActOnLove) ;
+// Debug.Log(listOfArguments[0].Modelelements.arguments[0]);

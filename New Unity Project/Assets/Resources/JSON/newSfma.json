@@ -1,0 +1,89 @@
+[
+  {
+	"schema": "lowMoralBoundaries",
+	"Surfacevalues": [{
+			"key": "BTrueTYourHeart",
+			"surfaceValueObj": [
+
+				{
+					"subvalue": "friendwithabestfriendsenemy",
+					"text": "text for sub goes here"
+				},
+				{
+					"subvalue": "friendwithabestfriendsenemy",
+					"text": "text for sub goes here"
+				},
+				{
+					"subvalue": "friendwithabestfriendsenemy",
+					"text": "text for sub goes here"
+				}
+			]
+
+		},
+		{
+			"key": "LoveIsForFools",
+			"surfaceValueObj": [
+
+				{
+					"subvalue": "InLoveWirhAnothersspuce",
+					"text": "text for sub goes here"
+				},
+				{
+					"subvalue": "WillActOnLove",
+					"text": "should get this text "
+				},
+				{
+					"subvalue": "friendwithabestfriendsenemy",
+					"text": "text for sub goes here"
+				}
+			]
+		}
+	]
+
+
+
+},{
+"schema": "highMoralBoundaries",
+"Surfacevalues": [{
+    "key": "BTrueTYourHeart",
+    "surfaceValueObj": [
+
+      {
+        "subvalue": "friendwithabestfriendsenemy",
+        "text": "text for sub goes here"
+      },
+      {
+        "subvalue": "friendwithabestfriendsenemy",
+        "text": "text for sub goes here"
+      },
+      {
+        "subvalue": "friendwithabestfriendsenemy",
+        "text": "text for sub goes here"
+      }
+    ]
+
+  },
+  {
+    "key": "LoveIsForFools",
+    "surfaceValueObj": [
+
+      {
+        "subvalue": "InLoveWirhAnothersspuce",
+        "text": "text for sub goes here"
+      },
+      {
+        "subvalue": "WillActOnLove",
+        "text": "should get this text "
+      },
+      {
+        "subvalue": "friendwithabestfriendsenemy",
+        "text": "text for sub goes here"
+      }
+    ]
+  }
+]
+
+
+
+}
+]

@@ -11,7 +11,10 @@ public class Viewer : MonoBehaviour
     public Image spriteViewer;
     // Start is called before the first frame update
 
-
+    public void Start()
+    {
+        gameObject.SetActive(false);
+    }
     public void updateViewer(string name, string [] flag, Sprite img)
     {
         characterName.text = name ;
@@ -22,5 +25,10 @@ public class Viewer : MonoBehaviour
             i++;
         }
         spriteViewer.sprite = img;
+    }
+
+    public void CloseViewer()
+    {
+        gameObject.SetActive(false);
     }
 }
