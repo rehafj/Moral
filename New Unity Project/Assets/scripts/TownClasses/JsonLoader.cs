@@ -37,6 +37,11 @@ public class JsonLoader : MonoBehaviour
     [SerializeField]
     public List<ModelArguements> listOfArguments = new List<ModelArguements>();
 
+    [SerializeField]
+    public List<PlayerDialoug> listOfPlayerDialougs = new List<PlayerDialoug>();
+
+
+
     const string FILEXTEN = @".json";
     //comment and uncomment below depending on what is needed in final version 
     const string TOWNPEOPLEPATH = @"JSON/fullpeople";
@@ -47,10 +52,11 @@ public class JsonLoader : MonoBehaviour
     const string TOWNINFORMATION = @"JSON/townInformation";
     const string TOWNLOCATIONS = @"JSON/townPlaces";
 
-    const string NARRATIVEPATH = @"JSON/SampleOpinTopics";
+    const string NARRATIVEPATH = @"JSON/surfaceLevelDialoug";
 
-    const string MODELARGUEMNTS = @"JSON/newSfma";
+    const string MODELARGUEMNTS = @"JSON/newSfma"; // correct format :) - and works! 
 
+    const string PLAYERDIALIUG = @"JSON/playerResponces";
 
 
     //working poeple --- is the teesting file used :) 
@@ -72,7 +78,7 @@ public class JsonLoader : MonoBehaviour
         listOfTownLocations = returnJsonAttributesIntoList<TownPlaces>(TOWNLOCATIONS);
 
         listOfConversations = returnJsonAttributesIntoList<DialougStructure>(NARRATIVEPATH);
-
+        listOfPlayerDialougs = returnJsonAttributesIntoList<PlayerDialoug>(PLAYERDIALIUG);
         listOfArguments = returnJsonAttributesIntoList<ModelArguements>(MODELARGUEMNTS);
 
         //FOR TESTING-REMOVE ME 
@@ -88,11 +94,59 @@ public class JsonLoader : MonoBehaviour
         }
 
         Debug.Log("testing this out " + testingOutSomething("highMoralBoundaries", "LoveIsForFools", "WillActOnLove"));
+        Debug.Log("ZZZZZplayer dialoug sample"+ getTheCorrectPlayerRespounce("MoneyMaker","High", "playerDisAgreementOnAflag", "familyPerson" ));
+
+
+
+
     }
 
+    string getTheCorrectPlayerRespounce(string surfaceFlag, string rating, string typeOfText, string key) //chamnge type of stgring into enums and make these lists into static~ 
+    {
+        foreach (PlayerDialoug p in listOfPlayerDialougs)
+        {
+            if(p.playerSurfaceValue == surfaceFlag)
+            {
+                if(p.playerNarrativeElements.rating == rating)
+                {
+                    switch (typeOfText)
+                    {
+                        case ("playerInAgreementText"):
+                            return
+                                p.playerNarrativeElements.playerInAgreementText;
+                        case ("playerDisagreementText"):
+                            return
+                                p.playerNarrativeElements.playerDisagreementText;
+                        case ("playerMoralDisagreementText"):
+                            return
+                                p.playerNarrativeElements.playerMoralDisagreementText[0];
+                        case ("playerMoralDisagreementTextTwo"):
+                            return
+                                p.playerNarrativeElements.playerMoralDisagreementText[1];
+                        case ("playerDisAgreementOnAflag"):
+                            foreach(PlayerDisAgreementOnAflag k in p.playerNarrativeElements.playerDisAgreementOnAflag)
+                            {
+                                if(k.flag == key)
+                                {
+                                    return k.textValue;
+                                }
+                            }
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            }
+        }
+        return "missed a flag somewhere! ";
+    }
+    string getTheCorrectPlayerRespounce(string surfaceFlag, string typeOfText, string rating) //retuirns agreement/disagreement 
+    {
+        return "";
+    }
     string testingOutSomething(string schemaName, string surfuaceValueKey, string subvalueKey)
     {
-
+        //t this works --- move this method to father model script or the model parents :) but this returns the appropriate text bad O tho
         foreach (ModelArguements argument in listOfArguments)
         {
             if(argument.schema== schemaName)

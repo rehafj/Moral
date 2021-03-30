@@ -1,0 +1,6528 @@
+[
+  {
+	"playerSurfaceValue": "BTrueTYourHeart",
+	"playerNarrativeElements": [{
+		"key": "BTrueTYourHeart",
+		"rating": "High",
+		"playerInAgreementText": "text when a player agrees",
+		"playerDisagreementText": "text when disagrees",
+		"playerMoralDisagreementText": ["textone", "textTwo"],
+		"playerDisAgreementOnAflag": [{
+				"flag": "InLovewithspouseoffriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "departed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "socialLife",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasalotofenemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "familyPerson",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "graduate",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "friendwithabestfriendsenemy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "exploteative",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "widowedbutnotgrieving",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "adultbutnotworking",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "notworkingandrich",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "loner",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotengaged",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotfromspuceorbutloveintrest",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasAbestFriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "InLoveWirhAnothersspuce",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsWealthy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsYoungAndPregnant",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "worksWithFamily",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hiredByAFamilymember",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "MovesAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "getsFiredAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "SusMovments",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "RetiredYoung",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DiedBeforeRetired",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DevorcedManyPeople",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedSomoneOlder",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedForLifeStyleNotLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WillActOnLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsRichButNotGenrous",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "AdventureSeeker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "liklyToHelpTheHomeless",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "isolated",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "ButcherButRegretful",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "TooTrustingOfEnemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "likedToExperinceCulture",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "doesNotGiveToThoseInNeed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "supportsImmigration",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "conventional",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "reserved",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "nepotism",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "flipflop",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WorksInAlcohol",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "healerRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "polluterRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "riskTaker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "butcherRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "advancedCareer",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "generalJobs",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			}
+		]
+
+
+	}]
+},
+{
+"playerSurfaceValue": "LoveIsForFools",
+"playerNarrativeElements": [{
+  "key": "BTrueTYourHeart",
+  "rating": "High",
+  "playerInAgreementText": "text when a player agrees",
+  "playerDisagreementText": "text when disagrees",
+  "playerMoralDisagreementText": ["textone", "textTwo"],
+  "playerDisAgreementOnAflag": [{
+      "flag": "InLovewithspouseoffriend",
+      "textValue": "text for the flag"
+    },
+    {
+      "flag": "departed",
+      "textValue": "text for the flag"
+    },
+    {
+      "flag": "socialLife",
+      "textValue": "text for the flag"
+    },
+    {
+      "flag": "hasalotofenemies",
+      "textValue": "text for the flag"
+    },
+    {
+      "flag": "familyPerson",
+      "textValue": "text for the flag"
+    },
+    {
+      "flag": "graduate",
+      "textValue": "text for the flag"
+    },
+    {
+      "flag": "friendwithabestfriendsenemy",
+      "textValue": "text for the flag"
+    },
+    {
+      "flag": "exploteative",
+      "textValue": "text for the flag"
+    },
+    {
+      "flag": "widowedbutnotgrieving",
+      "textValue": "text for the flag"
+    },
+    {
+      "flag": "adultbutnotworking",
+      "textValue": "text for the flag"
+    },
+    {
+      "flag": "notworkingandrich",
+      "textValue": "text for the flag"
+    },
+    {
+      "flag": "loner",
+      "textValue": "text for the flag"
+    },
+    {
+      "flag": "pregnantbutnotengaged",
+      "textValue": "text for the flag"
+    },
+    {
+      "flag": "pregnantbutnotfromspuceorbutloveintrest",
+      "textValue": "text for the flag"
+    },
+    {
+      "flag": "hasAbestFriend",
+      "textValue": "text for the flag"
+    },
+    {
+      "flag": "InLoveWirhAnothersspuce",
+      "textValue": "text for the flag"
+    },
+    {
+      "flag": "IsWealthy",
+      "textValue": "text for the flag"
+    },
+    {
+      "flag": "IsYoungAndPregnant",
+      "textValue": "text for the flag"
+    },
+    {
+      "flag": "worksWithFamily",
+      "textValue": "text for the flag"
+    },
+    {
+      "flag": "hiredByAFamilymember",
+      "textValue": "text for the flag"
+    },
+    {
+      "flag": "MovesAlot",
+      "textValue": "text for the flag"
+    },
+    {
+      "flag": "getsFiredAlot",
+      "textValue": "text for the flag"
+    },
+    {
+      "flag": "SusMovments",
+      "textValue": "text for the flag"
+    },
+    {
+      "flag": "RetiredYoung",
+      "textValue": "text for the flag"
+    },
+    {
+      "flag": "DiedBeforeRetired",
+      "textValue": "text for the flag"
+    },
+    {
+      "flag": "DevorcedManyPeople",
+      "textValue": "text for the flag"
+    },
+    {
+      "flag": "marriedSomoneOlder",
+      "textValue": "text for the flag"
+    },
+    {
+      "flag": "marriedForLifeStyleNotLove",
+      "textValue": "text for the flag"
+    },
+    {
+      "flag": "WillActOnLove",
+      "textValue": "text for the flag"
+    },
+    {
+      "flag": "IsRichButNotGenrous",
+      "textValue": "text for the flag"
+    },
+    {
+      "flag": "AdventureSeeker",
+      "textValue": "text for the flag"
+    },
+    {
+      "flag": "liklyToHelpTheHomeless",
+      "textValue": "text for the flag"
+    },
+    {
+      "flag": "isolated",
+      "textValue": "text for the flag"
+    },
+    {
+      "flag": "ButcherButRegretful",
+      "textValue": "text for the flag"
+    },
+    {
+      "flag": "TooTrustingOfEnemies",
+      "textValue": "text for the flag"
+    },
+    {
+      "flag": "selfMadeCubeByDedication",
+      "textValue": "text for the flag"
+    },
+    {
+      "flag": "likedToExperinceCulture",
+      "textValue": "text for the flag"
+    },
+    {
+      "flag": "doesNotGiveToThoseInNeed",
+      "textValue": "text for the flag"
+    },
+    {
+      "flag": "supportsImmigration",
+      "textValue": "text for the flag"
+    },
+    {
+      "flag": "conventional",
+      "textValue": "text for the flag"
+    },
+    {
+      "flag": "reserved",
+      "textValue": "text for the flag"
+    },
+    {
+      "flag": "nepotism",
+      "textValue": "text for the flag"
+    },
+    {
+      "flag": "flipflop",
+      "textValue": "text for the flag"
+    },
+    {
+      "flag": "WorksInAlcohol",
+      "textValue": "text for the flag"
+    },
+    {
+      "flag": "healerRole",
+      "textValue": "text for the flag"
+    },
+    {
+      "flag": "polluterRole",
+      "textValue": "text for the flag"
+    },
+    {
+      "flag": "riskTaker",
+      "textValue": "text for the flag"
+    },
+    {
+      "flag": "butcherRole",
+      "textValue": "text for the flag"
+    },
+    {
+      "flag": "advancedCareer",
+      "textValue": "text for the flag"
+    },
+    {
+      "flag": "hardWorker",
+      "textValue": "text for the flag"
+    },
+    {
+      "flag": "hardWorker",
+      "textValue": "text for the flag"
+    },
+    {
+      "flag": "generalJobs",
+      "textValue": "text for the flag"
+    },
+    {
+      "flag": "selfMadeCubeByDedication",
+      "textValue": "text for the flag"
+    }
+  ]
+
+
+}]
+},
+  {
+	"playerSurfaceValue": "MoneyMaker",
+	"playerNarrativeElements": [{
+		"key": "BTrueTYourHeart",
+		"rating": "High",
+		"playerInAgreementText": "text when a player agrees",
+		"playerDisagreementText": "text when disagrees",
+		"playerMoralDisagreementText": ["textone", "textTwo"],
+		"playerDisAgreementOnAflag": [{
+				"flag": "InLovewithspouseoffriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "departed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "socialLife",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasalotofenemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "familyPerson",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "graduate",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "friendwithabestfriendsenemy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "exploteative",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "widowedbutnotgrieving",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "adultbutnotworking",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "notworkingandrich",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "loner",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotengaged",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotfromspuceorbutloveintrest",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasAbestFriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "InLoveWirhAnothersspuce",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsWealthy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsYoungAndPregnant",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "worksWithFamily",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hiredByAFamilymember",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "MovesAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "getsFiredAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "SusMovments",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "RetiredYoung",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DiedBeforeRetired",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DevorcedManyPeople",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedSomoneOlder",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedForLifeStyleNotLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WillActOnLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsRichButNotGenrous",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "AdventureSeeker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "liklyToHelpTheHomeless",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "isolated",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "ButcherButRegretful",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "TooTrustingOfEnemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "likedToExperinceCulture",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "doesNotGiveToThoseInNeed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "supportsImmigration",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "conventional",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "reserved",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "nepotism",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "flipflop",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WorksInAlcohol",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "healerRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "polluterRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "riskTaker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "butcherRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "advancedCareer",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "generalJobs",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			}
+		]
+
+
+	}]
+},
+ {
+	"playerSurfaceValue": "Enviromentalist",
+	"playerNarrativeElements": [{
+		"key": "BTrueTYourHeart",
+		"rating": "High",
+		"playerInAgreementText": "text when a player agrees",
+		"playerDisagreementText": "text when disagrees",
+		"playerMoralDisagreementText": ["textone", "textTwo"],
+		"playerDisAgreementOnAflag": [{
+				"flag": "InLovewithspouseoffriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "departed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "socialLife",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasalotofenemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "familyPerson",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "graduate",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "friendwithabestfriendsenemy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "exploteative",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "widowedbutnotgrieving",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "adultbutnotworking",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "notworkingandrich",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "loner",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotengaged",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotfromspuceorbutloveintrest",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasAbestFriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "InLoveWirhAnothersspuce",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsWealthy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsYoungAndPregnant",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "worksWithFamily",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hiredByAFamilymember",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "MovesAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "getsFiredAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "SusMovments",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "RetiredYoung",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DiedBeforeRetired",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DevorcedManyPeople",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedSomoneOlder",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedForLifeStyleNotLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WillActOnLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsRichButNotGenrous",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "AdventureSeeker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "liklyToHelpTheHomeless",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "isolated",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "ButcherButRegretful",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "TooTrustingOfEnemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "likedToExperinceCulture",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "doesNotGiveToThoseInNeed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "supportsImmigration",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "conventional",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "reserved",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "nepotism",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "flipflop",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WorksInAlcohol",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "healerRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "polluterRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "riskTaker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "butcherRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "advancedCareer",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "generalJobs",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			}
+		]
+
+
+	}]
+},
+  {
+	"playerSurfaceValue": "EnviromentalistAnti",
+	"playerNarrativeElements": [{
+		"key": "BTrueTYourHeart",
+		"rating": "High",
+		"playerInAgreementText": "text when a player agrees",
+		"playerDisagreementText": "text when disagrees",
+		"playerMoralDisagreementText": ["textone", "textTwo"],
+		"playerDisAgreementOnAflag": [{
+				"flag": "InLovewithspouseoffriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "departed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "socialLife",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasalotofenemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "familyPerson",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "graduate",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "friendwithabestfriendsenemy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "exploteative",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "widowedbutnotgrieving",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "adultbutnotworking",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "notworkingandrich",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "loner",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotengaged",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotfromspuceorbutloveintrest",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasAbestFriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "InLoveWirhAnothersspuce",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsWealthy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsYoungAndPregnant",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "worksWithFamily",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hiredByAFamilymember",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "MovesAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "getsFiredAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "SusMovments",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "RetiredYoung",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DiedBeforeRetired",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DevorcedManyPeople",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedSomoneOlder",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedForLifeStyleNotLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WillActOnLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsRichButNotGenrous",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "AdventureSeeker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "liklyToHelpTheHomeless",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "isolated",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "ButcherButRegretful",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "TooTrustingOfEnemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "likedToExperinceCulture",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "doesNotGiveToThoseInNeed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "supportsImmigration",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "conventional",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "reserved",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "nepotism",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "flipflop",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WorksInAlcohol",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "healerRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "polluterRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "riskTaker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "butcherRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "advancedCareer",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "generalJobs",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			}
+		]
+
+
+	}]
+},
+ {
+	"playerSurfaceValue": "AnimalLover",
+	"playerNarrativeElements": [{
+		"key": "BTrueTYourHeart",
+		"rating": "High",
+		"playerInAgreementText": "text when a player agrees",
+		"playerDisagreementText": "text when disagrees",
+		"playerMoralDisagreementText": ["textone", "textTwo"],
+		"playerDisAgreementOnAflag": [{
+				"flag": "InLovewithspouseoffriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "departed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "socialLife",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasalotofenemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "familyPerson",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "graduate",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "friendwithabestfriendsenemy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "exploteative",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "widowedbutnotgrieving",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "adultbutnotworking",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "notworkingandrich",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "loner",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotengaged",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotfromspuceorbutloveintrest",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasAbestFriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "InLoveWirhAnothersspuce",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsWealthy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsYoungAndPregnant",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "worksWithFamily",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hiredByAFamilymember",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "MovesAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "getsFiredAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "SusMovments",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "RetiredYoung",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DiedBeforeRetired",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DevorcedManyPeople",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedSomoneOlder",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedForLifeStyleNotLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WillActOnLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsRichButNotGenrous",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "AdventureSeeker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "liklyToHelpTheHomeless",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "isolated",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "ButcherButRegretful",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "TooTrustingOfEnemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "likedToExperinceCulture",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "doesNotGiveToThoseInNeed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "supportsImmigration",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "conventional",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "reserved",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "nepotism",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "flipflop",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WorksInAlcohol",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "healerRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "polluterRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "riskTaker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "butcherRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "advancedCareer",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "generalJobs",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			}
+		]
+
+
+	}]
+},
+ {
+	"playerSurfaceValue": "AnimalLoverAnti",
+	"playerNarrativeElements": [{
+		"key": "BTrueTYourHeart",
+		"rating": "High",
+		"playerInAgreementText": "text when a player agrees",
+		"playerDisagreementText": "text when disagrees",
+		"playerMoralDisagreementText": ["textone", "textTwo"],
+		"playerDisAgreementOnAflag": [{
+				"flag": "InLovewithspouseoffriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "departed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "socialLife",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasalotofenemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "familyPerson",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "graduate",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "friendwithabestfriendsenemy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "exploteative",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "widowedbutnotgrieving",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "adultbutnotworking",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "notworkingandrich",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "loner",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotengaged",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotfromspuceorbutloveintrest",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasAbestFriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "InLoveWirhAnothersspuce",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsWealthy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsYoungAndPregnant",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "worksWithFamily",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hiredByAFamilymember",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "MovesAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "getsFiredAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "SusMovments",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "RetiredYoung",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DiedBeforeRetired",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DevorcedManyPeople",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedSomoneOlder",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedForLifeStyleNotLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WillActOnLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsRichButNotGenrous",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "AdventureSeeker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "liklyToHelpTheHomeless",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "isolated",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "ButcherButRegretful",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "TooTrustingOfEnemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "likedToExperinceCulture",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "doesNotGiveToThoseInNeed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "supportsImmigration",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "conventional",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "reserved",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "nepotism",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "flipflop",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WorksInAlcohol",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "healerRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "polluterRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "riskTaker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "butcherRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "advancedCareer",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "generalJobs",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			}
+		]
+
+
+	}]
+},
+{
+	"playerSurfaceValue": "Teetotasler",
+	"playerNarrativeElements": [{
+		"key": "BTrueTYourHeart",
+		"rating": "High",
+		"playerInAgreementText": "text when a player agrees",
+		"playerDisagreementText": "text when disagrees",
+		"playerMoralDisagreementText": ["textone", "textTwo"],
+		"playerDisAgreementOnAflag": [{
+				"flag": "InLovewithspouseoffriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "departed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "socialLife",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasalotofenemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "familyPerson",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "graduate",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "friendwithabestfriendsenemy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "exploteative",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "widowedbutnotgrieving",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "adultbutnotworking",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "notworkingandrich",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "loner",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotengaged",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotfromspuceorbutloveintrest",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasAbestFriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "InLoveWirhAnothersspuce",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsWealthy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsYoungAndPregnant",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "worksWithFamily",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hiredByAFamilymember",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "MovesAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "getsFiredAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "SusMovments",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "RetiredYoung",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DiedBeforeRetired",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DevorcedManyPeople",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedSomoneOlder",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedForLifeStyleNotLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WillActOnLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsRichButNotGenrous",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "AdventureSeeker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "liklyToHelpTheHomeless",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "isolated",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "ButcherButRegretful",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "TooTrustingOfEnemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "likedToExperinceCulture",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "doesNotGiveToThoseInNeed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "supportsImmigration",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "conventional",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "reserved",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "nepotism",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "flipflop",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WorksInAlcohol",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "healerRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "polluterRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "riskTaker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "butcherRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "advancedCareer",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "generalJobs",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			}
+		]
+
+
+	}]
+},
+ {
+	"playerSurfaceValue": "TeetotaslerAnti",
+	"playerNarrativeElements": [{
+		"key": "BTrueTYourHeart",
+		"rating": "High",
+		"playerInAgreementText": "text when a player agrees",
+		"playerDisagreementText": "text when disagrees",
+		"playerMoralDisagreementText": ["textone", "textTwo"],
+		"playerDisAgreementOnAflag": [{
+				"flag": "InLovewithspouseoffriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "departed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "socialLife",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasalotofenemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "familyPerson",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "graduate",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "friendwithabestfriendsenemy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "exploteative",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "widowedbutnotgrieving",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "adultbutnotworking",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "notworkingandrich",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "loner",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotengaged",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotfromspuceorbutloveintrest",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasAbestFriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "InLoveWirhAnothersspuce",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsWealthy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsYoungAndPregnant",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "worksWithFamily",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hiredByAFamilymember",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "MovesAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "getsFiredAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "SusMovments",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "RetiredYoung",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DiedBeforeRetired",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DevorcedManyPeople",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedSomoneOlder",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedForLifeStyleNotLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WillActOnLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsRichButNotGenrous",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "AdventureSeeker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "liklyToHelpTheHomeless",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "isolated",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "ButcherButRegretful",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "TooTrustingOfEnemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "likedToExperinceCulture",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "doesNotGiveToThoseInNeed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "supportsImmigration",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "conventional",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "reserved",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "nepotism",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "flipflop",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WorksInAlcohol",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "healerRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "polluterRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "riskTaker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "butcherRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "advancedCareer",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "generalJobs",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			}
+		]
+
+
+	}]
+},
+ {
+	"playerSurfaceValue": "FamilyPerson",
+	"playerNarrativeElements": [{
+		"key": "BTrueTYourHeart",
+		"rating": "High",
+		"playerInAgreementText": "text when a player agrees",
+		"playerDisagreementText": "text when disagrees",
+		"playerMoralDisagreementText": ["textone", "textTwo"],
+		"playerDisAgreementOnAflag": [{
+				"flag": "InLovewithspouseoffriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "departed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "socialLife",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasalotofenemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "familyPerson",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "graduate",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "friendwithabestfriendsenemy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "exploteative",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "widowedbutnotgrieving",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "adultbutnotworking",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "notworkingandrich",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "loner",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotengaged",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotfromspuceorbutloveintrest",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasAbestFriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "InLoveWirhAnothersspuce",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsWealthy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsYoungAndPregnant",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "worksWithFamily",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hiredByAFamilymember",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "MovesAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "getsFiredAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "SusMovments",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "RetiredYoung",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DiedBeforeRetired",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DevorcedManyPeople",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedSomoneOlder",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedForLifeStyleNotLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WillActOnLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsRichButNotGenrous",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "AdventureSeeker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "liklyToHelpTheHomeless",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "isolated",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "ButcherButRegretful",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "TooTrustingOfEnemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "likedToExperinceCulture",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "doesNotGiveToThoseInNeed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "supportsImmigration",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "conventional",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "reserved",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "nepotism",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "flipflop",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WorksInAlcohol",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "healerRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "polluterRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "riskTaker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "butcherRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "advancedCareer",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "generalJobs",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			}
+		]
+
+
+	}]
+},
+  {
+	"playerSurfaceValue": "SchoolIsCool",
+	"playerNarrativeElements": [{
+		"key": "BTrueTYourHeart",
+		"rating": "High",
+		"playerInAgreementText": "text when a player agrees",
+		"playerDisagreementText": "text when disagrees",
+		"playerMoralDisagreementText": ["textone", "textTwo"],
+		"playerDisAgreementOnAflag": [{
+				"flag": "InLovewithspouseoffriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "departed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "socialLife",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasalotofenemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "familyPerson",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "graduate",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "friendwithabestfriendsenemy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "exploteative",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "widowedbutnotgrieving",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "adultbutnotworking",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "notworkingandrich",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "loner",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotengaged",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotfromspuceorbutloveintrest",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasAbestFriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "InLoveWirhAnothersspuce",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsWealthy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsYoungAndPregnant",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "worksWithFamily",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hiredByAFamilymember",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "MovesAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "getsFiredAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "SusMovments",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "RetiredYoung",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DiedBeforeRetired",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DevorcedManyPeople",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedSomoneOlder",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedForLifeStyleNotLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WillActOnLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsRichButNotGenrous",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "AdventureSeeker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "liklyToHelpTheHomeless",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "isolated",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "ButcherButRegretful",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "TooTrustingOfEnemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "likedToExperinceCulture",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "doesNotGiveToThoseInNeed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "supportsImmigration",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "conventional",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "reserved",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "nepotism",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "flipflop",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WorksInAlcohol",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "healerRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "polluterRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "riskTaker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "butcherRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "advancedCareer",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "generalJobs",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			}
+		]
+
+
+	}]
+},
+ {
+	"playerSurfaceValue": "schoolIsDrool",
+	"playerNarrativeElements": [{
+		"key": "BTrueTYourHeart",
+		"rating": "High",
+		"playerInAgreementText": "text when a player agrees",
+		"playerDisagreementText": "text when disagrees",
+		"playerMoralDisagreementText": ["textone", "textTwo"],
+		"playerDisAgreementOnAflag": [{
+				"flag": "InLovewithspouseoffriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "departed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "socialLife",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasalotofenemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "familyPerson",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "graduate",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "friendwithabestfriendsenemy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "exploteative",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "widowedbutnotgrieving",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "adultbutnotworking",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "notworkingandrich",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "loner",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotengaged",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotfromspuceorbutloveintrest",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasAbestFriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "InLoveWirhAnothersspuce",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsWealthy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsYoungAndPregnant",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "worksWithFamily",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hiredByAFamilymember",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "MovesAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "getsFiredAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "SusMovments",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "RetiredYoung",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DiedBeforeRetired",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DevorcedManyPeople",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedSomoneOlder",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedForLifeStyleNotLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WillActOnLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsRichButNotGenrous",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "AdventureSeeker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "liklyToHelpTheHomeless",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "isolated",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "ButcherButRegretful",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "TooTrustingOfEnemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "likedToExperinceCulture",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "doesNotGiveToThoseInNeed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "supportsImmigration",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "conventional",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "reserved",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "nepotism",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "flipflop",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WorksInAlcohol",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "healerRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "polluterRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "riskTaker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "butcherRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "advancedCareer",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "generalJobs",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			}
+		]
+
+
+	}]
+},
+{
+	"playerSurfaceValue": "SupportingComunities",
+	"playerNarrativeElements": [{
+		"key": "BTrueTYourHeart",
+		"rating": "High",
+		"playerInAgreementText": "text when a player agrees",
+		"playerDisagreementText": "text when disagrees",
+		"playerMoralDisagreementText": ["textone", "textTwo"],
+		"playerDisAgreementOnAflag": [{
+				"flag": "InLovewithspouseoffriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "departed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "socialLife",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasalotofenemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "familyPerson",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "graduate",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "friendwithabestfriendsenemy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "exploteative",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "widowedbutnotgrieving",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "adultbutnotworking",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "notworkingandrich",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "loner",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotengaged",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotfromspuceorbutloveintrest",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasAbestFriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "InLoveWirhAnothersspuce",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsWealthy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsYoungAndPregnant",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "worksWithFamily",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hiredByAFamilymember",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "MovesAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "getsFiredAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "SusMovments",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "RetiredYoung",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DiedBeforeRetired",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DevorcedManyPeople",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedSomoneOlder",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedForLifeStyleNotLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WillActOnLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsRichButNotGenrous",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "AdventureSeeker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "liklyToHelpTheHomeless",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "isolated",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "ButcherButRegretful",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "TooTrustingOfEnemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "likedToExperinceCulture",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "doesNotGiveToThoseInNeed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "supportsImmigration",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "conventional",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "reserved",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "nepotism",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "flipflop",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WorksInAlcohol",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "healerRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "polluterRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "riskTaker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "butcherRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "advancedCareer",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "generalJobs",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			}
+		]
+
+
+	}]
+},
+ {
+	"playerSurfaceValue": "LoverOfRisks",
+	"playerNarrativeElements": [{
+		"key": "BTrueTYourHeart",
+		"rating": "High",
+		"playerInAgreementText": "text when a player agrees",
+		"playerDisagreementText": "text when disagrees",
+		"playerMoralDisagreementText": ["textone", "textTwo"],
+		"playerDisAgreementOnAflag": [{
+				"flag": "InLovewithspouseoffriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "departed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "socialLife",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasalotofenemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "familyPerson",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "graduate",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "friendwithabestfriendsenemy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "exploteative",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "widowedbutnotgrieving",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "adultbutnotworking",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "notworkingandrich",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "loner",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotengaged",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotfromspuceorbutloveintrest",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasAbestFriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "InLoveWirhAnothersspuce",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsWealthy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsYoungAndPregnant",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "worksWithFamily",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hiredByAFamilymember",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "MovesAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "getsFiredAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "SusMovments",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "RetiredYoung",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DiedBeforeRetired",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DevorcedManyPeople",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedSomoneOlder",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedForLifeStyleNotLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WillActOnLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsRichButNotGenrous",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "AdventureSeeker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "liklyToHelpTheHomeless",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "isolated",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "ButcherButRegretful",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "TooTrustingOfEnemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "likedToExperinceCulture",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "doesNotGiveToThoseInNeed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "supportsImmigration",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "conventional",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "reserved",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "nepotism",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "flipflop",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WorksInAlcohol",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "healerRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "polluterRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "riskTaker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "butcherRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "advancedCareer",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "generalJobs",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			}
+		]
+
+
+	}]
+},
+ {
+	"playerSurfaceValue": "LandISWhereThehrtIS",
+	"playerNarrativeElements": [{
+		"key": "BTrueTYourHeart",
+		"rating": "High",
+		"playerInAgreementText": "text when a player agrees",
+		"playerDisagreementText": "text when disagrees",
+		"playerMoralDisagreementText": ["textone", "textTwo"],
+		"playerDisAgreementOnAflag": [{
+				"flag": "InLovewithspouseoffriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "departed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "socialLife",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasalotofenemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "familyPerson",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "graduate",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "friendwithabestfriendsenemy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "exploteative",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "widowedbutnotgrieving",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "adultbutnotworking",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "notworkingandrich",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "loner",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotengaged",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotfromspuceorbutloveintrest",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasAbestFriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "InLoveWirhAnothersspuce",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsWealthy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsYoungAndPregnant",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "worksWithFamily",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hiredByAFamilymember",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "MovesAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "getsFiredAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "SusMovments",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "RetiredYoung",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DiedBeforeRetired",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DevorcedManyPeople",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedSomoneOlder",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedForLifeStyleNotLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WillActOnLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsRichButNotGenrous",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "AdventureSeeker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "liklyToHelpTheHomeless",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "isolated",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "ButcherButRegretful",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "TooTrustingOfEnemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "likedToExperinceCulture",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "doesNotGiveToThoseInNeed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "supportsImmigration",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "conventional",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "reserved",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "nepotism",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "flipflop",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WorksInAlcohol",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "healerRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "polluterRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "riskTaker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "butcherRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "advancedCareer",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "generalJobs",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			}
+		]
+
+
+	}]
+},
+ {
+	"playerSurfaceValue": "CarrerAboveAll",
+	"playerNarrativeElements": [{
+		"key": "BTrueTYourHeart",
+		"rating": "High",
+		"playerInAgreementText": "text when a player agrees",
+		"playerDisagreementText": "text when disagrees",
+		"playerMoralDisagreementText": ["textone", "textTwo"],
+		"playerDisAgreementOnAflag": [{
+				"flag": "InLovewithspouseoffriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "departed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "socialLife",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasalotofenemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "familyPerson",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "graduate",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "friendwithabestfriendsenemy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "exploteative",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "widowedbutnotgrieving",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "adultbutnotworking",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "notworkingandrich",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "loner",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotengaged",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotfromspuceorbutloveintrest",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasAbestFriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "InLoveWirhAnothersspuce",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsWealthy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsYoungAndPregnant",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "worksWithFamily",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hiredByAFamilymember",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "MovesAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "getsFiredAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "SusMovments",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "RetiredYoung",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DiedBeforeRetired",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DevorcedManyPeople",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedSomoneOlder",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedForLifeStyleNotLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WillActOnLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsRichButNotGenrous",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "AdventureSeeker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "liklyToHelpTheHomeless",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "isolated",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "ButcherButRegretful",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "TooTrustingOfEnemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "likedToExperinceCulture",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "doesNotGiveToThoseInNeed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "supportsImmigration",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "conventional",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "reserved",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "nepotism",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "flipflop",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WorksInAlcohol",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "healerRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "polluterRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "riskTaker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "butcherRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "advancedCareer",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "generalJobs",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			}
+		]
+
+
+	}]
+},
+ {
+	"playerSurfaceValue": "FriendsAreTheJoyOFlife",
+	"playerNarrativeElements": [{
+		"key": "BTrueTYourHeart",
+		"rating": "High",
+		"playerInAgreementText": "text when a player agrees",
+		"playerDisagreementText": "text when disagrees",
+		"playerMoralDisagreementText": ["textone", "textTwo"],
+		"playerDisAgreementOnAflag": [{
+				"flag": "InLovewithspouseoffriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "departed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "socialLife",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasalotofenemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "familyPerson",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "graduate",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "friendwithabestfriendsenemy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "exploteative",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "widowedbutnotgrieving",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "adultbutnotworking",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "notworkingandrich",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "loner",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotengaged",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotfromspuceorbutloveintrest",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasAbestFriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "InLoveWirhAnothersspuce",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsWealthy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsYoungAndPregnant",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "worksWithFamily",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hiredByAFamilymember",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "MovesAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "getsFiredAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "SusMovments",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "RetiredYoung",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DiedBeforeRetired",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DevorcedManyPeople",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedSomoneOlder",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedForLifeStyleNotLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WillActOnLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsRichButNotGenrous",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "AdventureSeeker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "liklyToHelpTheHomeless",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "isolated",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "ButcherButRegretful",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "TooTrustingOfEnemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "likedToExperinceCulture",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "doesNotGiveToThoseInNeed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "supportsImmigration",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "conventional",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "reserved",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "nepotism",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "flipflop",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WorksInAlcohol",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "healerRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "polluterRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "riskTaker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "butcherRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "advancedCareer",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "generalJobs",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			}
+		]
+
+
+	}]
+},
+ {
+	"playerSurfaceValue": "Loner",
+	"playerNarrativeElements": [{
+		"key": "BTrueTYourHeart",
+		"rating": "High",
+		"playerInAgreementText": "text when a player agrees",
+		"playerDisagreementText": "text when disagrees",
+		"playerMoralDisagreementText": ["textone", "textTwo"],
+		"playerDisAgreementOnAflag": [{
+				"flag": "InLovewithspouseoffriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "departed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "socialLife",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasalotofenemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "familyPerson",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "graduate",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "friendwithabestfriendsenemy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "exploteative",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "widowedbutnotgrieving",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "adultbutnotworking",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "notworkingandrich",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "loner",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotengaged",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotfromspuceorbutloveintrest",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasAbestFriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "InLoveWirhAnothersspuce",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsWealthy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsYoungAndPregnant",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "worksWithFamily",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hiredByAFamilymember",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "MovesAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "getsFiredAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "SusMovments",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "RetiredYoung",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DiedBeforeRetired",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DevorcedManyPeople",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedSomoneOlder",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedForLifeStyleNotLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WillActOnLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsRichButNotGenrous",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "AdventureSeeker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "liklyToHelpTheHomeless",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "isolated",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "ButcherButRegretful",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "TooTrustingOfEnemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "likedToExperinceCulture",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "doesNotGiveToThoseInNeed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "supportsImmigration",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "conventional",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "reserved",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "nepotism",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "flipflop",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WorksInAlcohol",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "healerRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "polluterRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "riskTaker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "butcherRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "advancedCareer",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "generalJobs",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			}
+		]
+
+
+	}]
+},
+ {
+	"playerSurfaceValue": "youthAreTheFuture",
+	"playerNarrativeElements": [{
+		"key": "BTrueTYourHeart",
+		"rating": "High",
+		"playerInAgreementText": "text when a player agrees",
+		"playerDisagreementText": "text when disagrees",
+		"playerMoralDisagreementText": ["textone", "textTwo"],
+		"playerDisAgreementOnAflag": [{
+				"flag": "InLovewithspouseoffriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "departed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "socialLife",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasalotofenemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "familyPerson",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "graduate",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "friendwithabestfriendsenemy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "exploteative",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "widowedbutnotgrieving",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "adultbutnotworking",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "notworkingandrich",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "loner",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotengaged",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotfromspuceorbutloveintrest",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasAbestFriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "InLoveWirhAnothersspuce",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsWealthy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsYoungAndPregnant",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "worksWithFamily",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hiredByAFamilymember",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "MovesAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "getsFiredAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "SusMovments",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "RetiredYoung",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DiedBeforeRetired",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DevorcedManyPeople",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedSomoneOlder",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedForLifeStyleNotLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WillActOnLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsRichButNotGenrous",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "AdventureSeeker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "liklyToHelpTheHomeless",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "isolated",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "ButcherButRegretful",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "TooTrustingOfEnemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "likedToExperinceCulture",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "doesNotGiveToThoseInNeed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "supportsImmigration",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "conventional",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "reserved",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "nepotism",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "flipflop",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WorksInAlcohol",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "healerRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "polluterRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "riskTaker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "butcherRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "advancedCareer",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "generalJobs",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			}
+		]
+
+
+	}]
+},
+ {
+	"playerSurfaceValue": "ProHiringFamily",
+	"playerNarrativeElements": [{
+		"key": "BTrueTYourHeart",
+		"rating": "High",
+		"playerInAgreementText": "text when a player agrees",
+		"playerDisagreementText": "text when disagrees",
+		"playerMoralDisagreementText": ["textone", "textTwo"],
+		"playerDisAgreementOnAflag": [{
+				"flag": "InLovewithspouseoffriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "departed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "socialLife",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasalotofenemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "familyPerson",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "graduate",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "friendwithabestfriendsenemy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "exploteative",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "widowedbutnotgrieving",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "adultbutnotworking",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "notworkingandrich",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "loner",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotengaged",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotfromspuceorbutloveintrest",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasAbestFriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "InLoveWirhAnothersspuce",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsWealthy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsYoungAndPregnant",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "worksWithFamily",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hiredByAFamilymember",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "MovesAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "getsFiredAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "SusMovments",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "RetiredYoung",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DiedBeforeRetired",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DevorcedManyPeople",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedSomoneOlder",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedForLifeStyleNotLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WillActOnLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsRichButNotGenrous",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "AdventureSeeker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "liklyToHelpTheHomeless",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "isolated",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "ButcherButRegretful",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "TooTrustingOfEnemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "likedToExperinceCulture",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "doesNotGiveToThoseInNeed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "supportsImmigration",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "conventional",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "reserved",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "nepotism",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "flipflop",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WorksInAlcohol",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "healerRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "polluterRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "riskTaker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "butcherRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "advancedCareer",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "generalJobs",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			}
+		]
+
+
+	}]
+},
+ {
+	"playerSurfaceValue": "suchUncharactristicBehaviorOhMy",
+	"playerNarrativeElements": [{
+		"key": "BTrueTYourHeart",
+		"rating": "High",
+		"playerInAgreementText": "text when a player agrees",
+		"playerDisagreementText": "text when disagrees",
+		"playerMoralDisagreementText": ["textone", "textTwo"],
+		"playerDisAgreementOnAflag": [{
+				"flag": "InLovewithspouseoffriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "departed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "socialLife",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasalotofenemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "familyPerson",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "graduate",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "friendwithabestfriendsenemy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "exploteative",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "widowedbutnotgrieving",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "adultbutnotworking",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "notworkingandrich",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "loner",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotengaged",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotfromspuceorbutloveintrest",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasAbestFriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "InLoveWirhAnothersspuce",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsWealthy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsYoungAndPregnant",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "worksWithFamily",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hiredByAFamilymember",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "MovesAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "getsFiredAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "SusMovments",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "RetiredYoung",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DiedBeforeRetired",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DevorcedManyPeople",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedSomoneOlder",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedForLifeStyleNotLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WillActOnLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsRichButNotGenrous",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "AdventureSeeker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "liklyToHelpTheHomeless",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "isolated",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "ButcherButRegretful",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "TooTrustingOfEnemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "likedToExperinceCulture",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "doesNotGiveToThoseInNeed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "supportsImmigration",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "conventional",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "reserved",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "nepotism",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "flipflop",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WorksInAlcohol",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "healerRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "polluterRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "riskTaker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "butcherRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "advancedCareer",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "generalJobs",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			}
+		]
+
+
+	}]
+},
+{
+	"playerSurfaceValue": "WeLiveForSpontaneity",
+	"playerNarrativeElements": [{
+		"key": "BTrueTYourHeart",
+		"rating": "High",
+		"playerInAgreementText": "text when a player agrees",
+		"playerDisagreementText": "text when disagrees",
+		"playerMoralDisagreementText": ["textone", "textTwo"],
+		"playerDisAgreementOnAflag": [{
+				"flag": "InLovewithspouseoffriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "departed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "socialLife",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasalotofenemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "familyPerson",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "graduate",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "friendwithabestfriendsenemy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "exploteative",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "widowedbutnotgrieving",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "adultbutnotworking",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "notworkingandrich",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "loner",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotengaged",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotfromspuceorbutloveintrest",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasAbestFriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "InLoveWirhAnothersspuce",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsWealthy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsYoungAndPregnant",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "worksWithFamily",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hiredByAFamilymember",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "MovesAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "getsFiredAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "SusMovments",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "RetiredYoung",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DiedBeforeRetired",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DevorcedManyPeople",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedSomoneOlder",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedForLifeStyleNotLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WillActOnLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsRichButNotGenrous",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "AdventureSeeker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "liklyToHelpTheHomeless",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "isolated",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "ButcherButRegretful",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "TooTrustingOfEnemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "likedToExperinceCulture",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "doesNotGiveToThoseInNeed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "supportsImmigration",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "conventional",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "reserved",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "nepotism",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "flipflop",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WorksInAlcohol",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "healerRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "polluterRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "riskTaker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "butcherRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "advancedCareer",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "generalJobs",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			}
+		]
+
+
+	}]
+},
+ {
+	"playerSurfaceValue": "AnAdventureWeSeek",
+	"playerNarrativeElements": [{
+		"key": "BTrueTYourHeart",
+		"rating": "High",
+		"playerInAgreementText": "text when a player agrees",
+		"playerDisagreementText": "text when disagrees",
+		"playerMoralDisagreementText": ["textone", "textTwo"],
+		"playerDisAgreementOnAflag": [{
+				"flag": "InLovewithspouseoffriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "departed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "socialLife",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasalotofenemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "familyPerson",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "graduate",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "friendwithabestfriendsenemy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "exploteative",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "widowedbutnotgrieving",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "adultbutnotworking",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "notworkingandrich",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "loner",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotengaged",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotfromspuceorbutloveintrest",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasAbestFriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "InLoveWirhAnothersspuce",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsWealthy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsYoungAndPregnant",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "worksWithFamily",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hiredByAFamilymember",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "MovesAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "getsFiredAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "SusMovments",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "RetiredYoung",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DiedBeforeRetired",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DevorcedManyPeople",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedSomoneOlder",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedForLifeStyleNotLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WillActOnLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsRichButNotGenrous",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "AdventureSeeker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "liklyToHelpTheHomeless",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "isolated",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "ButcherButRegretful",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "TooTrustingOfEnemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "likedToExperinceCulture",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "doesNotGiveToThoseInNeed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "supportsImmigration",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "conventional",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "reserved",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "nepotism",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "flipflop",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WorksInAlcohol",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "healerRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "polluterRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "riskTaker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "butcherRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "advancedCareer",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "generalJobs",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			}
+		]
+
+
+	}]
+},
+{
+	"playerSurfaceValue": "NiaeveteIsFiction",
+	"playerNarrativeElements": [{
+		"key": "BTrueTYourHeart",
+		"rating": "High",
+		"playerInAgreementText": "text when a player agrees",
+		"playerDisagreementText": "text when disagrees",
+		"playerMoralDisagreementText": ["textone", "textTwo"],
+		"playerDisAgreementOnAflag": [{
+				"flag": "InLovewithspouseoffriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "departed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "socialLife",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasalotofenemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "familyPerson",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "graduate",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "friendwithabestfriendsenemy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "exploteative",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "widowedbutnotgrieving",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "adultbutnotworking",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "notworkingandrich",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "loner",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotengaged",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotfromspuceorbutloveintrest",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasAbestFriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "InLoveWirhAnothersspuce",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsWealthy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsYoungAndPregnant",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "worksWithFamily",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hiredByAFamilymember",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "MovesAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "getsFiredAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "SusMovments",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "RetiredYoung",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DiedBeforeRetired",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DevorcedManyPeople",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedSomoneOlder",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedForLifeStyleNotLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WillActOnLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsRichButNotGenrous",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "AdventureSeeker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "liklyToHelpTheHomeless",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "isolated",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "ButcherButRegretful",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "TooTrustingOfEnemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "likedToExperinceCulture",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "doesNotGiveToThoseInNeed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "supportsImmigration",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "conventional",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "reserved",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "nepotism",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "flipflop",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WorksInAlcohol",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "healerRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "polluterRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "riskTaker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "butcherRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "advancedCareer",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "generalJobs",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			}
+		]
+
+
+	}]
+},
+{
+	"playerSurfaceValue": "ImmagretsWeGetTheJobDone",
+	"playerNarrativeElements": [{
+		"key": "BTrueTYourHeart",
+		"rating": "High",
+		"playerInAgreementText": "text when a player agrees",
+		"playerDisagreementText": "text when disagrees",
+		"playerMoralDisagreementText": ["textone", "textTwo"],
+		"playerDisAgreementOnAflag": [{
+				"flag": "InLovewithspouseoffriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "departed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "socialLife",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasalotofenemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "familyPerson",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "graduate",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "friendwithabestfriendsenemy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "exploteative",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "widowedbutnotgrieving",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "adultbutnotworking",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "notworkingandrich",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "loner",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotengaged",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotfromspuceorbutloveintrest",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasAbestFriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "InLoveWirhAnothersspuce",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsWealthy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsYoungAndPregnant",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "worksWithFamily",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hiredByAFamilymember",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "MovesAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "getsFiredAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "SusMovments",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "RetiredYoung",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DiedBeforeRetired",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DevorcedManyPeople",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedSomoneOlder",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedForLifeStyleNotLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WillActOnLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsRichButNotGenrous",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "AdventureSeeker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "liklyToHelpTheHomeless",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "isolated",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "ButcherButRegretful",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "TooTrustingOfEnemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "likedToExperinceCulture",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "doesNotGiveToThoseInNeed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "supportsImmigration",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "conventional",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "reserved",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "nepotism",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "flipflop",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WorksInAlcohol",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "healerRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "polluterRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "riskTaker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "butcherRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "advancedCareer",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "generalJobs",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			}
+		]
+
+
+	}]
+},
+ {
+	"playerSurfaceValue": "WeArewNothingIfWeAreNotReserved",
+	"playerNarrativeElements": [{
+		"key": "BTrueTYourHeart",
+		"rating": "High",
+		"playerInAgreementText": "text when a player agrees",
+		"playerDisagreementText": "text when disagrees",
+		"playerMoralDisagreementText": ["textone", "textTwo"],
+		"playerDisAgreementOnAflag": [{
+				"flag": "InLovewithspouseoffriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "departed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "socialLife",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasalotofenemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "familyPerson",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "graduate",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "friendwithabestfriendsenemy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "exploteative",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "widowedbutnotgrieving",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "adultbutnotworking",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "notworkingandrich",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "loner",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotengaged",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotfromspuceorbutloveintrest",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasAbestFriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "InLoveWirhAnothersspuce",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsWealthy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsYoungAndPregnant",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "worksWithFamily",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hiredByAFamilymember",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "MovesAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "getsFiredAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "SusMovments",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "RetiredYoung",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DiedBeforeRetired",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DevorcedManyPeople",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedSomoneOlder",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedForLifeStyleNotLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WillActOnLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsRichButNotGenrous",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "AdventureSeeker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "liklyToHelpTheHomeless",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "isolated",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "ButcherButRegretful",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "TooTrustingOfEnemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "likedToExperinceCulture",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "doesNotGiveToThoseInNeed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "supportsImmigration",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "conventional",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "reserved",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "nepotism",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "flipflop",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WorksInAlcohol",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "healerRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "polluterRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "riskTaker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "butcherRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "advancedCareer",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "generalJobs",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			}
+		]
+
+
+	}]
+},
+{
+	"playerSurfaceValue": "AselfMadeShapeWeAspireToBe",
+	"playerNarrativeElements": [{
+		"key": "BTrueTYourHeart",
+		"rating": "High",
+		"playerInAgreementText": "text when a player agrees",
+		"playerDisagreementText": "text when disagrees",
+		"playerMoralDisagreementText": ["textone", "textTwo"],
+		"playerDisAgreementOnAflag": [{
+				"flag": "InLovewithspouseoffriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "departed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "socialLife",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasalotofenemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "familyPerson",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "graduate",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "friendwithabestfriendsenemy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "exploteative",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "widowedbutnotgrieving",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "adultbutnotworking",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "notworkingandrich",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "loner",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotengaged",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotfromspuceorbutloveintrest",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasAbestFriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "InLoveWirhAnothersspuce",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsWealthy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsYoungAndPregnant",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "worksWithFamily",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hiredByAFamilymember",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "MovesAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "getsFiredAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "SusMovments",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "RetiredYoung",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DiedBeforeRetired",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DevorcedManyPeople",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedSomoneOlder",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedForLifeStyleNotLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WillActOnLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsRichButNotGenrous",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "AdventureSeeker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "liklyToHelpTheHomeless",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "isolated",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "ButcherButRegretful",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "TooTrustingOfEnemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "likedToExperinceCulture",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "doesNotGiveToThoseInNeed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "supportsImmigration",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "conventional",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "reserved",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "nepotism",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "flipflop",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WorksInAlcohol",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "healerRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "polluterRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "riskTaker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "butcherRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "advancedCareer",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "generalJobs",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			}
+		]
+
+
+	}]
+},
+ {
+	"playerSurfaceValue": "Shapesarenothingifnotsocial",
+	"playerNarrativeElements": [{
+		"key": "BTrueTYourHeart",
+		"rating": "High",
+		"playerInAgreementText": "text when a player agrees",
+		"playerDisagreementText": "text when disagrees",
+		"playerMoralDisagreementText": ["textone", "textTwo"],
+		"playerDisAgreementOnAflag": [{
+				"flag": "InLovewithspouseoffriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "departed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "socialLife",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasalotofenemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "familyPerson",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "graduate",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "friendwithabestfriendsenemy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "exploteative",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "widowedbutnotgrieving",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "adultbutnotworking",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "notworkingandrich",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "loner",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotengaged",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotfromspuceorbutloveintrest",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasAbestFriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "InLoveWirhAnothersspuce",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsWealthy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsYoungAndPregnant",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "worksWithFamily",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hiredByAFamilymember",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "MovesAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "getsFiredAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "SusMovments",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "RetiredYoung",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DiedBeforeRetired",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DevorcedManyPeople",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedSomoneOlder",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedForLifeStyleNotLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WillActOnLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsRichButNotGenrous",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "AdventureSeeker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "liklyToHelpTheHomeless",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "isolated",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "ButcherButRegretful",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "TooTrustingOfEnemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "likedToExperinceCulture",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "doesNotGiveToThoseInNeed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "supportsImmigration",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "conventional",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "reserved",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "nepotism",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "flipflop",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WorksInAlcohol",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "healerRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "polluterRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "riskTaker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "butcherRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "advancedCareer",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "generalJobs",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			}
+		]
+
+
+	}]
+},
+ {
+	"playerSurfaceValue": "AntiFaviortisum",
+	"playerNarrativeElements": [{
+		"key": "BTrueTYourHeart",
+		"rating": "High",
+		"playerInAgreementText": "text when a player agrees",
+		"playerDisagreementText": "text when disagrees",
+		"playerMoralDisagreementText": ["textone", "textTwo"],
+		"playerDisAgreementOnAflag": [{
+				"flag": "InLovewithspouseoffriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "departed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "socialLife",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasalotofenemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "familyPerson",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "graduate",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "friendwithabestfriendsenemy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "exploteative",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "widowedbutnotgrieving",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "adultbutnotworking",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "notworkingandrich",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "loner",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotengaged",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "pregnantbutnotfromspuceorbutloveintrest",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hasAbestFriend",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "InLoveWirhAnothersspuce",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsWealthy",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsYoungAndPregnant",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "worksWithFamily",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hiredByAFamilymember",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "MovesAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "getsFiredAlot",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "SusMovments",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "RetiredYoung",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DiedBeforeRetired",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "DevorcedManyPeople",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedSomoneOlder",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "marriedForLifeStyleNotLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WillActOnLove",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "IsRichButNotGenrous",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "AdventureSeeker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "liklyToHelpTheHomeless",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "isolated",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "ButcherButRegretful",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "TooTrustingOfEnemies",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "likedToExperinceCulture",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "doesNotGiveToThoseInNeed",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "supportsImmigration",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "conventional",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "reserved",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "nepotism",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "flipflop",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "WorksInAlcohol",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "healerRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "polluterRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "riskTaker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "butcherRole",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "advancedCareer",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "hardWorker",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "generalJobs",
+				"textValue": "text for the flag"
+			},
+			{
+				"flag": "selfMadeCubeByDedication",
+				"textValue": "text for the flag"
+			}
+		]
+
+
+	}]
+}
+
+]

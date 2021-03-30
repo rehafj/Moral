@@ -14,7 +14,8 @@ public class Dialoug
     public List<string> hatedFacts; //will contain things the npc hates about the character 
     public string thoughtBubbleText;
     public bool Explored; //just to test something
-
+    public string moralGreementText;
+    public List<string> moralDisagreementText = new List<string>();
     public  List<string> ExploredHatedFacts;
     
     public Dialoug parent;

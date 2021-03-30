@@ -600,22 +600,23 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     {//selecting intro and the first part of the body here --- 
         foreach (DialougStructure op in opinions) //ex: all high opp
         {
+            Debug.Log("wgat happens here " + op.topic.Contains(mapToCNPCMoralFactor(key)))  ;
             if (op.topic.Contains(mapToCNPCMoralFactor(key))) //get the translatiopn of they key but not ditect character keys..... 
             {
                 selectedOpnion = op.topic.Split('_').Last();
                 //Debug.Log("-------selectedOpnion" + selectedOpnion);
                 if (flag == "INTRO")
                 {
-                    return op.NarrativeElements.intro;
+                    return op.NarrativeElements.surfaceOpinionOnTopic;
 
                 }
                 if (flag == "AGREE")
                 {
-                    return op.NarrativeElements.bodyOne;
+                    return op.NarrativeElements.agreementText;
                 }
                 if (flag == "CON")
                 {
-                    return op.NarrativeElements.bodytwo;
+                    return op.NarrativeElements.disagreementtext;
 
                 }
 
@@ -780,6 +781,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
     string getIntroductionTopicString(string key, InterestingCharacters character)
     {
+        //currentCNPC.ConvCharacterMoralFactors get the opinion t
         switch (key)
         {
             case ("departed"):

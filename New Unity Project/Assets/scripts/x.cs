@@ -558,7 +558,8 @@ public class x : MonoBehaviour
             if (op.topic.Contains(key))
             {
                 selectedOpnion =op.topic.Split('_').Last();
-                return op.NarrativeElements.intro + op.NarrativeElements.bodyOne;
+                return op.NarrativeElements.intro + op.NarrativeElements.
+;
             }
         }
         return "NO TOPIC WAS FOUND --- need to author these topics  " + key;
