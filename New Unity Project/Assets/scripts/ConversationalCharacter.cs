@@ -7,15 +7,26 @@ public class ConversationalCharacter : MonoBehaviour
 
   
 {
-   
+
+   public  List<string> contradictingValuesHigh = new List<string>
+        {
+            "Enviromentalist" ,"BTrueTYourHeart","AnimalLover","SchoolIsCool"
+        };/// <summary>
+        /// you can add contradicitons to vlaues in these lists, High contains high values and low contains low values that are contradictiory to High
+        /// </summary>
+   public  List<string> contradictingValuesLow = new List<string>
+        {
+            "schoolIsDrool","EnviromentalistAnti","AnimalLoverAnti","LoveIsForFools"
+        };
+
 
     public Dictionary<string, RatingVlaues> ConvCharacterMoralFactors = new Dictionary<string, RatingVlaues>();
     //att 2 --- 
-    string[] keys = { "BTrueTYourHeart", "MoneyMaker", "Enviromentalist", "AnimalLover",
-    "Teetotasler","FamilyPerson"  ,"SchoolIsCool","LoverOfRisks"   
-            ,"SupportingComunities", "LandISWhereThehrtIS","CarrerAboveAll", 
-        "FriendsAreTheJoyOFlife"
-       , "Loner"};//removed trbd for now 
+    string[] keys = { "BTrueTYourHeart", "LoveIsForFools","MoneyMaker", "Enviromentalist", "EnviromentalistAnti","AnimalLover","AnimalLoverAnti",
+    "Teetotasler","TeetotaslerAnti","FamilyPerson"  ,"SchoolIsCool","youthAreTheFuture","schoolIsDrool","LoverOfRisks"   ,"ProHiringFamily"
+            ,"SupportingComunities", "LandISWhereThehrtIS","CarrerAboveAll", "suchUncharactristicBehaviorOhMy","WeLiveForSpontaneity","AnAdventureWeSeek","NiaeveteIsFiction",
+        "FriendsAreTheJoyOFlife","ImmagretsWeGetTheJobDone","WeArewNothingIfWeAreNotReserved","AselfMadeShapeWeAspireToBe","Shapesarenothingifnotsocial","AntiFaviortisum",
+        "Loner", };//removed trbd for now //29 total surface values 
 
     public StrictFatherMorality FatherModel ;
     public NurturantParentMorality MotherModel;
@@ -85,9 +96,10 @@ public class ConversationalCharacter : MonoBehaviour
 
 
     //randomizing constructor /overloaded
-    public ConversationalCharacter(string name)
+    public ConversationalCharacter(string name) //method used for random
     {
         List<string> tempHighVlaue = new List<string>();//used to set up moral focus on high value flags
+
 
 
         ConversationalNpcName = name;
@@ -96,28 +108,47 @@ public class ConversationalCharacter : MonoBehaviour
         foreach (string s in keys)
         {
             int x = Random.Range(0, 3);
-            NpcValueFlag = getRandomNPCValue(x);
+            if (contradictingValuesHigh.Contains(s))
+            {
+               NpcValueFlag = RatingVlaues.High;
+
+            }
+            else if (contradictingValuesLow.Contains(s))
+            {
+                NpcValueFlag = RatingVlaues.Low;
+            }
+            else
+            {
+                NpcValueFlag = getRandomNPCValue(x);
+            }
+
             ConvCharacterMoralFactors.Add(s, NpcValueFlag);
 
             if(NpcValueFlag == RatingVlaues.High) //again used for moral focus - will move this into it's opwn method soon 
             {
                 tempHighVlaue.Add(s);
+                
             }
+
+
             i++;
         }
         int index = UnityEngine.Random.Range(0, tempHighVlaue.Count);
         setMoralFocusArea(tempHighVlaue[index]);
         FatherModel = new StrictFatherMorality();
+          Debug.Log("check these values out : EnviromentalistAnti " + ConvCharacterMoralFactors["EnviromentalistAnti"] + "and ebviromentalist" +
+         ConvCharacterMoralFactors["Enviromentalist"] + "school is cool followed by drool " + ConvCharacterMoralFactors["SchoolIsCool"] + ConvCharacterMoralFactors["schoolIsDrool"]);
 
     }
 
-    private RatingVlaues getRandomNPCValue(int x)
+    private RatingVlaues getRandomNPCValue(int x )
     {
+       
         switch (x)
         {
             case (0):
                 return RatingVlaues.Low;
-            case (1): return RatingVlaues.Low;
+            case (1): return RatingVlaues.Mid;
             default:
                 return RatingVlaues.High;
         }
@@ -127,7 +158,18 @@ public class ConversationalCharacter : MonoBehaviour
     {
         FatherModel = new StrictFatherMorality(); // make it on a precentage but for now I do not have a mother model implemented 
     }
+
+
+
 }
+
+
+
+/*//// { "BTrueTYourHeart", "LoveIsForFools","MoneyMaker", "Enviromentalist", "EnviromentalistAnti","AnimalLover","AnimalLoverAnti",
+"Teetotasler","TeetotaslerAnti","FamilyPerson"  ,"SchoolIsCool","youthAreTheFuture","schoolIsDrool","LoverOfRisks"   ,"ProHiringFamily"
+            ,"SupportingComunities", "LandISWhereThehrtIS","CarrerAboveAll", "suchUncharactristicBehaviorOhMy","WeLiveForSpontaneity","AnAdventureWeSeek","NiaeveteIsFiction",
+        "FriendsAreTheJoyOFlife","ImmagretsWeGetTheJobDone","WeArewNothingIfWeAreNotReserved","AselfMadeShapeWeAspireToBe","Shapesarenothingifnotsocial","AntiFaviortisum",
+        "Loner", };/*/
 /*
  * 
  * 
@@ -172,3 +214,61 @@ ConvCharacterMoralFactors.Add("LandISWhereThehrtIS", 0);
 ConvCharacterMoralFactors.Add("CarrerAboveAll", 0);
 ConvCharacterMoralFactors.Add("FriendsAreTheJoyOFlife", 0);
 ConvCharacterMoralFactors.Add("Loner", 0);*/
+
+
+/* public void checkContradictionsForSurfaceValues(string s )
+    {
+
+        /*   switch (s)
+           {
+               case ("Enviromentalist"):
+                   if(k.Value == RatingVlaues.High)
+                   {
+                       ConvCharacterMoralFactors["EnviromentalistAnti"] = RatingVlaues.Low;
+                   }else
+                   {
+                       ConvCharacterMoralFactors["EnviromentalistAnti"] = RatingVlaues.High;
+                   } break;
+
+               case ("LoveIsForFools"):
+                   if (k.Value == RatingVlaues.High)
+                   {
+                       ConvCharacterMoralFactors["BTrueTYourHeart"] = RatingVlaues.Low;
+                   }
+                   else
+                   {
+                       ConvCharacterMoralFactors["BTrueTYourHeart"] = RatingVlaues.High;
+                   }break;
+               case ("AnimalLover"):
+                   if (k.Value == RatingVlaues.High)
+                   {
+                       ConvCharacterMoralFactors["AnimalLoverAnti"] = RatingVlaues.Low;
+                   }
+                   else
+                   {
+                       ConvCharacterMoralFactors["AnimalLoverAnti"] = RatingVlaues.High;
+                   } break;
+               case ("Teetotasler"):
+                   if (k.Value == RatingVlaues.High)
+                   {
+                       ConvCharacterMoralFactors["EnviromentalistAnti"] = RatingVlaues.Low;
+                   }
+                   else
+                   {
+                       ConvCharacterMoralFactors["EnviromentalistAnti"] = RatingVlaues.High;
+                   }break;
+               case ("SchoolIsCoolschoolIsDrool"):
+                   if (k.Value == RatingVlaues.High)
+                   {
+                       ConvCharacterMoralFactors["schoolIsDrool","EnviromentalistAnti","AnimalLoverAnti",LoveIsForFools] = RatingVlaues.Low;
+                   }
+                   else
+                   {
+                       ConvCharacterMoralFactors["schoolIsDrool"] = RatingVlaues.High;
+                   } break;*/
+
+        // } */
+    
+    /*  Debug.Log("check these values out : EnviromentalistAnti " + ConvCharacterMoralFactors["EnviromentalistAnti"] + "and ebviromentalist" +
+          ConvCharacterMoralFactors["Enviromentalist"] + "school is cool followed by drool " + ConvCharacterMoralFactors["SchoolIsCool"] + ConvCharacterMoralFactors["schoolIsDrool"]);*/
+    

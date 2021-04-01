@@ -18,15 +18,16 @@ public class CharacterManager : MonoBehaviour
     //new thing here - check if it bugs itout~ 
     private void setUp() ///this is hard coded but perhaps make values random in other runs 
     {
-        characters.Add(new ConversationalCharacter("Tim", new ConversationalCharacter.RatingVlaues[] {
+      /*  characters.Add(new ConversationalCharacter("Tim", new ConversationalCharacter.RatingVlaues[] {
             ConversationalCharacter.RatingVlaues.High,  ConversationalCharacter.RatingVlaues.Low,  ConversationalCharacter.RatingVlaues.High,
             ConversationalCharacter.RatingVlaues.High, ConversationalCharacter.RatingVlaues.Low, ConversationalCharacter.RatingVlaues.High,
             ConversationalCharacter.RatingVlaues.Low, ConversationalCharacter.RatingVlaues.High, ConversationalCharacter.RatingVlaues.High,
             ConversationalCharacter.RatingVlaues.Mid, ConversationalCharacter.RatingVlaues.High, ConversationalCharacter.RatingVlaues.High,
             ConversationalCharacter.RatingVlaues.Low}, "FamilyPerson"));
-         
+         */
 
         characters.Add(new ConversationalCharacter("Tom"));
+        
 
     }
 
