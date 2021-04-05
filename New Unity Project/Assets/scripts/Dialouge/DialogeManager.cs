@@ -652,6 +652,21 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     {
         switch (key)
         {
+            case ("IsYoungAndPregnant"):
+                if(UnityEngine.Random.Range(0,6) >= 3)
+                {
+                    return "BTrueTYourHeart";
+                }else
+                {
+                    return "LoveIsForFools";
+                }
+            case ("MovesAlot"):
+                return "LandISWhereThehrtIS";
+            case ("SusMovments"):
+                return "NiaeveteIsFiction";
+            case ("selfMadeCube"):
+            case ("selfMadeCubeByDedication"):
+                return "AselfMadeShapeWeAspireToBe";
             case ("departed"):
                 return "LandISWhereThehrtIS";
 
@@ -672,6 +687,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                 return "FriendsAreTheJoyOFlife";
 
             case ("loner"):
+            case ("Loner"):
                 return "Loner";
 
             case ("IsWealthy"):
@@ -715,9 +731,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
             case ("worksWithFamily"):
             case ("hiredByAFamilymember"):
-            case ("MovesAlot"):
             case ("getsFiredAlot"):
-            case ("SusMovments"):
             case ("RetiredYoung"):
             case ("DiedBeforeRetired"):
             case ("DevorcedManyPeople"):
@@ -730,13 +744,13 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             case ("ButcherButRegretful"):
             case ("TooTrustingOfEnemies"):
             case ("ArtSeller"):
-            case ("selfMadeCubeByDedication"):
+          
             case ("likedToExperinceCulture"):
             case ("doesNotGiveToThoseInNeed"):
             case ("supportsImmigration"):
             case ("conventional"):
             case ("reserved"):
-            case ("selfMadeCube"):
+         //   case ("selfMadeCubeByDedication"):
 
                 return "TBD";
             default:
@@ -850,7 +864,9 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             case ("Enviromentalist"):
                 //Debug.Log("wooooooow "+ key);
                 return "You know what I want to talk about!" + character.fullName + "\'s job! \n I think they work as " + character.Lastoccupation;
-
+            case ("selfMadeCube"):
+            case ("selfMadeCubeByDedication"):
+                return " rumor says " + character.fullName + "came from nothing, they actually managed to advance in their carreers by dedication alone";
 
             case ("riskTaker"):
             case ("LoverOfRisks"):
@@ -870,18 +886,26 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             case ("AnimalLover"):
                 return "You know what I want to talk about!" + character.fullName + "\'s job! \n I think they work as " + character.Lastoccupation +"in a farm";
 
+            case ("IsYoungAndPregnant"):
+               return "i heard that shape is raising a family and at such a young age ";
+                
+            case ("MovesAlot"):
+                return "apparently this shape never settles down, they sure moved alot ";
+            case ("SusMovments"):
+                return "shapes whisper that  " + character.fullName + " is quite odd";
+
             case ("notworkingandrich"):
             case ("adultbutnotworking"):
             case ("widowedbutnotgrieving"):
             case ("exploteative"):
 
 
+
+
             case ("graduate"):
             case ("worksWithFamily"):
             case ("hiredByAFamilymember"):
-            case ("MovesAlot"):
             case ("getsFiredAlot"):
-            case ("SusMovments"):
             case ("RetiredYoung"):
             case ("DiedBeforeRetired"):
             case ("DevorcedManyPeople"):
@@ -894,13 +918,12 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             case ("ButcherButRegretful"):
             case ("TooTrustingOfEnemies"):
             case ("ArtSeller"):
-            case ("selfMadeCubeByDedication"):
             case ("likedToExperinceCulture"):
             case ("doesNotGiveToThoseInNeed"):
             case ("supportsImmigration"):
             case ("conventional"):
             case ("reserved"):
-            case ("selfMadeCube"):
+          
                 return "NOTAUTHORED";
             default:
                 return "missed a tag SOMEWHERE!" + key + "was not authored";
@@ -982,11 +1005,21 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             case ("SupportingComunities"):
 
                 return "what did they work in again...";
+
+            case ("selfMadeCube"):
+            case ("selfMadeCubeByDedication"):
+                return ("they pulled themselves by their bootstraps");
+            case ("IsYoungAndPregnant"):
+                
+                    return "so young and raising a family ";
+             
+            case ("MovesAlot"):
+                return "they sure moved alot ";
+            case ("SusMovments"):
+                return "shapes talk about how odd the shape is... ";
             case ("worksWithFamily"):
             case ("hiredByAFamilymember"):
-            case ("MovesAlot"):
             case ("getsFiredAlot"):
-            case ("SusMovments"):
             case ("RetiredYoung"):
             case ("DiedBeforeRetired"):
             case ("DevorcedManyPeople"):
@@ -999,13 +1032,11 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             case ("ButcherButRegretful"):
             case ("TooTrustingOfEnemies"):
             case ("ArtSeller"):
-            case ("selfMadeCubeByDedication"):
             case ("likedToExperinceCulture"):
             case ("doesNotGiveToThoseInNeed"):
             case ("supportsImmigration"):
             case ("conventional"):
             case ("reserved"):
-            case ("selfMadeCube"):
                 return "TBD";
 
             default:
@@ -1020,6 +1051,11 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     {
         switch (key)
         {
+  
+            case ("IsYoungAndPregnant"):
+            case ("MovesAlot"):
+            case ("SusMovments"):
+                return "add some text here";
             case ("departed"):
             case "LandISWhereThehrtIS":
                 return "I heard they left town, I wonder if  that is true?";
@@ -1080,6 +1116,8 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             case ("hasalotofenemies"):
             case ("generalJobs"):
             case ("SupportingComunities"):
+            case ("selfMadeCube"):
+            case ("selfMadeCubeByDedication")://OVER HERE 
 
                 return "this case is not yet authored";
 

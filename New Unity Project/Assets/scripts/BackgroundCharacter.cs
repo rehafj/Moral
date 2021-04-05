@@ -107,22 +107,22 @@ public class BackgroundCharacter  :  MonoBehaviour
             checkIfAnIntconditionIsMet(jsn.backgroundcharacters[i].kids.Length, "familyPerson", character);
             checkIfAnIntconditionIsMet(jsn.backgroundcharacters[i].friendsId.Length, "socialLife", character);
             checkIfAnIntconditionIsMet(jsn.backgroundcharacters[i].enemiesId.Length > 1, "hasalotofenemies", character);
-            checkIfAnIntconditionIsMet(jsn.backgroundcharacters[i].isCollegeGraduate, "hasalotofenemies", character);
+            checkIfAnIntconditionIsMet(jsn.backgroundcharacters[i].isCollegeGraduate, "hasalotofenemies", character);//fix this 
             checkIfAnIntconditionIsMet(jsn.backgroundcharacters[i].widowed && (!jsn.backgroundcharacters[i].grieving), "widowedbutnotgrieving", character);
             checkIfAnIntconditionIsMet(jsn.backgroundcharacters[i].adult && (!jsn.backgroundcharacters[i].inWorkForce), "adultbutnotworking", character);
-            checkIfAnIntconditionIsMet(jsn.backgroundcharacters[i].isPregnant && (!jsn.backgroundcharacters[i].weddingRingOnFinger), "pregnantbutnotengaged", character);
             checkIfAnIntconditionIsMet(jsn.backgroundcharacters[i].neighborsID.Length > 0 && (jsn.backgroundcharacters[i].friendsId.Length >2), "loner", character);
             checkIfAnIntconditionIsMet(jsn.backgroundcharacters[i].money > 10, "IsWealthy", character);
-         /*   checkIfAnIntconditionIsMet(jsn.backgroundcharacters[i].age <= 17 && jsn.backgroundcharacters[i].isPregnant, "IsYoungAndPregnant", character);
-            checkIfAnIntconditionIsMet(jsn.backgroundcharacters[i].coworkersId.Intersect(jsn.backgroundcharacters[i].immediateFamilyId).Any(), "worksWithFamily", character);
-
-
             checkIfAnIntconditionIsMet(jsn.backgroundcharacters[i].movesEventId.Length > 1 && !jsn.backgroundcharacters[i].movesEventId.Contains(-1), "MovesAlot", character);
-            checkIfAnIntconditionIsMet(jsn.backgroundcharacters[i].layOffsEventId.Length > 1 && !jsn.backgroundcharacters[i].movesEventId.Contains(-1), "getsFiredAlot", character);
-            checkIfAnIntconditionIsMet(jsn.backgroundcharacters[i].age < 40 && jsn.backgroundcharacters[i].isRetired, "RetiredYoung", character);
-            checkIfAnIntconditionIsMet(jsn.backgroundcharacters[i].death != 1 && !jsn.backgroundcharacters[i].isRetired, "DiedBeforeRetired", character);
-            checkIfAnIntconditionIsMet(jsn.backgroundcharacters[i].divorcesEventId.Length >= 3, "DevorcedManyPeople", character);
-*/
+
+            /*  
+               checkIfAnIntconditionIsMet(jsn.backgroundcharacters[i].coworkersId.Intersect(jsn.backgroundcharacters[i].immediateFamilyId).Any(), "worksWithFamily", character);
+
+
+               checkIfAnIntconditionIsMet(jsn.backgroundcharacters[i].layOffsEventId.Length > 1 && !jsn.backgroundcharacters[i].movesEventId.Contains(-1), "getsFiredAlot", character);
+               checkIfAnIntconditionIsMet(jsn.backgroundcharacters[i].age < 40 && jsn.backgroundcharacters[i].isRetired, "RetiredYoung", character);
+               checkIfAnIntconditionIsMet(jsn.backgroundcharacters[i].death != 1 && !jsn.backgroundcharacters[i].isRetired, "DiedBeforeRetired", character);
+               checkIfAnIntconditionIsMet(jsn.backgroundcharacters[i].divorcesEventId.Length >= 3, "DevorcedManyPeople", character);
+   */
             for (int j = 0; j < jsn.backgroundcharacters.Count - 1; j++)
             {
 
@@ -157,7 +157,7 @@ public class BackgroundCharacter  :  MonoBehaviour
                   
 
 
-                    //checkIFadultery()//TODO
+                    
                 }
             }
             characters.Add(character);
@@ -211,7 +211,7 @@ public class BackgroundCharacter  :  MonoBehaviour
     }
     void flagInterestingCharactersWithNestedFlags()
     {
-/*        foreach (InterestingCharacters character in characters)
+        foreach (InterestingCharacters character in characters)
         {
             if (character.characterFlags["socialLife"] == false && character.characterFlags["MovesAlot"])
             {
@@ -224,7 +224,7 @@ public class BackgroundCharacter  :  MonoBehaviour
 
             }
 
-        }*/
+        }
 
     }
 
@@ -243,43 +243,45 @@ public class BackgroundCharacter  :  MonoBehaviour
                     checkIfAnIntconditionIsMet(character.characterFlags["IsWealthy"] &&
                         personalityOnFive.lowAgreeableness, "IsRichButNotGenrous", character);
 
-      /*              checkIfAnIntconditionIsMet(character.characterFlags["departed"] &&
-                          personalityOnFive.highEextroversion, "AdventureSeeker", character);
-
-                    checkIfAnIntconditionIsMet(personalityOnFive.lowNeuroticism &&
-                        personalityOnFive.highAgreeableness, "liklyToHelpTheHomeless", character);
-
-                    checkIfAnIntconditionIsMet(character.characterFlags["loner"] &&
-                     personalityOnFive.lowExtroversion, "isolated", character);
-
-                    checkIfAnIntconditionIsMet(character.characterFlags["butcherRole"] &&
-                    personalityOnFive.highAgreeableness, "ButcherButRegretful", character);
-
-                    checkIfAnIntconditionIsMet(character.characterFlags["flipflop"] &&
-                   personalityOnFive.highOpennes, "WantsArtAsJob", character);
-
-                    checkIfAnIntconditionIsMet(character.characterFlags["hasalotofenemies"] &&
-                                       personalityOnFive.highAgreeableness, "TooTrustingOfEnemies", character);
-
-                    checkIfAnIntconditionIsMet(character.characterFlags["WantsArtAsJob"] &&
-                   personalityOnFive.highOpennes && personalityOnFive.lowNeuroticism, "ArtSeller", character);
-
                     checkIfAnIntconditionIsMet(character.characterFlags["selfMadeCube"] && character.characterFlags["IsWealthy"] &&
-                   personalityOnFive.highConscientiousness, "selfMadeCubeByDedication", character);
+                 personalityOnFive.highConscientiousness, "selfMadeCubeByDedication", character);
 
-                    checkIfAnIntconditionIsMet(character.characterFlags["selfMadeCube"] && character.characterFlags["IsRichButNotGenrous"] &&
-                            personalityOnFive.highConscientiousness, "doesNotGiveToThoseInNeed", character); //this needs to stay here cz order of execution - need to refactor most of this :/
+                    /*              checkIfAnIntconditionIsMet(character.characterFlags["departed"] &&
+                                        personalityOnFive.highEextroversion, "AdventureSeeker", character);
 
-                    checkIfAnIntconditionIsMet(personalityOnFive.highOpennes && character.characterFlags["MovesAlot"]
-                    , "likedToExperinceCulture", character); //this needs to stay here cz order of execution - need to refactor most of this :/
+                                  checkIfAnIntconditionIsMet(personalityOnFive.lowNeuroticism &&
+                                      personalityOnFive.highAgreeableness, "liklyToHelpTheHomeless", character);
 
-                    checkIfAnIntconditionIsMet(personalityOnFive.highOpennes && personalityOnFive.highEextroversion &&
-                          personalityOnFive.highAgreeableness || character.characterFlags["likedToExperinceCulture"] && personalityOnFive.highAgreeableness, "supportsImmigration", character); //this needs to stay here cz order of execution - need to refactor most of this :/
+                                  checkIfAnIntconditionIsMet(character.characterFlags["loner"] &&
+                                   personalityOnFive.lowExtroversion, "isolated", character);
 
-                    checkIfAnIntconditionIsMet(personalityOnFive.lowOpenness, "conventional", character); //this needs to stay here cz order of execution - need to refactor most of this :/
-                    checkIfAnIntconditionIsMet(personalityOnFive.lowExtroversion, "reserved", character); //this needs to stay here cz order of execution - need to refactor most of this :/
+                                  checkIfAnIntconditionIsMet(character.characterFlags["butcherRole"] &&
+                                  personalityOnFive.highAgreeableness, "ButcherButRegretful", character);
 
-*/
+                                  checkIfAnIntconditionIsMet(character.characterFlags["flipflop"] &&
+                                 personalityOnFive.highOpennes, "WantsArtAsJob", character);
+
+                                  checkIfAnIntconditionIsMet(character.characterFlags["hasalotofenemies"] &&
+                                                     personalityOnFive.highAgreeableness, "TooTrustingOfEnemies", character);
+
+                                  checkIfAnIntconditionIsMet(character.characterFlags["WantsArtAsJob"] &&
+                                 personalityOnFive.highOpennes && personalityOnFive.lowNeuroticism, "ArtSeller", character);
+
+                              
+
+                                  checkIfAnIntconditionIsMet(character.characterFlags["selfMadeCube"] && character.characterFlags["IsRichButNotGenrous"] &&
+                                          personalityOnFive.highConscientiousness, "doesNotGiveToThoseInNeed", character); //this needs to stay here cz order of execution - need to refactor most of this :/
+
+                                  checkIfAnIntconditionIsMet(personalityOnFive.highOpennes && character.characterFlags["MovesAlot"]
+                                  , "likedToExperinceCulture", character); //this needs to stay here cz order of execution - need to refactor most of this :/
+
+                                  checkIfAnIntconditionIsMet(personalityOnFive.highOpennes && personalityOnFive.highEextroversion &&
+                                        personalityOnFive.highAgreeableness || character.characterFlags["likedToExperinceCulture"] && personalityOnFive.highAgreeableness, "supportsImmigration", character); //this needs to stay here cz order of execution - need to refactor most of this :/
+
+                                  checkIfAnIntconditionIsMet(personalityOnFive.lowOpenness, "conventional", character); //this needs to stay here cz order of execution - need to refactor most of this :/
+                                  checkIfAnIntconditionIsMet(personalityOnFive.lowExtroversion, "reserved", character); //this needs to stay here cz order of execution - need to refactor most of this :/
+
+              */
                 }
             }
 

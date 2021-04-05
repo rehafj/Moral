@@ -193,7 +193,7 @@
     }
 	}
 },  {
-	"schema": "lMoralBoundaries",
+	"schema": "highMoralBoundaries",
 	"Surfacevalues": {
 		"BTrueTYourHeart": {
 			"friendwithabestfriendsenemy": "text goes here ",
