@@ -7,7 +7,7 @@ public class ConversationalCharacter : MonoBehaviour
 
   
 {
-
+    //make these random as long as two contradicting pairs do not get put in the same list 
    public  List<string> contradictingValuesHigh = new List<string>
         {
             "Enviromentalist" ,"BTrueTYourHeart","AnimalLover","SchoolIsCool"

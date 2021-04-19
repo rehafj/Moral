@@ -1,864 +1,851 @@
 [{
-			"topic": "High_BTrueTYourHeart",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "You know, I do believe that shapes should not control their emotions when it comes to matters of the heart. consequences be damned ",
-				"agreementText": "'m glad you see it my way. I so admire that cube's guts to follow their heart.",
-				"disagreementtext": "Oh, you don't agree? how can you not?  ",
-				"moralFocusAgreement": "RIGHT! Follwing your heart is so important!",
-				"moralFocusDisagreement": ["You only live once and love is all that matters!", "Following your heart is the only way to find ture love.","Let's just agree to disagree."]
-			}
-		},
-		{
-			"topic": "High_LoveIsForFools",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Well, I think that shapes should never let their emotions cloud their judgement AND doing what's right is always better than doing what feels right. ",
-				"agreementText": "Yeah, it\'s good that you see it my way.",
-				"disagreementtext": "Waaait, You don/'t think I am right? ",
-				"moralFocusAgreement": "YEAH! Love is for suckers!",
-				"moralFocusDisagreement": ["Love is more than just want your heart wants and it's about responsbilities and duties.","Sometime what we want is not always the best for us.", "Well it's a shame that you let your emotions get the best of you."]
-			}
-		},
-		{
-			"topic": "High_MoneyMaker",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "A wealthy shape is a responsible and happy shape. AND the wealthier a shape is, the more resposonsible they are.   ",
-				"agreementText": "Yeah money rules! ",
-				"disagreementtext": "Oh, you don't think so? how can you not!  ",
-				"moralFocusAgreement": "Indeed. Money is key to a happy life!",
-				"moralFocusDisagreement": ["Without a job, without money, how can any shape call themself a responsible shape?", "Money bring stability and with that you can do and change anything you want!","You are simply too naive to see what really matters."]
-			}
-		},
-		{
-			"topic": "High_Enviromentalist",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "The enviroment protects and nurish us and it's our job to do the same in return. AND we must make every decision based on that principle! ",
-				"agreementText": "That's awesome you feel the same! ",
-				"disagreementtext": "You don't think so? Why?  ",
-				"moralFocusAgreement": "Mother nature is pleased to hear that.",
-				"moralFocusDisagreement": ["Without a healthy enviroment, how can we make sure future shapes can grow up happy and healthy?", "This is our home and we must do what's right before we can no longer call it a home!","You are making a huge mistake but I hope you will see it my way one day."]
-			}
-		},
-		{
-			"topic": "High_EnviromentalistAnti",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "It's our shape's given rights to shape the enviroment to benefit us. AND it means that we have to make tough choices to do what's best for the shapes.  ",
-				"agreementText": "Thanks for agreeing with me.",
-				"disagreementtext": "No? Why? ",
-				"moralFocusAgreement": "Great! I am glad to hear that you know what it means to make sacrificies.",
-				"moralFocusDisagreement": ["If older shapes didn't work so hard, we would not have the great society we have today.", "We all have to make decisions that are tough, but what it matters at the end of the day is the shapes and their job security.","You think in simplistic ways and you will learn one day."]
-			}
-		},
-		{
-			"topic": "High_AnimalLover",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Animals are our best friends, don't you agree? AND we must do what we can to ensure that we can coexist!  ",
-				"agreementText": "Thanks for agreeing with me! animals are wonderful creatures indeed and they deserve our respect :)  ",
-				"disagreementtext": "Hmm... why?  ",
-				"moralFocusAgreement": "They are so important to us, to the enviroment, and they deserve to be respected!",
-				"moralFocusDisagreement": ["Well, do you want to live in the world without animals? That's so lonely.", "The enviroment is so important to us and the great diversity of animals is a key indicator of that.","I am sad to see how cruel you are."]
-			}
-		},
-		{
-			"topic": "High_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		},
-		{
-			"topic": "High_AnimalLoverAnti",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "We need to eat animals to surivive. AND we are on the top of the food chain for a reason and it's our rights to do what's best for us. ",
-				"agreementText": "Yeah, you know how I feel.",
-				"disagreementtext": "why the *** not ?  ",
-				"moralFocusAgreement": "Yeah you are talking like a capable and reasonable shape!",
-				"moralFocusDisagreement": ["You are too weak to understand the natural orders.", "Our ancestors eat animals and they survived. Are you saying they did it wrong?","Your weakness will be your own downfall."]
-			}
-		},
-		{
-			"topic": "High_Teetotasler",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "You know, the best part of the day is to chill with a cold one. AND maybe some fine wine as well?",
-				"agreementText": "Yay! That's awesome. ",
-				"disagreementtext": "Why no? ",
-				"moralFocusAgreement": "GREAT! I shall buy you a drink some day.",
-				"moralFocusDisagreement": ["Why are you being a killjoy, it's just drinks.", "We all need to relax and this is the best way to do it.","You seem too tense, you should just a drink and chillax."]
-			}
-		},
-		{
-			"topic": "High_TeetotaslerAnti",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "I find drinking disgraceful and kinda sad. AND it's for shapes with no self control. ",
-				"agreementText": "I know you will agree. ",
-				"disagreementtext": "Tell me why you disagree then.   ",
-				"moralFocusAgreement": "Well, I can see that you are a reasonable and clear-headed shape. ",
-				"moralFocusDisagreement": ["That's sad. Drinking make your judgement so much worse.", "Why would any shape willingly intoxinate themselves.","I hope you will see it my way when you sober up."]
-			}
-		},
-		{
-			"topic": "High_FamilyPerson",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Don't you think that family is the most important thing? AND we must only do what brings joy and happiness to our family.  ",
-				"agreementText": "I love that we think the same! ",
-				"disagreementtext": "Oh... Why do you disagree? ",
-				"moralFocusAgreement": "YES! You get it! Family is truly important.",
-				"moralFocusDisagreement": ["Your family supports and nurtures you and the only thing you can do is to return that love.", "Without your family, you lose your core support system.","I think you might be too selfish to understand the value of family."]
-			}
-		},
-		{
-			"topic": "High_SchoolIsCool",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Don't you agree that education is the key to a happy life? AND one without a proper education cannot call themself a responsible shape.  ",
-				"agreementText": "That's awesome! ",
-				"disagreementtext": "Oh no?  ",
-				"moralFocusAgreement": "Yes education is so important!",
-				"moralFocusDisagreement": ["Well, without a proper eduacation, one cannot learn the importance of discipline.", "The system rewards those who work hard and study hard.","You cannot cheat the system and you learn that in school. Sorry you cannot see it my way."]
-			}
-		},
-		{
-			"topic": "High_schoolIsDrool",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "You learn so much from life than in school. AND school is nothing but a money making industry.  ",
-				"agreementText": "That's cool.",
-				"disagreementtext": "Whoa. Why no?  ",
-				"moralFocusAgreement": "Yes education is overratted!",
-				"moralFocusDisagreement": ["Most things you learn in school are useless in real life.", "You can learn about discipline and other things from just living your life and meeting people.","I think you might have placed too much trust in the institution man."]
-			}
-		},
-		{
-			"topic": "High_SupportingComunities",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		},
-		{
-			"topic": "High_LoverOfRisks",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		},
-		{
-			"topic": "High_LandISWhereThehrtIS",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		},
-		{
-			"topic": "High_CarrerAboveAll",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		},
-		{
-			"topic": "High_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		},
-		{
-			"topic": "High_Loner",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		},
-		{
-			"topic": "High_youthAreTheFuture",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		},
-		{
-			"topic": "High_ProHiringFamilye",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		},
-		{
-			"topic": "High_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		},
-		{
-			"topic": "High_suchUncharactristicBehaviorOhMy",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		},
-		{
-			"topic": "High_WeLiveForSpontaneity",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		},
-		{
-			"topic": "High_AnAdventureWeSeek",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		},
-		{
-			"topic": "High_NiaeveteIsFiction",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		},
-		{
-			"topic": "High_ImmagretsWeGetTheJobDone",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		},
-		{
-			"topic": "High_WeArewNothingIfWeAreNotReserved",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		},
-		{
-			"topic": "High_AselfMadeShapeWeAspireToBe",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		},
-		{
-			"topic": "High_Shapesarenothingifnotsocial",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		},
-		{
-			"topic": "High_AntiFaviortisum",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		},
-		{
-			"topic": "Mid_AntiFaviortisum",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		},
-		{
-			"topic": "Mid_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		}, {
-			"topic": "Mid_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		}, {
-			"topic": "Mid_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		}, {
-			"topic": "Mid_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		}, {
-			"topic": "Mid_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		}, {
-			"topic": "Mid_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		}, {
-			"topic": "Mid_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		}, {
-			"topic": "Mid_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		}, {
-			"topic": "Mid_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		}, {
-			"topic": "Mid_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		}, {
-			"topic": "Mid_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		}, {
-			"topic": "Mid_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		}, {
-			"topic": "Mid_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		}, {
-			"topic": "Mid_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		}, {
-			"topic": "Mid_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		}, {
-			"topic": "Mid_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		}, {
-			"topic": "Mid_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		}, {
-			"topic": "Mid_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		}, {
-			"topic": "Mid_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		}, {
-			"topic": "Mid_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		}, {
-			"topic": "Mid_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		}, {
-			"topic": "Mid_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		}, {
-			"topic": "Mid_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		}, {
-			"topic": "Mid_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		}, {
-			"topic": "Mid_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		}, {
-			"topic": "Mid_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		}, {
-			"topic": "Mid_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		}, {
-			"topic": "Mid_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		},
-		{
-			"topic": "Low_BTrueTYourHeart",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		},
-		{
-			"topic": "Low_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		}, {
-			"topic": "Low_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		},
-		{
-			"topic": "Low_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		},
-		{
-			"topic": "Low_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		},
-		{
-			"topic": "Low_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		},
-		{
-			"topic": "Low_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		},
-		{
-			"topic": "Low_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		},
-		{
-			"topic": "Low_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		},
-		{
-			"topic": "Low_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		},
-		{
-			"topic": "Low_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		},
-		{
-			"topic": "Low_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		},
-		{
-			"topic": "Low_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		},
-		{
-			"topic": "Low_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		},
-		{
-			"topic": "Low_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		},
-		{
-			"topic": "Low_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		},
-		{
-			"topic": "Low_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		},
-		{
-			"topic": "Low_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		},
-		{
-			"topic": "Low_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		},
-		{
-			"topic": "Low_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		},
-		{
-			"topic": "Low_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		},
-		{
-			"topic": "Low_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		},
-		{
-			"topic": "Low_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		},
-		{
-			"topic": "Low_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		},
-		{
-			"topic": "Low_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		},
-		{
-			"topic": "Low_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		},
-		{
-			"topic": "Low_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		},
-		{
-			"topic": "Low_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
-		},
-		{
-			"topic": "Low_FriendsAreTheJoyOFlife",
-			"NarrativeElements": {
-				"surfaceOpinionOnTopic": "Honestly, Maintaining a friendship does not matter to me.  ",
-				"agreementText": "Seriously, what's the point of having a friend if the relationship will die at some point. Friendships are pointless. ",
-				"disagreementtext": "I'm not too fond of that cube using friendships as a motto for life. There are more important things you know.  ",
-				"moralFocusAgreement": "",
-				"moralFocusDisagreement": ["somestring1", "somestring2"]
-			}
+		"topic": "High_BTrueTYourHeart",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "You know, I do believe that shapes should not control their emotions when it comes to matters of the heart. consequences be damned. AND shapes should live to love!!",
+			"agreementText": "I'm glad you see it my way. I so admire shapes/’ guts to follow their heart.",
+			"disagreementtext": "I'm glad you see it my way. I so admire shapes/’ guts to follow their heart.",
+			"moralFocusAgreement": "Oh, you don/'t agree?",
+			"moralFocusDisagreement": ["RIGHT! Following your heart is so important!"]
 		}
-
-	]
+	},
+	{
+		"topic": "Mid_BTrueTYourHeart",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "You know, I do believe that shapes should not control their emotions when it comes to matters of the heart. consequences be damned.",
+			"agreementText": "I'm glad you see it my way.",
+			"disagreementtext": "I'm glad you see it my way.",
+			"moralFocusAgreement": "Oh, you don/'t agree?",
+			"moralFocusDisagreement": ["RIGHT! Following your heart is so important!"]
+		}
+	},
+	{
+		"topic": "Low_BTrueTYourHeart",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "You know, I do believe that shapes should not control their emotions when it comes to matters of the heart. . BUT life is complicated, so sometimes you have to make compromises.",
+			"agreementText": "I'm glad you see it my way.",
+			"disagreementtext": "I'm glad you see it my way.",
+			"moralFocusAgreement": "Oh, you don/'t agree?",
+			"moralFocusDisagreement": []
+		}
+	},
+	{
+		"topic": "High_LoveIsForFools",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "Well, I think that shapes should never let their emotions cloud their judgement. AND doing what/'s right is always better than doing what feels right.",
+			"agreementText": "Yeah, it/'s good that you see it my way. Love isn/'t everything!",
+			"disagreementtext": "Yeah, it/'s good that you see it my way. Love isn/'t everything!",
+			"moralFocusAgreement": "You are joking! Love is why we are alive!",
+			"moralFocusDisagreement": ["YEAH! Love is for suckers!"]
+		}
+	},
+	{
+		"topic": "Mid_LoveIsForFools",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "Well, I think that shapes should never let their emotions cloud their judgement.",
+			"agreementText": "Yeah, it/'s good that you see it my way.",
+			"disagreementtext": "Yeah, it/'s good that you see it my way.",
+			"moralFocusAgreement": "You don/'t think I am right?",
+			"moralFocusDisagreement": ["YEAH! Love is for suckers!"]
+		}
+	},
+	{
+		"topic": "Low_LoveIsForFools",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "Well, I think that shapes should never let their emotions cloud their judgement. BUT sometimes the heart wants what the heart wants.",
+			"agreementText": "I get that I guess.",
+			"disagreementtext": "I get that I guess.",
+			"moralFocusAgreement": "You don/'t think I am right?",
+			"moralFocusDisagreement": []
+		}
+	},
+	{
+		"topic": "High_MoneyMaker",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "A wealthy shape is a responsible and happy shape. AND the wealthier a shape is, the more responsible they are.",
+			"agreementText": "You get it! Money rules!",
+			"disagreementtext": "You get it! Money rules!",
+			"moralFocusAgreement": "No way! You don/'t see the power of money?!",
+			"moralFocusDisagreement": ["Indeed. Money is key to a happy life!"]
+		}
+	},
+	{
+		"topic": "Mid_MoneyMaker",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "A wealthy shape is a responsible and happy shape.",
+			"agreementText": "Yeah money rules!",
+			"disagreementtext": "Yeah money rules!",
+			"moralFocusAgreement": "Oh, you don/'t think so?",
+			"moralFocusDisagreement": ["Indeed. Money is key to a happy life!"]
+		}
+	},
+	{
+		"topic": "Low_MoneyMaker",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "A wealthy shape is a responsible and happy shape. BUT not all shapes can make it and every shape is trying their best.",
+			"agreementText": "Yeah money rules!",
+			"disagreementtext": "Yeah money rules!",
+			"moralFocusAgreement": "Oh, you don/'t think so?",
+			"moralFocusDisagreement": []
+		}
+	},
+	{
+		"topic": "High_Enviromentalist",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "The environment protects and nourish us and it/'s our job to do the same in return. AND we must make every decision based on that principle!",
+			"agreementText": "The enviroment is so so important! That/'s awesome you feel the same!",
+			"disagreementtext": "The enviroment is so so important! That/'s awesome you feel the same!",
+			"moralFocusAgreement": "You don/'t think so? Why is that?!",
+			"moralFocusDisagreement": ["Mother nature is pleased to hear that."]
+		}
+	},
+	{
+		"topic": "Mid_Enviromentalist",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "The environment protects and nourish us and it/'s our job to do the same in return.",
+			"agreementText": "That/'s awesome you feel the same!",
+			"disagreementtext": "That/'s awesome you feel the same!",
+			"moralFocusAgreement": "You don/'t think so? Why?",
+			"moralFocusDisagreement": ["Mother nature is pleased to hear that."]
+		}
+	},
+	{
+		"topic": "Low_Enviromentalist",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "The environment protects and nourish us and it/'s our job to do the same in return. BUT you can/'t always do what/'s absolutely right for the environment.",
+			"agreementText": "That/'s great.",
+			"disagreementtext": "That/'s great.",
+			"moralFocusAgreement": "You don/'t think so? Why?",
+			"moralFocusDisagreement": []
+		}
+	},
+	{
+		"topic": "High_EnviromentalistAnti",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "It/'s our shape/'s given rights to shape the environment to benefit us. AND it means that we have to make tough choices to do what/'s best for the shapes.",
+			"agreementText": "You seem very reasonable! I am glad you can see the practical side of things.",
+			"disagreementtext": "You seem very reasonable! I am glad you can see the practical side of things.",
+			"moralFocusAgreement": "How could you buy into those enviromentalist agendas!",
+			"moralFocusDisagreement": ["Great! I am glad to hear that you know what it means to make sacrifices."]
+		}
+	},
+	{
+		"topic": "Mid_EnviromentalistAnti",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "It/'s our shape/'s given rights to shape the environment to benefit us.",
+			"agreementText": "Thanks for agreeing with me.",
+			"disagreementtext": "Thanks for agreeing with me.",
+			"moralFocusAgreement": "No? Why?",
+			"moralFocusDisagreement": ["Great! I am glad to hear that you know what it means to make sacrifices."]
+		}
+	},
+	{
+		"topic": "Low_EnviromentalistAnti",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "It/'s our shape/'s given rights to shape the environment to benefit us. BUT a sustainable environment is also important.",
+			"agreementText": "Thanks for agreeing with me.",
+			"disagreementtext": "Thanks for agreeing with me.",
+			"moralFocusAgreement": "No? Why?",
+			"moralFocusDisagreement": []
+		}
+	},
+	{
+		"topic": "High_AnimalLover",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "Animals are our best friends, don/'t you agree? AND we must do what we can to ensure that we can coexist!",
+			"agreementText": "Thanks for agreeing with me!, animals are wonderful creatures indeed and they deserve our respect.",
+			"disagreementtext": "Thanks for agreeing with me!, animals are wonderful creatures indeed and they deserve our respect.",
+			"moralFocusAgreement": "How could you say that?! ",
+			"moralFocusDisagreement": ["They are so important to us, to the environment, and they deserve to be respected!"]
+		}
+	},
+	{
+		"topic": "Mid_AnimalLover",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "Animals are our best friends, don/'t you agree?",
+			"agreementText": "Thanks for agreeing with me!",
+			"disagreementtext": "Thanks for agreeing with me!",
+			"moralFocusAgreement": "Hmm... why?",
+			"moralFocusDisagreement": ["They are so important to us, to the environment, and they deserve to be respected!"]
+		}
+	},
+	{
+		"topic": "High_AnimalLoverAnti",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "We need to eat animals to survive. AND we are on the top of the food chain for a reason and it/'s our right to do what/'s best for us.",
+			"agreementText": "No doubt! You respect the natural order.",
+			"disagreementtext": "No doubt! You respect the natural order.",
+			"moralFocusAgreement": "How could you say something like that?! ",
+			"moralFocusDisagreement": ["Yeah you are talking like a capable and reasonable shape!"]
+		}
+	},
+	{
+		"topic": "Mid_AnimalLoverAnti",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "We need to eat animals to survive.",
+			"agreementText": "Yeah, you know how I feel.",
+			"disagreementtext": "Yeah, you know how I feel.",
+			"moralFocusAgreement": "Why not?",
+			"moralFocusDisagreement": ["Yeah you are talking like a capable and reasonable shape!"]
+		}
+	},
+	{
+		"topic": "High_Teetotasler",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "You know, the best part of the day is to chill with a cold one. AND maybe some fine wine as well?",
+			"agreementText": "Yay! That/'s awesome. I love my booze.",
+			"disagreementtext": "Yay! That/'s awesome. I love my booze.",
+			"moralFocusAgreement": "BOOOO. You are a bummber.",
+			"moralFocusDisagreement": ["GREAT! I shall buy you a drink some day."]
+		}
+	},
+	{
+		"topic": "Mid_Teetotasler",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "You know, the best part of the day is to chill with a cold one.",
+			"agreementText": "Yay! That/'s awesome.",
+			"disagreementtext": "Yay! That/'s awesome.",
+			"moralFocusAgreement": "Why no?",
+			"moralFocusDisagreement": ["GREAT! I shall buy you a drink some day."]
+		}
+	},
+	{
+		"topic": "Low_Teetotasler",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "You know, the best part of the day is to chill with a cold one. But you gotta drink responsibly.",
+			"agreementText": "That's neat.",
+			"disagreementtext": "That's neat.",
+			"moralFocusAgreement": "Why no?",
+			"moralFocusDisagreement": []
+		}
+	},
+	{
+		"topic": "High_TeetotaslerAnti",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "I find drinking disgraceful and kinda sad. AND it/'s for shapes with no self control.",
+			"agreementText": "I just know you would agree. Such a logical and clear-headed mind you have!",
+			"disagreementtext": "I just know you would agree. Such a logical and clear-headed mind you have!",
+			"moralFocusAgreement": "That's sad. I don/'t see what you see.",
+			"moralFocusDisagreement": ["Well, I can see that you are a reasonable and clear-headed shape."]
+		}
+	},
+	{
+		"topic": "Mid_TeetotaslerAnti",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "I find drinking disgraceful and kinda sad.",
+			"agreementText": "I know you will agree.",
+			"disagreementtext": "I know you will agree.",
+			"moralFocusAgreement": "Tell me why you disagree then.",
+			"moralFocusDisagreement": ["Well, I can see that you are a reasonable and clear-headed shape."]
+		}
+	},
+	{
+		"topic": "Low_TeetotaslerAnti",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "I find drinking disgraceful and kinda sad. BUT it can be fun to drink with friends once a while.",
+			"agreementText": "I know you will agree.",
+			"disagreementtext": "I know you will agree.",
+			"moralFocusAgreement": "Tell me why you disagree then.",
+			"moralFocusDisagreement": []
+		}
+	},
+	{
+		"topic": "High_FamilyPerson",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "Don/'t you think that family is the most important thing? AND we must only do what brings joy and happiness to our family.",
+			"agreementText": "Family is everything to me. I just love that we think the same!",
+			"disagreementtext": "Family is everything to me. I just love that we think the same!",
+			"moralFocusAgreement": "WHAT?! Why do you disagree?",
+			"moralFocusDisagreement": ["YES! You get it! Family is truly important."]
+		}
+	},
+	{
+		"topic": "Mid_FamilyPerson",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "Don/'t you think that family is the most important thing?",
+			"agreementText": "I love that we think the same!",
+			"disagreementtext": "I love that we think the same!",
+			"moralFocusAgreement": "Oh... Why do you disagree?",
+			"moralFocusDisagreement": ["YES! You get it! Family is truly important."]
+		}
+	},
+	{
+		"topic": "Low_FamilyPerson",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "Don/'t you think that family is the most important thing? BUT a shape gotta be a bit selfish one a while.",
+			"agreementText": "That's a nice thought.",
+			"disagreementtext": "That's a nice thought.",
+			"moralFocusAgreement": "Oh... Why do you disagree?",
+			"moralFocusDisagreement": []
+		}
+	},
+	{
+		"topic": "High_SchoolIsCool",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "Don/'t you agree that education is the key to a happy life? AND one without a proper education cannot call themself a responsible shape.",
+			"agreementText": "That/'s awesome! Education is everything.",
+			"disagreementtext": "That/'s awesome! Education is everything.",
+			"moralFocusAgreement": "What?! How could you say something like that about the most important part of any shape/'s upbringing.",
+			"moralFocusDisagreement": ["Yes education is so important!"]
+		}
+	},
+	{
+		"topic": "Mid_SchoolIsCool",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "Don/'t you agree that education is the key to a happy life?",
+			"agreementText": "That/'s awesome!",
+			"disagreementtext": "That/'s awesome!",
+			"moralFocusAgreement": "Oh no?",
+			"moralFocusDisagreement": ["Yes education is so important!"]
+		}
+	},
+	{
+		"topic": "Low_SchoolIsCool",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "Don/'t you agree that education is the key to a happy life? BUT I guess you learn things in life outside the classroom as well.",
+			"agreementText": "That/'s cool. I can see that.",
+			"disagreementtext": "That/'s cool. I can see that.",
+			"moralFocusAgreement": "Oh no?",
+			"moralFocusDisagreement": []
+		}
+	},
+	{
+		"topic": "High_schoolIsDrool",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "You learn so much from life than in school. AND school is nothing but a money making industry.",
+			"agreementText": "That/'s amazing! You get how I feel.",
+			"disagreementtext": "That/'s amazing! You get how I feel.",
+			"moralFocusAgreement": "Whoa! You put too trust into the system.",
+			"moralFocusDisagreement": ["Yes education is overrated!"]
+		}
+	},
+	{
+		"topic": "Mid_schoolIsDrool",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "You learn so much from life than in school.",
+			"agreementText": "That/'s cool.",
+			"disagreementtext": "That/'s cool.",
+			"moralFocusAgreement": "Whoa. Why no?",
+			"moralFocusDisagreement": ["Yes education is overrated!"]
+		}
+	},
+	{
+		"topic": "Low_schoolIsDrool",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "You learn so much from life than in school. BUT I guess school does provide structures for people to learn things faster.",
+			"agreementText": "That/'s cool.",
+			"disagreementtext": "That/'s cool.",
+			"moralFocusAgreement": "Whoa. Why no?",
+			"moralFocusDisagreement": []
+		}
+	},
+	{
+		"topic": "High_SupportingComunities",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "Don/'t you agree that contributing to your community is how you find a sense of belonging and security? AND those who protect and serve the community are to be respected.",
+			"agreementText": "YES! I am so happy to hear that!",
+			"disagreementtext": "YES! I am so happy to hear that!",
+			"moralFocusAgreement": "WHAT?! Why don/'t you agree?",
+			"moralFocusDisagreement": ["Yeah! You know the value of the community! The community has your back."]
+		}
+	},
+	{
+		"topic": "Mid_SupportingComunities",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "Don/'t you agree that contributing to your community is how you find a sense of belonging and security?",
+			"agreementText": "I am so happy to hear that!",
+			"disagreementtext": "I am so happy to hear that!",
+			"moralFocusAgreement": "Oh... okay. Why don/'t you agree?",
+			"moralFocusDisagreement": ["Yeah! You know the value of the community! The community has your back."]
+		}
+	},
+	{
+		"topic": "Low_SupportingComunities",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "Don/'t you agree that contributing to your community is how you find a sense of belonging and security? BUT sometimes we have to do what/'s best for us.",
+			"agreementText": "I get that.",
+			"disagreementtext": "I get that.",
+			"moralFocusAgreement": "Oh... okay. Why don/'t you agree?",
+			"moralFocusDisagreement": []
+		}
+	},
+	{
+		"topic": "High_LoverOfRisks",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "You only live once so you gotta make it count! Everything exciting comes with a little risk. AND the higher the danger the bigger the reward.",
+			"agreementText": "Heck ya! A little risk never hurts!",
+			"disagreementtext": "Heck ya! A little risk never hurts!",
+			"moralFocusAgreement": "Boooo! Don/'t be a coward!",
+			"moralFocusDisagreement": ["YAH! Take some risk and live your life to the fullest!"]
+		}
+	},
+	{
+		"topic": "Mid_LoverOfRisks",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "You only live once so you gotta make it count! Everything exciting comes with a little risk.",
+			"agreementText": "Heck ya!",
+			"disagreementtext": "Heck ya!",
+			"moralFocusAgreement": "Boooo why not??",
+			"moralFocusDisagreement": ["YAH! Take some risk and live your life to the fullest!"]
+		}
+	},
+	{
+		"topic": "Low_LoverOfRisks",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "You only live once so you gotta make it count! Everything exciting comes with a little risk. BUT I have my limits and I also find happiness in ordinary things.",
+			"agreementText": "Yup. You know it.",
+			"disagreementtext": "Yup. You know it.",
+			"moralFocusAgreement": "No? Why?",
+			"moralFocusDisagreement": []
+		}
+	},
+	{
+		"topic": "High_LandISWhereThehrtIS",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "I don/'t understand shapes who move away and abandon their roots. AND people should cherish what they have instead of dreaming about what/'s outside.",
+			"agreementText": "RIGHT?! You know what I mean.",
+			"disagreementtext": "RIGHT?! You know what I mean.",
+			"moralFocusAgreement": "Oh? Why not?",
+			"moralFocusDisagreement": ["I am glad you understand how important your roots are."]
+		}
+	},
+	{
+		"topic": "Mid_LandISWhereThehrtIS",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "I don/'t understand shapes who move away and abandon their roots.",
+			"agreementText": "Yes. You know what I mean.",
+			"disagreementtext": "Yes. You know what I mean.",
+			"moralFocusAgreement": "Oh? Why not?",
+			"moralFocusDisagreement": ["I am glad you understand how important your roots are."]
+		}
+	},
+	{
+		"topic": "Low_LandISWhereThehrtIS",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "I don/'t understand shapes who move away and abandon their roots. BUT I know sometimes shapes leave because they want something different.",
+			"agreementText": "Yes. You know what I mean.",
+			"disagreementtext": "Yes. You know what I mean.",
+			"moralFocusAgreement": "Oh? Why not?",
+			"moralFocusDisagreement": []
+		}
+	},
+	{
+		"topic": "High_CarrerAboveAll",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "Work hard, live hard, am I right? AND your worth comes from your hard work,",
+			"agreementText": "Right?! You know how important our job is.",
+			"disagreementtext": "Right?! You know how important our job is.",
+			"moralFocusAgreement": "That makes no sense at all.",
+			"moralFocusDisagreement": ["It/'s always nice to meet someone who also sees the value of hard work!"]
+		}
+	},
+	{
+		"topic": "Mid_CarrerAboveAll",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "Work hard, live hard, am I right?",
+			"agreementText": "Right?!",
+			"disagreementtext": "Right?!",
+			"moralFocusAgreement": "Hmmm... okay... but why?",
+			"moralFocusDisagreement": ["It/'s always nice to meet someone who also sees the value of hard work!"]
+		}
+	},
+	{
+		"topic": "Low_CarrerAboveAll",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "Work hard, live hard, am I right? BUT I guess you need to let loose once a while.",
+			"agreementText": "Good for you.",
+			"disagreementtext": "Good for you.",
+			"moralFocusAgreement": "Hmmm... okay...",
+			"moralFocusDisagreement": []
+		}
+	},
+	{
+		"topic": "High_FriendsAreTheJoyOFlife",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "Don/'t you think life is really about the friends you made along the way? AND the more the merrier! My friends are my treasure.",
+			"agreementText": "Yes! Friendship!!!",
+			"disagreementtext": "Yes! Friendship!!!",
+			"moralFocusAgreement": "No? How could you say that!",
+			"moralFocusDisagreement": ["Friendship is so important because you choose your friends!"]
+		}
+	},
+	{
+		"topic": "Mid_FriendsAreTheJoyOFlife",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "Don/'t you think life is really about the friends you made along the way?",
+			"agreementText": "Yes! Friendship!",
+			"disagreementtext": "Yes! Friendship!",
+			"moralFocusAgreement": "No? Why not?",
+			"moralFocusDisagreement": ["Friendship is so important because you choose your friends!"]
+		}
+	},
+	{
+		"topic": "Low_FriendsAreTheJoyOFlife",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "Don/'t you think life is really about the friends you made along the way? BUT you can/'t let friendship define who you are.",
+			"agreementText": "Neato.",
+			"disagreementtext": "Neato.",
+			"moralFocusAgreement": "No? Why not?",
+			"moralFocusDisagreement": []
+		}
+	},
+	{
+		"topic": "High_Loner",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "I find bliss in my peace and quiet. AND I don/'t understand shapes who can/'t be alone.",
+			"agreementText": "It/'s great that you see it my way. Alone time is great!",
+			"disagreementtext": "It/'s great that you see it my way. Alone time is great!",
+			"moralFocusAgreement": "Really?! You don/'t think so?",
+			"moralFocusDisagreement": ["Learning to be alone is learning to love yourself."]
+		}
+	},
+	{
+		"topic": "Mid_Loner",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "I find bliss in my peace and quiet.",
+			"agreementText": "It/'s great that you see it my way.",
+			"disagreementtext": "It/'s great that you see it my way.",
+			"moralFocusAgreement": "Really? You don/'t think so?",
+			"moralFocusDisagreement": ["Learning to be alone is learning to love yourself."]
+		}
+	},
+	{
+		"topic": "Low_Loner",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "I find bliss in my peace and quiet. But I need to socialize once in a while haha.",
+			"agreementText": "It/'s great that you see it my way.",
+			"disagreementtext": "It/'s great that you see it my way.",
+			"moralFocusAgreement": "Really? You don/'t think so?",
+			"moralFocusDisagreement": []
+		}
+	},
+	{
+		"topic": "High_youthAreTheFuture",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "You know, young shapes these days have the best ideas. AND I believe they can make a real difference.",
+			"agreementText": "Am I right? Thanks for agreeing with me.",
+			"disagreementtext": "Am I right? Thanks for agreeing with me.",
+			"moralFocusAgreement": "You don/'t think so? Why is that?",
+			"moralFocusDisagreement": ["Youth are the future! Haha."]
+		}
+	},
+	{
+		"topic": "Mid_youthAreTheFuture",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "You know, young shapes these days have the best ideas.",
+			"agreementText": "Am I right? Thanks for agreeing with me.",
+			"disagreementtext": "Am I right? Thanks for agreeing with me.",
+			"moralFocusAgreement": "You don/'t think so? Why is that?",
+			"moralFocusDisagreement": ["Youth are the future! Haha."]
+		}
+	},
+	{
+		"topic": "Low_youthAreTheFuture",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "You know, young shapes these days have the best ideas. BUT they still need more life experience to actualize those ideas.",
+			"agreementText": "Yup, I think so too.",
+			"disagreementtext": "Yup, I think so too.",
+			"moralFocusAgreement": "You don/'t think so? Why is that?",
+			"moralFocusDisagreement": []
+		}
+	},
+	{
+		"topic": "High_ProHiringFamily",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "You know, you can only trust your blood to know what/'s best for the family business. AND that/'s how you build and keep a family business.",
+			"agreementText": "That/'s right! I am glad you see it that way.",
+			"disagreementtext": "That/'s right! I am glad you see it that way.",
+			"moralFocusAgreement": "You think trust blood is a bad idea? How could you think that!",
+			"moralFocusDisagreement": ["Yeah! Nepotism is really not that bad, haha."]
+		}
+	},
+	{
+		"topic": "Mid_ProHiringFamily",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "You know, you can only trust your blood to know what/'s best for the family business.",
+			"agreementText": "That/'s right! I am glad you see it that way.",
+			"disagreementtext": "That/'s right! I am glad you see it that way.",
+			"moralFocusAgreement": "You think trust blood is a bad idea? Why?",
+			"moralFocusDisagreement": ["Yeah! Nepotism is really not that bad, haha."]
+		}
+	},
+	{
+		"topic": "Low_ProHiringFamily",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "You know, you can only trust your blood to know what/'s best for the family business. BUT I guess there is value in outside perspective.",
+			"agreementText": "That/'s right.",
+			"disagreementtext": "That/'s right.",
+			"moralFocusAgreement": "No? okay I guess.",
+			"moralFocusDisagreement": []
+		}
+	},
+	{
+		"topic": "High_suchUncharactristicBehaviorOhMy",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "I find shapes who want to stand out to be distasteful. AND I think they do it for the attention. How sad.",
+			"agreementText": "You know what/'s right and wrong.",
+			"disagreementtext": "You know what/'s right and wrong.",
+			"moralFocusAgreement": "Oh no? I am sad to hear that.",
+			"moralFocusDisagreement": ["Yeah shapes who want to be rebels are just sad."]
+		}
+	},
+	{
+		"topic": "Mid_suchUncharactristicBehaviorOhMy",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "I find shapes who want to stand out to be distasteful.",
+			"agreementText": "Right? You know how I feel.",
+			"disagreementtext": "Right? You know how I feel.",
+			"moralFocusAgreement": "Oh no? That/'s interesting...",
+			"moralFocusDisagreement": ["Yeah shapes who want to be rebels are just sad."]
+		}
+	},
+	{
+		"topic": "Low_suchUncharactristicBehaviorOhMy",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "I find shapes who want to stand out to be distasteful. BUT I guess we all need to find a way to express ourselves.",
+			"agreementText": "Right? You know how I feel.",
+			"disagreementtext": "Right? You know how I feel.",
+			"moralFocusAgreement": "Oh no? That/'s interesting...",
+			"moralFocusDisagreement": []
+		}
+	},
+	{
+		"topic": "High_WeLiveForSpontaneity",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "Don/'t you see life is just a collection of great stories? So say yes to life! AND you can/'t say you truly lived if you never did something spontaneous!",
+			"agreementText": "Right on! Say yes to life!",
+			"disagreementtext": "Right on! Say yes to life!",
+			"moralFocusAgreement": "Oh no? Why is that?",
+			"moralFocusDisagreement": ["Really awesome my friend! Seize the moments!"]
+		}
+	},
+	{
+		"topic": "Mid_WeLiveForSpontaneity",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "Don/'t you see life is just a collection of great stories? So say yes to life!",
+			"agreementText": "Right on! Say yes to life!",
+			"disagreementtext": "Right on! Say yes to life!",
+			"moralFocusAgreement": "Oh no? Why is that?",
+			"moralFocusDisagreement": ["Really awesome my friend! Seize the moments!"]
+		}
+	},
+	{
+		"topic": "Low_WeLiveForSpontaneity",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "Don/'t you see life is just a collection of great stories? So say yes to life! BUT sometimes a little planning can help you get the most out of the experience.",
+			"agreementText": "That/'s nice.",
+			"disagreementtext": "That/'s nice.",
+			"moralFocusAgreement": "Oh no? Why is that?",
+			"moralFocusDisagreement": []
+		}
+	},
+	{
+		"topic": "High_AnAdventureWeSeek",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "I believe if happiness is the goal and it should be, then adventures should be a priority! AND you must take any chance you can get!",
+			"agreementText": "Yes! Adventure awaits!",
+			"disagreementtext": "Yes! Adventure awaits!",
+			"moralFocusAgreement": "Aww... that/'s a bummer.",
+			"moralFocusDisagreement": ["Fill your life with adventures, not things!"]
+		}
+	},
+	{
+		"topic": "Mid_AnAdventureWeSeek",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "I believe if happiness is the goal and it should be, then adventures should be a priority!",
+			"agreementText": "Yes! Adventure awaits!",
+			"disagreementtext": "Yes! Adventure awaits!",
+			"moralFocusAgreement": "Aww... that/'s a bummer.",
+			"moralFocusDisagreement": ["Fill your life with adventures, not things!"]
+		}
+	},
+	{
+		"topic": "Low_AnAdventureWeSeek",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "I believe if happiness is the goal and it should be, then adventures should be a priority! BUT just make sure you are not ignoring your responsibilities.",
+			"agreementText": "That/'s cool.",
+			"disagreementtext": "That/'s cool.",
+			"moralFocusAgreement": "Aww... that/'s a bummer.",
+			"moralFocusDisagreement": []
+		}
+	},
+	{
+		"topic": "High_NiaeveteIsFiction",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "You know how to tell a dangerous shape? One who appears naive or illogical but secretly knows exactly what they are doing. AND you should never trust anyone who appears easily agreeable.",
+			"agreementText": "Right?! You know how it all works!",
+			"disagreementtext": "Right?! You know how it all works!",
+			"moralFocusAgreement": "WHAT?! I found it mind-boggling you would diasgree. ",
+			"moralFocusDisagreement": ["Yeah! You get it. Trust must be earned!"]
+		}
+	},
+	{
+		"topic": "Mid_NiaeveteIsFiction",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "You know how to tell a dangerous shape? One who appears naive or illogical but secretly knows exactly what they are doing.",
+			"agreementText": "Yup. You know what/'s up.",
+			"disagreementtext": "Yup. You know what/'s up.",
+			"moralFocusAgreement": "Hmm. It/'s interesting that you disagree.",
+			"moralFocusDisagreement": ["Yeah! You get it. Trust must be earned!"]
+		}
+	},
+	{
+		"topic": "Low_NiaeveteIsFiction",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "You know how to tell a dangerous shape? One who appears naive or illogical but secretly knows exactly what they are doing. BUT I guess there are rare ones who are just naturally innocent.",
+			"agreementText": "Yup. You know what/'s up.",
+			"disagreementtext": "Yup. You know what/'s up.",
+			"moralFocusAgreement": "Hmm is it though?",
+			"moralFocusDisagreement": []
+		}
+	},
+	{
+		"topic": "High_ImmagretsWeGetTheJobDone",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "The city is built on the backs of shapes who moved here. We need to remember that we all make this city our home so every shape is part of our family. AND we must treat them with respect and compassion.",
+			"agreementText": "RIGHT! We are all equal and we need to treat each other with respect.",
+			"disagreementtext": "RIGHT! We are all equal and we need to treat each other with respect.",
+			"moralFocusAgreement": "No? Why would you think that way?!",
+			"moralFocusDisagreement": ["That/'s awesome friend! I am glad you understand and appreciate the labor of those who want to make this place their home."]
+		}
+	},
+	{
+		"topic": "Mid_ImmagretsWeGetTheJobDone",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "The city is built on the backs of shapes who moved here. We need to remember that we all make this city our home so every shape is part of our family.",
+			"agreementText": "Right? You know how I feel.",
+			"disagreementtext": "Right? You know how I feel.",
+			"moralFocusAgreement": "No? Why not?",
+			"moralFocusDisagreement": ["That/'s awesome friend! I am glad you understand and appreciate the labor of those who want to make this place their home."]
+		}
+	},
+	{
+		"topic": "Low_ImmagretsWeGetTheJobDone",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "The city is built on the backs of shapes who moved here. We need to remember that we all make this city our home so every shape is part of our family. BUT we do get some bad shapes once a while.",
+			"agreementText": "Nice.",
+			"disagreementtext": "Nice.",
+			"moralFocusAgreement": "No? Why not?",
+			"moralFocusDisagreement": []
+		}
+	},
+	{
+		"topic": "High_WeArewNothingIfWeAreNotReserved",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "Traditions are traditions because they stood the test of time. AND we must preserve them as they are the pillars of our society.",
+			"agreementText": "Wonderful! I very please to hear you say that.",
+			"disagreementtext": "Wonderful! I very please to hear you say that.",
+			"moralFocusAgreement": "Oh no? I/'m very disappointed to hear that.",
+			"moralFocusDisagreement": ["That/'s really wonderful! I am so glad you see the importance of tradition."]
+		}
+	},
+	{
+		"topic": "Mid_WeArewNothingIfWeAreNotReserved",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "Traditions are traditions because they stood the test of time.",
+			"agreementText": "Wonderful! That/'s good to hear.",
+			"disagreementtext": "Wonderful! That/'s good to hear.",
+			"moralFocusAgreement": "Oh no? Why is that?",
+			"moralFocusDisagreement": ["That/'s really wonderful! I am so glad you see the importance of tradition."]
+		}
+	},
+	{
+		"topic": "Low_WeArewNothingIfWeAreNotReserved",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "Traditions are traditions because they stood the test of time. BUT I guess we also make adjustments to make sure every shape can benefit from those traditions.",
+			"agreementText": "That/'s good to hear.",
+			"disagreementtext": "That/'s good to hear.",
+			"moralFocusAgreement": "Oh no? Why is that?",
+			"moralFocusDisagreement": []
+		}
+	},
+	{
+		"topic": "High_AselfMadeShapeWeAspireToBe",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "I think the world needs more entrepreneurs. AND they are the real game changers.",
+			"agreementText": "RIGHT?! Self made shapes are the BEST!",
+			"disagreementtext": "RIGHT?! Self made shapes are the BEST!",
+			"moralFocusAgreement": "NO WAY! You don/'t think so?",
+			"moralFocusDisagreement": ["That/'s awesome! Self-made shapes are our role models."]
+		}
+	},
+	{
+		"topic": "Mid_AselfMadeShapeWeAspireToBe",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "I think the world needs more entrepreneurs.",
+			"agreementText": "I am glad you agree.",
+			"disagreementtext": "I am glad you agree.",
+			"moralFocusAgreement": "You don/'t think so?",
+			"moralFocusDisagreement": ["That/'s awesome! Self-made shapes are our role models."]
+		}
+	},
+	{
+		"topic": "Low_AselfMadeShapeWeAspireToBe",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "I think the world needs more entrepreneurs. BUT there is nothing wrong with finding security in a stable desk job.",
+			"agreementText": "I am glad you agree.",
+			"disagreementtext": "I am glad you agree.",
+			"moralFocusAgreement": "You don/'t think so?",
+			"moralFocusDisagreement": []
+		}
+	},
+	{
+		"topic": "High_Shapesarenothingifnotsocial",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "I always find it awkward around quiet shapes. That/'s why I love sociable and approachable shapes. AND If they can/'t open up to you, how can you trust them?",
+			"agreementText": "YAY! I love the way you think!",
+			"disagreementtext": "YAY! I love the way you think!",
+			"moralFocusAgreement": "No?! How could you say that?!",
+			"moralFocusDisagreement": ["Haha! That /'s what I am talking about! I don/'t want to be mean but quiet shapes scare me sometimes."]
+		}
+	},
+	{
+		"topic": "Mid_Shapesarenothingifnotsocial",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "I always find it awkward around quiet shapes. That/'s why I love sociable and approachable shapes.",
+			"agreementText": "Yeah! You know how I feel.",
+			"disagreementtext": "Yeah! You know how I feel.",
+			"moralFocusAgreement": "No? Can you tell me why not?",
+			"moralFocusDisagreement": ["Haha! That /'s what I am talking about! I don/'t want to be mean but quiet shapes scare me sometimes."]
+		}
+	},
+	{
+		"topic": "Low_Shapesarenothingifnotsocial",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "I always find it awkward around quiet shapes. That/'s why I love sociable and approachable shapes. BUT I guess some shapes are just socially awkward.",
+			"agreementText": "Glad you agree.",
+			"disagreementtext": "Glad you agree.",
+			"moralFocusAgreement": "Why do you disagree?",
+			"moralFocusDisagreement": []
+		}
+	},
+	{
+		"topic": "High_AntiFaviortisum",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "You know what grinds my gears? Nepotism. AND that/'s why family business is a bad idea, you need fresh blood to make it work.",
+			"agreementText": "RIGHT ON! Nepotism is the root of ALL EVIL.",
+			"disagreementtext": "RIGHT ON! Nepotism is the root of ALL EVIL.",
+			"moralFocusAgreement": "WHAT?! You would forgive nepotism?! I could NEVER!",
+			"moralFocusDisagreement": ["Yeah! Nepotism is the true evil. Really disgusting."]
+		}
+	},
+	{
+		"topic": "Mid_AntiFaviortisum",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "You know what grinds my gears? Nepotism.",
+			"agreementText": "That/'s right! I am glad you see it that way.",
+			"disagreementtext": "That/'s right! I am glad you see it that way.",
+			"moralFocusAgreement": "You think nepotism is a good idea? Why?",
+			"moralFocusDisagreement": ["Yeah! Nepotism is the true evil. Really disgusting."]
+		}
+	},
+	{
+		"topic": "Low_AntiFaviortisum",
+		"NarrativeElements": {
+			"surfaceOpinionOnTopic": "You know what grinds my gears? Nepotism. But I guess sometimes you can only trust family to work in the family business.",
+			"agreementText": "That/'s right!",
+			"disagreementtext": "That/'s right!",
+			"moralFocusAgreement": "Oh no? Why is that?",
+			"moralFocusDisagreement": []
+		}
+	}
+]

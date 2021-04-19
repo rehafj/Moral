@@ -280,6 +280,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     void playerAgrees()
     {
         //Debug.Log("player agreed!!!" + currentNode.ButtonText + "after i click on agree! " + currentNode.dialougText);
+        Debug.Log("agreement text is =" + currentNode.agreementText);
         StartCoroutine(waitAndPrintAgreement(currentNode.agreementText));
     }
 
@@ -574,10 +575,11 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                 //--- gives the general feelings about a thing, add to the same node the pther structure elements... 
 
                 node.IntroducingATopicdialoug =
-                    getIntroductionTopicString(kvp.Key, character); //unbaised opening statment 
+                    getIntroductionTopicString(kvp.Key, character); //unbaised opening statment  --- this is actually yr inytoduction text 
               
-                node.agreementText = getInitialCNPCOpinionAsDialoug(kvp.Key, character, "AGREE");//general feelings about a topic 
+                node.agreementText = getInitialCNPCOpinionAsDialoug(kvp.Key, character);//general feelings about a topic  --- this is actually high 
 
+                node.disagreementText = getInitialCNPCOpinionAsDialoug(kvp.Key, character);//nope - con here is as in low.... 
                 node.ButtonText = setPlayerButtonText(kvp.Key);
                 nodes.Add(node);
 
@@ -598,12 +600,12 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     //2
     string returnTopicText(List<DialougStructure> opinions, string key, string flag) //the sent in list is of high./mid or low 
     {//selecting intro and the first part of the body here --- 
-        foreach (DialougStructure op in opinions) //ex: all high opp
+        foreach (DialougStructure op in opinions) //ex: all high opp -- splits them up here as high mid and low 
         {
-            Debug.Log("wgat happens here " + op.topic.Contains(mapToCNPCMoralFactor(key)))  ;
             if (op.topic.Contains(mapToCNPCMoralFactor(key))) //get the translatiopn of they key but not ditect character keys..... 
             {
-                selectedOpnion = op.topic.Split('_').Last();
+                selectedOpnion = op.topic.Split('_').Last(); //surface value is returned here = - 
+                
                 //Debug.Log("-------selectedOpnion" + selectedOpnion);
                 if (flag == "INTRO")
                 {
@@ -652,11 +654,12 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     {
         switch (key)
         {
-            case ("IsYoungAndPregnant"):
-                if(UnityEngine.Random.Range(0,6) >= 3)
+            case ("startedAfamilyAtAyoungAge"):
+                if (UnityEngine.Random.Range(0, 6) >= 3)
                 {
                     return "BTrueTYourHeart";
-                }else
+                }
+                else
                 {
                     return "LoveIsForFools";
                 }
@@ -674,8 +677,8 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                 return "FamilyPerson";
 
             case ("InLovewithspouseoffriend"):
-            case ("pregnantbutnotengaged"):
-            case ("pregnantbutnotfromspuceorbutloveintrest"):
+            case ("likesToDate"):
+            case ("leftFotLoveIntrest"):
             case ("InLoveWirhAnothersspuce"):
             case ("WillActOnLove"):
                 return "BTrueTYourHeart";
@@ -735,7 +738,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             case ("RetiredYoung"):
             case ("DiedBeforeRetired"):
             case ("DevorcedManyPeople"):
-            case ("marriedSomoneOlder"):
+
             case ("marriedForLifeStyleNotLove"):
             case ("AdventureSeeker"):
             case ("liklyToHelpTheHomeless"):
@@ -809,7 +812,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             case ("InLovewithspouseoffriend"):
                 return "I heard that " + character.fullName + " is in love with thier spouce's friend! ";
 
-            case ("pregnantbutnotfromspuceorbutloveintrest"):
+            case ("leftFotLoveIntrest"):
                 return "I heard that " + character.fullName + "cheated on their siginificant cube with " + character.GetLoverName();
             case ("InLoveWirhAnothersspuce"):
                 return "Not juding but I heard that " + character.fullName + "IS IN LOVE WITH ANOTHER CUBE'S spouse ";
@@ -817,7 +820,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                 return "Not juding but I heard that " + character.fullName + "IS IN LOVE WITH ANOTHER CUBE that is not their spouce, a birdy told me they will act on it ><";
 
             case ("BTrueTYourHeart"):
-            case ("pregnantbutnotengaged"):
+            case ("likesToDate"):
                 return "you know," +
                     " I think people in this town might be too much into love afairs, " +
                     "you would think we were in a dating sim of some kind..."; //TODO write specfic texts for scenarios 
@@ -886,9 +889,6 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             case ("AnimalLover"):
                 return "You know what I want to talk about!" + character.fullName + "\'s job! \n I think they work as " + character.Lastoccupation +"in a farm";
 
-            case ("IsYoungAndPregnant"):
-               return "i heard that shape is raising a family and at such a young age ";
-                
             case ("MovesAlot"):
                 return "apparently this shape never settles down, they sure moved alot ";
             case ("SusMovments"):
@@ -909,7 +909,6 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             case ("RetiredYoung"):
             case ("DiedBeforeRetired"):
             case ("DevorcedManyPeople"):
-            case ("marriedSomoneOlder"):
             case ("marriedForLifeStyleNotLove"):
             case ("AdventureSeeker"):
             case ("liklyToHelpTheHomeless"):
@@ -946,8 +945,8 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                 return "..have a family..";
             case ("InLovewithspouseoffriend"):
             case ("BTrueTYourHeart"):
-            case ("pregnantbutnotengaged"):
-            case ("pregnantbutnotfromspuceorbutloveintrest"):
+            case ("likesToDate"):
+            case ("leftFotLoveIntrest"):
             case ("InLoveWirhAnothersspuce"):
             case ("WillActOnLove"):
                 return "matters of the heart...";
@@ -1009,9 +1008,8 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             case ("selfMadeCube"):
             case ("selfMadeCubeByDedication"):
                 return ("they pulled themselves by their bootstraps");
-            case ("IsYoungAndPregnant"):
-                
-                    return "so young and raising a family ";
+           
+
              
             case ("MovesAlot"):
                 return "they sure moved alot ";
@@ -1023,7 +1021,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             case ("RetiredYoung"):
             case ("DiedBeforeRetired"):
             case ("DevorcedManyPeople"):
-            case ("marriedSomoneOlder"):
+
             case ("marriedForLifeStyleNotLove"):
             case ("AdventureSeeker"):
             case ("liklyToHelpTheHomeless"):
@@ -1052,7 +1050,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         switch (key)
         {
   
-            case ("IsYoungAndPregnant"):
+
             case ("MovesAlot"):
             case ("SusMovments"):
                 return "add some text here";
@@ -1063,8 +1061,8 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                 return "don't they have a family";
             case ("InLovewithspouseoffriend"):
             case ("BTrueTYourHeart"):
-            case ("pregnantbutnotengaged"):
-            case ("pregnantbutnotfromspuceorbutloveintrest"):
+            case ("likesToDate"):
+            case ("leftFotLoveIntrest"):
             case ("InLoveWirhAnothersspuce"):
             case ("WillActOnLove"):
                 return "what do you think of their love affair";
@@ -1126,6 +1124,33 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                 return "missed a tag!" + key;
 
         }
+    }
+
+    enum TypeOfPlayerTexts
+    {
+        agreement, disagreement, moral
+    }
+    TypeOfPlayerTexts typeOfPlayerTexts;
+    string getAgreementText(string surfaceValue, string rating, TypeOfPlayerTexts playerResponceType)
+    {
+
+        foreach (PlayerDialoug p in jsn.listOfPlayerDialougs)
+        {
+            if (p.playerSurfaceValue == surfaceValue && p.playerNarrativeElements.rating == rating)
+            {
+                if (playerResponceType == TypeOfPlayerTexts.agreement)
+                {
+                    return p.playerNarrativeElements.playerInAgreementText;
+
+                }
+                else 
+                {
+                    return p.playerNarrativeElements.playerInAgreementText;
+
+                }
+            }
+        }
+        return "No string found!";
     }
 
 

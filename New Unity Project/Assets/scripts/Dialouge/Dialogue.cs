@@ -5,12 +5,18 @@ using UnityEngine;
 using UnityEngine.UIElements;
 
 [System.Serializable]
-public class Dialoug 
+public class Dialoug   //restructure this badly....
 {
     public string ButtonText;
     public string IntroducingATopicdialoug;
+
+
     public string dialougText; //main thoughts ( body1 in json)
     public string agreementText; //i.e doubling down on it. 
+    public string disagreementText;
+    public string Rating;
+
+
     public List<string> hatedFacts; //will contain things the npc hates about the character 
     public string thoughtBubbleText;
     public bool Explored; //just to test something

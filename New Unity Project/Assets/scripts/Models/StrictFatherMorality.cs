@@ -67,7 +67,7 @@ public class StrictFatherMorality : MoralModels
 
                 }
                 break;
-            case ("pregnantbutnotengaged"):
+            case ("likesToDate"):
                 schemaName = "lowMoralBoundaries";
                 break;
             case ("departed"):
@@ -206,10 +206,10 @@ public class StrictFatherMorality : MoralModels
                 }
 
                 break;
-            case ("pregnantbutnotfromspuceorbutloveintrest"):
+            case ("leftFotLoveIntrest"):
                 foreach (Dialoug d in characterNode.parent.children)
                 {
-                    if (d.ButtonText == "pregnantbutnotengaged")
+                    if (d.ButtonText == "likesToDate")
                     {
                         ModelCounter--; matchingPattern = d.ButtonText; schemaName = "lowMoralWholeness";// also true as self dispiince here  // along th elines of it's their work they shouild do with it as they see fir 
                     }
@@ -294,270 +294,270 @@ public class StrictFatherMorality : MoralModels
 
         return schemaName;
     }
-  /*  public List<Argument> ReturnArguments(string tag, Dialoug characterNode) {
+    /*  public List<Argument> ReturnArguments(string tag, Dialoug characterNode) {
 
-        int ModelCounter = 0;
-        string matchingPattern = "";
-        List<Argument> args = new List<Argument>();
+          int ModelCounter = 0;
+          string matchingPattern = "";
+          List<Argument> args = new List<Argument>();
 
-        foreach (Dialoug dialoug in characterNode.parent.children)
-        {
-            if (tag != dialoug.ButtonText);
-            {
-                Debug.Log(" tag is " + tag + "combined with pattern" + d.ButtonText + "for the character" + d.parent.ButtonText);
-
-
-                string schemaName = "NoSchemaFound";
-                switch (tag)
-                {
-                    case ("InLovewithspouseoffriend"):
-                        foreach (Dialoug d in characterNode.parent.children)//send in the parent ( thing that contains sub nodes )
-                        {
-                            if (d.ButtonText != "WillActOnLove")
-                            {
-                                ModelCounter++;
-                                schemaName = "highStrength";
-                                matchingPattern = d.ButtonText;
-                                //depicts moral strength // later will translate into something like "he applies self displine well.//// 
-                                // add text later - - something like oh wow they have self restraint... ect 
-                            }//else -not strength 
-                            else if (d.ButtonText == "WillActOnLove")
-                            {
-
-                                matchingPattern = d.ButtonText;
-                                schemaName = "highRetribution";//something along the lines of he deserves to be punished ...ect 
-                            }
-
-                        }
-                        break;
-                    case ("pregnantbutnotengaged"):
-                        schemaName = "lowMoralBoundaries";
-                        break;
-                    case ("departed"):
-                        schemaName = "lowMoralboundaries";//influingg others - negative 
-                        break;
-                    case ("hardWorker"):
-                    case ("IsWealthy"):
-                        foreach (Dialoug d in characterNode.parent.children)
-                        {
-                            if (d.ButtonText == "IsRichButNotGenrous")
-                            {
-                                ModelCounter++;
-                                schemaName = "highMoralOrder";// also true as self dispiince here  // along th elines of it's their work they shouild do with it as they see fir 
-                                matchingPattern = d.ButtonText;
-
-                            }
-                        }
-                        break;
-
-                    case ("hasAbestFriend"):
-                        foreach (Dialoug d in characterNode.parent.children)
-                        {
-                            if (d.ButtonText == "friendwithabestfriendsenemy")
-                            {
-                                ModelCounter--;
-                                matchingPattern = d.ButtonText;
-                                schemaName = "lowMoralboundaries";// also true as self dispiince here  // along th elines of it's their work they shouild do with it as they see fir 
-                            }
-
-                        }
-                        break;
-
-                    case ("butcherRole"):
-                        schemaName = "highMoralOrder";//what fits naturally 
-                        break;
-                    case ("flipflop"):
-                        schemaName = "lowMoralboundaries";//devaiting from the norm - bad 
-                        break;
-                    case ("widowedbutnotgrieving"):
-                        ModelCounter--; schemaName = "lowMoralboundaries";
-                        break;
-                    case ("familyPerson"):
-                        schemaName = "highMoralOrder";
-                        break;
-                    case ("socialLife"):
-                        foreach (Dialoug d in characterNode.parent.children)
-                        {
-                            if (d.ButtonText == "hasalotofenemies")
-                            {
-                                matchingPattern = d.ButtonText;
-                                schemaName = "lowMoralWholeness";// also true as self dispiince here  // along th elines of it's their work they shouild do with it as they see fir 
-                            }
-                            else if (d.ButtonText == "friendwithabestfriendsenemy")
-                            {
-                                matchingPattern = d.ButtonText;
-                                ModelCounter--; schemaName = "lowMoralboundaries";// also true as self dispiince here  // along th elines of it's their work they shouild do with it as they see fir 
-                            }
-                            else if (d.ButtonText == "loner")
-                            {
-                                matchingPattern = d.ButtonText;
-                                schemaName = "lowMoralboundaries";// also true as self dispiince here  // along th elines of it's their work they shouild do with it as they see fir 
-                            }
-                            else
-                                schemaName = "highMoralboundaries";
-
-                        }
-
-                        break;
-                    case ("hasalotofenemies"):
-
-                        schemaName = "lowMoralWholeness";// also true as self dispiince here  // along th elines of it's their work they shouild do with it as they see fir 
-
-                        break;
-                    case ("graduate"):
-                        schemaName = "highMoralboundaries";
-
-                        foreach (Dialoug d in characterNode.parent.children)
-                        {
-                            if (d.ButtonText == "advancedCareer" || d.ButtonText == "hardWorker")
-                            {
-                                schemaName = "highStrength";
-                                schemaName = "highSelfIntrest";
-                                matchingPattern = d.ButtonText;
-                                ModelCounter++;
-                                // also true as self dispiince here  // along th elines of it's their work they shouild do with it as they see fir 
-                            }
-
-                            if (d.ButtonText == "Teachingrole")
-                            {
-                                matchingPattern = d.ButtonText;
-                                schemaName = "highMoralOrder";
-                                matchingPattern = d.ButtonText; ModelCounter++;
-
-                            }
+          foreach (Dialoug dialoug in characterNode.parent.children)
+          {
+              if (tag != dialoug.ButtonText);
+              {
+                  Debug.Log(" tag is " + tag + "combined with pattern" + d.ButtonText + "for the character" + d.parent.ButtonText);
 
 
-                        }
+                  string schemaName = "NoSchemaFound";
+                  switch (tag)
+                  {
+                      case ("InLovewithspouseoffriend"):
+                          foreach (Dialoug d in characterNode.parent.children)//send in the parent ( thing that contains sub nodes )
+                          {
+                              if (d.ButtonText != "WillActOnLove")
+                              {
+                                  ModelCounter++;
+                                  schemaName = "highStrength";
+                                  matchingPattern = d.ButtonText;
+                                  //depicts moral strength // later will translate into something like "he applies self displine well.//// 
+                                  // add text later - - something like oh wow they have self restraint... ect 
+                              }//else -not strength 
+                              else if (d.ButtonText == "WillActOnLove")
+                              {
 
-                        break;
-                    case ("friendwithabestfriendsenemy"):
-                        schemaName = "lowMoralWholeness"; ModelCounter--;
-                        break;
-                    case ("adultbutnotworking"):
-                        schemaName = "lowMoralEssence";
-                        foreach (Dialoug d in characterNode.parent.children)
-                        {
-                            if (d.ButtonText == "notworkingandrich")
-                            {
-                                ModelCounter++;
-                                matchingPattern = d.ButtonText;
-                                schemaName = "highMoralOrder";
-                            }
-                        }
-                        break;
-                    case ("notworkingandrich"):
-                        schemaName = "highMoralOrder";
-                        ModelCounter++;
-                        break;
-                    case ("loner"):
-                        foreach (Dialoug d in characterNode.parent.children)
-                        {
-                            if (d.ButtonText == "hasalotofenemies")
-                            {
-                                ModelCounter--; matchingPattern = d.ButtonText; schemaName = "lowMoralWholeness";// also true as self dispiince here  // along th elines of it's their work they shouild do with it as they see fir 
-                            }
-                            else if (d.ButtonText == "friendwithabestfriendsenemy")
-                            {
-                                ModelCounter--; matchingPattern = d.ButtonText; schemaName = "lowMoralboundaries";// also true as self dispiince here  // along th elines of it's their work they shouild do with it as they see fir 
-                            }
-                            else if (d.ButtonText == "loner")
-                            {
-                                matchingPattern = d.ButtonText; schemaName = "lowMoralboundaries";// also true as self dispiince here  // along th elines of it's their work they shouild do with it as they see fir 
-                            }
-                            else
-                                schemaName = "lowMoralboundaries";//fix this --- 
+                                  matchingPattern = d.ButtonText;
+                                  schemaName = "highRetribution";//something along the lines of he deserves to be punished ...ect 
+                              }
 
-                        }
+                          }
+                          break;
+                      case ("likesToDate"):
+                          schemaName = "lowMoralBoundaries";
+                          break;
+                      case ("departed"):
+                          schemaName = "lowMoralboundaries";//influingg others - negative 
+                          break;
+                      case ("hardWorker"):
+                      case ("IsWealthy"):
+                          foreach (Dialoug d in characterNode.parent.children)
+                          {
+                              if (d.ButtonText == "IsRichButNotGenrous")
+                              {
+                                  ModelCounter++;
+                                  schemaName = "highMoralOrder";// also true as self dispiince here  // along th elines of it's their work they shouild do with it as they see fir 
+                                  matchingPattern = d.ButtonText;
 
-                        break;
-                    case ("pregnantbutnotfromspuceorbutloveintrest"):
-                        foreach (Dialoug d in characterNode.parent.children)
-                        {
-                            if (d.ButtonText == "pregnantbutnotengaged")
-                            {
-                                ModelCounter--; matchingPattern = d.ButtonText; schemaName = "lowMoralWholeness";// also true as self dispiince here  // along th elines of it's their work they shouild do with it as they see fir 
-                            }
-                            else if (d.ButtonText == "InLoveWirhAnothersspuce")
-                            {
-                                ModelCounter--; matchingPattern = d.ButtonText; schemaName = "lowMoralboundaries";// also true as self dispiince here  // along th elines of it's their work they shouild do with it as they see fir 
-                            }
-                            if (d.ButtonText == "InLovewithspouseoffriend")
-                            {
-                                matchingPattern = d.ButtonText; schemaName = "lowMoralboundaries";// also true as self dispiince here  // along th elines of it's their work they shouild do with it as they see fir 
-                            }
-                            if (d.ButtonText == "InLovewithspouseoffriend")
-                            {
-                                ModelCounter--; matchingPattern = d.ButtonText; schemaName = "lowMoralboundaries";// also true as self dispiince here  // along th elines of it's their work they shouild do with it as they see fir 
-                            }
-                            else
-                            {
-                                ModelCounter--; matchingPattern = d.ButtonText; schemaName = "lowStrength";
-                            }
+                              }
+                          }
+                          break;
 
-                        }
+                      case ("hasAbestFriend"):
+                          foreach (Dialoug d in characterNode.parent.children)
+                          {
+                              if (d.ButtonText == "friendwithabestfriendsenemy")
+                              {
+                                  ModelCounter--;
+                                  matchingPattern = d.ButtonText;
+                                  schemaName = "lowMoralboundaries";// also true as self dispiince here  // along th elines of it's their work they shouild do with it as they see fir 
+                              }
 
-                        break;
-                    case ("InLoveWirhAnothersspuce"):
-                        schemaName = "lowMoralboundaries";
+                          }
+                          break;
 
-                        break;
+                      case ("butcherRole"):
+                          schemaName = "highMoralOrder";//what fits naturally 
+                          break;
+                      case ("flipflop"):
+                          schemaName = "lowMoralboundaries";//devaiting from the norm - bad 
+                          break;
+                      case ("widowedbutnotgrieving"):
+                          ModelCounter--; schemaName = "lowMoralboundaries";
+                          break;
+                      case ("familyPerson"):
+                          schemaName = "highMoralOrder";
+                          break;
+                      case ("socialLife"):
+                          foreach (Dialoug d in characterNode.parent.children)
+                          {
+                              if (d.ButtonText == "hasalotofenemies")
+                              {
+                                  matchingPattern = d.ButtonText;
+                                  schemaName = "lowMoralWholeness";// also true as self dispiince here  // along th elines of it's their work they shouild do with it as they see fir 
+                              }
+                              else if (d.ButtonText == "friendwithabestfriendsenemy")
+                              {
+                                  matchingPattern = d.ButtonText;
+                                  ModelCounter--; schemaName = "lowMoralboundaries";// also true as self dispiince here  // along th elines of it's their work they shouild do with it as they see fir 
+                              }
+                              else if (d.ButtonText == "loner")
+                              {
+                                  matchingPattern = d.ButtonText;
+                                  schemaName = "lowMoralboundaries";// also true as self dispiince here  // along th elines of it's their work they shouild do with it as they see fir 
+                              }
+                              else
+                                  schemaName = "highMoralboundaries";
+
+                          }
+
+                          break;
+                      case ("hasalotofenemies"):
+
+                          schemaName = "lowMoralWholeness";// also true as self dispiince here  // along th elines of it's their work they shouild do with it as they see fir 
+
+                          break;
+                      case ("graduate"):
+                          schemaName = "highMoralboundaries";
+
+                          foreach (Dialoug d in characterNode.parent.children)
+                          {
+                              if (d.ButtonText == "advancedCareer" || d.ButtonText == "hardWorker")
+                              {
+                                  schemaName = "highStrength";
+                                  schemaName = "highSelfIntrest";
+                                  matchingPattern = d.ButtonText;
+                                  ModelCounter++;
+                                  // also true as self dispiince here  // along th elines of it's their work they shouild do with it as they see fir 
+                              }
+
+                              if (d.ButtonText == "Teachingrole")
+                              {
+                                  matchingPattern = d.ButtonText;
+                                  schemaName = "highMoralOrder";
+                                  matchingPattern = d.ButtonText; ModelCounter++;
+
+                              }
 
 
-                    case ("WillActOnLove"):
-                        foreach (Dialoug d in characterNode.parent.children)
-                        {
-                            if (d.ButtonText == "InLovewithspouseoffriend")
-                            {
-                                schemaName = "lowStrength";// also true as self dispiince here  // along th elines of it's their work they shouild do with it as they see fir 
-                                ModelCounter--;
-                            }
-                            else
-                                ModelCounter++; schemaName = "highStrength";
+                          }
 
-                        }
+                          break;
+                      case ("friendwithabestfriendsenemy"):
+                          schemaName = "lowMoralWholeness"; ModelCounter--;
+                          break;
+                      case ("adultbutnotworking"):
+                          schemaName = "lowMoralEssence";
+                          foreach (Dialoug d in characterNode.parent.children)
+                          {
+                              if (d.ButtonText == "notworkingandrich")
+                              {
+                                  ModelCounter++;
+                                  matchingPattern = d.ButtonText;
+                                  schemaName = "highMoralOrder";
+                              }
+                          }
+                          break;
+                      case ("notworkingandrich"):
+                          schemaName = "highMoralOrder";
+                          ModelCounter++;
+                          break;
+                      case ("loner"):
+                          foreach (Dialoug d in characterNode.parent.children)
+                          {
+                              if (d.ButtonText == "hasalotofenemies")
+                              {
+                                  ModelCounter--; matchingPattern = d.ButtonText; schemaName = "lowMoralWholeness";// also true as self dispiince here  // along th elines of it's their work they shouild do with it as they see fir 
+                              }
+                              else if (d.ButtonText == "friendwithabestfriendsenemy")
+                              {
+                                  ModelCounter--; matchingPattern = d.ButtonText; schemaName = "lowMoralboundaries";// also true as self dispiince here  // along th elines of it's their work they shouild do with it as they see fir 
+                              }
+                              else if (d.ButtonText == "loner")
+                              {
+                                  matchingPattern = d.ButtonText; schemaName = "lowMoralboundaries";// also true as self dispiince here  // along th elines of it's their work they shouild do with it as they see fir 
+                              }
+                              else
+                                  schemaName = "lowMoralboundaries";//fix this --- 
 
-                        break;
-                    case ("IsRichButNotGenrous"):
-                        schemaName = "highMoralOrder";
+                          }
 
-                        break;
-                    case ("WorksInAlcohol"):
-                        schemaName = "highSelfIntrest";
-                        ModelCounter++;
-                        foreach (Dialoug d in characterNode.parent.children)
-                        {
-                            if (d.ButtonText == "hardWorker")
-                            {
-                                ModelCounter++;
-                                schemaName = "highSelfIntrest";// also true as self dispiince here  // along th elines of it's their work they shouild do with it as they see fir 
-                            }
+                          break;
+                      case ("leftFotLoveIntrest"):
+                          foreach (Dialoug d in characterNode.parent.children)
+                          {
+                              if (d.ButtonText == "likesToDate")
+                              {
+                                  ModelCounter--; matchingPattern = d.ButtonText; schemaName = "lowMoralWholeness";// also true as self dispiince here  // along th elines of it's their work they shouild do with it as they see fir 
+                              }
+                              else if (d.ButtonText == "InLoveWirhAnothersspuce")
+                              {
+                                  ModelCounter--; matchingPattern = d.ButtonText; schemaName = "lowMoralboundaries";// also true as self dispiince here  // along th elines of it's their work they shouild do with it as they see fir 
+                              }
+                              if (d.ButtonText == "InLovewithspouseoffriend")
+                              {
+                                  matchingPattern = d.ButtonText; schemaName = "lowMoralboundaries";// also true as self dispiince here  // along th elines of it's their work they shouild do with it as they see fir 
+                              }
+                              if (d.ButtonText == "InLovewithspouseoffriend")
+                              {
+                                  ModelCounter--; matchingPattern = d.ButtonText; schemaName = "lowMoralboundaries";// also true as self dispiince here  // along th elines of it's their work they shouild do with it as they see fir 
+                              }
+                              else
+                              {
+                                  ModelCounter--; matchingPattern = d.ButtonText; schemaName = "lowStrength";
+                              }
 
-                        }
+                          }
 
-                        break; //TODO 
-                    case ("healerRole"):
-                        schemaName = "highSelfIntrest"; ModelCounter++;
-                        break;
-                    case ("polluterRole"):
-                    case ("riskTaker"):
-                    case ("Teachingrole"):
-                    case ("advancedCareer"):
-                    case ("CustodianJobs"):
-                    case ("generalJobs"):
-                        schemaName = "highSelfIntrest"; ModelCounter++;
+                          break;
+                      case ("InLoveWirhAnothersspuce"):
+                          schemaName = "lowMoralboundaries";
 
-                        break;
-                    default:
-                        schemaName = "highSelfIntrest"; ModelCounter++;
-                        break;
-                }
-            }
-        }
+                          break;
 
-        return args;
 
-    }
-        //used in combo with flags to construt arguments, this returns the schema accoring to father models */
+                      case ("WillActOnLove"):
+                          foreach (Dialoug d in characterNode.parent.children)
+                          {
+                              if (d.ButtonText == "InLovewithspouseoffriend")
+                              {
+                                  schemaName = "lowStrength";// also true as self dispiince here  // along th elines of it's their work they shouild do with it as they see fir 
+                                  ModelCounter--;
+                              }
+                              else
+                                  ModelCounter++; schemaName = "highStrength";
+
+                          }
+
+                          break;
+                      case ("IsRichButNotGenrous"):
+                          schemaName = "highMoralOrder";
+
+                          break;
+                      case ("WorksInAlcohol"):
+                          schemaName = "highSelfIntrest";
+                          ModelCounter++;
+                          foreach (Dialoug d in characterNode.parent.children)
+                          {
+                              if (d.ButtonText == "hardWorker")
+                              {
+                                  ModelCounter++;
+                                  schemaName = "highSelfIntrest";// also true as self dispiince here  // along th elines of it's their work they shouild do with it as they see fir 
+                              }
+
+                          }
+
+                          break; //TODO 
+                      case ("healerRole"):
+                          schemaName = "highSelfIntrest"; ModelCounter++;
+                          break;
+                      case ("polluterRole"):
+                      case ("riskTaker"):
+                      case ("Teachingrole"):
+                      case ("advancedCareer"):
+                      case ("CustodianJobs"):
+                      case ("generalJobs"):
+                          schemaName = "highSelfIntrest"; ModelCounter++;
+
+                          break;
+                      default:
+                          schemaName = "highSelfIntrest"; ModelCounter++;
+                          break;
+                  }
+              }
+          }
+
+          return args;
+
+      }
+          //used in combo with flags to construt arguments, this returns the schema accoring to father models */
     private void setArgumentStructure(string mainPattern, string mattchingPattern,string schema, int moralPoints)
     {
         Debug.Log("does this happen? setArgumentStructure" );

@@ -132,8 +132,7 @@ public class BackgroundCharacter  :  MonoBehaviour
                     checkIfAnIntconditionIsMet(jsn.backgroundcharacters[i].bestFriendiD,
                         jsn.backgroundcharacters[j].id, "hasAbestFriend", character);
 
-        /*            checkIfAnIntconditionIsMet(jsn.backgroundcharacters[i].spouse == jsn.backgroundcharacters[j].id &&
-                       (jsn.backgroundcharacters[j].age - jsn.backgroundcharacters[i].age) >= 14 && (jsn.backgroundcharacters[j].age - jsn.backgroundcharacters[i].age) > 0, "marriedSomoneOlder", character);
+        /*         
 
                     checkIfAnIntconditionIsMet(jsn.backgroundcharacters[i].spouse == jsn.backgroundcharacters[j].id &&
                         jsn.backgroundcharacters[i].loveInterest != jsn.backgroundcharacters[i].spouse

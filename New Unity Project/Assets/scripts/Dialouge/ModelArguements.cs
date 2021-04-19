@@ -72,7 +72,7 @@ public class LoveIsForFools
 {
     public string friendwithabestfriendsenemy { get; set; }
     public string InLoveWirhAnothersspuce { get; set; }
-    public string IsYoungAndPregnant { get; set; }
+    public string startedAfamilyAtAyoungAge  { get; set; }
     public string WillActOnLove { get; set; }
     public string isolated { get; set; }
 }
@@ -81,7 +81,7 @@ public class MoneyMaker
 {
     public string friendwithabestfriendsenemy { get; set; }
     public string InLoveWirhAnothersspuce { get; set; }
-    public string IsYoungAndPregnant { get; set; }
+    public string startedAfamilyAtAyoungAge  { get; set; }
     public string WillActOnLove { get; set; }
     public string isolated { get; set; }
 }
@@ -90,7 +90,7 @@ public class Enviromentalist
 {
     public string friendwithabestfriendsenemy { get; set; }
     public string InLoveWirhAnothersspuce { get; set; }
-    public string IsYoungAndPregnant { get; set; }
+    public string startedAfamilyAtAyoungAge { get; set; }
     public string WillActOnLove { get; set; }
     public string isolated { get; set; }
 }
@@ -144,7 +144,9 @@ public class FamilyPerson
 {
     public string friendwithabestfriendsenemy { get; set; }
     public string InLoveWirhAnothersspuce { get; set; }
-    public string IsYoungAndPregnant { get; set; }
+    public string 
+
+t { get; set; }
     public string WillActOnLove { get; set; }
     public string isolated { get; set; }
 }

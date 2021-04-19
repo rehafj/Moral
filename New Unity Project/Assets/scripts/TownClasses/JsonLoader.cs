@@ -87,7 +87,7 @@ public class JsonLoader : MonoBehaviour
 
     private void PrintOutAConversation()
     {
-        foreach (ModelArguements argument in listOfArguments)
+        /*foreach (ModelArguements argument in listOfArguments)
         {
             Debug.Log("FFS - schema =   " + argument.schema + "surface values are " + argument.Surfacevalues[0].key  +" AND THE SUB VALUE KEY IS "+ argument.Surfacevalues[0].surfaceValueObj[0].subvalue);
          
@@ -97,10 +97,24 @@ public class JsonLoader : MonoBehaviour
         Debug.Log("ZZZZZplayer dialoug sample"+ getTheCorrectPlayerRespounce("MoneyMaker","High", "playerDisAgreementOnAflag", "familyPerson" ));
 
 
+        //getting a player responce 
+        //BTrueTYourHeart
+        //rating 
+        //disagreemnt 
 
+        
+*/
+        string sv = "FamilyPerson";
 
+        foreach(PlayerDialoug p in listOfPlayerDialougs)
+        {
+            if (p.playerSurfaceValue == sv && p.playerNarrativeElements.rating == "High" )
+            {
+                Debug.Log("check me out -"+ p.playerNarrativeElements.playerInAgreementText);
+            }
+        }
     }
-
+    //works - move this into father/mother and change type of strings into enums
     string getTheCorrectPlayerRespounce(string surfaceFlag, string rating, string typeOfText, string key) //chamnge type of stgring into enums and make these lists into static~ 
     {
         foreach (PlayerDialoug p in listOfPlayerDialougs)

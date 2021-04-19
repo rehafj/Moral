@@ -39,26 +39,35 @@ public class InterestingCharacters : MonoBehaviour
         characterFlags.Add("adultbutnotworking", false);// as everyone is working -= did not find - in json too
         characterFlags.Add("notworkingandrich", false); // evryone is working in this sim.... 
         characterFlags.Add("loner", false); //found  no naibours and small friend ids
-        characterFlags.Add("pregnantbutnotengaged", false);//found 1
-        characterFlags.Add("pregnantbutnotfromspuceorbutloveintrest", false); //TODO not in this run --- check if this ever gets simulated ? 
+        characterFlags.Add("likesToDate", false);//found 1
+        characterFlags.Add("leftFotLoveIntrest", false); //TODO not in this run --- check if this ever gets simulated ? 
         characterFlags.Add("hasAbestFriend", false);//found
         characterFlags.Add("InLoveWirhAnothersspuce", false);//found
         characterFlags.Add("IsWealthy", false);//found 
-    //    characterFlags.Add("IsYoungAndPregnant", false);//<16 and preg
-   /*     characterFlags.Add("worksWithFamily", false);
-
-
-        characterFlags.Add("hiredByAFamilymember", false);//as a favor 
+        characterFlags.Add("startedAfamilyAtAyoungAge", false);//
         characterFlags.Add("MovesAlot", false);
-        characterFlags.Add("getsFiredAlot", false);
-        characterFlags.Add("SusMovments", false);//loner and moves alot and
-        characterFlags.Add("RetiredYoung", false);
-        characterFlags.Add("DiedBeforeRetired", false);
-        characterFlags.Add("DevorcedManyPeople", false);
-        characterFlags.Add("marriedSomoneOlder", false); //what can i infer if a person is both conventional and reserved, kinda worried about topics...?
-        characterFlags.Add("marriedForLifeStyleNotLove", false); //what can i infer if a person is both conventional and reserved, kinda worried about topics...?
+        characterFlags.Add("SusMovments", false);//
 
-*/
+
+        //    
+        /*     characterFlags.Add("worksWithFamily", false);
+
+             characterFlags.Add("hiredByAFamilymember", false);//as a favor 
+             characterFlags.Add("getsFiredAlot", false);
+             characterFlags.Add("RetiredYoung", false);
+             characterFlags.Add("DiedBeforeRetired", false);
+             characterFlags.Add("DevorcedManyPeople", false);
+             characterFlags.Add("marriedForLifeStyleNotLove", false); //what can i infer if a person is both conventional and reserved, kinda worried about topics...?
+
+     
+         
+         
+            "startedAfamilyAtAyoungAge"
+        "MovesAlot"
+        "SusMovments"
+
+         
+         */
         //personalityrelated 
         characterFlags.Add("WillActOnLove", false);
         characterFlags.Add("IsRichButNotGenrous", false);
@@ -69,7 +78,6 @@ public class InterestingCharacters : MonoBehaviour
         characterFlags.Add("ButcherButRegretful", false);
         characterFlags.Add("TooTrustingOfEnemies", false);
         characterFlags.Add("ArtSeller", false);
-        characterFlags.Add("selfMadeCubeByDedication", false);
         characterFlags.Add("likedToExperinceCulture", false);
         characterFlags.Add("doesNotGiveToThoseInNeed", false);//.i.e does not support comun
         characterFlags.Add("supportsImmigration", false);
@@ -96,9 +104,8 @@ public class InterestingCharacters : MonoBehaviour
         characterFlags.Add("hardWorker", false); //high level in job 
         characterFlags.Add("CustodianJobs", false); //high level in job 
         characterFlags.Add("generalJobs", false); //high level in job 
-      /*  characterFlags.Add("selfMadeCube", false);
+        characterFlags.Add("selfMadeCube", false);
 
-*/
 
 
 
@@ -134,7 +141,7 @@ public class InterestingCharacters : MonoBehaviour
     public bool HasJuicyMoralFacts()
     {
 
-        if (characterFlags["InLovewithspouseoffriend"] || characterFlags["pregnantbutnotfromspuceorbutloveintrest"]
+        if (characterFlags["InLovewithspouseoffriend"] || characterFlags["leftFotLoveIntrest"]
             || characterFlags["butcherRole"] || characterFlags["IsRichButNotGenrous"])
         {
             return true;
@@ -173,8 +180,17 @@ public class InterestingCharacters : MonoBehaviour
 
     public string GetStringTranslation(string key) //CHANGE THIS INTO regExp //post it note usage
     {
+
+
+
         switch (key)
         {
+            case ("MovesAlot"):
+                return "they sure moved alot before coming to this comunity";
+            case ("SusMovments"):
+                return "they have  some odd behavior....";
+            case ("startedAfamilyAtAyoungAge"):
+                return "rasing a family and oh so young";
             case ("departed"):
                 return "apparently, they moved out of this town";
             case ("familyPerson"):
@@ -200,11 +216,11 @@ public class InterestingCharacters : MonoBehaviour
             case ("loner"):
                 return "this shape likes to keep to themselves";
 
-            case ("pregnantbutnotengaged"):
-                return "this shape is expecting";
+            case ("likesToDate"):
+                return "this shape apparently likes to date alot...";
 
-            case ("pregnantbutnotfromspuceorbutloveintrest"):
-                return "this shape is an adulturer ";
+            case ("leftFotLoveIntrest"):
+                return "this shape left their partner for notions of love?";
             case ("hasAbestFriend"):
                 return "this shape has a best friend";
 
@@ -245,6 +261,7 @@ public class InterestingCharacters : MonoBehaviour
                  return "this shape managed to level up their career!";
 
             case ("hardWorker"):
+            case("selfMadeCubeByDedication"):
                 return "this shape is such a go getter! ";
 
             case ("CustodianJobs"):
