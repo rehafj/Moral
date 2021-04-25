@@ -577,9 +577,9 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                 node.IntroducingATopicdialoug =
                     getIntroductionTopicString(kvp.Key, character); //unbaised opening statment  --- this is actually yr inytoduction text 
               
-                node.agreementText = getInitialCNPCOpinionAsDialoug(kvp.Key, character);//general feelings about a topic  --- this is actually high 
+                node.agreementText = getInitialCNPCOpinionAsDialoug(kvp.Key, character, "");//general feelings about a topic  --- this is actually high 
 
-                node.disagreementText = getInitialCNPCOpinionAsDialoug(kvp.Key, character);//nope - con here is as in low.... 
+                node.disagreementText = getInitialCNPCOpinionAsDialoug(kvp.Key, character, "");//nope - con here is as in low.... 
                 node.ButtonText = setPlayerButtonText(kvp.Key);
                 nodes.Add(node);
 
@@ -631,8 +631,8 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     //1
     private string getInitialCNPCOpinionAsDialoug(string key, InterestingCharacters character, string flag)
     {//this is hard coded for now but later send in the conversational character (talking with )
-       /* Debug.Log("currentCNPC.ConvCharacterMoralFactors[mapToCNPCMoralFactor(key)] issss"
-            + mapToCNPCMoralFactor(key));*/
+       
+     
         switch (currentCNPC.ConvCharacterMoralFactors[mapToCNPCMoralFactor(key)])
         {
             case ConversationalCharacter.RatingVlaues.High:
@@ -650,7 +650,8 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         throw new NotImplementedException();
     }
 
-    private string mapToCNPCMoralFactor(string key)
+    private string mapToCNPCMoralFactor(string key) // make sure those mappings happen where no two opposing cases match --- probably move this into it's own list
+        //this is 1 to 1 - need to change to 1 to many, move into qa nother script and rewrite it.
     {
         switch (key)
         {
@@ -665,6 +666,8 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                 }
             case ("MovesAlot"):
                 return "LandISWhereThehrtIS";
+            case ("likesToDate"):
+                return "BTrueTYourHeart";
             case ("SusMovments"):
                 return "NiaeveteIsFiction";
             case ("selfMadeCube"):
@@ -677,14 +680,13 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                 return "FamilyPerson";
 
             case ("InLovewithspouseoffriend"):
-            case ("likesToDate"):
             case ("leftFotLoveIntrest"):
             case ("InLoveWirhAnothersspuce"):
             case ("WillActOnLove"):
                 return "BTrueTYourHeart";
 
             case ("socialLife"):
-            case "FriendsAreTheJoyOFlife":
+            case ("FriendsAreTheJoyOFlife"):
             case ("friendwithabestfriendsenemy"):
             case ("hasAbestFriend"):
                 return "FriendsAreTheJoyOFlife";
@@ -694,6 +696,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                 return "Loner";
 
             case ("IsWealthy"):
+                return "MoneyMaker";
             case ("IsRichButNotGenrous"):
             case ("flipflop"):
                 return "CarrerAboveAll";//add another klind of value here 
@@ -703,6 +706,8 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                 return "Teetotasler";
             case ("healerRole"):
             case ("CustodianJobs"):
+            case ("generalJobs"):
+
                 return "CarrerAboveAll";//change this into supporitng roles...
             case ("Teachingrole"):
                 return "SchoolIsCool";
@@ -720,44 +725,75 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             case ("MoneyMaker"):
                 return "SupportingComunities";//change this
             case ("SchoolIsCool"):
+                return "SchoolIsCool";
             case ("butcherRole"):
-                return "AnimalLover";
+                return "AnimalLoverAnti";
             case ("notworkingandrich"):
+                return "MoneyMaker";
+
             case ("adultbutnotworking"):
+                return "WeLiveForSpontaneity";
             case ("widowedbutnotgrieving"):
+                if (UnityEngine.Random.Range(0, 6) >= 3)
+                {
+                    return "BTrueTYourHeart";
+                }
+                else
+                {
+                    return "LoveIsForFools";
+                }
             case ("exploteative"):
+                return "MoneyMaker";
             case ("graduate"):
+                return "SchoolIsCool";
             case ("hasalotofenemies"):
-            case ("generalJobs"):
 
                 return "Loner";////these do not have anything tied to em, need to update this
 
             case ("worksWithFamily"):
+                return "FamilyPerson";
             case ("hiredByAFamilymember"):
+                return "FamilyPerson";
             case ("getsFiredAlot"):
-            case ("RetiredYoung"):
-            case ("DiedBeforeRetired"):
-            case ("DevorcedManyPeople"):
+                return "suchUncharactristicBehaviorOhMy";
 
+            case ("RetiredYoung"):
+                return "suchUncharactristicBehaviorOhMy";
+            case ("DiedBeforeRetired"):
+                return "MoneyMaker";
+            case ("DevorcedManyPeople"):
+                return "BTrueTYourHeart";
+            case ("marriedSomoneOlder"):
+                return "BTrueTYourHeart";
             case ("marriedForLifeStyleNotLove"):
+                return "LoveIsForFools";
             case ("AdventureSeeker"):
+                return "AnAdventureWeSeek";
             case ("liklyToHelpTheHomeless"):
+                return "SupportingComunities";
             case ("isolated"):
+                return "Loner";
             case ("WantsArtAsJob"):
             case ("ButcherButRegretful"):
+                return "AnimalLoverAnti";
             case ("TooTrustingOfEnemies"):
+                return "NiaeveteIsFiction";
+            case ("reserved"):
+                return "WeArewNothingIfWeAreNotReserved";
+            case ("conventional"):
+                return "WeArewNothingIfWeAreNotReserved";
+
+            case ("likedToExperinceCulture"):
+                return "ImmagretsWeGetTheJobDone";
             case ("ArtSeller"):
           
-            case ("likedToExperinceCulture"):
             case ("doesNotGiveToThoseInNeed"):
+                return "MoneyMaker";
             case ("supportsImmigration"):
-            case ("conventional"):
-            case ("reserved"):
-         //   case ("selfMadeCubeByDedication"):
+                return "ImmagretsWeGetTheJobDone";
 
-                return "TBD";
             default:
-                return "unknown";
+                return "ImmagretsWeGetTheJobDone";
                 //return "missed a tag SOMEWHERE!" + key;
 
         }
@@ -865,7 +901,6 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
             case ("polluterRole"):
             case ("Enviromentalist"):
-                //Debug.Log("wooooooow "+ key);
                 return "You know what I want to talk about!" + character.fullName + "\'s job! \n I think they work as " + character.Lastoccupation;
             case ("selfMadeCube"):
             case ("selfMadeCubeByDedication"):
@@ -891,36 +926,59 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
             case ("MovesAlot"):
                 return "apparently this shape never settles down, they sure moved alot ";
+                
             case ("SusMovments"):
                 return "shapes whisper that  " + character.fullName + " is quite odd";
 
             case ("notworkingandrich"):
             case ("adultbutnotworking"):
-            case ("widowedbutnotgrieving"):
-            case ("exploteative"):
+                return "odd, wonder how "+ character.fullName +"manages to live without working...";
 
+            case ("widowedbutnotgrieving"):
+                return "it's weird but shapes said that...\n" + character.fullName + " \n" + "hardly grieved at the loss of their partner";
+
+            case ("exploteative"):
+                return "hmmm...\n"+ character.fullName+" \n" + "there are rumors on how sly that shape is, they know how to work a room!";
 
 
 
             case ("graduate"):
+                return "I heard that this cube graduated from a good shapesity ";
             case ("worksWithFamily"):
             case ("hiredByAFamilymember"):
+                return "apparently, this cube works with their family...";
             case ("getsFiredAlot"):
+                return "oh boy, wonder why this cube always gets canned";
             case ("RetiredYoung"):
+                return "how DID They retire that young!";//maybe add age here 
             case ("DiedBeforeRetired"):
+                return "it's so sad, but " + character.fullName + "died before retiring";
             case ("DevorcedManyPeople"):
+                return "I wonder why that shape left/devorced so many partners";
+            case ("marriedSomoneOlder"):
+                return "they settled down with an older partner";
             case ("marriedForLifeStyleNotLove"):
+                return "rumors say " + character.fullName + "does not love their partner...";
             case ("AdventureSeeker"):
+                return "ah to have an adventurur's heart";
             case ("liklyToHelpTheHomeless"):
+                return "I heard that this shape likes to volenteer at homeless shelters ";
             case ("isolated"):
+                return "this shape does not like to socilize, to a point where theya void other shapes";
             case ("WantsArtAsJob"):
             case ("ButcherButRegretful"):
+                return "this shape is a butcher but rumors say they hate their job";
             case ("TooTrustingOfEnemies"):
-            case ("ArtSeller"):
-            case ("likedToExperinceCulture"):
-            case ("doesNotGiveToThoseInNeed"):
-            case ("supportsImmigration"):
+                return "I do not know if" + character.fullName + "is Naieve or too kid but they are too trusting of their enemies";
             case ("conventional"):
+                return  character.fullName + "is conventional, they stick to their --- think of something...";
+            case ("likedToExperinceCulture"):
+                return character.fullName + " likes to experince diffrient cultures";
+            case ("ArtSeller"):
+            case ("doesNotGiveToThoseInNeed"):
+                return "you know, despite " + character.fullName + "being wealthy, they do not donate";
+            case ("supportsImmigration"):
+                return character.fullName + " is often known for their support of immigration";
             case ("reserved"):
           
                 return "NOTAUTHORED";
@@ -992,12 +1050,13 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
             case ("notworkingandrich"):
             case ("adultbutnotworking"):
-                return key + "NOT AUTHORED";
+                return "how do they live and not work?";
             case ("widowedbutnotgrieving"):
                 return "wonder why they are not grieving...";
             case ("exploteative"):
+                return " they know how to work a room";
             case ("graduate"):
-                return key + "NOT AUTHORED YET";
+                return "rthey graduated!";
             case ("hasalotofenemies"):
                 return "...they sure can't make friends";
             case ("generalJobs"):
@@ -1016,24 +1075,41 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             case ("SusMovments"):
                 return "shapes talk about how odd the shape is... ";
             case ("worksWithFamily"):
+                return "works with family..";
             case ("hiredByAFamilymember"):
+                return "hired by family...";
             case ("getsFiredAlot"):
+                return "cant keep a job...";
             case ("RetiredYoung"):
+                return "must be nice, retired at a young age";
             case ("DiedBeforeRetired"):
+                return "died while on the job";
             case ("DevorcedManyPeople"):
-
+                return "this shape devorced other shapes a significant number of times";
+            case ("marriedSomoneOlder"):
+                return "this shape married somone older";
             case ("marriedForLifeStyleNotLove"):
+                return "settled down for lifestyle";
             case ("AdventureSeeker"):
+                return "such an adventure seeker";
             case ("liklyToHelpTheHomeless"):
+                return "helps the homeless";
             case ("isolated"):
+                return "likes to stay alone";
             case ("WantsArtAsJob"):
             case ("ButcherButRegretful"):
+                return "regretful butcher";
             case ("TooTrustingOfEnemies"):
-            case ("ArtSeller"):
-            case ("likedToExperinceCulture"):
-            case ("doesNotGiveToThoseInNeed"):
-            case ("supportsImmigration"):
+                return "Too trusting of enemies";
             case ("conventional"):
+                return "conventional shape";
+            case ("likedToExperinceCulture"):
+                return "likes diff cultures";
+            case ("ArtSeller"):
+            case ("doesNotGiveToThoseInNeed"):
+                return "does not donate...";
+            case ("supportsImmigration"):
+                return " this shape is often foun dsupporting immagrents";
             case ("reserved"):
                 return "TBD";
 

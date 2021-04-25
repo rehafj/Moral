@@ -22,10 +22,17 @@ public class ConversationalCharacter : MonoBehaviour
 
     public Dictionary<string, RatingVlaues> ConvCharacterMoralFactors = new Dictionary<string, RatingVlaues>();
     //att 2 --- 
-    string[] keys = { "BTrueTYourHeart", "LoveIsForFools","MoneyMaker", "Enviromentalist", "EnviromentalistAnti","AnimalLover","AnimalLoverAnti",
-    "Teetotasler","TeetotaslerAnti","FamilyPerson"  ,"SchoolIsCool","youthAreTheFuture","schoolIsDrool","LoverOfRisks"   ,"ProHiringFamily"
-            ,"SupportingComunities", "LandISWhereThehrtIS","CarrerAboveAll", "suchUncharactristicBehaviorOhMy","WeLiveForSpontaneity","AnAdventureWeSeek","NiaeveteIsFiction",
-        "FriendsAreTheJoyOFlife","ImmagretsWeGetTheJobDone","WeArewNothingIfWeAreNotReserved","AselfMadeShapeWeAspireToBe","Shapesarenothingifnotsocial","AntiFaviortisum",
+    string[] keys = { "BTrueTYourHeart", "LoveIsForFools","MoneyMaker",
+        "Enviromentalist", "EnviromentalistAnti","AnimalLover",
+        "AnimalLoverAnti",
+    "Teetotasler","TeetotaslerAnti","FamilyPerson"  ,
+        "SchoolIsCool","youthAreTheFuture","schoolIsDrool",
+        "LoverOfRisks"   ,"ProHiringFamily"
+            ,"SupportingComunities", "LandISWhereThehrtIS","CarrerAboveAll",
+        "suchUncharactristicBehaviorOhMy","WeLiveForSpontaneity","AnAdventureWeSeek",
+        "NiaeveteIsFiction",
+        "FriendsAreTheJoyOFlife","ImmagretsWeGetTheJobDone","WeArewNothingIfWeAreNotReserved"
+            ,"AselfMadeShapeWeAspireToBe","Shapesarenothingifnotsocial","AntiFaviortisum",
         "Loner", };//removed trbd for now //29 total surface values 
 
     public StrictFatherMorality FatherModel ;
@@ -163,112 +170,3 @@ public class ConversationalCharacter : MonoBehaviour
 
 }
 
-
-
-/*//// { "BTrueTYourHeart", "LoveIsForFools","MoneyMaker", "Enviromentalist", "EnviromentalistAnti","AnimalLover","AnimalLoverAnti",
-"Teetotasler","TeetotaslerAnti","FamilyPerson"  ,"SchoolIsCool","youthAreTheFuture","schoolIsDrool","LoverOfRisks"   ,"ProHiringFamily"
-            ,"SupportingComunities", "LandISWhereThehrtIS","CarrerAboveAll", "suchUncharactristicBehaviorOhMy","WeLiveForSpontaneity","AnAdventureWeSeek","NiaeveteIsFiction",
-        "FriendsAreTheJoyOFlife","ImmagretsWeGetTheJobDone","WeArewNothingIfWeAreNotReserved","AselfMadeShapeWeAspireToBe","Shapesarenothingifnotsocial","AntiFaviortisum",
-        "Loner", };/*/
-/*
- * 
- * 
- * lis{"BTrueTYourHeart", 0 },
-        {"MoneyMaker", 0 },
-        {"Enviromentalist", 0 },
-        {"AnimalLover", 0 },
-        {"Teetotasler", 0 },
-        {"BeKind", 0 },
-        {"SchoolIsCool", 0 },
-        {"LoverOfRisks", 0 },
-        {"SupportingComunities", 0 },
-        {"LandISWhereThehrtIS", 0 },
-        {"CarrerAboveAll", 0 },
-        {"FriendsAreTheJoyOFlife", 0 },
-        {"Loner", 0 }
- * 
- * 
- * 
- * 
- * 
- *   foreach (string s in ConvCharacterMoralFactors.Keys)
-        {
-            ConvCharacterMoralFactors[s] = thirteenValues[i];
-            Debug.Log("???+ " + ConvCharacterMoralFactors[s]);
-            i++;
-        }
- * 
- * 
- * 
- * 
- * ConvCharacterMoralFactors.Add("BTrueTYourHeart", 0);
-ConvCharacterMoralFactors.Add("MoneyMaker", 0);
-ConvCharacterMoralFactors.Add("Enviromentalist", 0);
-ConvCharacterMoralFactors.Add("AnimalLover", 0);
-ConvCharacterMoralFactors.Add("Teetotasler", 0);
-ConvCharacterMoralFactors.Add("BeKind", 0);
-ConvCharacterMoralFactors.Add("SchoolIsCool", 0);
-ConvCharacterMoralFactors.Add("LoverOfRisks", 0);
-ConvCharacterMoralFactors.Add("SupportingComunities", 0);
-ConvCharacterMoralFactors.Add("LandISWhereThehrtIS", 0);
-ConvCharacterMoralFactors.Add("CarrerAboveAll", 0);
-ConvCharacterMoralFactors.Add("FriendsAreTheJoyOFlife", 0);
-ConvCharacterMoralFactors.Add("Loner", 0);*/
-
-
-/* public void checkContradictionsForSurfaceValues(string s )
-    {
-
-        /*   switch (s)
-           {
-               case ("Enviromentalist"):
-                   if(k.Value == RatingVlaues.High)
-                   {
-                       ConvCharacterMoralFactors["EnviromentalistAnti"] = RatingVlaues.Low;
-                   }else
-                   {
-                       ConvCharacterMoralFactors["EnviromentalistAnti"] = RatingVlaues.High;
-                   } break;
-
-               case ("LoveIsForFools"):
-                   if (k.Value == RatingVlaues.High)
-                   {
-                       ConvCharacterMoralFactors["BTrueTYourHeart"] = RatingVlaues.Low;
-                   }
-                   else
-                   {
-                       ConvCharacterMoralFactors["BTrueTYourHeart"] = RatingVlaues.High;
-                   }break;
-               case ("AnimalLover"):
-                   if (k.Value == RatingVlaues.High)
-                   {
-                       ConvCharacterMoralFactors["AnimalLoverAnti"] = RatingVlaues.Low;
-                   }
-                   else
-                   {
-                       ConvCharacterMoralFactors["AnimalLoverAnti"] = RatingVlaues.High;
-                   } break;
-               case ("Teetotasler"):
-                   if (k.Value == RatingVlaues.High)
-                   {
-                       ConvCharacterMoralFactors["EnviromentalistAnti"] = RatingVlaues.Low;
-                   }
-                   else
-                   {
-                       ConvCharacterMoralFactors["EnviromentalistAnti"] = RatingVlaues.High;
-                   }break;
-               case ("SchoolIsCoolschoolIsDrool"):
-                   if (k.Value == RatingVlaues.High)
-                   {
-                       ConvCharacterMoralFactors["schoolIsDrool","EnviromentalistAnti","AnimalLoverAnti",LoveIsForFools] = RatingVlaues.Low;
-                   }
-                   else
-                   {
-                       ConvCharacterMoralFactors["schoolIsDrool"] = RatingVlaues.High;
-                   } break;*/
-
-        // } */
-    
-    /*  Debug.Log("check these values out : EnviromentalistAnti " + ConvCharacterMoralFactors["EnviromentalistAnti"] + "and ebviromentalist" +
-          ConvCharacterMoralFactors["Enviromentalist"] + "school is cool followed by drool " + ConvCharacterMoralFactors["SchoolIsCool"] + ConvCharacterMoralFactors["schoolIsDrool"]);*/
-    

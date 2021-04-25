@@ -46,45 +46,38 @@ public class InterestingCharacters : MonoBehaviour
         characterFlags.Add("IsWealthy", false);//found 
         characterFlags.Add("startedAfamilyAtAyoungAge", false);//
         characterFlags.Add("MovesAlot", false);
-        characterFlags.Add("SusMovments", false);//
+        characterFlags.Add("SusMovments", false);
+        characterFlags.Add("getsFiredAlot ", false);
+        characterFlags.Add("worksWithFamily", false);
+        characterFlags.Add("hiredByAFamilymember", false);//as a favor 
+        characterFlags.Add("RetiredYoung", false);
+        characterFlags.Add("DiedBeforeRetired", false);
+        characterFlags.Add("DevorcedManyPeople", false);
+        characterFlags.Add("marriedSomoneOlder", false);
+        characterFlags.Add("marriedForLifeStyleNotLove", false);
+        characterFlags.Add("selfMadeCubeByDedication", false);
 
-
-        //    
-        /*     characterFlags.Add("worksWithFamily", false);
-
-             characterFlags.Add("hiredByAFamilymember", false);//as a favor 
-             characterFlags.Add("getsFiredAlot", false);
-             characterFlags.Add("RetiredYoung", false);
-             characterFlags.Add("DiedBeforeRetired", false);
-             characterFlags.Add("DevorcedManyPeople", false);
-             characterFlags.Add("marriedForLifeStyleNotLove", false); //what can i infer if a person is both conventional and reserved, kinda worried about topics...?
-
-     
-         
-         
-            "startedAfamilyAtAyoungAge"
-        "MovesAlot"
-        "SusMovments"
-
-         
-         */
+    
         //personalityrelated 
         characterFlags.Add("WillActOnLove", false);
         characterFlags.Add("IsRichButNotGenrous", false);
-  /*      characterFlags.Add("AdventureSeeker", false);
+        characterFlags.Add("AdventureSeeker", false);
         characterFlags.Add("liklyToHelpTheHomeless", false);
         characterFlags.Add("isolated", false);
-        characterFlags.Add("WantsArtAsJob", false);
         characterFlags.Add("ButcherButRegretful", false);
         characterFlags.Add("TooTrustingOfEnemies", false);
-        characterFlags.Add("ArtSeller", false);
-        characterFlags.Add("likedToExperinceCulture", false);
-        characterFlags.Add("doesNotGiveToThoseInNeed", false);//.i.e does not support comun
-        characterFlags.Add("supportsImmigration", false);
-        characterFlags.Add("conventional", false);
         characterFlags.Add("reserved", false);
+        characterFlags.Add("conventional", false);
+        characterFlags.Add("likedToExperinceCulture", false);
+        characterFlags.Add("supportsImmigration", false);
+        characterFlags.Add("doesNotGiveToThoseInNeed", false);
+        /*      
+             
+              characterFlags.Add("WantsArtAsJob", false);
+            
+              characterFlags.Add("ArtSeller", false);
 
-*/
+      */
 
 
 
@@ -92,7 +85,7 @@ public class InterestingCharacters : MonoBehaviour
 
 
         //job based
-        // characterFlags.Add("nepotism", false);//TODO hired as favor and by family (check company former owner) 
+        // characterFlags.Add("nepotism", false);/TODO NEED TO DO THIS ONE.... 
         characterFlags.Add("flipflop", false);//found
         characterFlags.Add("WorksInAlcohol", false); //found
         characterFlags.Add("healerRole", false);//found
@@ -105,20 +98,6 @@ public class InterestingCharacters : MonoBehaviour
         characterFlags.Add("CustodianJobs", false); //high level in job 
         characterFlags.Add("generalJobs", false); //high level in job 
         characterFlags.Add("selfMadeCube", false);
-
-
-
-
-
-        //add more things...
-
-
-
-        //pregnancy low age 
-        // downer - prone to negative emotions 
-        //art ? 
-        // 
-
 
 
     }
@@ -176,8 +155,21 @@ public class InterestingCharacters : MonoBehaviour
         
     }
 
+    public bool isLoverPartner() {
+        if (LoveTraingleIfOthersAreMarried.LovedOneID == LoveTraingleIfOthersAreMarried.OtherPersonID)
+        {
+
+            return true;
+        }
+        else return false;
+    }
 
 
+    /// <summary>
+    /// it's mainly used for flags on the postage/information on the player information book
+    /// </summary>
+    /// <param name="key"></param>
+    /// <returns></returns>
     public string GetStringTranslation(string key) //CHANGE THIS INTO regExp //post it note usage
     {
 
@@ -185,6 +177,41 @@ public class InterestingCharacters : MonoBehaviour
 
         switch (key)
         {
+            case ("doesNotGiveToThoseInNeed"):
+                return "despite being wealthy, this shape does not donate to those in need";
+            case ("supportsImmigration"):
+                return "this shape often supports immagrents";
+            case ("likedToExperinceCulture"):
+                return " this shape likes to travel and experince cultures";
+            case ("RetiredYoung"):
+                return "retied at a young age";
+            case ("hiredByAFamilymember"):
+                return "this shape was hired by a family member";
+            case ("worksWithFamily"):
+            return "this shape works with their family";
+            case ("getsFiredAlot"):
+                return "this shape gets fired alot ";
+            case ("conventional"):
+                return "this shape is quite conventional";
+            case ("reserved"):
+                return "thius shape is reserved";
+            case ("TooTrustingOfEnemies"):
+                return "Some might say this shape is too gulible, they are too trusting of those who mean them harm";
+            case ("ButcherButRegretful"):
+                return "this shape works as a butcher but they hate thier job";
+            case ("isolated"):
+                return "this shape prefers to stay alone, kinda dislikes social stuff";
+            case ("liklyToHelpTheHomeless"):
+                return "this shape seems to volenteer and help those less fourtunate";
+            case ("AdventureSeeker"):
+                return "they seem to have an adventureur\'s heart";
+            case ("marriedForLifeStyleNotLove"):
+                return "they seem to have not married for love";
+            case ("marriedSomoneOlder"):
+                return "they settled down with an older partner";
+            case ("DevorcedManyPeople"):
+                return "this shape went through so many devorces";
+
             case ("MovesAlot"):
                 return "they sure moved alot before coming to this comunity";
             case ("SusMovments"):
@@ -212,7 +239,8 @@ public class InterestingCharacters : MonoBehaviour
 
             case ("notworkingandrich"):
                 return "this shape is so rich and they do not  work";
-
+            case ("DiedBeforeRetired"):
+                return "died before retirment!";
             case ("loner"):
                 return "this shape likes to keep to themselves";
 
@@ -261,6 +289,7 @@ public class InterestingCharacters : MonoBehaviour
                  return "this shape managed to level up their career!";
 
             case ("hardWorker"):
+            case ("selfMadeCube"):
             case("selfMadeCubeByDedication"):
                 return "this shape is such a go getter! ";
 
@@ -269,6 +298,8 @@ public class InterestingCharacters : MonoBehaviour
 
             case ("generalJobs"):
                 return "this shape is in the work force";
+            case ("exploteative"):
+                return "this shape is knda crafty! they know how to work a room ";
             default:
                 return "nill";
 
@@ -282,31 +313,3 @@ public class InterestingCharacters : MonoBehaviour
 
 
 
-
-/*
- 
- 
- things found as true so far: 
-social life
-has a best friend
-flipflop 
-teacherrole
-familyperson
-has alot of enemies
-butcher role
-advanced careers
-works in alchaol 
-pulluter role 
-departed
-general jobs 
-widdowed but not greiving 
-custodian 
-healer
-risk taker
-pregnant but not engaged 
-
- 
-
-
-
- */
