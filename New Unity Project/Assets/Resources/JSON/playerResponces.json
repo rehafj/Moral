@@ -680,8 +680,8 @@
 		"key": "Enviromentalist",
 		"rating": "High",
 		"playerInAgreementText": "No doubt! Mother nature comes first.",
-		"playerDisagreementText": "You can/’t be serious! You/'ve been fed lies.",
-		"playerMoralDisagreementText": ["I mean we all have to adapt to survive so I don/'t really see your point.", "That/'s so dramatic! Homes change and we just need to change accordingly."],
+		"playerDisagreementText": "You can’t be serious! You've been fed lies.",
+		"playerMoralDisagreementText": ["I mean we all have to adapt to survive so I don't really see your point.", "That's so dramatic! Homes change and we just need to change accordingly."],
 		"playerDisAgreementOnAflag": [{
 				"flag": "InLovewithspouseoffriend",
 				"textValue": "text for the flag"
@@ -905,7 +905,7 @@
 		"key": "EnviromentalistAnti",
 		"rating": "High",
 		"playerInAgreementText": "I agree with you 100 percent! You put logic first!",
-		"playerDisagreementText": "No way! Your idealistic worldview is what/'s destroying us.",
+		"playerDisagreementText": "No way! Your idealistic worldview is what's destroying us.",
 		"playerMoralDisagreementText": ["Well but we can do better! Things change and we should too.", "Do we though? Sometimes they are not tough choices but lazy ones."],
 		"playerDisAgreementOnAflag": [{
 				"flag": "InLovewithspouseoffriend",
@@ -1131,7 +1131,7 @@
 		"rating": "High",
 		"playerInAgreementText": "Exactly! Animals are out best friends.",
 		"playerDisagreementText": "That's sad. Clearly you lack empathy.",
-		"playerMoralDisagreementText": ["That/'s so dramatic! I mean the strong ones will survive!", "I/'m sure shapes come first! We have to eat after all."],
+		"playerMoralDisagreementText": ["That's so dramatic! I mean the strong ones will survive!", "I'm sure shapes come first! We have to eat after all."],
 		"playerDisAgreementOnAflag": [{
 				"flag": "InLovewithspouseoffriend",
 				"textValue": "text for the flag"
@@ -1806,7 +1806,7 @@
 		"rating": "High",
 		"playerInAgreementText": "YES! How can any shape think clearly with a booze head.",
 		"playerDisagreementText": "WHAT?! BOO you are a bummer.",
-		"playerMoralDisagreementText": ["But booze makes you so much happier.", "Because they wanto to and feels good? Why are you trying to control others/' choices. "],
+		"playerMoralDisagreementText": ["But booze makes you so much happier.", "Because they wanto to and feels good? Why are you trying to control others' choices. "],
 		"playerDisAgreementOnAflag": [{
 				"flag": "InLovewithspouseoffriend",
 				"textValue": "text for the flag"
@@ -2705,8 +2705,8 @@
 		"key": "SupportingComunities",
 		"rating": "High",
 		"playerInAgreementText": "No doubt! You gotta nurture your support system!",
-		"playerDisagreementText": "That/'s sad. You must never felt the warmth of a loving community.",
-		"playerMoralDisagreementText": ["That/'s so much work and you can/'t just trust someone because you are in the same community.", "Sure in a perfect world where every shape has the best intention. But that/'s not always the case."],
+		"playerDisagreementText": "That's sad. You must never felt the warmth of a loving community.",
+		"playerMoralDisagreementText": ["That's so much work and you can't just trust someone because you are in the same community.", "Sure in a perfect world where every shape has the best intention. But that's not always the case."],
 		"playerDisAgreementOnAflag": [{
 				"flag": "InLovewithspouseoffriend",
 				"textValue": "text for the flag"
@@ -2930,8 +2930,8 @@
 		"key": "LoverOfRisks",
 		"rating": "High",
 		"playerInAgreementText": "Absolutely! A little risk never hurts!",
-		"playerDisagreementText": "HA. That/'s a no for me! I still want to live. ",
-		"playerMoralDisagreementText": ["But there/'s saftly in steady routine. Why change if it ain/'t broken.", "I am sure I can. But life is short so why rush by risking it?"],
+		"playerDisagreementText": "HA. That's a no for me! I still want to live. ",
+		"playerMoralDisagreementText": ["But there's saftly in steady routine. Why change if it ain't broken.", "I am sure I can. But life is short so why rush by risking it?"],
 		"playerDisAgreementOnAflag": [{
 				"flag": "InLovewithspouseoffriend",
 				"textValue": "text for the flag"
@@ -3156,7 +3156,7 @@
 		"rating": "High",
 		"playerInAgreementText": "That's SO true! Land is truly where the heart is.",
 		"playerDisagreementText": "Really? Are you really gonna be happy with never seeing the world?",
-		"playerMoralDisagreementText": ["Shaoes go on journeys to find themselves. The world is so much bigger than just what you know.", "That/'s not true. You can't know yourself if you only stick with what/'s familiar."],
+		"playerMoralDisagreementText": ["Shaoes go on journeys to find themselves. The world is so much bigger than just what you know.", "That's not true. You can't know yourself if you only stick with what's familiar."],
 		"playerDisAgreementOnAflag": [{
 				"flag": "InLovewithspouseoffriend",
 				"textValue": "text for the flag"
@@ -3379,9 +3379,9 @@
 	"playerNarrativeElements": {
 		"key": "CarrerAboveAll",
 		"rating": "High",
-		"playerInAgreementText": "I/'m on board 100 percent! Career is so important!",
-		"playerDisagreementText": "That seems really sad for me... I don/'t live to work.",
-		"playerMoralDisagreementText": ["There/'s a lot more to life besides working.", "Sure, but every shape defines legacy differently."],
+		"playerInAgreementText": "I'm on board 100 percent! Career is so important!",
+		"playerDisagreementText": "That seems really sad for me... I don't live to work.",
+		"playerMoralDisagreementText": ["There's a lot more to life besides working.", "Sure, but every shape defines legacy differently."],
 		"playerDisAgreementOnAflag": [{
 				"flag": "InLovewithspouseoffriend",
 				"textValue": "text for the flag"
@@ -3605,7 +3605,7 @@
 		"key": "FriendsAreTheJoyOFlife",
 		"rating": "High",
 		"playerInAgreementText": "Friends are so so important!",
-		"playerDisagreementText": "I'/m sorry to hear that. Maybe try make some good and real friends?",
+		"playerDisagreementText": "I'm sorry to hear that. Maybe try make some good and real friends?",
 		"playerMoralDisagreementText": ["Well... not for a self sufficient shape. Too many friends can be a lot of work.", "I mean you can also try to find happiness in being alone."],
 		"playerDisAgreementOnAflag": [{
 				"flag": "InLovewithspouseoffriend",
@@ -3830,7 +3830,7 @@
 		"key": "Loner",
 		"rating": "High",
 		"playerInAgreementText": "How I love some sweet solitude!",
-		"playerDisagreementText": "You know. Being a lone wolf dosen/'t make you cool.",
+		"playerDisagreementText": "You know. Being a lone wolf dosen't make you cool.",
 		"playerMoralDisagreementText": ["It seems sad to be comfortable being alone! ", "I mean good friends will help you and be there for you!"],
 		"playerDisAgreementOnAflag": [{
 				"flag": "InLovewithspouseoffriend",
@@ -4055,7 +4055,7 @@
 		"key": "youthAreTheFuture",
 		"rating": "High",
 		"playerInAgreementText": "Right?! They are future!",
-		"playerDisagreementText": "You for sure?! That/'s so much pressure on them!",
+		"playerDisagreementText": "You for sure?! That's so much pressure on them!",
 		"playerMoralDisagreementText": ["Not really, young shapes are not responsible enough to understand the weight of their actions.", "I think you are putting too much pressure on the young to make those changes."],
 		"playerDisAgreementOnAflag": [{
 				"flag": "InLovewithspouseoffriend",
@@ -4281,7 +4281,7 @@
 		"rating": "High",
 		"playerInAgreementText": "Exactly! Family comes first no matter what!",
 		"playerDisagreementText": "WHAT?! I would never work where you work.",
-		"playerMoralDisagreementText": ["Is it really? I mean trust is earned and you can build trust with any shape!", "That/'s paranoid... Only a few shapes are as shady as you think."],
+		"playerMoralDisagreementText": ["Is it really? I mean trust is earned and you can build trust with any shape!", "That's paranoid... Only a few shapes are as shady as you think."],
 		"playerDisAgreementOnAflag": [{
 				"flag": "InLovewithspouseoffriend",
 				"textValue": "text for the flag"
@@ -4504,9 +4504,9 @@
 	"playerNarrativeElements": {
 		"key": "suchUncharactristicBehaviorOhMy",
 		"rating": "High",
-		"playerInAgreementText": "That/'s so wonderful to hear! I wish shapes can just be normal.",
+		"playerInAgreementText": "That's so wonderful to hear! I wish shapes can just be normal.",
 		"playerDisagreementText": "How disgracful! Such a plebeian mentality.",
-		"playerMoralDisagreementText": ["Not for all of us! It'/s just a form of social control and you are too blind to see it.", "Or they simply felt repressed by the norm and they had the courage to do something about it."],
+		"playerMoralDisagreementText": ["Not for all of us! It's just a form of social control and you are too blind to see it.", "Or they simply felt repressed by the norm and they had the courage to do something about it."],
 		"playerDisAgreementOnAflag": [{
 				"flag": "InLovewithspouseoffriend",
 				"textValue": "text for the flag"
@@ -4956,7 +4956,7 @@
 		"rating": "High",
 		"playerInAgreementText": "You have a heart of a true adventurer.",
 		"playerDisagreementText": "Wait! Don't say no to adventure!!",
-		"playerMoralDisagreementText": ["That seems very idealistic... and too insipirational quote like.", "You can/'t find a sense of belonging by just building relationships around you?"],
+		"playerMoralDisagreementText": ["That seems very idealistic... and too insipirational quote like.", "You can't find a sense of belonging by just building relationships around you?"],
 		"playerDisAgreementOnAflag": [{
 				"flag": "InLovewithspouseoffriend",
 				"textValue": "text for the flag"
@@ -5180,8 +5180,8 @@
 		"key": "NiaeveteIsFiction",
 		"rating": "High",
 		"playerInAgreementText": "Exactly! You know how the world works!",
-		"playerDisagreementText": "You can/'t be that naive right?!",
-		"playerMoralDisagreementText": ["I/'m sorry you feel that way. But not all shapes are bad.", "That/'s a cynical view of the world... Too grim for my taste."],
+		"playerDisagreementText": "You can't be that naive right?!",
+		"playerMoralDisagreementText": ["I'm sorry you feel that way. But not all shapes are bad.", "That's a cynical view of the world... Too grim for my taste."],
 		"playerDisAgreementOnAflag": [{
 				"flag": "InLovewithspouseoffriend",
 				"textValue": "text for the flag"
@@ -5406,7 +5406,7 @@
 		"rating": "High",
 		"playerInAgreementText": "That's so true! We were all immigrants at one point!",
 		"playerDisagreementText": "Nope. You just open the gate to chaos.",
-		"playerMoralDisagreementText": ["WE built this place! What did the outsiders do for us?", "Not all of them are bad, but they could be becasuse we don/'t know them. "],
+		"playerMoralDisagreementText": ["WE built this place! What did the outsiders do for us?", "Not all of them are bad, but they could be becasuse we don't know them. "],
 		"playerDisAgreementOnAflag": [{
 				"flag": "InLovewithspouseoffriend",
 				"textValue": "text for the flag"
@@ -5854,7 +5854,7 @@
 	"playerNarrativeElements": {
 		"key": "AselfMadeShapeWeAspireToBe",
 		"rating": "High",
-		"playerInAgreementText": "You knwo what/'s up!! You gotta work for what you want!",
+		"playerInAgreementText": "You knwo what's up!! You gotta work for what you want!",
 		"playerDisagreementText": "I totally disagree! Not everyone needs to be like that.",
 		"playerMoralDisagreementText": ["Well I maen by being a hard working shape and a good shape?", "Sure but life is so much bigger than just trying to leave an arbitrary mark."],
 		"playerDisAgreementOnAflag": [{
@@ -6080,7 +6080,7 @@
 		"key": "Shapesarenothingifnotsocial",
 		"rating": "High",
 		"playerInAgreementText": "Very strong argument! I love your open heart!",
-		"playerDisagreementText": "That/'s not true AT ALL!",
+		"playerDisagreementText": "That's not true AT ALL!",
 		"playerMoralDisagreementText": ["Well not all happy shapes are open.", "That seems too simplitic. I mean you can't judge shapes based on those things."],
 		"playerDisAgreementOnAflag": [{
 				"flag": "InLovewithspouseoffriend",
@@ -6305,8 +6305,8 @@
 		"key": "AntiFaviortisum",
 		"rating": "High",
 		"playerInAgreementText": "I totally agree with you on this! You have to build trust on something!",
-		"playerDisagreementText": "No way! You really don/'t get how the real world works.",
-		"playerMoralDisagreementText": ["That/'s way too black and white! How do you know if they are NOT the right shape for the job?!", "Again, you are being too extreme. I think sometimes it/'s important to put people you trust in important positions."],
+		"playerDisagreementText": "No way! You really don't get how the real world works.",
+		"playerMoralDisagreementText": ["That's way too black and white! How do you know if they are NOT the right shape for the job?!", "Again, you are being too extreme. I think sometimes it's important to put people you trust in important positions."],
 		"playerDisAgreementOnAflag": [{
 				"flag": "InLovewithspouseoffriend",
 				"textValue": "text for the flag"
@@ -6984,7 +6984,7 @@
 "playerNarrativeElements": {
 "key": "LoveIsForFools",
 "rating": "Mid",
-"playerInAgreementText": "I couldn/'t agree with you more.",
+"playerInAgreementText": "I couldn't agree with you more.",
 "playerDisagreementText": "I'm not sure about that.",
 "playerMoralDisagreementText": ["But how do you know if you dont keep your heart open?", "You don't want to love some shape just because you feel deeply about them?"],
 "playerDisAgreementOnAflag": [{
@@ -7209,7 +7209,7 @@
 "playerNarrativeElements": {
 "key": "LoveIsForFools",
 "rating": "Low",
-"playerInAgreementText": "I couldn/'t agree with you more.",
+"playerInAgreementText": "I couldn't agree with you more.",
 "playerDisagreementText": "I'm not sure about that.",
 "playerMoralDisagreementText": ["But how do you know if you dont keep your heart open?", "You don't want to love some shape just because you feel deeply about them?"],
 "playerDisAgreementOnAflag": [{
@@ -7661,7 +7661,7 @@
   "rating": "Mid",
   "playerInAgreementText": "No doubt about it! ",
   "playerDisagreementText": "That's not always true.",
-  "playerMoralDisagreementText": ["I mean we all have to adapt to survive so I don/'t really see your point.", "That/'s so dramatic! Homes change and we just need to change accordingly."],
+  "playerMoralDisagreementText": ["I mean we all have to adapt to survive so I don't really see your point.", "That's so dramatic! Homes change and we just need to change accordingly."],
   "playerDisAgreementOnAflag": [{
       "flag": "InLovewithspouseoffriend",
       "textValue": "text for the flag"
@@ -8110,8 +8110,8 @@
   "key": "AnimalLover",
   "rating": "Mid",
   "playerInAgreementText": "You have a point there.",
-  "playerDisagreementText": "I don/'t think you are empathetic enough to get it.",
-  "playerMoralDisagreementText": ["That/'s so dramatic! I mean the strong ones will survive!", "I/'m sure shapes come first! We have to eat after all."],
+  "playerDisagreementText": "I don't think you are empathetic enough to get it.",
+  "playerMoralDisagreementText": ["That's so dramatic! I mean the strong ones will survive!", "I'm sure shapes come first! We have to eat after all."],
   "playerDisAgreementOnAflag": [{
       "flag": "InLovewithspouseoffriend",
       "textValue": "text for the flag"
@@ -8335,7 +8335,7 @@
   "key": "AnimalLoverAnti",
   "rating": "Mid",
   "playerInAgreementText": "You make a strong case my friend.",
-  "playerDisagreementText": "I/'m afraid I disagree. At least in practice.",
+  "playerDisagreementText": "I'm afraid I disagree. At least in practice.",
   "playerMoralDisagreementText": ["You are too blind to see the effect of your selfishness.", "But we have evolved so much and we CAN do better."],
   "playerDisAgreementOnAflag": [{
       "flag": "InLovewithspouseoffriend",
@@ -8561,7 +8561,7 @@
   "key": "AnimalLoverAnti",
   "rating": "Low",
   "playerInAgreementText": "You make a strong case my friend.",
-  "playerDisagreementText": "I/'m afraid I disagree. At least in practice.",
+  "playerDisagreementText": "I'm afraid I disagree. At least in practice.",
   "playerMoralDisagreementText": ["You are too blind to see the effect of your selfishness.", "But we have evolved so much and we CAN do better."],
   "playerDisAgreementOnAflag": [{
       "flag": "InLovewithspouseoffriend",
@@ -9012,7 +9012,7 @@
   "key": "Teetotasler",
   "rating": "Mid",
   "playerInAgreementText": "I have to side with alcohol on this one.",
-  "playerDisagreementText": "I/'d say the exact opposite.",
+  "playerDisagreementText": "I'd say the exact opposite.",
   "playerMoralDisagreementText": ["And a recipe for diaster.", "There are so many other ways to relax and drinking is just the lazy option."],
   "playerDisAgreementOnAflag": [{
       "flag": "InLovewithspouseoffriend",
@@ -9236,9 +9236,9 @@
 "playerNarrativeElements": {
   "key": "TeetotaslerAnti",
   "rating": "Mid",
-  "playerInAgreementText": "That/'s exactly how I feel. Glad to hear it..",
-  "playerDisagreementText": "Not necessarily. Don/'t be a bummer.",
-  "playerMoralDisagreementText": ["But booze makes you so much happier.", "Because they wanto to and feels good? Why are you trying to control others/' choices. "],
+  "playerInAgreementText": "That's exactly how I feel. Glad to hear it..",
+  "playerDisagreementText": "Not necessarily. Don't be a bummer.",
+  "playerMoralDisagreementText": ["But booze makes you so much happier.", "Because they wanto to and feels good? Why are you trying to control others' choices. "],
   "playerDisAgreementOnAflag": [{
       "flag": "InLovewithspouseoffriend",
       "textValue": "text for the flag"
@@ -9461,7 +9461,7 @@
 "playerNarrativeElements": {
   "key": "FamilyPerson",
   "rating": "Mid",
-  "playerInAgreementText": "I couldn/'t agree with you more. ",
+  "playerInAgreementText": "I couldn't agree with you more. ",
   "playerDisagreementText": "Are you sure about that?",
   "playerMoralDisagreementText": ["Not all families are supportive.", "A shape can have MANY support systems!"],
   "playerDisAgreementOnAflag": [{
@@ -9686,7 +9686,7 @@
 "playerNarrativeElements": {
   "key": "SchoolIsCool",
   "rating": "Mid",
-  "playerInAgreementText": "I couldn/'t agree with you more.",
+  "playerInAgreementText": "I couldn't agree with you more.",
   "playerDisagreementText": "Are you sure about that?",
   "playerMoralDisagreementText": ["You really think school is the ONLY way to learn that?", "Yeah but there are plenty of shapes who succeed without following the SYSTEM."],
   "playerDisAgreementOnAflag": [{
@@ -10138,7 +10138,7 @@
   "rating": "Mid",
   "playerInAgreementText": "No doubt about it.",
   "playerDisagreementText": "That's not always true.",
-  "playerMoralDisagreementText": ["That/'s so much work and you can/'t just trust someone because you are in the same community.", "Sure in a perfect world where every shape has the best intention. But that/'s not always the case."],
+  "playerMoralDisagreementText": ["That's so much work and you can't just trust someone because you are in the same community.", "Sure in a perfect world where every shape has the best intention. But that's not always the case."],
   "playerDisAgreementOnAflag": [{
       "flag": "InLovewithspouseoffriend",
       "textValue": "text for the flag"
@@ -10362,8 +10362,8 @@
   "key": "LoverOfRisks",
   "rating": "Mid",
   "playerInAgreementText": "Absolutely. My friend.",
-  "playerDisagreementText": "Yeah that/'s a no for me.",
-  "playerMoralDisagreementText": ["But there/'s saftly in steady routine. Why change if it ain/'t broken.", "I am sure I can. But life is short so why rush by risking it?"],
+  "playerDisagreementText": "Yeah that's a no for me.",
+  "playerMoralDisagreementText": ["But there's saftly in steady routine. Why change if it ain't broken.", "I am sure I can. But life is short so why rush by risking it?"],
   "playerDisAgreementOnAflag": [{
       "flag": "InLovewithspouseoffriend",
       "textValue": "text for the flag"
@@ -10588,7 +10588,7 @@
   "rating": "Mid",
   "playerInAgreementText": "That's true! I see where you coming from..",
   "playerDisagreementText": "I take your point but that isn’t the way I see it.",
-  "playerMoralDisagreementText": ["Shaoes go on journeys to find themselves. The world is so much bigger than just what you know.", "That/'s not true. You can't know yourself if you only stick with what/'s familiar."],
+  "playerMoralDisagreementText": ["Shaoes go on journeys to find themselves. The world is so much bigger than just what you know.", "That's not true. You can't know yourself if you only stick with what's familiar."],
   "playerDisAgreementOnAflag": [{
       "flag": "InLovewithspouseoffriend",
       "textValue": "text for the flag"
@@ -10811,9 +10811,9 @@
 "playerNarrativeElements": {
   "key": "CarrerAboveAll",
   "rating": "High",
-  "playerInAgreementText": "I/'m on board 100 percent! Career is so important!",
-  "playerDisagreementText": "That seems really sad for me... I don/'t live to work.",
-  "playerMoralDisagreementText": ["There/'s a lot more to life besides working.", "Sure, but every shape defines legacy differently."],
+  "playerInAgreementText": "I'm on board 100 percent! Career is so important!",
+  "playerDisagreementText": "That seems really sad for me... I don't live to work.",
+  "playerMoralDisagreementText": ["There's a lot more to life besides working.", "Sure, but every shape defines legacy differently."],
   "playerDisAgreementOnAflag": [{
       "flag": "InLovewithspouseoffriend",
       "textValue": "text for the flag"
@@ -11262,7 +11262,7 @@
   "key": "Loner",
   "rating": "Mid",
   "playerInAgreementText": "That's a good argument!",
-  "playerDisagreementText": "I don/’t see it that way.",
+  "playerDisagreementText": "I don’t see it that way.",
   "playerMoralDisagreementText": ["It seems sad to be comfortable being alone! ", "I mean good friends will help you and be there for you!"],
   "playerDisAgreementOnAflag": [{
       "flag": "InLovewithspouseoffriend",
@@ -11487,7 +11487,7 @@
   "key": "youthAreTheFuture",
   "rating": "Mid",
   "playerInAgreementText": "That's a good argument!",
-  "playerDisagreementText": "I don/’t see it that way.",
+  "playerDisagreementText": "I don’t see it that way.",
   "playerMoralDisagreementText": ["Not really, young shapes are not responsible enough to understand the weight of their actions.", "I think you are putting too much pressure on the young to make those changes."],
   "playerDisAgreementOnAflag": [{
       "flag": "InLovewithspouseoffriend",
@@ -11713,7 +11713,7 @@
   "rating": "Mid",
   "playerInAgreementText": "Yeah, you get family comes first.",
   "playerDisagreementText": "Yeah, that sounds fishy to me.",
-  "playerMoralDisagreementText": ["Is it really? I mean trust is earned and you can build trust with any shape!", "That/'s paranoid... Only a few shapes are as shady as you think."],
+  "playerMoralDisagreementText": ["Is it really? I mean trust is earned and you can build trust with any shape!", "That's paranoid... Only a few shapes are as shady as you think."],
   "playerDisAgreementOnAflag": [{
       "flag": "InLovewithspouseoffriend",
       "textValue": "text for the flag"
@@ -11938,7 +11938,7 @@
   "rating": "Mid",
   "playerInAgreementText": "How wonderful that you understand.",
   "playerDisagreementText": "I am clutching my pearls right now.",
-  "playerMoralDisagreementText": ["Not for all of us! It'/s just a form of social control and you are too blind to see it.", "Or they simply felt repressed by the norm and they had the courage to do something about it."],
+  "playerMoralDisagreementText": ["Not for all of us! It's just a form of social control and you are too blind to see it.", "Or they simply felt repressed by the norm and they had the courage to do something about it."],
   "playerDisAgreementOnAflag": [{
       "flag": "InLovewithspouseoffriend",
       "textValue": "text for the flag"
@@ -12388,7 +12388,7 @@
   "rating": "Mid",
   "playerInAgreementText": "Tell me about it!",
   "playerDisagreementText": "I beg to differ. Sorry.",
-  "playerMoralDisagreementText": ["That seems very idealistic... and too insipirational quote like.", "You can/'t find a sense of belonging by just building relationships around you?"],
+  "playerMoralDisagreementText": ["That seems very idealistic... and too insipirational quote like.", "You can't find a sense of belonging by just building relationships around you?"],
   "playerDisAgreementOnAflag": [{
       "flag": "InLovewithspouseoffriend",
       "textValue": "text for the flag"
@@ -12613,7 +12613,7 @@
   "rating": "Mid",
   "playerInAgreementText": "No doubt about it.",
   "playerDisagreementText": "That's not always true. At least not for me.",
-  "playerMoralDisagreementText": ["I/'m sorry you feel that way. But not all shapes are bad.", "That/'s a cynical view of the world... Too grim for my taste."],
+  "playerMoralDisagreementText": ["I'm sorry you feel that way. But not all shapes are bad.", "That's a cynical view of the world... Too grim for my taste."],
   "playerDisAgreementOnAflag": [{
       "flag": "InLovewithspouseoffriend",
       "textValue": "text for the flag"
@@ -12838,7 +12838,7 @@
   "rating": "Mid",
   "playerInAgreementText": "That's true! I see where you coming from.",
   "playerDisagreementText": "I take your point but that isn’t the way I see it.",
-  "playerMoralDisagreementText": ["WE built this place! What did the outsiders do for us?", "Not all of them are bad, but they could be becasuse we don/'t know them. "],
+  "playerMoralDisagreementText": ["WE built this place! What did the outsiders do for us?", "Not all of them are bad, but they could be becasuse we don't know them. "],
   "playerDisAgreementOnAflag": [{
       "flag": "InLovewithspouseoffriend",
       "textValue": "text for the flag"
@@ -13062,7 +13062,7 @@
   "key": "WeArewNothingIfWeAreNotReserved",
   "rating": "Mid",
   "playerInAgreementText": "Yeah you speak the truth.",
-  "playerDisagreementText": "I don/’t think you and I have the same opinion on this issue.",
+  "playerDisagreementText": "I don’t think you and I have the same opinion on this issue.",
   "playerMoralDisagreementText": ["But we must make adjustments as the society evolve.", "But maybe we have historically wronged and mistreated shapes becasue we value traditions over basic respect."],
   "playerDisAgreementOnAflag": [{
       "flag": "InLovewithspouseoffriend",
@@ -13512,7 +13512,7 @@
   "key": "Shapesarenothingifnotsocial",
   "rating": "Mid",
   "playerInAgreementText": "That's a good argument!",
-  "playerDisagreementText": "I don/’t see it that way.",
+  "playerDisagreementText": "I don’t see it that way.",
   "playerMoralDisagreementText": ["Well not all happy shapes are open.", "That seems too simplitic. I mean you can't judge shapes based on those things."],
   "playerDisAgreementOnAflag": [{
       "flag": "InLovewithspouseoffriend",
@@ -13737,8 +13737,8 @@
   "key": "AntiFaviortisum",
   "rating": "Mid",
   "playerInAgreementText": "That's a good argument!",
-  "playerDisagreementText": "I don/’t see it that way.",
-  "playerMoralDisagreementText": ["That/'s way too black and white! How do you know if they are NOT the right shape for the job?!", "Again, you are being too extreme. I think sometimes it/'s important to put people you trust in important positions."],
+  "playerDisagreementText": "I don’t see it that way.",
+  "playerMoralDisagreementText": ["That's way too black and white! How do you know if they are NOT the right shape for the job?!", "Again, you are being too extreme. I think sometimes it's important to put people you trust in important positions."],
   "playerDisAgreementOnAflag": [{
       "flag": "InLovewithspouseoffriend",
       "textValue": "text for the flag"
@@ -13968,7 +13968,7 @@
   "rating": "Low",
   "playerInAgreementText": "That's cool.  I can see that.",
   "playerDisagreementText": "Hmm is it though?",
-  "playerMoralDisagreementText": ["I mean we all have to adapt to survive so I don/'t really see your point.", "That/'s so dramatic! Homes change and we just need to change accordingly."],
+  "playerMoralDisagreementText": ["I mean we all have to adapt to survive so I don't really see your point.", "That's so dramatic! Homes change and we just need to change accordingly."],
   "playerDisAgreementOnAflag": [{
       "flag": "InLovewithspouseoffriend",
       "textValue": "text for the flag"
@@ -14193,7 +14193,7 @@
   "rating": "Low",
   "playerInAgreementText": "Cool. I see that.",
   "playerDisagreementText": "For real? Whatever.",
-  "playerMoralDisagreementText": ["I mean we all have to adapt to survive so I don/'t really see your point.", "That/'s so dramatic! Homes change and we just need to change accordingly."],
+  "playerMoralDisagreementText": ["I mean we all have to adapt to survive so I don't really see your point.", "That's so dramatic! Homes change and we just need to change accordingly."],
   "playerDisAgreementOnAflag": [{
       "flag": "InLovewithspouseoffriend",
       "textValue": "text for the flag"
@@ -14417,7 +14417,7 @@
   "key": "Teetotasler",
   "rating": "Low",
   "playerInAgreementText": "I have to side with alcohol on this one.",
-  "playerDisagreementText": "I/'d say the exact opposite.",
+  "playerDisagreementText": "I'd say the exact opposite.",
   "playerMoralDisagreementText": ["And a recipe for diaster.", "There are so many other ways to relax and drinking is just the lazy option."],
   "playerDisAgreementOnAflag": [{
       "flag": "InLovewithspouseoffriend",
@@ -14641,9 +14641,9 @@
 "playerNarrativeElements": {
   "key": "TeetotaslerAnti",
   "rating": "Low",
-  "playerInAgreementText": "That/'s exactly how I feel. Glad to hear it..",
-  "playerDisagreementText": "Not necessarily. Don/'t be a bummer.",
-  "playerMoralDisagreementText": ["But booze makes you so much happier.", "Because they wanto to and feels good? Why are you trying to control others/' choices. "],
+  "playerInAgreementText": "That's exactly how I feel. Glad to hear it..",
+  "playerDisagreementText": "Not necessarily. Don't be a bummer.",
+  "playerMoralDisagreementText": ["But booze makes you so much happier.", "Because they wanto to and feels good? Why are you trying to control others' choices. "],
   "playerDisAgreementOnAflag": [{
       "flag": "InLovewithspouseoffriend",
       "textValue": "text for the flag"
@@ -15316,7 +15316,7 @@
 "playerNarrativeElements": {
   "key": "schoolIsDrool",
   "rating": "Low",
-  "playerInAgreementText": "That/'s great.",
+  "playerInAgreementText": "That's great.",
   "playerDisagreementText": "Oh well. I don't really see it that way ",
   "playerMoralDisagreementText": ["You must not be learning the right things in school then. ", "True but a system and a structure can help you get there faster and easier. "],
   "playerDisAgreementOnAflag": [{
@@ -15543,7 +15543,7 @@
   "rating": "Low",
   "playerInAgreementText": "I get that.",
   "playerDisagreementText": "I don't see it",
-  "playerMoralDisagreementText": ["That/'s so much work and you can/'t just trust someone because you are in the same community.", "Sure in a perfect world where every shape has the best intention. But that/'s not always the case."],
+  "playerMoralDisagreementText": ["That's so much work and you can't just trust someone because you are in the same community.", "Sure in a perfect world where every shape has the best intention. But that's not always the case."],
   "playerDisAgreementOnAflag": [{
       "flag": "InLovewithspouseoffriend",
       "textValue": "text for the flag"
@@ -15767,8 +15767,8 @@
   "key": "LoverOfRisks",
   "rating": "Low",
   "playerInAgreementText": "Absolutely. ",
-  "playerDisagreementText": "Yeah that/'s a no ",
-  "playerMoralDisagreementText": ["But there/'s saftly in steady routine. Why change if it ain/'t broken.", "I am sure I can. But life is short so why rush by risking it?"],
+  "playerDisagreementText": "Yeah that's a no ",
+  "playerMoralDisagreementText": ["But there's saftly in steady routine. Why change if it ain't broken.", "I am sure I can. But life is short so why rush by risking it?"],
   "playerDisAgreementOnAflag": [{
       "flag": "InLovewithspouseoffriend",
       "textValue": "text for the flag"
@@ -15993,7 +15993,7 @@
   "rating": "Low",
   "playerInAgreementText": "That's true! I see where you coming from..",
   "playerDisagreementText": "I take your point but that isn’t the way I see it.",
-  "playerMoralDisagreementText": ["Shaoes go on journeys to find themselves. The world is so much bigger than just what you know.", "That/'s not true. You can't know yourself if you only stick with what/'s familiar."],
+  "playerMoralDisagreementText": ["Shaoes go on journeys to find themselves. The world is so much bigger than just what you know.", "That's not true. You can't know yourself if you only stick with what's familiar."],
   "playerDisAgreementOnAflag": [{
       "flag": "InLovewithspouseoffriend",
       "textValue": "text for the flag"
@@ -16216,9 +16216,9 @@
 "playerNarrativeElements": {
   "key": "CarrerAboveAll",
   "rating": "High",
-  "playerInAgreementText": "I/'m on board 100 percent! Career is so important!",
-  "playerDisagreementText": "That seems really sad for me... I don/'t live to work.",
-  "playerMoralDisagreementText": ["There/'s a lot more to life besides working.", "Sure, but every shape defines legacy differently."],
+  "playerInAgreementText": "I'm on board 100 percent! Career is so important!",
+  "playerDisagreementText": "That seems really sad for me... I don't live to work.",
+  "playerMoralDisagreementText": ["There's a lot more to life besides working.", "Sure, but every shape defines legacy differently."],
   "playerDisAgreementOnAflag": [{
       "flag": "InLovewithspouseoffriend",
       "textValue": "text for the flag"
@@ -16667,7 +16667,7 @@
   "key": "Loner",
   "rating": "Low",
   "playerInAgreementText": "That's a good argument!",
-  "playerDisagreementText": "I don/’t see it that way.",
+  "playerDisagreementText": "I don’t see it that way.",
   "playerMoralDisagreementText": ["It seems sad to be comfortable being alone! ", "I mean good friends will help you and be there for you!"],
   "playerDisAgreementOnAflag": [{
       "flag": "InLovewithspouseoffriend",
@@ -16892,7 +16892,7 @@
   "key": "youthAreTheFuture",
   "rating": "Low",
   "playerInAgreementText": "That's a good argument!",
-  "playerDisagreementText": "I don/’t see it that way.",
+  "playerDisagreementText": "I don’t see it that way.",
   "playerMoralDisagreementText": ["Not really, young shapes are not responsible enough to understand the weight of their actions.", "I think you are putting too much pressure on the young to make those changes."],
   "playerDisAgreementOnAflag": [{
       "flag": "InLovewithspouseoffriend",
@@ -17118,7 +17118,7 @@
   "rating": "Low",
   "playerInAgreementText": "Yeah, you get family comes first.",
   "playerDisagreementText": "Yeah, that sounds fishy to me.",
-  "playerMoralDisagreementText": ["Is it really? I mean trust is earned and you can build trust with any shape!", "That/'s paranoid... Only a few shapes are as shady as you think."],
+  "playerMoralDisagreementText": ["Is it really? I mean trust is earned and you can build trust with any shape!", "That's paranoid... Only a few shapes are as shady as you think."],
   "playerDisAgreementOnAflag": [{
       "flag": "InLovewithspouseoffriend",
       "textValue": "text for the flag"
@@ -17343,7 +17343,7 @@
   "rating": "Low",
   "playerInAgreementText": "How wonderful that you understand.",
   "playerDisagreementText": "I am clutching my pearls right now.",
-  "playerMoralDisagreementText": ["Not for all of us! It'/s just a form of social control and you are too blind to see it.", "Or they simply felt repressed by the norm and they had the courage to do something about it."],
+  "playerMoralDisagreementText": ["Not for all of us! It's just a form of social control and you are too blind to see it.", "Or they simply felt repressed by the norm and they had the courage to do something about it."],
   "playerDisAgreementOnAflag": [{
       "flag": "InLovewithspouseoffriend",
       "textValue": "text for the flag"
@@ -17793,7 +17793,7 @@
   "rating": "Low",
   "playerInAgreementText": "Tell me about it!",
   "playerDisagreementText": "I beg to differ. Sorry.",
-  "playerMoralDisagreementText": ["That seems very idealistic... and too insipirational quote like.", "You can/'t find a sense of belonging by just building relationships around you?"],
+  "playerMoralDisagreementText": ["That seems very idealistic... and too insipirational quote like.", "You can't find a sense of belonging by just building relationships around you?"],
   "playerDisAgreementOnAflag": [{
       "flag": "InLovewithspouseoffriend",
       "textValue": "text for the flag"
@@ -18018,7 +18018,7 @@
   "rating": "Low",
   "playerInAgreementText": "No doubt about it.",
   "playerDisagreementText": "That's not always true. At least not for me.",
-  "playerMoralDisagreementText": ["I/'m sorry you feel that way. But not all shapes are bad.", "That/'s a cynical view of the world... Too grim for my taste."],
+  "playerMoralDisagreementText": ["I'm sorry you feel that way. But not all shapes are bad.", "That's a cynical view of the world... Too grim for my taste."],
   "playerDisAgreementOnAflag": [{
       "flag": "InLovewithspouseoffriend",
       "textValue": "text for the flag"
@@ -18243,7 +18243,7 @@
   "rating": "Low",
   "playerInAgreementText": "That's true! I see where you coming from.",
   "playerDisagreementText": "I take your point but that isn’t the way I see it.",
-  "playerMoralDisagreementText": ["WE built this place! What did the outsiders do for us?", "Not all of them are bad, but they could be becasuse we don/'t know them. "],
+  "playerMoralDisagreementText": ["WE built this place! What did the outsiders do for us?", "Not all of them are bad, but they could be becasuse we don't know them. "],
   "playerDisAgreementOnAflag": [{
       "flag": "InLovewithspouseoffriend",
       "textValue": "text for the flag"
@@ -18467,7 +18467,7 @@
   "key": "WeArewNothingIfWeAreNotReserved",
   "rating": "Low",
   "playerInAgreementText": "Yeah you speak the truth.",
-  "playerDisagreementText": "I don/’t think you and I have the same opinion on this issue.",
+  "playerDisagreementText": "I don’t think you and I have the same opinion on this issue.",
   "playerMoralDisagreementText": ["But we must make adjustments as the society evolve.", "But maybe we have historically wronged and mistreated shapes becasue we value traditions over basic respect."],
   "playerDisAgreementOnAflag": [{
       "flag": "InLovewithspouseoffriend",
@@ -18917,7 +18917,7 @@
   "key": "Shapesarenothingifnotsocial",
   "rating": "Low",
   "playerInAgreementText": "That's a good argument!",
-  "playerDisagreementText": "I don/’t see it that way.",
+  "playerDisagreementText": "I don’t see it that way.",
   "playerMoralDisagreementText": ["Well not all happy shapes are open.", "That seems too simplitic. I mean you can't judge shapes based on those things."],
   "playerDisAgreementOnAflag": [{
       "flag": "InLovewithspouseoffriend",
@@ -19143,7 +19143,7 @@
    "rating": "Low",
    "playerInAgreementText": "Exactly",
    "playerDisagreementText": "That's sad. I do not agree",
-   "playerMoralDisagreementText": ["That/'s so dramatic! I mean the strong ones will survive!", "I/'m sure shapes come first! We have to eat after all."],
+   "playerMoralDisagreementText": ["That's so dramatic! I mean the strong ones will survive!", "I'm sure shapes come first! We have to eat after all."],
    "playerDisAgreementOnAflag": [{
        "flag": "InLovewithspouseoffriend",
        "textValue": "text for the flag"
@@ -19367,8 +19367,8 @@
   "key": "AntiFaviortisum",
   "rating": "Low",
   "playerInAgreementText": "That's a good argument!",
-  "playerDisagreementText": "I don/’t see it that way.",
-  "playerMoralDisagreementText": ["That/'s way too black and white! How do you know if they are NOT the right shape for the job?!", "Again, you are being too extreme. I think sometimes it/'s important to put people you trust in important positions."],
+  "playerDisagreementText": "I don’t see it that way.",
+  "playerMoralDisagreementText": ["That's way too black and white! How do you know if they are NOT the right shape for the job?!", "Again, you are being too extreme. I think sometimes it's important to put people you trust in important positions."],
   "playerDisAgreementOnAflag": [{
       "flag": "InLovewithspouseoffriend",
       "textValue": "text for the flag"

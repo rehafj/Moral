@@ -293,8 +293,6 @@ public class BackgroundCharacter  :  MonoBehaviour
                                          personalityOnFive.highConscientiousness, "doesNotGiveToThoseInNeed", character);
                     checkIfAnIntconditionIsMet(character.characterFlags["hasalotofenemies"] && personalityOnFive.highAgreeableness, "TooTrustingOfEnemies", character);
 
-
-
                     checkIfAnIntconditionIsMet(character.characterFlags["hiredByAFamilymember"] &&
                                                    personalityOnFive.highAgreeableness, "exploteative", character);
 

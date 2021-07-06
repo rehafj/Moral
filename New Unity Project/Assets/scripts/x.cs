@@ -99,7 +99,7 @@ public class x : MonoBehaviour
 
            playerName = "Rehaf";
            StartCoroutine(TypeInDialoug("hey there" + playerName +
-               " \n thanks for meeting me for brunch! Boy has the town been eventful lately! "));
+               " n thanks for meeting me for brunch! Boy has the town been eventful lately! "));
            disableorEnablePlayerButtons();*/
 //testinga tree node
 /*      testingTree.root = new Dialoug("test", "test");

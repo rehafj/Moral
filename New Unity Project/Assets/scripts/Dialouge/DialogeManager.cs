@@ -97,12 +97,12 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     public void setUp()
     {
         Dialoug introductionNode = new Dialoug("introduction", "hey there " + playerName +
-        " \n thanks for meeting me for brunch! Boy has the town been eventful lately! "); //move this into its file 
+        " \n welcome to AB. what can I do for ya?"); //move this into its file 
         conversedAboutCharectersList = sortCharactersToBringUp(bgchar.GetFiltredCharerList());//fltred list of characters (with 5+ flags)
 
 
         currentCorutine = StartCoroutine(TypeInDialoug("hey there " + playerName +
-      " \n thanks for meeting me for brunch! Boy has the town been eventful lately! "));
+        " \n welcome to AB. what can I do for ya?"));
 
         setUpTrees();
   
@@ -132,7 +132,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         foreach( Tree  t in allCharacterConversationsTrees)
         {
 
-
+            //for debugging.... 
         }
 
        
@@ -184,8 +184,8 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             /* currentNode = choseADialougNode(chosenTree.root.children); //new node selection from another tree/branch 
              currentTree = chosenTree;*/
 
-        StartCoroutine(WaitAndPrintcompoundedStatments(currentNode.IntroducingATopicdialoug,
-                   currentNode.dialougText));
+        StartCoroutine(WaitAndPrintcompoundedStatments(currentNode.UnbiasedOpeningStatment,
+                   currentNode.mainOpinionOnAtopic));
         DisplayplayCurrentOpinions(currentTree);
         displayPlayerButtons(currentNode);
 
@@ -278,21 +278,19 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
 
     void playerAgrees()
-    {
-        //Debug.Log("player agreed!!!" + currentNode.ButtonText + "after i click on agree! " + currentNode.dialougText);
-        Debug.Log("agreement text is =" + currentNode.agreementText);
-        StartCoroutine(waitAndPrintAgreement(currentNode.agreementText));
+    {       //TODO works :) but prob need to change for moral agreement -- check where this method is being used 
+        StartCoroutine(waitAndPrintAgreement(currentNode.agreementText)); // need to restrucre this --- 
     }
 
     private void playerDissAgrees()
     {
-        //Debug.Log("player disagreed!" + currentNode.ButtonText + "after i click on agree! " + currentNode.dialougText);
+        //Debug.Log("player disagreed!" + currentNode.ButtonText + "after i click on agree! " + currentNode.unbaisedIopinion);
         //TODO  Add methods for arguing on a flag  --- 
+        Debug.Log("the disagreement text is" + currentNode.disagreementText);
+        StartCoroutine(waitAndPrintDisagreement(currentNode.disagreementText)); //currentNode.getRandomHatedFact())
+       // playerArgueAboutFLag(); 
 
-        StartCoroutine(waitAndPrintDisagreement(currentNode.GetAFact())); //currentNode.getRandomHatedFact())
-        playerArgueAboutFLag();
-
-
+        //NEED TO REFACTOR THIS TO CHECK FOR MORAL AGREE OR DISAGREE
 
 
         //setPlayerButtonTextDissagreement();//moves to the next node - --- STOP ITT FGGROM HOINH TO THE NEXT ONE 
@@ -422,10 +420,10 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         StopAllCoroutines();
         GuidialougText.text = "";
         Debug.Log("!!!" +d.ButtonText);
-
+        //TODODO disagreement happens here 
 
         if (currentCNPC.IsMoralFocus(mapToCNPCMoralFactor(d.ButtonText)))//the flag the player presented is the moral focus of the NPC 
-        { 
+        { //TODO CHANGE THIS INTO NEW METHOD 
             Debug.Log("!!!" + d.ButtonText + "is a moral focus area");
             StartCoroutine(waitAndPrintAgreement("CNPC conceedes, player selected flag was moral focus of cnpc-- need to add text or pull from a list based on the flag "));
             
@@ -515,7 +513,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     private void displayDialougOpinion()
     {
         StopAllCoroutines();
-        StartCoroutine(TypeInDialoug(currentNode.dialougText));
+        StartCoroutine(TypeInDialoug(currentNode.mainOpinionOnAtopic));
     }
 
     private List<InterestingCharacters> sortCharactersToBringUp(List<InterestingCharacters> characterList)
@@ -570,17 +568,21 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             if (kvp.Value)
             {
                 Dialoug node = new Dialoug(
-                   translateOpinionIntoText(kvp.Key),
-                   getInitialCNPCOpinionAsDialoug(kvp.Key, character, "INTRO"));//general feelings about a topic 
+                   translateOpinionIntoText(kvp.Key), //thought bubble 
+                   setCnpcDialoug(kvp.Key, character, "BiasedSVOpin"));//general feelings about a topic ( baised surface opinion)
                 //--- gives the general feelings about a thing, add to the same node the pther structure elements... 
 
-                node.IntroducingATopicdialoug =
-                    getIntroductionTopicString(kvp.Key, character); //unbaised opening statment  --- this is actually yr inytoduction text 
+                node.UnbiasedOpeningStatment =
+                    getIntroductionTopicString(kvp.Key, character); //unbaised opening statment  --- this is actually the inytoduction text 
               
-                node.agreementText = getInitialCNPCOpinionAsDialoug(kvp.Key, character, "");//general feelings about a topic  --- this is actually high 
+                node.agreementText = setCnpcDialoug(kvp.Key, character, "PlayerAgreesWithCNPC");//general feelings about a topic  --- this is actually high 
 
-                node.disagreementText = getInitialCNPCOpinionAsDialoug(kvp.Key, character, "");//nope - con here is as in low.... 
-                node.ButtonText = setPlayerButtonText(kvp.Key);
+                node.disagreementText = setCnpcDialoug(kvp.Key, character, "PlayerDisAgreesWithCNPC");//nope - con here is as in low.... 
+                Debug.Log("disagreement text at set up " + node.disagreementText);
+                node.ButtonText = setPlayerButtonText(kvp.Key); //flag or pattern for now but this mighht actually be the button text for the player to click on... 
+                node.Rating = setNodeRating(kvp.Key);
+                //add moral agreement 
+                // add moral disagreement 
                 nodes.Add(node);
 
             }
@@ -597,27 +599,33 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         return key ; //will add logic about current cnpc thoughts and modding this later 
     }
 
-    //2
+    //2 opinionsa re split up into high mid and low 
     string returnTopicText(List<DialougStructure> opinions, string key, string flag) //the sent in list is of high./mid or low 
     {//selecting intro and the first part of the body here --- 
         foreach (DialougStructure op in opinions) //ex: all high opp -- splits them up here as high mid and low 
         {
+            
+
             if (op.topic.Contains(mapToCNPCMoralFactor(key))) //get the translatiopn of they key but not ditect character keys..... 
             {
-                selectedOpnion = op.topic.Split('_').Last(); //surface value is returned here = - 
-                
+                Debug.Log(op.topic.Contains(mapToCNPCMoralFactor(key)) + "for the key " + key);
+                string r  = op.topic.Split('_').First();
+                selectedOpnion = op.topic.Split('_').Last(); //surface value is returned here = -  sv selected opinion 
+                Debug.Log("selectedOpnion" + selectedOpnion +" AND FLAG "+ flag +"TOPIC"+op.topic);// FLAG isd what i send over to classify as intro text pt agreement or .... 
+                //selectedOpinion is the surface value
                 //Debug.Log("-------selectedOpnion" + selectedOpnion);
-                if (flag == "INTRO")
+                if (flag == "BiasedSVOpin")
                 {
                     return op.NarrativeElements.surfaceOpinionOnTopic;
 
                 }
-                if (flag == "AGREE")
+                if (flag == "PlayerAgreesWithCNPC")
                 {
                     return op.NarrativeElements.agreementText;
                 }
-                if (flag == "CON")
+                if (flag == "PlayerDisAgreesWithCNPC")
                 {
+                    Debug.Log("setting disagreement text as " + op.NarrativeElements.disagreementtext);
                     return op.NarrativeElements.disagreementtext;
 
                 }
@@ -627,14 +635,29 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         return "NO TOPIC WAS FOUND --- need to author topic for flag " + key;
     }
 
-
-    //1
-    private string getInitialCNPCOpinionAsDialoug(string key, InterestingCharacters character, string flag)
-    {//this is hard coded for now but later send in the conversational character (talking with )
-       
-     
+    string setNodeRating(string key)
+    {
         switch (currentCNPC.ConvCharacterMoralFactors[mapToCNPCMoralFactor(key)])
         {
+            case ConversationalCharacter.RatingVlaues.High:
+                return "High"; //make this more generic - iof/else get topic or body (startingopinion) or contrasting one... nut need logic on each case i think of this is testign a thing for now 
+            case ConversationalCharacter.RatingVlaues.Mid:
+                return "Mid";
+            default://low
+                return "Low";
+        }
+
+    }
+
+        //1
+        private string setCnpcDialoug(string key, InterestingCharacters character, string flag)
+    {//this is hard coded for now but later send in the conversational character (talking with )
+        Debug.Log("yo what does this print?" + currentCNPC.ConvCharacterMoralFactors[mapToCNPCMoralFactor(key)]); ////gives us high mid oir low 
+        // high - low and mid results --- cool 
+
+        switch (currentCNPC.ConvCharacterMoralFactors[mapToCNPCMoralFactor(key)])
+        {
+
             case ConversationalCharacter.RatingVlaues.High:
                 return returnTopicText(highVaueOpinions, key, flag); //make this more generic - iof/else get topic or body (startingopinion) or contrasting one... nut need logic on each case i think of this is testign a thing for now 
             case ConversationalCharacter.RatingVlaues.Mid:
@@ -859,7 +882,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             case ("likesToDate"):
                 return "you know," +
                     " I think people in this town might be too much into love afairs, " +
-                    "you would think we were in a dating sim of some kind..."; //TODO write specfic texts for scenarios 
+                    "you would think we were in a dating sim of some kind..."; 
 
 
             case ("socialLife"):
@@ -1204,24 +1227,39 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
     enum TypeOfPlayerTexts
     {
-        agreement, disagreement, moral
+        agreement, disagreement
     }
     TypeOfPlayerTexts typeOfPlayerTexts;
-    string getAgreementText(string surfaceValue, string rating, TypeOfPlayerTexts playerResponceType)
+    string getPlayerResponce(string surfaceValue, string rating, TypeOfPlayerTexts playerResponceType, bool isMoralARG) //change this intyo player responce
     {
 
         foreach (PlayerDialoug p in jsn.listOfPlayerDialougs)
         {
             if (p.playerSurfaceValue == surfaceValue && p.playerNarrativeElements.rating == rating)
             {
-                if (playerResponceType == TypeOfPlayerTexts.agreement)
+                if (!isMoralARG)
                 {
-                    return p.playerNarrativeElements.playerInAgreementText;
+                    if (playerResponceType == TypeOfPlayerTexts.agreement)
+                    {
+                        return "PLAYER SAYS "+  p.playerNarrativeElements.playerInAgreementText;
 
-                }
-                else 
+                    }
+                    else {
+                        return "PLAYER SAYS" +  p.playerNarrativeElements.playerDisagreementText;
+                    }
+                 
+                } else // moral 
                 {
-                    return p.playerNarrativeElements.playerInAgreementText;
+                    if (playerResponceType == TypeOfPlayerTexts.agreement)
+                    {
+                        return getPlayerResponce(p.playerSurfaceValue, "High", TypeOfPlayerTexts.agreement, true); // so we can get the same flag but on high for the moral agreement 
+
+                    }
+                    else if (playerResponceType == TypeOfPlayerTexts.disagreement)
+                    {
+
+                    }
+                    else { } // model responces... 
 
                 }
             }
@@ -1318,15 +1356,34 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     {
 
         yield return currentCorutine;
-        currentCorutine = StartCoroutine(TypeInDialoug(node.dialougText));
+        currentCorutine = StartCoroutine(TypeInDialoug(node.mainOpinionOnAtopic));
 
     }
-    IEnumerator waitAndPrintAgreement(string text)   //so this works... but does nto when in larger scenartio.. 
+
+    IEnumerator waitAndPrint(string text)   //so this works... but does nto when in larger scenartio.. 
     {
 
         yield return currentCorutine;
         currentCorutine = StartCoroutine(TypeInDialoug(text));
+
+    }
+
+    IEnumerator waitAndPrintAgreement(string text)   //so this works... but does nto when in larger scenartio.. 
+    {
+
         yield return currentCorutine;
+        currentCorutine = StartCoroutine(TypeInDialoug(getPlayerResponce(mapToCNPCMoralFactor(currentNode.ButtonText), currentNode.Rating, TypeOfPlayerTexts.agreement, false))); // need to restrucre this --- 
+        yield return currentCorutine;
+        currentCorutine = StartCoroutine(TypeInDialoug(text));
+
+
+
+
+        //
+/*
+        yield return currentCorutine;
+        currentCorutine = StartCoroutine(TypeInDialoug(text));
+        yield return currentCorutine;*/
         if (!currentTree.FullyExplored)
         {
             startAconversation(currentTree);//at 0 
@@ -1349,10 +1406,26 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
     IEnumerator waitAndPrintDisagreement(string text)   //so this works... but does nto when in larger scenartio.. 
     {
+        bool isMf = currentCNPC.IsMoralFocus(mapToCNPCMoralFactor(currentNode.ButtonText));
 
+        //basic disagreement 1
+        yield return currentCorutine;
+        currentCorutine = StartCoroutine(TypeInDialoug(getPlayerResponce(mapToCNPCMoralFactor(currentNode.ButtonText), currentNode.Rating,
+    TypeOfPlayerTexts.disagreement, isMf))); // CAN REFACTOR THIS 
         yield return currentCorutine;
         currentCorutine = StartCoroutine(TypeInDialoug(text));
+
         yield return currentCorutine;
+        //playerArgueAboutFLag();
+
+
+        // StartCoroutine(waitAndPrintDisagreement(currentNode.GetAFact())); //currentNode.getRandomHatedFact())
+        // OLD CODE HERE ----- 
+        //currentCNPC.IsMoralFocus(mapToCNPCMoralFactor(currentNode.ButtonText))
+        // old code... 
+        /*yield return currentCorutine;
+        currentCorutine = StartCoroutine(TypeInDialoug(text));
+        yield return currentCorutine;*/
 
         //does the CNPC argue for the importance of their flag? 
         if (moralCounter == 0 && currentCNPC.IsMoralFocus(mapToCNPCMoralFactor(currentNode.ButtonText)))
@@ -1400,13 +1473,13 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     {
 
         yield return currentCorutine;
-        currentCorutine = StartCoroutine(TypeInDialoug(node1.dialougText));
+        currentCorutine = StartCoroutine(TypeInDialoug(node1.mainOpinionOnAtopic));
         yield return currentCorutine;
-        currentCorutine = StartCoroutine(TypeInDialoug(node2.dialougText));
+        currentCorutine = StartCoroutine(TypeInDialoug(node2.mainOpinionOnAtopic));
     }
     Coroutine DisplayNodeIntroTopic(Dialoug d)
     {
-        Coroutine c = StartCoroutine(TypeInDialoug(d.IntroducingATopicdialoug));
+        Coroutine c = StartCoroutine(TypeInDialoug(d.UnbiasedOpeningStatment));
         return c;
 
     }
@@ -1493,7 +1566,7 @@ public class Tree
       currentCorutine = StartCoroutine(TypeInDialoug("hey there " + playerName +
     " \n thanks for meeting me for brunch! Boy has the town been eventful lately! "));
 
-      StartCoroutine(WaitAndPrintcompoundedStatments(currentNode.IntroducingATopicdialoug, currentNode.dialougText));//so this works... but does nto when in larger scenartio.. 
+      StartCoroutine(WaitAndPrintcompoundedStatments(currentNode.IntroducingATopicdialoug, currentNode.unbaisedIopinion));//so this works... but does nto when in larger scenartio.. 
          //// -- end of testing case 
 */
 

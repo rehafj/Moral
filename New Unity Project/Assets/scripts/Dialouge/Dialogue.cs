@@ -7,21 +7,26 @@ using UnityEngine.UIElements;
 [System.Serializable]
 public class Dialoug   //restructure this badly....
 {
-    public string ButtonText;
-    public string IntroducingATopicdialoug;
+    public string ButtonText; //set and used for the patern now 
+    //change this so have accses to both on each node... 
+    public string UnbiasedOpeningStatment;
 
 
-    public string dialougText; //main thoughts ( body1 in json)
+    public string mainOpinionOnAtopic; //main thoughts ( body1 in json) --- agh old code 
+
+
+    //BiasedSVOpin //PlayerAgreesWithCNPC -- AGREEMENT TEXT  //PlayerDisAgreesWithCNPC
+
     public string agreementText; //i.e doubling down on it. 
     public string disagreementText;
+    public string moralGreementText;
+    public List<string> moralDisagreementText = new List<string>();
     public string Rating;
 
 
     public List<string> hatedFacts; //will contain things the npc hates about the character 
     public string thoughtBubbleText;
     public bool Explored; //just to test something
-    public string moralGreementText;
-    public List<string> moralDisagreementText = new List<string>();
     public  List<string> ExploredHatedFacts;
     
     public Dialoug parent;
@@ -29,12 +34,12 @@ public class Dialoug   //restructure this badly....
 
     public List<string> factsOnTopic = new List<string>();
 
-    public Dialoug(string option, string text)
+    public Dialoug(string thoughtBubbletext, string initialDialougText)
     {
-        thoughtBubbleText = option;
-        dialougText = text;
+        thoughtBubbleText = thoughtBubbletext;
+        mainOpinionOnAtopic = initialDialougText;
         Explored = false;
-        factsOnTopic.Add("will randomly presrnt  a fact for the key" + option);
+        factsOnTopic.Add("will randomly presrnt  a fact for the key" + thoughtBubbleText);
     }
 
     public string GetAFact()
