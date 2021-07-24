@@ -18,12 +18,12 @@ public class NurturantParentMorality:MoralModels {
             case ("InLovewithspouseoffriend"):
                 foreach (Dialoug d in characterNode.parent.children)//send in the parent ( thing that contains sub nodes )
                 {
-                    if (d.ButtonText != "WillActOnLove")
+                    if (d.Pattern != "WillActOnLove")
                     {
                         schemaName = "highStrength"; //depicts moral strength // later will translate into something like "he applies self displine well.//// 
                         // add text later - - something like oh wow they have self restraint... ect 
                     }//else -not strength 
-                    else if (d.ButtonText == "WillActOnLove")
+                    else if (d.Pattern == "WillActOnLove")
                     {
                         schemaName = "highRetribution";//something along the lines of he deserves to be punished ...ect 
                     }
@@ -40,7 +40,7 @@ public class NurturantParentMorality:MoralModels {
             case ("IsWealthy"):
                 foreach (Dialoug d in characterNode.parent.children)
                 {
-                    if (d.ButtonText == "IsRichButNotGenrous")
+                    if (d.Pattern == "IsRichButNotGenrous")
                     {
                         schemaName = "highMoralOrder";// also true as self dispiince here  // along th elines of it's their work they shouild do with it as they see fir 
                     }
@@ -50,7 +50,7 @@ public class NurturantParentMorality:MoralModels {
             case ("hasAbestFriend"):
                 foreach (Dialoug d in characterNode.parent.children)
                 {
-                    if (d.ButtonText == "friendwithabestfriendsenemy")
+                    if (d.Pattern == "friendwithabestfriendsenemy")
                     {
                         schemaName = "lowMoralboundaries";// also true as self dispiince here  // along th elines of it's their work they shouild do with it as they see fir 
                     }

@@ -571,7 +571,7 @@ public class x : MonoBehaviour
         Debug.Log("the root of the tree is "+ t.root);
         foreach(Dialoug d in t.root.children)
         {
-            Debug.Log("the root" + t.root.ButtonText + "has childen of button text " + d.ButtonText);
+            Debug.Log("the root" + t.root.ButtonText + "has childen of button text " + d.Pattern);
         }
         Debug.Log("this tree has childer" + t.root.children.Count);
 

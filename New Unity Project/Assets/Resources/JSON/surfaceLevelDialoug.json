@@ -1,11 +1,9 @@
-[
-
-	{
+[{
 		"topic": "High_BTrueTYourHeart",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "You know, I do believe that shapes should not control their emotions when it comes to matters of the heart. consequences be damned. AND shapes should live to love!!",
 			"agreementText": "I'm glad you see it my way. I so admire shapes’ guts to follow their heart.",
-			"disagreementtext": "Oh, you don't agree?",
+			"disagreementtext": "You really don't see how love is everything?! What a waste.",
 			"moralFocusAgreement": "RIGHT! Following your heart is so important!",
 			"moralFocusDisagreement": ["You only live once and love is all that matters!", "You know, I do believe that shapes should not control their emotions when it comes to matters of the heart.", "Let's just agree to disagree."]
 		}
@@ -14,8 +12,8 @@
 		"topic": "Mid_BTrueTYourHeart",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "You know, I do believe that shapes should not control their emotions when it comes to matters of the heart. consequences be damned.",
-			"agreementText": "I'm glad you see it my way.",
-			"disagreementtext": "Oh, you don't agree?",
+			"agreementText": "I'm glad you see it my way. Love is rare and you must hold on to it when you find it.",
+			"disagreementtext": "Unfortunately, I don't see it that way. Love is rare and you must hold on to it when you find it.",
 			"moralFocusAgreement": "RIGHT! Following your heart is so important!",
 			"moralFocusDisagreement": ["No! How can you disagree with me? Don't you think love conquers all?"]
 		}
@@ -23,9 +21,9 @@
 	{
 		"topic": "Low_BTrueTYourHeart",
 		"NarrativeElements": {
-			"surfaceOpinionOnTopic": "You know, I do believe that shapes should not control their emotions when it comes to matters of the heart. . BUT life is complicated, so sometimes you have to make compromises.",
-			"agreementText": "I'm glad you see it my way.",
-			"disagreementtext": "Oh, you don't agree?",
+			"surfaceOpinionOnTopic": "You know, I do believe that shapes should not control their emotions when it comes to matters of the heart. BUT life is complicated, so sometimes you have to make compromises.",
+			"agreementText": "I'm glad you see it my way. Love is great but there are other factors we must consider.",
+			"disagreementtext": "Unfortunately, I don't see it that way. Love is great but there are other factors we must consider.",
 			"moralFocusAgreement": "",
 			"moralFocusDisagreement": []
 		}
@@ -35,7 +33,7 @@
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "Well, I think that shapes should never let their emotions cloud their judgement. AND doing what's right is always better than doing what feels right.",
 			"agreementText": "Yeah, it's good that you see it my way. Love isn't everything!",
-			"disagreementtext": "You are joking! Love is why we are alive!",
+			"disagreementtext": "You're joking! Love is for fools.",
 			"moralFocusAgreement": "YEAH! Love is for suckers!",
 			"moralFocusDisagreement": ["Sometimes what we want is not always the best for us.", "Love is more than just what your heart wants and it's about responsibilities and duties.", "Well it's a shame that you let your emotions get the best of you."]
 		}
@@ -44,8 +42,8 @@
 		"topic": "Mid_LoveIsForFools",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "Well, I think that shapes should never let their emotions cloud their judgement.",
-			"agreementText": "Yeah, it's good that you see it my way.",
-			"disagreementtext": "You don't think I am right?",
+			"agreementText": "Yeah, it's good that you see it my way. You should never lose yourself for love.",
+			"disagreementtext": "You think I'm wrong? I don't think so. You should never lose yourself for love.",
 			"moralFocusAgreement": "YEAH! Love is for suckers!",
 			"moralFocusDisagreement": ["Hmm. I think you let your heart make decisions for you instead of your brain."]
 		}
@@ -54,8 +52,8 @@
 		"topic": "Low_LoveIsForFools",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "Well, I think that shapes should never let their emotions cloud their judgement. BUT sometimes the heart wants what the heart wants.",
-			"agreementText": "I get that I guess.",
-			"disagreementtext": "You don't think I am right?",
+			"agreementText": "I get that. We can't choose when or how we fall in love.",
+			"disagreementtext": "I disagree. We can't choose when or how we fall in love.",
 			"moralFocusAgreement": "",
 			"moralFocusDisagreement": []
 		}
@@ -67,15 +65,15 @@
 			"agreementText": "You get it! Money rules!",
 			"disagreementtext": "No way! You don't see the power of money?!",
 			"moralFocusAgreement": "Indeed. Money is key to a happy life!",
-			"moralFocusDisagreement": ["Without a job, without money, how can any shape call themself a responsible shape?", "Money brings stability and with that you can do and change anything you want!", "You are simply too naive to see what really matters."]
+			"moralFocusDisagreement": ["Without a job, without money, how can any shape call themself a responsible shape?", "Money brings stability and with that you can do and change anything you want!", "you're simply too naive to see what really matters."]
 		}
 	},
 	{
 		"topic": "Mid_MoneyMaker",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "A wealthy shape is a responsible and happy shape.",
-			"agreementText": "Yeah money rules!",
-			"disagreementtext": "Oh, you don't think so?",
+			"agreementText": "I'm glad you agree. Who says money can't buy happiness? You just need enough for it!",
+			"disagreementtext": "Yeah. I think we're not on the same page here. Who says money can't buy happiness? You just need enough for it!",
 			"moralFocusAgreement": "Indeed. Money is key to a happy life!",
 			"moralFocusDisagreement": ["You're too naive to see how important money is."]
 		}
@@ -84,8 +82,8 @@
 		"topic": "Low_MoneyMaker",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "A wealthy shape is a responsible and happy shape. BUT not all shapes can make it and every shape is trying their best.",
-			"agreementText": "Yeah money rules!",
-			"disagreementtext": "Oh, you don't think so?",
+			"agreementText": "Right. You should just make enough money to survive.",
+			"disagreementtext": "No. I don't think so. You should just make enough money to survive.",
 			"moralFocusAgreement": "",
 			"moralFocusDisagreement": []
 		}
@@ -95,17 +93,17 @@
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "The environment protects and nourish us and it's our job to do the same in return. AND we must make every decision based on that principle!",
 			"agreementText": "The enviroment is so so important! That's awesome you feel the same!",
-			"disagreementtext": "You don't think so? Why is that?!",
+			"disagreementtext": "You don't think so?! The enviroment is our home!",
 			"moralFocusAgreement": "Mother nature is pleased to hear that.",
-			"moralFocusDisagreement": ["Without a healthy environment, how can we make sure future shapes can grow up happy and healthy?", "This is our home and we must do what's right before we can no longer call it a home!", "You are making a huge mistake but I hope you will see it my way one day."]
+			"moralFocusDisagreement": ["Without a healthy environment, how can we make sure future shapes can grow up happy and healthy?", "This is our home and we must do what's right before we can no longer call it a home!", "you're making a huge mistake but I hope you will see it my way one day."]
 		}
 	},
 	{
 		"topic": "Mid_Enviromentalist",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "The environment protects and nourish us and it's our job to do the same in return.",
-			"agreementText": "That's awesome you feel the same!",
-			"disagreementtext": "You don't think so? Why?",
+			"agreementText": "That's awesome you feel the same! To damage the enviroment is to damage our future.",
+			"disagreementtext": "It's a pity you don't think so. To damage the enviroment is to damage our future.",
 			"moralFocusAgreement": "Mother nature is pleased to hear that.",
 			"moralFocusDisagreement": ["BUT the environment is so important! How can you argue against sustainability?"]
 		}
@@ -114,8 +112,8 @@
 		"topic": "Low_Enviromentalist",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "The environment protects and nourish us and it's our job to do the same in return. BUT you can't always do what's absolutely right for the environment.",
-			"agreementText": "That's great.",
-			"disagreementtext": "You don't think so? Why?",
+			"agreementText": "I'm gald you agree. Taking care of yourself is already hard enough.",
+			"disagreementtext": "Whatever. Too bad you don't agree. Taking care of yourself is already hard enough.",
 			"moralFocusAgreement": "",
 			"moralFocusDisagreement": []
 		}
@@ -123,29 +121,29 @@
 	{
 		"topic": "High_EnviromentalistAnti",
 		"NarrativeElements": {
-			"surfaceOpinionOnTopic": "It's our shape's given rights to shape the environment to benefit us. AND it means that we have to make tough choices to do what's best for the shapes.",
-			"agreementText": "You seem very reasonable! I am glad you can see the practical side of things.",
-			"disagreementtext": "How could you buy into those enviromentalist agendas!",
-			"moralFocusAgreement": "Great! I am glad to hear that you know what it means to make sacrifices.",
+			"surfaceOpinionOnTopic": "It's our given rights to shape the environment. AND it means that we have to make tough choices to do what's best for the shapes.",
+			"agreementText": "You seem very reasonable! I'm glad you can see the practical side of things.",
+			"disagreementtext": "How could you buy into those enviromentalist agendas?!",
+			"moralFocusAgreement": "Great! I'm glad to hear that you know what it means to make sacrifices.",
 			"moralFocusDisagreement": ["If older shapes didn't make use of all resources, we would not have the great society we have today.", "We all have to make decisions that are tough, but what it matters at the end of the day is the shapes and their job security.", "You think in simplistic ways and you will learn one day."]
 		}
 	},
 	{
 		"topic": "Mid_EnviromentalistAnti",
 		"NarrativeElements": {
-			"surfaceOpinionOnTopic": "It's our shape's given rights to shape the environment to benefit us.",
-			"agreementText": "Thanks for agreeing with me.",
-			"disagreementtext": "No? Why?",
-			"moralFocusAgreement": "Great! I am glad to hear that you know what it means to make sacrifices.",
-			"moralFocusDisagreement": ["You are too naive to understand the things we HAVE to do in order to survive."]
+			"surfaceOpinionOnTopic": "It's our given rights to shape the environment.",
+			"agreementText": "Thanks for agreeing with me. Shapes over the enviroment.",
+			"disagreementtext": "No, I don't think you get what I'm trying to say. Shapes over the enviroment.",
+			"moralFocusAgreement": "Great! I'm glad to hear that you know what it means to make sacrifices.",
+			"moralFocusDisagreement": ["you're too naive to understand the things we HAVE to do in order to survive."]
 		}
 	},
 	{
 		"topic": "Low_EnviromentalistAnti",
 		"NarrativeElements": {
-			"surfaceOpinionOnTopic": "It's our shape's given rights to shape the environment to benefit us. BUT a sustainable environment is also important.",
-			"agreementText": "Thanks for agreeing with me.",
-			"disagreementtext": "No? Why?",
+			"surfaceOpinionOnTopic": "It's our given rights to shape the environment. BUT a sustainable environment is also important.",
+			"agreementText": "We're on the same page. Sustainability is key.",
+			"disagreementtext": "I don't think so. Sustainability is key.",
 			"moralFocusAgreement": "",
 			"moralFocusDisagreement": []
 		}
@@ -154,18 +152,18 @@
 		"topic": "High_AnimalLover",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "Animals are our best friends, don't you agree? AND we must do what we can to ensure that we can coexist!",
-			"agreementText": "Thanks for agreeing with me!, animals are wonderful creatures indeed and they deserve our respect.",
-			"disagreementtext": "How could you say that?! ",
+			"agreementText": "Thanks for agreeing with me! Animals are wonderful creatures indeed. They deserve our respect.",
+			"disagreementtext": "How could you say that?! Animals are living beings just like us!",
 			"moralFocusAgreement": "They are so important to us, to the environment, and they deserve to be respected!",
-			"moralFocusDisagreement": ["Well, do you want to live in the world without animals? That's so lonely.", "The environment is so important to us and the great diversity of animals is a key indicator of that.", "I am sad to see how cruel you are."]
+			"moralFocusDisagreement": ["Well, do you want to live in the world without animals? That's so lonely.", "The environment is so important to us and the great diversity of animals is a key indicator of that.", "I'm sad to see how cruel you're."]
 		}
 	},
 	{
 		"topic": "Mid_AnimalLover",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "Animals are our best friends, don't you agree?",
-			"agreementText": "Thanks for agreeing with me!",
-			"disagreementtext": "Hmm... why?",
+			"agreementText": "That's exactly right. Treating animals with love and respect is the right thing to do.",
+			"disagreementtext": "I don't think so. Treating animals with love and respect is the right thing to do.",
 			"moralFocusAgreement": "They are so important to us, to the environment, and they deserve to be respected!",
 			"moralFocusDisagreement": ["How could you be so cruel! Animals deserve love and respect."]
 		}
@@ -173,20 +171,20 @@
 	{
 		"topic": "High_AnimalLoverAnti",
 		"NarrativeElements": {
-			"surfaceOpinionOnTopic": "We need to eat animals to survive. AND we are on the top of the food chain for a reason and it's our right to do what's best for us.",
+			"surfaceOpinionOnTopic": "We need to eat animals to survive. AND we're on the top of the food chain for a reason and it's our right to do what's best for us.",
 			"agreementText": "No doubt! You respect the natural order.",
-			"disagreementtext": "How could you say something like that?! ",
-			"moralFocusAgreement": "Yeah you are talking like a capable and reasonable shape!",
-			"moralFocusDisagreement": ["You are too weak to understand the natural orders.", "Our ancestors ate animals and they survived. Are you saying they did it wrong?", "Your weakness will be your own downfall."]
+			"disagreementtext": "You don't get it. But there's a reason we are on the top of the food chain.",
+			"moralFocusAgreement": "Yeah you're talking like a capable and reasonable shape!",
+			"moralFocusDisagreement": ["you're too weak to understand the natural orders.", "Our ancestors ate animals and they survived. Are you saying they did it wrong?", "Your weakness will be your own downfall."]
 		}
 	},
 	{
 		"topic": "Mid_AnimalLoverAnti",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "We need to eat animals to survive.",
-			"agreementText": "Yeah, you know how I feel.",
-			"disagreementtext": "Why not?",
-			"moralFocusAgreement": "Yeah you are talking like a capable and reasonable shape!",
+			"agreementText": "Yeah, you know how I feel. Animals eat other animals and we are animals too.",
+			"disagreementtext": "I don't think you're right about this. Animals eat other animals and we are animals too.",
+			"moralFocusAgreement": "Yeah you're talking like a capable and reasonable shape!",
 			"moralFocusDisagreement": ["It's sad that you don;t understand the natural orders."]
 		}
 	},
@@ -195,7 +193,7 @@
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "You know, the best part of the day is to chill with a cold one. AND maybe some fine wine as well?",
 			"agreementText": "Yay! That's awesome. I love my booze.",
-			"disagreementtext": "BOOOO. You are a bummber.",
+			"disagreementtext": "BOOOO. you're a bummber. A little drink never hurts nobody.",
 			"moralFocusAgreement": "GREAT! I shall buy you a drink some day.",
 			"moralFocusDisagreement": ["Why are you being a killjoy, it's just drinks.", "We all need to relax and this is the best way to do it.", "You seem too tense, you should just have a drink and chillax."]
 		}
@@ -204,8 +202,8 @@
 		"topic": "Mid_Teetotasler",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "You know, the best part of the day is to chill with a cold one.",
-			"agreementText": "Yay! That's awesome.",
-			"disagreementtext": "Why no?",
+			"agreementText": "That's great! Life is too boring without a little drink once a while.",
+			"disagreementtext": "That's a pity. Life is too boring without a little drink once a while.",
 			"moralFocusAgreement": "GREAT! I shall buy you a drink some day.",
 			"moralFocusDisagreement": ["WHAT?! You don't agree? You must never have good drinks."]
 		}
@@ -214,8 +212,8 @@
 		"topic": "Low_Teetotasler",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "You know, the best part of the day is to chill with a cold one. But you gotta drink responsibly.",
-			"agreementText": "That's neat.",
-			"disagreementtext": "Why no?",
+			"agreementText": "That's neat. Drinking is fun when you mind your drinks.",
+			"disagreementtext": "I disagree. Drinking is fun when you mind your drinks.",
 			"moralFocusAgreement": "",
 			"moralFocusDisagreement": []
 		}
@@ -224,9 +222,9 @@
 		"topic": "High_TeetotaslerAnti",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "I find drinking disgraceful and kinda sad. AND it's for shapes with no self control.",
-			"agreementText": "I just know you would agree. Such a logical and clear-headed mind you have!",
-			"disagreementtext": "That's sad. I don't see what you see.",
-			"moralFocusAgreement": "Well, I can see that you are a reasonable and clear-headed shape.",
+			"agreementText": "I just know you would agree. Drinking ruins so many lives.",
+			"disagreementtext": "That's sad. Shapes who love to drink are not happy, they're miserable.",
+			"moralFocusAgreement": "Well, I can see that you're a reasonable and clear-headed shape.",
 			"moralFocusDisagreement": ["That's sad. Drinking makes your judgement so much worse.", "Why would any shape willingly intoxicate themselves?", "I hope you will see it my way when you sober up."]
 		}
 	},
@@ -234,9 +232,9 @@
 		"topic": "Mid_TeetotaslerAnti",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "I find drinking disgraceful and kinda sad.",
-			"agreementText": "I know you will agree.",
-			"disagreementtext": "Tell me why you disagree then.",
-			"moralFocusAgreement": "Well, I can see that you are a reasonable and clear-headed shape.",
+			"agreementText": "I know you will agree. Shapes who drink are just trying to run away from their problems.",
+			"disagreementtext": "I'm afraid I have to disagree. Shapes who drink are just trying to run away from their problems.",
+			"moralFocusAgreement": "Well, I can see that you're a reasonable and clear-headed shape.",
 			"moralFocusDisagreement": ["Oh no? You sound like a shape with a drinking problem."]
 		}
 	},
@@ -244,8 +242,8 @@
 		"topic": "Low_TeetotaslerAnti",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "I find drinking disgraceful and kinda sad. BUT it can be fun to drink with friends once a while.",
-			"agreementText": "I know you will agree.",
-			"disagreementtext": "Tell me why you disagree then.",
+			"agreementText": "Yeah. Only drinking socially and occasionally is not that bad.",
+			"disagreementtext": "Nah. Only drinking socially and occasionally is not that bad.",
 			"moralFocusAgreement": "",
 			"moralFocusDisagreement": []
 		}
@@ -255,7 +253,7 @@
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "Don't you think that family is the most important thing? AND we must only do what brings joy and happiness to our family.",
 			"agreementText": "Family is everything to me. I just love that we think the same!",
-			"disagreementtext": "WHAT?! Why do you disagree?",
+			"disagreementtext": "I'm sad we don't agree! Family is the foundaton of every shape's life and it's incredibly important.",
 			"moralFocusAgreement": "YES! You get it! Family is truly important.",
 			"moralFocusDisagreement": ["Your family supports and nurtures you and the only thing you can do is to return that love.", "Without your family, you lose your core support system.", "I think you might be too selfish to understand the value of family."]
 		}
@@ -264,8 +262,8 @@
 		"topic": "Mid_FamilyPerson",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "Don't you think that family is the most important thing?",
-			"agreementText": "I love that we think the same!",
-			"disagreementtext": "Oh... Why do you disagree?",
+			"agreementText": "I love that we think the same! A happy family is the key to a happy life!",
+			"disagreementtext": "I don't think so. A happy family is the key to a happy life!",
 			"moralFocusAgreement": "YES! You get it! Family is truly important.",
 			"moralFocusDisagreement": ["Oh no? But family is so important!"]
 		}
@@ -273,9 +271,9 @@
 	{
 		"topic": "Low_FamilyPerson",
 		"NarrativeElements": {
-			"surfaceOpinionOnTopic": "Don't you think that family is the most important thing? BUT a shape gotta be a bit selfish one a while.",
-			"agreementText": "That's a nice thought.",
-			"disagreementtext": "Oh... Why do you disagree?",
+			"surfaceOpinionOnTopic": "Don't you think that family is the most important thing? BUT a shape gotta learn how to be independent.",
+			"agreementText": "That's a nice thought. Independance is also something I value.",
+			"disagreementtext": "I don't know about that. Independance is also something I value.",
 			"moralFocusAgreement": "",
 			"moralFocusDisagreement": []
 		}
@@ -283,7 +281,7 @@
 	{
 		"topic": "High_SchoolIsCool",
 		"NarrativeElements": {
-			"surfaceOpinionOnTopic": "Don't you agree that education is the key to a happy life? AND one without a proper education cannot call themself a responsible shape.",
+			"surfaceOpinionOnTopic": "Don't you agree that education is the key to a fullfilling life? AND one without a proper education cannot call themself a responsible shape.",
 			"agreementText": "That's awesome! Education is everything.",
 			"disagreementtext": "What?! How could you say something like that about the most important part of any shape's upbringing.",
 			"moralFocusAgreement": "Yes education is so important!",
@@ -293,9 +291,9 @@
 	{
 		"topic": "Mid_SchoolIsCool",
 		"NarrativeElements": {
-			"surfaceOpinionOnTopic": "Don't you agree that education is the key to a happy life?",
-			"agreementText": "That's awesome!",
-			"disagreementtext": "Oh no?",
+			"surfaceOpinionOnTopic": "Don't you agree that education is the key to a fullfilling life?",
+			"agreementText": "That's awesome! School can be boring but it's also where we learn to be better shapes!",
+			"disagreementtext": "I don't know about that. School can be boring but it's also where we learn to be better shapes!",
 			"moralFocusAgreement": "Yes education is so important!",
 			"moralFocusDisagreement": ["How can you say no to school?"]
 		}
@@ -303,9 +301,9 @@
 	{
 		"topic": "Low_SchoolIsCool",
 		"NarrativeElements": {
-			"surfaceOpinionOnTopic": "Don't you agree that education is the key to a happy life? BUT I guess you learn things in life outside the classroom as well.",
-			"agreementText": "That's cool. I can see that.",
-			"disagreementtext": "Oh no?",
+			"surfaceOpinionOnTopic": "Don't you agree that education is the key to a fullfilling life? BUT I guess you learn things in life outside the classroom as well.",
+			"agreementText": "That's cool. I guess school is not the only place you can learn important lessons.",
+			"disagreementtext": "Hmm... I don't know if I agree with you. I guess school is not the only place you can learn important lessons.",
 			"moralFocusAgreement": "",
 			"moralFocusDisagreement": []
 		}
@@ -314,18 +312,18 @@
 		"topic": "High_schoolIsDrool",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "You learn so much from life than in school. AND school is nothing but a money making industry.",
-			"agreementText": "That's amazing! You get how I feel.",
+			"agreementText": "That's amazing! You get how I feel. School is just a part of the system.",
 			"disagreementtext": "Whoa! You put too trust into the system.",
 			"moralFocusAgreement": "Yes education is overrated!",
-			"moralFocusDisagreement": ["Most things you learn in school are useless in real life.", "You can learn about discipline and other things from just living your life and meeting people.", "I think you might have placed too much trust in the institution man."]
+			"moralFocusDisagreement": ["Most things you learn in school are useless in real life.", "You can learn about discipline and other things from just living your life and meeting shapes.", "I think you might have placed too much trust in the institution man."]
 		}
 	},
 	{
 		"topic": "Mid_schoolIsDrool",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "You learn so much from life than in school.",
-			"agreementText": "That's cool.",
-			"disagreementtext": "Whoa. Why no?",
+			"agreementText": "I'm glad you agree. A lot of skills you can only learn by doing them in the real world.",
+			"disagreementtext": "Whoa. I don't think so. A lot of skills you can only learn by doing them in the real world.",
 			"moralFocusAgreement": "Yes education is overrated!",
 			"moralFocusDisagreement": ["Life is the ultimate teacher! School is just boring."]
 		}
@@ -333,9 +331,9 @@
 	{
 		"topic": "Low_schoolIsDrool",
 		"NarrativeElements": {
-			"surfaceOpinionOnTopic": "You learn so much from life than in school. BUT I guess school does provide structures for people to learn things faster.",
-			"agreementText": "That's cool.",
-			"disagreementtext": "Whoa. Why no?",
+			"surfaceOpinionOnTopic": "You learn so much from life than in school. BUT I guess school does provide a structure for shapes to learn things faster.",
+			"agreementText": "That's cool. I can see how school teaches you things like discipline.",
+			"disagreementtext": "I don't think so. I can see how school teaches you things like discipline.",
 			"moralFocusAgreement": "",
 			"moralFocusDisagreement": []
 		}
@@ -344,8 +342,8 @@
 		"topic": "High_SupportingComunities",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "Don't you agree that contributing to your community is how you find a sense of belonging and security? AND those who protect and serve the community are to be respected.",
-			"agreementText": "YES! I am so happy to hear that!",
-			"disagreementtext": "WHAT?! Why don't you agree?",
+			"agreementText": "YES! I'm so happy to hear that. The community is the most important support system in our life.",
+			"disagreementtext": "WHAT?! Your community's got your back so not why not return the favor?",
 			"moralFocusAgreement": "Yeah! You know the value of the community! The community has your back.",
 			"moralFocusDisagreement": ["No shape can do everything on their own, your community is your support system.", "I understand that being a part of any community can be hard sometimes because of the expectations but we do what we have to do to support each other!", "Your own selfishness will cost you and then you will see the importance of community."]
 		}
@@ -354,8 +352,8 @@
 		"topic": "Mid_SupportingComunities",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "Don't you agree that contributing to your community is how you find a sense of belonging and security?",
-			"agreementText": "I am so happy to hear that!",
-			"disagreementtext": "Oh... okay. Why don't you agree?",
+			"agreementText": "I'm so happy to hear that! Being a part of the community means you must watch out for one another. ",
+			"disagreementtext": "Oh... okay. I respectfully disagree. Being a part of the community means you must watch out for one another. ",
 			"moralFocusAgreement": "Yeah! You know the value of the community! The community has your back.",
 			"moralFocusDisagreement": ["That's too bad. I think being selfish will be your downfall one day."]
 		}
@@ -364,8 +362,8 @@
 		"topic": "Low_SupportingComunities",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "Don't you agree that contributing to your community is how you find a sense of belonging and security? BUT sometimes we have to do what's best for us.",
-			"agreementText": "I get that.",
-			"disagreementtext": "Oh... okay. Why don't you agree?",
+			"agreementText": "I get that. You gotta protect the community and yourself.",
+			"disagreementtext": "I don't know about that. You gotta protect the community and yourself.",
 			"moralFocusAgreement": "",
 			"moralFocusDisagreement": []
 		}
@@ -374,7 +372,7 @@
 		"topic": "High_LoverOfRisks",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "You only live once so you gotta make it count! Everything exciting comes with a little risk. AND the higher the danger the bigger the reward.",
-			"agreementText": "Heck ya! A little risk never hurts!",
+			"agreementText": "Heck ya! Ricky is just another word for epic! ",
 			"disagreementtext": "Boooo! Don't be a coward!",
 			"moralFocusAgreement": "YAH! Take some risk and live your life to the fullest!",
 			"moralFocusDisagreement": ["Don't you think following the same routine everyday is such a bore?", "Well if you don't take any risk, can you really say you lived?", "Oh well, maybe you will try to live my way when you decide to move out from under the rock."]
@@ -384,8 +382,8 @@
 		"topic": "Mid_LoverOfRisks",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "You only live once so you gotta make it count! Everything exciting comes with a little risk.",
-			"agreementText": "Heck ya!",
-			"disagreementtext": "Boooo why not??",
+			"agreementText": "Heck ya! A little risk never hurts!",
+			"disagreementtext": "Booo! A little risk never hurts!",
 			"moralFocusAgreement": "YAH! Take some risk and live your life to the fullest!",
 			"moralFocusDisagreement": ["You won't know the trill of life if you don't welcome a little bit of risk."]
 		}
@@ -394,8 +392,8 @@
 		"topic": "Low_LoverOfRisks",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "You only live once so you gotta make it count! Everything exciting comes with a little risk. BUT I have my limits and I also find happiness in ordinary things.",
-			"agreementText": "Yup. You know it.",
-			"disagreementtext": "No? Why?",
+			"agreementText": "Yup. You know it. I guess you gotta find that sweet balance between risk and fun.",
+			"disagreementtext": "I don't think so. I guess you gotta find that sweet balance between risk and fun.",
 			"moralFocusAgreement": "",
 			"moralFocusDisagreement": []
 		}
@@ -403,29 +401,29 @@
 	{
 		"topic": "High_LandISWhereThehrtIS",
 		"NarrativeElements": {
-			"surfaceOpinionOnTopic": "I don't understand shapes who move away and abandon their roots. AND people should cherish what they have instead of dreaming about what's outside.",
-			"agreementText": "RIGHT?! You know what I mean.",
-			"disagreementtext": "Oh? Why not?",
-			"moralFocusAgreement": "I am glad you understand how important your roots are.",
-			"moralFocusDisagreement": ["You should work on things at home before you set sail for what you think is better.", "Don't think where you are from is who you are? If you dislike your home, you must hate yourself.", "That's a shame."]
+			"surfaceOpinionOnTopic": "I don't understand shapes who move away and abandon their roots. AND shapes should cherish what they have instead of dreaming about what's outside.",
+			"agreementText": "RIGHT?! You know what I mean. You should always know where you come from.",
+			"disagreementtext": "I can't agree with you on this. The land is truly where your heart is.",
+			"moralFocusAgreement": "I'm glad you understand how important your roots are.",
+			"moralFocusDisagreement": ["You should work on things at home before you set sail for what you think is better.", "Don't think where you're from is who you're? If you dislike your home, you must hate yourself.", "That's a shame."]
 		}
 	},
 	{
 		"topic": "Mid_LandISWhereThehrtIS",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "I don't understand shapes who move away and abandon their roots.",
-			"agreementText": "Yes. You know what I mean.",
-			"disagreementtext": "Oh? Why not?",
-			"moralFocusAgreement": "I am glad you understand how important your roots are.",
-			"moralFocusDisagreement": ["I am sorry we can't agree on this."]
+			"agreementText": "Yes. You know what I mean. You should never be ashamed of where you from and leaving is never the answer.",
+			"disagreementtext": "No. I disagee. You should never be ashamed of where you from and leaving is never the answer.",
+			"moralFocusAgreement": "I'm glad you understand how important your roots are.",
+			"moralFocusDisagreement": ["I'm sorry we can't agree on this."]
 		}
 	},
 	{
 		"topic": "Low_LandISWhereThehrtIS",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "I don't understand shapes who move away and abandon their roots. BUT I know sometimes shapes leave because they want something different.",
-			"agreementText": "Yes. You know what I mean.",
-			"disagreementtext": "Oh? Why not?",
+			"agreementText": "Yeah. I guess you can't find everything you want in one place no matter how great your hometown is.",
+			"disagreementtext": "No. I guess you can't find everything you want in one place no matter how great your hometown is.",
 			"moralFocusAgreement": "",
 			"moralFocusDisagreement": []
 		}
@@ -435,17 +433,17 @@
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "Work hard, live hard, am I right? AND your worth comes from your hard work,",
 			"agreementText": "Right?! You know how important our job is.",
-			"disagreementtext": "That makes no sense at all.",
+			"disagreementtext": "That makes no sense at all. You are what you can make.",
 			"moralFocusAgreement": "It's always nice to meet someone who also sees the value of hard work!",
-			"moralFocusDisagreement": ["Your hard work will reward you with a great life.", "Don't you think what you do in this world is your legacy?", "I cannot agree with you because I am my career and I will leave my legacy in this world."]
+			"moralFocusDisagreement": ["Your hard work will reward you with a great life.", "Don't you think what you do in this world is your legacy?", "I cannot agree with you because I'm my career and I will leave my legacy in this world."]
 		}
 	},
 	{
 		"topic": "Mid_CarrerAboveAll",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "Work hard, live hard, am I right?",
-			"agreementText": "Right?!",
-			"disagreementtext": "Hmmm... okay... but why?",
+			"agreementText": "Right?! A shape's career defines who they are.",
+			"disagreementtext": "I don't think you're right. A shape's career defines who they are.",
 			"moralFocusAgreement": "It's always nice to meet someone who also sees the value of hard work!",
 			"moralFocusDisagreement": ["Really? You think laziness is the way to go?"]
 		}
@@ -454,8 +452,8 @@
 		"topic": "Low_CarrerAboveAll",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "Work hard, live hard, am I right? BUT I guess you need to let loose once a while.",
-			"agreementText": "Good for you.",
-			"disagreementtext": "Hmmm... okay...",
+			"agreementText": "Good for you. I think it's more fun when you feel like you've earned it.",
+			"disagreementtext": "Hmm. I don't know if I agree. I think it's more fun when you feel like you've earned it.",
 			"moralFocusAgreement": "",
 			"moralFocusDisagreement": []
 		}
@@ -464,8 +462,8 @@
 		"topic": "High_FriendsAreTheJoyOFlife",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "Don't you think life is really about the friends you made along the way? AND the more the merrier! My friends are my treasure.",
-			"agreementText": "Yes! Friendship!!!",
-			"disagreementtext": "No? How could you say that!",
+			"agreementText": "Yes! Friendship!! We all need good friends in our life.",
+			"disagreementtext": "How could you say that! Great friends make every bad thing disappear.",
 			"moralFocusAgreement": "Friendship is so important because you choose your friends!",
 			"moralFocusDisagreement": ["Don't you think great friends are the best support system any shape can have?", "A happy shape is the happiest when they share their happiness with friends.", "Too bad. Perhaps you will turn around when you have the support of real friends."]
 		}
@@ -474,8 +472,8 @@
 		"topic": "Mid_FriendsAreTheJoyOFlife",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "Don't you think life is really about the friends you made along the way?",
-			"agreementText": "Yes! Friendship!",
-			"disagreementtext": "No? Why not?",
+			"agreementText": "Yes! Friends are my source of happiness and security. They're my support system.",
+			"disagreementtext": "No! Friends are my source of happiness and security. They're my support system.",
 			"moralFocusAgreement": "Friendship is so important because you choose your friends!",
 			"moralFocusDisagreement": ["Really? You don't think friends are the best assets a shape can have?"]
 		}
@@ -483,9 +481,9 @@
 	{
 		"topic": "Low_FriendsAreTheJoyOFlife",
 		"NarrativeElements": {
-			"surfaceOpinionOnTopic": "Don't you think life is really about the friends you made along the way? BUT you can't let friendship define who you are.",
-			"agreementText": "Neato.",
-			"disagreementtext": "No? Why not?",
+			"surfaceOpinionOnTopic": "Don't you think life is really about the friends you made along the way? BUT you can't let friendship define who you're.",
+			"agreementText": "Neato. I guess you should know who you want to befriend, and to know that, you need you know yourself.",
+			"disagreementtext": "I don't think so. I guess you should know who you want to befriend, and to know that, you need you know yourself.",
 			"moralFocusAgreement": "",
 			"moralFocusDisagreement": []
 		}
@@ -495,7 +493,7 @@
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "I find bliss in my peace and quiet. AND I don't understand shapes who can't be alone.",
 			"agreementText": "It's great that you see it my way. Alone time is great!",
-			"disagreementtext": "Really?! You don't think so?",
+			"disagreementtext": "Really?! You must never experienced the bliss of being alone.",
 			"moralFocusAgreement": "Learning to be alone is learning to love yourself.",
 			"moralFocusDisagreement": ["Being alone can be scary but there is also great comfort in that.", "A shape who can't be alone is trying to run away from facing themself.", "Perhaps you will see it my way when you do some meditation on your own. Until then, I have to politely disagree with you."]
 		}
@@ -504,8 +502,8 @@
 		"topic": "Mid_Loner",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "I find bliss in my peace and quiet.",
-			"agreementText": "It's great that you see it my way.",
-			"disagreementtext": "Really? You don't think so?",
+			"agreementText": "You're right. You can only get to know who you really are when you are alone.",
+			"disagreementtext": "You're wrong. You can only get to know who you really are when you are alone.",
 			"moralFocusAgreement": "Learning to be alone is learning to love yourself.",
 			"moralFocusDisagreement": ["Really? How can you learn about yourself when you never spend time with yourself?"]
 		}
@@ -514,8 +512,8 @@
 		"topic": "Low_Loner",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "I find bliss in my peace and quiet. But I need to socialize once in a while haha.",
-			"agreementText": "It's great that you see it my way.",
-			"disagreementtext": "Really? You don't think so?",
+			"agreementText": "Yes. Alone time is awesome but occasional social time can be good.",
+			"disagreementtext": "I don't think so. Alone time is awesome but occasional social time can be good.",
 			"moralFocusAgreement": "",
 			"moralFocusDisagreement": []
 		}
@@ -524,8 +522,8 @@
 		"topic": "High_youthAreTheFuture",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "You know, young shapes these days have the best ideas. AND I believe they can make a real difference.",
-			"agreementText": "Am I right? Thanks for agreeing with me.",
-			"disagreementtext": "You don't think so? Why is that?",
+			"agreementText": "Am I right? Thanks for agreeing with me. Youth are the future!",
+			"disagreementtext": "How can you say that?! The young shapes are literally changing the world!",
 			"moralFocusAgreement": "Youth are the future! Haha.",
 			"moralFocusDisagreement": ["Young shapes know the risk of bettering the world because they have to live in it longer than those who are older.", "Young shapes are exposed to more new knowledge and experiences, which is the key to real change.", "You might be too old-fashioned to welcome much needed new changes."]
 		}
@@ -534,8 +532,8 @@
 		"topic": "Mid_youthAreTheFuture",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "You know, young shapes these days have the best ideas.",
-			"agreementText": "Am I right? Thanks for agreeing with me.",
-			"disagreementtext": "You don't think so? Why is that?",
+			"agreementText": "Thanks for agreeing with me. The young ones are so bright and they'll make the world a better place.",
+			"disagreementtext": "I disagree. The young ones are so bright and they'll make the world a better place.",
 			"moralFocusAgreement": "Youth are the future! Haha.",
 			"moralFocusDisagreement": ["You want to deny their potential? That's just stupid."]
 		}
@@ -544,8 +542,8 @@
 		"topic": "Low_youthAreTheFuture",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "You know, young shapes these days have the best ideas. BUT they still need more life experience to actualize those ideas.",
-			"agreementText": "Yup, I think so too.",
-			"disagreementtext": "You don't think so? Why is that?",
+			"agreementText": "Yup, I think so too. They'll get even brighter as they grow up. Give them a little faith.",
+			"disagreementtext": "No, I don't think so. They'll get even brighter as they grow up. Give them a little faith.",
 			"moralFocusAgreement": "",
 			"moralFocusDisagreement": []
 		}
@@ -554,8 +552,8 @@
 		"topic": "High_ProHiringFamily",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "You know, you can only trust your blood to know what's best for the family business. AND that's how you build and keep a family business.",
-			"agreementText": "That's right! I am glad you see it that way.",
-			"disagreementtext": "You think trust blood is a bad idea? How could you think that!",
+			"agreementText": "That's right! I'm glad you see it that way. You gotta look out for your family.",
+			"disagreementtext": "You think trusting  blood is a bad idea? How could you think that! Family comes first!",
 			"moralFocusAgreement": "Yeah! Nepotism is really not that bad, haha.",
 			"moralFocusDisagreement": ["Keeping control in the family is the best security measure!", "You can never fully trust a stranger no matter how capable they are.", "Well you will see it my way when your family business is stolen by a stranger."]
 		}
@@ -564,8 +562,8 @@
 		"topic": "Mid_ProHiringFamily",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "You know, you can only trust your blood to know what's best for the family business.",
-			"agreementText": "That's right! I am glad you see it that way.",
-			"disagreementtext": "You think trust blood is a bad idea? Why?",
+			"agreementText": "That's right! Your family should always come first.",
+			"disagreementtext": "That's wrong. Your family should always come first.",
 			"moralFocusAgreement": "Yeah! Nepotism is really not that bad, haha.",
 			"moralFocusDisagreement": ["You share the same value in the family. A happy family leads to a successful business."]
 		}
@@ -574,8 +572,8 @@
 		"topic": "Low_ProHiringFamily",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "You know, you can only trust your blood to know what's best for the family business. BUT I guess there is value in outside perspective.",
-			"agreementText": "That's right.",
-			"disagreementtext": "No? okay I guess.",
+			"agreementText": "Yes. I don't think hiring family memebers is a bad thing as long as you also hire shapes who can do the job right.",
+			"disagreementtext": "No. I don't think hiring family memebers is a bad thing as long as you also hire shapes who can do the job right.",
 			"moralFocusAgreement": "",
 			"moralFocusDisagreement": []
 		}
@@ -584,8 +582,8 @@
 		"topic": "High_suchUncharactristicBehaviorOhMy",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "I find shapes who want to stand out to be distasteful. AND I think they do it for the attention. How sad.",
-			"agreementText": "You know what's right and wrong.",
-			"disagreementtext": "Oh no? I am sad to hear that.",
+			"agreementText": "I'm pleased to hear that. You know what's right and wrong.",
+			"disagreementtext": "Oh no? I'm sad to hear that.",
 			"moralFocusAgreement": "Yeah shapes who want to be rebels are just sad.",
 			"moralFocusDisagreement": ["There is a reason the norm is the norm. It's good for us.", "If a shape doesn't want to be normal, there must be something wrong with them.", "That's just pathetic. You don't understand what's good for you."]
 		}
@@ -594,8 +592,8 @@
 		"topic": "Mid_suchUncharactristicBehaviorOhMy",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "I find shapes who want to stand out to be distasteful.",
-			"agreementText": "Right? You know how I feel.",
-			"disagreementtext": "Oh no? That's interesting...",
+			"agreementText": "You know how I feel. I think normal behaviors and things are normal for a reason. They're good for us.",
+			"disagreementtext": "That's interesting... I think normal behaviors and things are normal for a reason. They're good for us.",
 			"moralFocusAgreement": "Yeah shapes who want to be rebels are just sad.",
 			"moralFocusDisagreement": ["Trying to be different is just a sad attempt for attention."]
 		}
@@ -604,8 +602,8 @@
 		"topic": "Low_suchUncharactristicBehaviorOhMy",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "I find shapes who want to stand out to be distasteful. BUT I guess we all need to find a way to express ourselves.",
-			"agreementText": "Right? You know how I feel.",
-			"disagreementtext": "Oh no? That's interesting...",
+			"agreementText": "Yes. I think self expression is good as long as you don't hurt others.",
+			"disagreementtext": "I can't agree on that. I think self expression is good as long as you don't hurt others.",
 			"moralFocusAgreement": "",
 			"moralFocusDisagreement": []
 		}
@@ -614,18 +612,18 @@
 		"topic": "High_WeLiveForSpontaneity",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "Don't you see life is just a collection of great stories? So say yes to life! AND you can't say you truly lived if you never did something spontaneous!",
-			"agreementText": "Right on! Say yes to life!",
-			"disagreementtext": "Oh no? Why is that?",
+			"agreementText": "Right on! Say yes to life! You only live once after all.",
+			"disagreementtext": "Yeah... I'm not with you on this. Life is so short so do as much as you can!",
 			"moralFocusAgreement": "Really awesome my friend! Seize the moments!",
-			"moralFocusDisagreement": ["Well if you never said yes, how could you find out what brings you joy and excitement?", "I think we get stuck in routines very easily and spontaneous moments are the great escape!", "I am sorry we can't see eye to eye on this. I hope you will consider saying yes the next time a random invitation appears in front of you."]
+			"moralFocusDisagreement": ["Well if you never said yes, how could you find out what brings you joy and excitement?", "I think we get stuck in routines very easily and spontaneous moments are the great escape!", "I'm sorry we can't see eye to eye on this. I hope you will consider saying yes the next time a random invitation appears in front of you."]
 		}
 	},
 	{
 		"topic": "Mid_WeLiveForSpontaneity",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "Don't you see life is just a collection of great stories? So say yes to life!",
-			"agreementText": "Right on! Say yes to life!",
-			"disagreementtext": "Oh no? Why is that?",
+			"agreementText": "Right on! Great things happen when you say yes!",
+			"disagreementtext": "I'm not with you on this. Great things happen when you say yes!",
 			"moralFocusAgreement": "Really awesome my friend! Seize the moments!",
 			"moralFocusDisagreement": ["You don't think life is beautiful because of the unexpected?"]
 		}
@@ -634,8 +632,8 @@
 		"topic": "Low_WeLiveForSpontaneity",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "Don't you see life is just a collection of great stories? So say yes to life! BUT sometimes a little planning can help you get the most out of the experience.",
-			"agreementText": "That's nice.",
-			"disagreementtext": "Oh no? Why is that?",
+			"agreementText": "That's nice. You don't have to always say yes. Just try to follow the flow of life once a while!",
+			"disagreementtext": "I don't think you're right about this. You don't have to always say yes. Just try to follow the flow of life once a while!",
 			"moralFocusAgreement": "",
 			"moralFocusDisagreement": []
 		}
@@ -647,25 +645,25 @@
 			"agreementText": "Yes! Adventure awaits!",
 			"disagreementtext": "Aww... that's a bummer.",
 			"moralFocusAgreement": "Fill your life with adventures, not things!",
-			"moralFocusDisagreement": ["You know someone once said that one way to get the most out of life is to look upon it as an adventure!", "We must take adventures in order to know where we truly belong.", "I am sorry to hear that my friend. The road of self-discovery is just ahead of you and I hope you will take on that journey."]
+			"moralFocusDisagreement": ["You know someone once said that one way to get the most out of life is to look upon it as an adventure!", "We must take adventures in order to know where we truly belong.", "I'm sorry to hear that my friend. The road of self-discovery is just ahead of you and I hope you will take on that journey."]
 		}
 	},
 	{
 		"topic": "Mid_AnAdventureWeSeek",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "I believe if happiness is the goal and it should be, then adventures should be a priority!",
-			"agreementText": "Yes! Adventure awaits!",
-			"disagreementtext": "Aww... that's a bummer.",
+			"agreementText": "Yes! We all need some adventure in our life.",
+			"disagreementtext": "No. We all need some adventure in our life.",
 			"moralFocusAgreement": "Fill your life with adventures, not things!",
-			"moralFocusDisagreement": ["If you are missing out on adventures, you are missing out on life!"]
+			"moralFocusDisagreement": ["If you're missing out on adventures, you're missing out on life!"]
 		}
 	},
 	{
 		"topic": "Low_AnAdventureWeSeek",
 		"NarrativeElements": {
-			"surfaceOpinionOnTopic": "I believe if happiness is the goal and it should be, then adventures should be a priority! BUT just make sure you are not ignoring your responsibilities.",
-			"agreementText": "That's cool.",
-			"disagreementtext": "Aww... that's a bummer.",
+			"surfaceOpinionOnTopic": "I believe if happiness is the goal and it should be, then adventures should be a priority! BUT just make sure you're not ignoring your responsibilities.",
+			"agreementText": "That's cool. A little adventure can be great for the soul as long as you're not ignoring your responsibilities.",
+			"disagreementtext": "I don't think so. A little adventure can be great for the soul as long as you're not ignoring your responsibilities.",
 			"moralFocusAgreement": "",
 			"moralFocusDisagreement": []
 		}
@@ -674,8 +672,8 @@
 		"topic": "High_NiaeveteIsFiction",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "You know how to tell a dangerous shape? One who appears naive or illogical but secretly knows exactly what they are doing. AND you should never trust anyone who appears easily agreeable.",
-			"agreementText": "Right?! You know how it all works!",
-			"disagreementtext": "WHAT?! I found it mind-boggling you would diasgree. ",
+			"agreementText": "Right?! You know how it all works. Trust no one.",
+			"disagreementtext": "WHAT?! I found it mind-boggling you would diasgree. I trust no one.",
 			"moralFocusAgreement": "Yeah! You get it. Trust must be earned!",
 			"moralFocusDisagreement": ["Sometimes you let shapes in and they just take from you.", "Don't trust any shape blindly. Most of them are with you only for their own sake and interest. That's just how shapes are.", "You will learn this lesson the hard way one day. I hope you remember this conversation."]
 		}
@@ -684,8 +682,8 @@
 		"topic": "Mid_NiaeveteIsFiction",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "You know how to tell a dangerous shape? One who appears naive or illogical but secretly knows exactly what they are doing.",
-			"agreementText": "Yup. You know what's up.",
-			"disagreementtext": "Hmm. It's interesting that you disagree.",
+			"agreementText": "Yup. You know what's up. I would never trust a shape at face value.",
+			"disagreementtext": "Hmm. It's interesting that you disagree. I would never trust a shape at face value.",
 			"moralFocusAgreement": "Yeah! You get it. Trust must be earned!",
 			"moralFocusDisagreement": ["That's very naive of you. I'm sorry we can't agree on this."]
 		}
@@ -694,8 +692,8 @@
 		"topic": "Low_NiaeveteIsFiction",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "You know how to tell a dangerous shape? One who appears naive or illogical but secretly knows exactly what they are doing. BUT I guess there are rare ones who are just naturally innocent.",
-			"agreementText": "Yup. You know what's up.",
-			"disagreementtext": "Hmm is it though?",
+			"agreementText": "I agree. There're only a few truly good shapes.",
+			"disagreementtext": "Hmm is it though? There're only a few truly good shapes.",
 			"moralFocusAgreement": "",
 			"moralFocusDisagreement": []
 		}
@@ -704,9 +702,9 @@
 		"topic": "High_ImmagretsWeGetTheJobDone",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "The city is built on the backs of shapes who moved here. We need to remember that we all make this city our home so every shape is part of our family. AND we must treat them with respect and compassion.",
-			"agreementText": "RIGHT! We are all equal and we need to treat each other with respect.",
-			"disagreementtext": "No? Why would you think that way?!",
-			"moralFocusAgreement": "That's awesome friend! I am glad you understand and appreciate the labor of those who want to make this place their home.",
+			"agreementText": "RIGHT! we're all equal and we need to treat each other with respect.",
+			"disagreementtext": "You're wrong. We were all outsiders at one point.",
+			"moralFocusAgreement": "That's awesome friend! I'm glad you understand and appreciate the labor of those who want to make this place their home.",
 			"moralFocusDisagreement": ["We were all visitors at one point until we decided to make this place our home. So why do we want to say no to shapes who come after us?", "You really think shapes from the outside are bad simply because they are from the outside?", "Your closed mind will be your downfall and the city will never thrill because of that."]
 		}
 	},
@@ -714,9 +712,9 @@
 		"topic": "Mid_ImmagretsWeGetTheJobDone",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "The city is built on the backs of shapes who moved here. We need to remember that we all make this city our home so every shape is part of our family.",
-			"agreementText": "Right? You know how I feel.",
-			"disagreementtext": "No? Why not?",
-			"moralFocusAgreement": "That's awesome friend! I am glad you understand and appreciate the labor of those who want to make this place their home.",
+			"agreementText": "Right? You know how I feel. Immigrants get the job done.",
+			"disagreementtext": "I disagree. Immigrants get the job done.",
+			"moralFocusAgreement": "That's awesome friend! I'm glad you understand and appreciate the labor of those who want to make this place their home.",
 			"moralFocusDisagreement": ["No? I think you might be a little closed minded."]
 		}
 	},
@@ -724,8 +722,8 @@
 		"topic": "Low_ImmagretsWeGetTheJobDone",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "The city is built on the backs of shapes who moved here. We need to remember that we all make this city our home so every shape is part of our family. BUT we do get some bad shapes once a while.",
-			"agreementText": "Nice.",
-			"disagreementtext": "No? Why not?",
+			"agreementText": "Nice. I would say most outsiders are great despite a few bad ones. But ain't all shapes like that?",
+			"disagreementtext": "I don't think so. I would say most outsiders are great despite a few bad ones. But ain't all shapes like that?",
 			"moralFocusAgreement": "",
 			"moralFocusDisagreement": []
 		}
@@ -734,19 +732,19 @@
 		"topic": "High_WeArewNothingIfWeAreNotReserved",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "Traditions are traditions because they stood the test of time. AND we must preserve them as they are the pillars of our society.",
-			"agreementText": "Wonderful! I very please to hear you say that.",
-			"disagreementtext": "Oh no? I'm very disappointed to hear that.",
-			"moralFocusAgreement": "That's really wonderful! I am so glad you see the importance of tradition.",
-			"moralFocusDisagreement": ["Traditions are promises we keep for each other and they are why the society functions smoothly.", "If you go against traditions, you are a nuisance around you. Why would you be so selfish?", "How disappointing. I don't want to talk to you about this anymore."]
+			"agreementText": "Wonderful! I'm very please to hear you say that. Being reserved is a great attitude in life.",
+			"disagreementtext": "Oh no? I'm very disappointed to hear that. Being reserved is a great attitude in life.",
+			"moralFocusAgreement": "That's really wonderful! I'm so glad you see the importance of tradition.",
+			"moralFocusDisagreement": ["Traditions are promises we keep for each other and they are why the society functions smoothly.", "If you go against traditions, you're a nuisance around you. Why would you be so selfish?", "How disappointing. I don't want to talk to you about this anymore."]
 		}
 	},
 	{
 		"topic": "Mid_WeArewNothingIfWeAreNotReserved",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "Traditions are traditions because they stood the test of time.",
-			"agreementText": "Wonderful! That's good to hear.",
-			"disagreementtext": "Oh no? Why is that?",
-			"moralFocusAgreement": "That's really wonderful! I am so glad you see the importance of tradition.",
+			"agreementText": "Wonderful! That's good to hear. We all need traditions to guide us.",
+			"disagreementtext": "Yeah... I'm not with you on this. We all need traditions to guide us.",
+			"moralFocusAgreement": "That's really wonderful! I'm so glad you see the importance of tradition.",
 			"moralFocusDisagreement": ["But why? You know traditions are important because they are our heritage right?"]
 		}
 	},
@@ -754,8 +752,8 @@
 		"topic": "Low_WeArewNothingIfWeAreNotReserved",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "Traditions are traditions because they stood the test of time. BUT I guess we also make adjustments to make sure every shape can benefit from those traditions.",
-			"agreementText": "That's good to hear.",
-			"disagreementtext": "Oh no? Why is that?",
+			"agreementText": "That's good to hear. I think traditions are good as long as they evolve with time.",
+			"disagreementtext": "I don't think you're right. I think traditions are good as long as they evolve with time.",
 			"moralFocusAgreement": "",
 			"moralFocusDisagreement": []
 		}
@@ -765,17 +763,17 @@
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "I think the world needs more entrepreneurs. AND they are the real game changers.",
 			"agreementText": "RIGHT?! Self made shapes are the BEST!",
-			"disagreementtext": "NO WAY! You don't think so?",
+			"disagreementtext": "NO WAY! I found them to be so inspiring and helpful.",
 			"moralFocusAgreement": "That's awesome! Self-made shapes are our role models.",
-			"moralFocusDisagreement": ["What's more impressive than making something out of nothing!", "You at least need to acknowledge how much self discipline a self-made shape has.", "I think you are too lazy or too sheltered to see the strength of a self-made shape."]
+			"moralFocusDisagreement": ["What's more impressive than making something out of nothing!", "You at least need to acknowledge how much self discipline a self-made shape has.", "I think you're too lazy or too sheltered to see the strength of a self-made shape."]
 		}
 	},
 	{
 		"topic": "Mid_AselfMadeShapeWeAspireToBe",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "I think the world needs more entrepreneurs.",
-			"agreementText": "I am glad you agree.",
-			"disagreementtext": "You don't think so?",
+			"agreementText": "I'm glad you agree. They're the best role models.",
+			"disagreementtext": "I disagree. They're the best role models.",
 			"moralFocusAgreement": "That's awesome! Self-made shapes are our role models.",
 			"moralFocusDisagreement": ["What?! You don't think self-made shapes deserve our respect?"]
 		}
@@ -784,8 +782,8 @@
 		"topic": "Low_AselfMadeShapeWeAspireToBe",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "I think the world needs more entrepreneurs. BUT there is nothing wrong with finding security in a stable desk job.",
-			"agreementText": "I am glad you agree.",
-			"disagreementtext": "You don't think so?",
+			"agreementText": "Yes. You don't have to be an entrepreneur to find the enterpreneurial spirit insipiring.",
+			"disagreementtext": "No. You don't have to be an entrepreneur to find the enterpreneurial spirit insipiring.",
 			"moralFocusAgreement": "",
 			"moralFocusDisagreement": []
 		}
@@ -794,19 +792,19 @@
 		"topic": "High_Shapesarenothingifnotsocial",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "I always find it awkward around quiet shapes. That's why I love sociable and approachable shapes. AND If they can't open up to you, how can you trust them?",
-			"agreementText": "YAY! I love the way you think!",
-			"disagreementtext": "No?! How could you say that?!",
-			"moralFocusAgreement": "Haha! That 's what I am talking about! I don't want to be mean but quiet shapes scare me sometimes.",
-			"moralFocusDisagreement": ["Don't you think open shapes are happy shapes?", "Shapes with an open smile always have an open heart!", "I am sorry we can't agree on this. That's too bad."]
+			"agreementText": "YAY! I love the way you think! I just love social shapes.",
+			"disagreementtext": "No?! How could you say that?! I would never trust a shape who's closed off.",
+			"moralFocusAgreement": "Haha! That 's what I'm talking about! I don't want to be mean but quiet shapes scare me sometimes.",
+			"moralFocusDisagreement": ["Don't you think open shapes are happy shapes?", "Shapes with an open smile always have an open heart!", "I'm sorry we can't agree on this. That's too bad."]
 		}
 	},
 	{
 		"topic": "Mid_Shapesarenothingifnotsocial",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "I always find it awkward around quiet shapes. That's why I love sociable and approachable shapes.",
-			"agreementText": "Yeah! You know how I feel.",
-			"disagreementtext": "No? Can you tell me why not?",
-			"moralFocusAgreement": "Haha! That 's what I am talking about! I don't want to be mean but quiet shapes scare me sometimes.",
+			"agreementText": "Yeah! You know how I feel. I just find social shapes easiler to approach and to befriend.",
+			"disagreementtext": "I don't think so. I just find social shapes easiler to approach and to befriend.",
+			"moralFocusAgreement": "Haha! That 's what I'm talking about! I don't want to be mean but quiet shapes scare me sometimes.",
 			"moralFocusDisagreement": ["Oh no? So you think friendly shapes are bad? I think you're just paranoid."]
 		}
 	},
@@ -814,8 +812,8 @@
 		"topic": "Low_Shapesarenothingifnotsocial",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "I always find it awkward around quiet shapes. That's why I love sociable and approachable shapes. BUT I guess some shapes are just socially awkward.",
-			"agreementText": "Glad you agree.",
-			"disagreementtext": "Why do you disagree?",
+			"agreementText": "Glad you agree. I mean there're different ways to get to know a shape but social shapes just make it easier.",
+			"disagreementtext": "I disagree. I mean there're different ways to get to know a shape but social shapes just make it easier.",
 			"moralFocusAgreement": "",
 			"moralFocusDisagreement": []
 		}
@@ -827,15 +825,15 @@
 			"agreementText": "RIGHT ON! Nepotism is the root of ALL EVIL.",
 			"disagreementtext": "WHAT?! You would forgive nepotism?! I could NEVER!",
 			"moralFocusAgreement": "Yeah! Nepotism is the true evil. Really disgusting.",
-			"moralFocusDisagreement": ["Keeping control in the family will only result in corruption and exploitation of other workers.", "Would you want to work in a place where merits are based on blood instead of skills?", "The only thing we can agree on is how willing you are to let corruption happen."]
+			"moralFocusDisagreement": ["Keeping control in the family will only result in corruption and exploitation of other workers.", "Would you want to work in a place where merits are based on blood instead of skills?", "The only thing we can agree on is how willing you're to let corruption happen."]
 		}
 	},
 	{
 		"topic": "Mid_AntiFaviortisum",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "You know what grinds my gears? Nepotism.",
-			"agreementText": "That's right! I am glad you see it that way.",
-			"disagreementtext": "You think nepotism is a good idea? Why?",
+			"agreementText": "That's right! I'm glad you see it that way. Preferential treatment creates toxic workplace.",
+			"disagreementtext": "You think nepotism is a good idea? That's a shame. Preferential treatment creates toxic workplace.",
 			"moralFocusAgreement": "Yeah! Nepotism is the true evil. Really disgusting.",
 			"moralFocusDisagreement": ["You think nepotism is good for business? That's ridiculous."]
 		}
@@ -844,8 +842,8 @@
 		"topic": "Low_AntiFaviortisum",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "You know what grinds my gears? Nepotism. But I guess sometimes you can only trust family to work in the family business.",
-			"agreementText": "That's right!",
-			"disagreementtext": "Oh no? Why is that?",
+			"agreementText": "That's right. Trust is hard to build especially if you have trust issues. ",
+			"disagreementtext": "Yeah... I'm not with you on this. Trust is hard to build especially if you have trust issues. ",
 			"moralFocusAgreement": "",
 			"moralFocusDisagreement": []
 		}

@@ -75,7 +75,7 @@ public class BackgroundCharacter  :  MonoBehaviour
     {
         foreach(InterestingCharacters c in filtredCharacters)
         { //in story streucture bring outr flags and check if a and b are true about a character how does my cnpc react ? 
-            /*  if(c.characterFlags["InLoveWirhAnothersspuce"] ==true && c.characterFlags["WillActOnLove"] == true)
+            /*  if(c.characterFlags["InLoveWithAnothersspuce"] ==true && c.characterFlags["WillActOnLove"] == true)
               {
                   Debug.Log("will act on love! even if it hurts ppl :0 "); //perhaps the character should have their own field called true to your heart 
               }*///wow 45 ppl will love another's spuce out of them 7 will act on it :0 
@@ -148,7 +148,7 @@ public class BackgroundCharacter  :  MonoBehaviour
 
                     checkLoveTraingle(jsn.backgroundcharacters[i].loveInterest, jsn.backgroundcharacters[j].spouse,
                                            jsn.backgroundcharacters[j].significantOther, jsn.backgroundcharacters[j].id,
-                                            "InLoveWirhAnothersspuce", character);
+                                            "InLoveWithAnothersspuce", character);
 
                     checkLoveTraingle(jsn.backgroundcharacters[i].id,
                                            jsn.backgroundcharacters[j].id, jsn.backgroundcharacters[i].spouse, "InLovewithspouseoffriend", character);
@@ -230,7 +230,7 @@ public class BackgroundCharacter  :  MonoBehaviour
                 character.characterFlags["notworkingandrich"] = true;
 
             }
-            if(character.characterFlags["InLoveWirhAnothersspuce"] && character.characterFlags["WillActOnLove"] && !character.isLoverPartner())
+            if(character.characterFlags["InLoveWithAnothersspuce"] && character.characterFlags["WillActOnLove"] && !character.isLoverPartner())
             {
                 character.characterFlags["leftFotLoveIntrest"] = true;
 
@@ -254,7 +254,7 @@ public class BackgroundCharacter  :  MonoBehaviour
                 {
 
 
-                     checkIfAnIntconditionIsMet(character.characterFlags["InLoveWirhAnothersspuce"]  && (personalityOnFive.lowNeuroticism 
+                     checkIfAnIntconditionIsMet(character.characterFlags["InLoveWithAnothersspuce"]  && (personalityOnFive.lowNeuroticism 
                             || personalityOnFive.highAgreeableness), "WillActOnLove", character);
                     /// did this instead of charge 
 

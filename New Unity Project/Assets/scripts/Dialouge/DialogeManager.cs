@@ -5,14 +5,12 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
-//test
 
 [System.Serializable]
 public class DialogeManager : MonoBehaviour //TODO refactor this later, just for testing plopping things here for now 
 {
 
 
-    public int x = 9;
     
 
     public List<Tree> allCharacterConversationsTrees = new List<Tree>();
@@ -66,6 +64,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
     string startingSceneText = "";
 
+    
 
     //for tests 
     Tree TomsTree = new Tree();
@@ -75,6 +74,13 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     Dialoug currentNode;
 
     int moralCounter = 0;
+    int currentConversationalLoopSingle = 0;
+    int currentCNPCloopsInRun = 0;
+    List<string> currentCNPCExploredSurfaceValues = new List<string>();
+    List<string> currentPlayerAttemptedArgumentSV = new List<string>();
+    int currentCNPCDisagreements = 0;
+
+
 
     public void Awake()
     {
@@ -97,7 +103,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     public void setUp()
     {
         Dialoug introductionNode = new Dialoug("introduction", "hey there " + playerName +
-        " \n welcome to AB. what can I do for ya?"); //move this into its file 
+        " \n welcome to AB. what can I do for ya?", "graduate"); //move this into its file 
         conversedAboutCharectersList = sortCharactersToBringUp(bgchar.GetFiltredCharerList());//fltred list of characters (with 5+ flags)
 
 
@@ -105,7 +111,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         " \n welcome to AB. what can I do for ya?"));
 
         setUpTrees();
-  
+
     }
 
 
@@ -115,14 +121,15 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         {
 
             Dialoug node = new Dialoug("thikning about " + character.fullName,
-                         "hmm I have been thinking about the cube " + character.fullName);
+                         "hmm I have been thinking about the cube " + character.fullName,
+                         returnpatternToSurfaceMapiing("graduate")); //CHANGE THIS TO INTRO AND WRITE A DEFAULT FOR MAPPING
             Tree tree = new Tree();
             tree.root = node;
             tree.root.children = returnListOfDialougNodes(character); //nodes with flags
             foreach(Dialoug d in tree.root.children)
             {
                 d.parent = tree.root;
-                d.hatedFacts = getThingsHatedAboutBNPC(d,character);
+                //d.hatedFacts = getThingsHatedAboutBNPC(d,character);
               
             }
             allCharacterConversationsTrees.Add(tree);
@@ -150,17 +157,17 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         {
             if (kvp.Value) //ex:love affairs 
             {
-                if (!alreadyVistedFlags.Contains(mapToCNPCMoralFactor(kvp.Key)))
+                if (!alreadyVistedFlags.Contains(mapToCNPCMoralFactor(kvp.Key))) //TOFRICKENDO changet his to currentnode.sv
                 {
                     if (mapToCNPCMoralFactor(kvp.Key) == "Enviromentalist" || mapToCNPCMoralFactor(kvp.Key) == "AnimalLover" ||
                         mapToCNPCMoralFactor(kvp.Key) == "LandISWhereThehrtIS")
                     { //only these two are kinda the oppasate
-                        string fact = returnTopicText(highVaueOpinions, kvp.Key, "CON");
+                        string fact = returnTopicText(highVaueOpinions, kvp.Key, "CON", "graduate");
                         hatedFactsAboutThisCharacter.Add(fact);
                     }
                     else
                     {
-                        string fact = returnTopicText(lowVaueOpinions, kvp.Key, "CON");
+                        string fact = returnTopicText(lowVaueOpinions, kvp.Key, "CON", "graduate");
                         hatedFactsAboutThisCharacter.Add(fact);
                     }
                 }
@@ -169,10 +176,6 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
             }
         }
-      /*  foreach(string s in hatedFactsAboutThisCharacter)
-        {
-            Debug.Log("the facts about " + character.fullName + "that our CNPC HATES" + s);
-        }*/
         return hatedFactsAboutThisCharacter;
 
     }
@@ -209,7 +212,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         {
             Debug.Log("list size is " + bgCharacterNOdes.Count) ;
 
-            Debug.Log("value of node" + d.ButtonText + "is "+ d.Explored + "value of counter"+i);
+            Debug.Log("value of node" + d.Pattern + "is "+ d.Explored + "value of counter"+i);
             if (!d.Explored)//element is not explored 
             {
                 d.Explored = true;
@@ -261,7 +264,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
         if (node.getHeight() == 2)
         {
-            setPlayerButtonText();
+            setPlayerPattern();
             //for testing 
             foreach(Button b in PlayerButtons)
             {
@@ -284,22 +287,22 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
     private void playerDissAgrees()
     {
-        //Debug.Log("player disagreed!" + currentNode.ButtonText + "after i click on agree! " + currentNode.unbaisedIopinion);
+        //Debug.Log("player disagreed!" + currentNode.Pattern + "after i click on agree! " + currentNode.unbaisedIopinion);
         //TODO  Add methods for arguing on a flag  --- 
-        Debug.Log("the disagreement text is" + currentNode.disagreementText);
-        StartCoroutine(waitAndPrintDisagreement(currentNode.disagreementText)); //currentNode.getRandomHatedFact())
+/*        Debug.Log("the disagreement text is" + currentNode.disagreementText);
+*/        StartCoroutine(waitAndPrintDisagreement(currentNode.disagreementText)); //currentNode.getRandomHatedFact())
        // playerArgueAboutFLag(); 
 
         //NEED TO REFACTOR THIS TO CHECK FOR MORAL AGREE OR DISAGREE
 
 
-        //setPlayerButtonTextDissagreement();//moves to the next node - --- STOP ITT FGGROM HOINH TO THE NEXT ONE 
+        //setPlayerPatternDissagreement();//moves to the next node - --- STOP ITT FGGROM HOINH TO THE NEXT ONE 
     }
 
-    Dialoug currentCNPCStance = new Dialoug("","");
+    Dialoug currentCNPCStance = new Dialoug("","", "graduate");
     public void playerArgueAboutFLag()
     {
-        Debug.Log("current stanc eis "+ currentNode.ButtonText);
+        Debug.Log("current stanc eis "+ currentNode.Pattern);
         currentCNPCStance = currentNode;
         //present all flags for player as a sub menue 
         if(currentNode.getHeight() == 2) // change this into try /catch statments 
@@ -308,7 +311,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             //FOR TESTING 
             for (int i = 0; i < PlayerButtons.Length; i++) //OTHER FLAGS
             {
-                PlayerButtons[i].GetComponentInChildren<Text>().text = "argue for flag ->" + currentNode.parent.children[i].ButtonText;
+                PlayerButtons[i].GetComponentInChildren<Text>().text = "argue for flag ->" + currentNode.parent.children[i].Pattern;
                 if (currentNode.parent.children[i] == null)
                 {
                     PlayerButtons[i].GetComponentInChildren<Text>().text = "no more flags - add logic to hide this option ";
@@ -324,8 +327,6 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
     }
 
-   
-    
     private void askAboutAnotherCharacter()
     {
         currentNode = currentNode.parent; //went up on height --- 
@@ -343,21 +344,20 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     }
   
     //refactor these --- 
-    private void setPlayerButtonText()
+    private void setPlayerPattern()
     {
-        PlayerButtons[0].GetComponentInChildren<Text>().text = "I agree with " + currentNode.ButtonText;
+        PlayerButtons[0].GetComponentInChildren<Text>().text = "I agree with " + currentNode.Pattern;
         PlayerButtons[1].GetComponentInChildren<Text>().text = "I don't agree with you there";
         PlayerButtons[2].GetComponentInChildren<Text>().text = "you know I heard other things about that cube"; //pull from a list of random strings later //TODO
         PlayerButtons[3].GetComponentInChildren<Text>().text = "you know what, lets talk about something else";
     }
-    private void setPlayerButtonTextDissagreement() //change this 
+    private void setPlayerPatternDissagreement() //change this 
     {
         PlayerButtons[0].GetComponentInChildren<Text>().text = "yeah I guess you are right";
         PlayerButtons[1].GetComponentInChildren<Text>().text = "I still don't agree with you there";
         PlayerButtons[2].GetComponentInChildren<Text>().text = "Dish more about that cube"; //pull from a list of random strings later //TODO
         PlayerButtons[3].GetComponentInChildren<Text>().text = "you know what, lets talk about something else";
     }
-
     private void setPlayerButtonToAskAboutOtherCharacters()
     {
         int i = treeCounter;
@@ -370,7 +370,6 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         }
         
     }
-
     private void askAboutAcharacter()
     {
         int i = treeCounter; 
@@ -387,7 +386,6 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         }
 
     }
-
     private  void argueForAflag( ) //refactor this later --- just takes in thee last item clicked 
     {
         int i = 0;
@@ -398,11 +396,10 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         foreach (Button b in PlayerButtons)
         {
             Dialoug d = currentNode.parent.children[i];
-           // Debug.Log(currentNode.parent.children[i].ButtonText);
+           // Debug.Log(currentNode.parent.children[i].Pattern);
             b.onClick.AddListener(() => moveConversationToAflag(d));
             i++;
         }
-
 }
 
     private void moveConversationToSelectedTree(int treeIndex)
@@ -419,23 +416,23 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     private void moveConversationToAflag(Dialoug d ) { 
         StopAllCoroutines();
         GuidialougText.text = "";
-        Debug.Log("!!!" +d.ButtonText);
+        Debug.Log("!!!" +d.Pattern);
         //TODODO disagreement happens here 
 
-        if (currentCNPC.IsMoralFocus(mapToCNPCMoralFactor(d.ButtonText)))//the flag the player presented is the moral focus of the NPC 
+        if (currentCNPC.IsMoralFocus(d.MappedSurfaceValue))//the flag the player presented is the moral focus of the NPC  //TOFRICKENDO changet his to currentnode.sv
         { //TODO CHANGE THIS INTO NEW METHOD 
-            Debug.Log("!!!" + d.ButtonText + "is a moral focus area");
+            Debug.Log("!!!" + d.Pattern + "is a moral focus area");
             StartCoroutine(waitAndPrintAgreement("CNPC conceedes, player selected flag was moral focus of cnpc-- need to add text or pull from a list based on the flag "));
             
         }
         else //HAPPENS WHEN PPLAYER DOES NOT AGREE WITH NNPC
         {
             //---
-            Debug.Log(d.ButtonText);
-            Debug.Log(" returned flag ---  " +currentCNPC.FatherModel.ReturnSchema(d.ButtonText, d));
-            Debug.Log("what is this value ? "+currentCNPC.ConvCharacterMoralFactors[mapToCNPCMoralFactor(currentCNPCStance.ButtonText)] +"on"+currentCNPCStance.ButtonText);
-
-            string schema = currentCNPC.FatherModel.ReturnSchema(d.ButtonText, d);
+            Debug.Log(d.Pattern);
+/*            Debug.Log(" returned flag ---  " +currentCNPC.FatherModel.ReturnSchema(d.Pattern, d));
+*/            //Debug.Log("what is this value ? "+currentCNPC.ConvCharacterMoralFactors[mapToCNPCMoralFactor(currentCNPCStance.Pattern)] +"on"+currentCNPCStance.Pattern);
+            //TOFRICKENDO changet his to currentnode.sv
+            string schema = currentCNPC.FatherModel.ReturnSchema(d.Pattern, d);
             if (schema== "noSchemasFound")
             {
 
@@ -466,10 +463,8 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         //add logic to check if pragmatic or .... 
         //add logic to check for moral focus arae 
         //set the currney node! 
-        //  Debug.Log("kicled on flag " + d.ButtonText+ "+to fdouble check for the parent "+ d.parent.dialougText); //need to later move back the conversdation or resume from here(i.e. reset the buttions)
+        //  Debug.Log("kicled on flag " + d.Pattern+ "+to fdouble check for the parent "+ d.parent.dialougText); //need to later move back the conversdation or resume from here(i.e. reset the buttions)
     }
-
-
     void converseAboutNextCharacter()
     {
         treeCounter++;
@@ -499,11 +494,12 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
     }
 
+
     public void Update()
     {
 
-        // Debug.Log(currentNode.ButtonText);
-        /*    Debug.Log("INSIDE UPDATE --- CURNODE currentNode.ButtonText  " +currentNode.ButtonText + "  topic introduction: " + currentNode.IntroducingATopicdialoug
+        // Debug.Log(currentNode.Pattern);
+        /*    Debug.Log("INSIDE UPDATE --- CURNODE currentNode.Pattern  " +currentNode.Pattern + "  topic introduction: " + currentNode.IntroducingATopicdialoug
                 +"intro baised<dtext>"+ currentNode.dialougText +"a node's agreement"+currentNode.agreementText +"nodes dissagreement text"+ 
                 currentNode.hatedFacts[0]+"fully explored this node"+currentNode.Explored);
             Debug.Log(treeCounter);
@@ -515,7 +511,6 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         StopAllCoroutines();
         StartCoroutine(TypeInDialoug(currentNode.mainOpinionOnAtopic));
     }
-
     private List<InterestingCharacters> sortCharactersToBringUp(List<InterestingCharacters> characterList)
     {
         InterestingCharacters chosenCharacter;
@@ -559,7 +554,6 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
 
     }
-
     private List<Dialoug> returnListOfDialougNodes(InterestingCharacters character) //change name later 
     {
         List<Dialoug> nodes = new List<Dialoug>();
@@ -567,20 +561,25 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         {
             if (kvp.Value)
             {
+                string mappedKey = returnpatternToSurfaceMapiing(kvp.Key);
                 Dialoug node = new Dialoug(
                    translateOpinionIntoText(kvp.Key), //thought bubble 
-                   setCnpcDialoug(kvp.Key, character, "BiasedSVOpin"));//general feelings about a topic ( baised surface opinion)
+                   setCnpcDialoug(kvp.Key, character, "BiasedSVOpin", mappedKey),
+                   mappedKey);
+                
+                //general feelings about a topic ( baised surface opinion)
                 //--- gives the general feelings about a thing, add to the same node the pther structure elements... 
 
                 node.UnbiasedOpeningStatment =
                     getIntroductionTopicString(kvp.Key, character); //unbaised opening statment  --- this is actually the inytoduction text 
               
-                node.agreementText = setCnpcDialoug(kvp.Key, character, "PlayerAgreesWithCNPC");//general feelings about a topic  --- this is actually high 
+                node.agreementText = setCnpcDialoug(kvp.Key, character, "PlayerAgreesWithCNPC", mappedKey);//general feelings about a topic  --- this is actually high 
 
-                node.disagreementText = setCnpcDialoug(kvp.Key, character, "PlayerDisAgreesWithCNPC");//nope - con here is as in low.... 
+                node.disagreementText = setCnpcDialoug(kvp.Key, character, "PlayerDisAgreesWithCNPC", mappedKey);//nope - con here is as in low.... 
                 Debug.Log("disagreement text at set up " + node.disagreementText);
-                node.ButtonText = setPlayerButtonText(kvp.Key); //flag or pattern for now but this mighht actually be the button text for the player to click on... 
-                node.Rating = setNodeRating(kvp.Key);
+                node.Pattern = setPlayerPattern(kvp.Key); //flag or pattern for now but this mighht actually be the button text for the player to click on... 
+                node.Rating = setNodeRating(mappedKey);
+                //node.MappedSurfaceValue = returnpatternToSurfaceMapiing(kvp.Key);
                 //add moral agreement 
                 // add moral disagreement 
                 nodes.Add(node);
@@ -593,31 +592,29 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
     }
 
-    private string setPlayerButtonText(string key)
+    private string setPlayerPattern(string key)
     {
         //will change depeninding on input for now its set to just the key 
         return key ; //will add logic about current cnpc thoughts and modding this later 
     }
 
     //2 opinionsa re split up into high mid and low 
-    string returnTopicText(List<DialougStructure> opinions, string key, string flag) //the sent in list is of high./mid or low 
+    string returnTopicText(List<DialougStructure> opinions, string key, string flag, string mappedSV) //the sent in list is of high./mid or low 
     {//selecting intro and the first part of the body here --- 
         foreach (DialougStructure op in opinions) //ex: all high opp -- splits them up here as high mid and low 
         {
             
 
-            if (op.topic.Contains(mapToCNPCMoralFactor(key))) //get the translatiopn of they key but not ditect character keys..... 
+            if (op.topic.Contains(mappedSV)) //get the translatiopn of they key but not ditect character keys.....  //TOFRICKENDO changet his to currentnode.sv
             {
-                Debug.Log(op.topic.Contains(mapToCNPCMoralFactor(key)) + "for the key " + key);
+               // Debug.Log(op.topic.Contains(mapToCNPCMoralFactor(key)) + "for the key " + key);
                 string r  = op.topic.Split('_').First();
                 selectedOpnion = op.topic.Split('_').Last(); //surface value is returned here = -  sv selected opinion 
-                Debug.Log("selectedOpnion" + selectedOpnion +" AND FLAG "+ flag +"TOPIC"+op.topic);// FLAG isd what i send over to classify as intro text pt agreement or .... 
+               // Debug.Log("selectedOpnion" + selectedOpnion +" AND FLAG "+ flag +"TOPIC"+op.topic);// FLAG isd what i send over to classify as intro text pt agreement or .... 
                 //selectedOpinion is the surface value
-                //Debug.Log("-------selectedOpnion" + selectedOpnion);
                 if (flag == "BiasedSVOpin")
                 {
                     return op.NarrativeElements.surfaceOpinionOnTopic;
-
                 }
                 if (flag == "PlayerAgreesWithCNPC")
                 {
@@ -627,17 +624,15 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                 {
                     Debug.Log("setting disagreement text as " + op.NarrativeElements.disagreementtext);
                     return op.NarrativeElements.disagreementtext;
-
                 }
-
             }
         }
         return "NO TOPIC WAS FOUND --- need to author topic for flag " + key;
     }
 
-    string setNodeRating(string key)
+    string setNodeRating(string mappedSV)
     {
-        switch (currentCNPC.ConvCharacterMoralFactors[mapToCNPCMoralFactor(key)])
+        switch (currentCNPC.ConvCharacterMoralFactors[mappedSV]) //TOFRICKENDO changet his to currentnode.sv
         {
             case ConversationalCharacter.RatingVlaues.High:
                 return "High"; //make this more generic - iof/else get topic or body (startingopinion) or contrasting one... nut need logic on each case i think of this is testign a thing for now 
@@ -646,37 +641,45 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             default://low
                 return "Low";
         }
-
     }
-
         //1
-        private string setCnpcDialoug(string key, InterestingCharacters character, string flag)
-    {//this is hard coded for now but later send in the conversational character (talking with )
-        Debug.Log("yo what does this print?" + currentCNPC.ConvCharacterMoralFactors[mapToCNPCMoralFactor(key)]); ////gives us high mid oir low 
+    private string setCnpcDialoug(string key, InterestingCharacters character, string flag, string mappedSV )
+     {//this is hard coded for now but later send in the conversational character (talking with )
+       // Debug.Log("yo what does this print?" + currentCNPC.ConvCharacterMoralFactors[mapToCNPCMoralFactor(key)]); ////gives us high mid oir low 
         // high - low and mid results --- cool 
-
-        switch (currentCNPC.ConvCharacterMoralFactors[mapToCNPCMoralFactor(key)])
+        switch (currentCNPC.ConvCharacterMoralFactors[mappedSV])
         {
-
             case ConversationalCharacter.RatingVlaues.High:
-                return returnTopicText(highVaueOpinions, key, flag); //make this more generic - iof/else get topic or body (startingopinion) or contrasting one... nut need logic on each case i think of this is testign a thing for now 
+                return returnTopicText(highVaueOpinions, key, flag, mappedSV); //make this more generic - iof/else get topic or body (startingopinion) or contrasting one... nut need logic on each case i think of this is testign a thing for now 
             case ConversationalCharacter.RatingVlaues.Mid:
-                return returnTopicText(midVaueOpinions, key, flag);
+                return returnTopicText(midVaueOpinions, key, flag, mappedSV);
             default://low
-                return returnTopicText(lowVaueOpinions, key, flag);
+                return returnTopicText(lowVaueOpinions, key, flag, mappedSV);                
         }
     }
+    private string returnpatternToSurfaceMapiing (string pattern)
+    {
+        List<string> temporarySurfaceValues = new List<string>();
+        string mappedSV = "";
+        temporarySurfaceValues = SVCollection.returnCompatibleSurfaceValues(pattern);
+        mappedSV = temporarySurfaceValues[UnityEngine.Random.Range(0, temporarySurfaceValues.Count())];      
+        Debug.Log("but the chosen pattern was  " + pattern + "for the sv" + mappedSV);
+        return mappedSV;
 
+    }
 
     private string ReturnAgreement(List<DialougStructure> highVaueOpinions, string key)
     {
         throw new NotImplementedException();
     }
-
-    private string mapToCNPCMoralFactor(string key) // make sure those mappings happen where no two opposing cases match --- probably move this into it's own list
+    //HELOME - update below mapping for more than 1 to 1 
+    private string mapToCNPCMoralFactor(string pattern) // make sure those mappings happen where no two opposing cases match --- probably move this into it's own list
         //this is 1 to 1 - need to change to 1 to many, move into qa nother script and rewrite it.
     {
-        switch (key)
+     
+
+
+        switch (pattern)
         {
             case ("startedAfamilyAtAyoungAge"):
                 if (UnityEngine.Random.Range(0, 6) >= 3)
@@ -704,7 +707,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
             case ("InLovewithspouseoffriend"):
             case ("leftFotLoveIntrest"):
-            case ("InLoveWirhAnothersspuce"):
+            case ("InLoveWithAnothersspuce"):
             case ("WillActOnLove"):
                 return "BTrueTYourHeart";
 
@@ -855,7 +858,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         }
     }
 
-    string getIntroductionTopicString(string key, InterestingCharacters character)
+    string getIntroductionTopicString(string key, InterestingCharacters character )
     {
         //currentCNPC.ConvCharacterMoralFactors get the opinion t
         switch (key)
@@ -873,7 +876,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
             case ("leftFotLoveIntrest"):
                 return "I heard that " + character.fullName + "cheated on their siginificant cube with " + character.GetLoverName();
-            case ("InLoveWirhAnothersspuce"):
+            case ("InLoveWithAnothersspuce"):
                 return "Not juding but I heard that " + character.fullName + "IS IN LOVE WITH ANOTHER CUBE'S spouse ";
             case ("WillActOnLove"):
                 return "Not juding but I heard that " + character.fullName + "IS IN LOVE WITH ANOTHER CUBE that is not their spouce, a birdy told me they will act on it ><";
@@ -1028,7 +1031,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             case ("BTrueTYourHeart"):
             case ("likesToDate"):
             case ("leftFotLoveIntrest"):
-            case ("InLoveWirhAnothersspuce"):
+            case ("InLoveWithAnothersspuce"):
             case ("WillActOnLove"):
                 return "matters of the heart...";
             case ("socialLife"):
@@ -1162,7 +1165,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             case ("BTrueTYourHeart"):
             case ("likesToDate"):
             case ("leftFotLoveIntrest"):
-            case ("InLoveWirhAnothersspuce"):
+            case ("InLoveWithAnothersspuce"):
             case ("WillActOnLove"):
                 return "what do you think of their love affair";
             case ("socialLife"):
@@ -1230,6 +1233,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         agreement, disagreement
     }
     TypeOfPlayerTexts typeOfPlayerTexts;
+
     string getPlayerResponce(string surfaceValue, string rating, TypeOfPlayerTexts playerResponceType, bool isMoralARG) //change this intyo player responce
     {
 
@@ -1248,18 +1252,23 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                         return "PLAYER SAYS" +  p.playerNarrativeElements.playerDisagreementText;
                     }
                  
-                } else // moral 
+                } 
+                else // moral -- soomething is wrong here!!! ---- 
                 {
                     if (playerResponceType == TypeOfPlayerTexts.agreement)
                     {
-                        return getPlayerResponce(p.playerSurfaceValue, "High", TypeOfPlayerTexts.agreement, true); // so we can get the same flag but on high for the moral agreement 
+                        
+                       // return getPlayerResponce(p.playerSurfaceValue, "High", TypeOfPlayerTexts.agreement, true); // so we can get the same flag but on high for the moral agreement 
 
                     }
                     else if (playerResponceType == TypeOfPlayerTexts.disagreement)
                     {
-
+                        
                     }
-                    else { } // model responces... 
+                    else { 
+
+                    
+                    } // model responces... 
 
                 }
             }
@@ -1372,7 +1381,8 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     {
 
         yield return currentCorutine;
-        currentCorutine = StartCoroutine(TypeInDialoug(getPlayerResponce(mapToCNPCMoralFactor(currentNode.ButtonText), currentNode.Rating, TypeOfPlayerTexts.agreement, false))); // need to restrucre this --- 
+        currentCorutine = StartCoroutine(TypeInDialoug(getPlayerResponce(currentNode.MappedSurfaceValue, //TOFRICKENDO changet his to currentnode.sv
+                            currentNode.Rating, TypeOfPlayerTexts.agreement, false))); // need to restrucre this --- 
         yield return currentCorutine;
         currentCorutine = StartCoroutine(TypeInDialoug(text));
 
@@ -1406,12 +1416,13 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
     IEnumerator waitAndPrintDisagreement(string text)   //so this works... but does nto when in larger scenartio.. 
     {
-        bool isMf = currentCNPC.IsMoralFocus(mapToCNPCMoralFactor(currentNode.ButtonText));
+        bool isMf = currentCNPC.IsMoralFocus(currentNode.MappedSurfaceValue); //TOFRICKENDO changet his to currentnode.sv
 
         //basic disagreement 1
         yield return currentCorutine;
-        currentCorutine = StartCoroutine(TypeInDialoug(getPlayerResponce(mapToCNPCMoralFactor(currentNode.ButtonText), currentNode.Rating,
-    TypeOfPlayerTexts.disagreement, isMf))); // CAN REFACTOR THIS 
+
+        currentCorutine = StartCoroutine(TypeInDialoug(getPlayerResponce(currentNode.MappedSurfaceValue, currentNode.Rating,
+                             TypeOfPlayerTexts.disagreement, isMf))); // CAN REFACTOR THIS  //TOFRICKENDO changet his to currentnode.sv
         yield return currentCorutine;
         currentCorutine = StartCoroutine(TypeInDialoug(text));
 
@@ -1421,19 +1432,19 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
         // StartCoroutine(waitAndPrintDisagreement(currentNode.GetAFact())); //currentNode.getRandomHatedFact())
         // OLD CODE HERE ----- 
-        //currentCNPC.IsMoralFocus(mapToCNPCMoralFactor(currentNode.ButtonText))
+        //currentCNPC.IsMoralFocus(mapToCNPCMoralFactor(currentNode.Pattern))
         // old code... 
         /*yield return currentCorutine;
         currentCorutine = StartCoroutine(TypeInDialoug(text));
         yield return currentCorutine;*/
 
         //does the CNPC argue for the importance of their flag? 
-        if (moralCounter == 0 && currentCNPC.IsMoralFocus(mapToCNPCMoralFactor(currentNode.ButtonText)))
+        if (moralCounter == 0 && currentCNPC.IsMoralFocus(currentNode.MappedSurfaceValue)) //TOFRICKENDO changet his to currentnode.sv
         {
             StartCoroutine(waitAndPrintMoralAreas("CNPC argues for the importance of their flag")); //change this to a wait and print instead
 
         }
-        if (moralCounter > 0 && currentCNPC.IsMoralFocus(mapToCNPCMoralFactor(currentNode.ButtonText)))
+        if (moralCounter > 0 && currentCNPC.IsMoralFocus(currentNode.MappedSurfaceValue)) //TOFRICKENDO changet his to currentnode.sv
         {
             StartCoroutine(waitAndPrintAgreement("CNPC will not change there mind...,... transtion text")); //change this to a wait and print instead
 
@@ -1501,6 +1512,13 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 }
 
 
+
+/// <summary>
+///  TODO.
+///  REFRENCE fATHER MODEl Method 
+///  check for avaible tags 
+///  
+/// </summary>
 
 public class Tree
 {

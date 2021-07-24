@@ -7,10 +7,12 @@ using UnityEngine.UIElements;
 [System.Serializable]
 public class Dialoug   //restructure this badly....
 {
-    public string ButtonText; //set and used for the patern now 
-    //change this so have accses to both on each node... 
+    public string Pattern; //set and used for the patern now 
+
+
     public string UnbiasedOpeningStatment;
 
+    public string MappedSurfaceValue; 
 
     public string mainOpinionOnAtopic; //main thoughts ( body1 in json) --- agh old code 
 
@@ -34,8 +36,9 @@ public class Dialoug   //restructure this badly....
 
     public List<string> factsOnTopic = new List<string>();
 
-    public Dialoug(string thoughtBubbletext, string initialDialougText)
+    public Dialoug(string thoughtBubbletext, string initialDialougText, string mappedSV)
     {
+        MappedSurfaceValue = mappedSV;
         thoughtBubbleText = thoughtBubbletext;
         mainOpinionOnAtopic = initialDialougText;
         Explored = false;

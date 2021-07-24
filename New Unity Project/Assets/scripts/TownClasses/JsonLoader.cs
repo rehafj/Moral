@@ -40,7 +40,7 @@ public class JsonLoader : MonoBehaviour
     [SerializeField]
     public List<PlayerDialoug> listOfPlayerDialougs = new List<PlayerDialoug>();
 
-
+    public static JsonLoader jsonLoader;
 
     const string FILEXTEN = @".json";
     //comment and uncomment below depending on what is needed in final version 
