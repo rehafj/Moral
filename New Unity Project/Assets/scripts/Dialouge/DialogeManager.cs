@@ -10,9 +10,6 @@ using UnityEngine.UI;
 public class DialogeManager : MonoBehaviour //TODO refactor this later, just for testing plopping things here for now 
 {
 
-
-    
-
     public List<Tree> allCharacterConversationsTrees = new List<Tree>();
     private Tree currentTree ;
 
@@ -27,20 +24,15 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     List<DialougStructure> midVaueOpinions = new List<DialougStructure>();
     List<DialougStructure> lowVaueOpinions = new List<DialougStructure>();
 
-
-
     ConversationalCharacter currentCNPC; //change this depending on time and instantations --- also control the character 
 
     //add a node to check if explored 
     BackgroundCharacter bgchar;
 
-
     List<String> currentThoughts;
     string selectedOpnion;
 
     public List<InterestingCharacters> conversedAboutCharectersList;
-
-
 
 
     //ui stuff 
@@ -113,8 +105,6 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         setUpTrees();
 
     }
-
-
     void setUpTrees()
     {
         foreach (InterestingCharacters character in conversedAboutCharectersList)
@@ -193,7 +183,6 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         displayPlayerButtons(currentNode);
 
     }
-
     private void cNPCHoldingStance() //does not transfer control 
     {
 
@@ -252,16 +241,13 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             i++;
         }
     }
-
     void displayPlayerButtons(Dialoug node) //hardcoded for now - do this for the current height of the tree --- 
     {
-
         // Debug.Log(node.getHeight());//if the higfght is 2 then i can agree/ dissagree..etc with an option //height 1 then i am thinking aboyut the character ( height 2 is the flag / character topic) 
         // StartCoroutine(waitAndEnableButtons());
         /*        disableorEnablePlayerButtons();
-        */
-     
-
+        */ 
+        //move varibles here 
         if (node.getHeight() == 2)
         {
             setPlayerPattern();
@@ -274,23 +260,25 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             PlayerButtons[1].onClick.AddListener(playerDissAgrees);
             PlayerButtons[2].onClick.AddListener(playerArgueAboutFLag);
             PlayerButtons[3].onClick.AddListener(askAboutAnotherCharacter);
-
-
         }
     }
-
-
     void playerAgrees()
     {       //TODO works :) but prob need to change for moral agreement -- check where this method is being used 
+        currentCNPCloopsInRun += 1;
+        currentConversationalLoopSingle += 1;
         StartCoroutine(waitAndPrintAgreement(currentNode.agreementText)); // need to restrucre this --- 
     }
-
     private void playerDissAgrees()
     {
+
+        currentCNPCloopsInRun += 1;
+        currentConversationalLoopSingle += 1;
+
         //Debug.Log("player disagreed!" + currentNode.Pattern + "after i click on agree! " + currentNode.unbaisedIopinion);
         //TODO  Add methods for arguing on a flag  --- 
-/*        Debug.Log("the disagreement text is" + currentNode.disagreementText);
-*/        StartCoroutine(waitAndPrintDisagreement(currentNode.disagreementText)); //currentNode.getRandomHatedFact())
+        /*        Debug.Log("the disagreement text is" + currentNode.disagreementText);
+        */
+        StartCoroutine(waitAndPrintDisagreement(currentNode.disagreementText)); //currentNode.getRandomHatedFact())
        // playerArgueAboutFLag(); 
 
         //NEED TO REFACTOR THIS TO CHECK FOR MORAL AGREE OR DISAGREE
@@ -302,6 +290,9 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     Dialoug currentCNPCStance = new Dialoug("","", "graduate");
     public void playerArgueAboutFLag()
     {
+
+        currentCNPCloopsInRun += 1;
+        currentConversationalLoopSingle += 1;
         Debug.Log("current stanc eis "+ currentNode.Pattern);
         currentCNPCStance = currentNode;
         //present all flags for player as a sub menue 
@@ -329,6 +320,8 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
     private void askAboutAnotherCharacter()
     {
+        currentCNPCloopsInRun += 1;
+        currentConversationalLoopSingle += 1;
         currentNode = currentNode.parent; //went up on height --- 
         Debug.Log("checking:"+ currentNode.getHeight());
         if (currentNode.getHeight() == 1)
@@ -342,7 +335,6 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         }
 
     }
-  
     //refactor these --- 
     private void setPlayerPattern()
     {
@@ -401,7 +393,6 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             i++;
         }
 }
-
     private void moveConversationToSelectedTree(int treeIndex)
     {
         //fix this --- it is always 4 as an index! 
@@ -412,7 +403,6 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         Debug.Log("current tree explorting " + currentTree.root.thoughtBubbleText);
         startAconversation(currentTree);
     }
-
     private void moveConversationToAflag(Dialoug d ) { 
         StopAllCoroutines();
         GuidialougText.text = "";
@@ -471,8 +461,6 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         startAconversation(allCharacterConversationsTrees[treeCounter]);//the first cgharacter in the list - yhionking about character....etc 
 
     }
-
-
     Dialoug choseACharacterTree()
     {
       //  int i = UnityEngine.Random.Range(0, allCharacterConversationsTrees.Count - 1); //do i want it to be random or just the next tree in the list cz they are sorted???
@@ -493,7 +481,6 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         return currentNode;
 
     }
-
 
     public void Update()
     {
@@ -576,7 +563,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                 node.agreementText = setCnpcDialoug(kvp.Key, character, "PlayerAgreesWithCNPC", mappedKey);//general feelings about a topic  --- this is actually high 
 
                 node.disagreementText = setCnpcDialoug(kvp.Key, character, "PlayerDisAgreesWithCNPC", mappedKey);//nope - con here is as in low.... 
-                Debug.Log("disagreement text at set up " + node.disagreementText);
+               // Debug.Log("disagreement text at set up " + node.disagreementText);
                 node.Pattern = setPlayerPattern(kvp.Key); //flag or pattern for now but this mighht actually be the button text for the player to click on... 
                 node.Rating = setNodeRating(mappedKey);
                 //node.MappedSurfaceValue = returnpatternToSurfaceMapiing(kvp.Key);
@@ -622,7 +609,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                 }
                 if (flag == "PlayerDisAgreesWithCNPC")
                 {
-                    Debug.Log("setting disagreement text as " + op.NarrativeElements.disagreementtext);
+                   // Debug.Log("setting disagreement text as " + op.NarrativeElements.disagreementtext);
                     return op.NarrativeElements.disagreementtext;
                 }
             }
@@ -663,11 +650,10 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         string mappedSV = "";
         temporarySurfaceValues = SVCollection.returnCompatibleSurfaceValues(pattern);
         mappedSV = temporarySurfaceValues[UnityEngine.Random.Range(0, temporarySurfaceValues.Count())];      
-        Debug.Log("but the chosen pattern was  " + pattern + "for the sv" + mappedSV);
+       // Debug.Log("but the chosen pattern was  " + pattern + "for the sv" + mappedSV);
         return mappedSV;
 
     }
-
     private string ReturnAgreement(List<DialougStructure> highVaueOpinions, string key)
     {
         throw new NotImplementedException();
@@ -824,7 +810,6 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
         }
     }
-
 
     // helper functions 
     private void OrgnizeCNPCOpinions()
@@ -1144,9 +1129,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
         }
     }
-
-
-    //for the player 
+  //for the player 
     string translatePlayerOptionIntoText(string key)
     {
         switch (key)
@@ -1245,11 +1228,11 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                 {
                     if (playerResponceType == TypeOfPlayerTexts.agreement)
                     {
-                        return "PLAYER SAYS "+  p.playerNarrativeElements.playerInAgreementText;
+                        return "PLAYER SAYS: \n"+   p.playerNarrativeElements.playerInAgreementText;
 
                     }
                     else {
-                        return "PLAYER SAYS" +  p.playerNarrativeElements.playerDisagreementText;
+                        return "PLAYER SAYS: \n" +  p.playerNarrativeElements.playerDisagreementText;
                     }
                  
                 } 
@@ -1275,8 +1258,6 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         }
         return "No string found!";
     }
-
-
 
     //UI stuff
 
@@ -1380,32 +1361,32 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     IEnumerator waitAndPrintAgreement(string text)   //so this works... but does nto when in larger scenartio.. 
     {
 
-        yield return currentCorutine;
-        currentCorutine = StartCoroutine(TypeInDialoug(getPlayerResponce(currentNode.MappedSurfaceValue, //TOFRICKENDO changet his to currentnode.sv
-                            currentNode.Rating, TypeOfPlayerTexts.agreement, false))); // need to restrucre this --- 
-        yield return currentCorutine;
-        currentCorutine = StartCoroutine(TypeInDialoug(text));
+        if (!currentTree.FullyExplored)
+        {
+            yield return currentCorutine;
+            currentCorutine = StartCoroutine(TypeInDialoug(getPlayerResponce(currentNode.MappedSurfaceValue, //TOFRICKENDO changet his to currentnode.sv
+                                currentNode.Rating, TypeOfPlayerTexts.agreement, false))); // need to restrucre this --- 
+            yield return currentCorutine;
+            currentCorutine = StartCoroutine(TypeInDialoug(text));
+        }
+         
 
+        checkEndConversationAndMove();
+    }
 
-
-
-        //
-/*
-        yield return currentCorutine;
-        currentCorutine = StartCoroutine(TypeInDialoug(text));
-        yield return currentCorutine;*/
+    private void checkEndConversationAndMove()
+    {
         if (!currentTree.FullyExplored)
         {
             startAconversation(currentTree);//at 0 
         }
         else
-        { 
+        {
             Debug.Log("Done with the tree");
             converseAboutNextCharacter();
         }
 
     }
-
     IEnumerator waitAndPrintMoralAreas(string text)
     {
         yield return currentCorutine;
@@ -1416,20 +1397,49 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
     IEnumerator waitAndPrintDisagreement(string text)   //so this works... but does nto when in larger scenartio.. 
     {
-        bool isMf = currentCNPC.IsMoralFocus(currentNode.MappedSurfaceValue); //TOFRICKENDO changet his to currentnode.sv
+       // if (currentNode.Rating == "High") ;
+        if( currentConversationalLoopSingle <= 1)
+        {
+            bool isMf = currentCNPC.IsMoralFocus(currentNode.MappedSurfaceValue); //TOFRICKENDO changet his to currentnode.sv
 
-        //basic disagreement 1
-        yield return currentCorutine;
+            //basic disagreement 1
+            yield return currentCorutine;
+            currentCorutine = StartCoroutine(TypeInDialoug(getPlayerResponce(currentNode.MappedSurfaceValue, currentNode.Rating,
+                                 TypeOfPlayerTexts.disagreement, isMf))); // CAN REFACTOR THIS  //TOFRICKENDO changet his to currentnode.sv
+            yield return currentCorutine;
+            currentCorutine = StartCoroutine(TypeInDialoug(text));
+            yield return currentCorutine;
 
-        currentCorutine = StartCoroutine(TypeInDialoug(getPlayerResponce(currentNode.MappedSurfaceValue, currentNode.Rating,
-                             TypeOfPlayerTexts.disagreement, isMf))); // CAN REFACTOR THIS  //TOFRICKENDO changet his to currentnode.sv
-        yield return currentCorutine;
-        currentCorutine = StartCoroutine(TypeInDialoug(text));
+        } else if(currentConversationalLoopSingle > 1 && currentConversationalLoopSingle <=3)
+        {   if(currentNode.Rating =="High") //refrence father model 
+            {
+                currentCNPCExploredSurfaceValues.Add(currentNode.Pattern);
 
-        yield return currentCorutine;
+            }
+            else // mid or low just move to the next conversation if it is not a moral focus area. 
+            { 
+
+            }
+            
+            //refrence father model 
+
+        } else if (currentConversationalLoopSingle >4) //move it away if npc is not convinced 
+        {
+            if (currentNode.Rating == "High") //if its after fm and high then move to another node and clear the list of explored nodes for subvalues in  schemas.
+            {
+
+            }
+        }
+         if (moralCounter == 0 && currentCNPC.IsMoralFocus(currentNode.MappedSurfaceValue)) //TOFRICKENDO changet his to currentnode.sv
+        {
+            StartCoroutine(waitAndPrintMoralAreas("CNPC argues for the importance of their flag")); //change this to a wait and print instead
+
+        }
+        if (moralCounter > 0 && currentCNPC.IsMoralFocus(currentNode.MappedSurfaceValue)) //TOFRICKENDO changet his to currentnode.sv
+        {
+            StartCoroutine(waitAndPrintAgreement("CNPC will not change there mind...,... transtion text")); //change this to a wait and print instead
+        }
         //playerArgueAboutFLag();
-
-
         // StartCoroutine(waitAndPrintDisagreement(currentNode.GetAFact())); //currentNode.getRandomHatedFact())
         // OLD CODE HERE ----- 
         //currentCNPC.IsMoralFocus(mapToCNPCMoralFactor(currentNode.Pattern))
@@ -1439,24 +1449,14 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         yield return currentCorutine;*/
 
         //does the CNPC argue for the importance of their flag? 
-        if (moralCounter == 0 && currentCNPC.IsMoralFocus(currentNode.MappedSurfaceValue)) //TOFRICKENDO changet his to currentnode.sv
-        {
-            StartCoroutine(waitAndPrintMoralAreas("CNPC argues for the importance of their flag")); //change this to a wait and print instead
+        /*    if (currentCNPC.FatherModel.isPragmatic) //check for whateverr model
+           {
 
-        }
-        if (moralCounter > 0 && currentCNPC.IsMoralFocus(currentNode.MappedSurfaceValue)) //TOFRICKENDO changet his to currentnode.sv
-        {
-            StartCoroutine(waitAndPrintAgreement("CNPC will not change there mind...,... transtion text")); //change this to a wait and print instead
+           } 
+           else if (!currentCNPC.FatherModel.isPragmatic) //if it is not pragmatic //i.e. central 
+           {
 
-
-        }else if (currentCNPC.FatherModel.isPragmatic) //check for whateverr model
-        {
-
-        } 
-        else if (!currentCNPC.FatherModel.isPragmatic) //if it is not pragmatic //i.e. central 
-        {
-
-        }
+           }*/
 
 
         /*   helloworld-- this needs ti be as a default if not moral focus and not in conflict with the tasble then go here ??     if(currentNode.hatedFacts.Count <= 0 && currentTree.FullyExplored)
@@ -1468,9 +1468,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                 {
                     startAconversation(currentTree);
                 }*/
-
-
-    }
+   }
 
     IEnumerator WaitAndPrintcompoundedStatments(string textOne, string textTwo)   //so this works... but does nto when in larger scenartio.. 
     {

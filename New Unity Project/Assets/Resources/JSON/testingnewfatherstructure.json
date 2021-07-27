@@ -1,0 +1,249 @@
+[{
+	"SVkey": "BTrueTYourHeart",
+	"SurfaceValueObject": [
+
+		{
+			"subvalue": "InLovewithspouseoffriend",
+			"text": "Not all love is ethical. Like you should never go after your friend's partner.",
+			"schema": "low_MoralBoundaries",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "widowedbutnotgrieving",
+			"text": "Love is a commitment and true love is rare. This shape doesn't even seem sad after they lost their partner, it's disrepectful to the sanctity of partnership.",
+			"schema": "low_MoralWholeness",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "likesToDate",
+			"text": "You have to look hard if you want to find the one for you. This shape tries really hard to get themself out there, they are really true to their heart.",
+			"schema": "high_SelfInterest",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "leftFotLoveIntrest",
+			"text": "Love isn't everything! This shape abandoned their partner for another shape, love can be cruel.",
+			"schema": "low_Strength",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "InLoveWirhAnothersspouce",
+			"text": "If you always follow your heart, you will end up like this shape who has zero sense of duty or responsibility.",
+			"schema": "low_MoralOrder",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "startedAfamilyAtAyoungAge",
+			"text": "If you know the right shape, love can be great thing! Like this shape who found their partener so early.",
+			"schema": "high_MoralWholeness",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "DevorcedManyPeople",
+			"text": "We shouldn't always follow our heart. This shape has been in mutiple partnerships and never thought through the consequences.",
+			"schema": "low_MoralBoundaries",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "marriedForLifeStyleNotLove",
+			"text": "Love is deeper than we think. This shape entered a parternship not for love but found love eventually in their family life. ",
+			"schema": "high_MoralOrder",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "WillActOnLove",
+			"text": "Love can make smart shape do stupid things! Like this shape who went after a shape they shouldn't be with.",
+			"schema": "low_Strength",
+			"NPCTypeSchemaValue": "High"
+		}
+	]
+
+}, {
+	"SVkey": "FamilyPerson",
+	"SurfaceValueObject": [
+
+		{
+			"subvalue": "familyPerson",
+			"text": "You know, this shape is a great representative of why family is important. They have a wonderful family life and they look really happy.",
+			"schema": "high_MoralWholeness",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "adultbutnotworking",
+			"text": "This shape is leeching off their family and not working, of course they are a family shape.",
+			"schema": "low_MoralEssence",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "worksWithFamily",
+			"text": "This shape also works with their family! What a fulfilling life!",
+			"schema": "high_MoralBoundaries",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "hiredByAFamilymember",
+			"text": "Well in the case of family business, family can be an agent of nepotism. Like this shape who's hired by their family, would you trust them to work for you?",
+			"schema": "low_MoralEssence",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "DevorcedManyPeople",
+			"text": "This shape had many families. I don't thinking being a family shape means they are a good and responsible shape.",
+			"schema": "low_MoralWholeness",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "marriedForLifeStyleNotLove",
+			"text": "This shape knows the importance of family and I am sure they have found bliss in their new family.",
+			"schema": "high_MoralBoundaries",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "conventional",
+			"text": "Family is a stablizing agent, this shape is so down to earth and you can tell from their stable family life.",
+			"schema": "high_MoralWholeness",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "nepotism",
+			"text": "Well in the case of family business, family can be an agent of nepotism. Like this shape who's hired by their family, would you trust them to work for you?",
+			"schema": "low_MoralWholeness",
+			"NPCTypeSchemaValue": "High"
+		}
+	]
+
+}, {
+	"SVkey": "LoveIsForFools",
+	"SurfaceValueObject": [
+
+		{
+			"subvalue": "InLovewithspouseoffriend",
+			"text": "Love can be immoral sometimes. This shape went after their friend's partner, that's just wrong.",
+			"schema": "low_MoralBoundaries",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "widowedbutnotgrieving",
+			"text": "Commitment is more important than love. This shape doesn't even seem sad after they lost their partner, it's disrepectful to the sanctity of partnership.",
+			"schema": "high_MoralBoundaries",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "likesToDate",
+			"text": "This shape is really brave because they tried really hard to get themself out there, you can say that foolish but I think they are brave.",
+			"schema": "low_MoralOrder",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "leftFotLoveIntrest",
+			"text": "Love can be cruel. Like this shape who abandoned their partner for another shape.",
+			"schema": "high_MoralEssence",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "InLoveWirhAnothersspuce",
+			"text": "Love make you foolish, this shape is not loyal to their partner and that makes them a fool.",
+			"schema": "high_MoralEssence",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "startedAfamilyAtAyoungAge",
+			"text": "Love can be great thing when you find the right shape! This shape was able to find someone early and look how happy they are.",
+			"schema": "high_Strength",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "DevorcedManyPeople",
+			"text": "This shape has ended mutiple partnerships and I think they will never find the right one. They are too weak and foolish.",
+			"schema": "low_Strength",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "marriedForLifeStyleNotLove",
+			"text": "This shape entered a parternship not for love but found love eventually in their family life. Happiness of the family is more important than selfish love.",
+			"schema": "high_MoralWholeness",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "WillActOnLove",
+			"text": "Love can make smart shape stupid. Like this shape who went after a shape they shouldn't be with.",
+			"schema": "low_MoralEssence",
+			"NPCTypeSchemaValue": "Low"
+		}
+	]
+
+}, {
+	"SVkey": "suchUncharactristicBehaviorOhMy",
+	"SurfaceValueObject": [
+
+		{
+			"subvalue": "InLovewithspouseoffriend",
+			"text": "I heard this shape is in love with their friend's partner! That's so werild.",
+			"schema": "low_Strength",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "hasalotofenemies",
+			"text": "Well, I heard this shape has many enemies. I feel like this speaks to their character. How can you trust someone like that.",
+			"schema": "low_MoralEssence",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "friendwithabestfriendsenemy",
+			"text": "Sometimes, you have to make friends with people others don't like. I don't think that's weird at all.",
+			"schema": "high_SelfInterest",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "exploteative",
+			"text": "Well, instead of explotetative, you could say that this shape is smart for looking out for themself.",
+			"schema": "high_SelfInterest",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "widowedbutnotgrieving",
+			"text": "This shape seems very happy that their parterner is dead. How weird is that!",
+			"schema": "low_MoralWholeness",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "adultbutnotworking",
+			"text": "I would never put my trust in a shape who leeches off their family.",
+			"schema": "low_MoralEssence",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "notworkingandrich",
+			"text": "Well, this shape seems to be doing fine even though they don't have a job. So who cares.",
+			"schema": "high_MoralEssence",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "loner",
+			"text": "This shape always keeps to themself. I just can't trust someone like that.",
+			"schema": "low_MoralWholeness",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "InLoveWirhAnothersspuce",
+			"text": "This shape is weak because they are betraying their partner's trust.",
+			"schema": "low_Strength",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "MovesAlot",
+			"text": "This shape moves way too much and who knows what they are hiding!",
+			"schema": "low_MoralWholeness",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "getsFiredAlot",
+			"text": "This shape can't hold a job, I know exactly what kind of shape they are. ",
+			"schema": "low_MoralEssence",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "SusMovments",
+			"text": "I heard this shape is always on the run... I wonder why that is.",
+			"schema": "low_MoralWholeness",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "RetiredYoung",
+			"text": "This shape must be very disciplined to be able to retire young, I don't think that makes them a werid shape.",
+			"schema": "high_Strength",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "DevorcedManyPeople",
+			"text": "This shape can't keep a relationship. I don't want to be near someone like that.",
+			"schema": "low_MoralWholeness",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "TooTrustingOfEnemies",
+			"text": "This shape has a good heart and they make the world a better place.",
+			"schema": "high_MoralWholeness",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "conventional",
+			"text": "This shape seems to be a good shape who sticks to all the rules so I don't know what you are talking about.",
+			"schema": "high_MoralOrder",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "nepotism",
+			"text": "Nepotism is not that bad becasue you have to protect those you really care about.",
+			"schema": "high_MoralWholeness",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "flipflop",
+			"text": "This shape can't make up their mind about what they want to do in life. I just don't understand that.",
+			"schema": "low_MoralEssence",
+			"NPCTypeSchemaValue": "Low"
+		}
+	]
+
+}]

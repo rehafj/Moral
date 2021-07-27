@@ -13,9 +13,9 @@ public  class SVCollection : MonoBehaviour
         "WillActOnLove","marriedSomoneOlder"} ),
 
     new SValues("LoveIsForFools", new List<string> {"InLovewithspouseoffriend", "widowedbutnotgrieving",
-        "loner","leftFotLoveIntrest","InLoveWirhAnothersspouce",
+        "leftFotLoveIntrest","InLoveWirhAnothersspouce",
         "startedAfamilyAtAyoungAge","DevorcedManyPeople","marriedForLifeStyleNotLove",
-        "WillActOnLove","conventional","reserved","marriedSomoneOlder"} ),
+        "WillActOnLove","marriedSomoneOlder"} ),
 
     new SValues("MoneyMaker", new List<string> { "graduate","MoneyMaker",
         "notworkingandrich","IsWealthy","exploteative"} ),
@@ -92,7 +92,7 @@ public  class SVCollection : MonoBehaviour
             if (sv.coreValues.Contains(pattern))
             {
                 listOfCompatibleSV.Add(sv.svName);
-                Debug.Log("the pattern" + pattern + " was compatible with " + sv.svName);
+               // Debug.Log("the pattern" + pattern + " was compatible with " + sv.svName);
 
             } 
         }

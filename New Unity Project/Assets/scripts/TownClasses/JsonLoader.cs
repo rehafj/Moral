@@ -40,6 +40,9 @@ public class JsonLoader : MonoBehaviour
     [SerializeField]
     public List<PlayerDialoug> listOfPlayerDialougs = new List<PlayerDialoug>();
 
+    [SerializeField]
+    public List<MoralModelArguments> listOffATHERArguments = new List<MoralModelArguments>(); //NEW ONE 
+
     public static JsonLoader jsonLoader;
 
     const string FILEXTEN = @".json";
@@ -58,11 +61,13 @@ public class JsonLoader : MonoBehaviour
 
     const string PLAYERDIALIUG = @"JSON/playerResponces";
 
+    const string FATHERMODELARGUMENTS = @"JSON/testingnewfatherstructure";
+
 
     //working poeple --- is the teesting file used :) 
 
 
-
+    List<string> exFlads = new List<string>(); 
 
     void Awake()
     {
@@ -81,8 +86,13 @@ public class JsonLoader : MonoBehaviour
         listOfPlayerDialougs = returnJsonAttributesIntoList<PlayerDialoug>(PLAYERDIALIUG);
         listOfArguments = returnJsonAttributesIntoList<ModelArguements>(MODELARGUEMNTS);
 
+
+        listOffATHERArguments = returnJsonAttributesIntoList<MoralModelArguments>(FATHERMODELARGUMENTS);
         //FOR TESTING-REMOVE ME 
         PrintOutAConversation();
+
+        Debug.Log(returnFatherModelArgumetnsText("BTrueTYourHeart",
+            "InLovewithspouseoffriend", exFlads, true));
     }
 
     private void PrintOutAConversation()
@@ -110,7 +120,7 @@ public class JsonLoader : MonoBehaviour
         {
             if (p.playerSurfaceValue == sv && p.playerNarrativeElements.rating == "High" )
             {
-                Debug.Log("check me out -"+ p.playerNarrativeElements.playerInAgreementText);
+                //Debug.Log("check me out -"+ p.playerNarrativeElements.playerInAgreementText);
             }
         }
     }
@@ -182,9 +192,93 @@ public class JsonLoader : MonoBehaviour
          //   Debug.Log("FFS - schema =   " + argument.schema + "surface values are " + argument.Surfacevalues[0].key + " AND THE SUB VALUE KEY IS " + argument.Surfacevalues[0].surfaceValueObj[0].subvalue);
 
         }
-        return "no text found!";
+        return "no text found!";  
     }
 
+    List<string> NPCfmHighValues = new List<string>() //what the NPC looks for - ig its not herte NPC looks for low 
+    {
+        "BTrueTYourHeart",  "FamilyPerson"
+
+    };
+
+    List<string> NPCSVfORbOTHhIGHaNDlOW = new List<string>() { };
+    // IF ITS PART THIS MIXED LIST ---> the npc looks for ohigh or low -
+    //or returna  list of strings 
+    // the player then only goes to generics. 
+    // do this in an overloaded method 
+
+
+    //make an overloaded method -- 
+    string returnFatherModelArgumetnsText (string surfaceValue, string subvalue,
+                                          List<string> exploredSterings,  bool isNPC)
+    {//update this ti include updates high low lists / player or npc --- update to reflect player bool - update for sening in list of explored or some list 
+        string NPCType = "High";
+
+        if (isNPC)
+        {
+            if (NPCfmHighValues.Contains(surfaceValue))
+            {
+                NPCType = "High";
+            }
+            else
+            {
+                NPCType = "Low";
+            }
+        }
+
+        Debug.Log("!!!!!+ NPC WILL LOOK FOR SCHEMAS THAT HAVE" + NPCType);
+        string currentPatternCheck = subvalue;
+
+        int i = 0;
+        foreach (MoralModelArguments arg in listOffATHERArguments)
+        {
+            Debug.Log("INSIDE FOREACH LOOP");
+            Debug.Log("arg.SVkey "+ arg.SVkey);
+
+            if (arg.SVkey == surfaceValue) //found the sv we wanted 
+            {
+                Debug.Log("INSIDE SV KEY"+ arg.SVkey);
+                Debug.Log("size of  arg.surfaceValueObjList"  + arg.SurfaceValueObject.Count);
+
+                foreach (SurfaceValueObject sobject in arg.SurfaceValueObject)
+                {
+                    string r = sobject.schema.Split('_').First();
+                    Debug.Log("!!!!!+ r value" + r);
+
+                    Debug.Log("!!!!!+ !exploredSterings.Contains(currentPatternCheck) value" +
+                   !exploredSterings.Contains(currentPatternCheck)); //after the furst time it becomes false 
+
+                    if (sobject.subvalue == subvalue && NPCType.ToLower() == r)
+                    {
+                        exploredSterings.Add(subvalue);
+                        return sobject.text;
+                    }
+                    else if (!exploredSterings.Contains(currentPatternCheck)) 
+                    {
+                        Debug.Log(" inside if it does not cvontained explorex strings !!!!!+ ! does thios happen ?  " + r + "and npc type" + NPCType.ToLower());
+
+                        if (NPCType.ToLower() == r)
+                        {
+                            return sobject.text + "_" + sobject.subvalue; //else return the first thing that is high 
+                        }
+                        exploredSterings.Add(currentPatternCheck);
+
+                        foreach (string s in exploredSterings)
+                        {
+                            Debug.Log("!!!!!+ exploredSterings npw adds" + s);
+
+                        }
+                        i++;
+                        currentPatternCheck = arg.SurfaceValueObject[i].subvalue; //slight logic bug in counter if the current checked one was in rthe middle of the list -- 
+                    }
+
+                }
+            }
+        }
+
+        return "!!!will check generic srsoinces ";
+
+    }
     string returnFile(string path)
     {
         path = removeFileEX(path);

@@ -57,3 +57,15 @@ public class PostItManager : MonoBehaviour
   
 
 }
+//  int moralCounter = 0;
+/*int currentConversationalLoopSingle = 0;
+int currentCNPCloopsInRun = 0;
+List<string> currentCNPCExploredSurfaceValues = new List<string>();
+List<string> currentPlayerAttemptedArgumentSV = new List<string>();
+int currentCNPCDisagreements = 0;*/ //to be used in disagreement fir ... 
+
+//waitAndPrintDisagreement
+
+
+
+//currentCNPCloopsInRun
