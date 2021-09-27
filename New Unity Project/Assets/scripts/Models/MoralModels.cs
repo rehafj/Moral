@@ -35,37 +35,37 @@ public class MoralModels
     {
         "graduate",
         "exploteative","adultbutnotworking","notworkingandrich","IsWealthy",
-        "getsFiredAlot","SusMovments","RetiredYoung",
+        "getsFiredAlot","RetiredYoung",
         "DiedBeforeRetired","IsRichButNotGenrous","selfMadeCubeByDedication","likedToExperinceCulture",
         "doesNotGiveToThoseInNeed","reserved","nepotism","flipflop","WorksInAlcohol","healerRole","polluterRole","riskTaker","butcherRole",
         "Teachingrole","advancedCareer","hardWorker","CustodianJobs","generalJobs","selfMadeCubeByDedication","worksWithFamily"
     };
     List<string> Enviromentalist_CoreValues = new List<string>() //else are the othervalues...
     {
-        "IsWealthy", "ButcherButRegretful","conventional",
-        "reserved","polluterRole","advancedCareer"
+        "ButcherButRegretful","conventional",
+        "polluterRole"
     };
     List<string> EnviromentalistAnti_CoreValues = new List<string>() //else are the othervalues...
     {
-        "IsWealthy","conventional","ButcherButRegretful",
-        "reserved","polluterRole","advancedCareer"
+        "conventional","ButcherButRegretful",
+        "polluterRole"
     };
     List<string> AnimalLover_CoreValues = new List<string>() //else are the othervalues...
     {
-        "familyPerson","ButcherButRegretful",
-        "likedToExperinceCulture","conventional","reserved","butcherRole"
+      "ButcherButRegretful",
+       "conventional","butcherRole"
         
     };
     List<string> AnimalLoverAnti_CoreValues = new List<string>() //else are the othervalues...
     {
-        "familyPerson","ButcherButRegretful",
-        "likedToExperinceCulture","conventional","reserved","hiredByAFamilymembe","butcherRole"
+      "ButcherButRegretful",
+        "likedToExperinceCulture","conventional","butcherRole"
 
     };
     List<string> Teetotasler_CoreValues = new List<string>() //else are the othervalues...
     {
         "socialLife","hasalotofenemies","getsFiredAlot",
-        "familyPerson","reserved","conventional","WorksInAlcohol","hardWorker"
+        "familyPerson","reserved","conventional","WorksInAlcohol"
 
     };
     List<string> TeetotaslerAnti_CoreValues = new List<string>() //else are the othervalues...
@@ -86,27 +86,27 @@ public class MoralModels
         "socialLife","graduate","adultbutnotworking",
         "notworkingandrich","loner","IsWealthy","worksWithFamily","getsFiredAlot",
         "AdventureSeeker","selfMadeCubeByDedication","likedToExperinceCulture","conventional","reserved","flipflop",
-        "WorksInAlcohol","healerRole","polluterRole","riskTaker","butcherRole","Teachingrole","advancedCareer","hardWorker","selfMadeCubeByDedication"
+        "WorksInAlcohol","healerRole","polluterRole","riskTaker","butcherRole","Teachingrole","advancedCareer","hardWorker"
     };
     List<string> SchoolIsCool_CoreValues = new List<string>() //else are the othervalues...
     {
         "socialLife","graduate",
       "IsWealthy","worksWithFamily","getsFiredAlot",
         "AdventureSeeker","conventional",
-        "WorksInAlcohol","healerRole","polluterRole","riskTaker","butcherRole","Teachingrole","advancedCareer","hardWorker","selfMadeCubeByDedication"
+        "WorksInAlcohol","healerRole","polluterRole","riskTaker","butcherRole","Teachingrole","advancedCareer","hardWorker"
 
     };
     List<string> SupportingComunities_CoreValues = new List<string>() //else are the othervalues...
     {
        "worksWithFamily","liklyToHelpTheHomeless","doesNotGiveToThoseInNeed"
-        ,"supportsImmigration","conventional","reserved","healerRole","Teachingrole","advancedCareer","CustodianJobs"
+        ,"supportsImmigration","conventional","reserved","healerRole","Teachingrole","CustodianJobs"
 
     };
     List<string> LoverOfRisks_CoreValues = new List<string>() //else are the othervalues...
     {
-        "InLovewithspouseoffriend","hasalotofenemies","friendwithabestfriendsenemy",
+        "InLovewithspouseoffriend","hasalotofenemies",
         "InLoveWithAnothersspuce","MovesAlot","RetiredYoung","WillActOnLove","AdventureSeeker","TooTrustingOfEnemies",
-        "flipflop","WorksInAlcohol","riskTaker"
+        "flipflop","DiedBeforeRetired","riskTaker"
 
     };
     List<string> LandISWhereThehrtIS_CoreValues = new List<string>() //else are the othervalues...
@@ -116,31 +116,33 @@ public class MoralModels
     };
     List<string> CarrerAboveAll_CoreValues = new List<string>() //else are the othervalues...
     {
-        "hasalotofenemies","exploteative","adultbutnotworking","notworkingandrich","loner",
+        "hasalotofenemies","exploteative","adultbutnotworking","notworkingandrich",
         "IsWealthy","worksWithFamily","hiredByAFamilymember","MovesAlot","getsFiredAlot",
-        "RetiredYoung","DiedBeforeRetired","liklyToHelpTheHomeless","isolated"
+        "RetiredYoung","DiedBeforeRetired","liklyToHelpTheHomeless"
         ,"conventional","nepotism","flipflop","WorksInAlcohol","healerRole","polluterRole","riskTaker","butcherRole",
         "Teachingrole","advancedCareer","hardWorker","CustodianJobs","generalJobs","selfMadeCubeByDedication"
 
     };
     List<string> FriendsAreTheJoyOFlife_CoreValues = new List<string>() //else are the othervalues...
     {
-       "InLovewithspouseoffriend","socialLife","hasalotofenemies","friendwithabestfriendsenemy","exploteative","loner","hasAbestFriend"
-            ,"MovesAlot","SusMovments","AdventureSeeker","isolated","TooTrustingOfEnemies","conventional","reserved"
+       "InLovewithspouseoffriend","socialLife","hasalotofenemies","friendwithabestfriendsenemy","loner","hasAbestFriend"
+            ,"MovesAlot","SusMovments","isolated","TooTrustingOfEnemies","reserved"
     };
     List<string> Loner_CoreValues = new List<string>()
-    {"socialLife","hasalotofenemies","friendwithabestfriendsenemy","exploteative","loner","hasAbestFriend","MovesAlot","SusMovments"
+    {"socialLife","hasalotofenemies","friendwithabestfriendsenemy","loner","hasAbestFriend","MovesAlot","SusMovments"
         ,"isolated","TooTrustingOfEnemies","reserved"
 
     };
     List<string> youthAreTheFuture_CoreValues = new List<string>()
-    {"familyPerson","graduate","adultbutnotworking","worksWithFamily","SusMovments","RetiredYoung","DiedBeforeRetired",
-        "supportsImmigration","conventional","healerRole","Teachingrole","hardWorker","selfMadeCubeByDedication"
+    {"familyPerson","adultbutnotworking","worksWithFamily",
+        "RetiredYoung","DiedBeforeRetired"
+        ,"conventional","healerRole","Teachingrole","hardWorker"
 
     };
     List<string> ProHiringFamily_CoreValues = new List<string>()
     {
-        "familyPerson","exploteative","adultbutnotworking","notworkingandrich","startedAfamilyAtAyoungAge","worksWithFamily",
+        "familyPerson","exploteative","adultbutnotworking",
+        "startedAfamilyAtAyoungAge","worksWithFamily",
         "hiredByAFamilymember","conventional", "nepotism"
     };
     List<string> suchUncharactristicBehaviorOhMy_CoreValues = new List<string>()
@@ -151,29 +153,31 @@ public class MoralModels
 
     };
     List<string> WeLiveForSpontaneity_CoreValues = new List<string>()
-    {"InLovewithspouseoffriend","hasalotofenemies","likesToDate","leftFotLoveIntrest","MovesAlot","SusMovments","RetiredYoung",
+    {"InLovewithspouseoffriend","hasalotofenemies","likesToDate","leftFotLoveIntrest",
+        "MovesAlot","SusMovments",
         "marriedForLifeStyleNotLove","startedAfamilyAtAyoungAge",
         "flipflop", "riskTaker",
-        "MovesAlot","getsFiredAlot","TooTrustingOfEnemies","likedToExperinceCulture"
+        "MovesAlot","TooTrustingOfEnemies","likedToExperinceCulture"
 
     };
     List<string> AnAdventureWeSeek_CoreValues = new List<string>()
     {
         "InLovewithspouseoffriend","hasalotofenemies", "likesToDate","InLoveWithAnothersspuce","MovesAlot","riskTaker",
-        "RetiredYoung","DevorcedManyPeople","WillActOnLove","AdventureSeeker","TooTrustingOfEnemies","likedToExperinceCulture","supportsImmigration","flipflop"
+        "RetiredYoung","DevorcedManyPeople","WillActOnLove","AdventureSeeker","TooTrustingOfEnemies","likedToExperinceCulture","flipflop"
 
 
 
     };
     List<string> NiaeveteIsFiction_CoreValues = new List<string>() {
 
-        "InLovewithspouseoffriend","hasalotofenemies","friendwithabestfriendsenemy","InLoveWithAnothersspuce",
+        "hasalotofenemies","friendwithabestfriendsenemy",
+        "InLoveWithAnothersspuce",
         "SusMovments","DevorcedManyPeople","WillActOnLove","supportsImmigration",
         "liklyToHelpTheHomeless","TooTrustingOfEnemies","doesNotGiveToThoseInNeed"
     };
     List<string> AselfMadeShapeWeAspireToBe_CoreValues = new List<string>()
         {"graduate","adultbutnotworking","notworkingandrich",
-            "worksWithFamily","hiredByAFamilymember","getsFiredAlot","RetiredYoung","DiedBeforeRetired","IsRichButNotGenrous","conventional",
+            "worksWithFamily","hiredByAFamilymember","getsFiredAlot","RetiredYoung","DiedBeforeRetired",
             "WorksInAlcohol","healerRole","polluterRole","riskTaker","butcherRole",
              "Teachingrole","advancedCareer","hardWorker","CustodianJobs","generalJobs","selfMadeCubeByDedication" };
     List<string> Shapesarenothingifnotsocial_CoreValues = new List<string>()
@@ -183,22 +187,25 @@ public class MoralModels
 
         };   
     List<string> AntiFaviortisum_CoreValues = new List<string>()
-        {"graduate","exploteative","IsWealthy","hiredByAFamilymember","selfMadeCubeByDedication","conventional","nepotism","WorksInAlcohol",
+        {"graduate","exploteative","IsWealthy","hiredByAFamilymember","selfMadeCubeByDedication","nepotism","WorksInAlcohol",
             "polluterRole","riskTaker","butcherRole","healerRole","Teachingrole","hardWorker","advancedCareer","generalJobs"
 
         };
     List<string> WeArewNothingIfWeAreNotReserved_CoreValues = new List<string>()
-        {"likesToDate","InLoveWithAnothersspuce","startedAfamilyAtAyoungAge","worksWithFamily","hiredByAFamilymember","getsFiredAlot","SusMovments","DevorcedManyPeople","marriedForLifeStyleNotLove",
-            "IsRichButNotGenrous","liklyToHelpTheHomeless","reserved","TooTrustingOfEnemies","doesNotGiveToThoseInNeed","supportsImmigration","conventional",
+        {"likesToDate","InLoveWithAnothersspuce","startedAfamilyAtAyoungAge","SusMovments","DevorcedManyPeople","marriedForLifeStyleNotLove",
+            "IsRichButNotGenrous","liklyToHelpTheHomeless","reserved","TooTrustingOfEnemies","doesNotGiveToThoseInNeed","supportsImmigration",
             "hasalotofenemies","InLovewithspouseoffriend"
 
         };
     List<string> ImmagretsWeGetTheJobDone_CoreValues = new List<string>()
         {
 
-            "AdventureSeeker","likedToExperinceCulture","supportsImmigration","conventional","reserved","flipflop","socialLife","familyPerson",
-            "WorksInAlcohol","healerRole","polluterRole","riskTaker","butcherRole","SusMovments","MovesAlot",
-             "Teachingrole","advancedCareer","hardWorker","CustodianJobs","generalJobs","selfMadeCubeByDedication","graduate",
+            "likedToExperinceCulture","supportsImmigration","conventional","reserved","flipflop",
+        "familyPerson",
+            "WorksInAlcohol","healerRole","polluterRole","riskTaker","butcherRole",
+        "SusMovments","MovesAlot",
+             "Teachingrole","advancedCareer","hardWorker","CustodianJobs",
+        "generalJobs","selfMadeCubeByDedication","graduate",
 
         };
 
@@ -300,7 +307,7 @@ public class MoralModels
         }
 
     }
-
+    //use this 
     string returnSchemaText(string schemaName, string surfuaceValueKey, string subvalueKey)
     {
         //t this works --- move this method to father model script or the model parents :) but this returns the appropriate text bad O tho

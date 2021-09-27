@@ -64,7 +64,7 @@ public class JsonLoader : MonoBehaviour
     const string FATHERMODELARGUMENTS = @"JSON/testingnewfatherstructure";
 
 
-    //working poeple --- is the teesting file used :) 
+   
 
 
     List<string> exFlads = new List<string>(); 

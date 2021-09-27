@@ -7,6 +7,7 @@ public  class SVCollection : MonoBehaviour
 
     //for mapping purposes 
    public static List<SValues> allSurfaceValues = new List<SValues>() {
+
     new SValues("BTrueTYourHeart", new List<string> {"InLovewithspouseoffriend", "widowedbutnotgrieving",
         "likesToDate","leftFotLoveIntrest","InLoveWirhAnothersspouce",
         "startedAfamilyAtAyoungAge","DevorcedManyPeople","marriedForLifeStyleNotLove",

@@ -1338,7 +1338,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     IEnumerator waitAndEnableButtons()
     {
         yield return currentCorutine;
-        Debug.Log("does this fucking print?");
+        Debug.Log("does this fudging print?");
         disableorEnablePlayerButtons();
     }
 
