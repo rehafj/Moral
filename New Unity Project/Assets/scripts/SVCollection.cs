@@ -9,12 +9,12 @@ public  class SVCollection : MonoBehaviour
    public static List<SValues> allSurfaceValues = new List<SValues>() {
 
     new SValues("BTrueTYourHeart", new List<string> {"InLovewithspouseoffriend", "widowedbutnotgrieving",
-        "likesToDate","leftFotLoveIntrest","InLoveWirhAnothersspouce",
+        "likesToDate","leftFotLoveIntrest","InLoveWithAnothersspuce",
         "startedAfamilyAtAyoungAge","DevorcedManyPeople","marriedForLifeStyleNotLove",
         "WillActOnLove","marriedSomoneOlder"} ),
 
     new SValues("LoveIsForFools", new List<string> {"InLovewithspouseoffriend", "widowedbutnotgrieving",
-        "leftFotLoveIntrest","InLoveWirhAnothersspouce",
+        "leftFotLoveIntrest","InLoveWithAnothersspuce",
         "startedAfamilyAtAyoungAge","DevorcedManyPeople","marriedForLifeStyleNotLove",
         "WillActOnLove","marriedSomoneOlder"} ),
 
@@ -100,6 +100,9 @@ public  class SVCollection : MonoBehaviour
         if (listOfCompatibleSV.Count == 0)
         {
             listOfCompatibleSV.Add("suchUncharactristicBehaviorOhMy");
+
+            //debugging --- changing it here for now, change this later 
+            if(pattern== "InLoveWithAnothersspuce")
             Debug.Log("THIS PATTERN HAD NO MAPPING " + pattern);
         }
         return listOfCompatibleSV;

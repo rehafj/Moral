@@ -44,6 +44,13 @@ public class Dialoug   //restructure this badly....
         Explored = false;
         factsOnTopic.Add("will randomly presrnt  a fact for the key" + thoughtBubbleText);
     }
+    public void setupMoralFocusArguments(string MoralFocusArgOne, string MoralFocusArgTwo)
+    {
+        moralDisagreementText.Add(MoralFocusArgOne);
+        moralDisagreementText.Add(MoralFocusArgTwo);
+
+
+    }
 
     public string GetAFact()
     {

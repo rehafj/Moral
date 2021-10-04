@@ -4,9 +4,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-public class MoralModels 
+public class MoralModels : MonoBehaviour 
 {
     JsonLoader loader;
+    
 
     protected double getChances()
     {
@@ -373,7 +374,8 @@ public class MoralModels
 //getPlayerResponce
 //mappedSV
 //mappedKey
-//setCnpcDialoug
+//
+
 //        currentCorutine = StartCoroutine(TypeInDialoug(getPlayerResponce(mapToCNPCMoralFactor(currentNode.Pattern), //TOFRICKENDO changet his to currentnode.sv
 // InLoveWithAnothersspuce
 

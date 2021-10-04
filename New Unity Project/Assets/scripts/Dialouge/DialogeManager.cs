@@ -63,12 +63,13 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
     //test
 
+
+    //pubic for testing only -- change later 
     Dialoug currentNode;
 
-    int moralCounter = 0;
-    int currentConversationalLoopSingle = 0;
-    int currentCNPCloopsInRun = 0;
-    List<string> currentCNPCExploredSurfaceValues = new List<string>();
+     int moralFocusCounter = 0; 
+   public List<string> currentCNPCExploredSurfaceValues = new List<string>();
+   
     List<string> currentPlayerAttemptedArgumentSV = new List<string>();
     int currentCNPCDisagreements = 0;
 
@@ -89,7 +90,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         currentCNPC = FindObjectOfType<CharacterManager>().characters[0]; //hard coded with tim for now 
         OrgnizeCNPCOpinions();
         setUp();
-
+      //  currentCNPC.FatherModel.testFM();
     }
 
     public void setUp()
@@ -171,7 +172,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     }
     private void startAconversation(Tree chosenTree)
     {
-        moralCounter = 0; //reset it for next character
+      //  moralCounter = 0; //reset it for next character
         currentNode = choseADialougNode(chosenTree.root.children);//i.e we are still in the same tree
 
             /* currentNode = choseADialougNode(chosenTree.root.children); //new node selection from another tree/branch 
@@ -190,7 +191,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                 "presist on importance of moral flag "));
         DisplayplayCurrentOpinions(currentTree);
         displayPlayerButtons(currentNode);
-        moralCounter += 1;
+        //moralCounter += 1;
     }
     Dialoug choseADialougNode(List<Dialoug> bgCharacterNOdes)
     {
@@ -258,41 +259,28 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             }
             PlayerButtons[0].onClick.AddListener(playerAgrees);
             PlayerButtons[1].onClick.AddListener(playerDissAgrees);
-            PlayerButtons[2].onClick.AddListener(playerArgueAboutFLag);
-            PlayerButtons[3].onClick.AddListener(askAboutAnotherCharacter);
+            PlayerButtons[2].onClick.AddListener(playerArgueAboutFLag);//TOFIX
+            PlayerButtons[3].onClick.AddListener(askAboutAnotherCharacter);//TOFIX
         }
     }
     void playerAgrees()
-    {       //TODO works :) but prob need to change for moral agreement -- check where this method is being used 
-        currentCNPCloopsInRun += 1;
-        currentConversationalLoopSingle += 1;
+    {   
+
         StartCoroutine(waitAndPrintAgreement(currentNode.agreementText)); // need to restrucre this --- 
     }
     private void playerDissAgrees()
     {
 
-        currentCNPCloopsInRun += 1;
-        currentConversationalLoopSingle += 1;
-
-        //Debug.Log("player disagreed!" + currentNode.Pattern + "after i click on agree! " + currentNode.unbaisedIopinion);
-        //TODO  Add methods for arguing on a flag  --- 
-        /*        Debug.Log("the disagreement text is" + currentNode.disagreementText);
-        */
+        
         StartCoroutine(waitAndPrintDisagreement(currentNode.disagreementText)); //currentNode.getRandomHatedFact())
-       // playerArgueAboutFLag(); 
 
-        //NEED TO REFACTOR THIS TO CHECK FOR MORAL AGREE OR DISAGREE
-
-
-        //setPlayerPatternDissagreement();//moves to the next node - --- STOP ITT FGGROM HOINH TO THE NEXT ONE 
     }
 
     Dialoug currentCNPCStance = new Dialoug("","", "graduate");
     public void playerArgueAboutFLag()
     {
 
-        currentCNPCloopsInRun += 1;
-        currentConversationalLoopSingle += 1;
+    
         Debug.Log("current stanc eis "+ currentNode.Pattern);
         currentCNPCStance = currentNode;
         //present all flags for player as a sub menue 
@@ -320,8 +308,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
     private void askAboutAnotherCharacter()
     {
-        currentCNPCloopsInRun += 1;
-        currentConversationalLoopSingle += 1;
+  
         currentNode = currentNode.parent; //went up on height --- 
         Debug.Log("checking:"+ currentNode.getHeight());
         if (currentNode.getHeight() == 1)
@@ -388,7 +375,6 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         foreach (Button b in PlayerButtons)
         {
             Dialoug d = currentNode.parent.children[i];
-           // Debug.Log(currentNode.parent.children[i].Pattern);
             b.onClick.AddListener(() => moveConversationToAflag(d));
             i++;
         }
@@ -412,36 +398,26 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         if (currentCNPC.IsMoralFocus(d.MappedSurfaceValue))//the flag the player presented is the moral focus of the NPC  //TOFRICKENDO changet his to currentnode.sv
         { //TODO CHANGE THIS INTO NEW METHOD 
             Debug.Log("!!!" + d.Pattern + "is a moral focus area");
-            StartCoroutine(waitAndPrintAgreement("CNPC conceedes, player selected flag was moral focus of cnpc-- need to add text or pull from a list based on the flag "));
-            
+            StartCoroutine(waitAndPrintAgreement("CNPC conceedes, player selected flag was moral focus of cnpc-- need to add text or pull from a list based on the flag "));      
         }
         else //HAPPENS WHEN PPLAYER DOES NOT AGREE WITH NNPC
         {
             //---
             Debug.Log(d.Pattern);
-/*            Debug.Log(" returned flag ---  " +currentCNPC.FatherModel.ReturnSchema(d.Pattern, d));
-*/            //Debug.Log("what is this value ? "+currentCNPC.ConvCharacterMoralFactors[mapToCNPCMoralFactor(currentCNPCStance.Pattern)] +"on"+currentCNPCStance.Pattern);
-            //TOFRICKENDO changet his to currentnode.sv
-            string schema = currentCNPC.FatherModel.ReturnSchema(d.Pattern, d);
+           
+            string schema = "noSchemasFound";
             if (schema== "noSchemasFound")
             {
 
-                // YOU WANT THE NPC TO ARGUE FOR GENERAL CURRENT FLAG ( AGREEMENT TEXT ) + THEN ADD A METHOD TO CHECK IF HIGH MID AND LOW AND CONSULT SCHEMAS.
+              
 
                 StartCoroutine(WaitAndPrintcompoundedStatments("","CNPC will present a fact for surface value As this does not really map to model well"));
        
             }
             else
             {
-                Debug.Log("found a schema -huzzah, values are " + currentCNPC.FatherModel.CurrentArgument.pattern + "with" +
-                    currentCNPC.FatherModel.CurrentArgument.matchingPattern + "arte they a model cit" + currentCNPC.FatherModel.CurrentArgument.modelCitizen
-                    + "schema" + schema);
-
-
                 StartCoroutine(WaitAndPrintcompoundedStatments(currentCNPC.FatherModel.CurrentArgument.expandedArgument, ""));
-                /*      Debug.Log("will argue for surface value for inital  ");
-                      StartCoroutine(WaitAndPrintcompoundedStatments("will argue for surface value ", d.agreementText));//as a start but same as disagreement ? 
-      */
+     
             }
 
 
@@ -566,6 +542,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                // Debug.Log("disagreement text at set up " + node.disagreementText);
                 node.Pattern = setPlayerPattern(kvp.Key); //flag or pattern for now but this mighht actually be the button text for the player to click on... 
                 node.Rating = setNodeRating(mappedKey);
+                node.setupMoralFocusArguments("moralarg1 focus ","morala Focus rg2" );
                 //node.MappedSurfaceValue = returnpatternToSurfaceMapiing(kvp.Key);
                 //add moral agreement 
                 // add moral disagreement 
@@ -599,6 +576,8 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                 selectedOpnion = op.topic.Split('_').Last(); //surface value is returned here = -  sv selected opinion 
                // Debug.Log("selectedOpnion" + selectedOpnion +" AND FLAG "+ flag +"TOPIC"+op.topic);// FLAG isd what i send over to classify as intro text pt agreement or .... 
                 //selectedOpinion is the surface value
+
+                //redo this super bad method 
                 if (flag == "BiasedSVOpin")
                 {
                     return op.NarrativeElements.surfaceOpinionOnTopic;
@@ -611,7 +590,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                 {
                    // Debug.Log("setting disagreement text as " + op.NarrativeElements.disagreementtext);
                     return op.NarrativeElements.disagreementtext;
-                }
+                }    
             }
         }
         return "NO TOPIC WAS FOUND --- need to author topic for flag " + key;
@@ -663,8 +642,6 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         //this is 1 to 1 - need to change to 1 to many, move into qa nother script and rewrite it.
     {
      
-
-
         switch (pattern)
         {
             case ("startedAfamilyAtAyoungAge"):
@@ -1222,7 +1199,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
         foreach (PlayerDialoug p in jsn.listOfPlayerDialougs)
         {
-            if (p.playerSurfaceValue == surfaceValue && p.playerNarrativeElements.rating == rating)
+            if (p.playerSurfaceValue == surfaceValue && p.playerNarrativeElements.rating == rating) //prints approproate high/mid/low if its not the moral focus argument
             {
                 if (!isMoralARG)
                 {
@@ -1236,22 +1213,31 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                     }
                  
                 } 
-                else // moral -- soomething is wrong here!!! ---- 
+                else // moral 
                 {
+                    Debug.Log("player is refrencing NPC moral focus argument");
                     if (playerResponceType == TypeOfPlayerTexts.agreement)
                     {
-                        
-                       // return getPlayerResponce(p.playerSurfaceValue, "High", TypeOfPlayerTexts.agreement, true); // so we can get the same flag but on high for the moral agreement 
 
+                        return "PLAYER SAYS: \n" + p.playerNarrativeElements.playerInAgreementText;
                     }
-                    else if (playerResponceType == TypeOfPlayerTexts.disagreement)
+                    else //player in disagement of moral focus 
                     {
-                        
-                    }
-                    else { 
+                        //special loop happens here 
+                        if (moralFocusCounter == 0)
+                        {
+                            moralFocusCounter += 1;
+                            return "PLAYER SAYS: \n" + p.playerNarrativeElements.playerMoralDisagreementText[0]; //player can agree or disagree here 
 
-                    
-                    } // model responces... 
+                        }
+                        else
+                        {
+                            moralFocusCounter = 0;
+                            return "PLAYER SAYS: \n" + p.playerNarrativeElements.playerMoralDisagreementText[1];
+
+                        }
+
+                    }
 
                 }
             }
@@ -1397,9 +1383,11 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
     IEnumerator waitAndPrintDisagreement(string text)   //so this works... but does nto when in larger scenartio.. 
     {
-       // if (currentNode.Rating == "High") ;
-        if( currentConversationalLoopSingle <= 1)
-        {
+        //remove this later but for now... 
+        List<string> exploredPattensForDefense = new List<string>(); //move to global level and clear it later 
+        if (!currentTree.FullyExplored)
+        {   
+
             bool isMf = currentCNPC.IsMoralFocus(currentNode.MappedSurfaceValue); //TOFRICKENDO changet his to currentnode.sv
 
             //basic disagreement 1
@@ -1408,67 +1396,75 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                                  TypeOfPlayerTexts.disagreement, isMf))); // CAN REFACTOR THIS  //TOFRICKENDO changet his to currentnode.sv
             yield return currentCorutine;
             currentCorutine = StartCoroutine(TypeInDialoug(text));
-            yield return currentCorutine;
-
-        } else if(currentConversationalLoopSingle > 1 && currentConversationalLoopSingle <=3)
-        {   if(currentNode.Rating =="High") //refrence father model 
+            Debug.Log(isMf + " the moral focus area was true for the flag " + currentCNPC.getMORALfOCUSAREA());
+           /* if (currentNode.Rating == "High") // and the player disagrees 
             {
-                currentCNPCExploredSurfaceValues.Add(currentNode.Pattern);
+                currentCorutine = StartCoroutine(TypeInDialoug(" you know what... (happens when player disaagrees again (test--)"));//refrence filler before father model 
+                yield return currentCorutine;
+                currentCorutine = StartCoroutine(TypeInDialoug(
+                    currentCNPC.FatherModel.returnFatherModelArgumetnsText
+                                                (currentNode.MappedSurfaceValue, currentNode.Pattern,
+                                                exploredPattensForDefense, true)));
 
-            }
-            else // mid or low just move to the next conversation if it is not a moral focus area. 
-            { 
 
-            }
-            
-            //refrence father model 
 
-        } else if (currentConversationalLoopSingle >4) //move it away if npc is not convinced 
-        {
-            if (currentNode.Rating == "High") //if its after fm and high then move to another node and clear the list of explored nodes for subvalues in  schemas.
-            {
 
-            }
+                     ////refrence filler before father model 
+
+                exploredPattensForDefense.Add(currentNode.Pattern);
+                //refrence father model 
+
+            }*/
         }
-         if (moralCounter == 0 && currentCNPC.IsMoralFocus(currentNode.MappedSurfaceValue)) //TOFRICKENDO changet his to currentnode.sv
+        checkEndConversationAndMove();
+
+        //new 
+        /*       if (isMf) //if the last loop was a moral focus 
+               {
+                   currentCorutine = StartCoroutine(TypeInDialoug(currentNode.moralDisagreementText[0]));
+
+               } else
+               {
+                   currentCorutine = StartCoroutine(TypeInDialoug(currentNode.moralDisagreementText[1]));
+
+               }*/
+
+
+    }
+
+
+    /*// if currentconversation loop <= 1,,, 
+    else if(currentConversationalLoopSingle > 1 && currentConversationalLoopSingle <=3)
+    {   if(currentNode.Rating =="High") //refrence father model 
         {
-            StartCoroutine(waitAndPrintMoralAreas("CNPC argues for the importance of their flag")); //change this to a wait and print instead
+            currentCNPCExploredSurfaceValues.Add(currentNode.Pattern);
 
         }
-        if (moralCounter > 0 && currentCNPC.IsMoralFocus(currentNode.MappedSurfaceValue)) //TOFRICKENDO changet his to currentnode.sv
-        {
-            StartCoroutine(waitAndPrintAgreement("CNPC will not change there mind...,... transtion text")); //change this to a wait and print instead
+        else // mid or low just move to the next conversation if it is not a moral focus area. 
+        { 
+
         }
-        //playerArgueAboutFLag();
-        // StartCoroutine(waitAndPrintDisagreement(currentNode.GetAFact())); //currentNode.getRandomHatedFact())
-        // OLD CODE HERE ----- 
-        //currentCNPC.IsMoralFocus(mapToCNPCMoralFactor(currentNode.Pattern))
-        // old code... 
-        /*yield return currentCorutine;
-        currentCorutine = StartCoroutine(TypeInDialoug(text));
-        yield return currentCorutine;*/
 
-        //does the CNPC argue for the importance of their flag? 
-        /*    if (currentCNPC.FatherModel.isPragmatic) //check for whateverr model
-           {
+        //refrence father model 
 
-           } 
-           else if (!currentCNPC.FatherModel.isPragmatic) //if it is not pragmatic //i.e. central 
-           {
+    } else if (currentConversationalLoopSingle >4) //move it away if npc is not convinced 
+    {
+        if (currentNode.Rating == "High") //if its after fm and high then move to another node and clear the list of explored nodes for subvalues in  schemas.
+        {
 
-           }*/
+        }
+    }
+     if (moralCounter == 0 && currentCNPC.IsMoralFocus(currentNode.MappedSurfaceValue)) //TOFRICKENDO changet his to currentnode.sv
+    {
+        StartCoroutine(waitAndPrintMoralAreas("CNPC argues for the importance of their flag")); //change this to a wait and print instead
+
+    }
+    if (moralCounter > 0 && currentCNPC.IsMoralFocus(currentNode.MappedSurfaceValue)) //TOFRICKENDO changet his to currentnode.sv
+    {
+        StartCoroutine(waitAndPrintAgreement("CNPC will not change there mind...,... transtion text")); //change this to a wait and print instead
+    }*/
 
 
-        /*   helloworld-- this needs ti be as a default if not moral focus and not in conflict with the tasble then go here ??     if(currentNode.hatedFacts.Count <= 0 && currentTree.FullyExplored)
-                {
-                    //i.e. we walked about all the hated facts! 
-                    converseAboutNextCharacter();
-                }
-                else
-                {
-                    startAconversation(currentTree);
-                }*/
-   }
 
     IEnumerator WaitAndPrintcompoundedStatments(string textOne, string textTwo)   //so this works... but does nto when in larger scenartio.. 
     {

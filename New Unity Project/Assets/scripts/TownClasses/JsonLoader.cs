@@ -13,6 +13,7 @@ using System.Reflection;
 //by author: first gear games. 
 public class JsonLoader : MonoBehaviour
 {
+    public static JsonLoader JSONLoader; 
     //note to self: comment and uncomment below depending on what is needed in final version 
 
     [SerializeField]
@@ -226,27 +227,26 @@ public class JsonLoader : MonoBehaviour
             }
         }
 
-        Debug.Log("!!!!!+ NPC WILL LOOK FOR SCHEMAS THAT HAVE" + NPCType);
+       // Debug.Log("!!!!!+ NPC WILL LOOK FOR SCHEMAS THAT HAVE" + NPCType);
         string currentPatternCheck = subvalue;
 
         int i = 0;
         foreach (MoralModelArguments arg in listOffATHERArguments)
         {
-            Debug.Log("INSIDE FOREACH LOOP");
-            Debug.Log("arg.SVkey "+ arg.SVkey);
+           // Debug.Log("arg.SVkey "+ arg.SVkey);
 
             if (arg.SVkey == surfaceValue) //found the sv we wanted 
             {
-                Debug.Log("INSIDE SV KEY"+ arg.SVkey);
-                Debug.Log("size of  arg.surfaceValueObjList"  + arg.SurfaceValueObject.Count);
+               // Debug.Log("INSIDE SV KEY"+ arg.SVkey);
+               // Debug.Log("size of  arg.surfaceValueObjList"  + arg.SurfaceValueObject.Count);
 
                 foreach (SurfaceValueObject sobject in arg.SurfaceValueObject)
                 {
                     string r = sobject.schema.Split('_').First();
-                    Debug.Log("!!!!!+ r value" + r);
+                    //Debug.Log("!!!!!+ r value" + r);
 
-                    Debug.Log("!!!!!+ !exploredSterings.Contains(currentPatternCheck) value" +
-                   !exploredSterings.Contains(currentPatternCheck)); //after the furst time it becomes false 
+              /*      Debug.Log("!!!!!+ !exploredSterings.Contains(currentPatternCheck) value" +
+                   !exploredSterings.Contains(currentPatternCheck)); *///after the furst time it becomes false 
 
                     if (sobject.subvalue == subvalue && NPCType.ToLower() == r)
                     {
@@ -255,7 +255,7 @@ public class JsonLoader : MonoBehaviour
                     }
                     else if (!exploredSterings.Contains(currentPatternCheck)) 
                     {
-                        Debug.Log(" inside if it does not cvontained explorex strings !!!!!+ ! does thios happen ?  " + r + "and npc type" + NPCType.ToLower());
+                     //   Debug.Log(" inside if it does not cvontained explorex strings !!!!!+ ! does thios happen ?  " + r + "and npc type" + NPCType.ToLower());
 
                         if (NPCType.ToLower() == r)
                         {
@@ -265,7 +265,7 @@ public class JsonLoader : MonoBehaviour
 
                         foreach (string s in exploredSterings)
                         {
-                            Debug.Log("!!!!!+ exploredSterings npw adds" + s);
+                           // Debug.Log("!!!!!+ exploredSterings npw adds" + s);
 
                         }
                         i++;
@@ -276,7 +276,7 @@ public class JsonLoader : MonoBehaviour
             }
         }
 
-        return "!!!will check generic srsoinces ";
+        return "!!!will check generic series ";
 
     }
     string returnFile(string path)

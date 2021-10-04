@@ -166,7 +166,9 @@ public class ConversationalCharacter : MonoBehaviour
         FatherModel = new StrictFatherMorality(); // make it on a precentage but for now I do not have a mother model implemented 
     }
 
-
-
+    internal string getMORALfOCUSAREA()
+    {
+        return moralFocus;
+    }
 }
 

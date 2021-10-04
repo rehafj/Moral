@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class StrictFatherMorality : MoralModels
 {
-
+  
     // public bool isCentral; maybe make this into az thing to hold values
 
     Dictionary<string, bool> fatherSchemas = new Dictionary<string, bool>();
@@ -19,6 +20,104 @@ public class StrictFatherMorality : MoralModels
     }
     public Argument CurrentArgument;
     public bool isPragmatic;
+
+    List<string> NPCfmHighValues = new List<string>() //what the NPC looks for - ig its not herte NPC looks for low 
+    {
+        "BTrueTYourHeart",  "FamilyPerson", "MoneyMaker","Enviromentalist","AnimalLover","Teetotasler","TeetotaslerAnti","SchoolIsCool",
+        "SupportingComunities","LoverOfRisks","LandISWhereThehrtIS","CarrerAboveAll","FriendsAreTheJoyOFlife","youthAreTheFuture","ProHiringFamily","WeLiveForSpontaneity",
+        "AnAdventureWeSeek","ImmagretsWeGetTheJobDone","AselfMadeShapeWeAspireToBe","Shapesarenothingifnotsocial"
+
+
+    };
+
+    List<string> NPCSVfORbOTHhIGHaNDlOW = new List<string>() { };
+    // IF ITS PART THIS MIXED LIST ---> the npc looks for ohigh or low -
+    //or returna  list of strings 
+    // the player then only goes to generics. 
+    // do this in an overloaded method 
+
+    JsonLoader jsn;
+    public void Start()
+    {
+        jsn = FindObjectOfType<JsonLoader>();
+
+    }
+
+    public void  testFM()
+    {
+        Debug.Log(JsonLoader.JSONLoader.listOffATHERArguments.Count());
+    }
+    //make an overloaded method -- 
+    public string returnFatherModelArgumetnsText(string surfaceValue, string subvalue,
+                                          List<string> exploredSterings, bool isNPC)
+    {//update this ti include updates high low lists / player or npc --- update to reflect player bool - update for sening in list of explored or some list 
+        string NPCType = "High";
+
+        if (isNPC)
+        {
+            if (NPCfmHighValues.Contains(surfaceValue))
+            {
+                NPCType = "High";
+            }
+            else
+            {
+                NPCType = "Low";
+            }
+        }
+
+        // Debug.Log("!!!!!+ NPC WILL LOOK FOR SCHEMAS THAT HAVE" + NPCType);
+        string currentPatternCheck = subvalue;
+
+        int i = 0;
+        foreach (MoralModelArguments arg in JsonLoader.jsonLoader.listOffATHERArguments)
+        {
+            // Debug.Log("arg.SVkey "+ arg.SVkey);
+
+            if (arg.SVkey == surfaceValue) //found the sv we wanted 
+            {
+                // Debug.Log("INSIDE SV KEY"+ arg.SVkey);
+                // Debug.Log("size of  arg.surfaceValueObjList"  + arg.SurfaceValueObject.Count);
+
+                foreach (SurfaceValueObject sobject in arg.SurfaceValueObject)
+                {
+                    string r = sobject.schema.Split('_').First();
+                    //Debug.Log("!!!!!+ r value" + r);
+
+                    /*      Debug.Log("!!!!!+ !exploredSterings.Contains(currentPatternCheck) value" +
+                         !exploredSterings.Contains(currentPatternCheck)); *///after the furst time it becomes false 
+
+                    if (sobject.subvalue == subvalue && NPCType.ToLower() == r)
+                    {
+                        exploredSterings.Add(subvalue);
+                        return sobject.text;
+                    }
+                    else if (!exploredSterings.Contains(currentPatternCheck))
+                    {
+                        //   Debug.Log(" inside if it does not cvontained explorex strings !!!!!+ ! does thios happen ?  " + r + "and npc type" + NPCType.ToLower());
+
+                        if (NPCType.ToLower() == r)
+                        {
+                            return sobject.text + "_" + sobject.subvalue; //else return the first thing that is high 
+                        }
+                        exploredSterings.Add(currentPatternCheck);
+
+                        foreach (string s in exploredSterings)
+                        {
+                            // Debug.Log("!!!!!+ exploredSterings npw adds" + s);
+
+                        }
+                        i++;
+                        currentPatternCheck = arg.SurfaceValueObject[i].subvalue; //slight logic bug in counter if the current checked one was in rthe middle of the list -- 
+                    }
+
+                }
+            }
+        }
+
+        return "!!!will check generic series ";
+
+    }
+
 
     public StrictFatherMorality()
     {
@@ -40,7 +139,45 @@ public class StrictFatherMorality : MoralModels
 */
 
     //retutired 
-    public string ReturnSchema(string tag, Dialoug characterNode) //used in combo with flags to construt arguments, this returns the schema accoring to father models 
+ 
+
+    //add self deispline and self reliance 
+
+
+    public bool resultsInSelfIntrest()
+    {
+        //max welth - free stuff = badf in moral 
+        //greater good 
+        //ca;lcuate moral book keeping here 
+        return true;
+    }
+
+
+    public int modelcitizenCalculations()
+    {
+        int temp = 0;
+
+        foreach (KeyValuePair<string,bool> kvp in fatherSchemas)
+        {
+            if (kvp.Value)
+            {
+                temp += 1;
+            }
+        }
+        return temp;
+    }
+
+
+}
+
+/*
+ /// retired old code 
+ /// 
+
+
+
+
+   public string ReturnSchema(string tag, Dialoug characterNode) //used in combo with flags to construt arguments, this returns the schema accoring to father models 
     {
        // setArgumentStructure("","","",0);
 
@@ -563,48 +700,24 @@ public class StrictFatherMorality : MoralModels
 
       }
           //used in combo with flags to construt arguments, this returns the schema accoring to father models */
-    private void setArgumentStructure(string mainPattern, string mattchingPattern,string schema, int moralPoints)
-    {
-        Debug.Log("does this happen? setArgumentStructure" );
 
-        CurrentArgument.pattern = mainPattern;
-        CurrentArgument.matchingPattern = mattchingPattern;
-        if (moralPoints > 1) CurrentArgument.modelCitizen = true;
-        CurrentArgument.expandedArgument = expandArgument(mainPattern, mattchingPattern, schema);
-        Debug.Log(expandArgument(mainPattern, mattchingPattern, schema));
-    }
+/*
+private void setArgumentStructure(string mainPattern, string mattchingPattern, string schema, int moralPoints)
+{
+    Debug.Log("does this happen? setArgumentStructure");
 
-    private string expandArgument(string mainPattern, string mattchingPattern, string schema)
-    {
-        Debug.Log("hey hey hey "+CurrentArgument.pattern);
-        return "read from json for " + schema + "sub_" + mainPattern + mattchingPattern +"or what the pattern matches to + main value ? one refined other easier to write? ask MM"; 
-    }
-
-    //add self deispline and self reliance 
-
-
-    public bool resultsInSelfIntrest()
-    {
-        //max welth - free stuff = badf in moral 
-        //greater good 
-        //ca;lcuate moral book keeping here 
-        return true;
-    }
-
-
-    public int modelcitizenCalculations()
-    {
-        int temp = 0;
-
-        foreach (KeyValuePair<string,bool> kvp in fatherSchemas)
-        {
-            if (kvp.Value)
-            {
-                temp += 1;
-            }
-        }
-        return temp;
-    }
-
-
+    CurrentArgument.pattern = mainPattern;
+    CurrentArgument.matchingPattern = mattchingPattern;
+    if (moralPoints > 1) CurrentArgument.modelCitizen = true;
+    CurrentArgument.expandedArgument = expandArgument(mainPattern, mattchingPattern, schema);
+    Debug.Log(expandArgument(mainPattern, mattchingPattern, schema));
 }
+
+private string expandArgument(string mainPattern, string mattchingPattern, string schema)
+{
+    Debug.Log("hey hey hey " + CurrentArgument.pattern);
+    return "read from json for " + schema + "sub_" + mainPattern + mattchingPattern + "or what the pattern matches to + main value ? one refined other easier to write? ask MM";
+}
+
+
+*/

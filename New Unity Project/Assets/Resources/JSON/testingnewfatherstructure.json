@@ -1,15 +1,13 @@
 [{
-	"SVkey": "BTrueTYourHeart",
-	"SurfaceValueObject": [
-
-		{
+		"SVkey": "BTrueTYourHeart",
+		"SurfaceValueObject": [{
 			"subvalue": "InLovewithspouseoffriend",
-			"text": "Not all love is ethical. Like you should never go after your friend's partner.",
+			"text": "Not all love is ethical. Like you should never go after your friend's partner, it's just so low of them.",
 			"schema": "low_MoralBoundaries",
 			"NPCTypeSchemaValue": "High"
 		}, {
 			"subvalue": "widowedbutnotgrieving",
-			"text": "Love is a commitment and true love is rare. This shape doesn't even seem sad after they lost their partner, it's disrepectful to the sanctity of partnership.",
+			"text": "Love is a commitment and true love is rare. This shape doesn't even seem sad after they lost their partner, it's disrespectful to the sanctity of partnership.",
 			"schema": "low_MoralWholeness",
 			"NPCTypeSchemaValue": "High"
 		}, {
@@ -23,545 +21,43 @@
 			"schema": "low_Strength",
 			"NPCTypeSchemaValue": "High"
 		}, {
-			"subvalue": "InLoveWirhAnothersspouce",
+			"subvalue": "InLoveWithAnothersspuce",
 			"text": "If you always follow your heart, you will end up like this shape who has zero sense of duty or responsibility.",
 			"schema": "low_MoralOrder",
 			"NPCTypeSchemaValue": "High"
 		}, {
 			"subvalue": "startedAfamilyAtAyoungAge",
-			"text": "If you know the right shape, love can be great thing! Like this shape who found their partener so early.",
+			"text": "If you know the right shape, love can be a great thing! Like this shape who found their partner so early.",
 			"schema": "high_MoralWholeness",
 			"NPCTypeSchemaValue": "High"
 		}, {
 			"subvalue": "DevorcedManyPeople",
-			"text": "We shouldn't always follow our heart. This shape has been in mutiple partnerships and never thought through the consequences.",
+			"text": "We shouldn't always follow our hearts. This shape has been in multiple partnerships and never thought through the consequences.",
 			"schema": "low_MoralBoundaries",
 			"NPCTypeSchemaValue": "High"
 		}, {
 			"subvalue": "marriedForLifeStyleNotLove",
-			"text": "Love is deeper than we think. This shape entered a parternship not for love but found love eventually in their family life. ",
+			"text": "Love is deeper than we think. This shape entered a partnership, not for love but found love eventually in their family life.",
 			"schema": "high_MoralOrder",
 			"NPCTypeSchemaValue": "High"
 		}, {
 			"subvalue": "WillActOnLove",
-			"text": "Love can make smart shape do stupid things! Like this shape who went after a shape they shouldn't be with.",
+			"text": "Love can make smart shape do stupid things! Like this shape who went after a shape, they shouldn't be with.",
 			"schema": "low_Strength",
 			"NPCTypeSchemaValue": "High"
-		}
-	]
+		}]
 
-},
-
-
-
- {
-	"SVkey": "FamilyPerson",
-	"SurfaceValueObject": [
-
-		{
-			"subvalue": "familyPerson",
-			"text": "You know, this shape is a great representative of why family is important. They have a wonderful family life and they look really happy.",
-			"schema": "high_MoralWholeness",
-			"NPCTypeSchemaValue": "High"
-		}, {
-			"subvalue": "adultbutnotworking",
-			"text": "This shape is leeching off their family and not working, of course they are a family shape.",
-			"schema": "low_MoralEssence",
-			"NPCTypeSchemaValue": "High"
-		}, {
-			"subvalue": "worksWithFamily",
-			"text": "This shape also works with their family! What a fulfilling life!",
-			"schema": "high_MoralBoundaries",
-			"NPCTypeSchemaValue": "High"
-		}, {
-			"subvalue": "hiredByAFamilymember",
-			"text": "Well in the case of family business, family can be an agent of nepotism. Like this shape who's hired by their family, would you trust them to work for you?",
-			"schema": "low_MoralEssence",
-			"NPCTypeSchemaValue": "High"
-		}, {
-			"subvalue": "DevorcedManyPeople",
-			"text": "This shape had many families. I don't thinking being a family shape means they are a good and responsible shape.",
-			"schema": "low_MoralWholeness",
-			"NPCTypeSchemaValue": "High"
-		}, {
-			"subvalue": "marriedForLifeStyleNotLove",
-			"text": "This shape knows the importance of family and I am sure they have found bliss in their new family.",
-			"schema": "high_MoralBoundaries",
-			"NPCTypeSchemaValue": "High"
-		}, {
-			"subvalue": "conventional",
-			"text": "Family is a stablizing agent, this shape is so down to earth and you can tell from their stable family life.",
-			"schema": "high_MoralWholeness",
-			"NPCTypeSchemaValue": "High"
-		}, {
-			"subvalue": "nepotism",
-			"text": "Well in the case of family business, family can be an agent of nepotism. Like this shape who's hired by their family, would you trust them to work for you?",
-			"schema": "low_MoralWholeness",
-			"NPCTypeSchemaValue": "High"
-		}
-	]
-
-},
-
-{
- "SVkey": "LandISWhereThehrtIS",
- "SurfaceValueObject": [
-
-	 {
-		 "subvalue": "socialLife",
-		 "text": "Your home is where your friends and family are, this shape has never left the city but they have a rich social life.",
-		 "schema": "high_MoralWholeness",
-		 "NPCTypeSchemaValue": "High"
-	 }, {
-		 "subvalue": "familyPerson",
-		 "text": "This shape has stayed close to their roots and has been taking care of their family. That's really honorable.",
-		 "schema": "high_MoralWholeness",
-		 "NPCTypeSchemaValue": "High"
-	 }, {
-		 "subvalue": "loner",
-		 "text": "There's nothing wrong with being alone while you explore the world, maybe you will find youself just like how this shape did.",
-		 "schema": "low_MoralWholeness",
-		 "NPCTypeSchemaValue": "High"
-	 }, {
-		 "subvalue": "hasAbestFriend",
-		 "text": "This shape stayed in this city becasue their best friend is here, wouldn't you say that true friendship?",
-		 "schema": "high_MoralWholeness",
-		 "NPCTypeSchemaValue": "High"
-	 }, {
-		 "subvalue": "worksWithFamily",
-		 "text": "This shape works with their family in the city and that's a wonderful thing.",
-		 "schema": "high_MoralWholeness",
-		 "NPCTypeSchemaValue": "High"
-	 }, {
-		 "subvalue": "hiredByAFamilymember",
-		 "text": "Like this shape who has support of their family and didn't even have to look for a job, that's what a good support system looks like. ",
-		 "schema": "high_MoralOrder",
-		 "NPCTypeSchemaValue": "High"
-	 }, {
-		 "subvalue": "MovesAlot",
-		 "text": "This shape needs to find a move to a space where they can thrive, there is nothing wrong with that.",
-		 "schema": "low_MoralWholeness",
-		 "NPCTypeSchemaValue": "High"
-	 }, {
-		 "subvalue": "SusMovments",
-		 "text": "Shapes must find where they belong and I am sure they will find where they turly belong by visiting different places.",
-		 "schema": "low_MoralEssence",
-		 "NPCTypeSchemaValue": "High"
-	 }, {
-		 "subvalue": "supportsImmigration",
-		 "text": "Our city is great, you can tell by how many shapes want to move here!",
-		 "schema": "high_MoralBoundaries",
-		 "NPCTypeSchemaValue": "High"
-	 }, {
-		 "subvalue": "conventional",
-		 "text": "We have a tradition that must be honored and protected, you can only do that when you are at home.",
-		 "schema": "high_MoralBoundaries",
-		 "NPCTypeSchemaValue": "High"
-	 }, {
-		 "subvalue": "reserved",
-		 "text": "This shape has always been a stable element of the community, they are respected by all becasue they understand how improtant home is.",
-		 "schema": "high_MoralEssence",
-		 "NPCTypeSchemaValue": "High"
-	 }
- ]
-
-},
-
-
-
-{
- "SVkey": "FriendsAreTheJoyOFlife",
- "SurfaceValueObject": [
-
-	 {
-		 "subvalue": "InLovewithspouseoffriend",
-		 "text": "If you're going to fall in love with your friend's partner like this shape did, you should probably stay alone.",
-		 "schema": "low_MoralBoundaries",
-		 "NPCTypeSchemaValue": "High"
-	 }, {
-		 "subvalue": "socialLife",
-		 "text": "This shape has a rich social life and that's wonderful!",
-		 "schema": "high_MoralWholeness",
-		 "NPCTypeSchemaValue": "High"
-	 }, {
-		 "subvalue": "hasalotofenemies",
-		 "text": "This shape makes a lot of enemies becasue they always try to make friends.",
-		 "schema": "low_MoralWholeness",
-		 "NPCTypeSchemaValue": "High"
-	 }, {
-		 "subvalue": "friendwithabestfriendsenemy",
-		 "text": "This shape has no loyalty and you don't want a friend like that.",
-		 "schema": "low_MoralEssence",
-		 "NPCTypeSchemaValue": "High"
-	 }, {
-		 "subvalue": "loner",
-		 "text": "This shape likes to keep to themselve and there is nothing wrong with that.",
-		 "schema": "low_MoralWholeness",
-		 "NPCTypeSchemaValue": "High"
-	 }, {
-		 "subvalue": "hasAbestFriend",
-		 "text": "This shape is always hanging out with their best friend and don't you envy a friendship like that?",
-		 "schema": "high_MoralWholeness",
-		 "NPCTypeSchemaValue": "High"
-	 }, {
-		 "subvalue": "MovesAlot",
-		 "text": "This shape travels a lot and it's hard to make friends. But there is nothing wrong with that.",
-		 "schema": "low_MoralWholeness",
-		 "NPCTypeSchemaValue": "High"
-	 }, {
-		 "subvalue": "SusMovments",
-		 "text": "This shape likes to keep to themselve. But there is nothing wrong with that.",
-		 "schema": "low_MoralWholeness",
-		 "NPCTypeSchemaValue": "High"
-	 }, {
-		 "subvalue": "isolated",
-		 "text": "This shape doesn't want to make a lot of  friends and I respect their choices.",
-		 "schema": "high_MoralWholeness",
-		 "NPCTypeSchemaValue": "High"
-	 }, {
-		 "subvalue": "TooTrustingOfEnemies",
-		 "text": "You can't trust everyone. This shape is too trusting and friendly, they will get into trouble one day.",
-		 "schema": "low_MoralWholeness",
-		 "NPCTypeSchemaValue": "High"
-	 }, {
-		 "subvalue": "reserved",
-		 "text": "This shape select their friends very carefully and we should all be like that.",
-		 "schema": "high_MoralWholeness",
-		 "NPCTypeSchemaValue": "High"
-	 }
- ]
-
-},
-
-
-
-
-{
- "SVkey": "youthAreTheFuture",
- "SurfaceValueObject": [
-
-	 {
-		 "subvalue": "InLovewithspouseoffriend",
-		 "text": "This shape is too friendly with their friend's partner. Being social just cause trouble.",
-		 "schema": "low_MoralBoundaries",
-		 "NPCTypeSchemaValue": "High"
-	 }, {
-		 "subvalue": "socialLife",
-		 "text": "Look how happy this shape is! Shapes who have a lot of friends must be good shapes.",
-		 "schema": "high_MoralWholeness",
-		 "NPCTypeSchemaValue": "High"
-	 }, {
-		 "subvalue": "hasalotofenemies",
-		 "text": "This shape made a lot of enemies and I don't think being social is such a good idea.",
-		 "schema": "low_MoralEssence",
-		 "NPCTypeSchemaValue": "High"
-	 }, {
-		 "subvalue": "friendwithabestfriendsenemy",
-		 "text": "This shape befriended their friend 's enemy. How could anyone trust a shape like that.",
-		 "schema": "low_MoralOrder",
-		 "NPCTypeSchemaValue": "High"
-	 }, {
-		 "subvalue": "exploteative",
-		 "text": "This shape makes friends just becasue they want to take advantage of them. I feel like overly social shapes all have something to hide.",
-		 "schema": "low_MoralOrder",
-		 "NPCTypeSchemaValue": "High"
-	 }, {
-		 "subvalue": "hasAbestFriend",
-		 "text": "This shape and their best friend support each other no matter what, don't you want something that special?!",
-		 "schema": "high_MoralOrder",
-		 "NPCTypeSchemaValue": "High"
-	 }, {
-		 "subvalue": "InLoveWirhAnothersspuce",
-		 "text": "This shape flirts with everyone even though they are commited, I don't think being social helps them.",
-		 "schema": "high_MoralOrder",
-		 "NPCTypeSchemaValue": "High"
-	 }, {
-		 "subvalue": "MovesAlot",
-		 "text": "This shape moves a lot and being social helps to make new places easier to adjust.",
-		 "schema": "high_MoralBoundaries",
-		 "NPCTypeSchemaValue": "High"
-	 }, {
-		 "subvalue": "DevorcedManyPeople",
-		 "text": "This shape is too social when they should focus that energy on their partner.",
-		 "schema": "low_MoralWholeness",
-		 "NPCTypeSchemaValue": "High"
-	 },  {
-		 "subvalue": "TooTrustingOfEnemies",
-		 "text": "This shape trusts everyone and that's very stupid of them. Being social isn't the best thing for us.",
-		 "schema": "low_Strength",
-		 "NPCTypeSchemaValue": "High"
-	 },{
-		 "subvalue": "isolated",
-		 "text": "This shape likes to keep to themselves and that's their right to do so. I respect that.",
-		 "schema": "low_MoralWholeness",
-		 "NPCTypeSchemaValue": "High"
-	 },  {
-		 "subvalue": "reserved",
-		 "text": "This shape chooses their friends very carefully and that's a wise decision.",
-		 "schema": "low_MoralWholeness",
-		 "NPCTypeSchemaValue": "High"
-	 }
- ]
-
-},
-
-
-
-
-{
- "SVkey": "Loner",
- "SurfaceValueObject": [
-
-	 {
-		 "subvalue": "hasalotofenemies",
-		 "text": "This shape makes a lot of enemies becasue they always try to make friends.",
-		 "schema": "low_MoralWholeness",
-		 "NPCTypeSchemaValue": "Low"
-	 }, {
-		 "subvalue": "socialLife",
-		 "text": "This shape has a rich social life and that's wonderful!",
-		 "schema": "high_MoralWholeness",
-		 "NPCTypeSchemaValue": "Low"
-	 }, {
-		 "subvalue": "friendwithabestfriendsenemy",
-		 "text": "This shape has no loyalty and you don't want a friend like that.",
-		 "schema": "low_MoralEssence",
-		 "NPCTypeSchemaValue": "Low"
-	 }, {
-		 "subvalue": "loner",
-		 "text": "This shape likes to keep to themselve and there is nothing wrong with that.",
-		 "schema": "low_MoralOrder",
-		 "NPCTypeSchemaValue": "Low"
-	 }, {
-		 "subvalue": "hasAbestFriend",
-		 "text": "This shape is always hanging out with their best friend and don't you envy a friendship like that?",
-		 "schema": "high_MoralWholeness",
-		 "NPCTypeSchemaValue": "Low"
-	 }, {
-		 "subvalue": "MovesAlot",
-		 "text": "This shape travels a lot and it's hard to make friends. But there is nothing wrong with that.",
-		 "schema": "low_MoralWholeness",
-		 "NPCTypeSchemaValue": "Low"
-	 }, {
-		 "subvalue": "MovesAlot",
-		 "text": "This shape moves a lot and being social helps to make new places easier to adjust.",
-		 "schema": "high_MoralBoundaries",
-		 "NPCTypeSchemaValue": "Low"
-	 }, {
-		 "subvalue": "SusMovments",
-		 "text": "This shape likes to keep to themselve. But there is nothing wrong with that.",
-		 "schema": "low_MoralWholeness",
-		 "NPCTypeSchemaValue": "Low"
-	 },  {
-		 "subvalue": "TooTrustingOfEnemies",
-		 "text": "You can't trust everyone. This shape is too trusting and friendly, they will get into trouble one day.",
-		 "schema": "low_MoralWholeness",
-		 "NPCTypeSchemaValue": "Low"
-	 },{
-		 "subvalue": "isolated",
-		 "text": "This shape doesn't want to make a lot of  friends and I respect their choices.",
-		 "schema": "high_MoralWholeness",
-		 "NPCTypeSchemaValue": "High"
-	 },  {
-		 "subvalue": "reserved",
-		 "text": "This shape select their friends very carefully and we should all be like that.",
-		 "schema": "high_MoralWholeness",
-		 "NPCTypeSchemaValue": "High"
-	 }
- ]
-
-},
-
-{
- "SVkey": "WeLiveForSpontaneity",
- "SurfaceValueObject": [
-
-	 {
-		 "subvalue": "InLovewithspouseoffriend",
-		 "text": "This shape gave in to their temporary attraction to their friend's partner, what we can learn from that is spontaneity can make logical shapes do stupid things.",
-		 "schema": "low_MoralBoundaries",
-		 "NPCTypeSchemaValue": "High"
-	 }, {
-		 "subvalue": "hasalotofenemies",
-		 "text": "This shape made a lot of enemies becasue they are careless and never think before they do anything. That's what you get when you live for spontaneity.",
-		 "schema": "low_MoralEssence",
-		 "NPCTypeSchemaValue": "High"
-	 }, {
-		 "subvalue": "likesToDate",
-		 "text": "If you never go with your feelings, how would you know you met the right shape! Look how active this shape is and I am sure they will find the right one soon.",
-		 "schema": "high_MoralOrder",
-		 "NPCTypeSchemaValue": "High"
-	 }, {
-		 "subvalue": "leftFotLoveIntrest",
-		 "text": "This shape left their partner for someone else, spontaneity can cause a lot of pain.",
-		 "schema": "low_Strength",
-		 "NPCTypeSchemaValue": "High"
-	 }, {
-		 "subvalue": "InLoveWirhAnothersspuce",
-		 "text": "This shape is in love with someone other than their partner, I don't think being spontaneous helps in that situation.",
-		 "schema": "low_MoralBoundaries",
-		 "NPCTypeSchemaValue": "High"
-	 }, {
-		 "subvalue": "startedAfamilyAtAyoungAge",
-		 "text": "This shape started family young because they were not careful. You do not want to end up like that. ",
-		 "schema": "low_Strength",
-		 "NPCTypeSchemaValue": "High"
-	 }, {
-		 "subvalue": "MovesAlot",
-		 "text": "This shape moves a lot and has no sense of belonging, I think that's what you get for being spontaneous all the time.",
-		 "schema": "low_MoralOrder",
-		 "NPCTypeSchemaValue": "High"
-	 }, {
-		 "subvalue": "SusMovments",
-		 "text": "This shape always keeps to themselves and moves around a lot, being spontaneous make you a unreliable shape.",
-		 "schema": "low_MoralWholeness",
-		 "NPCTypeSchemaValue": "High"
-	 },   {
-		 "subvalue": "marriedForLifeStyleNotLove",
-		 "text": "This shape knows the importance of doing the right thing for their family and for themselves.",
-		 "schema": "high_MoralWholeness",
-		 "NPCTypeSchemaValue": "High"
-	 }, {
-		 "subvalue": "WillActOnLove",
-		 "text": "It's immoral to go after shapes that are not right for you. This shape is so impulsive and they will get themselve in trouble one day soon.",
-		 "schema": "high_MoralWholeness",
-		 "NPCTypeSchemaValue": "High"
-	 }, {
-		 "subvalue": "AdventureSeeker",
-		 "text": "When adventure comes your way, you must say yes! Like this shape who's been everywhere! What a life.",
-		 "schema": "high_MoralWholeness",
-		 "NPCTypeSchemaValue": "High"
-	 }, {
-		 "subvalue": "TooTrustingOfEnemies",
-		 "text": "Being spontaneous can be dangerous, this shape is so trusting and the world is not kind.",
-		 "schema": "low_Strength",
-		 "NPCTypeSchemaValue": "High"
-	 }, {
-		 "subvalue": "likedToExperinceCulture",
-		 "text": "The world is so big and if you are spontaneous, you can see what life has to offer. ",
-		 "schema": "high_SelfInterest",
-		 "NPCTypeSchemaValue": "High"
-	 }, {
-		 "subvalue": "flipflop",
-		 "text": "This shape never stayed in one job long enough to see if they truly like it, being spontaneous is just a lazy shape's excuse.",
-		 "schema": "low_MoralOrder",
-		 "NPCTypeSchemaValue": "High"
-	 }, {
-		 "subvalue": "riskTaker",
-		 "text": "You have to take some risks to make your dreams come true. If you do that, you can be a successful shape like that. ",
-		 "schema": "high_Strength",
-		 "NPCTypeSchemaValue": "High"
-	 }, {
-		 "subvalue": "hardWorker",
-		 "text": "This shape has been promoted so many times because they stayed at their job and worked hard, you can't be someone like that if you chase anything that flys by.",
-		 "schema": "low_SelfIntrest",
-		 "NPCTypeSchemaValue": "High"
-	 }
- ]
-
-},
-
-{
- "SVkey": "AnAdventureWeSeek",
- "SurfaceValueObject": [
-
-	 {
-		 "subvalue": "hardWorker",
-		 "text": "This shape has been promoted so many times because they stayed at their job and worked hard, you can't be someone like that if you chase anything that flys by.",
-		 "schema": "low_SelfIntrest",
-		 "NPCTypeSchemaValue": "High"
-	 },
-	 {
-		 "subvalue": "InLovewithspouseoffriend",
-		 "text": "This shape is a thrill seeker and I am pretty sure that's why they fell in love with their spouse's friend.",
-		 "schema": "low_MoralBoundaries",
-		 "NPCTypeSchemaValue": "High"
-	 },{
-		 "subvalue": "hasalotofenemies",
-		 "text": "This shape made a lot of enemies becasue they are reckless. Some would call that adventurous but I don't see it that way.",
-		 "schema": "low_MoralWholeness",
-		 "NPCTypeSchemaValue": "High"
-	 }, {
-		 "subvalue": "likesToDate",
-		 "text": "This shape will get themselves in trouble one day if they keeps on dating half of the city.",
-		 "schema": "low_Strength",
-		 "NPCTypeSchemaValue": "High"
-	 }, {
-		 "subvalue": "InLoveWirhAnothersspuce",
-		 "text": "This shape is a thrill seeker and I am pretty sure that's why they found love with somone they shouldn't be.",
-		 "schema": "low_MoralBoundaries",
-		 "NPCTypeSchemaValue": "High"
-	 },
-
-
- {
-		 "subvalue": "MovesAlot",
-		 "text": "There's no stability in seeking adventures, look at this shape who doesn't know their roots.",
-		 "schema": "low_MoralOrder",
-		 "NPCTypeSchemaValue": "High"
-	 }, {
-		 "subvalue": "RetiredYoung",
-		 "text": "This shape retired early and now they can go on adventures and enjoy life!",
-		 "schema": "high_MoralOrder",
-		 "NPCTypeSchemaValue": "High"
-	 },   {
-		 "subvalue": "DevorcedManyPeople",
-		 "text": "This shape is just selfish. Love is not an adventure, it's a responsibility.",
-		 "schema": "low_MoralWholeness",
-		 "NPCTypeSchemaValue": "High"
-	 }, {
-		 "subvalue": "WillActOnLove",
-		 "text": "This shape has no moral boundaries and I'm sure one day they will make a huge mistake.",
-		 "schema": "low_MoralWholeness",
-		 "NPCTypeSchemaValue": "High"
-	 }, {
-		 "subvalue": "AdventureSeeker",
-		 "text": "This shape has seen so many things and been to so many places, that's really what living is all about.",
-		 "schema": "high_Strength",
-		 "NPCTypeSchemaValue": "High"
-	 }, {
-		 "subvalue": "TooTrustingOfEnemies",
-		 "text": "This shape trusts everyone and that naivete will be a problem when they go on adventures.",
-		 "schema": "low_SelfIntrest",
-		 "NPCTypeSchemaValue": "High"
-	 }, {
-		 "subvalue": "likedToExperinceCulture",
-		 "text": "You can only see the world if you go out there and see what the world has ro offer! Be more like this shape who's always discovering new things. ",
-		 "schema": "high_SelfInterest",
-		 "NPCTypeSchemaValue": "High"
-	 }, {
-		 "subvalue": "flipflop",
-		 "text": "This shape keeps switchin jobs because they want adventures. This is not a stable way of living.",
-		 "schema": "low_MoralBoundaries",
-		 "NPCTypeSchemaValue": "High"
-	 }, {
-		 "subvalue": "riskTaker",
-		 "text": "But you have to take risks if you want to go far in life! Look at this shape and how much they have accomplished. ",
-		 "schema": "high_MoralEssence",
-		 "NPCTypeSchemaValue": "High"
-	 }, {
-		 "subvalue": "advancedCareer",
-		 "text": "Well, this shape took risks and that's why they got promoted.",
-		 "schema": "high_MoralOrder",
-		 "NPCTypeSchemaValue": "High"
-	 }
- ]
-
-},
-
-
-{
-	"SVkey": "LoveIsForFools",
-	"SurfaceValueObject": [
-
-		{
+	},
+	{
+		"SVkey": "LoveIsForFools",
+		"SurfaceValueObject": [{
 			"subvalue": "InLovewithspouseoffriend",
-			"text": "Love can be immoral sometimes. This shape went after their friend's partner, that's just wrong.",
+			"text": "Love can be immoral. Honestly, they have no boundaries. This shape went after their friend's partner, that's just wrong.",
 			"schema": "low_MoralBoundaries",
 			"NPCTypeSchemaValue": "Low"
 		}, {
 			"subvalue": "widowedbutnotgrieving",
-			"text": "Commitment is more important than love. This shape doesn't even seem sad after they lost their partner, it's disrepectful to the sanctity of partnership.",
+			"text": "Commitment is more important than love. This shape doesn't even seem sad after they lost their partner, it's disrespectful to the sanctity of partnership.",
 			"schema": "high_MoralBoundaries",
 			"NPCTypeSchemaValue": "Low"
 		}, {
@@ -576,59 +72,1077 @@
 			"NPCTypeSchemaValue": "Low"
 		}, {
 			"subvalue": "InLoveWirhAnothersspuce",
-			"text": "Love make you foolish, this shape is not loyal to their partner and that makes them a fool.",
+			"text": "Love makes you foolish, this shape is not loyal to their partner and that makes them a fool.",
 			"schema": "high_MoralEssence",
 			"NPCTypeSchemaValue": "Low"
 		}, {
 			"subvalue": "startedAfamilyAtAyoungAge",
-			"text": "Love can be great thing when you find the right shape! This shape was able to find someone early and look how happy they are.",
+			"text": "Love can be a great thing when you find the right shape! This shape was able to find someone early and look how happy they are.",
 			"schema": "high_Strength",
 			"NPCTypeSchemaValue": "Low"
 		}, {
 			"subvalue": "DevorcedManyPeople",
-			"text": "This shape has ended mutiple partnerships and I think they will never find the right one. They are too weak and foolish.",
+			"text": "This shape has ended multiple partnerships and I think they will never find the right one. They are too weak and foolish.",
 			"schema": "low_Strength",
 			"NPCTypeSchemaValue": "Low"
 		}, {
 			"subvalue": "marriedForLifeStyleNotLove",
-			"text": "This shape entered a parternship not for love but found love eventually in their family life. Happiness of the family is more important than selfish love.",
+			"text": "This shape entered a partnership, not for love but found love eventually in their family life. The happiness of the family is more important than selfish love.",
 			"schema": "high_MoralWholeness",
 			"NPCTypeSchemaValue": "Low"
 		}, {
 			"subvalue": "WillActOnLove",
-			"text": "Love can make smart shape stupid. Like this shape who went after a shape they shouldn't be with.",
+			"text": "Love can make smart shape stupid. Like this shape who went after a shape, they shouldn't be with.",
 			"schema": "low_MoralEssence",
 			"NPCTypeSchemaValue": "Low"
-		}
-	]
+		}]
 
-}, {
-	"SVkey": "suchUncharactristicBehaviorOhMy",
-	"SurfaceValueObject": [
+	},
+	{
+		"SVkey": "MoneyMaker",
+		"SurfaceValueObject": [{
+			"subvalue": "graduate",
+			"text": "This shape's got a great education, a good job, and a very comfortable life. That's just how life works.",
+			"schema": "high_MoralOrder",
+			"NPCTypeSchemaValue": "Both"
+		}, {
+			"subvalue": "exploteative",
+			"text": "Not all of us can be on the top so we should respect those who try their best and we shouldn't judge how they got there.",
+			"schema": "high_SelfInterest",
+			"NPCTypeSchemaValue": "Both"
+		}, {
+			"subvalue": "adultbutnotworking",
+			"text": "This shape is a dead weight to society and that's a shame.",
+			"schema": "low_MoralOrder",
+			"NPCTypeSchemaValue": "Both"
+		}, {
+			"subvalue": "notworkingandrich",
+			"text": "This shape is rich, though I don't know how they massed their fortune, it's not my business to pry. I just know you can trust a shape like that.",
+			"schema": "high_SelfInterest",
+			"NPCTypeSchemaValue": "Both"
+		}, {
+			"subvalue": "IsWealthy",
+			"text": "This shape is wealthy and that's a clear indicator that they are a good and respectful shape.",
+			"schema": "high_MoralOrder",
+			"NPCTypeSchemaValue": "Both"
+		}, {
+			"subvalue": "worksWithFamily",
+			"text": "This shape helps out their family by working with them, money can be a good force.",
+			"schema": "high_MoralWholeness",
+			"NPCTypeSchemaValue": "Both"
+		}, {
+			"subvalue": "getsFiredAlot",
+			"text": "Like this shape who cannot hold a job, money is a useful barometer for judging someone's character.",
+			"schema": "low_MoralBoundaries",
+			"NPCTypeSchemaValue": "Both"
+		}, {
+			"subvalue": "RetiredYoung",
+			"text": "They made enough money to retire early and look how happy they are now! Just enjoying their life.",
+			"schema": "high_MoralBoundaries",
+			"NPCTypeSchemaValue": "Both"
+		}, {
+			"subvalue": "DiedBeforeRetired",
+			"text": "This shape died doing what they loved and massed a lot of fortune doing so, how honorable is that.",
+			"schema": "high_MoralBoundaries",
+			"NPCTypeSchemaValue": "Both"
+		}, {
+			"subvalue": "IsRichButNotGenrous",
+			"text": "How a shape spends their money is non of others' business. It's their money after all.",
+			"schema": "high_SelfInterest",
+			"NPCTypeSchemaValue": "Both"
+		}, {
+			"subvalue": "flipflop",
+			"text": "This shape can't settle on a job, they are not a responsible shape.",
+			"schema": "low_MoralBoundaries",
+			"NPCTypeSchemaValue": "Both"
+		}, {
+			"subvalue": "WorksInAlcohol",
+			"text": "This shape does honest work and makes a good living. That's a good and responsible shape.",
+			"schema": "high_MoralBoundaries",
+			"NPCTypeSchemaValue": "Both"
+		}, {
+			"subvalue": "healerRole",
+			"text": "This shape does honest work and makes a good living. That's a good and responsible shape.",
+			"schema": "high_MoralBoundaries",
+			"NPCTypeSchemaValue": "Both"
+		}, {
+			"subvalue": "polluterRole",
+			"text": "This shape does honest work and makes a good living. That's a good and responsible shape.",
+			"schema": "high_MoralBoundaries",
+			"NPCTypeSchemaValue": "Both"
+		}, {
+			"subvalue": "riskTaker",
+			"text": "This shape takes risks and is rewarded greatly! Money really can change a life.",
+			"schema": "high_MoralOrder",
+			"NPCTypeSchemaValue": "Both"
+		}, {
+			"subvalue": "butcherRole",
+			"text": "This shape does honest work and makes a good living. That's a good and responsible shape.",
+			"schema": "high_MoralBoundaries",
+			"NPCTypeSchemaValue": "Both"
+		}, {
+			"subvalue": "Teachingrole",
+			"text": "This shape does honest work and makes a good living. That's a good and responsible shape.",
+			"schema": "high_MoralBoundaries",
+			"NPCTypeSchemaValue": "Both"
+		}, {
+			"subvalue": "advancedCareer",
+			"text": "This shape is so much happier now after the promotion! Look what good money can do.",
+			"schema": "high_SelfInterest",
+			"NPCTypeSchemaValue": "Both"
+		}, {
+			"subvalue": "hardWorker",
+			"text": "This shape works hard and makes good money.",
+			"schema": "high_Strength",
+			"NPCTypeSchemaValue": "Both"
+		}, {
+			"subvalue": "CustodianJobs",
+			"text": "This shape does honest work and makes a good living. That's a good and responsible shape.",
+			"schema": "high_MoralBoundaries",
+			"NPCTypeSchemaValue": "Both"
+		}, {
+			"subvalue": "generalJobs",
+			"text": "This shape does honest work and makes a good living. That's a good and responsible shape.",
+			"schema": "high_MoralBoundaries",
+			"NPCTypeSchemaValue": "Both"
+		}, {
+			"subvalue": "selfMadeCubeByDedication",
+			"text": "This shape built their career from nothing! They embody what a good shape should be.",
+			"schema": "high_SelfInterest",
+			"NPCTypeSchemaValue": "Both"
+		}]
 
-		{
+	},
+	{
+		"SVkey": "Enviromentalist",
+		"SurfaceValueObject": [{
+			"subvalue": "ButcherButRegretful",
+			"text": "This shape regrets what they did in the past because they know how important it is to care for the environment.",
+			"schema": "high_MoralEssence",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "conventional",
+			"text": "This shape is too old-fashioned and selfish to see how important the environment is.",
+			"schema": "low_MoralEssence",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "polluterRole",
+			"text": "This shape did what they have to do to make a living, you can't blame them for their work.",
+			"schema": "low_MoralEssence",
+			"NPCTypeSchemaValue": "High"
+		}]
+
+	},
+	{
+		"SVkey": "EnviromentalistAnti",
+		"SurfaceValueObject": [{
+			"subvalue": "ButcherButRegretful",
+			"text": "This shape regrets what they did in the past because they know how important it is to care for the environment.",
+			"schema": "high_MoralEssence",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "conventional",
+			"text": "This shape understands the natural order of things and they know not to buy into those environmentalist agendas.",
+			"schema": "high_MoralBoundaries",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "polluterRole",
+			"text": "This shape did what they have to do to make a living, you can't blame them for their work.",
+			"schema": "low_MoralEssence",
+			"NPCTypeSchemaValue": "Low"
+		}]
+
+	},
+	{
+		"SVkey": "AnimalLover",
+		"SurfaceValueObject": [{
+			"subvalue": "ButcherButRegretful",
+			"text": "This shape understands what they did for a living is wrong and that makes them a shape with a conscience.",
+			"schema": "high_MoralEssence",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "conventional",
+			"text": "This shape understands the natural order of things. Animals eat animals to survive and that's just how things are.",
+			"schema": "low_Strength",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "butcherRole",
+			"text": "They make their living by killing innocent animals, is it really worth it?",
+			"schema": "low_MoralEssence",
+			"NPCTypeSchemaValue": "High"
+		}]
+
+	},
+	{
+		"SVkey": "AnimalLoverAnti",
+		"SurfaceValueObject": [{
+			"subvalue": "ButcherButRegretful",
+			"text": "This shape understands what killing innocent animals for a living is wrong and that makes them a shape with a conscience.",
+			"schema": "high_MoralBoundaries",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "conventional",
+			"text": "This shape understands the natural order of things. Animals eat animals to survive and that's just how things are.",
+			"schema": "low_SelfIntrest",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "butcherRole",
+			"text": "They did what they have to do to make a living and no one should judge them for that.",
+			"schema": "low_SelfIntrest",
+			"NPCTypeSchemaValue": "Low"
+		}]
+
+	},
+	{
+		"SVkey": "Teetotasler",
+		"SurfaceValueObject": [{
+			"subvalue": "socialLife",
+			"text": "Alcohol makes you a better company just like this shape. Look how many friends they have and I am sure drinks help.",
+			"schema": "high_MoralWholeness",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "hasalotofenemies",
+			"text": "This shape drinks a lot and made lots of enemies, I think you can put two and two together.",
+			"schema": "low_MoralEssence",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "familyPerson",
+			"text": "This shape has a big family and they drink too. They are a good example of why alcohol doesn't make you an irresponsible shape.",
+			"schema": "high_MoralWholeness",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "getsFiredAlot",
+			"text": "This shape always had a problem with authority, which is why they get fired a lot. They're also a drinker, which is probably why they can't control their temper.",
+			"schema": "low_MoralOrder",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "reserved",
+			"text": "This shape can't connect with anyone, and I don't think drinking alone is a good idea.",
+			"schema": "low_MoralWholeness",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "conventional",
+			"text": "This shape drinks but they have good ethics so I don't think drinking makes you bad.",
+			"schema": "high_MoralOrder",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "WorksInAlcohol",
+			"text": "Also, this shape does honest work and I don't think selling alcohol makes them a bad shape.",
+			"schema": "high_SelfInterest",
+			"NPCTypeSchemaValue": "High"
+		}]
+
+	},
+	{
+		"SVkey": "TeetotaslerAnti",
+		"SurfaceValueObject": [{
+			"subvalue": "socialLife",
+			"text": "This shape drinks responsibly and they have a lot of friends, so I don't know why you would think that.",
+			"schema": "high_MoralWholeness",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "hasalotofenemies",
+			"text": "This shape made lots of enemies and drinking never helped with that temper.",
+			"schema": "low_MoralEssence",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "familyPerson",
+			"text": "This shape has a big family and they drink too. They are a good example of why alcohol makes you an irresponsible shape.",
+			"schema": "high_MoralWholeness",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "getsFiredAlot",
+			"text": "This shape is a drinker, which is probably why they can't hold a proper job.",
+			"schema": "low_MoralOrder",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "conventional",
+			"text": "This shape can handle their drinks and is a good shape so I don't think drinking is such a bad thing.",
+			"schema": "high_MoralBoundaries",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "reserved",
+			"text": "This shape is always alone, and I don't think drinking will help with their situation.",
+			"schema": "low_MoralWholeness",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "WorksInAlcohol",
+			"text": "Also, this shape does honest work and I don't think selling alcohol makes them a bad shape.",
+			"schema": "high_SelfInterest",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "hardWorker",
+			"text": "This shape drinks but they are also a hard worker, which is why I don't think your theory holds up.",
+			"schema": "high_SelfInterest",
+			"NPCTypeSchemaValue": "Low"
+		}]
+
+	},
+	{
+		"SVkey": "FamilyPerson",
+		"SurfaceValueObject": [{
+			"subvalue": "familyPerson",
+			"text": "You know, this shape is a great representative of why family is important. They have a wonderful family life and they look really happy.",
+			"schema": "high_MoralWholeness",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "adultbutnotworking",
+			"text": "This shape is leeching off their family and not working, of course, they are a family shape.Enabling families create underachieving shapes.",
+			"schema": "low_MoralEssence",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "worksWithFamily",
+			"text": "This shape also works with their family! What a fulfilling life!",
+			"schema": "high_MoralBoundaries",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "hiredByAFamilymember",
+			"text": "Well in the case of a family business, the family can be an agent of nepotism. Like this shape who's hired by their family, would you trust them to work for you?",
+			"schema": "low_MoralEssence",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "DevorcedManyPeople",
+			"text": "This shape had many families. I don't think being a family shape means they are a good and responsible shape.",
+			"schema": "low_MoralWholeness",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "marriedForLifeStyleNotLove",
+			"text": "This shape knows the importance of family and I am sure they have found bliss in their new family.",
+			"schema": "high_MoralBoundaries",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "conventional",
+			"text": "Family is a stabilizing agent, this shape is so down to earth and you can tell from their stable family life.",
+			"schema": "high_MoralBoundaries",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "nepotism",
+			"text": "Well in the case of a family business, the family can be an agent of nepotism. Like this shape who's hired by their family, would you trust them to work for you?",
+			"schema": "high_MoralEssence",
+			"NPCTypeSchemaValue": "High"
+		}]
+
+	},
+	{
+		"SVkey": "schoolIsDrool",
+		"SurfaceValueObject": [{
+			"subvalue": "socialLife",
+			"text": "This shape made a lot of good friends from school and I'm sure that makes school a good place for learning social skills.",
+			"schema": "high_MoralWholeness",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "graduate",
+			"text": "This shape has a degree and looks how successful they are now!",
+			"schema": "high_MoralOrder",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "adultbutnotworking",
+			"text": "This shape can't hold a job and that's because the school doesn't prepare you for the real world.",
+			"schema": "low_MoralEssence",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "notworkingandrich",
+			"text": "This shape got rich without working and what's school even good for someone like that?",
+			"schema": "low_MoralEssence",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "loner",
+			"text": "The school doesn't teach you how to make real connections. This shape likes to keep to themself because they know what's good for them. I am sure they didn't learn that from school.",
+			"schema": "low_MoralWholeness",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "IsWealthy",
+			"text": "School is the prerequisite to success in life, look how wealthy this shape is, they must have a great education.",
+			"schema": "high_MoralOrder",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "worksWithFamily",
+			"text": "Having an education helps with the family business, look how well the family business is doing now that this shape started working there.",
+			"schema": "high_MoralWholeness",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "getsFiredAlot",
+			"text": "No school can make you a good worker. Look at this shape, still struggling to hold onto a job.",
+			"schema": "low_MoralEssence",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "AdventureSeeker",
+			"text": "Go see the world instead of staying in school! This shape has seen the world and they've learned things school can't teach.",
+			"schema": "low_MoralOrder",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "selfMadeCubeByDedication",
+			"text": "This shape built their own career not by learning that from school but from learning from life. That makes life a better school.",
+			"schema": "low_MoralWholeness",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "likedToExperinceCulture",
+			"text": "Instead of getting stuck in school, you should travel like this shape who learned so much about life just from their travels.",
+			"schema": "low_MoralWholeness",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "conventional",
+			"text": "School teaches us how to be good and decent shapes and I think that's why they are important.",
+			"schema": "high_MoralOrder",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "flipflop",
+			"text": "The school does not prepare you for what type of jobs you should get, look at this shape who keeps changing jobs.",
+			"schema": "low_MoralWholeness",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "WorksInAlcohol",
+			"text": "You don't need to a degree to sell drinks, look at this shape, they're doing just fine.",
+			"schema": "low_MoralOrder",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "healerRole",
+			"text": "Can you trust this shape to heal you if they didn't have a degree to back up their skills?",
+			"schema": "high_MoralBoundaries",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "polluterRole",
+			"text": "You don't need a degree to work at a factory, this shape is doing just fine.",
+			"schema": "low_MoralOrder",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "riskTaker",
+			"text": "This shape took a lot of risks to get to where they are, they didn't do it because they learned that from school.",
+			"schema": "low_MoralBoundaries",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "butcherRole",
+			"text": "You don't need a degree to be a butcher, this shape is doing just fine.",
+			"schema": "low_MoralOrder",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "Teachingrole",
+			"text": "Teachers deserve our respect and we owe a lot to them. This shape has shaped many minds and they are a great contributor to society,",
+			"schema": "high_MoralBoundaries",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "advancedCareer",
+			"text": "Many jobs require education to get promoted, I doubt this shape would be promoted if they didn't have their degree.",
+			"schema": "high_MoralOrder",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "hardWorker",
+			"text": "As long as you are a hard and good worker, I am sure you can get where you need to be, just like this shape. Others respect them because they're a hard worker.",
+			"schema": "low_MoralOrder",
+			"NPCTypeSchemaValue": "Low"
+		}]
+
+	},
+	{
+		"SVkey": "SchoolIsCool",
+		"SurfaceValueObject": [{
+			"subvalue": "socialLife",
+			"text": "Most of this shape's good friends are from school and I'm sure that makes school a good place for learning social skills.",
+			"schema": "high_MoralWholeness",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "graduate",
+			"text": "This shape's success begins with a fancy degree.",
+			"schema": "high_MoralOrder",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "notworkingandrich",
+			"text": "This shape can't hold a job and that's because the school doesn't prepare you for the real world.",
+			"schema": "low_MoralEssence",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "IsWealthy",
+			"text": "School is the prerequisite to success in life, look how wealthy this shape is, they must have a great education.",
+			"schema": "high_MoralOrder",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "worksWithFamily",
+			"text": "Having an education helps with the family business, look how well the family business is doing now that this shape started working there.",
+			"schema": "high_MoralWholeness",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "getsFiredAlot",
+			"text": "No school can make you a good worker. Look at this shape, still struggling to hold onto a job.",
+			"schema": "low_MoralEssence",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "AdventureSeeker",
+			"text": "Go see the world instead of staying in school! This shape has seen the world and they've learned things school can't teach.",
+			"schema": "low_MoralOrder",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "selfMadeCubeByDedication",
+			"text": "This shape built their own career not by learning that from school but from learning from life. That makes life a better school.",
+			"schema": "low_MoralWholeness",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "conventional",
+			"text": "School teaches us how to be good and decent shapes and I think that's why they are important.",
+			"schema": "high_MoralOrder",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "WorksInAlcohol",
+			"text": "You don't need a degree to sell drinks, look at this shape, they're doing just fine.",
+			"schema": "low_MoralOrder",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "healerRole",
+			"text": "Can you trust this shape to heal you if they didn't have a degree to back up their skills?",
+			"schema": "high_MoralBoundaries",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "polluterRole",
+			"text": "You don't need a degree to work at a factory, this shape is doing just fine.",
+			"schema": "low_MoralOrder",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "riskTaker",
+			"text": "This shape took a lot of risks to get to where they are, they didn't do it because they learned that from school.",
+			"schema": "low_MoralBoundaries",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "butcherRole",
+			"text": "You don't need a degree to be a butcher, this shape is doing just fine.",
+			"schema": "low_MoralOrder",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "Teachingrole",
+			"text": "Teachers deserve our respect and we owe a lot to them. This shape has shaped many minds and they are a great contributor to society,",
+			"schema": "high_MoralBoundaries",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "advancedCareer",
+			"text": "Many jobs require education to get promoted, I doubt this shape would be promoted if they didn't have their degree.",
+			"schema": "high_MoralOrder",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "hardWorker",
+			"text": "As long as you are a hard and good worker, I am sure you can get where you need to be, just like this shape. Others respect them because they're a hard worker.",
+			"schema": "low_MoralOrder",
+			"NPCTypeSchemaValue": "High"
+		}]
+
+	},
+	{
+		"SVkey": "SupportingComunities",
+		"SurfaceValueObject": [{
+			"subvalue": "worksWithFamily",
+			"text": "This shape helps out their family, which means they make our community a better place.",
+			"schema": "high_MoralWholeness",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "liklyToHelpTheHomeless",
+			"text": "This shape is the pillar of our community and they like to help the helpless, everyone looks up to them and we all want to be as good as they are.",
+			"schema": "high_MoralEssence",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "doesNotGiveToThoseInNeed",
+			"text": "This shape does not give to those in need and they are still part of the community, how can you believe in a community with shapes like this.",
+			"schema": "low_MoralEssence",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "supportsImmigration",
+			"text": "We should put our community first before the outsiders.",
+			"schema": "low_Strength",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "conventional",
+			"text": "Our community has a long tradition and we should all be like this shape who always holds everyone to the highest standard.",
+			"schema": "high_MoralBoundaries",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "reserved",
+			"text": "This shape is quiet but you know you can trust them because we are in the same community. That's why community matters so much.",
+			"schema": "high_MoralBoundaries",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "healerRole",
+			"text": "We all have a job to do and a role to play in our community. Look at this shape who helps others, we all owe them gratitude for their work.",
+			"schema": "high_MoralBoundaries",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "Teachingrole",
+			"text": "We all have a job to do and a role to play in our community. Look at this shape who's a teacher, we all owe them gratitude for their work.",
+			"schema": "high_MoralBoundaries",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "CustodianJobs",
+			"text": "We all have a job to do and a role to play in our community. Look at this shape who's a custodian, we all owe them gratitude for their work.",
+			"schema": "high_MoralBoundaries",
+			"NPCTypeSchemaValue": "High"
+		}]
+
+	},
+	{
+		"SVkey": "LoverOfRisks",
+		"SurfaceValueObject": [{
 			"subvalue": "InLovewithspouseoffriend",
-			"text": "I heard this shape is in love with their friend's partner! That's so werild.",
+			"text": "Well, I would say you can take risks as long as they are ethical. You don't want to be like this shape who goes after their friend's partner.",
+			"schema": "low_MoralBoundaries",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "hasalotofenemies",
+			"text": "Risks create enemies, this shape made a lot of enemies by risking friendships.",
+			"schema": "low_MoralEssence",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "InLoveWirhAnothersspuce",
+			"text": "This shape is not taking a risk for love, they are simply too weak to resist their urges.",
+			"schema": "low_Strength",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "MovesAlot",
+			"text": "You have to do what you need to do and go where you need to go in order to find success, just like this shape!",
+			"schema": "high_Strength",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "RetiredYoung",
+			"text": "Look how successful this shape is! They took risks when they were young and now they get to enjoy life.",
+			"schema": "high_MoralOrder",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "WillActOnLove",
+			"text": "Acting on love that is not appropriate will hurt others and yourself.",
+			"schema": "low_Strength",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "AdventureSeeker",
+			"text": "This shape is an adventure seeker and they are rewarded with rich life experiences.",
+			"schema": "high_SelfInterest",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "TooTrustingOfEnemies",
+			"text": "You can't be a risk-taker if you don't know how to pick the right shape to trust. Just look at this shape and you will know what I mean.",
+			"schema": "low_SelfIntrest",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "flipflop",
+			"text": "This shape keeps on changing jobs, you can say that taking risks, but I call it irresponsible.",
+			"schema": "low_MoralEssence",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "riskTaker",
+			"text": "This shape never gives up on their dreams and keeps on taking risks, I am sure life will reward them with great things.",
+			"schema": "high_Strength",
+			"NPCTypeSchemaValue": "High"
+		}]
+
+	},
+	{
+		"SVkey": "LandISWhereThehrtIS",
+		"SurfaceValueObject": [{
+			"subvalue": "socialLife",
+			"text": "Your home is where your friends and family are, this shape has never left the city but they have a rich social life.",
+			"schema": "high_MoralWholeness",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "familyPerson",
+			"text": "This shape has stayed close to their roots and has been taking care of their family. That's really honorable.",
+			"schema": "high_MoralWholeness",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "loner",
+			"text": "There's nothing wrong with being alone while you explore the world, maybe you will find yourself just like how this shape did.",
+			"schema": "low_MoralWholeness",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "hasAbestFriend",
+			"text": "This shape stayed in this city because their best friend is here, wouldn't you say that true friendship?",
+			"schema": "high_MoralWholeness",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "worksWithFamily",
+			"text": "This shape works with their family in the city and that's a wonderful thing.",
+			"schema": "high_MoralWholeness",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "hiredByAFamilymember",
+			"text": "Like this shape who has the support of their family and didn't even have to look for a job, that's what a good support system looks like.",
+			"schema": "high_MoralOrder",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "MovesAlot",
+			"text": "This shape needs to find a move to a space where they can thrive, there is nothing wrong with that.",
+			"schema": "low_MoralWholeness",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "SusMovments",
+			"text": "Shapes must find where they belong and I am sure they will find where they truly belong by visiting different places.",
+			"schema": "low_MoralEssence",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "supportsImmigration",
+			"text": "Our city is great, you can tell by how many shapes want to move here!",
+			"schema": "high_MoralBoundaries",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "conventional",
+			"text": "We have a tradition that must be honored and protected, you can only do that when you are at home.",
+			"schema": "high_MoralBoundaries",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "reserved",
+			"text": "This shape has always been a stable element of the community, they are respected by all because they understand how important home is.",
+			"schema": "high_MoralEssence",
+			"NPCTypeSchemaValue": "High"
+		}]
+
+	},
+	{
+		"SVkey": "CarrerAboveAll",
+		"SurfaceValueObject": [{
+			"subvalue": "hasalotofenemies",
+			"text": "Well, I know this shape has many enemies, but how could you go far into your career if you don't make a few enemies.",
+			"schema": "low_MoralBoundaries",
+			"NPCTypeSchemaValue": "Both"
+		}, {
+			"subvalue": "exploteative",
+			"text": "Well, shapes these days like to complain about exploitation but the truth is they just need to work hard and they will be rewarded like this shape.",
+			"schema": "low_MoralEssence",
+			"NPCTypeSchemaValue": "Both"
+		}, {
+			"subvalue": "adultbutnotworking",
+			"text": "Every shape needs to find meaning in their work and not waste their life away like this shape.",
+			"schema": "low_MoralEssence",
+			"NPCTypeSchemaValue": "Both"
+		}, {
+			"subvalue": "notworkingandrich",
+			"text": "Having money doesn't make you a self-realized shape, this shape is just wasting their life away.",
+			"schema": "low_MoralEssence",
+			"NPCTypeSchemaValue": "Both"
+		}, {
+			"subvalue": "IsWealthy",
+			"text": "This shape is rich and happy, if you work hard, you can be just like them one day.",
+			"schema": "high_MoralEssence",
+			"NPCTypeSchemaValue": "Both"
+		}, {
+			"subvalue": "worksWithFamily",
+			"text": "This shape work with their family and they helps out the business a lot, career can be an important part of the family.",
+			"schema": "high_MoralWholeness",
+			"NPCTypeSchemaValue": "Both"
+		}, {
+			"subvalue": "hiredByAFamilymember",
+			"text": "This shape never followed their dream and just did what their family wanted. That's not true passion and how would you know your worth if you don't put your work first.",
+			"schema": "low_MoralOrder",
+			"NPCTypeSchemaValue": "Both"
+		}, {
+			"subvalue": "MovesAlot",
+			"text": "Shapes who move travel for their career is just hustling, we should all aspire to have that much passion in life.",
+			"schema": "low_MoralWholeness",
+			"NPCTypeSchemaValue": "Both"
+		}, {
+			"subvalue": "getsFiredAlot",
+			"text": "This shape can't find their place in life because they keeps getting fired, you really don't want that in life.",
+			"schema": "low_MoralEssence",
+			"NPCTypeSchemaValue": "Both"
+		}, {
+			"subvalue": "RetiredYoung",
+			"text": "If you work hard, you can enjoy life early like this shape.",
+			"schema": "high_MoralEssence",
+			"NPCTypeSchemaValue": "Both"
+		}, {
+			"subvalue": "DiedBeforeRetired",
+			"text": "This shape dedicated their life to their career, what a meaningful life.",
+			"schema": "high_SelfInterest",
+			"NPCTypeSchemaValue": "Both"
+		}, {
+			"subvalue": "conventional",
+			"text": "The best shape is a shape who devotes their life to their work and this shape is the perfect example of that.",
+			"schema": "high_MoralEssence",
+			"NPCTypeSchemaValue": "Both"
+		}, {
+			"subvalue": "nepotism",
+			"text": "You have to use all your connections to get to where you need to go, so I don't think you can blame this shape for doing that.",
+			"schema": "low_MoralOrder",
+			"NPCTypeSchemaValue": "Both"
+		}, {
+			"subvalue": "flipflop",
+			"text": "This shape keeps on switching jobs and that makes them an untrustworthy shape.",
+			"schema": "low_MoralEssence",
+			"NPCTypeSchemaValue": "Both"
+		}, {
+			"subvalue": "WorksInAlcohol",
+			"text": "This shape really likes what they do and that makes them a good shape in my book.",
+			"schema": "high_MoralOrder",
+			"NPCTypeSchemaValue": "Both"
+		}, {
+			"subvalue": "healerRole",
+			"text": "This shape really likes what they do and that makes them a good shape in my book.",
+			"schema": "high_MoralOrder",
+			"NPCTypeSchemaValue": "Both"
+		}, {
+			"subvalue": "polluterRole",
+			"text": "This shape really likes what they do and that makes them a good shape in my book.",
+			"schema": "high_MoralOrder",
+			"NPCTypeSchemaValue": "Both"
+		}, {
+			"subvalue": "riskTaker",
+			"text": "You have to take some risks to get ahead! This shape took risks and look how successful they are now.",
+			"schema": "high_SelfInterest",
+			"NPCTypeSchemaValue": "Both"
+		}, {
+			"subvalue": "butcherRole",
+			"text": "This shape really likes what they do and that makes them a good shape in my book.",
+			"schema": "high_MoralOrder",
+			"NPCTypeSchemaValue": "Both"
+		}, {
+			"subvalue": "Teachingrole",
+			"text": "This shape really likes what they do and that makes them a good shape in my book.",
+			"schema": "high_MoralOrder",
+			"NPCTypeSchemaValue": "Both"
+		}, {
+			"subvalue": "advancedCareer",
+			"text": "Focusing on one's career is the most important thing in the world, and this shape is rewarded with a promotion.",
+			"schema": "high_Strength",
+			"NPCTypeSchemaValue": "Both"
+		}, {
+			"subvalue": "hardWorker",
+			"text": "The easiest way to earn my trust is by being a hard worker like this shape.",
+			"schema": "high_MoralOrder",
+			"NPCTypeSchemaValue": "Both"
+		}, {
+			"subvalue": "CustodianJobs",
+			"text": "This shape really likes what they do and that makes them a good shape in my book.",
+			"schema": "high_MoralOrder",
+			"NPCTypeSchemaValue": "Both"
+		}, {
+			"subvalue": "generalJobs",
+			"text": "This shape really likes what they do and that makes them a good shape in my book.",
+			"schema": "high_MoralOrder",
+			"NPCTypeSchemaValue": "Both"
+		}, {
+			"subvalue": "selfMadeCubeByDedication",
+			"text": "This shape built their own career and that's admirable.",
+			"schema": "high_MoralOrder",
+			"NPCTypeSchemaValue": "Both"
+		}]
+
+	},
+	{
+		"SVkey": "FriendsAreTheJoyOFlife",
+		"SurfaceValueObject": [{
+			"subvalue": "InLovewithspouseoffriend",
+			"text": "If you're going to falling in love with your friend's partner like this shape did, you should probably stay alone.",
+			"schema": "low_MoralBoundaries",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "socialLife",
+			"text": "This shape has a rich social life and that's wonderful!",
+			"schema": "high_MoralWholeness",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "hasalotofenemies",
+			"text": "This shape makes a lot of enemies because they always try to make friends.",
+			"schema": "low_MoralWholeness",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "friendwithabestfriendsenemy",
+			"text": "This shape has no loyalty and you don't want a friend like that.",
+			"schema": "low_MoralEssence",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "loner",
+			"text": "This shape likes to keep to themselves and there is nothing wrong with that.",
+			"schema": "low_MoralWholeness",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "hasAbestFriend",
+			"text": "This shape is always hanging out with their best friend and don't you envy a friendship like that?",
+			"schema": "high_MoralWholeness",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "MovesAlot",
+			"text": "This shape travels a lot and it's hard to make friends. But there is nothing wrong with that.",
+			"schema": "low_MoralWholeness",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "SusMovments",
+			"text": "This shape likes to keep to themselves. But there is nothing wrong with that.",
+			"schema": "low_MoralWholeness",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "TooTrustingOfEnemies",
+			"text": "You can't trust everyone. This shape is too trusting and friendly, they will get into trouble one day.",
+			"schema": "low_MoralWholeness",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "reserved",
+			"text": "This shape selects their friends very carefully and we should all be like that.",
+			"schema": "high_MoralWholeness",
+			"NPCTypeSchemaValue": "High"
+		}]
+
+	},
+	{
+		"SVkey": "Loner",
+		"SurfaceValueObject": [{
+			"subvalue": "socialLife",
+			"text": "This shape has a rich social life and that's wonderful!",
+			"schema": "high_MoralWholeness",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "hasalotofenemies",
+			"text": "This shape makes a lot of enemies because they always try to make friends.",
+			"schema": "low_MoralWholeness",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "friendwithabestfriendsenemy",
+			"text": "This shape has no loyalty and you don't want a friend like that.",
+			"schema": "low_MoralEssence",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "loner",
+			"text": "This shape likes to keep to themselves and there is nothing wrong with that.",
+			"schema": "low_MoralWholeness",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "hasAbestFriend",
+			"text": "This shape is always hanging out with their best friend and don't you envy a friendship like that?",
+			"schema": "high_MoralWholeness",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "MovesAlot",
+			"text": "This shape travels a lot and it's hard to make friends. But there is nothing wrong with that.",
+			"schema": "low_MoralWholeness",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "SusMovments",
+			"text": "This shape likes to keep to themselves. But there is nothing wrong with that.",
+			"schema": "low_MoralWholeness",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "isolated",
+			"text": "This shape doesn't want to make a lot of friends and I respect their choices.",
+			"schema": "high_MoralBoundaries",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "TooTrustingOfEnemies",
+			"text": "You can't trust everyone. This shape is too trusting and friendly, they will get into trouble one day.",
+			"schema": "low_MoralWholeness",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "reserved",
+			"text": "This shape selects their friends very carefully and we should all be like that.",
+			"schema": "high_MoralWholeness",
+			"NPCTypeSchemaValue": "Low"
+		}]
+
+	},
+	{
+		"SVkey": "youthAreTheFuture",
+		"SurfaceValueObject": [{
+			"subvalue": "familyPerson",
+			"text": "This shape has a big family and I'm sure their children will take care of them one day.",
+			"schema": "high_MoralBoundaries",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "adultbutnotworking",
+			"text": "Young shapes these days can't hold a job, I bet this shape's parents must be worried.",
+			"schema": "low_MoralBoundaries",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "worksWithFamily",
+			"text": "This shape keeps their family business alive and that's a responsible shape.",
+			"schema": "high_MoralBoundaries",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "RetiredYoung",
+			"text": "This shape retired young because the younger shapes are trustworthy.",
+			"schema": "high_MoralBoundaries",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "DiedBeforeRetired",
+			"text": "If you just trust the young shapes, you wouldn't end up like this shape.",
+			"schema": "high_SelfInterest",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "conventional",
+			"text": "This shape understands the importance of tradition and that's how we keep the traditions alive.",
+			"schema": "high_MoralBoundaries",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "Teachingrole",
+			"text": "This shape is a teacher and they know how important the youth are.",
+			"schema": "high_MoralBoundaries",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "hardWorker",
+			"text": "This shape is a hard worker and young shapes these days are like that.",
+			"schema": "high_MoralBoundaries",
+			"NPCTypeSchemaValue": "High"
+		}]
+
+	},
+	{
+		"SVkey": "ProHiringFamily",
+		"SurfaceValueObject": [{
+			"subvalue": "familyPerson",
+			"text": "This shape has a big family and what's wrong with relying on your family?",
+			"schema": "high_MoralWholeness",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "exploteative",
+			"text": "By hiring family members, businesses take advantage of the system that they created.",
+			"schema": "low_MoralBoundaries",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "adultbutnotworking",
+			"text": "If this shape can rely on their family, they won’t be out of work.",
+			"schema": "high_MoralWholeness",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "startedAfamilyAtAyoungAge",
+			"text": "This shape started a family early and if they can get hired by a family member, they wouldn't have to worry about their finances.",
+			"schema": "high_MoralOrder",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "worksWithFamily",
+			"text": "This shape helps their family business and that's why hiring family is a good idea.",
+			"schema": "high_MoralBoundaries",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "hiredByAFamilymember",
+			"text": "This shape never found out what they are passionate about, what a shame.",
+			"schema": "low_MoralBoundaries",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "conventional",
+			"text": "Family is the most important thing in a shape's life and this shape knows the significance of that.",
+			"schema": "high_MoralOrder",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "nepotism",
+			"text": "Nepotism is bad for business, look at this shape and you will understand why hiring family members is a bad idea.",
+			"schema": "low_MoralBoundaries",
+			"NPCTypeSchemaValue": "High"
+		}]
+
+	},
+	{
+		"SVkey": "suchUncharactristicBehaviorOhMy",
+		"SurfaceValueObject": [{
+			"subvalue": "InLovewithspouseoffriend",
+			"text": "I heard this shape is in love with their friend's partner! That's so weird.",
 			"schema": "low_Strength",
 			"NPCTypeSchemaValue": "Low"
 		}, {
 			"subvalue": "hasalotofenemies",
-			"text": "Well, I heard this shape has many enemies. I feel like this speaks to their character. How can you trust someone like that.",
+			"text": "Well, I heard this shape has many enemies. I feel like this speaks to their character. How can you trust someone like that?",
 			"schema": "low_MoralEssence",
 			"NPCTypeSchemaValue": "Low"
 		}, {
 			"subvalue": "friendwithabestfriendsenemy",
 			"text": "Sometimes, you have to make friends with people others don't like. I don't think that's weird at all.",
-			"schema": "high_SelfInterest",
+			"schema": "high_Strength",
 			"NPCTypeSchemaValue": "Low"
 		}, {
 			"subvalue": "exploteative",
-			"text": "Well, instead of explotetative, you could say that this shape is smart for looking out for themself.",
-			"schema": "high_SelfInterest",
+			"text": "Well, instead of 'exploitative,' you could say that this shape is smart for looking out for themselves.",
+			"schema": "low_SelfIntrest",
 			"NPCTypeSchemaValue": "Low"
 		}, {
 			"subvalue": "widowedbutnotgrieving",
-			"text": "This shape seems very happy that their parterner is dead. How weird is that!",
+			"text": "This shape seems very happy that their partner is dead. How weird is that!",
 			"schema": "low_MoralWholeness",
 			"NPCTypeSchemaValue": "Low"
 		}, {
@@ -658,7 +1172,7 @@
 			"NPCTypeSchemaValue": "Low"
 		}, {
 			"subvalue": "getsFiredAlot",
-			"text": "This shape can't hold a job, I know exactly what kind of shape they are. ",
+			"text": "This shape can't hold a job, I know exactly what kind of shape they are.",
 			"schema": "low_MoralEssence",
 			"NPCTypeSchemaValue": "Low"
 		}, {
@@ -668,7 +1182,7 @@
 			"NPCTypeSchemaValue": "Low"
 		}, {
 			"subvalue": "RetiredYoung",
-			"text": "This shape must be very disciplined to be able to retire young, I don't think that makes them a werid shape.",
+			"text": "This shape must be very disciplined to be able to retire young, I don't think that makes them a weird shape.",
 			"schema": "high_Strength",
 			"NPCTypeSchemaValue": "Low"
 		}, {
@@ -688,15 +1202,672 @@
 			"NPCTypeSchemaValue": "Low"
 		}, {
 			"subvalue": "nepotism",
-			"text": "Nepotism is not that bad becasue you have to protect those you really care about.",
-			"schema": "high_MoralWholeness",
+			"text": "Nepotism is not that bad because you have to protect those you really care about.",
+			"schema": "high_MoralBoundaries",
 			"NPCTypeSchemaValue": "Low"
 		}, {
 			"subvalue": "flipflop",
 			"text": "This shape can't make up their mind about what they want to do in life. I just don't understand that.",
 			"schema": "low_MoralEssence",
 			"NPCTypeSchemaValue": "Low"
-		}
-	]
+		}]
 
-}]
+	},
+	{
+		"SVkey": "WeLiveForSpontaneity",
+		"SurfaceValueObject": [{
+			"subvalue": "InLovewithspouseoffriend",
+			"text": "This shape gave in to their temporary attraction to their friend's partner, what we can learn from that is spontaneity can make logical shapes do stupid things.",
+			"schema": "low_MoralBoundaries",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "hasalotofenemies",
+			"text": "This shape made a lot of enemies because they are careless and never think before they do anything. That's what you get when you live for spontaneity.",
+			"schema": "low_MoralEssence",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "likesToDate",
+			"text": "If you never go with your feelings, how would you know you met the right shape! Look how active this shape is and I am sure they will find the right one soon.",
+			"schema": "high_MoralOrder",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "leftFotLoveIntrest",
+			"text": "This shape left their partner for someone else, spontaneity can cause a lot of pain.",
+			"schema": "low_Strength",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "InLoveWirhAnothersspuce",
+			"text": "This shape is in love with someone other than their partner, I don't think being spontaneous help in that situation.",
+			"schema": "low_MoralBoundaries",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "startedAfamilyAtAyoungAge",
+			"text": "This shape started the family young because they were not careful. You do not want to end up like that.",
+			"schema": "low_Strength",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "MovesAlot",
+			"text": "This shape moves a lot and has no sense of belonging, I think that's what you get for being spontaneous all the time.",
+			"schema": "low_MoralOrder",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "SusMovments",
+			"text": "This shape always keeps to themselves and moves around a lot, being spontaneous makes you an unreliable shape.",
+			"schema": "low_MoralOrder",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "marriedForLifeStyleNotLove",
+			"text": "This shape knows the importance of doing the right thing for their family and for themselves.",
+			"schema": "high_MoralWholeness",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "WillActOnLove",
+			"text": "It's immoral to go after shapes that are not right for you. This shape is so impulsive and they will get themselves in trouble one day soon.",
+			"schema": "low_MoralOrder",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "AdventureSeeker",
+			"text": "When adventure comes your way, you must say yes! Like this shape who's been everywhere! What a life.",
+			"schema": "high_SelfInterest",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "TooTrustingOfEnemies",
+			"text": "Being spontaneous can be dangerous, this shape is so trusting and the world is not kind.",
+			"schema": "low_Strength",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "likedToExperinceCulture",
+			"text": "The world is so big and if you are spontaneous, you can see what life has to offer.",
+			"schema": "high_SelfInterest",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "flipflop",
+			"text": "This shape never stayed in one job long enough to see if they truly like it, being spontaneous is just a lazy shape's excuse.",
+			"schema": "low_MoralOrder",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "riskTaker",
+			"text": "You have to take some risks to make your dreams come true. If you do that, you can be a successful shape like that.",
+			"schema": "high_Strength",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "hardWorker",
+			"text": "This shape has been promoted so many times because they stayed at their job and worked hard, you can't be someone like that if you chase anything that flies by.",
+			"schema": "low_SelfIntrest",
+			"NPCTypeSchemaValue": "High"
+		}]
+
+	},
+	{
+		"SVkey": "AnAdventureWeSeek",
+		"SurfaceValueObject": [{
+			"subvalue": "InLovewithspouseoffriend",
+			"text": "This shape is a thrill seeker and I am pretty sure that's why they fell in love with their spouse's friend.",
+			"schema": "low_MoralBoundaries",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "hasalotofenemies",
+			"text": "This shape made a lot of enemies because they are reckless. Some would call that adventurous but I don't see it that way.",
+			"schema": "low_MoralWholeness",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "likesToDate",
+			"text": "This shape will get in trouble one day if they keep on dating half of the city.",
+			"schema": "low_Strength",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "InLoveWirhAnothersspuce",
+			"text": "This shape is a thrill seeker and I am pretty sure that's why they found love with someone they shouldn't be.",
+			"schema": "low_MoralBoundaries",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "MovesAlot",
+			"text": "There's no stability in seeking adventures, look at this shape who doesn't know their roots.",
+			"schema": "low_MoralOrder",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "RetiredYoung",
+			"text": "This shape retired early and now they can go on adventures and enjoy life!",
+			"schema": "high_MoralOrder",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "DevorcedManyPeople",
+			"text": "This shape is just selfish. Love is not an adventure, it's a responsibility.",
+			"schema": "low_MoralWholeness",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "WillActOnLove",
+			"text": "This shape has no moral boundaries and I'm sure one day they will make a huge mistake.",
+			"schema": "low_MoralBoundaries",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "AdventureSeeker",
+			"text": "This shape has seen so many things and been to so many places, that's really what living is all about.",
+			"schema": "high_Strength",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "TooTrustingOfEnemies",
+			"text": "This shape trusts everyone and that naivete will be a problem when they go on adventures.",
+			"schema": "low_SelfIntrest",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "likedToExperinceCulture",
+			"text": "You can only see the world if you go out there and see what the world has ro offer! Be more like this shape who's always discovering new things.",
+			"schema": "high_SelfInterest",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "flipflop",
+			"text": "This shape keeps switching jobs because they want adventures. This is not a stable way of living.",
+			"schema": "low_MoralBoundaries",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "riskTaker",
+			"text": "But you have to take risks if you want to go far in life! Look at this shape and how much they have accomplished.",
+			"schema": "high_MoralEssence",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "advancedCareer",
+			"text": "Well, this shape took risks and that's why they got promoted.",
+			"schema": "high_MoralOrder",
+			"NPCTypeSchemaValue": "High"
+		}]
+
+	},
+	{
+		"SVkey": "NiaeveteIsFiction",
+		"SurfaceValueObject": [{
+			"subvalue": "InLovewithspouseoffriend",
+			"text": "Look at this shape who's in love with their friend's partner. I would not want to have a friend like that.",
+			"schema": "low_MoralBoundaries",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "hasalotofenemies",
+			"text": "This shape makes a lot of enemies because they trust no one. I have to say that's a smart move in this world.",
+			"schema": "low_MoralWholeness",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "friendwithabestfriendsenemy",
+			"text": "What kind of shape befriends their friend's enemy? An untrustworthy one.",
+			"schema": "low_MoralWholeness",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "InLoveWirhAnothersspuce",
+			"text": "Look at this shape who's not faithful to their partner. I would not want to have a friend like that.",
+			"schema": "low_MoralBoundaries",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "SusMovments",
+			"text": "Look how shady this shape is, I would never trust someone like that.",
+			"schema": "low_MoralEssence",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "DevorcedManyPeople",
+			"text": "This shape is just selfish and I would not want to be near someone like that.",
+			"schema": "low_MoralBoundaries",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "WillActOnLove",
+			"text": "This shape has no control, I don't think I can trust this shape with anything.",
+			"schema": "low_Strength",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "liklyToHelpTheHomeless",
+			"text": "Well, if you look at this shape who likes to help those in need, can't you say that they are a good shape?",
+			"schema": "high_MoralOrder",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "TooTrustingOfEnemies",
+			"text": "This shape is too naive and they will pay for it by trusting the wrong shape one day.",
+			"schema": "low_SelfIntrest",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "doesNotGiveToThoseInNeed",
+			"text": "Look at this shape who's rich but never pays back or forward. All rich shapes are like this, don't be so naive.",
+			"schema": "low_MoralOrder",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "supportsImmigration",
+			"text": "We have to believe that shapes are good! This shape supports immigrants because they believe that and that makes them a good shape.",
+			"schema": "high_MoralBoundaries",
+			"NPCTypeSchemaValue": "Low"
+		}]
+
+	},
+	{
+		"SVkey": "ImmagretsWeGetTheJobDone",
+		"SurfaceValueObject": [{
+			"subvalue": "familyPerson",
+			"text": "This shape has a big family and I'm sure they understand how important it is to keep an open heart.",
+			"schema": "high_MoralOrder",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "graduate",
+			"text": "As long as they are well educated like this shape, I'm sure they will do fine in our city.",
+			"schema": "high_MoralOrder",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "adultbutnotworking",
+			"text": "Well if they are not gonna work here like this shape, we are just getting more dead-weights.",
+			"schema": "low_MoralOrder",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "MovesAlot",
+			"text": "This shape moves a lot and I'm pretty sure they are running from something, and do you just expect we take in suspicious shapes like that?",
+			"schema": "low_MoralEssence",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "SusMovments",
+			"text": "I would never trust outsiders, especially those who act like this one. Like what are they hiding?!",
+			"schema": "low_MoralBoundaries",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "selfMadeCubeByDedication",
+			"text": "Well if they are coming here to create jobs like this shape, I think we will be fine.",
+			"schema": "high_MoralBoundaries",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "likedToExperinceCulture",
+			"text": "This shape like to experience other cultures so how nice it would be to make this city multicultural.",
+			"schema": "high_MoralBoundaries",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "supportsImmigration",
+			"text": "This shape has an open mind and that's amazing.",
+			"schema": "high_MoralBoundaries",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "conventional",
+			"text": "This shape knows our values, do you think outsiders will respect that? I don't think so.",
+			"schema": "low_SelfIntrest",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "reserved",
+			"text": "I think this shape is right to not trust outsiders, they're strangers after all.",
+			"schema": "low_MoralWholeness",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "flipflop",
+			"text": "If this shape can't hold on to a job, how can we trust outsiders to work in our society?!",
+			"schema": "low_MoralBoundaries",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "WorksInAlcohol",
+			"text": "Outsiders will just take honest jobs away from a shape like this.",
+			"schema": "low_MoralBoundaries",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "healerRole",
+			"text": "Outsiders will just take honest jobs away from a shape like this.",
+			"schema": "low_MoralBoundaries",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "polluterRole",
+			"text": "Outsiders will just take honest jobs away from a shape like this.",
+			"schema": "low_MoralBoundaries",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "riskTaker",
+			"text": "We all have to take a chance like this shape and hope that outsiders will make our city great..",
+			"schema": "high_MoralBoundaries",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "butcherRole",
+			"text": "Outsiders will just take honest jobs away from a shape like this.",
+			"schema": "low_MoralBoundaries",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "Teachingrole",
+			"text": "Outsiders will just take honest jobs away from a shape like this.",
+			"schema": "low_MoralBoundaries",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "advancedCareer",
+			"text": "What this shape has taught us is that no matter who you are, as long as you are a hard worker, you deserve to be recognized.",
+			"schema": "high_MoralBoundaries",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "hardWorker",
+			"text": "As long as they are hard workers, they deserve your respect.",
+			"schema": "high_MoralBoundaries",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "CustodianJobs",
+			"text": "Outsiders will just take honest jobs away from a shape like this.",
+			"schema": "low_MoralBoundaries",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "generalJobs",
+			"text": "Outsiders will just take honest jobs away from a shape like this.",
+			"schema": "low_MoralBoundaries",
+			"NPCTypeSchemaValue": "High"
+		}]
+
+	},
+	{
+		"SVkey": "WeArewNothingIfWeAreNotReserved",
+		"SurfaceValueObject": [{
+			"subvalue": "InLovewithspouseoffriend",
+			"text": "This shape is too friendly with their friend's partner. Being social just causes trouble.",
+			"schema": "low_MoralBoundaries",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "hasalotofenemies",
+			"text": "This shape made a lot of enemies and I don't think being social is such a good idea.",
+			"schema": "low_MoralEssence",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "likesToDate",
+			"text": "This shape has no self-control and keeps on dating random shapes. Being that social is just irresponsible.",
+			"schema": "low_MoralEssence",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "InLoveWirhAnothersspuce",
+			"text": "This shape flirts with everyone even though they are committed, I don't think being social helps them.",
+			"schema": "high_MoralOrder",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "startedAfamilyAtAyoungAge",
+			"text": "This shape had a family at an early age because they're not careful, you don't want to end up like that.",
+			"schema": "low_MoralBoundaries",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "SusMovments",
+			"text": "This shape likes to keep to themselves but there is nothing wrong with that.",
+			"schema": "high_SelfInterest",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "DevorcedManyPeople",
+			"text": "This shape has their reasons to figure out what they want in a partner, no one should judge that.",
+			"schema": "low_Strength",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "marriedForLifeStyleNotLove",
+			"text": "This shape made the right decision for themselves and no one should question that.",
+			"schema": "low_MoralBoundaries",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "IsRichButNotGenrous",
+			"text": "This shape can do whatever they want with their money. It's just that simple.",
+			"schema": "low_MoralBoundaries",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "liklyToHelpTheHomeless",
+			"text": "This shape has an open heart and likes to help others, that's because they are a good shape.",
+			"schema": "high_MoralOrder",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "TooTrustingOfEnemies",
+			"text": "This shape is too trusting and I don't think that's a good idea.",
+			"schema": "low_SelfIntrest",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "doesNotGiveToThoseInNeed",
+			"text": "This shape made their living and it's up to them how they want to spend it.",
+			"schema": "low_MoralOrder",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "supportsImmigration",
+			"text": "We should trust the outsiders just like how we trust each other. This shape is open to that idea and you should be too.",
+			"schema": "high_MoralBoundaries",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "reserved",
+			"text": "This shape is reserved and that makes them a reliable shape in my book.",
+			"schema": "low_MoralBoundaries",
+			"NPCTypeSchemaValue": "Low"
+		}]
+
+	},
+	{
+		"SVkey": "AselfMadeShapeWeAspireToBe",
+		"SurfaceValueObject": [{
+			"subvalue": "graduate",
+			"text": "This shape has a great education and I'm sure if they decide to build a business, they would be successful.",
+			"schema": "high_MoralOrder",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "adultbutnotworking",
+			"text": "This shape should not start their own job, they should just find an honest job.",
+			"schema": "low_MoralOrder",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "notworkingandrich",
+			"text": "This shape is rich and they don't do much these days. Once you built your business, you can just reap the reward.",
+			"schema": "high_MoralWholeness",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "worksWithFamily",
+			"text": "This shape helps their family business and wouldn't you say that's more honorable?",
+			"schema": "low_SelfIntrest",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "hiredByAFamilymember",
+			"text": "Why should you try so hard if you can just get a job from your family like this shape?",
+			"schema": "low_MoralOrder",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "getsFiredAlot",
+			"text": "Do you really think any shape who can't hold a job should start their own job? That's not a good thing.",
+			"schema": "low_MoralWholeness",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "RetiredYoung",
+			"text": "If you start your own career like this shape, you too can retire early and enjoy life.",
+			"schema": "high_MoralOrder",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "DiedBeforeRetired",
+			"text": "This shape worked an honest job and that deserves my respect. You don't need to have your own career to earn my respect.",
+			"schema": "low_MoralBoundaries",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "WorksInAlcohol",
+			"text": "This shape makes an honest living and I respect that. Not all of us need to be entrepreneurs. We all have a role to play.",
+			"schema": "low_SelfIntrest",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "healerRole",
+			"text": "This shape makes an honest living and I respect that. Not all of us need to be entrepreneurs. We all have a role to play.",
+			"schema": "low_SelfIntrest",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "polluterRole",
+			"text": "This shape makes an honest living and I respect that. Not all of us need to be entrepreneurs. We all have a role to play.",
+			"schema": "low_SelfIntrest",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "riskTaker",
+			"text": "This shape likes to take risks and that's the type of shape we should all aspire to be.",
+			"schema": "high_MoralEssence",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "butcherRole",
+			"text": "This shape makes an honest living and I respect that. Not all of us need to be entrepreneurs. We all have a role to play.",
+			"schema": "low_SelfIntrest",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "Teachingrole",
+			"text": "This shape makes an honest living and I respect that. Not all of us need to be entrepreneurs. We all have a role to play.",
+			"schema": "low_SelfIntrest",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "advancedCareer",
+			"text": "This shape got promoted by working hard and that proves that we don't need to be entrepreneurs to be respected.",
+			"schema": "low_SelfIntrest",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "hardWorker",
+			"text": "This shape works really hard and that's the better quality in my opinion.",
+			"schema": "low_SelfIntrest",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "CustodianJobs",
+			"text": "This shape makes an honest living and I respect that. Not all of us need to be entrepreneurs. We all have a role to play.",
+			"schema": "low_SelfIntrest",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "generalJobs",
+			"text": "This shape makes an honest living and I respect that. Not all of us need to be entrepreneurs. We all have a role to play.",
+			"schema": "low_SelfIntrest",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "selfMadeCubeByDedication",
+			"text": "This shape built their career from the ground up and that's a story we all could use.",
+			"schema": "high_MoralBoundaries",
+			"NPCTypeSchemaValue": "High"
+		}]
+
+	},
+	{
+		"SVkey": "Shapesarenothingifnotsocial",
+		"SurfaceValueObject": [{
+			"subvalue": "InLovewithspouseoffriend",
+			"text": "This shape is too friendly with their friend's partner. Being social just causes trouble.",
+			"schema": "low_MoralBoundaries",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "socialLife",
+			"text": "Look how happy this shape is! Shapes who have a lot of friends must be good shapes.",
+			"schema": "high_MoralWholeness",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "hasalotofenemies",
+			"text": "This shape made a lot of enemies and I don't think being social is such a good idea.",
+			"schema": "low_MoralEssence",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "friendwithabestfriendsenemy",
+			"text": "This shape befriended their friend's enemy. How could anyone trust a shape like that?",
+			"schema": "low_MoralOrder",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "exploteative",
+			"text": "This shape makes friends just because they want to take advantage of them. I feel like overly social shapes all have something to hide.",
+			"schema": "low_MoralOrder",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "hasAbestFriend",
+			"text": "This shape and their best friend support each other no matter what, don't you want something that special?!",
+			"schema": "high_MoralOrder",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "InLoveWirhAnothersspuce",
+			"text": "This shape flirts with everyone even though they are committed, I don't think being social helps them.",
+			"schema": "high_MoralOrder",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "MovesAlot",
+			"text": "This shape moves a lot and being social helps to make new places easier to adjust.",
+			"schema": "high_MoralBoundaries",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "DevorcedManyPeople",
+			"text": "This shape is too social when they should focus that energy on their partner.",
+			"schema": "low_MoralWholeness",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "isolated",
+			"text": "This shape likes to keep to themselves and that's their right to do so. I respect that.",
+			"schema": "low_MoralWholeness",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "TooTrustingOfEnemies",
+			"text": "This shape trusts everyone and that's very stupid of them. Being social isn't the best thing for us.",
+			"schema": "low_Strength",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "reserved",
+			"text": "This shape chooses their friends very carefully and that's a wise decision.",
+			"schema": "low_MoralWholeness",
+			"NPCTypeSchemaValue": "High"
+		}]
+
+	},
+	{
+		"SVkey": "AntiFaviortisum",
+		"SurfaceValueObject": [{
+			"subvalue": "graduate",
+			"text": "Well, this shape has a good education and I'd say anyone who hires them is making the right decision, regardless of how they are hired.",
+			"schema": "high_MoralOrder",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "exploteative",
+			"text": "This shape is so shady and that's largely due to favoritism.",
+			"schema": "low_MoralOrder",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "IsWealthy",
+			"text": "Well, this shape is rich and that's because they understand what needs to be done and who to hire.",
+			"schema": "high_SelfInterest",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "worksWithFamily",
+			"text": "You should hire family for your family business. That's just a smart move.",
+			"schema": "high_MoralWholeness",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "hiredByAFamilymember",
+			"text": "How can you know this shape is good at their job because they were hired because of their connection and not their own merits.",
+			"schema": "low_MoralBoundaries",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "selfMadeCubeByDedication",
+			"text": "This shape did all on their own. That's the way it should be.",
+			"schema": "low_MoralWholeness",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "nepotism",
+			"text": "This shape got through life by relying on their connections. I would never trust someone like that.",
+			"schema": "low_MoralBoundaries",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "WorksInAlcohol",
+			"text": "This shape has a good job and that should be enough, we should not question how they got the job.",
+			"schema": "high_MoralBoundaries",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "healerRole",
+			"text": "This shape has a good job and that should be enough, we should not question how they got the job.",
+			"schema": "high_MoralBoundaries",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "polluterRole",
+			"text": "This shape has a good job and that should be enough, we should not question how they got the job.",
+			"schema": "high_MoralBoundaries",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "riskTaker",
+			"text": "This shape has a good job and that should be enough, we should not question how they got the job.",
+			"schema": "high_MoralBoundaries",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "butcherRole",
+			"text": "This shape has a good job and that should be enough, we should not question how they got the job.",
+			"schema": "high_MoralBoundaries",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "Teachingrole",
+			"text": "This shape has a good job and that should be enough, we should not question how they got the job.",
+			"schema": "high_MoralBoundaries",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "advancedCareer",
+			"text": "We have to use our resources to get to where we need to go. I don't think what this shape did was bad.",
+			"schema": "high_MoralBoundaries",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "hardWorker",
+			"text": "This shape is a hard worker and I'm sure even if they were hired through favoritism, that's not a bad decision for the business.",
+			"schema": "high_Strength",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "generalJobs",
+			"text": "This shape has a good job and that should be enough, we should not question how they got the job.",
+			"schema": "high_MoralBoundaries",
+			"NPCTypeSchemaValue": "Low"
+		}]
+
+	}
+
+
+]
