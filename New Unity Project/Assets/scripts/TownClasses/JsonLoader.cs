@@ -13,7 +13,7 @@ using System.Reflection;
 //by author: first gear games. 
 public class JsonLoader : MonoBehaviour
 {
-    public static JsonLoader JSONLoader; 
+
     //note to self: comment and uncomment below depending on what is needed in final version 
 
     [SerializeField]
@@ -44,7 +44,7 @@ public class JsonLoader : MonoBehaviour
     [SerializeField]
     public List<MoralModelArguments> listOffATHERArguments = new List<MoralModelArguments>(); //NEW ONE 
 
-    public static JsonLoader jsonLoader;
+    public static JsonLoader Instance { get; private set; }
 
     const string FILEXTEN = @".json";
     //comment and uncomment below depending on what is needed in final version 
@@ -72,6 +72,17 @@ public class JsonLoader : MonoBehaviour
 
     void Awake()
     {
+
+        if(Instance== null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
         //town general info
         TownInformation = returntownStructure<GeneralTownInformation>(TOWNINFORMATION);
         //character related information they all can be refrenced by id

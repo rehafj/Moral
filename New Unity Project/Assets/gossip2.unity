@@ -18996,6 +18996,7 @@ GameObject:
   - component: {fileID: 981636875}
   - component: {fileID: 981636874}
   - component: {fileID: 981636876}
+  - component: {fileID: 981636877}
   m_Layer: 0
   m_Name: Json Loader obj
   m_TagString: Untagged
@@ -19059,6 +19060,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jsn: {fileID: 981636874}
   characters: []
+--- !u!114 &981636877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981636873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28a47a035c11aed45a4615a05de16715, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1005484636
 PrefabInstance:
   m_ObjectHideFlags: 0

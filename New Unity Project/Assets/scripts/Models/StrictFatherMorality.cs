@@ -40,12 +40,13 @@ public class StrictFatherMorality : MoralModels
     public void Start()
     {
         jsn = FindObjectOfType<JsonLoader>();
+        Debug.Log("did we find a json object?" + jsn);
 
     }
 
     public void  testFM()
     {
-        Debug.Log(JsonLoader.JSONLoader.listOffATHERArguments.Count());
+        Debug.Log(JsonLoader.Instance.listOffATHERArguments.Count());
     }
     //make an overloaded method -- 
     public string returnFatherModelArgumetnsText(string surfaceValue, string subvalue,
@@ -69,7 +70,7 @@ public class StrictFatherMorality : MoralModels
         string currentPatternCheck = subvalue;
 
         int i = 0;
-        foreach (MoralModelArguments arg in JsonLoader.jsonLoader.listOffATHERArguments)
+        foreach (MoralModelArguments arg in JsonLoader.Instance.listOffATHERArguments)
         {
             // Debug.Log("arg.SVkey "+ arg.SVkey);
 

@@ -68,7 +68,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     Dialoug currentNode;
 
      int moralFocusCounter = 0; 
-   public List<string> currentCNPCExploredSurfaceValues = new List<string>();
+   public List<string> currentCNPCExploredSurfaceValues = new List<string>(); //reset this when new CNPC instanciates 
    
     List<string> currentPlayerAttemptedArgumentSV = new List<string>();
     int currentCNPCDisagreements = 0;
@@ -90,12 +90,14 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         currentCNPC = FindObjectOfType<CharacterManager>().characters[0]; //hard coded with tim for now 
         OrgnizeCNPCOpinions();
         setUp();
+
+        //Debug.Log(JsonLoader.Instance.listOffATHERArguments.Count);
       //  currentCNPC.FatherModel.testFM();
     }
 
     public void setUp()
     {
-        Dialoug introductionNode = new Dialoug("introduction", "hey there " + playerName +
+        Dialoug introductionNode = new Dialoug(" introduction", " Player says: \n hey there " + playerName +
         " \n welcome to AB. what can I do for ya?", "graduate"); //move this into its file 
         conversedAboutCharectersList = sortCharactersToBringUp(bgchar.GetFiltredCharerList());//fltred list of characters (with 5+ flags)
 
@@ -529,25 +531,42 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                    translateOpinionIntoText(kvp.Key), //thought bubble 
                    setCnpcDialoug(kvp.Key, character, "BiasedSVOpin", mappedKey),
                    mappedKey);
-                
-                //general feelings about a topic ( baised surface opinion)
-                //--- gives the general feelings about a thing, add to the same node the pther structure elements... 
 
+              
                 node.UnbiasedOpeningStatment =
                     getIntroductionTopicString(kvp.Key, character); //unbaised opening statment  --- this is actually the inytoduction text 
               
                 node.agreementText = setCnpcDialoug(kvp.Key, character, "PlayerAgreesWithCNPC", mappedKey);//general feelings about a topic  --- this is actually high 
 
                 node.disagreementText = setCnpcDialoug(kvp.Key, character, "PlayerDisAgreesWithCNPC", mappedKey);//nope - con here is as in low.... 
-               // Debug.Log("disagreement text at set up " + node.disagreementText);
                 node.Pattern = setPlayerPattern(kvp.Key); //flag or pattern for now but this mighht actually be the button text for the player to click on... 
                 node.Rating = setNodeRating(mappedKey);
-                node.setupMoralFocusArguments("moralarg1 focus ","morala Focus rg2" );
-                //node.MappedSurfaceValue = returnpatternToSurfaceMapiing(kvp.Key);
-                //add moral agreement 
-                // add moral disagreement 
+
+                if (node.Rating.ToLower() == "high")
+                {
+                   node.setupMoralFocusArguments(returnTopicText(highVaueOpinions, node.Pattern, "MoralFocusOne", node.MappedSurfaceValue),
+                       returnTopicText(highVaueOpinions, node.Pattern, "MoralFocusTwo", node.MappedSurfaceValue));
+
+
+                }
+                if (node.Rating.ToLower() == "mid")
+                {
+                    node.setupMoralFocusArguments(returnTopicText(midVaueOpinions, node.Pattern, "MoralFocusOne", node.MappedSurfaceValue),
+                      "should not appear");
+                }
+                else
+                {
+                    node.setupMoralFocusArguments("error shouled not appear", "should not appear");
+
+                }
+             
+
+
                 nodes.Add(node);
 
+
+                Debug.Log("TEST: the node " + node.Pattern + " was mapped to SV: " + node.MappedSurfaceValue + " has a rating of " + node.Rating + "and a moral argument of " +
+                    node.moralDisagreementText[0] +"and moral focus arg 2" + node.moralDisagreementText[1]);
             }
         }
         return nodes;
@@ -555,6 +574,8 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         //int i = UnityEngine.Random.Range(0, character.characterFlags.Count);
 
     }
+
+    
 
     private string setPlayerPattern(string key)
     {
@@ -572,7 +593,6 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             if (op.topic.Contains(mappedSV)) //get the translatiopn of they key but not ditect character keys.....  //TOFRICKENDO changet his to currentnode.sv
             {
                // Debug.Log(op.topic.Contains(mapToCNPCMoralFactor(key)) + "for the key " + key);
-                string r  = op.topic.Split('_').First();
                 selectedOpnion = op.topic.Split('_').Last(); //surface value is returned here = -  sv selected opinion 
                // Debug.Log("selectedOpnion" + selectedOpnion +" AND FLAG "+ flag +"TOPIC"+op.topic);// FLAG isd what i send over to classify as intro text pt agreement or .... 
                 //selectedOpinion is the surface value
@@ -590,7 +610,17 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                 {
                    // Debug.Log("setting disagreement text as " + op.NarrativeElements.disagreementtext);
                     return op.NarrativeElements.disagreementtext;
-                }    
+                } 
+                if( flag == "MoralFocusOne")
+                {
+                    return op.NarrativeElements.moralFocusDisagreement[0];
+
+                }
+                if ( flag == "MoralFocusTwo")
+                {
+                    return op.NarrativeElements.moralFocusDisagreement[1];
+
+                }
             }
         }
         return "NO TOPIC WAS FOUND --- need to author topic for flag " + key;
@@ -629,7 +659,6 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         string mappedSV = "";
         temporarySurfaceValues = SVCollection.returnCompatibleSurfaceValues(pattern);
         mappedSV = temporarySurfaceValues[UnityEngine.Random.Range(0, temporarySurfaceValues.Count())];      
-       // Debug.Log("but the chosen pattern was  " + pattern + "for the sv" + mappedSV);
         return mappedSV;
 
     }
@@ -1397,7 +1426,9 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             yield return currentCorutine;
             currentCorutine = StartCoroutine(TypeInDialoug(text));
             Debug.Log(isMf + " the moral focus area was true for the flag " + currentCNPC.getMORALfOCUSAREA());
-           /* if (currentNode.Rating == "High") // and the player disagrees 
+            currentCNPC.FatherModel.testFM();
+            
+            /* if (currentNode.Rating == "High") // and the player disagrees 
             {
                 currentCorutine = StartCoroutine(TypeInDialoug(" you know what... (happens when player disaagrees again (test--)"));//refrence filler before father model 
                 yield return currentCorutine;

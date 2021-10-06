@@ -6,8 +6,13 @@ using System.Linq;
 
 public class MoralModels : MonoBehaviour 
 {
-    JsonLoader loader;
-    
+    JsonLoader jsn;
+
+    public void Start()
+    {
+        jsn = FindObjectOfType<JsonLoader>();
+    }
+
 
     protected double getChances()
     {
@@ -312,7 +317,7 @@ public class MoralModels : MonoBehaviour
     string returnSchemaText(string schemaName, string surfuaceValueKey, string subvalueKey)
     {
         //t this works --- move this method to father model script or the model parents :) but this returns the appropriate text bad O tho
-        foreach (ModelArguements argument in loader.listOfArguments)
+        foreach (ModelArguements argument in jsn.listOfArguments)
         {
             if (argument.schema == schemaName)
             {
@@ -340,7 +345,7 @@ public class MoralModels : MonoBehaviour
     string returnSchemaPattern(string schemaName, string surfuaceValueKey, string subvalueKey)
     {
         //t this works --- move this method to father model script or the model parents :) but this returns the appropriate text bad O tho
-        foreach (ModelArguements argument in loader.listOfArguments)
+        foreach (ModelArguements argument in jsn.listOfArguments)
         {
             if (argument.schema == schemaName)
             {
