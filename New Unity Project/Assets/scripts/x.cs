@@ -530,7 +530,9 @@ public class x : MonoBehaviour
                 returnContrastingOpinion(midVaueOpinions, key, character);
             default://low
                 return returnIntroTopic(lowVaueOpinions, key) +
-                 returnContrastingOpinion(lowVaueOpinions, key, character);
+                 returnContrastingOpinion(
+
+, key, character);
         }
     }
     //make this into one method  with the topic below --- 

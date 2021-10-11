@@ -1,25 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 [System.Serializable]
 public class ConversationalCharacter : MonoBehaviour
-
-  
 {
-    //make these random as long as two contradicting pairs do not get put in the same list 
-   public  List<string> contradictingValuesHigh = new List<string>
+    //make these random as long as two contradicting pairs do not get put in the same list     /// <summary>
+    /// you can add contradicitons to vlaues in these lists, High contains high values and low contains low values that are contradictiory to High
+    /// </summary>
+    public List<string> contradictingValuesHigh = new List<string>
         {
             "Enviromentalist" ,"BTrueTYourHeart","AnimalLover","SchoolIsCool"
-        };/// <summary>
-        /// you can add contradicitons to vlaues in these lists, High contains high values and low contains low values that are contradictiory to High
-        /// </summary>
-   public  List<string> contradictingValuesLow = new List<string>
+        };
+    public  List<string> contradictingValuesLow = new List<string>
         {
             "schoolIsDrool","EnviromentalistAnti","AnimalLoverAnti","LoveIsForFools"
         };
-
-
     public Dictionary<string, RatingVlaues> ConvCharacterMoralFactors = new Dictionary<string, RatingVlaues>();
     //att 2 --- 
     string[] keys = { "BTrueTYourHeart", "LoveIsForFools","MoneyMaker",
@@ -42,7 +39,21 @@ public class ConversationalCharacter : MonoBehaviour
 
     [SerializeField] string moralFocus; // will equal one of the keys 
 
-    
+    public GameObject gameobj;
+
+
+
+    public void Start()
+    {
+        gameobj = Resources.Load("prefabs/CNPCPrefab") as GameObject;
+        instantiateCube();
+        Debug.Log("how many times is this being called?");
+    }
+
+    public void instantiateCube()
+    {
+        Instantiate(gameobj, new Vector3(23.99f, -7.08f, 0f), Quaternion.identity);
+    }
     public void setMoralFocusArea(string key)
     {
         moralFocus = key;
@@ -56,17 +67,15 @@ public class ConversationalCharacter : MonoBehaviour
         }
         else return false;
     } 
-
     public enum emotion
     {
         happy, sad, angry, shocked, shy
     }
     public emotion CnpcEmotion;
-    public enum RatingVlaues
+    public enum RatingVlaues //NPC ratings for conversation basis
     {
        High, Mid, Low
     }
-
     public RatingVlaues NpcValueFlag;
   
     public ConversationalCharacter(string name ,RatingVlaues[] thirteenValues )
@@ -170,5 +179,8 @@ public class ConversationalCharacter : MonoBehaviour
     {
         return moralFocus;
     }
+
+   
+    
 }
 

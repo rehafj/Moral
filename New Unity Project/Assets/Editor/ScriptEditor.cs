@@ -13,7 +13,9 @@ public class ScriptEditor : Editor
         foreach(ConversationalCharacter c in ((CharacterManager)target).characters)
           {
             EditorGUILayout.LabelField("conversational character :\t" + c.ConversationalNpcName);//later add names...etc 
-           // i++;
+           // EditorGUILayout.LabelField("GameObject prefab:\t" + c.gameobj);//later add names...etc 
+
+            // i++;
             EditorGUILayout.Space();
             foreach (var p in c.ConvCharacterMoralFactors)              
             {

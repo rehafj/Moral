@@ -7,9 +7,26 @@ using UnityEngine;
 //[Serializable]
 [System.Serializable]
 
-public class Character
+public class Character : MonoBehaviour
 {
     public string name;
+    public List<Dialoug> savedConversations;
+
+    public enum emotionalState
+    {
+        angry, happy, sad, shy, normal
+    }
+    public emotionalState currentSate;
+
+ 
+ 
+    
+}
+
+
+
+ /*
+public string name;
     public List<Dialoug> savedConversations;
 
     public enum personalValue //perhaps make this have values instead of a dictionary later... 
@@ -93,10 +110,4 @@ public class Character
     {
         thisCharacterRelationship[character] += value; 
     }
-
-
-
-    
-}
-
-
+*/

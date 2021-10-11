@@ -1,0 +1,165 @@
+[{
+		"SearchBarKey": "socialLife",
+		"BNPCsearchTranslation": ["This shape is highly sociable", "reports indicate this shape has a social life", "leads in a social life, would cry without it"]
+	},
+
+	{
+		"SearchBarKey": "hasalotofenemies",
+		"BNPCsearchTranslation": ["Shape seems to make alot of enemies", "reports of enemies around this shape", "so many enemies..."]
+	},
+
+	{
+		"SearchBarKey": "graduate",
+		"BNPCsearchTranslation": ["This shape graduated with honors", "a shape with a degree", "reports indcate this shape acuired a degree"]
+	},
+
+	{
+		"SearchBarKey": "exploteative",
+		"BNPCsearchTranslation": ["complaints of an explorative shape", "explotative shape warning", "likes to exploit others for own benifit"]
+	},
+
+	{
+		"SearchBarKey": "adultbutnotworking",
+		"BNPCsearchTranslation": ["adult shape without a job", "this shape lacks a job", "no jobs identified on this shape"]
+	},
+
+	{
+		"SearchBarKey": "notworkingandrich",
+		"BNPCsearchTranslation": ["aqquired vast wealth without working", "fell into lots of money", "has a lot of riches without a career"]
+	},
+
+	{
+		"SearchBarKey": "IsWealthy",
+		"BNPCsearchTranslation": ["This shape is wealthy", "such wealth, wow", "this shape has a lot of money, we do mean alot... "]
+	},
+
+	{
+		"SearchBarKey": "worksWithFamily",
+		"BNPCsearchTranslation": ["This shape works with family", "this shape works with their family", "job includes working with family, rough..."]
+	},
+
+	{
+		"SearchBarKey": "hiredByAFamilymember",
+		"BNPCsearchTranslation": ["This shape was hired by a family memeber", "nepotisum warning! shape hired by family", "this shape is hired by family"]
+	},
+
+	{
+		"SearchBarKey": "MovesAlot",
+		"BNPCsearchTranslation": ["This shape moves alot, has not settled down", "this shape moves alot, reports indicate they do not wish to settle in a place", "this shape spent their life moving around"]
+	},
+
+	{
+		"SearchBarKey": "getsFiredAlot",
+		"BNPCsearchTranslation": ["this shape was fired alot", "fired from jobs, multiple times", "this shape tends to get fired alot"]
+	},
+
+	{
+		"SearchBarKey": "SusMovments",
+		"BNPCsearchTranslation": ["This shape is highly suspicious", "thsi shape has odd behaviors, reports indicate suspition", "highly suspecous shape"]
+	},
+
+	{
+		"SearchBarKey": "RetiredYoung",
+		"BNPCsearchTranslation": ["This shape retied young", "this shape retired early in life", "this shape retied young"]
+	},
+
+	{
+		"SearchBarKey": "DiedBeforeRetired",
+		"BNPCsearchTranslation": ["This shape passed away before they retired", "worked till they died, no retirment indicated", "this shape worked and died without retiring"]
+	},
+
+	{
+		"SearchBarKey": "IsRichButNotGenrous",
+		"BNPCsearchTranslation": ["This shape is wealthy but reports show no generosity", "high wealth but low empathy", "this shape is rich but does not give anything back"]
+	},
+
+	{
+		"SearchBarKey": "ButcherButRegretful",
+		"BNPCsearchTranslation": ["This shape hates their butcher role", "this shape dislikes working as a butcher", "this shape likes animals but works as a butcher, reports indicate regret and remorse"]
+	},
+
+	{
+		"SearchBarKey": "selfMadeCubeByDedication",
+		"BNPCsearchTranslation": ["This shape is a self made cube", "this shape worked hard, self made shape", "reports show that this shape worked with high dedication"]
+	},
+
+	{
+		"SearchBarKey": "likedToExperinceCulture",
+		"BNPCsearchTranslation": ["This shape likes to experince other cultures", "reports indicate this shape likes to experince new things", "this shape is open to exeperincing new things, records show liked to travel"]
+	},
+
+	{
+		"SearchBarKey": "doesNotGiveToThoseInNeed",
+		"BNPCsearchTranslation": ["This shape is a classic scroge", "reports indicate this shape does not give to those less fourtinate", "no empathy identified, this shape does not give to those in need"]
+	},
+
+	{
+		"SearchBarKey": "reserved",
+		"BNPCsearchTranslation": ["This shape is highly reserved", "reserved shape", "this shape is highly reserved"]
+	},
+
+	{
+		"SearchBarKey": "nepotism",
+		"BNPCsearchTranslation": ["This shape is highly reserved", "reserved shape", "this shape is highly reserved"]
+	},
+
+	{
+		"SearchBarKey": "flipflop",
+		"BNPCsearchTranslation": ["This shape iflip-flops alot, cannot settle on one job ", "this shape cannot settle on a thing, they flip-flop", "channge jobs often"]
+	},
+
+	{
+		"SearchBarKey": "WorksInAlcohol",
+		"BNPCsearchTranslation": ["works in a bar ", "serves alcoholic bevrages to others,", "precuer of alcoholic bevrages, sells them"]
+	},
+
+	{
+		"SearchBarKey": "healerRole",
+		"BNPCsearchTranslation": ["This shape heals others", "this shape works at a clinic", "this shape has a healer role of sorts"]
+	},
+
+	{
+		"SearchBarKey": "polluterRole",
+		"BNPCsearchTranslation": ["This shape is not a friend to the enviroment", "their job causes polotion,", "causes significant enviromental damadge via job"]
+	},
+
+	{
+		"SearchBarKey": "riskTaker",
+		"BNPCsearchTranslation": ["This shape is a risk-taker", "This shape is a risk-taker", "This shape is a risk-taker"]
+	},
+
+	{
+		"SearchBarKey": "butcherRole",
+		"BNPCsearchTranslation": ["This shape works as a butcher", "This shape works as a butche", "This shape works as a butche"]
+	},
+
+	{
+		"SearchBarKey": "Teachingrole",
+		"BNPCsearchTranslation": ["This shape is a teacher", "This shape is a teacher", "This shape is a teacher"]
+	},
+
+	{
+		"SearchBarKey": "advancedCareer",
+		"BNPCsearchTranslation": ["This shape is highly advanced in career aspects", "This shape is highly advanced in career aspects", "This shape is highly advanced in career aspects"]
+	},
+
+	{
+		"SearchBarKey": "hardWorker",
+		"BNPCsearchTranslation": ["reecords show this shape works hard", "reecords show this shape works hard", "reecords show this shape works hard"]
+	},
+
+	{
+		"SearchBarKey": "CustodianJobs",
+		"BNPCsearchTranslation": ["This shape works as a custodian", "This shape works as a custodian,", "This shape works as a custodian,"]
+	},
+
+	{
+		"SearchBarKey": "generalJobs",
+		"BNPCsearchTranslation": ["This shape has a job,", "This shape has a job,", "This shape has a job,"]
+	},
+
+	{
+		"SearchBarKey": "selfMadeCubeByDedication",
+		"BNPCsearchTranslation": ["selfMadeCubeByDedication,", "reports indicate this shape is a self made cube", "self made!"]
+	}
+]

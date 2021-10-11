@@ -9,6 +9,7 @@ using UnityEngine.UI;
 [System.Serializable]
 public class DialogeManager : MonoBehaviour //TODO refactor this later, just for testing plopping things here for now 
 {
+    public static DialogeManager Instance { get; private set; }
 
     public List<Tree> allCharacterConversationsTrees = new List<Tree>();
     private Tree currentTree ;
@@ -58,36 +59,41 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
     
 
-    //for tests 
-    Tree TomsTree = new Tree();
-
-    //test
-
+  
 
     //pubic for testing only -- change later 
     Dialoug currentNode;
 
      int moralFocusCounter = 0; 
-   public List<string> currentCNPCExploredSurfaceValues = new List<string>(); //reset this when new CNPC instanciates 
-   
+   public List<string> currentCNPCExploredSurfaceValues = new List<string>(); 
     List<string> currentPlayerAttemptedArgumentSV = new List<string>();
     int currentCNPCDisagreements = 0;
 
 
+    //find the player character when we end a conversation --- TODO
 
-    public void Awake()
+    void Awake()
     {
 
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
-    public void Start()
+        public void Start()
     {
-        bgchar = FindObjectOfType<BackgroundCharacter>();
+           bgchar = FindObjectOfType<BackgroundCharacter>();
         jsn = FindObjectOfType<JsonLoader>();
 
 
         //disableorEnablePlayerButtons();
         AllOpinions = jsn.listOfConversations;
-        currentCNPC = FindObjectOfType<CharacterManager>().characters[0]; //hard coded with tim for now 
+        currentCNPC = FindObjectOfType<CharacterManager>().characters[2]; //hard coded with tim for now 
         OrgnizeCNPCOpinions();
         setUp();
 
@@ -131,7 +137,6 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         }
         foreach( Tree  t in allCharacterConversationsTrees)
         {
-
             //for debugging.... 
         }
 
@@ -140,6 +145,19 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         currentTree = allCharacterConversationsTrees[treeCounter];
        startAconversation(allCharacterConversationsTrees[treeCounter]);//the first cgharacter in the list - yhionking about character....etc 
      
+    }
+
+    public void startTheFirstConversation()
+    {
+        startAconversation(allCharacterConversationsTrees[treeCounter]);//the first cgharacter in the list - yhionking about character....etc 
+
+    }
+
+    public void setConversationAndCnpc(ConversationalCharacter character, int treeCounter)
+    {
+        currentCNPC = character;
+        startAconversation(allCharacterConversationsTrees[treeCounter]);//the first cgharacter in the list - yhionking about character....etc 
+
     }
 
     private List<string> getThingsHatedAboutBNPC(Dialoug d, InterestingCharacters character)
@@ -170,6 +188,11 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             }
         }
         return hatedFactsAboutThisCharacter;
+
+    }
+
+    private void displayControlOprions()
+    {
 
     }
     private void startAconversation(Tree chosenTree)
@@ -565,8 +588,8 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                 nodes.Add(node);
 
 
-                Debug.Log("TEST: the node " + node.Pattern + " was mapped to SV: " + node.MappedSurfaceValue + " has a rating of " + node.Rating + "and a moral argument of " +
-                    node.moralDisagreementText[0] +"and moral focus arg 2" + node.moralDisagreementText[1]);
+              /*  Debug.Log("TEST: the node " + node.Pattern + " was mapped to SV: " + node.MappedSurfaceValue + " has a rating of " + node.Rating + "and a moral argument of " +
+                    node.moralDisagreementText[0] +"and moral focus arg 2" + node.moralDisagreementText[1]);*/
             }
         }
         return nodes;
@@ -1425,9 +1448,18 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                                  TypeOfPlayerTexts.disagreement, isMf))); // CAN REFACTOR THIS  //TOFRICKENDO changet his to currentnode.sv
             yield return currentCorutine;
             currentCorutine = StartCoroutine(TypeInDialoug(text));
-            Debug.Log(isMf + " the moral focus area was true for the flag " + currentCNPC.getMORALfOCUSAREA());
+            yield return currentCorutine;
+            if(currentNode.Rating.ToLower() == "high")
+            {
+                currentCorutine = StartCoroutine(TypeInDialoug(
+               currentCNPC.FatherModel.returnFatherModelArgumetnsText(
+                   currentNode.MappedSurfaceValue, currentNode.Pattern, new List<string>() { }, true)));
+            }
+     
+/*            Debug.Log(isMf + " the moral focus area was true for the flag " + currentCNPC.getMORALfOCUSAREA());
             currentCNPC.FatherModel.testFM();
             
+*/
             /* if (currentNode.Rating == "High") // and the player disagrees 
             {
                 currentCorutine = StartCoroutine(TypeInDialoug(" you know what... (happens when player disaagrees again (test--)"));//refrence filler before father model 

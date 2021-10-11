@@ -722,3 +722,39 @@ private string expandArgument(string mainPattern, string mattchingPattern, strin
 
 
 */
+
+
+
+/* 
+ * 
+ * foreach (DialougStructure op in opinions) //ex: all high opp -- splits them up here as high mid and low 
+        {
+            
+
+            if (op.topic.Contains(mappedSV)) //get the translatiopn of they key but not ditect character keys.....  //TOFRICKENDO changet his to currentnode.sv
+            {
+               // Debug.Log(op.topic.Contains(mapToCNPCMoralFactor(key)) + "for the key " + key);
+                string r  = op.topic.Split('_').First();
+                selectedOpnion = op.topic.Split('_').Last(); //surface value is returned here = -  sv selected opinion 
+               // Debug.Log("selectedOpnion" + selectedOpnion +" AND FLAG "+ flag +"TOPIC"+op.topic);// FLAG isd what i send over to classify as intro text pt agreement or .... 
+                //selectedOpinion is the surface value
+
+                //redo this super bad method 
+                if (flag == "BiasedSVOpin")
+                {
+                    return op.NarrativeElements.surfaceOpinionOnTopic;
+                }
+                if (flag == "PlayerAgreesWithCNPC")
+                {
+                    return op.NarrativeElements.agreementText;
+                }
+                if (flag == "PlayerDisAgreesWithCNPC")
+                {
+                   // Debug.Log("setting disagreement text as " + op.NarrativeElements.disagreementtext);
+                    return op.NarrativeElements.disagreementtext;
+                }    
+            }
+        }
+        return "NO TOPIC WAS FOUND --- need to author topic for flag " + key;
+
+*/

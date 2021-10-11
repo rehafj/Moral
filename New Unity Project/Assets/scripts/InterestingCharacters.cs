@@ -10,6 +10,8 @@ public class InterestingCharacters : MonoBehaviour
     public int lovedOneID;
     //public int bestfriendID;
     public string fullName;
+    public string firstName;
+    public string LastName;
     List<TownCharacter> bgcharList;
     public struct LoveTraingle
     {

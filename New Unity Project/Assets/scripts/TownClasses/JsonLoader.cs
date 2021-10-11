@@ -44,6 +44,10 @@ public class JsonLoader : MonoBehaviour
     [SerializeField]
     public List<MoralModelArguments> listOffATHERArguments = new List<MoralModelArguments>(); //NEW ONE 
 
+
+    [SerializeField]
+    public List<CharacterSearchBarFacts> ListOfBNPCFacts = new List<CharacterSearchBarFacts>(); //NEW ONE 
+
     public static JsonLoader Instance { get; private set; }
 
     const string FILEXTEN = @".json";
@@ -64,8 +68,9 @@ public class JsonLoader : MonoBehaviour
 
     const string FATHERMODELARGUMENTS = @"JSON/testingnewfatherstructure";
 
+    const string BNPCFACTS = @"JSON/BNPCInfoTranslation";
 
-   
+
 
 
     List<string> exFlads = new List<string>(); 
@@ -98,7 +103,7 @@ public class JsonLoader : MonoBehaviour
         listOfPlayerDialougs = returnJsonAttributesIntoList<PlayerDialoug>(PLAYERDIALIUG);
         listOfArguments = returnJsonAttributesIntoList<ModelArguements>(MODELARGUEMNTS);
 
-
+        ListOfBNPCFacts = returnJsonAttributesIntoList<CharacterSearchBarFacts>(BNPCFACTS);
         listOffATHERArguments = returnJsonAttributesIntoList<MoralModelArguments>(FATHERMODELARGUMENTS);
         //FOR TESTING-REMOVE ME 
         PrintOutAConversation();
@@ -107,8 +112,17 @@ public class JsonLoader : MonoBehaviour
             "InLovewithspouseoffriend", exFlads, true));
     }
 
+    
+
     private void PrintOutAConversation()
     {
+
+        Debug.Log(ListOfBNPCFacts.Count);
+       foreach( CharacterSearchBarFacts FACT in ListOfBNPCFacts)
+        {
+            if(FACT.SearchBarKey == "butcherRole")
+            Debug.Log(FACT.BNPCsearchTranslation[UnityEngine.Random.Range(0,2)]);
+        }
         /*foreach (ModelArguements argument in listOfArguments)
         {
             Debug.Log("FFS - schema =   " + argument.schema + "surface values are " + argument.Surfacevalues[0].key  +" AND THE SUB VALUE KEY IS "+ argument.Surfacevalues[0].surfaceValueObj[0].subvalue);

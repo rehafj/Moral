@@ -100,6 +100,8 @@ public class BackgroundCharacter  :  MonoBehaviour
         {
             character.personID = jsn.backgroundcharacters[i].id;
             character.fullName = jsn.backgroundcharacters[i].firstName + " " + jsn.backgroundcharacters[i].lastName;
+            character.firstName = jsn.backgroundcharacters[i].firstName;
+            character.LastName = jsn.backgroundcharacters[i].lastName;
             character = new InterestingCharacters();
 
             //checks for a single character flags
