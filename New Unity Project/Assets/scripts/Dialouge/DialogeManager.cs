@@ -47,14 +47,13 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     public Text[] CNPCoptionText;
     public Button[] PlayerButtons;
     [SerializeField] bool isTyping;
-
+    public int CNPCIndexer=0;
     Coroutine currentCorutine;
     Coroutine currentThoughtBubbleCorutine;
 
 
     InterestingCharacters currentIntrestingCharracter;
-    List<string> currentTopicsAboutCurrentCharacter;
-
+    public List<string> currentTopicsAboutCurrentCharacter; //this is what we are using and clearing 
     string startingSceneText = "";
 
     
@@ -87,32 +86,74 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     }
         public void Start()
     {
-           bgchar = FindObjectOfType<BackgroundCharacter>();
+        bgchar = FindObjectOfType<BackgroundCharacter>();
         jsn = FindObjectOfType<JsonLoader>();
-
-
-        //disableorEnablePlayerButtons();
         AllOpinions = jsn.listOfConversations;
-        currentCNPC = FindObjectOfType<CharacterManager>().characters[2]; //hard coded with tim for now 
+        currentCNPC = FindObjectOfType<CharacterManager>().characters[0]; //hard coded with tim for now 
         OrgnizeCNPCOpinions();
+        CharacterManager.Instance.instantiateCube();
         setUp();
+        StartCoroutine(startGame(5f,treeCounter)); //change this to the animations time / or agents path time
 
-        //Debug.Log(JsonLoader.Instance.listOffATHERArguments.Count);
-      //  currentCNPC.FatherModel.testFM();
+
+        
     }
+
+    public void nextCubeInteractionTest()
+    {
+        Debug.Log(CharacterManager.Instance.characters.Count);
+        startNextCubeConversation(3);
+  
+    }
+
+    IEnumerator startGame(float delay, int treeIndexer)
+    {
+        if (currentCorutine != null) { yield return currentCorutine; }
+        
+        Dialoug introductionNode = new Dialoug(" introduction", " Player says: \n hey there Mr. " + currentCNPC.ConversationalNpcName +
+       " \n welcome to AB. I persume you are here for an argument?", "graduate");
+        yield return new WaitForSeconds(delay);
+       //move this into its file 
+        //conversedAboutCharectersList = sortCharactersToBringUp(bgchar.GetFiltredCharerList());//fltred list of characters (with 5+ flags)
+
+
+         currentCorutine = StartCoroutine(TypeInDialoug(introductionNode.mainOpinionOnAtopic));
+        yield return currentCorutine;
+
+        startAconversation(allCharacterConversationsTrees[treeIndexer]);
+
+    }
+    IEnumerator startNextCubeConversation(float delay)
+    {
+        if (currentCorutine != null) { yield return currentCorutine; }
+
+        Dialoug endingDilaoug = new Dialoug(" introduction", " you time is up! Mr. " + currentCNPC.ConversationalNpcName +
+       " \n Please see yourself out, my next client is here", "graduate");
+        yield return new WaitForSeconds(delay);
+        //move this into its file 
+        //conversedAboutCharectersList = sortCharactersToBringUp(bgchar.GetFiltredCharerList());//fltred list of characters (with 5+ flags)
+
+
+        currentCorutine = StartCoroutine(TypeInDialoug(endingDilaoug.mainOpinionOnAtopic));
+        CNPCIndexer += 1;
+        currentCNPC = FindObjectOfType<CharacterManager>().characters[CNPCIndexer];
+        startGame(5, treeCounter);
+
+
+    }
+
 
     public void setUp()
     {
-        Dialoug introductionNode = new Dialoug(" introduction", " Player says: \n hey there " + playerName +
-        " \n welcome to AB. what can I do for ya?", "graduate"); //move this into its file 
+        /* Dialoug introductionNode = new Dialoug(" introduction", " Player says: \n hey there Mr. " + currentCNPC.ConversationalNpcName +
+        " \n welcome to AB. I persume you are here for an argument?", "graduate"); //move this into its file 
+         conversedAboutCharectersList = sortCharactersToBringUp(bgchar.GetFiltredCharerList());//fltred list of characters (with 5+ flags)
+
+
+         currentCorutine = StartCoroutine(TypeInDialoug(introductionNode.mainOpinionOnAtopic));*/
         conversedAboutCharectersList = sortCharactersToBringUp(bgchar.GetFiltredCharerList());//fltred list of characters (with 5+ flags)
 
-
-        currentCorutine = StartCoroutine(TypeInDialoug("hey there " + playerName +
-        " \n welcome to AB. what can I do for ya?"));
-
         setUpTrees();
-
     }
     void setUpTrees()
     {
@@ -143,7 +184,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
        
         displayThoughts(allCharacterConversationsTrees);
         currentTree = allCharacterConversationsTrees[treeCounter];
-       startAconversation(allCharacterConversationsTrees[treeCounter]);//the first cgharacter in the list - yhionking about character....etc 
+       //startAconversation(allCharacterConversationsTrees[treeCounter]);//the first cgharacter in the list - yhionking about character....etc 
      
     }
 
@@ -207,6 +248,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                    currentNode.mainOpinionOnAtopic));
         DisplayplayCurrentOpinions(currentTree);
         displayPlayerButtons(currentNode);
+       
 
     }
     private void cNPCHoldingStance() //does not transfer control 
@@ -485,7 +527,10 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
     public void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            nextCubeInteractionTest();
+        }
         // Debug.Log(currentNode.Pattern);
         /*    Debug.Log("INSIDE UPDATE --- CURNODE currentNode.Pattern  " +currentNode.Pattern + "  topic introduction: " + currentNode.IntroducingATopicdialoug
                 +"intro baised<dtext>"+ currentNode.dialougText +"a node's agreement"+currentNode.agreementText +"nodes dissagreement text"+ 

@@ -39,21 +39,15 @@ public class ConversationalCharacter : MonoBehaviour
 
     [SerializeField] string moralFocus; // will equal one of the keys 
 
-    public GameObject gameobj;
+    public GameObject NPCCubeObject;
+    public  NavigationControl agentPrefabControl;
 
 
-
-    public void Start()
-    {
-        gameobj = Resources.Load("prefabs/CNPCPrefab") as GameObject;
-        instantiateCube();
-        Debug.Log("how many times is this being called?");
+    public void Awake()
+    { 
     }
 
-    public void instantiateCube()
-    {
-        Instantiate(gameobj, new Vector3(23.99f, -7.08f, 0f), Quaternion.identity);
-    }
+   
     public void setMoralFocusArea(string key)
     {
         moralFocus = key;

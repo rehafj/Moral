@@ -9,12 +9,14 @@ public class CharacterManager : MonoBehaviour
 
 
 
-    int characterCount = 6;
+    int characterCount = 3;
     //public List<Character> characters;
     public  List<ConversationalCharacter> characters;
     private List<string> firstNamesList = new List<string> { "Acute", "Arc", "Conic", "Cy", "Vert", "Point", "Hex", "Polly" };
     private List<string> lastNamesList = new List<string> { "Segment", "Strip", "Gon", "Angle", "Metric", "Millimetre ", "Decimal" };
-
+    bool ActorInScene = false;
+    public GameObject ActingCubes;
+    public NavigationControl ActingCubeNavigation;
     void Awake()
     {
 
@@ -28,6 +30,10 @@ public class CharacterManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+
+
+  
 
     public List<InterestingCharacters> getCurrentBackgroundCharacterList()
     {
@@ -44,6 +50,7 @@ public class CharacterManager : MonoBehaviour
     void Start()
     {
         setUp();
+        ActingCubes = Resources.Load("prefabs/CNPCPrefab") as GameObject;
 
     }
 
@@ -58,6 +65,25 @@ public class CharacterManager : MonoBehaviour
         }
     
        
+
+    }
+
+    public void instantiateCube()
+    {
+        if (!ActorInScene)
+        {
+            Instantiate(ActingCubes, new Vector3(23.99f, -7.08f, 0f), Quaternion.identity);
+            ActorInScene = true;
+        } else
+        {
+            
+            //DestroyImmediate(ActingCube,true);
+            GameObject t =  Resources.Load("prefabs/CNPCPrefab") as GameObject;
+            ActingCubes = t;
+            Instantiate(ActingCubes, new Vector3(23.99f, -7.08f, 0f), Quaternion.identity);
+
+        }
+
 
     }
 

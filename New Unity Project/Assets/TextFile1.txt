@@ -1,0 +1,7 @@
+ Dialoug introductionNode = new Dialoug(" introduction", " Player says: \n hey there Mr. " + currentCNPC.ConversationalNpcName +
+       " \n welcome to AB. I persume you are here for an argument?", "graduate"); //move this into its file 
+        conversedAboutCharectersList = sortCharactersToBringUp(bgchar.GetFiltredCharerList());//fltred list of characters (with 5+ flags)
+
+
+        currentCorutine = StartCoroutine(TypeInDialoug(introductionNode.mainOpinionOnAtopic));
+        startAconversation(allCharacterConversationsTrees[treeCounter]);

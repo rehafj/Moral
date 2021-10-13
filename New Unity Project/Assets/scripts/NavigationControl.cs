@@ -52,7 +52,7 @@ public class NavigationControl : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         agent.destination = goal1.transform.position;
-        Invoke("updateDestenation", 10f);
+        Invoke("updateDestenation", 3f);
     }
 
     // Update is called once per frame
