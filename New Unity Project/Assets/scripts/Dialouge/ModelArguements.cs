@@ -62,7 +62,7 @@ public class ModelArguements
 public class BTrueTYourHeart
 {
     public string friendwithabestfriendsenemy { get; set; }
-    public string InLoveWithAnothersspuce { get; set; }
+    public string InLoveWirhAnothersspouce { get; set; }
     public string IsYoungAndPregnant { get; set; }
     public string WillActOnLove { get; set; }
     public string isolated { get; set; }
@@ -71,7 +71,7 @@ public class BTrueTYourHeart
 public class LoveIsForFools
 {
     public string friendwithabestfriendsenemy { get; set; }
-    public string InLoveWithAnothersspuce { get; set; }
+    public string InLoveWirhAnothersspouce { get; set; }
     public string startedAfamilyAtAyoungAge  { get; set; }
     public string WillActOnLove { get; set; }
     public string isolated { get; set; }
@@ -80,7 +80,7 @@ public class LoveIsForFools
 public class MoneyMaker
 {
     public string friendwithabestfriendsenemy { get; set; }
-    public string InLoveWithAnothersspuce { get; set; }
+    public string InLoveWirhAnothersspouce { get; set; }
     public string startedAfamilyAtAyoungAge  { get; set; }
     public string WillActOnLove { get; set; }
     public string isolated { get; set; }
@@ -89,7 +89,7 @@ public class MoneyMaker
 public class Enviromentalist
 {
     public string friendwithabestfriendsenemy { get; set; }
-    public string InLoveWithAnothersspuce { get; set; }
+    public string InLoveWirhAnothersspouce { get; set; }
     public string startedAfamilyAtAyoungAge { get; set; }
     public string WillActOnLove { get; set; }
     public string isolated { get; set; }
@@ -98,7 +98,7 @@ public class Enviromentalist
 public class EnviromentalistAnti
 {
     public string friendwithabestfriendsenemy { get; set; }
-    public string InLoveWithAnothersspuce { get; set; }
+    public string InLoveWirhAnothersspouce { get; set; }
     public string IsYoungAndPregnant { get; set; }
     public string WillActOnLove { get; set; }
     public string isolated { get; set; }
@@ -107,7 +107,7 @@ public class EnviromentalistAnti
 public class AnimalLover
 {
     public string friendwithabestfriendsenemy { get; set; }
-    public string InLoveWithAnothersspuce { get; set; }
+    public string InLoveWirhAnothersspouce { get; set; }
     public string IsYoungAndPregnant { get; set; }
     public string WillActOnLove { get; set; }
     public string isolated { get; set; }
@@ -116,7 +116,7 @@ public class AnimalLover
 public class AnimalLoverAnti
 {
     public string friendwithabestfriendsenemy { get; set; }
-    public string InLoveWithAnothersspuce { get; set; }
+    public string InLoveWirhAnothersspouce { get; set; }
     public string IsYoungAndPregnant { get; set; }
     public string WillActOnLove { get; set; }
     public string isolated { get; set; }
@@ -125,7 +125,7 @@ public class AnimalLoverAnti
 public class Teetotasler
 {
     public string friendwithabestfriendsenemy { get; set; }
-    public string InLoveWithAnothersspuce { get; set; }
+    public string InLoveWirhAnothersspouce { get; set; }
     public string IsYoungAndPregnant { get; set; }
     public string WillActOnLove { get; set; }
     public string isolated { get; set; }
@@ -134,7 +134,7 @@ public class Teetotasler
 public class TeetotaslerAnti
 {
     public string friendwithabestfriendsenemy { get; set; }
-    public string InLoveWithAnothersspuce { get; set; }
+    public string InLoveWirhAnothersspouce { get; set; }
     public string IsYoungAndPregnant { get; set; }
     public string WillActOnLove { get; set; }
     public string isolated { get; set; }
@@ -143,7 +143,7 @@ public class TeetotaslerAnti
 public class FamilyPerson
 {
     public string friendwithabestfriendsenemy { get; set; }
-    public string InLoveWithAnothersspuce { get; set; }
+    public string InLoveWirhAnothersspouce { get; set; }
     public string 
 
 t { get; set; }
@@ -154,7 +154,7 @@ t { get; set; }
 public class SchoolIsCool
 {
     public string friendwithabestfriendsenemy { get; set; }
-    public string InLoveWithAnothersspuce { get; set; }
+    public string InLoveWirhAnothersspouce { get; set; }
     public string IsYoungAndPregnant { get; set; }
     public string WillActOnLove { get; set; }
     public string isolated { get; set; }
@@ -163,7 +163,7 @@ public class SchoolIsCool
 public class SchoolIsDrool
 {
     public string friendwithabestfriendsenemy { get; set; }
-    public string InLoveWithAnothersspuce { get; set; }
+    public string InLoveWirhAnothersspouce { get; set; }
     public string IsYoungAndPregnant { get; set; }
     public string WillActOnLove { get; set; }
     public string isolated { get; set; }
@@ -172,7 +172,7 @@ public class SchoolIsDrool
 public class SupportingComunities
 {
     public string friendwithabestfriendsenemy { get; set; }
-    public string InLoveWithAnothersspuce { get; set; }
+    public string InLoveWirhAnothersspouce { get; set; }
     public string IsYoungAndPregnant { get; set; }
     public string WillActOnLove { get; set; }
     public string isolated { get; set; }
@@ -181,7 +181,7 @@ public class SupportingComunities
 public class LoverOfRisks
 {
     public string friendwithabestfriendsenemy { get; set; }
-    public string InLoveWithAnothersspuce { get; set; }
+    public string InLoveWirhAnothersspouce { get; set; }
     public string IsYoungAndPregnant { get; set; }
     public string WillActOnLove { get; set; }
     public string isolated { get; set; }
@@ -190,7 +190,7 @@ public class LoverOfRisks
 public class LandISWhereThehrtIS
 {
     public string friendwithabestfriendsenemy { get; set; }
-    public string InLoveWithAnothersspuce { get; set; }
+    public string InLoveWirhAnothersspouce { get; set; }
     public string IsYoungAndPregnant { get; set; }
     public string WillActOnLove { get; set; }
     public string isolated { get; set; }
@@ -199,7 +199,7 @@ public class LandISWhereThehrtIS
 public class CarrerAboveAll
 {
     public string friendwithabestfriendsenemy { get; set; }
-    public string InLoveWithAnothersspuce { get; set; }
+    public string InLoveWirhAnothersspouce { get; set; }
     public string IsYoungAndPregnant { get; set; }
     public string WillActOnLove { get; set; }
     public string isolated { get; set; }
@@ -208,7 +208,7 @@ public class CarrerAboveAll
 public class FriendsAreTheJoyOFlife
 {
     public string friendwithabestfriendsenemy { get; set; }
-    public string InLoveWithAnothersspuce { get; set; }
+    public string InLoveWirhAnothersspouce { get; set; }
     public string IsYoungAndPregnant { get; set; }
     public string WillActOnLove { get; set; }
     public string isolated { get; set; }
@@ -217,7 +217,7 @@ public class FriendsAreTheJoyOFlife
 public class Loner
 {
     public string friendwithabestfriendsenemy { get; set; }
-    public string InLoveWithAnothersspuce { get; set; }
+    public string InLoveWirhAnothersspouce { get; set; }
     public string IsYoungAndPregnant { get; set; }
     public string WillActOnLove { get; set; }
     public string isolated { get; set; }
@@ -226,7 +226,7 @@ public class Loner
 public class YouthAreTheFuture
 {
     public string friendwithabestfriendsenemy { get; set; }
-    public string InLoveWithAnothersspuce { get; set; }
+    public string InLoveWirhAnothersspouce { get; set; }
     public string IsYoungAndPregnant { get; set; }
     public string WillActOnLove { get; set; }
     public string isolated { get; set; }
@@ -235,7 +235,7 @@ public class YouthAreTheFuture
 public class ProHiringFamily
 {
     public string friendwithabestfriendsenemy { get; set; }
-    public string InLoveWithAnothersspuce { get; set; }
+    public string InLoveWirhAnothersspouce { get; set; }
     public string IsYoungAndPregnant { get; set; }
     public string WillActOnLove { get; set; }
     public string isolated { get; set; }
@@ -244,7 +244,7 @@ public class ProHiringFamily
 public class SuchUncharactristicBehaviorOhMy
 {
     public string friendwithabestfriendsenemy { get; set; }
-    public string InLoveWithAnothersspuce { get; set; }
+    public string InLoveWirhAnothersspouce { get; set; }
     public string IsYoungAndPregnant { get; set; }
     public string WillActOnLove { get; set; }
     public string isolated { get; set; }
@@ -253,7 +253,7 @@ public class SuchUncharactristicBehaviorOhMy
 public class WeLiveForSpontaneity
 {
     public string friendwithabestfriendsenemy { get; set; }
-    public string InLoveWithAnothersspuce { get; set; }
+    public string InLoveWirhAnothersspouce { get; set; }
     public string IsYoungAndPregnant { get; set; }
     public string WillActOnLove { get; set; }
     public string isolated { get; set; }
@@ -262,7 +262,7 @@ public class WeLiveForSpontaneity
 public class AnAdventureWeSeek
 {
     public string friendwithabestfriendsenemy { get; set; }
-    public string InLoveWithAnothersspuce { get; set; }
+    public string InLoveWirhAnothersspouce { get; set; }
     public string IsYoungAndPregnant { get; set; }
     public string WillActOnLove { get; set; }
     public string isolated { get; set; }
@@ -271,7 +271,7 @@ public class AnAdventureWeSeek
 public class NiaeveteIsFiction
 {
     public string friendwithabestfriendsenemy { get; set; }
-    public string InLoveWithAnothersspuce { get; set; }
+    public string InLoveWirhAnothersspouce { get; set; }
     public string IsYoungAndPregnant { get; set; }
     public string WillActOnLove { get; set; }
     public string isolated { get; set; }
@@ -280,7 +280,7 @@ public class NiaeveteIsFiction
 public class ImmagretsWeGetTheJobDone
 {
     public string friendwithabestfriendsenemy { get; set; }
-    public string InLoveWithAnothersspuce { get; set; }
+    public string InLoveWirhAnothersspouce { get; set; }
     public string IsYoungAndPregnant { get; set; }
     public string WillActOnLove { get; set; }
     public string isolated { get; set; }
@@ -289,7 +289,7 @@ public class ImmagretsWeGetTheJobDone
 public class WeArewNothingIfWeAreNotReserved
 {
     public string friendwithabestfriendsenemy { get; set; }
-    public string InLoveWithAnothersspuce { get; set; }
+    public string InLoveWirhAnothersspouce { get; set; }
     public string IsYoungAndPregnant { get; set; }
     public string WillActOnLove { get; set; }
     public string isolated { get; set; }
@@ -298,7 +298,7 @@ public class WeArewNothingIfWeAreNotReserved
 public class AselfMadeShapeWeAspireToBe
 {
     public string friendwithabestfriendsenemy { get; set; }
-    public string InLoveWithAnothersspuce { get; set; }
+    public string InLoveWirhAnothersspouce { get; set; }
     public string IsYoungAndPregnant { get; set; }
     public string WillActOnLove { get; set; }
     public string isolated { get; set; }

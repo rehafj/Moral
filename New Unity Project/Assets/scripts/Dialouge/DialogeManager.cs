@@ -11,6 +11,8 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 {
     public static DialogeManager Instance { get; private set; }
 
+    public string TranscriptString = "Before you can begin to determine what the composition of a particular paragraph will be, you must first decide on an argument and a working thesis statement for your paper. What is the most important idea that you are trying to convey to your reader? The information in each paragraph must be related to that idea. In other words, your paragraphs should remind your reader that there is a recurrent relationship between your thesis and the information in each paragraph. A working thesis functions like a seed from which your paper, and your ideas, will grow. The whole process is an organic one—a natural progression from a seed to a full-blown paper where there are direct, familial relationships between all of the ideas in the paper";
+
     public List<Tree> allCharacterConversationsTrees = new List<Tree>();
     private Tree currentTree ;
 
@@ -95,8 +97,10 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         setUp();
         StartCoroutine(startGame(5f,treeCounter)); //change this to the animations time / or agents path time
 
+        turnOffButton();//test only
 
-        
+       // TranscriptString = "Before you can begin to determine what the composition of a particular paragraph will be, you must first decide on an argument and a working thesis statement for your paper. What is the most important idea that you are trying to convey to your reader? The information in each paragraph must be related to that idea. In other words, your paragraphs should remind your reader that there is a recurrent relationship between your thesis and the information in each paragraph. A working thesis functions like a seed from which your paper, and your ideas, will grow. The whole process is an organic one—a natural progression from a seed to a full-blown paper where there are direct, familial relationships between all of the ideas in the paper";
+
     }
 
     public void nextCubeInteractionTest()
@@ -120,7 +124,8 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
          currentCorutine = StartCoroutine(TypeInDialoug(introductionNode.mainOpinionOnAtopic));
         yield return currentCorutine;
 
-        startAconversation(allCharacterConversationsTrees[treeIndexer]);
+        currentCorutine = StartCoroutine( startAconversation(allCharacterConversationsTrees[treeIndexer]));
+        yield return currentCorutine;
 
     }
     IEnumerator startNextCubeConversation(float delay)
@@ -184,24 +189,36 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
        
         displayThoughts(allCharacterConversationsTrees);
         currentTree = allCharacterConversationsTrees[treeCounter];
-       //startAconversation(allCharacterConversationsTrees[treeCounter]);//the first cgharacter in the list - yhionking about character....etc 
+       //TODO add startcorutine startAconversation(allCharacterConversationsTrees[treeCounter]);//the first cgharacter in the list - yhionking about character....etc 
      
+    }
+
+    public void addTextToTranscript(string text, bool NPCText)
+    {
+        if (NPCText)
+        {
+            TranscriptString += currentCNPC.ConversationalNpcName + ": " + text + "\n";
+        } else
+        {
+            TranscriptString += "We responded with" + ": " + text + "\n";
+        }
+
     }
 
     public void startTheFirstConversation()
     {
-        startAconversation(allCharacterConversationsTrees[treeCounter]);//the first cgharacter in the list - yhionking about character....etc 
+       StartCoroutine( startAconversation(allCharacterConversationsTrees[treeCounter]));//the first cgharacter in the list - yhionking about character....etc 
 
     }
 
     public void setConversationAndCnpc(ConversationalCharacter character, int treeCounter)
     {
         currentCNPC = character;
-        startAconversation(allCharacterConversationsTrees[treeCounter]);//the first cgharacter in the list - yhionking about character....etc 
+        StartCoroutine(startAconversation(allCharacterConversationsTrees[treeCounter]));//the first cgharacter in the list - yhionking about character....etc 
 
     }
 
-    private List<string> getThingsHatedAboutBNPC(Dialoug d, InterestingCharacters character)
+/*    private List<string> getThingsHatedAboutBNPC(Dialoug d, InterestingCharacters character)
     {
         List<string> hatedFactsAboutThisCharacter = new List<string>();
         List<string> alreadyVistedFlags = new List<string>();
@@ -230,25 +247,32 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         }
         return hatedFactsAboutThisCharacter;
 
-    }
+    }*/
 
     private void displayControlOprions()
     {
 
     }
-    private void startAconversation(Tree chosenTree)
+    private IEnumerator startAconversation(Tree chosenTree)
     {
-      //  moralCounter = 0; //reset it for next character
+        //  moralCounter = 0; //reset it for next character
+        yield return currentCorutine;
+
         currentNode = choseADialougNode(chosenTree.root.children);//i.e we are still in the same tree
 
-            /* currentNode = choseADialougNode(chosenTree.root.children); //new node selection from another tree/branch 
-             currentTree = chosenTree;*/
+        /* currentNode = choseADialougNode(chosenTree.root.children); //new node selection from another tree/branch 
+         currentTree = chosenTree;*/
 
-        StartCoroutine(WaitAndPrintcompoundedStatments(currentNode.UnbiasedOpeningStatment,
+        currentCorutine = StartCoroutine(WaitAndPrintcompoundedStatments(currentNode.UnbiasedOpeningStatment,
                    currentNode.mainOpinionOnAtopic));
+        addTextToTranscript(currentNode.UnbiasedOpeningStatment, true);
+        addTextToTranscript(currentNode.mainOpinionOnAtopic, true);
+
+        yield return currentCorutine;
+        turnOnButtons();
         DisplayplayCurrentOpinions(currentTree);
-        displayPlayerButtons(currentNode);
-       
+        activatePlayerOptionsInButton(currentNode); //newcommentedout
+
 
     }
     private void cNPCHoldingStance() //does not transfer control 
@@ -257,7 +281,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         StartCoroutine(WaitAndPrintcompoundedStatments("surface valuef for this flag"+currentNode.agreementText,
                 "presist on importance of moral flag "));
         DisplayplayCurrentOpinions(currentTree);
-        displayPlayerButtons(currentNode);
+        // activatePlayerOptionsInButton(currentNode); //newcommentedout
         //moralCounter += 1;
     }
     Dialoug choseADialougNode(List<Dialoug> bgCharacterNOdes)
@@ -309,7 +333,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             i++;
         }
     }
-    void displayPlayerButtons(Dialoug node) //hardcoded for now - do this for the current height of the tree --- 
+    void activatePlayerOptionsInButton (Dialoug node) //hardcoded for now - do this for the current height of the tree --- 
     {
         // Debug.Log(node.getHeight());//if the higfght is 2 then i can agree/ dissagree..etc with an option //height 1 then i am thinking aboyut the character ( height 2 is the flag / character topic) 
         // StartCoroutine(waitAndEnableButtons());
@@ -331,15 +355,17 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         }
     }
     void playerAgrees()
-    {   
-
-        StartCoroutine(waitAndPrintAgreement(currentNode.agreementText)); // need to restrucre this --- 
+    {
+     
+        StartCoroutine(waitAndPrintAgreement(currentNode.agreementText)); // need to restrucre this ---
+        addTextToTranscript(currentNode.agreementText, false);
     }
     private void playerDissAgrees()
     {
 
         
         StartCoroutine(waitAndPrintDisagreement(currentNode.disagreementText)); //currentNode.getRandomHatedFact())
+        addTextToTranscript(currentNode.disagreementText, false);
 
     }
 
@@ -442,7 +468,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         foreach (Button b in PlayerButtons)
         {
             Dialoug d = currentNode.parent.children[i];
-            b.onClick.AddListener(() => moveConversationToAflag(d));
+            b.onClick.AddListener(() =>  moveConversationToAflag(d));
             i++;
         }
 }
@@ -454,54 +480,101 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         StopAllCoroutines();
         GuidialougText.text = "";
         Debug.Log("current tree explorting " + currentTree.root.thoughtBubbleText);
-        startAconversation(currentTree);
+       StartCoroutine( startAconversation(currentTree));
     }
-    private void moveConversationToAflag(Dialoug d ) { 
-        StopAllCoroutines();
+
+    private void moveConversationToAflag(Dialoug d)
+    {
+        currentCorutine = StartCoroutine(moveConversationToAflag(d.Pattern));
+    }
+
+    private IEnumerator moveConversationToAflag(string pattern)
+    {
+        Debug.Log("TRIED TO GO HERE");
+       // StopAllCoroutines();
         GuidialougText.text = "";
-        Debug.Log("!!!" +d.Pattern);
-        //TODODO disagreement happens here 
-
-        if (currentCNPC.IsMoralFocus(d.MappedSurfaceValue))//the flag the player presented is the moral focus of the NPC  //TOFRICKENDO changet his to currentnode.sv
-        { //TODO CHANGE THIS INTO NEW METHOD 
-            Debug.Log("!!!" + d.Pattern + "is a moral focus area");
-            StartCoroutine(waitAndPrintAgreement("CNPC conceedes, player selected flag was moral focus of cnpc-- need to add text or pull from a list based on the flag "));      
-        }
-        else //HAPPENS WHEN PPLAYER DOES NOT AGREE WITH NNPC
+        yield return currentCorutine;
+        currentCorutine = StartCoroutine(TypeInDialoug(getPlayerResponceToAflag(currentNode.MappedSurfaceValue, pattern, currentNode.Rating, TypeOfPlayerTexts.disAgreeOnAflag, false)));
+        yield return currentCorutine;
+        currentCorutine = StartCoroutine(TypeInDialoug(currentNode.disagreementText));
+        if (currentNode.Rating.ToLower() == "high")
         {
-            //---
-            Debug.Log(d.Pattern);
-           
-            string schema = "noSchemasFound";
-            if (schema== "noSchemasFound")
-            {
-
-              
-
-                StartCoroutine(WaitAndPrintcompoundedStatments("","CNPC will present a fact for surface value As this does not really map to model well"));
-       
-            }
-            else
-            {
-                StartCoroutine(WaitAndPrintcompoundedStatments(currentCNPC.FatherModel.CurrentArgument.expandedArgument, ""));
-     
-            }
-
-
+            currentCorutine = StartCoroutine(TypeInDialoug(
+           currentCNPC.FatherModel.returnFatherModelArgumetnsText(
+               currentNode.MappedSurfaceValue, currentNode.Pattern, new List<string>() { }, true)));
         }
 
-        //it is currently getting only ther last element - something is wrong with my logioc here ----TODO FROM HERE 
-        //need to clear buttons and texts here - present argument and then movie on 
-        //add logic to check if argues about flag is in conflict with npoc current node befort changing it 
-        //add logic to check if pragmatic or .... 
-        //add logic to check for moral focus arae 
-        //set the currney node! 
-        //  Debug.Log("kicled on flag " + d.Pattern+ "+to fdouble check for the parent "+ d.parent.dialougText); //need to later move back the conversdation or resume from here(i.e. reset the buttions)
+
+        turnOffButton();//new test comment 
+        checkEndConversationAndMove();
+
+
+
+
+
     }
+
+    string getPlayerResponceToAflag(string surfaceValue, string arguedFlag, string rating, TypeOfPlayerTexts playerResponceType, bool isMoralARG) //change this intyo player responce
+    {
+        foreach (PlayerDialoug p in jsn.listOfPlayerDialougs)
+        {
+            if (p.playerSurfaceValue == surfaceValue && p.playerNarrativeElements.rating == rating) //prints approproate high/mid/low if its not the moral focus argument
+            {
+                if (!isMoralARG)
+                {
+                    foreach (PlayerDisAgreementOnAflag f in p.playerNarrativeElements.playerDisAgreementOnAflag)
+                    {
+                        Debug.Log("THE f.flag " + f.flag + "and the patytern is " + arguedFlag);
+
+                        if (f.flag == arguedFlag)
+                        {
+
+                            return "PLAYER SAYS: \n" + f.textValue;
+                        }
+
+                    }
+
+
+                }
+                else // moral 
+                {
+                    Debug.Log("player is refrencing NPC moral focus argument");
+                    if (playerResponceType == TypeOfPlayerTexts.agreement)
+                    {
+
+                        return "PLAYER SAYS: \n" + p.playerNarrativeElements.playerInAgreementText;
+                    }
+                    else //player in disagement of moral focus 
+                    {
+                        //special loop happens here 
+                        if (moralFocusCounter == 0)
+                        {
+                            moralFocusCounter += 1;
+                            return "PLAYER SAYS: \n" + p.playerNarrativeElements.playerMoralDisagreementText[0]; //player can agree or disagree here 
+
+                        }
+                        else
+                        {
+                            moralFocusCounter = 0;
+                            return "PLAYER SAYS: \n" + p.playerNarrativeElements.playerMoralDisagreementText[1];
+
+                        }
+
+                    }
+
+                }
+            }
+        }
+        return "No string found!";
+    }
+
+
+
+
     void converseAboutNextCharacter()
     {
         treeCounter++;
-        startAconversation(allCharacterConversationsTrees[treeCounter]);//the first cgharacter in the list - yhionking about character....etc 
+       StartCoroutine( startAconversation(allCharacterConversationsTrees[treeCounter]));//the first cgharacter in the list - yhionking about character....etc 
 
     }
     Dialoug choseACharacterTree()
@@ -516,7 +589,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         else //we fully explored the tree 
         {
             treeCounter++;
-            startAconversation(currentTree);
+            startAconversation(currentTree); //TODO add startcourutine 
             //go to another character. 
         }
 
@@ -721,7 +794,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                 return returnTopicText(lowVaueOpinions, key, flag, mappedSV);                
         }
     }
-    private string returnpatternToSurfaceMapiing (string pattern)
+    private string returnpatternToSurfaceMapiing (string pattern)// has a bestfriend---- check this me 
     {
         List<string> temporarySurfaceValues = new List<string>();
         string mappedSV = "";
@@ -735,155 +808,6 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         throw new NotImplementedException();
     }
     //HELOME - update below mapping for more than 1 to 1 
-    private string mapToCNPCMoralFactor(string pattern) // make sure those mappings happen where no two opposing cases match --- probably move this into it's own list
-        //this is 1 to 1 - need to change to 1 to many, move into qa nother script and rewrite it.
-    {
-     
-        switch (pattern)
-        {
-            case ("startedAfamilyAtAyoungAge"):
-                if (UnityEngine.Random.Range(0, 6) >= 3)
-                {
-                    return "BTrueTYourHeart";
-                }
-                else
-                {
-                    return "LoveIsForFools";
-                }
-            case ("MovesAlot"):
-                return "LandISWhereThehrtIS";
-            case ("likesToDate"):
-                return "BTrueTYourHeart";
-            case ("SusMovments"):
-                return "NiaeveteIsFiction";
-            case ("selfMadeCube"):
-            case ("selfMadeCubeByDedication"):
-                return "AselfMadeShapeWeAspireToBe";
-            case ("departed"):
-                return "LandISWhereThehrtIS";
-
-            case ("familyPerson"):
-                return "FamilyPerson";
-
-            case ("InLovewithspouseoffriend"):
-            case ("leftFotLoveIntrest"):
-            case ("InLoveWithAnothersspuce"):
-            case ("WillActOnLove"):
-                return "BTrueTYourHeart";
-
-            case ("socialLife"):
-            case ("FriendsAreTheJoyOFlife"):
-            case ("friendwithabestfriendsenemy"):
-            case ("hasAbestFriend"):
-                return "FriendsAreTheJoyOFlife";
-
-            case ("loner"):
-            case ("Loner"):
-                return "Loner";
-
-            case ("IsWealthy"):
-                return "MoneyMaker";
-            case ("IsRichButNotGenrous"):
-            case ("flipflop"):
-                return "CarrerAboveAll";//add another klind of value here 
-
-            case ("WorksInAlcohol"):
-            case "Teetotasler":
-                return "Teetotasler";
-            case ("healerRole"):
-            case ("CustodianJobs"):
-            case ("generalJobs"):
-
-                return "CarrerAboveAll";//change this into supporitng roles...
-            case ("Teachingrole"):
-                return "SchoolIsCool";
-
-            case ("polluterRole"):
-            case ("Enviromentalist"):
-                return "Enviromentalist";
-            case ("riskTaker"):
-            case ("LoverOfRisks"):
-                return "LoverOfRisks";
-            case ("advancedCareer"):
-            case ("hardWorker"):
-            case "CarrerAboveAll":
-                return "CarrerAboveAll";
-            case ("MoneyMaker"):
-                return "SupportingComunities";//change this
-            case ("SchoolIsCool"):
-                return "SchoolIsCool";
-            case ("butcherRole"):
-                return "AnimalLoverAnti";
-            case ("notworkingandrich"):
-                return "MoneyMaker";
-
-            case ("adultbutnotworking"):
-                return "WeLiveForSpontaneity";
-            case ("widowedbutnotgrieving"):
-                if (UnityEngine.Random.Range(0, 6) >= 3)
-                {
-                    return "BTrueTYourHeart";
-                }
-                else
-                {
-                    return "LoveIsForFools";
-                }
-            case ("exploteative"):
-                return "MoneyMaker";
-            case ("graduate"):
-                return "SchoolIsCool";
-            case ("hasalotofenemies"):
-
-                return "Loner";////these do not have anything tied to em, need to update this
-
-            case ("worksWithFamily"):
-                return "FamilyPerson";
-            case ("hiredByAFamilymember"):
-                return "FamilyPerson";
-            case ("getsFiredAlot"):
-                return "suchUncharactristicBehaviorOhMy";
-
-            case ("RetiredYoung"):
-                return "suchUncharactristicBehaviorOhMy";
-            case ("DiedBeforeRetired"):
-                return "MoneyMaker";
-            case ("DevorcedManyPeople"):
-                return "BTrueTYourHeart";
-            case ("marriedSomoneOlder"):
-                return "BTrueTYourHeart";
-            case ("marriedForLifeStyleNotLove"):
-                return "LoveIsForFools";
-            case ("AdventureSeeker"):
-                return "AnAdventureWeSeek";
-            case ("liklyToHelpTheHomeless"):
-                return "SupportingComunities";
-            case ("isolated"):
-                return "Loner";
-            case ("WantsArtAsJob"):
-            case ("ButcherButRegretful"):
-                return "AnimalLoverAnti";
-            case ("TooTrustingOfEnemies"):
-                return "NiaeveteIsFiction";
-            case ("reserved"):
-                return "WeArewNothingIfWeAreNotReserved";
-            case ("conventional"):
-                return "WeArewNothingIfWeAreNotReserved";
-
-            case ("likedToExperinceCulture"):
-                return "ImmagretsWeGetTheJobDone";
-            case ("ArtSeller"):
-          
-            case ("doesNotGiveToThoseInNeed"):
-                return "MoneyMaker";
-            case ("supportsImmigration"):
-                return "ImmagretsWeGetTheJobDone";
-
-            default:
-                return "ImmagretsWeGetTheJobDone";
-                //return "missed a tag SOMEWHERE!" + key;
-
-        }
-    }
 
     // helper functions 
     private void OrgnizeCNPCOpinions()
@@ -922,29 +846,32 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         //currentCNPC.ConvCharacterMoralFactors get the opinion t
         switch (key)
         {
+            case ("startedAfamilyAtAyoungAge"):
+                return "I heard some shapes think that " + character.fullName + " started their family way too early.";
             case ("departed"):
             case "LandISWhereThehrtIS":
                 return "guess what I heard! " + character.fullName + " left town!, ";
             case ("familyPerson"):
-                return "hmm, did you know that  " + character.fullName + " has a "
-                    + "family"; //to do add mcond stat for lar/small ,,,etc family 
+                return "hmm, did you know that  " + character.fullName + " has a " + "big family and that is a lot of young shapes in one household.";
 
             //add more values for the ones below --- seprate core values perhaps?mainly tags are used for flavor text but they fall for one core value 
             case ("InLovewithspouseoffriend"):
-                return "I heard that " + character.fullName + " is in love with thier spouce's friend! ";
+                return "I heard a rumor that" + character.fullName + "is in love with their partner’s friend!";
 
             case ("leftFotLoveIntrest"):
-                return "I heard that " + character.fullName + "cheated on their siginificant cube with " + character.GetLoverName();
-            case ("InLoveWithAnothersspuce"):
-                return "Not juding but I heard that " + character.fullName + "IS IN LOVE WITH ANOTHER CUBE'S spouse ";
+
+               return " I heard that " + character.fullName + "left their significant other with " + character.GetLoverName();
+            case ("InLoveWirhAnothersspouce"):
+                return "I heard from somewhere that " + character.fullName + " is in love with their partner's friend! ";
             case ("WillActOnLove"):
-                return "Not juding but I heard that " + character.fullName + "IS IN LOVE WITH ANOTHER CUBE that is not their spouce, a birdy told me they will act on it ><";
+                return "Not judging but I heard that " + character.fullName + "is chasing after a shape who is not their partner";
+
 
             case ("BTrueTYourHeart"):
             case ("likesToDate"):
-                return "you know," +
-                    " I think people in this town might be too much into love afairs, " +
-                    "you would think we were in a dating sim of some kind..."; 
+                return "Maybe it’s something in the air," +
+                    "I feel like" +character.fullName + 
+                    ", like every shape in this town, is constantly either in love or chasing after someone"; 
 
 
             case ("socialLife"):
@@ -965,14 +892,14 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
             case ("MoneyMaker"):
             case ("IsWealthy"):
-                return " the " + character.fullName +
-                    "are wealthy apparently, like super wealthy.";
+                return "Everyone knows that" + character.fullName + "is very wealthy.";
             case ("IsRichButNotGenrous"):
                 return "the " + character.fullName +
                     "are wealthy apparently, like super wealthy... but also so not the giving type!";
 
 
             case ("WorksInAlcohol"):
+                return "I think" +character.fullName + "sells booze for a living";
             case "Teetotasler":
                 return character.fullName + "wokrs in alchohol, wonder what that field is like";
 
@@ -985,6 +912,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
 
             case ("polluterRole"):
+                return "I think" + character.fullName + "\'s job contributes to pollution\n I think they work as " + character.Lastoccupation; 
             case ("Enviromentalist"):
                 return "You know what I want to talk about!" + character.fullName + "\'s job! \n I think they work as " + character.Lastoccupation;
             case ("selfMadeCube"):
@@ -999,13 +927,15 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
             case ("advancedCareer"):
             case ("hardWorker"):
+                return "Everyone knows that" + character.fullName + "is a hard worker.";
             case "CarrerAboveAll":
                 return "You know what I want to talk about!" + character.fullName + "\'s job! \n moreso, I beliave that cube works so many hours! I htink they are a hardworking cube. ";
 
             case ("Teachingrole"):
             case ("SchoolIsCool"):
-
+                return "I believe" + character.fullName + "works in a school as a." + character.Lastoccupation;
             case ("butcherRole"):
+                return "I think" +character.fullName + "works in a butcher shop.";
             case ("AnimalLover"):
                 return "You know what I want to talk about!" + character.fullName + "\'s job! \n I think they work as " + character.Lastoccupation +"in a farm";
 
@@ -1017,21 +947,23 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
             case ("notworkingandrich"):
             case ("adultbutnotworking"):
-                return "odd, wonder how "+ character.fullName +"manages to live without working...";
+                return "It’s kinda well known that" + character.fullName + "is still not working despite how much older they are getting";
 
             case ("widowedbutnotgrieving"):
-                return "it's weird but shapes said that...\n" + character.fullName + " \n" + "hardly grieved at the loss of their partner";
+                return "It’s probably not my place to say this but this...\n" + character.fullName + " \n" +
+                    "might be moving on a bit too fast from their recently deceased partner";
 
             case ("exploteative"):
-                return "hmmm...\n"+ character.fullName+" \n" + "there are rumors on how sly that shape is, they know how to work a room!";
-
+                return "I heard shapes saying that\n" + character.fullName + " \n" +
+                    "got to where they are now by exploiting and cheating the system… there’s even a rumor that they got their job through nepotism...";
 
 
             case ("graduate"):
-                return "I heard that this cube graduated from a good shapesity ";
+                return "I heard" + character.fullName + "has a fancy degree. Shapes often think that a good degree is the key to a good job and a comfortable life.";
             case ("worksWithFamily"):
+                return "I heard that" +character.fullName + "lives and works with their family.";
             case ("hiredByAFamilymember"):
-                return "apparently, this cube works with their family...";
+                return "I heard from someone that" + character.fullName + "got their job because of their family member";
             case ("getsFiredAlot"):
                 return "oh boy, wonder why this cube always gets canned";
             case ("RetiredYoung"):
@@ -1039,11 +971,12 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             case ("DiedBeforeRetired"):
                 return "it's so sad, but " + character.fullName + "died before retiring";
             case ("DevorcedManyPeople"):
-                return "I wonder why that shape left/devorced so many partners";
+
+                return "This might be rude to say but I have lost count of how many partners" +character.fullName + "had";
             case ("marriedSomoneOlder"):
                 return "they settled down with an older partner";
             case ("marriedForLifeStyleNotLove"):
-                return "rumors say " + character.fullName + "does not love their partner...";
+                return "I hear tha" + character.fullName + "decided to settle down with a partner because of what society expects of them and not out of love.";
             case ("AdventureSeeker"):
                 return "ah to have an adventurur's heart";
             case ("liklyToHelpTheHomeless"):
@@ -1052,11 +985,13 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                 return "this shape does not like to socilize, to a point where theya void other shapes";
             case ("WantsArtAsJob"):
             case ("ButcherButRegretful"):
-                return "this shape is a butcher but rumors say they hate their job";
+                return "I heard" + character.fullName +
+                    "told someone that they can’t sleep at night because of what they do… you know... killing animals. That must weighs heavily";
             case ("TooTrustingOfEnemies"):
                 return "I do not know if" + character.fullName + "is Naieve or too kid but they are too trusting of their enemies";
             case ("conventional"):
-                return  character.fullName + "is conventional, they stick to their --- think of something...";
+                return "Most shapes would describe" + character.fullName +
+                    "as responsible, conventional, and a bit by-the - book or stubborn depending on who you ask.";
             case ("likedToExperinceCulture"):
                 return character.fullName + " likes to experince diffrient cultures";
             case ("ArtSeller"):
@@ -1090,7 +1025,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             case ("BTrueTYourHeart"):
             case ("likesToDate"):
             case ("leftFotLoveIntrest"):
-            case ("InLoveWithAnothersspuce"):
+            case ("InLoveWirhAnothersspouce"):
             case ("WillActOnLove"):
                 return "matters of the heart...";
             case ("socialLife"):
@@ -1222,7 +1157,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             case ("BTrueTYourHeart"):
             case ("likesToDate"):
             case ("leftFotLoveIntrest"):
-            case ("InLoveWithAnothersspuce"):
+            case ("InLoveWirhAnothersspouce"):
             case ("WillActOnLove"):
                 return "what do you think of their love affair";
             case ("socialLife"):
@@ -1287,7 +1222,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
     enum TypeOfPlayerTexts
     {
-        agreement, disagreement
+        agreement, disagreement, disAgreeOnAflag
     }
     TypeOfPlayerTexts typeOfPlayerTexts;
 
@@ -1305,6 +1240,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                         return "PLAYER SAYS: \n"+   p.playerNarrativeElements.playerInAgreementText;
 
                     }
+                  
                     else {
                         return "PLAYER SAYS: \n" +  p.playerNarrativeElements.playerDisagreementText;
                     }
@@ -1342,6 +1278,9 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         return "No string found!";
     }
 
+
+
+ 
     //UI stuff
 
     public void setPlayerName(Text text)
@@ -1394,6 +1333,24 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         }
     }
 
+    void turnOffButton()
+    {
+        foreach (Button b in PlayerButtons)
+        {
+            b.gameObject.SetActive(false);
+            b.interactable = false;
+        }
+    }
+
+    void turnOnButtons()
+    {
+        foreach (Button b in PlayerButtons)
+        {
+            b.gameObject.SetActive(true);
+            b.interactable = true;
+        }
+    }
+
     [SerializeField] bool checkCorutine;
     bool isItTypying()
     {
@@ -1411,19 +1368,11 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         }
         isTyping = false;
         enableClick();
-       // Debug.Log("i am ptring this in the loop");
         yield return new WaitForSeconds(2);
-        //Debug.Log("printging this after two seconds...");
-
         checkCorutine = true;
     }
 
-    IEnumerator waitAndEnableButtons()
-    {
-        yield return currentCorutine;
-        Debug.Log("does this fudging print?");
-        disableorEnablePlayerButtons();
-    }
+
 
     IEnumerator waitAndPrint(Dialoug node)   //so this works... but does nto when in larger scenartio.. 
     {
@@ -1447,10 +1396,11 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         if (!currentTree.FullyExplored)
         {
             yield return currentCorutine;
-            currentCorutine = StartCoroutine(TypeInDialoug(getPlayerResponce(currentNode.MappedSurfaceValue, //TOFRICKENDO changet his to currentnode.sv
-                                currentNode.Rating, TypeOfPlayerTexts.agreement, false))); // need to restrucre this --- 
+            currentCorutine = StartCoroutine(TypeInDialoug(getPlayerResponce(currentNode.MappedSurfaceValue, 
+                                currentNode.Rating, TypeOfPlayerTexts.agreement, false))); 
             yield return currentCorutine;
             currentCorutine = StartCoroutine(TypeInDialoug(text));
+            turnOffButton();//new test comment 
         }
          
 
@@ -1461,7 +1411,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     {
         if (!currentTree.FullyExplored)
         {
-            startAconversation(currentTree);//at 0 
+          StartCoroutine(  startAconversation(currentTree));//at 0 
         }
         else
         {
@@ -1485,7 +1435,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         if (!currentTree.FullyExplored)
         {   
 
-            bool isMf = currentCNPC.IsMoralFocus(currentNode.MappedSurfaceValue); //TOFRICKENDO changet his to currentnode.sv
+            bool isMf = currentCNPC.IsMoralFocus(currentNode.MappedSurfaceValue); 
 
             //basic disagreement 1
             yield return currentCorutine;
@@ -1494,6 +1444,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             yield return currentCorutine;
             currentCorutine = StartCoroutine(TypeInDialoug(text));
             yield return currentCorutine;
+           
             if(currentNode.Rating.ToLower() == "high")
             {
                 currentCorutine = StartCoroutine(TypeInDialoug(
@@ -1501,28 +1452,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                    currentNode.MappedSurfaceValue, currentNode.Pattern, new List<string>() { }, true)));
             }
      
-/*            Debug.Log(isMf + " the moral focus area was true for the flag " + currentCNPC.getMORALfOCUSAREA());
-            currentCNPC.FatherModel.testFM();
-            
-*/
-            /* if (currentNode.Rating == "High") // and the player disagrees 
-            {
-                currentCorutine = StartCoroutine(TypeInDialoug(" you know what... (happens when player disaagrees again (test--)"));//refrence filler before father model 
-                yield return currentCorutine;
-                currentCorutine = StartCoroutine(TypeInDialoug(
-                    currentCNPC.FatherModel.returnFatherModelArgumetnsText
-                                                (currentNode.MappedSurfaceValue, currentNode.Pattern,
-                                                exploredPattensForDefense, true)));
 
-
-
-
-                     ////refrence filler before father model 
-
-                exploredPattensForDefense.Add(currentNode.Pattern);
-                //refrence father model 
-
-            }*/
         }
         checkEndConversationAndMove();
 

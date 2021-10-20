@@ -44,7 +44,7 @@ public class InterestingCharacters : MonoBehaviour
         characterFlags.Add("likesToDate", false);//found 1
         characterFlags.Add("leftFotLoveIntrest", false); //TODO not in this run --- check if this ever gets simulated ? 
         characterFlags.Add("hasAbestFriend", false);//found
-        characterFlags.Add("InLoveWithAnothersspuce", false);//found
+        characterFlags.Add("InLoveWirhAnothersspouce", false);//found
         characterFlags.Add("IsWealthy", false);//found 
         characterFlags.Add("startedAfamilyAtAyoungAge", false);//
         characterFlags.Add("MovesAlot", false);
@@ -58,7 +58,7 @@ public class InterestingCharacters : MonoBehaviour
         characterFlags.Add("marriedSomoneOlder", false);
         characterFlags.Add("marriedForLifeStyleNotLove", false);
         characterFlags.Add("selfMadeCubeByDedication", false);
-       // characterFlags.Add("InLoveWithAnothersspuce", false);
+       // characterFlags.Add("InLoveWirhAnothersspouce", false);
 
     
         //personalityrelated 
@@ -255,7 +255,7 @@ public class InterestingCharacters : MonoBehaviour
             case ("hasAbestFriend"):
                 return "this shape has a best friend";
 
-            case ("InLoveWithAnothersspuce"):
+            case ("InLoveWirhAnothersspouce"):
                 return "this shape is in love with a taken shape...";
 
             case ("IsWealthy"):

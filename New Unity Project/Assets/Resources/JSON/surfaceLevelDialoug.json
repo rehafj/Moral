@@ -251,7 +251,7 @@
 	{
 		"topic": "High_FamilyPerson",
 		"NarrativeElements": {
-			"surfaceOpinionOnTopic": "Don't you think that family is the most important thing? AND we must only do what brings joy and happiness to our family.",
+			"surfaceOpinionOnTopic": "I believe every shape bears a responsibility to their partner and their family. AND we must honor that responsibility by doing what is right by them.",
 			"agreementText": "Family is everything to me. I just love that we think the same!",
 			"disagreementtext": "I'm sad we don't agree! Family is the foundaton of every shape's life and it's incredibly important.",
 			"moralFocusAgreement": "YES! You get it! Family is truly important.",
@@ -261,7 +261,7 @@
 	{
 		"topic": "Mid_FamilyPerson",
 		"NarrativeElements": {
-			"surfaceOpinionOnTopic": "Don't you think that family is the most important thing?",
+			"surfaceOpinionOnTopic": "I believe every shape bears a responsibility to their partner and their family.",
 			"agreementText": "I love that we think the same! A happy family is the key to a happy life!",
 			"disagreementtext": "I don't think so. A happy family is the key to a happy life!",
 			"moralFocusAgreement": "YES! You get it! Family is truly important.",
@@ -271,7 +271,7 @@
 	{
 		"topic": "Low_FamilyPerson",
 		"NarrativeElements": {
-			"surfaceOpinionOnTopic": "Don't you think that family is the most important thing? BUT a shape gotta learn how to be independent.",
+			"surfaceOpinionOnTopic": "I believe every shape bears a responsibility to their partner and their family. BUT a shape also needs to listen to what they want once a while.",
 			"agreementText": "That's a nice thought. Independance is also something I value.",
 			"disagreementtext": "I don't know about that. Independance is also something I value.",
 			"moralFocusAgreement": "",
@@ -461,7 +461,7 @@
 	{
 		"topic": "High_FriendsAreTheJoyOFlife",
 		"NarrativeElements": {
-			"surfaceOpinionOnTopic": "Don't you think life is really about the friends you made along the way? AND the more the merrier! My friends are my treasure.",
+			"surfaceOpinionOnTopic": "Don't you think life is really about the friends you made along the way? AND I believe anything is possible when you have the right shape next to you!",
 			"agreementText": "Yes! Friendship!! We all need good friends in our life.",
 			"disagreementtext": "How could you say that! Great friends make every bad thing disappear.",
 			"moralFocusAgreement": "Friendship is so important because you choose your friends!",
@@ -481,7 +481,7 @@
 	{
 		"topic": "Low_FriendsAreTheJoyOFlife",
 		"NarrativeElements": {
-			"surfaceOpinionOnTopic": "Don't you think life is really about the friends you made along the way? BUT you can't let friendship define who you're.",
+			"surfaceOpinionOnTopic": "Don't you think life is really about the friends you made along the way? BUT you can't let your relationship with others define who you're.",
 			"agreementText": "Neato. I guess you should know who you want to befriend, and to know that, you need you know yourself.",
 			"disagreementtext": "I don't think so. I guess you should know who you want to befriend, and to know that, you need you know yourself.",
 			"moralFocusAgreement": "",
@@ -581,7 +581,7 @@
 	{
 		"topic": "High_suchUncharactristicBehaviorOhMy",
 		"NarrativeElements": {
-			"surfaceOpinionOnTopic": "I find shapes who want to stand out to be distasteful. AND I think they do it for the attention. How sad.",
+			"surfaceOpinionOnTopic": "I believe there is a reason that normal things and behaviors are normal for a reason. AND we should think and behave in ways that are normal",
 			"agreementText": "I'm pleased to hear that. You know what's right and wrong.",
 			"disagreementtext": "Oh no? I'm sad to hear that.",
 			"moralFocusAgreement": "Yeah shapes who want to be rebels are just sad.",
@@ -591,7 +591,7 @@
 	{
 		"topic": "Mid_suchUncharactristicBehaviorOhMy",
 		"NarrativeElements": {
-			"surfaceOpinionOnTopic": "I find shapes who want to stand out to be distasteful.",
+			"surfaceOpinionOnTopic": "I believe there is a reason that normal things and behaviors are normal for a reason.",
 			"agreementText": "You know how I feel. I think normal behaviors and things are normal for a reason. They're good for us.",
 			"disagreementtext": "That's interesting... I think normal behaviors and things are normal for a reason. They're good for us.",
 			"moralFocusAgreement": "Yeah shapes who want to be rebels are just sad.",
@@ -601,7 +601,7 @@
 	{
 		"topic": "Low_suchUncharactristicBehaviorOhMy",
 		"NarrativeElements": {
-			"surfaceOpinionOnTopic": "I find shapes who want to stand out to be distasteful. BUT I guess we all need to find a way to express ourselves.",
+			"surfaceOpinionOnTopic": "I believe there is a reason that normal things and behaviors are normal for a reason. BUT I guess there can be grey areas.",
 			"agreementText": "Yes. I think self expression is good as long as you don't hurt others.",
 			"disagreementtext": "I can't agree on that. I think self expression is good as long as you don't hurt others.",
 			"moralFocusAgreement": "",
@@ -611,7 +611,7 @@
 	{
 		"topic": "High_WeLiveForSpontaneity",
 		"NarrativeElements": {
-			"surfaceOpinionOnTopic": "Don't you see life is just a collection of great stories? So say yes to life! AND you can't say you truly lived if you never did something spontaneous!",
+			"surfaceOpinionOnTopic": "You never know what life will throw at you, so why not just say yes to life. AND if things get a bit out of hand that’s okay too, which is just part of life.",
 			"agreementText": "Right on! Say yes to life! You only live once after all.",
 			"disagreementtext": "Yeah... I'm not with you on this. Life is so short so do as much as you can!",
 			"moralFocusAgreement": "Really awesome my friend! Seize the moments!",
@@ -621,7 +621,7 @@
 	{
 		"topic": "Mid_WeLiveForSpontaneity",
 		"NarrativeElements": {
-			"surfaceOpinionOnTopic": "Don't you see life is just a collection of great stories? So say yes to life!",
+			"surfaceOpinionOnTopic": "You never know what life will throw at you, so why not just say yes to life.",
 			"agreementText": "Right on! Great things happen when you say yes!",
 			"disagreementtext": "I'm not with you on this. Great things happen when you say yes!",
 			"moralFocusAgreement": "Really awesome my friend! Seize the moments!",
@@ -631,7 +631,7 @@
 	{
 		"topic": "Low_WeLiveForSpontaneity",
 		"NarrativeElements": {
-			"surfaceOpinionOnTopic": "Don't you see life is just a collection of great stories? So say yes to life! BUT sometimes a little planning can help you get the most out of the experience.",
+			"surfaceOpinionOnTopic": "You never know what life will throw at you, so why not just say yes to life. BUT I guess using one’s best judgement when facing those situations is a good idea.",
 			"agreementText": "That's nice. You don't have to always say yes. Just try to follow the flow of life once a while!",
 			"disagreementtext": "I don't think you're right about this. You don't have to always say yes. Just try to follow the flow of life once a while!",
 			"moralFocusAgreement": "",

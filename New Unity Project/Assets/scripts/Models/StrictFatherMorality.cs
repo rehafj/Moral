@@ -356,7 +356,7 @@ public class StrictFatherMorality : MoralModels
                     {
                         ModelCounter--; matchingPattern = d.Pattern; schemaName = "lowMoralWholeness";// also true as self dispiince here  // along th elines of it's their work they shouild do with it as they see fir 
                     }
-                    else if (d.Pattern == "InLoveWithAnothersspuce")
+                    else if (d.Pattern == "InLoveWirhAnothersspouce")
                     {
                         ModelCounter--; matchingPattern = d.Pattern; schemaName = "lowMoralboundaries";// also true as self dispiince here  // along th elines of it's their work they shouild do with it as they see fir 
                     }
@@ -376,7 +376,7 @@ public class StrictFatherMorality : MoralModels
                 }
 
                 break;
-            case ("InLoveWithAnothersspuce"):
+            case ("InLoveWirhAnothersspouce"):
                 schemaName = "lowMoralboundaries";
 
                 break;
@@ -620,7 +620,7 @@ public class StrictFatherMorality : MoralModels
                               {
                                   ModelCounter--; matchingPattern = d.Pattern; schemaName = "lowMoralWholeness";// also true as self dispiince here  // along th elines of it's their work they shouild do with it as they see fir 
                               }
-                              else if (d.Pattern == "InLoveWithAnothersspuce")
+                              else if (d.Pattern == "InLoveWirhAnothersspouce")
                               {
                                   ModelCounter--; matchingPattern = d.Pattern; schemaName = "lowMoralboundaries";// also true as self dispiince here  // along th elines of it's their work they shouild do with it as they see fir 
                               }
@@ -640,7 +640,7 @@ public class StrictFatherMorality : MoralModels
                           }
 
                           break;
-                      case ("InLoveWithAnothersspuce"):
+                      case ("InLoveWirhAnothersspouce"):
                           schemaName = "lowMoralboundaries";
 
                           break;

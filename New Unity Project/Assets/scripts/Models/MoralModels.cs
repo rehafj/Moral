@@ -25,7 +25,7 @@ public class MoralModels : MonoBehaviour
     List<string> BTrueTYourHeart_CoreValues = new List<string>() //else are the othervalues...
     {
         "InLovewithspouseoffriend", "widowedbutnotgrieving"
-        ,"likesToDate","leftFotLoveIntrest","InLoveWithAnothersspuce",
+        ,"likesToDate","leftFotLoveIntrest","InLoveWirhAnothersspouce",
         "startedAfamilyAtAyoungAge","DevorcedManyPeople","marriedForLifeStyleNotLove",
         "WillActOnLove"
     };
@@ -33,7 +33,7 @@ public class MoralModels : MonoBehaviour
     List<string> LoveIsForFools_CoreValues = new List<string>() //else are the othervalues...
     {
         "InLovewithspouseoffriend", "widowedbutnotgrieving",
-        "likesToDate","leftFotLoveIntrest","InLoveWithAnothersspuce",
+        "likesToDate","leftFotLoveIntrest","InLoveWirhAnothersspouce",
         "startedAfamilyAtAyoungAge","DevorcedManyPeople","marriedForLifeStyleNotLove",
         "WillActOnLove"
     };
@@ -111,7 +111,7 @@ public class MoralModels : MonoBehaviour
     List<string> LoverOfRisks_CoreValues = new List<string>() //else are the othervalues...
     {
         "InLovewithspouseoffriend","hasalotofenemies",
-        "InLoveWithAnothersspuce","MovesAlot","RetiredYoung","WillActOnLove","AdventureSeeker","TooTrustingOfEnemies",
+        "InLoveWirhAnothersspouce","MovesAlot","RetiredYoung","WillActOnLove","AdventureSeeker","TooTrustingOfEnemies",
         "flipflop","DiedBeforeRetired","riskTaker"
 
     };
@@ -154,7 +154,7 @@ public class MoralModels : MonoBehaviour
     List<string> suchUncharactristicBehaviorOhMy_CoreValues = new List<string>()
     {
         "InLovewithspouseoffriend","hasalotofenemies","friendwithabestfriendsenemy","exploteative","widowedbutnotgrieving"
-        ,"adultbutnotworking","loner","InLoveWithAnothersspuce","MovesAlot","getsFiredAlot","SusMovments","RetiredYoung","DevorcedManyPeople",
+        ,"adultbutnotworking","loner","InLoveWirhAnothersspouce","MovesAlot","getsFiredAlot","SusMovments","RetiredYoung","DevorcedManyPeople",
         "TooTrustingOfEnemies","conventional","nepotism","flipflop"
 
     };
@@ -168,7 +168,7 @@ public class MoralModels : MonoBehaviour
     };
     List<string> AnAdventureWeSeek_CoreValues = new List<string>()
     {
-        "InLovewithspouseoffriend","hasalotofenemies", "likesToDate","InLoveWithAnothersspuce","MovesAlot","riskTaker",
+        "InLovewithspouseoffriend","hasalotofenemies", "likesToDate","InLoveWirhAnothersspouce","MovesAlot","riskTaker",
         "RetiredYoung","DevorcedManyPeople","WillActOnLove","AdventureSeeker","TooTrustingOfEnemies","likedToExperinceCulture","flipflop"
 
 
@@ -177,7 +177,7 @@ public class MoralModels : MonoBehaviour
     List<string> NiaeveteIsFiction_CoreValues = new List<string>() {
 
         "hasalotofenemies","friendwithabestfriendsenemy",
-        "InLoveWithAnothersspuce",
+        "InLoveWirhAnothersspouce",
         "SusMovments","DevorcedManyPeople","WillActOnLove","supportsImmigration",
         "liklyToHelpTheHomeless","TooTrustingOfEnemies","doesNotGiveToThoseInNeed"
     };
@@ -187,7 +187,7 @@ public class MoralModels : MonoBehaviour
             "WorksInAlcohol","healerRole","polluterRole","riskTaker","butcherRole",
              "Teachingrole","advancedCareer","hardWorker","CustodianJobs","generalJobs","selfMadeCubeByDedication" };
     List<string> Shapesarenothingifnotsocial_CoreValues = new List<string>()
-        {"InLovewithspouseoffriend","socialLife","friendwithabestfriendsenemy","exploteative","hasAbestFriend","InLoveWithAnothersspuce","MovesAlot",
+        {"InLovewithspouseoffriend","socialLife","friendwithabestfriendsenemy","exploteative","hasAbestFriend","InLoveWirhAnothersspouce","MovesAlot",
             "DevorcedManyPeople","isolated",
             "reserved"
 
@@ -198,7 +198,7 @@ public class MoralModels : MonoBehaviour
 
         };
     List<string> WeArewNothingIfWeAreNotReserved_CoreValues = new List<string>()
-        {"likesToDate","InLoveWithAnothersspuce","startedAfamilyAtAyoungAge","SusMovments","DevorcedManyPeople","marriedForLifeStyleNotLove",
+        {"likesToDate","InLoveWirhAnothersspouce","startedAfamilyAtAyoungAge","SusMovments","DevorcedManyPeople","marriedForLifeStyleNotLove",
             "IsRichButNotGenrous","liklyToHelpTheHomeless","reserved","TooTrustingOfEnemies","doesNotGiveToThoseInNeed","supportsImmigration",
             "hasalotofenemies","InLovewithspouseoffriend"
 
@@ -382,7 +382,7 @@ public class MoralModels : MonoBehaviour
 //
 
 //        currentCorutine = StartCoroutine(TypeInDialoug(getPlayerResponce(mapToCNPCMoralFactor(currentNode.Pattern), //TOFRICKENDO changet his to currentnode.sv
-// InLoveWithAnothersspuce
+// InLoveWirhAnothersspouce
 
 //*
 
@@ -394,14 +394,14 @@ public class MoralModels : MonoBehaviour
 List<string> BTrueTYourHeart_CoreValues = new List<string>() //else are the othervalues...
     {
         "InLovewithspouseoffriend", "widowedbutnotgrieving",
-        "loner","likesToDate","leftFotLoveIntrest","InLoveWithAnothersspuce",
+        "loner","likesToDate","leftFotLoveIntrest","InLoveWirhAnothersspouce",
         "startedAfamilyAtAyoungAge","DevorcedManyPeople","marriedForLifeStyleNotLove",
         "WillActOnLove","conventional","reserved"
     };
 List<string> LoveIsForFools_CoreValues = new List<string>() //else are the othervalues...
     {
         "InLovewithspouseoffriend", "widowedbutnotgrieving",
-        "loner","likesToDate","leftFotLoveIntrest","InLoveWithAnothersspuce",
+        "loner","likesToDate","leftFotLoveIntrest","InLoveWirhAnothersspouce",
         "startedAfamilyAtAyoungAge","DevorcedManyPeople","marriedForLifeStyleNotLove",
         "WillActOnLove","conventional","reserved"
     };
@@ -480,7 +480,7 @@ List<string> SupportingComunities_CoreValues = new List<string>() //else are the
 List<string> LoverOfRisks_CoreValues = new List<string>() //else are the othervalues...
     {
         "InLovewithspouseoffriend","hasalotofenemies","friendwithabestfriendsenemy",
-        "InLoveWithAnothersspuce","MovesAlot","RetiredYoung","WillActOnLove","AdventureSeeker","TooTrustingOfEnemies",
+        "InLoveWirhAnothersspouce","MovesAlot","RetiredYoung","WillActOnLove","AdventureSeeker","TooTrustingOfEnemies",
         "flipflop","WorksInAlcohol","riskTaker"
 
     };
@@ -521,7 +521,7 @@ List<string> ProHiringFamily_CoreValues = new List<string>()
 List<string> suchUncharactristicBehaviorOhMy_CoreValues = new List<string>()
     {
         "InLovewithspouseoffriend","hasalotofenemies","friendwithabestfriendsenemy","exploteative","widowedbutnotgrieving"
-        ,"adultbutnotworking","loner","InLoveWithAnothersspuce","MovesAlot","getsFiredAlot","SusMovments","RetiredYoung","DevorcedManyPeople",
+        ,"adultbutnotworking","loner","InLoveWirhAnothersspouce","MovesAlot","getsFiredAlot","SusMovments","RetiredYoung","DevorcedManyPeople",
         "TooTrustingOfEnemies","conventional","nepotism","flipflop"
 
     };
@@ -534,7 +534,7 @@ List<string> WeLiveForSpontaneity_CoreValues = new List<string>()
     };
 List<string> AnAdventureWeSeek_CoreValues = new List<string>()
     {
-        "InLovewithspouseoffriend","hasalotofenemies", "likesToDate","InLoveWithAnothersspuce","MovesAlot","riskTaker",
+        "InLovewithspouseoffriend","hasalotofenemies", "likesToDate","InLoveWirhAnothersspouce","MovesAlot","riskTaker",
         "RetiredYoung","DevorcedManyPeople","WillActOnLove","AdventureSeeker","TooTrustingOfEnemies","likedToExperinceCulture","supportsImmigration","flipflop"
 
 
@@ -542,7 +542,7 @@ List<string> AnAdventureWeSeek_CoreValues = new List<string>()
     };
 List<string> NiaeveteIsFiction_CoreValues = new List<string>() {
 
-        "InLovewithspouseoffriend","hasalotofenemies","friendwithabestfriendsenemy","InLoveWithAnothersspuce",
+        "InLovewithspouseoffriend","hasalotofenemies","friendwithabestfriendsenemy","InLoveWirhAnothersspouce",
         "SusMovments","DevorcedManyPeople","WillActOnLove","supportsImmigration",
         "liklyToHelpTheHomeless","TooTrustingOfEnemies","doesNotGiveToThoseInNeed"
     };
@@ -552,7 +552,7 @@ List<string> AselfMadeShapeWeAspireToBe_CoreValues = new List<string>()
             "WorksInAlcohol","healerRole","polluterRole","riskTaker","butcherRole",
              "Teachingrole","advancedCareer","hardWorker","CustodianJobs","generalJobs","selfMadeCubeByDedication" };
 List<string> Shapesarenothingifnotsocial_CoreValues = new List<string>()
-        {"InLovewithspouseoffriend","socialLife","friendwithabestfriendsenemy","exploteative","hasAbestFriend","InLoveWithAnothersspuce","MovesAlot",
+        {"InLovewithspouseoffriend","socialLife","friendwithabestfriendsenemy","exploteative","hasAbestFriend","InLoveWirhAnothersspouce","MovesAlot",
             "DevorcedManyPeople","isolated",
             "reserved"
 
@@ -563,7 +563,7 @@ List<string> AntiFaviortisum_CoreValues = new List<string>()
 
         };
 List<string> WeArewNothingIfWeAreNotReserved_CoreValues = new List<string>()
-        {"likesToDate","InLoveWithAnothersspuce","startedAfamilyAtAyoungAge","worksWithFamily","hiredByAFamilymember","getsFiredAlot","SusMovments","DevorcedManyPeople","marriedForLifeStyleNotLove",
+        {"likesToDate","InLoveWirhAnothersspouce","startedAfamilyAtAyoungAge","worksWithFamily","hiredByAFamilymember","getsFiredAlot","SusMovments","DevorcedManyPeople","marriedForLifeStyleNotLove",
             "IsRichButNotGenrous","liklyToHelpTheHomeless","reserved","TooTrustingOfEnemies","doesNotGiveToThoseInNeed","supportsImmigration","conventional",
             "hasalotofenemies","InLovewithspouseoffriend"
 

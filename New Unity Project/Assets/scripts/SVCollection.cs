@@ -9,12 +9,12 @@ public  class SVCollection : MonoBehaviour
    public static List<SValues> allSurfaceValues = new List<SValues>() {
 
     new SValues("BTrueTYourHeart", new List<string> {"InLovewithspouseoffriend", "widowedbutnotgrieving",
-        "likesToDate","leftFotLoveIntrest","InLoveWithAnothersspuce",
+        "likesToDate","leftFotLoveIntrest","InLoveWirhAnothersspouce",
         "startedAfamilyAtAyoungAge","DevorcedManyPeople","marriedForLifeStyleNotLove",
         "WillActOnLove","marriedSomoneOlder"} ),
 
     new SValues("LoveIsForFools", new List<string> {"InLovewithspouseoffriend", "widowedbutnotgrieving",
-        "leftFotLoveIntrest","InLoveWithAnothersspuce",
+        "leftFotLoveIntrest","InLoveWirhAnothersspouce",
         "startedAfamilyAtAyoungAge","DevorcedManyPeople","marriedForLifeStyleNotLove",
         "WillActOnLove","marriedSomoneOlder"} ),
 
@@ -24,8 +24,7 @@ public  class SVCollection : MonoBehaviour
     new SValues("Enviromentalist", new List<string> {"polluterRole","Enviromentalist"} ),
     new SValues("EnviromentalistAnti", new List<string> { "IsWealthy","polluterRole"} ),
 
-    new SValues("AnimalLover", new List<string> { "ButcherButRegretful"
-        ,"butcherRole"} ),
+    new SValues("AnimalLover", new List<string> { "ButcherButRegretful" ,"butcherRole"} ),
 
     new SValues("AnimalLoverAnti", new List<string> {"ButcherButRegretful"
        ,"butcherRole"} ),
@@ -63,8 +62,6 @@ public  class SVCollection : MonoBehaviour
 
 
     new SValues("Loner", new List<string> {"loner" ,"isolated", "Loner","hasalotofenemies"} ),
-
-
     new SValues("youthAreTheFuture", new List<string> {"familyPerson","DiedBeforeRetired","conventional","Teachingrole" }),
     new SValues("ProHiringFamily", new List<string> {  "worksWithFamily", "hiredByAFamilymember", "nepotism"} ),
 
@@ -93,7 +90,7 @@ public  class SVCollection : MonoBehaviour
             if (sv.coreValues.Contains(pattern))
             {
                 listOfCompatibleSV.Add(sv.svName);
-               // Debug.Log("the pattern" + pattern + " was compatible with " + sv.svName);
+               Debug.Log("the pattern" + pattern + " was compatible with " + sv.svName);
 
             } 
         }
@@ -102,7 +99,7 @@ public  class SVCollection : MonoBehaviour
             listOfCompatibleSV.Add("suchUncharactristicBehaviorOhMy");
 
             //debugging --- changing it here for now, change this later 
-            if(pattern== "InLoveWithAnothersspuce")
+            if(pattern== "InLoveWirhAnothersspouce")
             Debug.Log("THIS PATTERN HAD NO MAPPING " + pattern);
         }
         return listOfCompatibleSV;
