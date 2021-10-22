@@ -114,8 +114,8 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     {
         if (currentCorutine != null) { yield return currentCorutine; }
         
-        Dialoug introductionNode = new Dialoug(" introduction", " Player says: \n hey there Mr. " + currentCNPC.ConversationalNpcName +
-       " \n welcome to AB. I persume you are here for an argument?", "graduate");
+        Dialoug introductionNode = new Dialoug(" introduction", " Player says: \nalong the lines of welcome...." + currentCNPC.ConversationalNpcName +
+       " \n updated context text will start here  ", "graduate");
         yield return new WaitForSeconds(delay);
        //move this into its file 
         //conversedAboutCharectersList = sortCharactersToBringUp(bgchar.GetFiltredCharerList());//fltred list of characters (with 5+ flags)
@@ -849,6 +849,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             case ("startedAfamilyAtAyoungAge"):
                 return "I heard some shapes think that " + character.fullName + " started their family way too early.";
             case ("departed"):
+                return "I hear that " +character.fullName + " has left town to build a life elsewhere. Some shapes are very touchy about those who leaves their community.";
             case "LandISWhereThehrtIS":
                 return "guess what I heard! " + character.fullName + " left town!, ";
             case ("familyPerson"):
@@ -866,36 +867,37 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             case ("WillActOnLove"):
                 return "Not judging but I heard that " + character.fullName + "is chasing after a shape who is not their partner";
 
-
+            case ("nepotism"):
+                return "Everyone says that " + character.fullName + " got to where they are through nepotism.";
+            case ("likedToExperinceCulture"):
+                return "Oh yeah. If you ever had a conversation with " + character.fullName + ", you will find out how many places they’ve visited and how many different cultures they’ve experienced. They never seems to be home.";
             case ("BTrueTYourHeart"):
             case ("likesToDate"):
                 return "Maybe it’s something in the air," +
                     "I feel like" +character.fullName + 
-                    ", like every shape in this town, is constantly either in love or chasing after someone"; 
+                    ", like every shape in this town, is constantly either in love or chasing after someone";
 
 
             case ("socialLife"):
+                return character.fullName + " has a lot of friends! They are really popular!";
             case "FriendsAreTheJoyOFlife":
                 return "oh oh " + playerName + "how is  " + character.fullName + "so popular!\n they sure have a lot of friends!"; // or they have a lot of fgriends 
 
             case ("friendwithabestfriendsenemy"):
-                return "you know what is weird? " + playerName + "? \n   " + character.fullName + " is friends with thier friend's enemy :0"; // or they have a lot of fgriends 
-
+                return "I heard that " + character.fullName + " is friendly with their best friend’s enemy… That’s a bit awkward, to say the least.";
             case ("hasAbestFriend"):
-                return character.fullName + "'s best friend sure loves them! must be nice to have a best friend"; // or they have a lot of fgriends 
+                return "Whenever I see " + character.fullName + ", they are always hanging out with their best friend."; // or they have a lot of fgriends 
 
             case ("loner"):
-                return "I wonder why " + character.fullName + "lives alone...";
+                return character.fullName + " is always alone whenever I see them. I guess they like to keep to themselves. I heard some shapes call them a bit sus. Haha.";
             case ("hasalotofenemies"):
-                return "I wonder why " + character.fullName + "has alot of enemies... ///assigned to firinship is the joy of life";
-
+                return "I don’t know if " + character.fullName + " has any friends. But I do know a lot of shapes who see them as an enemy.";
 
             case ("MoneyMaker"):
             case ("IsWealthy"):
                 return "Everyone knows that" + character.fullName + "is very wealthy.";
             case ("IsRichButNotGenrous"):
-                return "the " + character.fullName +
-                    "are wealthy apparently, like super wealthy... but also so not the giving type!";
+                return "Everyone knows that " + character.fullName + " is rich but is very stingy with money. Maybe that’s how they massed their fortune.";
 
 
             case ("WorksInAlcohol"):
@@ -904,12 +906,13 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                 return character.fullName + "wokrs in alchohol, wonder what that field is like";
 
             case ("flipflop"):
-                return "they are so indecisive when it comes to their career! ";
+                return "I feel like every time I talked to someone about  " + character.fullName + " I found out they are doing a different job.";
 
             case ("healerRole"):
             case ("CustodianJobs"):
+                return "I think" + character.fullName + " work as " + character.Lastoccupation; ;
             case ("SupportingComunities"):
-
+                return "text about supporting comunities.." ;
 
             case ("polluterRole"):
                 return "I think" + character.fullName + "\'s job contributes to pollution\n I think they work as " + character.Lastoccupation; 
@@ -917,20 +920,22 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                 return "You know what I want to talk about!" + character.fullName + "\'s job! \n I think they work as " + character.Lastoccupation;
             case ("selfMadeCube"):
             case ("selfMadeCubeByDedication"):
-                return " rumor says " + character.fullName + "came from nothing, they actually managed to advance in their carreers by dedication alone";
-
+                return "Everyone can’t shut up about how successful and hard-working" + character.fullName + "is because they build their career from the ground up.";
             case ("riskTaker"):
             case ("LoverOfRisks"):
+                return "Yeah let me tell you how much of a risktaker " + character.fullName + " is! They always take the riskest option in everything, from jobs to where they live.";
 
             case ("generalJobs"):
-
+                return "I think" + character.fullName + " work as " + character.Lastoccupation; ;
 
             case ("advancedCareer"):
+                return "I heard that  " + character.fullName + " just got a promotion. That means more money and a better title.";
             case ("hardWorker"):
                 return "Everyone knows that" + character.fullName + "is a hard worker.";
             case "CarrerAboveAll":
                 return "You know what I want to talk about!" + character.fullName + "\'s job! \n moreso, I beliave that cube works so many hours! I htink they are a hardworking cube. ";
-
+            case ("getsFiredAlot"):
+                return "It’s not very kind to say this but I heard " + character.fullName + " can’t hold a job. I wonder if it’s due to their work ethics or just a lack of enthusiasm for work.";
             case ("Teachingrole"):
             case ("SchoolIsCool"):
                 return "I believe" + character.fullName + "works in a school as a." + character.Lastoccupation;
@@ -940,10 +945,11 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                 return "You know what I want to talk about!" + character.fullName + "\'s job! \n I think they work as " + character.Lastoccupation +"in a farm";
 
             case ("MovesAlot"):
-                return "apparently this shape never settles down, they sure moved alot ";
-                
+                return "Oh yeah, " + character.fullName + "moves a lot, like a lot. Some shapes call that adventurous and some call that lack of sense of belonging.";
+
+
             case ("SusMovments"):
-                return "shapes whisper that  " + character.fullName + " is quite odd";
+                return "The word on the streets is that " + character.fullName + " is a bit sus. They keeps to themselves, moves a lot, and hard to talk to. You never know what they’re up to.";
 
             case ("notworkingandrich"):
             case ("adultbutnotworking"):
@@ -964,12 +970,11 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                 return "I heard that" +character.fullName + "lives and works with their family.";
             case ("hiredByAFamilymember"):
                 return "I heard from someone that" + character.fullName + "got their job because of their family member";
-            case ("getsFiredAlot"):
-                return "oh boy, wonder why this cube always gets canned";
+
             case ("RetiredYoung"):
-                return "how DID They retire that young!";//maybe add age here 
+                return "Yeah didn’t " + character.fullName + "retire super early? Maybe they made enough money? Or they could be trying to start something new?";//maybe add age here 
             case ("DiedBeforeRetired"):
-                return "it's so sad, but " + character.fullName + "died before retiring";
+                return "It’s not very nice to speak ill of the dead but " + character.fullName + " died before they could retire. Really makes you think about what their life could’ve been if they had done a different job or cared more about things other than work. Or maybe they liked their job and that’s what made them happy. Who can really say.";
             case ("DevorcedManyPeople"):
 
                 return "This might be rude to say but I have lost count of how many partners" +character.fullName + "had";
@@ -978,30 +983,30 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             case ("marriedForLifeStyleNotLove"):
                 return "I hear tha" + character.fullName + "decided to settle down with a partner because of what society expects of them and not out of love.";
             case ("AdventureSeeker"):
-                return "ah to have an adventurur's heart";
+                return "So I’ve heard that " + character.fullName + " is a thrill-seeker, they are always on the hunt for the next adventure instead of… you know... doing what other shapes do.";
             case ("liklyToHelpTheHomeless"):
-                return "I heard that this shape likes to volenteer at homeless shelters ";
+                return "I bet if you asked anyone in this town, they will tell you that" +character.fullName +
+                    "has a good heart. I heard they always help out those who are less fortunate";
             case ("isolated"):
-                return "this shape does not like to socilize, to a point where theya void other shapes";
+                return "I know " + character.fullName + " lives alone and I’ve never seen them with anyone… I wonder what they do all day. A bit of out of the ordinary to say the least.";
             case ("WantsArtAsJob"):
             case ("ButcherButRegretful"):
                 return "I heard" + character.fullName +
                     "told someone that they can’t sleep at night because of what they do… you know... killing animals. That must weighs heavily";
             case ("TooTrustingOfEnemies"):
-                return "I do not know if" + character.fullName + "is Naieve or too kid but they are too trusting of their enemies";
+                return character.fullName + " seems very naive and a bit too trusting… I sometimes fear that they’re too quick to trust.";
             case ("conventional"):
                 return "Most shapes would describe" + character.fullName +
                     "as responsible, conventional, and a bit by-the - book or stubborn depending on who you ask.";
-            case ("likedToExperinceCulture"):
-                return character.fullName + " likes to experince diffrient cultures";
+           
             case ("ArtSeller"):
             case ("doesNotGiveToThoseInNeed"):
-                return "you know, despite " + character.fullName + "being wealthy, they do not donate";
+                return "Well… this might be a bit mean to say but I hear that" + character.fullName + " is quite... independent, some people call that selfish but that’s not my word.";
             case ("supportsImmigration"):
-                return character.fullName + " is often known for their support of immigration";
+                return "Oh yeah, " + character.fullName + " is very vocal about supporting outsiders moving and working in our city.";
             case ("reserved"):
           
-                return "NOTAUTHORED";
+                return "If you want to get to know " + character.fullName + ", it’s gonna take some time. They open up very slowly.";
             default:
                 return "missed a tag SOMEWHERE!" + key + "was not authored";
 

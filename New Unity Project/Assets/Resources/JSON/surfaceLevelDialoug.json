@@ -551,7 +551,7 @@
 	{
 		"topic": "High_ProHiringFamily",
 		"NarrativeElements": {
-			"surfaceOpinionOnTopic": "You know, you can only trust your blood to know what's best for the family business. AND that's how you build and keep a family business.",
+			"surfaceOpinionOnTopic": "Do you know what I think it’s not as big of a deal as most shapes make it out to be? Nepotism. It’s only normal to help out shapes you know and love. AND working with people you already trust and love is just a smart move. ",
 			"agreementText": "That's right! I'm glad you see it that way. You gotta look out for your family.",
 			"disagreementtext": "You think trusting  blood is a bad idea? How could you think that! Family comes first!",
 			"moralFocusAgreement": "Yeah! Nepotism is really not that bad, haha.",
@@ -561,7 +561,7 @@
 	{
 		"topic": "Mid_ProHiringFamily",
 		"NarrativeElements": {
-			"surfaceOpinionOnTopic": "You know, you can only trust your blood to know what's best for the family business.",
+			"surfaceOpinionOnTopic": "Do you know what I think it’s not as big of a deal as most shapes make it out to be? Nepotism. It’s only normal to help out shapes you know and love.",
 			"agreementText": "That's right! Your family should always come first.",
 			"disagreementtext": "That's wrong. Your family should always come first.",
 			"moralFocusAgreement": "Yeah! Nepotism is really not that bad, haha.",
@@ -571,7 +571,7 @@
 	{
 		"topic": "Low_ProHiringFamily",
 		"NarrativeElements": {
-			"surfaceOpinionOnTopic": "You know, you can only trust your blood to know what's best for the family business. BUT I guess there is value in outside perspective.",
+			"surfaceOpinionOnTopic": "Do you know what I think it’s not as big of a deal as most shapes make it out to be? Nepotism. It’s only normal to help out shapes you know and love. BUT I guess there is value in creating your own path.",
 			"agreementText": "Yes. I don't think hiring family memebers is a bad thing as long as you also hire shapes who can do the job right.",
 			"disagreementtext": "No. I don't think hiring family memebers is a bad thing as long as you also hire shapes who can do the job right.",
 			"moralFocusAgreement": "",
@@ -731,7 +731,7 @@
 	{
 		"topic": "High_WeArewNothingIfWeAreNotReserved",
 		"NarrativeElements": {
-			"surfaceOpinionOnTopic": "Traditions are traditions because they stood the test of time. AND we must preserve them as they are the pillars of our society.",
+			"surfaceOpinionOnTopic": "I see no wrong in taking our time to get to know shapes before we put our trust in them. AND there’s nothing wrong in trusting no one at all. ",
 			"agreementText": "Wonderful! I'm very please to hear you say that. Being reserved is a great attitude in life.",
 			"disagreementtext": "Oh no? I'm very disappointed to hear that. Being reserved is a great attitude in life.",
 			"moralFocusAgreement": "That's really wonderful! I'm so glad you see the importance of tradition.",
@@ -741,7 +741,7 @@
 	{
 		"topic": "Mid_WeArewNothingIfWeAreNotReserved",
 		"NarrativeElements": {
-			"surfaceOpinionOnTopic": "Traditions are traditions because they stood the test of time.",
+			"surfaceOpinionOnTopic": "I see no wrong in taking our time to get to know shapes before we put our trust in them.",
 			"agreementText": "Wonderful! That's good to hear. We all need traditions to guide us.",
 			"disagreementtext": "Yeah... I'm not with you on this. We all need traditions to guide us.",
 			"moralFocusAgreement": "That's really wonderful! I'm so glad you see the importance of tradition.",
@@ -751,7 +751,7 @@
 	{
 		"topic": "Low_WeArewNothingIfWeAreNotReserved",
 		"NarrativeElements": {
-			"surfaceOpinionOnTopic": "Traditions are traditions because they stood the test of time. BUT I guess we also make adjustments to make sure every shape can benefit from those traditions.",
+			"surfaceOpinionOnTopic": "Traditions are traditions because they stood the test of time. BUT I guess we have to learn to trust shapes ",
 			"agreementText": "That's good to hear. I think traditions are good as long as they evolve with time.",
 			"disagreementtext": "I don't think you're right. I think traditions are good as long as they evolve with time.",
 			"moralFocusAgreement": "",

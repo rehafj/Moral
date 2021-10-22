@@ -172,7 +172,7 @@
 			"key": "BTrueTYourHeart",
 			"rating": "Low",
 			"playerInAgreementText": "Yeah, I can see that.",
-			"playerDisagreementText": "I don't really see it, but oh well.",
+			"playerDisagreementText": "I don't really see it",
 			"playerMoralDisagreementText": ["Is that really the case? Is love all that you need?", "Well, a little control is a good thing when it comes to the heart."],
 			"playerDisAgreementOnAflag": [
 
@@ -421,7 +421,7 @@
 			"key": "LoveIsForFools",
 			"rating": "Low",
 			"playerInAgreementText": "Hmm sure.",
-			"playerDisagreementText": "Yeah no... but who cares.",
+			"playerDisagreementText": " no... ",
 			"playerMoralDisagreementText": ["But how do you know if you don’t keep your heart open?", "You don't want to love some shape just because you feel deeply about them?"],
 			"playerDisAgreementOnAflag": [
 
@@ -860,7 +860,7 @@
 			"key": "MoneyMaker",
 			"rating": "Low",
 			"playerInAgreementText": "I get that I guess.",
-			"playerDisagreementText": "Are you sure?",
+			"playerDisagreementText": "Nope, I do not agree",
 			"playerMoralDisagreementText": ["I'm sure there are so many other ways for a shape to be responsible.", "Is that really the case though?"],
 			"playerDisAgreementOnAflag": [
 
@@ -1124,7 +1124,7 @@
 			"key": "Enviromentalist",
 			"rating": "Low",
 			"playerInAgreementText": "That's cool. I can see that.",
-			"playerDisagreementText": "Hmm is it though?",
+			"playerDisagreementText": " I don't think so",
 			"playerMoralDisagreementText": ["I mean we all have to adapt to survive so I don't really see your point.", "That's so dramatic! Homes change and we just need to change accordingly."],
 			"playerDisAgreementOnAflag": [
 
@@ -1243,7 +1243,7 @@
 			"key": "EnviromentalistAnti",
 			"rating": "Low",
 			"playerInAgreementText": "Cool. I see that.",
-			"playerDisagreementText": "For real? Whatever.",
+			"playerDisagreementText": "No I do not agree",
 			"playerMoralDisagreementText": ["Well, but we can do better! Things change and we should too.", "Do we though? Sometimes they are not tough choices but lazy ones."],
 			"playerDisAgreementOnAflag": [
 
@@ -1377,7 +1377,7 @@
 			"key": "AnimalLover",
 			"rating": "Low",
 			"playerInAgreementText": "That's neat.",
-			"playerDisagreementText": "I mean sure...",
+			"playerDisagreementText": "nope nope",
 			"playerMoralDisagreementText": ["That's so dramatic! I mean the strong ones will survive!", "I'm sure shapes come first! We have to eat after all."],
 			"playerDisAgreementOnAflag": [
 
@@ -1521,7 +1521,7 @@
 			"key": "AnimalLoverAnti",
 			"rating": "Low",
 			"playerInAgreementText": "Yup, I think so too.",
-			"playerDisagreementText": "Nah... But I also don't really care.",
+			"playerDisagreementText": "Nah....",
 			"playerMoralDisagreementText": ["You are too blind to see the effect of your selfishness.", "But we have evolved so much and we CAN do better."],
 			"playerDisAgreementOnAflag": [
 
@@ -1819,7 +1819,7 @@
 			"key": "TeetotaslerAnti",
 			"rating": "Low",
 			"playerInAgreementText": "Neato.",
-			"playerDisagreementText": "Hm you for real? Sure I guess.",
+			"playerDisagreementText": "I guess I do not agree with you",
 			"playerMoralDisagreementText": ["But booze makes you so much happier.", "Because they want to and feel good? Why are you trying to control others' choices?"],
 			"playerDisAgreementOnAflag": [
 
@@ -2372,7 +2372,7 @@
 			"key": "schoolIsDrool",
 			"rating": "Low",
 			"playerInAgreementText": "That's great.",
-			"playerDisagreementText": "Oh well. I don't really see it that way.",
+			"playerDisagreementText": " I don't really see it that way.",
 			"playerMoralDisagreementText": ["You must not be learning the right things in school then.", "True but a system and a structure can help you get there faster and easier."],
 			"playerDisAgreementOnAflag": [
 
@@ -2771,7 +2771,7 @@
 			"key": "SchoolIsCool",
 			"rating": "Low",
 			"playerInAgreementText": "Good for you.",
-			"playerDisagreementText": "I don't really care to be honest.",
+			"playerDisagreementText": "I don't think so",
 			"playerMoralDisagreementText": ["Do you really think school is the ONLY way to learn that?", "Yeah but there are plenty of shapes who succeed without following the SYSTEM."],
 			"playerDisAgreementOnAflag": [
 
@@ -3110,7 +3110,7 @@
 			"key": "SupportingComunities",
 			"rating": "Low",
 			"playerInAgreementText": "I get that.",
-			"playerDisagreementText": "I don't see it but ok.",
+			"playerDisagreementText": "I don't see it",
 			"playerMoralDisagreementText": ["That's so much work and you can't just trust someone because you are in the same community.", "Sure in a perfect world where every shape has the best intention. But that's not always the case."],
 			"playerDisAgreementOnAflag": [
 
@@ -3379,7 +3379,7 @@
 			"key": "LoverOfRisks",
 			"rating": "Low",
 			"playerInAgreementText": "Good for you.",
-			"playerDisagreementText": "Is it really though? But who cares.",
+			"playerDisagreementText": "Nope.",
 			"playerMoralDisagreementText": ["But there's safety in a steady routine. Why change if it ain't broken.", "I am sure I can. But life is short so why rush by risking it?"],
 			"playerDisAgreementOnAflag": [
 
@@ -3638,7 +3638,7 @@
 			"key": "LandISWhereThehrtIS",
 			"rating": "Low",
 			"playerInAgreementText": "That's a nice thought.",
-			"playerDisagreementText": "Hmm, I am not so sure on that but oh well.",
+			"playerDisagreementText": "Hmm, I am not so sure on that .",
 			"playerMoralDisagreementText": ["Shapes go on journeys to find themselves. The world is so much bigger than just what you know.", "That's not true. You can't know yourself if you only stick with what's familiar."],
 			"playerDisAgreementOnAflag": [
 
@@ -4062,7 +4062,7 @@
 			"key": "CarrerAboveAll",
 			"rating": "Low",
 			"playerInAgreementText": "That's great.",
-			"playerDisagreementText": "Oh well. I don't really see it that way but who cares.",
+			"playerDisagreementText": "I don't really see it that way",
 			"playerMoralDisagreementText": ["There's a lot more to life besides work.", "Sure, but every shape defines legacy differently."],
 			"playerDisAgreementOnAflag": [
 
@@ -4396,7 +4396,7 @@
 			"key": "FriendsAreTheJoyOFlife",
 			"rating": "Low",
 			"playerInAgreementText": "Yup, I think so too.",
-			"playerDisagreementText": "Nah... But I also don't really care.",
+			"playerDisagreementText": "Nah... ",
 			"playerMoralDisagreementText": ["Well... not for a self-sufficient shape. Too many friends can be a lot of work.", "I mean you can also try to find happiness in being alone."],
 			"playerDisAgreementOnAflag": [
 
@@ -4899,7 +4899,7 @@
 			"key": "youthAreTheFuture",
 			"rating": "Low",
 			"playerInAgreementText": "Yeah I can see that.",
-			"playerDisagreementText": "I don't really see it, but ok.",
+			"playerDisagreementText": "I don't really see it",
 			"playerMoralDisagreementText": ["Not really, young shapes are not responsible enough to understand the weight of their actions.", "I think you are putting too much pressure on the young to make those changes."],
 			"playerDisAgreementOnAflag": [
 
@@ -5138,7 +5138,7 @@
 			"key": "ProHiringFamily",
 			"rating": "Low",
 			"playerInAgreementText": "Hmm sure.",
-			"playerDisagreementText": "Yeah no... but who cares.",
+			"playerDisagreementText": " no... ",
 			"playerMoralDisagreementText": ["Is it really? I mean trust is earned and you can build trust with any shape!", "That's paranoid... Only a few shapes are as shady as you think."],
 			"playerDisAgreementOnAflag": [
 
@@ -5447,7 +5447,7 @@
 			"key": "suchUncharactristicBehaviorOhMy",
 			"rating": "Low",
 			"playerInAgreementText": "I get that I guess.",
-			"playerDisagreementText": "You sure? Oh well, whatever really.",
+			"playerDisagreementText": "Nope I do not agree",
 			"playerMoralDisagreementText": ["Not for all of us! It's just a form of social control and you are too blind to see it.", "Or they simply felt repressed by the norm and they had the courage to do something about it."],
 			"playerDisAgreementOnAflag": [
 
@@ -5831,7 +5831,7 @@
 			"key": "WeLiveForSpontaneity",
 			"rating": "Low",
 			"playerInAgreementText": "That's cool. I can see that.",
-			"playerDisagreementText": "Hmm is it though?",
+			"playerDisagreementText": "Hmm is it though? cz I do not think so",
 			"playerMoralDisagreementText": ["I prefer a simpler and more stable life.", "Well... If I am already happy with my life, why would I need to escape?"],
 			"playerDisAgreementOnAflag": [
 
@@ -6190,7 +6190,7 @@
 			"key": "AnAdventureWeSeek",
 			"rating": "Low",
 			"playerInAgreementText": "Cool. I see that.",
-			"playerDisagreementText": "For real? Whatever.",
+			"playerDisagreementText": " No",
 			"playerMoralDisagreementText": ["That seems very idealistic... and too inspirational.", "You can't find a sense of belonging by just building relationships around you?"],
 			"playerDisAgreementOnAflag": [
 
@@ -6489,7 +6489,7 @@
 			"key": "NiaeveteIsFiction",
 			"rating": "Low",
 			"playerInAgreementText": "That's neat.",
-			"playerDisagreementText": "I mean sure...",
+			"playerDisagreementText": "I mean NO",
 			"playerMoralDisagreementText": ["I'm sorry you feel that way. But not all shapes are bad.", "That's a cynical view of the world... Too grim for my taste."],
 			"playerDisAgreementOnAflag": [
 
@@ -6968,7 +6968,7 @@
 			"key": "ImmagretsWeGetTheJobDone",
 			"rating": "Low",
 			"playerInAgreementText": "Neato.",
-			"playerDisagreementText": "Hm, you for real?",
+			"playerDisagreementText": "Hm, I do not agree",
 			"playerMoralDisagreementText": ["WE built this place! What did the outsiders do for us?", "Not all of them are bad, but they could be because we don't know them."],
 			"playerDisAgreementOnAflag": [
 
@@ -7417,7 +7417,7 @@
 			"key": "WeArewNothingIfWeAreNotReserved",
 			"rating": "Low",
 			"playerInAgreementText": "That's nice.",
-			"playerDisagreementText": "Whatever I guess.",
+			"playerDisagreementText": "Nope",
 			"playerMoralDisagreementText": ["But we must make adjustments as society evolves.", "But maybe we have historically wronged and mistreated shapes because we value traditions over basic respect."],
 			"playerDisAgreementOnAflag": [
 
@@ -7851,7 +7851,7 @@
 			"key": "AselfMadeShapeWeAspireToBe",
 			"rating": "Low",
 			"playerInAgreementText": "Good for you.",
-			"playerDisagreementText": "I don't really care to be honest.",
+			"playerDisagreementText": "Nope",
 			"playerMoralDisagreementText": ["Well I mean by being a hard-working shape and a good shape?", "Sure but life is so much bigger than just trying to leave an arbitrary mark."],
 			"playerDisAgreementOnAflag": [
 
@@ -8180,7 +8180,7 @@
 			"key": "Shapesarenothingifnotsocial",
 			"rating": "Low",
 			"playerInAgreementText": "I get that.",
-			"playerDisagreementText": "I don't see it but ok.",
+			"playerDisagreementText": "I don't see it.",
 			"playerMoralDisagreementText": ["Well, not all happy shapes are open.", "That seems too simplistic. I mean you can't judge shapes based on those things."],
 			"playerDisAgreementOnAflag": [
 
@@ -8534,7 +8534,7 @@
 			"key": "AntiFaviortisum",
 			"rating": "Low",
 			"playerInAgreementText": "Good for you.",
-			"playerDisagreementText": "Is it really though? But who cares.",
+			"playerDisagreementText": "Is it really though? cz I don't think so",
 			"playerMoralDisagreementText": ["That's way too black and white! How do you know if they are NOT the right shape for the job?!", "Again, you are being too extreme. I think sometimes it's important to put people you trust in important positions."],
 			"playerDisAgreementOnAflag": [
 
