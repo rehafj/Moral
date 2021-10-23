@@ -75,9 +75,9 @@ public class InformantOnBNPC : MonoBehaviour
         foreach (string s in keysFound)
         {
 
-            con = con + translateCharacterFlags(s) + "\n";
-            //Debug.Log(translateCharacterFlags(s));
-            
+            con = con + s+ "\n";
+            //Debug.Log(translateCharacterFlags(s));//translateCharacterFlags(s) 
+
         }
         keysFound.Clear();
         text.text = con;

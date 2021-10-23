@@ -151,7 +151,7 @@ public class BackgroundCharacter  :  MonoBehaviour
             
 
                     checkLoveTraingle(jsn.backgroundcharacters[i].loveInterest, jsn.backgroundcharacters[j].spouse,
-                                           jsn.backgroundcharacters[j].significantOther, jsn.backgroundcharacters[j].id,"", character);
+                                           jsn.backgroundcharacters[j].significantOther, jsn.backgroundcharacters[j].id, "InLoveWirhAnothersspouce", character);
 
                     checkLoveTraingle(jsn.backgroundcharacters[i].id,
                                            jsn.backgroundcharacters[j].id, jsn.backgroundcharacters[i].spouse, "InLovewithspouseoffriend", character);
