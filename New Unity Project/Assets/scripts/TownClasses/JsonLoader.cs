@@ -64,7 +64,7 @@ public class JsonLoader : MonoBehaviour
 
     const string MODELARGUEMNTS = @"JSON/newSfma"; // correct format :) - and works! 
 
-    const string PLAYERDIALIUG = @"JSON/playerResponces";
+    const string PLAYERDIALIUG = @"JSON/conversation/playerResponces";
 
     const string FATHERMODELARGUMENTS = @"JSON/testingnewfatherstructure";
 

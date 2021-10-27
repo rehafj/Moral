@@ -12,6 +12,8 @@ public class Dialoug   //restructure this badly....
 
     public string UnbiasedOpeningStatment;
 
+
+    public string MappedTopic;
     public string MappedSurfaceValue; 
 
     public string mainOpinionOnAtopic; //main thoughts ( body1 in json) --- agh old code 

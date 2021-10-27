@@ -7569,6 +7569,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ba3bbf9121e5894689765b765ee9f1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  listOfContradictions: []
   contradictingValuesHigh: []
   contradictingValuesLow: []
   FatherModel: {fileID: 0}
@@ -7578,7 +7579,7 @@ MonoBehaviour:
   NPCCubeObject: {fileID: 0}
   agentPrefabControl: {fileID: 0}
   CnpcEmotion: 0
-  NpcValueFlag: 0
+  NpcValueRating: 0
 --- !u!195 &493181064
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -47935,7 +47936,7 @@ MonoBehaviour:
   TranscriptString: 
   fullCharacterRootNodes: []
   currentPlayerOptions: []
-  treeCounter: 3
+  treeCounter: 2
   AllOpinions: []
   conversedAboutCharectersList: []
   playerName: 

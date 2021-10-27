@@ -171,7 +171,7 @@
 			"key": "BTrueTYourHeart",
 			"rating": "Low",
 			"playerInAgreementText": "Yeah, I can see that.",
-			"playerDisagreementText": "I don't really see it, but oh well.",
+			"playerDisagreementText": "I don't really see it",
 			"playerMoralDisagreementText": ["Is that really the case? Is love all that you need?", "Well, a little control is a good thing when it comes to the heart."],
 			"playerDisAgreementOnAflag": [
 
@@ -420,7 +420,7 @@
 			"key": "LoveIsForFools",
 			"rating": "Low",
 			"playerInAgreementText": "Hmm sure.",
-			"playerDisagreementText": "Yeah no... but who cares.",
+			"playerDisagreementText": " no...",
 			"playerMoralDisagreementText": ["But how do you know if you don’t keep your heart open?", "You don't want to love some shape just because you feel deeply about them?"],
 			"playerDisAgreementOnAflag": [
 
