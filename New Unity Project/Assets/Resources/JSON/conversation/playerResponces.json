@@ -2028,7 +2028,7 @@
 			"key": "FamilyPerson",
 			"rating": "Low",
 			"playerInAgreementText": "That's nice.",
-			"playerDisagreementText": "Whatever, I disagree.",
+			"playerDisagreementText": "I disagree with you on that point!.",
 			"playerMoralDisagreementText": ["Not all families are supportive.", "A shape can have MANY support systems!"],
 			"playerDisAgreementOnAflag": [
 
@@ -3638,7 +3638,7 @@
 			"key": "LandISWhereThehrtIS",
 			"rating": "Low",
 			"playerInAgreementText": "That's a nice thought.",
-			"playerDisagreementText": "Hmm, I am not so sure on that .",
+			"playerDisagreementText": "Hmm, I am not so sure on that . I do not agree",
 			"playerMoralDisagreementText": ["Shapes go on journeys to find themselves. The world is so much bigger than just what you know.", "That's not true. You can't know yourself if you only stick with what's familiar."],
 			"playerDisAgreementOnAflag": [
 

@@ -358,7 +358,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     {
      
         StartCoroutine(waitAndPrintAgreement(currentNode.agreementText)); // need to restrucre this ---
-        addTextToTranscript(currentNode.agreementText, false);
+       // addTextToTranscript(currentNode.agreementText, false);
     }
     private void playerDissAgrees()
     {
@@ -1402,9 +1402,12 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         {
             yield return currentCorutine;
             currentCorutine = StartCoroutine(TypeInDialoug(getPlayerResponce(currentNode.MappedSurfaceValue, 
-                                currentNode.Rating, TypeOfPlayerTexts.agreement, false))); 
+                                currentNode.Rating, TypeOfPlayerTexts.agreement, false)));
+            addTextToTranscript(getPlayerResponce(currentNode.MappedSurfaceValue,
+                                currentNode.Rating, TypeOfPlayerTexts.agreement,false), false);
             yield return currentCorutine;
             currentCorutine = StartCoroutine(TypeInDialoug(text));
+            addTextToTranscript(text,true);
             turnOffButton();//new test comment 
         }
          
@@ -1446,8 +1449,11 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             yield return currentCorutine;
             currentCorutine = StartCoroutine(TypeInDialoug(getPlayerResponce(currentNode.MappedSurfaceValue, currentNode.Rating,
                                  TypeOfPlayerTexts.disagreement, isMf))); // CAN REFACTOR THIS  //TOFRICKENDO changet his to currentnode.sv
+            addTextToTranscript(getPlayerResponce(currentNode.MappedSurfaceValue, currentNode.Rating,
+                                 TypeOfPlayerTexts.disagreement, isMf), false);
             yield return currentCorutine;
             currentCorutine = StartCoroutine(TypeInDialoug(text));
+            addTextToTranscript(text, true);
             yield return currentCorutine;
            
             if(currentNode.Rating.ToLower() == "high")
@@ -1455,6 +1461,10 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                 currentCorutine = StartCoroutine(TypeInDialoug(
                currentCNPC.FatherModel.returnFatherModelArgumetnsText(
                    currentNode.MappedSurfaceValue, currentNode.Pattern, new List<string>() { }, true)));
+
+                addTextToTranscript(currentCNPC.FatherModel.returnFatherModelArgumetnsText(   currentNode.MappedSurfaceValue, currentNode.Pattern, new List<string>() { }, true), true);
+
+
             }
      
 
