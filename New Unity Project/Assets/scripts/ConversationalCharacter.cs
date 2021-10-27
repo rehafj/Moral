@@ -9,13 +9,20 @@ public class ConversationalCharacter : MonoBehaviour
     //make these random as long as two contradicting pairs do not get put in the same list     /// <summary>
     /// you can add contradicitons to vlaues in these lists, High contains high values and low contains low values that are contradictiory to High
     /// </summary>
+
+    public List<string> listOfContradictions = new List<string> {
+                     "schoolIsDrool","EnviromentalistAnti","AnimalLoverAnti","LoveIsForFools","Loner","AntiFaviortisum ","WeArewNothingIfWeAreNotReserved","TeetotaslerAnti"
+
+       , "Enviromentalist" ,"BTrueTYourHeart","AnimalLover","SchoolIsCool","Shapesarenothingifnotsocial","ProHiringFamily ","FriendsAreTheJoyOFlife","Teetotasler"
+        };
+
     public List<string> contradictingValuesHigh = new List<string>
         {
-            "Enviromentalist" ,"BTrueTYourHeart","AnimalLover","SchoolIsCool"
+            "Enviromentalist" ,"BTrueTYourHeart","AnimalLover","SchoolIsCool","Shapesarenothingifnotsocial","ProHiringFamily ","FriendsAreTheJoyOFlife","Teetotasler"
         };
     public  List<string> contradictingValuesLow = new List<string>
         {
-            "schoolIsDrool","EnviromentalistAnti","AnimalLoverAnti","LoveIsForFools"
+            "schoolIsDrool","EnviromentalistAnti","AnimalLoverAnti","LoveIsForFools","Loner","AntiFaviortisum ","WeArewNothingIfWeAreNotReserved","TeetotaslerAnti"
         };
     public Dictionary<string, RatingVlaues> ConvCharacterMoralFactors = new Dictionary<string, RatingVlaues>();
     //att 2 --- 
@@ -70,7 +77,7 @@ public class ConversationalCharacter : MonoBehaviour
     {
        High, Mid, Low
     }
-    public RatingVlaues NpcValueFlag;
+    public RatingVlaues NpcValueRating;
   
     public ConversationalCharacter(string name ,RatingVlaues[] thirteenValues )
     {
@@ -104,13 +111,11 @@ public class ConversationalCharacter : MonoBehaviour
 
     }
 
-
+    List<string> tempHighVlaue = new List<string>();
     //randomizing constructor /overloaded
     public ConversationalCharacter(string name) //method used for random
     {
-        List<string> tempHighVlaue = new List<string>();//used to set up moral focus on high value flags
-
-
+      //  //used to set up moral focus on high value flags
 
         ConversationalNpcName = name;
         int i = 0;
@@ -118,37 +123,108 @@ public class ConversationalCharacter : MonoBehaviour
         foreach (string s in keys)
         {
             int x = Random.Range(0, 3);
-            if (contradictingValuesHigh.Contains(s))
-            {
-               NpcValueFlag = RatingVlaues.High;
-
-            }
-            else if (contradictingValuesLow.Contains(s))
-            {
-                NpcValueFlag = RatingVlaues.Low;
-            }
-            else
-            {
-                NpcValueFlag = getRandomNPCValue(x);
-            }
-
-            ConvCharacterMoralFactors.Add(s, NpcValueFlag);
-
-            if(NpcValueFlag == RatingVlaues.High) //again used for moral focus - will move this into it's opwn method soon 
+           
+            NpcValueRating = getRandomNPCValue(x); //rating 
+            if (NpcValueRating == RatingVlaues.High )
             {
                 tempHighVlaue.Add(s);
-                
             }
-
+            ConvCharacterMoralFactors.Add(s, NpcValueRating);
 
             i++;
         }
+      
+        FatherModel = new StrictFatherMorality();
+        setContradictingValues();
         int index = UnityEngine.Random.Range(0, tempHighVlaue.Count);
         setMoralFocusArea(tempHighVlaue[index]);
-        FatherModel = new StrictFatherMorality();
-          Debug.Log("check these values out : EnviromentalistAnti " + ConvCharacterMoralFactors["EnviromentalistAnti"] + "and ebviromentalist" +
+        Debug.Log("check these values out : EnviromentalistAnti " + ConvCharacterMoralFactors["EnviromentalistAnti"] + "and ebviromentalist" +
          ConvCharacterMoralFactors["Enviromentalist"] + "school is cool followed by drool " + ConvCharacterMoralFactors["SchoolIsCool"] + ConvCharacterMoralFactors["schoolIsDrool"]);
 
+    }
+
+    void setContradictingValues()
+    {
+        List<string> ourkeys = new List<string>(ConvCharacterMoralFactors.Keys);
+        foreach(string s in ourkeys)
+        {
+            if (ConvCharacterMoralFactors[s] == RatingVlaues.High && listOfContradictions.Contains(s))
+            {
+                ConvCharacterMoralFactors[getContradictingString(s)] = RatingVlaues.Low;
+            }
+
+
+        }
+
+        /*
+         * 
+         *     if (contradictingValuesHigh.Contains(s) && ConvCharacterMoralFactors[s] == RatingVlaues.High)
+                    {
+                        ConvCharacterMoralFactors[getContradictingString(s)] = RatingVlaues.Low; // this would still result in 
+                        Debug.Log("the thing that changed was " + s + "this was changed: ConvCharacterMoralFactors[" + getContradictingString(s) + "]:" + ConvCharacterMoralFactors[getContradictingString(s)]);
+
+                        tempHighVlaue.Remove(s);
+                    }
+                    else if (contradictingValuesLow.Contains(s) && ConvCharacterMoralFactors[s] == RatingVlaues.Low)
+                    {
+                        ConvCharacterMoralFactors[getContradictingString(s)] = RatingVlaues.High;
+                        Debug.Log("the thing that changed was " + s + "this was changed: ConvCharacterMoralFactors[" + getContradictingString(s) + "]:" + ConvCharacterMoralFactors[getContradictingString(s)]);
+
+                        tempHighVlaue.Add(s);
+                    }
+         * 
+         * 
+                foreach (KeyValuePair<string, RatingVlaues> k  in ConvCharacterMoralFactors)
+                {
+                    if (contradictingValuesHigh.Contains(k.Key) && k.Value == RatingVlaues.High)//loveisgood
+                    {
+                        ConvCharacterMoralFactors[getContradictingString(k.Key)] = RatingVlaues.Low;
+                        tempHighVlaue.Add(k.Key);
+                    }
+                }*/
+
+
+    }
+
+    string getContradictingString(string s)
+    {
+        switch (s) //make this into a four loop --- agh this is bad
+        {
+            case ("Enviromentalist"):
+                return "EnviromentalistAnti";
+            case ("BTrueTYourHeart"):
+                return "LoveIsForFools";
+            case ("AnimalLover"):
+                return "AnimalLoverAnti";
+            case ("SchoolIsCool"):
+                return "schoolIsDrool";
+            case ("Shapesarenothingifnotsocial"):
+                return "Loner";
+            case ("ProHiringFamily"):
+                return "AntiFaviortisum";
+            case ("FriendsAreTheJoyOFlife"):
+                return "WeArewNothingIfWeAreNotReserved";
+            case ("Teetotasler"):
+                return "TeetotaslerAnti";
+            case ("EnviromentalistAnti"): 
+                return "Enviromentalist"; 
+            case ("LoveIsForFools"):
+                return "BTrueTYourHear";
+            case ("AnimalLoverAnti"):
+                return "AnimalLover";
+            case ("schoolIsDrool"):
+                return "SchoolIsCool";
+            case ("Loner"):
+                return "Shapesarenothingifnotsocial";
+            case ("AntiFaviortisum"):
+                return "ProHiringFamily";
+            case ("WeArewNothingIfWeAreNotReserved"):
+                return "FriendsAreTheJoyOFlife";
+            case ("TeetotaslerAnti"):
+                return "Teetotasler";
+            default:
+                return "ERROR";
+        }
     }
 
     private RatingVlaues getRandomNPCValue(int x )

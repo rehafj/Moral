@@ -109,12 +109,12 @@ public class BackgroundCharacter  :  MonoBehaviour
             //checks for a single character flags
             checkIfAnIntconditionIsMet(jsn.backgroundcharacters[i].departureEventID, "departed", character);
             checkIfAnIntconditionIsMet(jsn.backgroundcharacters[i].kids.Length, "familyPerson", character);
-            checkIfAnIntconditionIsMet(jsn.backgroundcharacters[i].friendsId.Length, "socialLife", character);
+            checkIfAnIntconditionIsMet(jsn.backgroundcharacters[i].friendsId.Length >5 , "socialLife", character);
             checkIfAnIntconditionIsMet(jsn.backgroundcharacters[i].enemiesId.Length > 1, "hasalotofenemies", character);
             checkIfAnIntconditionIsMet(jsn.backgroundcharacters[i].isCollegeGraduate, "graduate", character); 
             checkIfAnIntconditionIsMet(jsn.backgroundcharacters[i].widowed && (!jsn.backgroundcharacters[i].grieving), "widowedbutnotgrieving", character);
             checkIfAnIntconditionIsMet(jsn.backgroundcharacters[i].adult && (!jsn.backgroundcharacters[i].inWorkForce), "adultbutnotworking", character);
-            checkIfAnIntconditionIsMet(jsn.backgroundcharacters[i].neighborsID.Length > 0 && (jsn.backgroundcharacters[i].friendsId.Length >2), "loner", character);
+            checkIfAnIntconditionIsMet(jsn.backgroundcharacters[i].neighborsID.Length > 0 && (jsn.backgroundcharacters[i].friendsId.Length > 0 && jsn.backgroundcharacters[i].friendsId.Length <3), "loner", character);
             checkIfAnIntconditionIsMet(jsn.backgroundcharacters[i].money > 5, "IsWealthy", character);
             checkIfAnIntconditionIsMet(jsn.backgroundcharacters[i].movesEventId.Length > 1 && !jsn.backgroundcharacters[i].movesEventId.Contains(-1), "MovesAlot", character);
             checkIfAnIntconditionIsMet(jsn.backgroundcharacters[i].coworkersId.Intersect(jsn.backgroundcharacters[i].immediateFamilyId).Any(), "worksWithFamily", character);
@@ -140,7 +140,7 @@ public class BackgroundCharacter  :  MonoBehaviour
 
 
                     checkIfAnIntconditionIsMet(jsn.backgroundcharacters[i].age < 
-                     (jsn.backgroundcharacters[j].age - 7 ), "marriedSomoneOlder", character);
+                     (jsn.backgroundcharacters[j].age - 15 ), "marriedSomoneOlder", character);
 
                     checkIfAnIntconditionIsMet(jsn.backgroundcharacters[i].spouse == jsn.backgroundcharacters[j].id &&
                       jsn.backgroundcharacters[i].loveInterest != jsn.backgroundcharacters[i].spouse

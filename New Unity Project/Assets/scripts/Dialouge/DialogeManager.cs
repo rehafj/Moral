@@ -365,7 +365,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
         
         StartCoroutine(waitAndPrintDisagreement(currentNode.disagreementText)); //currentNode.getRandomHatedFact())
-        addTextToTranscript(currentNode.disagreementText, false);
+       // addTextToTranscript(currentNode., false);
 
     }
 

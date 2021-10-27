@@ -122,9 +122,14 @@ public class InterestingCharacters : MonoBehaviour
 
     public bool HasJuicyMoralFacts()
     {
+        if (characterFlags["InLovewithspouseoffriend"])
+        {
+            Debug.Log("it happens!! in love:");
+        }
 
-        if (characterFlags["InLovewithspouseoffriend"] || characterFlags["leftFotLoveIntrest"]
-            || characterFlags["butcherRole"] || characterFlags["IsRichButNotGenrous"])
+        if (characterFlags["InLovewithspouseoffriend"] || characterFlags["leftFotLoveIntrest"] 
+            || characterFlags["butcherRole"] || characterFlags["IsRichButNotGenrous"]) // add in love with another spouce here 
+
         {
             return true;
         }
@@ -313,6 +318,5 @@ public class InterestingCharacters : MonoBehaviour
 
 //single mother has love intrest - married - family id - mans father loves a daughter 
 //step daughter is step step mother
-
 
 
