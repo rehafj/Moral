@@ -1,0 +1,10 @@
+[{
+ "key": "adultbutnotworking",
+ "highGnericResponces": ["text1","text2"] ,
+ "lowGnericResponces": ["text1","text2"]
+},{
+	"key": "advancedCareer",
+  "highGnericResponces": ["text1","text2"] ,
+  "lowGnericResponces": ["text1","text2"]
+}
+]

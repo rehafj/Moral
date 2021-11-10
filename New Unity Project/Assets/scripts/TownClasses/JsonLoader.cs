@@ -48,6 +48,11 @@ public class JsonLoader : MonoBehaviour
     [SerializeField]
     public List<CharacterSearchBarFacts> ListOfBNPCFacts = new List<CharacterSearchBarFacts>(); //NEW ONE 
 
+
+
+    [SerializeField]
+    public List<GenericMoralModelResponces> ListOfMoralModelsGenricResponces = new List<GenericMoralModelResponces>(); //NEW ONE 
+
     public static JsonLoader Instance { get; private set; }
 
     const string FILEXTEN = @".json";
@@ -70,7 +75,7 @@ public class JsonLoader : MonoBehaviour
 
     const string BNPCFACTS = @"JSON/BNPCInfoTranslation";
 
-
+    const string MMGENREICRESPONCES = @"JSON/genericResponces";
 
 
     List<string> exFlads = new List<string>(); 
@@ -105,6 +110,8 @@ public class JsonLoader : MonoBehaviour
 
         ListOfBNPCFacts = returnJsonAttributesIntoList<CharacterSearchBarFacts>(BNPCFACTS);
         listOffATHERArguments = returnJsonAttributesIntoList<MoralModelArguments>(FATHERMODELARGUMENTS);
+
+        ListOfMoralModelsGenricResponces = returnJsonAttributesIntoList<GenericMoralModelResponces>(MMGENREICRESPONCES);
         //FOR TESTING-REMOVE ME 
         PrintOutAConversation();
 
@@ -116,6 +123,14 @@ public class JsonLoader : MonoBehaviour
 
     private void PrintOutAConversation()
     {
+
+       foreach(GenericMoralModelResponces responce in ListOfMoralModelsGenricResponces)
+        {
+            if(responce.key== "adultbutnotworking")
+            {
+                Debug.Log("found the good repsonce" + responce.highGnericResponces[0]);
+            }
+        }
 
         Debug.Log(ListOfBNPCFacts.Count);
        foreach( CharacterSearchBarFacts FACT in ListOfBNPCFacts)

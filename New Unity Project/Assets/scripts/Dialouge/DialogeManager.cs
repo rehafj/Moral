@@ -70,7 +70,8 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     string startingSceneText = "";
 
 
-
+    //senf in good/bad responces based on high/low
+    //high good bad is low
 
 
     //pubic for testing only -- change later 
@@ -86,6 +87,8 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     bool isInMoralModelArgumentLoop = false;
     int moralModelCounterLoop =0;
     public static List<string> currentMoralModelExploredPatterns = new List<string>();
+    public static List<string> currentMoralModelExploredPatterns_PLAYER = new List<string>(); //FIXC THIS 
+
     bool mainModelChoice = false;
     public List<Dialoug> CurrentBNPCPatterns;
     List<Dialoug> currentIntersectingNodes;
@@ -1747,6 +1750,64 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         checkEndConversationAndMove();
 
     }
+
+
+    //player argues using a diff model but should the npc also change the topic?
+    IEnumerator waitAndPrintFatherModelDissagreemnt(Dialoug node, string SV)   //so this works... but does nto when in larger scenartio.. 
+    {
+        Debug.Log("does this happen????");
+
+        //remove this later but for now... 
+        if (!currentTree.FullyExplored)
+        {
+
+            bool isMf = currentCNPC.IsMoralFocus(currentNode.MappedSurfaceValue);
+
+            //basic disagreement 1
+            yield return currentCorutine;
+            currentCorutine = StartCoroutine(TypeInDialoug("player disagreed by using, some kind of transition will be used here " + node.Pattern)); // CAN REFACTOR THIS  //TOFRICKENDO changet his to currentnode.sv
+            addTextToTranscript(("player disagreed by using " + node.Pattern), false);
+
+
+            yield return currentCorutine;
+
+
+            //for tests - redo this in a cleaner way
+            string playerResponce = currentCNPC.FatherModel.returnFatherModelArgumetnsText(
+                    SV, node.Pattern, currentMoralModelExploredPatterns, false);
+
+            currentCorutine = StartCoroutine(TypeInDialoug("player says" + playerResponce));
+
+            addTextToTranscript(playerResponce, false);
+            if (playerResponce != "GenericResponceGiven") { currentCNPC.PlayerScore += 1; }
+            yield return currentCorutine;
+
+
+            string NPCResponce = currentCNPC.FatherModel.returnFatherModelArgumetnsText(
+                 currentNode.MappedSurfaceValue, node.Pattern, currentMoralModelExploredPatterns, true);
+            currentCorutine = StartCoroutine(TypeInDialoug("NPCsays" + NPCResponce));
+
+            addTextToTranscript(NPCResponce, false);
+            if (NPCResponce != "GenericResponceGiven") { currentCNPC.PlayerScore += 1; }
+
+            yield return currentCorutine;
+
+            currentMoralModelExploredPatterns.Add(currentNode.Pattern);
+            isInMoralModelArgumentLoop = true;
+
+            mainModelChoice = true;
+            //enterSubConversationOnDisagreement();
+            //if npc wins end conversation set mainmodelchoice and in moralmodelarrg loop to false 
+            innerConversationCounter += 1;
+
+            currentCorutine = StartCoroutine(checkInnerConversationLoop());
+            yield return currentCorutine;
+
+        }
+        checkEndConversationAndMove();
+
+    }
+
 
     IEnumerator  checkInnerConversationLoop()
     {

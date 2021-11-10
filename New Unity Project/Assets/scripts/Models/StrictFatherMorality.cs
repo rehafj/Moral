@@ -23,10 +23,7 @@ public class StrictFatherMorality : MoralModels
 
     List<string> NPCfmHighValues = new List<string>() //what the NPC looks for - ig its not herte NPC looks for low 
     {
-        "BTrueTYourHeart",  "FamilyPerson", "MoneyMaker","Enviromentalist","AnimalLover","Teetotasler","TeetotaslerAnti","SchoolIsCool",
-        "SupportingComunities","LoverOfRisks","LandISWhereThehrtIS","CarrerAboveAll","FriendsAreTheJoyOFlife","youthAreTheFuture","ProHiringFamily","WeLiveForSpontaneity",
-        "AnAdventureWeSeek","ImmagretsWeGetTheJobDone","AselfMadeShapeWeAspireToBe","Shapesarenothingifnotsocial"
-
+       "BTrueTYourHeart","Teetotasler","ProHiringFamily","Shapesarenothingifnotsocial","FriendsAreTheJoyOFlife","AnimalLover","Enviromentalist","SchoolIsCool","FamilyPerson","AselfMadeShapeWeAspireToBe","ImmagretsWeGetTheJobDone","SupportingComunities","LoverOfRisks","LandISWhereThehrtIS","youthAreTheFuture","WeLiveForSpontaneity","AnAdventureWeSeek","MoneyMaker","CarrerAboveAll"
 
     };
 

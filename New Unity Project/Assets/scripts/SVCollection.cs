@@ -15,13 +15,13 @@ new SValues("LoveIsForFools", new List<string> {"InLovewithspouseoffriend",
 "widowedbutnotgrieving","likesToDate","leftFotLoveIntrest","InLoveWirhAnothersspouce",
 "startedAfamilyAtAyoungAge","DevorcedManyPeople","marriedForLifeStyleNotLove","WillActOnLove","marriedSomoneOlder","LoveIsForFools"} ),
 new SValues("MoneyMaker", new List<string> {"graduate","notworkingandrich","IsWealthy","exploteative","adultbutnotworking","hardWorker","selfMadeCubeByDedication","getsFiredAlot","RetiredYoung","DiedBeforeRetired","flipflop","advancedCareer","IsRichButNotGenrous","MoneyMaker"} ),
-new SValues("Enviromentalist", new List<string> {"polluterRole","Enviromentalist"} ),
-new SValues("EnviromentalistAnti", new List<string> {"polluterRole","EnviromentalistAnti"} ),
-new SValues("AnimalLover", new List<string> {"ButcherButRegretful","butcherRole","AnimalLover"} ),
-new SValues("AnimalLoverAnti", new List<string> {"ButcherButRegretful","butcherRole","AnimalLoverAnti"} ),
+new SValues("Enviromentalist", new List<string> {"polluterRole","conventional","Enviromentalist"} ),
+new SValues("EnviromentalistAnti", new List<string> {"polluterRole","conventional","EnviromentalistAnti"} ),
+new SValues("AnimalLover", new List<string> {"ButcherButRegretful","butcherRole","conventional","AnimalLover"} ),
+new SValues("AnimalLoverAnti", new List<string> {"ButcherButRegretful","butcherRole","conventional","AnimalLoverAnti"} ),
 new SValues("Teetotasler", new List<string> {"WorksInAlcohol","Teetotasler"} ),
 new SValues("TeetotaslerAnti", new List<string> {"WorksInAlcohol","TeetotaslerAnti"} ),
-new SValues("FamilyPerson", new List<string> {"InLovewithspouseoffriend","leftFotLoveIntrest","InLoveWirhAnothersspouce","startedAfamilyAtAyoungAge","DevorcedManyPeople","marriedForLifeStyleNotLove","WillActOnLove","familyPerson","worksWithFamily","hiredByAFamilymember","conventional","FamilyPerson"} ),
+new SValues("FamilyPerson", new List<string> {"leftFotLoveIntrest","nepotism","marriedSomoneOlder","startedAfamilyAtAyoungAge","DevorcedManyPeople","marriedForLifeStyleNotLove","widowedbutnotgrieving","familyPerson","worksWithFamily","hiredByAFamilymember","conventional","FamilyPerson"} ),
 new SValues("schoolIsDrool", new List<string> {"graduate","Teachingrole","schoolIsDrool"} ),
 new SValues("SchoolIsCool", new List<string> {"graduate","Teachingrole","SchoolIsCool"} ),
 new SValues("SupportingComunities", new List<string> {"liklyToHelpTheHomeless","doesNotGiveToThoseInNeed","supportsImmigration","MovesAlot","IsRichButNotGenrous","departed","SupportingComunities"} ),
@@ -40,9 +40,10 @@ new SValues("Shapesarenothingifnotsocial", new List<string> {"hasAbestFriend","l
 new SValues("AntiFaviortisum", new List<string> {"exploteative","worksWithFamily","hiredByAFamilymember","conventional","selfMadeCubeByDedication","nepotism","AntiFaviortisum"} ),
 new SValues("WeArewNothingIfWeAreNotReserved", new List<string> {"hasAbestFriend","loner","isolated","hasalotofenemies","TooTrustingOfEnemies","socialLife","reserved","SusMovments","WeArewNothingIfWeAreNotReserved"} ),
 new SValues("ImmagretsWeGetTheJobDone", new List<string> {"supportsImmigration","ImmagretsWeGetTheJobDone"} ),
-new SValues("suchUncharactristicBehaviorOhMy", new List<string> {"InLovewithspouseoffriend","widowedbutnotgrieving","leftFotLoveIntrest","InLoveWirhAnothersspouce","startedAfamilyAtAyoungAge","DevorcedManyPeople","WillActOnLove","exploteative","conventional","adultbutnotworking","AdventureSeeker","MovesAlot","getsFiredAlot","loner","isolated","hasalotofenemies","friendwithabestfriendsenemy","SusMovments","suchUncharactristicBehaviorOhMy"} )
+new SValues("suchUncharactristicBehaviorOhMy", new List<string> {"marriedForLifeStyleNotLove","marriedSomoneOlder","InLovewithspouseoffriend","widowedbutnotgrieving","leftFotLoveIntrest","InLoveWirhAnothersspouce","startedAfamilyAtAyoungAge","DevorcedManyPeople","WillActOnLove","exploteative","conventional","adultbutnotworking","AdventureSeeker","MovesAlot","getsFiredAlot","loner","isolated","hasalotofenemies","friendwithabestfriendsenemy","SusMovments","suchUncharactristicBehaviorOhMy"} )
 
-    };
+   
+};
     /*
         new SValues("BTrueTYourHeart", new List<string> {"InLovewithspouseoffriend", "widowedbutnotgrieving",
             "likesToDate","leftFotLoveIntrest","InLoveWirhAnothersspouce",
