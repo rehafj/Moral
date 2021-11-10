@@ -78,6 +78,30 @@ public class Dialoug   //restructure this badly....
         return hatedFact;
         //TODO add something to check if all hated facts are done :d //size = 0S
     }
+
+    public string ReturnConverationEnder()
+
+    {
+        if (moralDisagreementText.Count > 0 && moralDisagreementText !=null)
+        {
+            if (moralDisagreementText.Count <= 1)
+            {
+                return moralDisagreementText[1];
+            }
+            else if (moralDisagreementText.Count <= 2)
+            { return moralDisagreementText[2]; } else
+            {
+                return "good day to you. BYE";
+            }
+                
+           
+        }
+        else
+        {
+            return "good day to you. BYE";
+        }
+       
+    }
 }
 
 

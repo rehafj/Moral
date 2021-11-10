@@ -44,6 +44,10 @@ public class ConversationalCharacter : MonoBehaviour
 
     public string ConversationalNpcName;
 
+    public int CNPCScore = 0;
+    public int PlayerScore = 0;
+
+
     [SerializeField] string moralFocus; // will equal one of the keys 
 
     public GameObject NPCCubeObject;

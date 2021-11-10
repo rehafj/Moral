@@ -1872,7 +1872,7 @@
 			"key": "FamilyPerson",
 			"rating": "High",
 			"playerInAgreementText": "Absolutely! Family is everything!",
-			"playerDisagreementText": "HOLD UP! You don't think family come first??",
+			"playerDisagreementText": "HOLD UP! family does not matter?",
 			"playerMoralDisagreementText": ["Not all families are supportive.", "A shape can have MANY support systems!"],
 			"playerDisAgreementOnAflag": [
 

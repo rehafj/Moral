@@ -64,6 +64,17 @@ public class StrictFatherMorality : MoralModels
             {
                 NPCType = "Low";
             }
+        } else //bug //i.e. player type here
+        {
+            if (NPCfmHighValues.Contains(surfaceValue))
+            {
+                NPCType = "Low";
+            }
+            else
+            {
+                NPCType = "High";
+            }
+
         }
 
         // Debug.Log("!!!!!+ NPC WILL LOOK FOR SCHEMAS THAT HAVE" + NPCType);
@@ -115,11 +126,84 @@ public class StrictFatherMorality : MoralModels
             }
         }
 
-        return "!!!will check generic series ";
+        return "GenericResponceGiven";
 
     }
 
 
+    public List<string> returnIntersectingPatternNames(List<Dialoug> currentBNPCPatterns, string CurrentSV)
+    {
+        List<string> temp = new List<string>();
+        string sv = CurrentSV;
+        sv += "_CoreValues";
+
+        Debug.Log("what is sv:" + sv);
+        try
+        {
+
+            foreach(Dialoug d in currentBNPCPatterns)
+            {
+                foreach (string s in base.coreValuesDic[sv])
+                {
+                    if (d.Pattern == s)
+                    {
+                        temp.Add(s);
+                    }
+                }
+
+            }
+
+            return temp;
+
+        }
+        catch (System.Exception)
+        {
+            Debug.LogError(sv + "does not exhisit");
+            throw;
+        }
+
+    }
+
+
+    public List<Dialoug> returnIntersectingPatternNodes(List<Dialoug> currentBNPCPatterns, string CurrentSV, bool returnIntersecting)
+    {
+        List<Dialoug> temp = new List<Dialoug>();
+        string sv = CurrentSV;
+        sv += "_CoreValues";
+
+        Debug.Log("what is sv:" + sv);
+        try
+        {
+
+            foreach (Dialoug d in currentBNPCPatterns)
+            {
+                foreach (string s in base.coreValuesDic[sv])
+                {
+                    if (returnIntersecting)
+                    {
+                        if (d.Pattern == s)
+                        {
+                            temp.Add(d);
+                        }
+                    } else if(!returnIntersecting &&d.Pattern!=s)
+                    {
+                        temp.Add(d);
+                    }
+                  
+                }
+
+            }
+
+            return temp;
+
+        }
+        catch (System.Exception)
+        {
+            Debug.LogError(sv + "does not exhisit");
+            throw;
+        }
+
+    }
     public StrictFatherMorality()
     {
         if (Random.Range(0, 10) >= 4)

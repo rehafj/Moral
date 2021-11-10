@@ -22,6 +22,8 @@ public class MoralModels : MonoBehaviour
 
     //Debug.Log("TESTING THIS OUT ---" + jsn.listOfArguments.Count);
 
+  
+
     List<string> BTrueTYourHeart_CoreValues = new List<string>() //else are the othervalues...
     {
         "InLovewithspouseoffriend", "widowedbutnotgrieving"
@@ -371,6 +373,14 @@ public class MoralModels : MonoBehaviour
 
 }
 
+
+/*public class CoreValues
+{
+    public string ValueName;
+    public List<string> ValuePatterns;
+
+   
+}*/
 
 //returnListOfDialougNodes
 //mappedKey
