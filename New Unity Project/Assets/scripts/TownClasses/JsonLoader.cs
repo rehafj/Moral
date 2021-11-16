@@ -66,15 +66,11 @@ public class JsonLoader : MonoBehaviour
     const string TOWNLOCATIONS = @"JSON/townPlaces";
 
     const string NARRATIVEPATH = @"JSON/surfaceLevelDialoug";
-
     const string MODELARGUEMNTS = @"JSON/newSfma"; // correct format :) - and works! 
-
     const string PLAYERDIALIUG = @"JSON/conversation/playerResponces";
-
     const string FATHERMODELARGUMENTS = @"JSON/testingnewfatherstructure";
-
+    //const string mothermodelarguments
     const string BNPCFACTS = @"JSON/BNPCInfoTranslation";
-
     const string MMGENREICRESPONCES = @"JSON/genericResponces";
 
 

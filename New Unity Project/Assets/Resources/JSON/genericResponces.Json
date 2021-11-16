@@ -1,10 +1,268 @@
 [{
- "key": "adultbutnotworking",
- "highGnericResponces": ["text1","text2"] ,
- "lowGnericResponces": ["text1","text2"]
-},{
-	"key": "advancedCareer",
-  "highGnericResponces": ["text1","text2"] ,
-  "lowGnericResponces": ["text1","text2"]
-}
+		"key": "adultbutnotworking",
+		"highGnericResponces": ["If they don't have to work or they can't work, it's their business and not yours.", "We all have our own reasons for things we do or don't do, you shouldn't judge."],
+		"lowGnericResponces": ["This shape is a burden to society.", "This shape is a lazy dead weight."]
+	},
+	{
+		"key": "advancedCareer",
+		"highGnericResponces": ["Good shapes are often rewarded so I'd say this is a good shape.", "We should all aspire to be like this shape!"],
+		"lowGnericResponces": ["It's better to focus on more important things like a promotion.", "Getting a promotion isn't everything."]
+	},
+	{
+		"key": "AdventureSeeker",
+		"highGnericResponces": ["I look up to shapes who are adventurers!", "Great shapes all have great stories from their adventures to share!"],
+		"lowGnericResponces": ["Thrill-seekers will never be the bliss of a happy and steady life. This shape will never understand that.", "I don't like those who always seek adventures instead of focusing on what's in front of them."]
+	},
+	{
+		"key": "ButcherButRegretful",
+		"highGnericResponces": ["A butcher who is remorseful about their job means they have a good heart.", "A butcher who hates their job proves that they care."],
+		"lowGnericResponces": ["If a butcher is regretful about what they do, what do they keep doing it then?", "It doesn't matter if a butcher is regretful, it matters what they did."]
+	},
+	{
+		"key": "butcherRole",
+		"highGnericResponces": ["Killing animals for a living is hard but someone needs to do it.", "Someone has to do this type of job and we should be thankful."],
+		"lowGnericResponces": ["Being a butcher is just another job, there is nothing special about that.", "Killing animals for a living is not the most ethical."]
+	},
+	{
+		"key": "conventional",
+		"highGnericResponces": ["I tend to trust those who are a bit old-school if you know what I mean.", "A good shape is often a little conventional."],
+		"lowGnericResponces": ["Conventional is just a nicer way to say stubborn.", "A conventional shape is not always a good shape."]
+	},
+	{
+		"key": "CustodianJobs",
+		"highGnericResponces": ["Custodians deserve our respect. ", "They have a hard job but they are doing it well!"],
+		"lowGnericResponces": ["This shape might be bad at their job.", "Having a job doesn’t automatically make you a good shape."]
+	},
+	{
+		"key": "departed",
+		"highGnericResponces": ["It's nice that this shape made the move to chase after their dreams.", "This shape left to find what they want in life and that's really brave."],
+		"lowGnericResponces": ["I don't like those who abandon their community.", "I don't understand those who leave their roots behind."]
+	},
+	{
+		"key": "DevorcedManyPeople",
+		"highGnericResponces": ["Shapes who follow their heart are good in my opinion.", "Only brave shapes can find true love."],
+		"lowGnericResponces": ["This shape is irresponsible.", "This shape must have broken so many of their partners' hearts."]
+	},
+	{
+		"key": "DiedBeforeRetired",
+		"highGnericResponces": ["It's beautiful for this shape to dedicate their lives to what they believe.", "There is nothing wrong with pursuing your career until the very end."],
+		"lowGnericResponces": ["What a pity to die before you could enjoy the wealth you have massed. Live your life before it's too late.", "What's the point of success if you don't get to enjoy it?! Such a shame."]
+	},
+	{
+		"key": "doesNotGiveToThoseInNeed",
+		"highGnericResponces": ["We shouldn't judge how others spend their money.", "Needy shapes will always be needy no matter how much you try to help them."],
+		"lowGnericResponces": ["What's the point of money when you just hoard it and not share?!", "Not a fan of selfish shapes."]
+	},
+	{
+		"key": "exploteative",
+		"highGnericResponces": ["‘Exploteative' is just another word for smart.", "We gotta do what we must to achieve success."],
+		"lowGnericResponces": ["There's no point to success if you built it by taking advantage of others.", "‘Exploteative' is just another word for evil."]
+	},
+	{
+		"key": "familyPerson",
+		"highGnericResponces": ["I think it's usually safe to trust a shape who has a big family.", "A big family is often a reliable indicator of a decent shape."],
+		"lowGnericResponces": ["Having a family doesn't automatically make a shape a good shape.", "A family-oriented shape is not always a good shape."]
+	},
+	{
+		"key": "flipflop",
+		"highGnericResponces": ["Workplaces can be toxic so changing jobs is a wise decision.", "Not all jobs can make you happy, that's why some shapes can't stay in one job for too long."],
+		"lowGnericResponces": ["Not being able to hold a job is just sad.", "If they can't keep a job, they can't be a good shape in my opinion."]
+	},
+	{
+		"key": "friendwithabestfriendsenemy",
+		"highGnericResponces": ["We can't control who we vibe with!", "Friendships can be difficult so we shouldn't judge."],
+		"lowGnericResponces": ["This shape is a traitor.", "This shape will probably stab you in the back one day."]
+	},
+	{
+		"key": "generalJobs",
+		"highGnericResponces": ["This shape has a good and steady job.", "This shape is an honest worker."],
+		"lowGnericResponces": ["This shape might be bad at their job.", "Having a job doesn’t automatically make you a good shape."]
+	},
+	{
+		"key": "getsFiredAlot",
+		"highGnericResponces": ["Well-paying jobs are often miserable, no wonder shapes don't stay in one job for too long.", "What's the point of work if you don't enjoy it."],
+		"lowGnericResponces": ["I would never trust a shape who can't hold a job.", "This shape must be so unpleasant to work with if they got fired from every job they had."]
+	},
+	{
+		"key": "graduate",
+		"highGnericResponces": ["Many shapes with a degree go on to achieve amazing things.", "If you know a shape who is well educated, then you know they're probably a great shape."],
+		"lowGnericResponces": ["Many shapes without a degree go on to achieve amazing things.", "Having a degree doesn’t automatically make you a good shape."]
+	},
+	{
+		"key": "hardWorker",
+		"highGnericResponces": ["Good shapes are hard workers.", "I love hard-working shapes."],
+		"lowGnericResponces": ["Being a hard worker can be toxic.", "Focusing on work makes you lose sight of what's truly important."]
+	},
+	{
+		"key": "hasAbestFriend",
+		"highGnericResponces": ["A shape who builds a deep bond with another shape means that they are a decent shape.", "If you have a best friend, that means you are a good shape in my book."],
+		"lowGnericResponces": ["Having one good friend is not enough to judge one's quality.", "Having a best friend is not enough to make you a good shape."]
+	},
+	{
+		"key": "hasalotofenemies",
+		"highGnericResponces": ["We should never judge someone based on their past.", "Maybe this shape is too authentic that others are just jealous."],
+		"lowGnericResponces": ["You can't trust those who made a lot of enemies.", "I would not be anywhere close to a shape with that much chaos in their life."]
+	},
+	{
+		"key": "healerRole",
+		"highGnericResponces": ["Those who make us safe deserve our respect. ", "Our community would be in disary if we don't have shapes like this."],
+		"lowGnericResponces": ["This shape might be bad at their job.", "Having a job doesn’t automatically make you a good shape."]
+	},
+	{
+		"key": "hiredByAFamilymember",
+		"highGnericResponces": ["Family members ought to help each other out!", "Some shapes choose to work with family not because of the money but the comfort of working with shapes who love you."],
+		"lowGnericResponces": ["If you can only find work through nepotism, it means you're not qualified for anything.", "I can't imagine how sad it is to be stuck with your family forever."]
+	},
+	{
+		"key": "InLoveWirhAnothersspuce",
+		"highGnericResponces": ["You can't control who you love.", "Sometimes true love comes in inconvenient times"],
+		"lowGnericResponces": ["Falling in love with your friend's partner is just wrong.", "Loving someone who does not belong to you is not ethical."]
+	},
+	{
+		"key": "InLovewithspouseoffriend",
+		"highGnericResponces": ["You can't control who you love.", "Sometimes true love comes in inconvenient times"],
+		"lowGnericResponces": ["Going after your friend's partner is wrong.", "Loving someone who does not belong to you is not ethical."]
+	},
+	{
+		"key": "isolated",
+		"highGnericResponces": ["There is nothing wrong with wanting to be alone.", "A good shape is often low-key and down-to-earth."],
+		"lowGnericResponces": ["Lone shapes creep me out sometimes.", "Lone shapes can't be trusted in my opinion."]
+	},
+	{
+		"key": "IsRichButNotGenrous",
+		"highGnericResponces": ["Keeping everything to yourself can be a smart thing in case of emergencies.", "They made their money so it's up to them how they want to spend it."],
+		"lowGnericResponces": ["What's the point of success if you don't give back? This shape is too selfish.", "I hate selfish shapes."]
+	},
+	{
+		"key": "IsWealthy",
+		"highGnericResponces": ["Wealthy shapes are usually good shapes.", "They have to be doing something right if they're rich."],
+		"lowGnericResponces": ["If they are rich, they can't be up to anything good.", "A shape's worth is not evaluated by their wealth."]
+	},
+	{
+		"key": "leftFotLoveIntrest",
+		"highGnericResponces": ["If you find the right shape, you will have to break up with the wrong shape.", "I think it's brave for this shape to follow their heart."],
+		"lowGnericResponces": ["This shape is irresponsible for leaving their partner.", "This shape broke their partner's heart by leaving them."]
+	},
+	{
+		"key": "likedToExperinceCulture",
+		"highGnericResponces": ["Other cultures bring so much richness to life. This shape is smart to see that.", "This shape has such a fulfilling life!"],
+		"lowGnericResponces": ["Instead of chasing after the new and exotic, I am always finding beauty in things around me.", "All cultures are the same so why even bother."]
+	},
+	{
+		"key": "likesToDate",
+		"highGnericResponces": ["It's always good to get yourself out there.", "You can't find the right one if you don't know who are the wrong ones."],
+		"lowGnericResponces": ["Shapes who date a lot don't know what they want in life.", "Not to judge, but flirty shapes make me uncomfortable."]
+	},
+	{
+		"key": "liklyToHelpTheHomeless",
+		"highGnericResponces": ["A good shape is one who likes to help out those in need.", "Those who are generous with their wealth and time are good shapes in my book."],
+		"lowGnericResponces": ["Just because a shape is giving, doesn't mean they can do no wrong.", "Those who like to help out could just be that they are addicted to feeling good about themselves."]
+	},
+	{
+		"key": "loner",
+		"highGnericResponces": ["Who you think is a loner is probably just very self-sufficient.", "Sometimes, you need to be alone. Not to be lonely, but to enjoy your free time being yourself."],
+		"lowGnericResponces": ["Lonely shapes often have a cold heart.", "It's hard to trust those who are so closed off."]
+	},
+	{
+		"key": "marriedForLifeStyleNotLove",
+		"highGnericResponces": ["I think shapes who married for lifestyle are resourceful.", "We have to be smart about who we choose as partners and I think this shape made the smart decision."],
+		"lowGnericResponces": ["This shape is just a gold digger.", "This shape is immoral and a con artist."]
+	},
+	{
+		"key": "marriedSomoneOlder",
+		"highGnericResponces": ["Love knows no limits, this shape is just following their heart.", "I think it's nice that this shape doesn't care about the age gap between them and their partner."],
+		"lowGnericResponces": ["Being with someone with that big of age gap makes me uncomfortable.", "This shape and their partner's age gap is too big for comfort."]
+	},
+	{
+		"key": "MovesAlot",
+		"highGnericResponces": ["A strong shape is brave enough to move to wherever they want to be.", "When wanderlust calls, you just have to honor it."],
+		"lowGnericResponces": ["Seeking adventures all around the world instead of finding happiness where you are is just stupid.", "Stability is everything and uprooting your life often can be harmful."]
+	},
+	{
+		"key": "nepotism",
+		"highGnericResponces": ["I think it's normal to work with shapes you already know.", "There's nothing wrong with helping those you know."],
+		"lowGnericResponces": ["One would be lying if they say nepotism isn't evil.", "Nepotism breeds evil."]
+	},
+	{
+		"key": "notworkingandrich",
+		"highGnericResponces": ["We all want to be rich and not work if we are honest with ourselves.", "Being rich and no job? Honestly good for them."],
+		"lowGnericResponces": ["Some shapes need to check their privilege.", "Rich and not working while the rest of us are suffering? So unrelatable."]
+	},
+	{
+		"key": "polluterRole",
+		"highGnericResponces": ["This shape has a good and steady job.", "This shape is an honest worker."],
+		"lowGnericResponces": ["This shape might be bad at their job.", "Having a job doesn’t automatically make you a good shape."]
+	},
+	{
+		"key": "reserved",
+		"highGnericResponces": ["Interacting with strangers can be tiring. I get that.", "An open heart can invite bad things."],
+		"lowGnericResponces": ["An open heart welcomes great things into your life.", "Being reserved is not the worst thing but it does keep good things out too."]
+	},
+	{
+		"key": "RetiredYoung",
+		"highGnericResponces": ["They can retire young and be ok? Honestly good for them.", "Smart shapes prefer to live their lives rather than die from working."],
+		"lowGnericResponces": ["Why stop working if you can leave a great legacy. What a waste.", "Shapes who retire early just want to take advantage of our welfare system."]
+	},
+	{
+		"key": "riskTaker",
+		"highGnericResponces": ["Taking risks and learning from them is the best form of learning!", "I love those who're brave enough to take risks!"],
+		"lowGnericResponces": ["It's called a risk for a reason, you don't always get what you hoped. It's stupid to always take risks.", "Being addicted risks means that you are running away from things that are truly important."]
+	},
+	{
+		"key": "selfMadeCubeByDedication",
+		"highGnericResponces": ["I look up to self-made shapes.", "Self-made shapes are real-life superheroes."],
+		"lowGnericResponces": ["I am tired of the culture of worshiping self-made shapes.", "The self-made shape myth needs to end, I hate that so much."]
+	},
+	{
+		"key": "socialLife",
+		"highGnericResponces": ["it's usually safe to trust a shape who has a lot of friends.", "Who can hate or distrust a shape with that many friends?"],
+		"lowGnericResponces": ["A friendly shape is not always trustworthy.", "Having friends doesn't automatically make you good."]
+	},
+	{
+		"key": "startedAfamilyAtAyoungAge",
+		"highGnericResponces": ["Only Lucky shapes get to start a family that early. Family bliss is everything.", "Shapes with a family, regardless of how young they might be, are good shapes."],
+		"lowGnericResponces": ["It's irresponsible for shapes to start a family that early.", "We must think of the children! We have a responsibility to care for and protect them!"]
+	},
+	{
+		"key": "supportsImmigration",
+		"highGnericResponces": ["We can learn so much from those who have different backgrounds.", "We should all be open to newcomers like this shape."],
+		"lowGnericResponces": ["Why be a migrant if you can find peace at home. I think that's suspicious.", "Outsiders don't share our values and that could be problematic."]
+	},
+	{
+		"key": "SusMovments",
+		"highGnericResponces": ["Don't judge shapes like that. Saying someone is sus is mean.", "A strong shape is a free shape and can be wherever they want to be."],
+		"lowGnericResponces": ["I don't like suspicious shapes.", "Shapes like this creep me out."]
+	},
+	{
+		"key": "Teachingrole",
+		"highGnericResponces": ["Educators deserve our respect. ", "Educators are so important."],
+		"lowGnericResponces": ["This shape might be bad at their job.", "Having a job doesn’t automatically make you a good shape."]
+	},
+	{
+		"key": "TooTrustingOfEnemies",
+		"highGnericResponces": ["If you can cultivate real trust, there is no enemy.", "I think this shape just sees the good in everyone!"],
+		"lowGnericResponces": ["Being so open can invite some troubled shapes.", "Befriending everyone invites all sorts of problems."]
+	},
+	{
+		"key": "widowedbutnotgrieving",
+		"highGnericResponces": ["Everyone grieves differently and you shouldn't judge.", "You shouldn't judge one's love life."],
+		"lowGnericResponces": ["There should be enough time before you move on.", "Moving on too quickly can be disrespectful towards your deceased partner."]
+	},
+	{
+		"key": "WillActOnLove",
+		"highGnericResponces": ["Going after who you love is very brave.", "Finding true love takes courage."],
+		"lowGnericResponces": ["Going after whoever you fancy is just not responsible.", "Moral and ethical boundaries should come before love."]
+	},
+	{
+		"key": "WorksInAlcohol",
+		"highGnericResponces": ["This shape has a good and steady job.", "They have a hard job but they are doing it well!"],
+		"lowGnericResponces": ["This shape might be bad at their job.", "Having a job doesn’t automatically make you a good shape."]
+	},
+	{
+		"key": "worksWithFamily",
+		"highGnericResponces": ["We can trust our family so it's smart to work with them.", "Having a support network at work can be a good thing."],
+		"lowGnericResponces": ["Family and work should never mix.", "Working with family and living with them can be a bit much!"]
+	}
+
+
 ]

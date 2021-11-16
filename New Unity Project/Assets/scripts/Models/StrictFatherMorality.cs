@@ -127,7 +127,80 @@ public class StrictFatherMorality : MoralModels
 
     }
 
+    public string returnAppendedSchemaText(string surfaceValue, string subvalue,
+                                      List<string> exploredSterings, bool isNPC)
+    {//update this ti include updates high low lists / player or npc --- update to reflect player bool - update for sening in list of explored or some list 
+        string NPCType = "High";
 
+        if (isNPC)
+        {
+            if (NPCfmHighValues.Contains(surfaceValue))
+            {
+                NPCType = "High";
+            }
+            else
+            {
+                NPCType = "Low";
+            }
+        }
+        else //bug //i.e. player type here
+        {
+            if (NPCfmHighValues.Contains(surfaceValue))
+            {
+                NPCType = "Low";
+            }
+            else
+            {
+                NPCType = "High";
+            }
+
+        }
+
+        string currentPatternCheck = subvalue;
+
+        int i = 0;
+        foreach (MoralModelArguments arg in JsonLoader.Instance.listOffATHERArguments)
+        {
+            
+            if (arg.SVkey == surfaceValue) //found the sv we wanted 
+            {
+                
+                foreach (SurfaceValueObject sobject in arg.SurfaceValueObject)
+                {
+                    string r = sobject.schema.Split('_').First();
+                    
+                    if (sobject.subvalue == subvalue && NPCType.ToLower() == r) //low or high
+                    {
+                        exploredSterings.Add(subvalue);//.change this to the npc or player list of static flags ( if cnpc flag )
+                        return sobject.schemaText;
+                    }
+                    else if (!exploredSterings.Contains(currentPatternCheck))
+                    {
+                        //   Debug.Log(" inside if it does not cvontained explorex strings !!!!!+ ! does thios happen ?  " + r + "and npc type" + NPCType.ToLower());
+
+                        if (NPCType.ToLower() == r) // add a check if bnpc has this flag  here 
+                        {
+                            return sobject.schemaText + "_" + sobject.subvalue; //else return the first thing that is high 
+
+                        }
+                        exploredSterings.Add(currentPatternCheck);//.change this to the npc or player list of static flags ( if cnpc flag )
+
+                        foreach (string s in exploredSterings)
+                        {
+                            // Debug.Log("!!!!!+ exploredSterings npw adds" + s);
+
+                        }
+                        i++;
+                        currentPatternCheck = arg.SurfaceValueObject[i].subvalue; //slight logic bug in counter if the current checked one was in rthe middle of the list -- 
+                    }
+
+                }
+            }
+        }
+
+        return "GenericResponceGiven";
+
+    }
     public List<string> returnIntersectingPatternNames(List<Dialoug> currentBNPCPatterns, string CurrentSV)
     {
         List<string> temp = new List<string>();

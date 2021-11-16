@@ -11,7 +11,15 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 {
     public static DialogeManager Instance { get; private set; }
 
+
+
+
+
     public string TranscriptString = "Before you can begin to determine what the composition of a particular paragraph will be, you must first decide on an argument and a working thesis statement for your paper. What is the most important idea that you are trying to convey to your reader? The information in each paragraph must be related to that idea. In other words, your paragraphs should remind your reader that there is a recurrent relationship between your thesis and the information in each paragraph. A working thesis functions like a seed from which your paper, and your ideas, will grow. The whole process is an organic one—a natural progression from a seed to a full-blown paper where there are direct, familial relationships between all of the ideas in the paper";
+    public DaigramWindow DiagramWindow;
+
+
+
 
     public List<Tree> allCharacterConversationsTrees = new List<Tree>();
     private Tree currentTree ;
@@ -116,6 +124,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     {
         bgchar = FindObjectOfType<BackgroundCharacter>();
         jsn = FindObjectOfType<JsonLoader>();
+        DiagramWindow = FindObjectOfType<DaigramWindow>();
         AllOpinions = jsn.listOfConversations;
         currentCNPC = FindObjectOfType<CharacterManager>().characters[0]; //hard coded with tim for now 
         OrgnizeCNPCOpinions();
@@ -145,7 +154,9 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         
         Dialoug introductionNode = new Dialoug(" introduction", " Player says: \nalong the lines of welcome...." + currentCNPC.ConversationalNpcName +
        " \n updated context text will start here  ", "graduate");
-        yield return new WaitForSeconds(delay);
+        DiagramWindow.CreateSingleBox(0, 0, introductionNode, introductionNode.mainOpinionOnAtopic);
+          yield return new WaitForSeconds(delay);
+
        //move this into its file 
         //conversedAboutCharectersList = sortCharactersToBringUp(bgchar.GetFiltredCharerList());//fltred list of characters (with 5+ flags)
 
@@ -296,7 +307,8 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                    currentNode.mainOpinionOnAtopic));
         addTextToTranscript(currentNode.UnbiasedOpeningStatment, true);
         addTextToTranscript(currentNode.mainOpinionOnAtopic, true);
-
+        DiagramWindow.CreateSingleBox(0, 0, currentNode, currentNode.UnbiasedOpeningStatment);
+        DiagramWindow.CreateSingleBox(0, 0, currentNode, currentNode.mainOpinionOnAtopic);
         yield return currentCorutine;
         turnOnButtons();
         DisplayplayCurrentOpinions(currentTree);
@@ -413,9 +425,12 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
                 PlayerButtons[0].onClick.AddListener(playerAgrees);
                     PlayerButtons[1].onClick.AddListener(playerDissAgrees);
-                    PlayerButtons[2].onClick.AddListener(playerArgueAboutFLag);//TOFIX
-                    PlayerButtons[3].onClick.AddListener(askAboutAnotherCharacter);//TOFIX
-                }
+                PlayerButtons[2].gameObject.SetActive(false);
+                PlayerButtons[3].gameObject.SetActive(false);
+                
+                /*   PlayerButtons[2].onClick.AddListener(playerArgueAboutFLag);//TOFIX
+                   PlayerButtons[3].onClick.AddListener(askAboutAnotherCharacter);//TOFIX*/
+            }
             else if (isInMoralModelArgumentLoop && mainModelChoice) {
 
                 Debug.Log("line 412");
@@ -566,14 +581,18 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
     void playerAgrees()
     {
-     
+        //for daigraming
+        string[] texts = { currentNode.agreementText, currentNode.disagreementText };
+       // DiagramWindow.CreateMultipleBoxes(texts, currentNode.agreementText);
+
         StartCoroutine(waitAndPrintAgreement(currentNode.agreementText)); // need to restrucre this ---
        // addTextToTranscript(currentNode.agreementText, false);
     }
     private void playerDissAgrees()
-    {
+    {   //for daigraming
+        string[] texts = { currentNode.agreementText, currentNode.disagreementText };
+        //DiagramWindow.CreateMultipleBoxes(texts, currentNode.disagreementText);
 
-        
         StartCoroutine(waitAndPrintDisagreement(currentNode.disagreementText)); //currentNode.getRandomHatedFact())
        // addTextToTranscript(currentNode., false);
 
@@ -589,7 +608,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         //present all flags for player as a sub menue 
         if(currentNode.getHeight() == 2) // change this into try /catch statments 
         {
-
+          //  string selectedPatern="";
             //FOR TESTING 
             for (int i = 0; i < PlayerButtons.Length; i++) //OTHER FLAGS
             {
@@ -599,6 +618,8 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                     PlayerButtons[i].GetComponentInChildren<Text>().text = "no more flags - add logic to hide this option ";
                 }
             }
+           // DiagramWindow.CreateMultipleBoxes(0, 0, currentNode.parent.children, )
+
             argueForAflag();
         }
 
@@ -700,21 +721,29 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
     private IEnumerator moveConversationToAflag(string pattern)
     {
+
+        string selectedText="";
         Debug.Log("TRIED TO GO HERE");
        // StopAllCoroutines();
         GuidialougText.text = "";
         yield return currentCorutine;
         currentCorutine = StartCoroutine(TypeInDialoug(getPlayerResponceToAflag(currentNode.MappedSurfaceValue, pattern, currentNode.Rating, TypeOfPlayerTexts.disAgreeOnAflag, false)));
+       //to do add somethin ghere -- to fix diagloig options
         yield return currentCorutine;
         currentCorutine = StartCoroutine(TypeInDialoug(currentNode.disagreementText));
         if (currentNode.Rating.ToLower() == "high")
         {
-            currentCorutine = StartCoroutine(TypeInDialoug(
-           currentCNPC.FatherModel.returnFatherModelArgumetnsText(
-               currentNode.MappedSurfaceValue, currentNode.Pattern, new List<string>() { }, true)));
+            selectedText = currentCNPC.FatherModel.returnFatherModelArgumetnsText(
+                 currentNode.MappedSurfaceValue, currentNode.Pattern, new List<string>() { }, true);
+
+            currentCorutine = StartCoroutine(TypeInDialoug(selectedText));
+
+
+         //TODO update this with list pof current PLAYER patterns / coices 
+        
         }
 
-
+        DiagramWindow.CreateMultipleBoxes( currentNode.parent.children,selectedText, pattern);
         turnOffButton();//new test comment 
         checkEndConversationAndMove();
 

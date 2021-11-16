@@ -7,14 +7,13 @@ public  class SVCollection : MonoBehaviour
 
     //for mapping purposes 
    public static List<SValues> allSurfaceValues = new List<SValues>() {
-
        new SValues("BTrueTYourHeart", new List<string> {"InLovewithspouseoffriend",
 "widowedbutnotgrieving","likesToDate","leftFotLoveIntrest","InLoveWirhAnothersspouce",
 "startedAfamilyAtAyoungAge","DevorcedManyPeople","marriedForLifeStyleNotLove","WillActOnLove","marriedSomoneOlder","BTrueTYourHeart"} ),
 new SValues("LoveIsForFools", new List<string> {"InLovewithspouseoffriend",
 "widowedbutnotgrieving","likesToDate","leftFotLoveIntrest","InLoveWirhAnothersspouce",
 "startedAfamilyAtAyoungAge","DevorcedManyPeople","marriedForLifeStyleNotLove","WillActOnLove","marriedSomoneOlder","LoveIsForFools"} ),
-new SValues("MoneyMaker", new List<string> {"graduate","notworkingandrich","IsWealthy","exploteative","adultbutnotworking","hardWorker","selfMadeCubeByDedication","getsFiredAlot","RetiredYoung","DiedBeforeRetired","flipflop","advancedCareer","IsRichButNotGenrous","MoneyMaker"} ),
+new SValues("MoneyMaker", new List<string> {"graduate","notworkingandrich","IsWealthy","exploteative","adultbutnotworking","hardWorker","selfMadeCubeByDedication","getsFiredAlot","RetiredYoung","DiedBeforeRetired","flipflop","advancedCareer","IsRichButNotGenrous","liklyToHelpTheHomeless","doesNotGiveToThoseInNeed","MoneyMaker"} ),
 new SValues("Enviromentalist", new List<string> {"polluterRole","conventional","Enviromentalist"} ),
 new SValues("EnviromentalistAnti", new List<string> {"polluterRole","conventional","EnviromentalistAnti"} ),
 new SValues("AnimalLover", new List<string> {"ButcherButRegretful","butcherRole","conventional","AnimalLover"} ),
@@ -42,7 +41,6 @@ new SValues("WeArewNothingIfWeAreNotReserved", new List<string> {"hasAbestFriend
 new SValues("ImmagretsWeGetTheJobDone", new List<string> {"supportsImmigration","ImmagretsWeGetTheJobDone"} ),
 new SValues("suchUncharactristicBehaviorOhMy", new List<string> {"marriedForLifeStyleNotLove","marriedSomoneOlder","InLovewithspouseoffriend","widowedbutnotgrieving","leftFotLoveIntrest","InLoveWirhAnothersspouce","startedAfamilyAtAyoungAge","DevorcedManyPeople","WillActOnLove","exploteative","conventional","adultbutnotworking","AdventureSeeker","MovesAlot","getsFiredAlot","loner","isolated","hasalotofenemies","friendwithabestfriendsenemy","SusMovments","suchUncharactristicBehaviorOhMy"} )
 
-   
 };
     /*
         new SValues("BTrueTYourHeart", new List<string> {"InLovewithspouseoffriend", "widowedbutnotgrieving",

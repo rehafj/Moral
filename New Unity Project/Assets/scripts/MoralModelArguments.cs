@@ -12,6 +12,7 @@ public class SurfaceValueObject
     public string subvalue { get; set; }
     public string text { get; set; }
     public string schema { get; set; }
+    public string schemaText { get; set; }
     public string NPCTypeSchemaValue { get; set; }
 }
 
