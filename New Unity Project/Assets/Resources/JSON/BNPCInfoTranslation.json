@@ -1,165 +1,265 @@
 [{
 		"SearchBarKey": "socialLife",
-		"BNPCsearchTranslation": ["This shape is highly sociable", "reports indicate this shape has a social life", "leads in a social life, would cry without it"]
+		"BNPCsearchTranslation": ["this shape is highly sociable", "this shape has a social life", "this shape leads in a social life, would cry without it"]
 	},
 
 	{
 		"SearchBarKey": "hasalotofenemies",
-		"BNPCsearchTranslation": ["Shape seems to make alot of enemies", "reports of enemies around this shape", "so many enemies..."]
+		"BNPCsearchTranslation": ["this shape seems to make a lot of enemies", "there are a lot of enemies around this shape", "this shape has many enemies"]
+	},
+
+	{
+		"SearchBarKey": "startedAfamilyAtAyoungAge",
+		"BNPCsearchTranslation": ["this shape started their family quite early", "this shape and their partner got together quite early", "this shape had little shapes quite early"]
+	},
+
+	{
+		"SearchBarKey": "supportsImmigration",
+		"BNPCsearchTranslation": ["this shape supports immigration", "this shape loves those who moved to our city", "this shape welcomes outsiders"]
+	},
+
+{
+		"SearchBarKey": "familyPerson",
+		"BNPCsearchTranslation": ["this shape has a big family", "this shape has a lot of young shapes", "this shape comes from a big family"]
 	},
 
 	{
 		"SearchBarKey": "graduate",
-		"BNPCsearchTranslation": ["This shape graduated with honors", "a shape with a degree", "reports indcate this shape acuired a degree"]
+		"BNPCsearchTranslation": ["this shape graduated with honors", "this is a shape with a degree", "this shape acquired a degree"]
 	},
 
 	{
 		"SearchBarKey": "exploteative",
-		"BNPCsearchTranslation": ["complaints of an explorative shape", "explotative shape warning", "likes to exploit others for own benifit"]
+		"BNPCsearchTranslation": ["there are complaints about this shape being explorative", "this shape is exploitative", "this shape likes to exploit the system for their own benefit"]
 	},
 
 	{
 		"SearchBarKey": "adultbutnotworking",
-		"BNPCsearchTranslation": ["adult shape without a job", "this shape lacks a job", "no jobs identified on this shape"]
+		"BNPCsearchTranslation": ["this adult shape does not have a job", "this shape lacks a job", "this shape is not currently working"]
 	},
 
 	{
 		"SearchBarKey": "notworkingandrich",
-		"BNPCsearchTranslation": ["aqquired vast wealth without working", "fell into lots of money", "has a lot of riches without a career"]
+		"BNPCsearchTranslation": ["this shape acquired vast wealth without working", "this shape fell into lots of money", "this shape has a lot of riches without a career"]
 	},
 
 	{
 		"SearchBarKey": "IsWealthy",
-		"BNPCsearchTranslation": ["This shape is wealthy", "such wealth, wow", "this shape has a lot of money, we do mean alot... "]
+		"BNPCsearchTranslation": ["this shape is wealthy", "this shape is really rich", "this shape has a lot of money, we do mean a lot... "]
+	},
+
+	{
+		"SearchBarKey": "leftFotLoveIntrest",
+		"BNPCsearchTranslation": ["this shape left their partner", "this shape left their partner behind", "this shape broke things off with their partner"]
 	},
 
 	{
 		"SearchBarKey": "worksWithFamily",
-		"BNPCsearchTranslation": ["This shape works with family", "this shape works with their family", "job includes working with family, rough..."]
+		"BNPCsearchTranslation": ["this shape works with family", "this shape works with their family", "this shape is working with their family"]
+	},
+
+	{
+		"SearchBarKey": "InLoveWirhAnothersspouce",
+		"BNPCsearchTranslation": ["this shape is in love with someone else", "this shape loves a shape who is not their partner", "this shape loves someone other than their partner"]
+	},
+
+	{
+		"SearchBarKey": "InLovewithspouseoffriend",
+		"BNPCsearchTranslation": ["this shape is in love with their friend’s partner", "this shape loves a shape who is their friend’s partner", "this shape might be in love with their friend’s partner"]
+	},
+
+	{
+		"SearchBarKey": "isolated",
+		"BNPCsearchTranslation": ["this shape lives alone", "this shape has no neighbor", "this shape lives by themselves"]
 	},
 
 	{
 		"SearchBarKey": "hiredByAFamilymember",
-		"BNPCsearchTranslation": ["This shape was hired by a family memeber", "nepotisum warning! shape hired by family", "this shape is hired by family"]
+		"BNPCsearchTranslation": ["this shape was hired by a family member", "this shape was hired due to nepotism", "this shape is hired by family"]
 	},
 
 	{
 		"SearchBarKey": "MovesAlot",
-		"BNPCsearchTranslation": ["This shape moves alot, has not settled down", "this shape moves alot, reports indicate they do not wish to settle in a place", "this shape spent their life moving around"]
+		"BNPCsearchTranslation": ["this shape moves a lot, has not settled down", "this shape moves a lot, reports indicate they do not wish to settle in a place", "this shape spent their life moving around"]
 	},
 
 	{
 		"SearchBarKey": "getsFiredAlot",
-		"BNPCsearchTranslation": ["this shape was fired alot", "fired from jobs, multiple times", "this shape tends to get fired alot"]
+		"BNPCsearchTranslation": ["this shape was fired a lot", "this shape got fired from jobs, multiple times", "this shape tends to get fired a lot"]
 	},
 
 	{
 		"SearchBarKey": "SusMovments",
-		"BNPCsearchTranslation": ["This shape is highly suspicious", "thsi shape has odd behaviors, reports indicate suspition", "highly suspecous shape"]
+		"BNPCsearchTranslation": ["this shape is highly suspicious", "this shape has odd behaviors, reports indicate suspicion", "this is a highly suspicious shape"]
 	},
 
 	{
 		"SearchBarKey": "RetiredYoung",
-		"BNPCsearchTranslation": ["This shape retied young", "this shape retired early in life", "this shape retied young"]
+		"BNPCsearchTranslation": ["this shape retired young", "this shape retired early in life", "this shape retired very early"]
 	},
 
 	{
 		"SearchBarKey": "DiedBeforeRetired",
-		"BNPCsearchTranslation": ["This shape passed away before they retired", "worked till they died, no retirment indicated", "this shape worked and died without retiring"]
+		"BNPCsearchTranslation": ["this shape passed away before they retired", "this shape worked till they died, no retirement for them", "this shape died without retiring"]
 	},
 
 	{
 		"SearchBarKey": "IsRichButNotGenrous",
-		"BNPCsearchTranslation": ["This shape is wealthy but reports show no generosity", "high wealth but low empathy", "this shape is rich but does not give anything back"]
+		"BNPCsearchTranslation": ["this shape is wealthy but reports show no generosity", "this shape is highly wealth but has low empathy", "this shape is rich but does not give back"]
 	},
 
 	{
 		"SearchBarKey": "ButcherButRegretful",
-		"BNPCsearchTranslation": ["This shape hates their butcher role", "this shape dislikes working as a butcher", "this shape likes animals but works as a butcher, reports indicate regret and remorse"]
-	},
-
-	{
-		"SearchBarKey": "selfMadeCubeByDedication",
-		"BNPCsearchTranslation": ["This shape is a self made cube", "this shape worked hard, self made shape", "reports show that this shape worked with high dedication"]
+		"BNPCsearchTranslation": ["this shape hates being a butcher", "this shape dislikes working as a butcher", "this shape likes animals but works as a butcher, reports indicate regret and remorse"]
 	},
 
 	{
 		"SearchBarKey": "likedToExperinceCulture",
-		"BNPCsearchTranslation": ["This shape likes to experince other cultures", "reports indicate this shape likes to experince new things", "this shape is open to exeperincing new things, records show liked to travel"]
+		"BNPCsearchTranslation": ["this shape likes to experience other cultures", this shape likes to experience new things", "this shape is open to experiencing new things, records show liked to travel"]
+	},
+
+
+	{
+		"SearchBarKey": "liklyToHelpTheHomeless",
+		"BNPCsearchTranslation": ["this shape likes to help out others", this shape likes to give back to the community", "this shape is generous with their money and time"]
+	},
+
+	{
+		"SearchBarKey": "loner",
+		"BNPCsearchTranslation": ["this shape likes to be alone", this shape is a loner", "this shape seems lonely"]
+	},
+
+	{
+		"SearchBarKey": "likesToDate",
+		"BNPCsearchTranslation": ["this shape likes to date", this shape goes on a lot of dates", "this shape is always with some new shape"]
 	},
 
 	{
 		"SearchBarKey": "doesNotGiveToThoseInNeed",
-		"BNPCsearchTranslation": ["This shape is a classic scroge", "reports indicate this shape does not give to those less fourtinate", "no empathy identified, this shape does not give to those in need"]
+		"BNPCsearchTranslation": ["this shape is a classic scrooge", "this shape does not give to those less fortunate", "no empathy identified, this shape does not give to those in need"]
 	},
 
 	{
 		"SearchBarKey": "reserved",
-		"BNPCsearchTranslation": ["This shape is highly reserved", "reserved shape", "this shape is highly reserved"]
+		"BNPCsearchTranslation": ["this shape is highly reserved", "this is a reserved shape", "this shape is highly reserved"]
+	},
+
+	{
+		"SearchBarKey": "friendwithabestfriendsenemy",
+		"BNPCsearchTranslation": ["this shape is friends with their friend’s enemy", "this shape befriended their best friend’s enemy", "this shape is shady for befriending their friend’s enemy"]
 	},
 
 	{
 		"SearchBarKey": "nepotism",
-		"BNPCsearchTranslation": ["This shape is highly reserved", "reserved shape", "this shape is highly reserved"]
+		"BNPCsearchTranslation": ["this shape is a fan of nepotism", "this shape benefits from nepotism", "this shape engages nepotism"]
 	},
 
 	{
 		"SearchBarKey": "flipflop",
-		"BNPCsearchTranslation": ["This shape iflip-flops alot, cannot settle on one job ", "this shape cannot settle on a thing, they flip-flop", "channge jobs often"]
+		"BNPCsearchTranslation": ["this shape flip-flops a lot, cannot settle on one job ", "this shape cannot settle on a thing, they flip-flop", "this shape changes jobs often"]
 	},
 
 	{
 		"SearchBarKey": "WorksInAlcohol",
-		"BNPCsearchTranslation": ["works in a bar ", "serves alcoholic bevrages to others,", "precuer of alcoholic bevrages, sells them"]
+		"BNPCsearchTranslation": ["this shape works in a bar", "this shape serves alcoholic beverages to others,", "this shape sells alcohol"]
 	},
 
 	{
 		"SearchBarKey": "healerRole",
-		"BNPCsearchTranslation": ["This shape heals others", "this shape works at a clinic", "this shape has a healer role of sorts"]
+		"BNPCsearchTranslation": ["this shape heals others", "this shape works at a clinic", "this shape has a healer role of sorts"]
 	},
 
 	{
 		"SearchBarKey": "polluterRole",
-		"BNPCsearchTranslation": ["This shape is not a friend to the enviroment", "their job causes polotion,", "causes significant enviromental damadge via job"]
+		"BNPCsearchTranslation": ["this shape is not a friend to the environment", "their job causes pollution,", "this shape causes significant environmental damage via their job"]
 	},
 
 	{
 		"SearchBarKey": "riskTaker",
-		"BNPCsearchTranslation": ["This shape is a risk-taker", "This shape is a risk-taker", "This shape is a risk-taker"]
+		"BNPCsearchTranslation": ["this shape is a risk-taker", "this shape is a lover of risk", "this shape always takes the riskiest option"]
 	},
 
 	{
 		"SearchBarKey": "butcherRole",
-		"BNPCsearchTranslation": ["This shape works as a butcher", "This shape works as a butche", "This shape works as a butche"]
+		"BNPCsearchTranslation": ["this shape works as a butcher", "This shape kills animal for a living", "this shape is a butcher"]
+	},
+
+	{
+		"SearchBarKey": "TooTrustingOfEnemies",
+		"BNPCsearchTranslation": ["this shape is too trusting", "this shape is very naive", "this shape is too trusting of enemies"]
+	},
+
+	{
+		"SearchBarKey": "widowedbutnotgrieving",
+		"BNPCsearchTranslation": ["this shape moved on from their grief too soon", "this shape is not a grieving widow", "this shape moved on too quickly from their deceased partner"]
+	},
+
+	{
+		"SearchBarKey": "WillActOnLove",
+		"BNPCsearchTranslation": ["this shape is likely to act on love", "this shape goes after their who they love", "this shape is likely to make a move on who they are interested"]
+	},
+
+	{
+		"SearchBarKey": "conventional",
+		"BNPCsearchTranslation": ["this shape is conventional", "conventional is the best way to describe this shape", "this shape has conventional ideals and standards"]
 	},
 
 	{
 		"SearchBarKey": "Teachingrole",
-		"BNPCsearchTranslation": ["This shape is a teacher", "This shape is a teacher", "This shape is a teacher"]
+		"BNPCsearchTranslation": ["this shape is a teacher", "this shape loves teaching", "this shape loves their job as a teacher"]
 	},
 
 	{
 		"SearchBarKey": "advancedCareer",
-		"BNPCsearchTranslation": ["This shape is highly advanced in career aspects", "This shape is highly advanced in career aspects", "This shape is highly advanced in career aspects"]
+		"BNPCsearchTranslation": ["this shape is highly advanced in career aspects", "this shape got a promotion", "this shape is rising through the ranks"]
+	},
+
+	{
+		"SearchBarKey": "AdventureSeeker",
+		"BNPCsearchTranslation": ["this shape loves adventures", "this shape is an adventurer", "this shape is an adventure seeker"]
 	},
 
 	{
 		"SearchBarKey": "hardWorker",
-		"BNPCsearchTranslation": ["reecords show this shape works hard", "reecords show this shape works hard", "reecords show this shape works hard"]
+		"BNPCsearchTranslation": ["this shape works hard", "this shape is a hard worker", "this shape works really hard"]
+	},
+
+	{
+		"SearchBarKey": "hasAbestFriend",
+		"BNPCsearchTranslation": ["this shape has a best friend", "this shape and their best friend are very close", "this shape is close to their best friend"]
+	},
+	{
+		"SearchBarKey": "departed",
+		"BNPCsearchTranslation": ["this shape left town", "this shape moved away", "this shape has moved on from this city"]
+	},
+
+	{
+		"SearchBarKey": "DevorcedManyPeople",
+		"BNPCsearchTranslation": ["this shape changed multiple partners over the years", "this shape had a lot of partners", "this shape can’t settle down with one partner"]
 	},
 
 	{
 		"SearchBarKey": "CustodianJobs",
-		"BNPCsearchTranslation": ["This shape works as a custodian", "This shape works as a custodian,", "This shape works as a custodian,"]
+		"BNPCsearchTranslation": ["This shape works as a custodian", "This shape is a custodian,", "This shape has a job as a custodian,"]
 	},
 
 	{
 		"SearchBarKey": "generalJobs",
-		"BNPCsearchTranslation": ["This shape has a job,", "This shape has a job,", "This shape has a job,"]
+		"BNPCsearchTranslation": ["this shape has a job,", "this shape has a job,", "this shape has a job,"]
+	},
+
+	{
+		"SearchBarKey": "marriedForLifeStyleNotLove",
+		"BNPCsearchTranslation": ["this shape found a rich partner,", "this shape is only with their partner because of their money", "this shape is a gold digger,"]
+	},
+
+	{
+		"SearchBarKey": "marriedSomoneOlder",
+		"BNPCsearchTranslation": ["this shape and their partner has a big age gap", "the age gap between them and their partner are big", "this shape has an age-inappropriate partner"]
 	},
 
 	{
 		"SearchBarKey": "selfMadeCubeByDedication",
-		"BNPCsearchTranslation": ["selfMadeCubeByDedication,", "reports indicate this shape is a self made cube", "self made!"]
+		"BNPCsearchTranslation": ["this shape is a self-made shape,", "this shape is an entrepreneur", "this shape built their career from the ground up"]
 	}
 ]

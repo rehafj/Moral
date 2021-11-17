@@ -94,13 +94,15 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     //testing:
     bool isInMoralModelArgumentLoop = false;
     int moralModelCounterLoop =0;
+
+
     public static List<string> currentMoralModelExploredPatterns = new List<string>();
     public static List<string> currentMoralModelExploredPatterns_PLAYER = new List<string>(); //FIXC THIS 
 
     bool mainModelChoice = false;
     public List<Dialoug> CurrentBNPCPatterns;
     List<Dialoug> currentIntersectingNodes;
-    List<Dialoug> nonIntersectingNodes_generic;
+    List<Dialoug> nonIntersectingNodes_generic; //something is wrong in this... 
     Queue<Dialoug> currentPlayerOptionsInInnerConversation = new Queue<Dialoug>();
     int innerConversationCounter = 0;
 
@@ -453,7 +455,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                     {
                         Dialoug d = currentPlayerOptionsInInnerConversation.Dequeue();
 
-                        b.GetComponentInChildren<Text>().text = "actually... " +  d.Pattern;
+                        b.GetComponentInChildren<Text>().text =  getButtonTextTranslation(d.Pattern);
 
                         b.onClick.AddListener( delegate { PlayerDisagreedOnFlag(d); });
                     }
@@ -1590,6 +1592,25 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         }
     }
 
+    public string getButtonTextTranslation(string pattern) {
+
+        Debug.Log("called this for " + pattern);
+        int r = UnityEngine.Random.Range(0, 2);
+        foreach (CharacterSearchBarFacts fact in jsn.ListOfBNPCFacts)
+        {
+            Debug.Log("called this for " + pattern + "with the key" + fact.SearchBarKey);
+
+            if (pattern.ToLower() == fact.SearchBarKey.ToLower())
+            {
+                Debug.Log("called this for " + pattern + "with the key"+ fact.SearchBarKey);
+
+                return fact.BNPCsearchTranslation[r];
+            }
+        }
+
+        return  "no translation found for the pattern "+ pattern ;
+    }
+
     [SerializeField] bool checkCorutine;
     bool isItTypying()
     {
@@ -1862,10 +1883,10 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
     private void enterSubConversationOnDisagreement() //for now... 
     {
-        activateSubMenu();
+       // activateSubMenu();
     }
 
-    private void activateSubMenu()
+ /*   private void activateSubMenu() //not actually being used... 
     {
         populateDisagreementOptions();
 
@@ -1878,7 +1899,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         PlayerButtons[1].onClick.AddListener(playerDissAgrees);
         PlayerButtons[2].onClick.AddListener(playerArgueAboutFLag);//TOFIX
         PlayerButtons[3].onClick.AddListener(askAboutAnotherCharacter);//TOFIX
-    }
+    }*/
 
     private void populateDisagreementOptions()
     {
