@@ -761,7 +761,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             {
                 if (!isMoralARG)
                 {
-                    foreach (PlayerDisAgreementOnAflag f in p.playerNarrativeElements.playerDisAgreementOnAflag)
+                    /*foreach (PlayerDisAgreementOnAflag f in p.playerNarrativeElements.playerDisAgreementOnAflag)
                     {
                         Debug.Log("THE f.flag " + f.flag + "and the patytern is " + arguedFlag);
 
@@ -771,7 +771,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                             return "PLAYER SAYS: \n" + f.textValue;
                         }
 
-                    }
+                    }*/
 
 
                 }

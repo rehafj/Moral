@@ -44,6 +44,9 @@ public class JsonLoader : MonoBehaviour
     [SerializeField]
     public List<MoralModelArguments> listOffATHERArguments = new List<MoralModelArguments>(); //NEW ONE 
 
+    [SerializeField]
+    public List<MoralModelArguments> listOfNurturantModelArguments = new List<MoralModelArguments>(); //NEW ONE 
+
 
     [SerializeField]
     public List<CharacterSearchBarFacts> ListOfBNPCFacts = new List<CharacterSearchBarFacts>(); //NEW ONE 
@@ -67,8 +70,9 @@ public class JsonLoader : MonoBehaviour
 
     const string NARRATIVEPATH = @"JSON/surfaceLevelDialoug";
     const string MODELARGUEMNTS = @"JSON/newSfma"; // correct format :) - and works! 
-    const string PLAYERDIALIUG = @"JSON/conversation/playerResponces";
+    const string PLAYERDIALIUG = @"JSON/playerResponces";//@"JSON/conversation/playerResponces";
     const string FATHERMODELARGUMENTS = @"JSON/testingnewfatherstructure";
+    const string NURTURANTMODELARGUMENTS = @"JSON/NurturantModelStructure";
     //const string mothermodelarguments
     const string BNPCFACTS = @"JSON/BNPCInfoTranslation";
     const string MMGENREICRESPONCES = @"JSON/genericResponces";
@@ -106,6 +110,7 @@ public class JsonLoader : MonoBehaviour
 
         ListOfBNPCFacts = returnJsonAttributesIntoList<CharacterSearchBarFacts>(BNPCFACTS);
         listOffATHERArguments = returnJsonAttributesIntoList<MoralModelArguments>(FATHERMODELARGUMENTS);
+        listOfNurturantModelArguments = returnJsonAttributesIntoList<MoralModelArguments>(NURTURANTMODELARGUMENTS);
 
         ListOfMoralModelsGenricResponces = returnJsonAttributesIntoList<GenericMoralModelResponces>(MMGENREICRESPONCES);
         //FOR TESTING-REMOVE ME 
@@ -184,7 +189,7 @@ public class JsonLoader : MonoBehaviour
                         case ("playerMoralDisagreementTextTwo"):
                             return
                                 p.playerNarrativeElements.playerMoralDisagreementText[1];
-                        case ("playerDisAgreementOnAflag"):
+                      /*  case ("playerDisAgreementOnAflag"):
                             foreach(PlayerDisAgreementOnAflag k in p.playerNarrativeElements.playerDisAgreementOnAflag)
                             {
                                 if(k.flag == key)
@@ -192,7 +197,7 @@ public class JsonLoader : MonoBehaviour
                                     return k.textValue;
                                 }
                             }
-                            break;
+                            break;*/
                         default:
                             break;
                     }

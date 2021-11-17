@@ -10,11 +10,11 @@ public class PlayerDialoug : MonoBehaviour
     public PlayerNarrativeElements playerNarrativeElements { get; set; }
 }
 
-    public class PlayerDisAgreementOnAflag
+   /* public class PlayerDisAgreementOnAflag
     {
         public string flag { get; set; }
         public string textValue { get; set; }
-    }
+    }*/
 
     public class PlayerNarrativeElements
     {
@@ -23,7 +23,7 @@ public class PlayerDialoug : MonoBehaviour
         public string playerInAgreementText { get; set; }
         public string playerDisagreementText { get; set; }
         public List<string> playerMoralDisagreementText { get; set; }
-        public List<PlayerDisAgreementOnAflag> playerDisAgreementOnAflag { get; set; }
+        //public List<PlayerDisAgreementOnAflag> playerDisAgreementOnAflag { get; set; }
     }
 
 

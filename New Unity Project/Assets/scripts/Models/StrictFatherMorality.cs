@@ -127,6 +127,7 @@ public class StrictFatherMorality : MoralModels
 
     }
 
+
     public string returnAppendedSchemaText(string surfaceValue, string subvalue,
                                       List<string> exploredSterings, bool isNPC)
     {//update this ti include updates high low lists / player or npc --- update to reflect player bool - update for sening in list of explored or some list 

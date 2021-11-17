@@ -1,0 +1,2464 @@
+[{
+		"SVkey": "BTrueTYourHeart",
+		"SurfaceValueObject": [{
+			"subvalue": "InLovewithspouseoffriend",
+			"text": "Falling in love with a friend's partner must be difficult. I can't imagine what they're going through.",
+			"schema": "high_Empathy",
+			"schemaText": "Let's give this shape a break because they're going through a lot.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "widowedbutnotgrieving",
+			"text": "This shape is not properly honoring their dead partner because they moved on too fast.",
+			"schema": "low_Boundaries",
+			"schemaText": "Morally speaking, I don't think this shape is that great.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "likesToDate",
+			"text": "It can be hard to get yourself out there! I think it's great that this shape is making the effort!",
+			"schema": "high_SelfNurturance",
+			"schemaText": "This shape is true to their heart.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "leftFotLoveIntrest",
+			"text": "I can't imagine how sad their partner must've felt when this shape left them. I don't understand how cruel shapes can be sometimes.",
+			"schema": "low_Strength",
+			"schemaText": "This shape has a cold heart.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "InLoveWirhAnothersspouce",
+			"text": "This shape is in a difficult situation, I hope they make the right decision in the end. Falling in love with the wrong person doesn't make you a bad shape.",
+			"schema": "high_Empathy",
+			"schemaText": "Let's give this shape a break because they're going through a lot.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "startedAfamilyAtAyoungAge",
+			"text": "Maybe they started a family a bit too young, but they've learned to be responsible and caring. That's really something.",
+			"schema": "high_Growth",
+			"schemaText": "I think this shape has come very far!",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "DevorcedManyPeople",
+			"text": "I feel like this shape never truly understood themselves and that's why they can't be happy in any relationship.",
+			"schema": "low_Growth",
+			"schemaText": "This shape needs to do more soul searching.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "marriedForLifeStyleNotLove",
+			"text": "This shape only cared about their partner's wealth, imagine how sad their partner must've felt when they found out.",
+			"schema": "low_Boundaries",
+			"schemaText": "Morally speaking, I don't think this shape is that great.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "marriedSomoneOlder",
+			"text": "Though the age gap might make some uncomfortable, I think it's very brave for this shape to be with their partner.",
+			"schema": "high_Strength",
+			"schemaText": "This shape is courageous.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "WillActOnLove",
+			"text": "We should all be like this shape who follows their heart!",
+			"schema": "high_SelfNurturance",
+			"schemaText": "This shape is true to their heart.",
+			"NPCTypeSchemaValue": "High"
+		}]
+
+	},
+	{
+		"SVkey": "LoveIsForFools",
+		"SurfaceValueObject": [{
+			"subvalue": "InLovewithspouseoffriend",
+			"text": "You can’t control who you fall for so we shouldn’t judge.",
+			"schema": "high_Empathy",
+			"schemaText": "Let's give this shape a break because they're going through a lot.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "widowedbutnotgrieving",
+			"text": "I don’t think this shape is properly honoring the memory of their deceased partner because they’ve already moved on.",
+			"schema": "low_Boundaries",
+			"schemaText": "Morally speaking, I don't think this shape is that great.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "likesToDate",
+			"text": "Getting yourself out there is scary so it's great that this shape is making the effort!",
+			"schema": "high_SelfNurturance",
+			"schemaText": "This shape is true to their heart.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "leftFotLoveIntrest",
+			"text": "I can't imagine how sad their partner must've felt when this shape left them. Shapes can be very cruel.",
+			"schema": "low_Strength",
+			"schemaText": "This shape has a cold heart.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "InLoveWirhAnothersspouce",
+			"text": "Falling in love with the wrong person doesn't make you a bad shape, making the wrong decision does.",
+			"schema": "high_Empathy",
+			"schemaText": "Let's give this shape a break because they're going through a lot.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "startedAfamilyAtAyoungAge",
+			"text": "This shape started a family a bit young but they've learned to be responsible and caring. That's really something.",
+			"schema": "high_Growth",
+			"schemaText": "I think this shape has come very far!",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "DevorcedManyPeople",
+			"text": "I feel like this shape never truly understood themselves and that's why they can't be happy in any relationship.",
+			"schema": "low_Growth",
+			"schemaText": "This shape needs to do more soul searching.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "marriedForLifeStyleNotLove",
+			"text": "This shape only cared about their partner's wealth, imagine how sad their partner must've felt when they found out.",
+			"schema": "low_Boundaries",
+			"schemaText": "Morally speaking, I don't think this shape is that great.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "marriedSomoneOlder",
+			"text": "We should ignore the age gap, I think it's very brave for this shape to be with their partner.",
+			"schema": "high_Strength",
+			"schemaText": "This shape is courageous.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "WillActOnLove",
+			"text": "We should all be true to our heart.",
+			"schema": "high_SelfNurturance",
+			"schemaText": "This shape is true to their heart.",
+			"NPCTypeSchemaValue": "Low"
+		}]
+
+	},
+	{
+		"SVkey": "Teetotasler",
+		"SurfaceValueObject": [{
+			"subvalue": "socialLife",
+			"text": "I feel like as long as you're responsible, drinking makes you a joy to be around.",
+			"schema": "high_Nurturance",
+			"schemaText": "This shape is great company.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "hasalotofenemies",
+			"text": "This shape drinks a lot and made lots of enemies, I feel like drinking made them mean but it didn't help.",
+			"schema": "low_Nurturance",
+			"schemaText": "This shape is not the best shape I know.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "familyPerson",
+			"text": "This shape has a big family and they drink too. I feel like they are a good example of why alcohol doesn't make you an irresponsible shape.",
+			"schema": "high_Nurturance",
+			"schemaText": "This shape is great company.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "getsFiredAlot",
+			"text": "I feel like this shape needs to focus on themselves rather than using drinking to avoid facing problems.",
+			"schema": "low_Growth",
+			"schemaText": "There's a lot soul searching this shape needs to do.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "reserved",
+			"text": "I feel bad for this shape because it seems that they can't connect with anyone, and I don't think drinking alone is a good idea.",
+			"schema": "low_SelfNurturance",
+			"schemaText": "This shape can't be helped by drinks.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "conventional",
+			"text": "This shape drinks responsibly and I feel like that proves drinking is not bad. There are just bad shapes who use drinking as a way to indulge in bad behaviors.",
+			"schema": "high_Boundaries",
+			"schemaText": "Shapes who drink are not automatically evil.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "WorksInAlcohol",
+			"text": "This shape is an honest worker and I feel their job can't be easy! I feel like they're doing their best to sell happiness to others.",
+			"schema": "high_Boundaries",
+			"schemaText": "Shapes who drink are not automatically evil.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "hardWorker",
+			"text": "This shape drinks but they are also a hard worker, I think that means drinking isn't innately evil.",
+			"schema": "high_Boundaries",
+			"schemaText": "Shapes who drink are not automatically evil.",
+			"NPCTypeSchemaValue": "High"
+		}]
+
+	},
+	{
+		"SVkey": "TeetotaslerAnti",
+		"SurfaceValueObject": [{
+			"subvalue": "socialLife",
+			"text": "I feel like as long as you're responsible, drinking makes you a joy to be around.",
+			"schema": "high_Nurturance",
+			"schemaText": "This shape is great company.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "hasalotofenemies",
+			"text": "This shape drinks a lot and made lots of enemies, I feel like drinking made them mean but it didn't help.",
+			"schema": "low_Nurturance",
+			"schemaText": "This shape is not the best shape I know.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "familyPerson",
+			"text": "This shape has a big family and they drink too. I feel like they are a good example of why alcohol doesn't make you an irresponsible shape.",
+			"schema": "high_Nurturance",
+			"schemaText": "This shape is great company.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "getsFiredAlot",
+			"text": "I feel like this shape needs to focus on themselves rather than using drinking to avoid facing problems.",
+			"schema": "low_Growth",
+			"schemaText": "There's a lot soul searching this shape needs to do.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "conventional",
+			"text": "I feel bad for this shape because it seems that they can't connect with anyone, and I don't think drinking alone is a good idea.",
+			"schema": "low_SelfNurturance",
+			"schemaText": "This shape can't be helped by drinks.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "reserved",
+			"text": "This shape drinks responsibly and I feel like that proves drinking is not bad. There are just bad shapes who use drinking as a way to indulge in bad behaviors.",
+			"schema": "high_Boundaries",
+			"schemaText": "Shapes who drink are not automatically evil.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "WorksInAlcohol",
+			"text": "This shape is an honest worker and I feel their job can't be easy! I feel like they're doing their best to sell happiness to others.",
+			"schema": "high_Boundaries",
+			"schemaText": "Shapes who drink are not automatically evil.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "hardWorker",
+			"text": "This shape drinks but they are also a hard worker, I think that means drinking isn't innately evil.",
+			"schema": "high_Boundaries",
+			"schemaText": "Shapes who drink are not automatically evil.",
+			"NPCTypeSchemaValue": "Low"
+		}]
+
+	},
+	{
+		"SVkey": "ProHiringFamily",
+		"SurfaceValueObject": [{
+			"subvalue": "familyPerson",
+			"text": "This shape has a big and loving family and I feel like the intention of hiring family members is good, You know, family helping family.",
+			"schema": "high_Nurturance",
+			"schemaText": "This shape looks out for their loved ones.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "graduate",
+			"text": "Getting a degree is not easy! I feel like whoever hires them, no matter how they're hired, made the right decision.",
+			"schema": "high_Growth",
+			"schemaText": "This shape spent a lot of time to better themselves.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "exploteative",
+			"text": "By hiring family members, businesses fail to recognize the hard work of those who do not rely on their connections.",
+			"schema": "low_Boundaries",
+			"schemaText": "This shape doesn't care about who they hurt.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "IsWealthy",
+			"text": "If nepotism is the way to achieve wealth for this shape, I don't think it's worth it.",
+			"schema": "low_FairDistribution",
+			"schemaText": "This shape needs to understand the importance of equality.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "adultbutnotworking",
+			"text": "Maybe hiring family is a good idea for those shapes who are struggling to get a job.",
+			"schema": "high_Empathy",
+			"schemaText": "We shouldn't judge shapes based on what's on the surface.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "startedAfamilyAtAyoungAge",
+			"text": "This shape started a family early and I feel like they understand the importance of relying on one's family for support.",
+			"schema": "high_Nurturance",
+			"schemaText": "This shape looks out for their loved ones.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "worksWithFamily",
+			"text": "This shape has a great dynamic with their family and it's a joy to see them bringing that into the workplace.",
+			"schema": "high_Nurturance",
+			"schemaText": "This shape looks out for their loved ones.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "hiredByAFamilymember",
+			"text": "I feel like I would also hire family members if they ask for my help, I don't think that makes you a bad shape.",
+			"schema": "high_Empathy",
+			"schemaText": "We shouldn't judge shapes based on what's on the surface.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "selfMadeCubeByDedication",
+			"text": "If a shape built their own career, I feel like it's fair for them to hire those they care about.",
+			"schema": "high_Nurturance",
+			"schemaText": "This shape looks out for their loved ones.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "conventional",
+			"text": "Family is the most important thing in a shape's life and I feel like it's normal for them to help out their family.",
+			"schema": "high_Nurturance",
+			"schemaText": "This shape looks out for their loved ones.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "nepotism",
+			"text": "Business and family shouldn't mix, this shape is not being fair to those who are actually qualified for the job.",
+			"schema": "low_FairDistribution",
+			"schemaText": "This shape needs to understand the importance of equality.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "WorksInAlcohol",
+			"text": "Well, I feel like as long as they're doing a good job, it doesn’t matter how they're hired.",
+			"schema": "high_Boundaries",
+			"schemaText": "I feel like this shape is doing their best.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "healerRole",
+			"text": "Well, I feel like as long as they're doing a good job, it doesn’t matter how they're hired.",
+			"schema": "high_Boundaries",
+			"schemaText": "I feel like this shape is doing their best.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "polluterRole",
+			"text": "Well, I feel like as long as they're doing a good job, it doesn’t matter how they're hired.",
+			"schema": "high_Boundaries",
+			"schemaText": "I feel like this shape is doing their best.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "riskTaker",
+			"text": "This shape likes to take risks and I feel like it's good to have their family support at work if... you know... things go badly.",
+			"schema": "high_SelfNurturance",
+			"schemaText": "This shape is a go-getter.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "butcherRole",
+			"text": "Well, I feel like as long as they're doing a good job, it doesn’t matter how they're hired.",
+			"schema": "high_Boundaries",
+			"schemaText": "I feel like this shape is doing their best.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "Teachingrole",
+			"text": "Well, I feel like as long as they're doing a good job, it doesn’t matter how they're hired.",
+			"schema": "high_Boundaries",
+			"schemaText": "I feel like this shape is doing their best.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "advancedCareer",
+			"text": "Imagine how hard it is to find a job these days. We have to use our resources to get to where we need to go.",
+			"schema": "high_SelfNurturance",
+			"schemaText": "This shape is a go-getter.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "generalJobs",
+			"text": "Well, I feel like as long as they're doing a good job, it doesn’t matter how they're hired.",
+			"schema": "high_Boundaries",
+			"schemaText": "I feel like this shape is doing their best.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "hardWorker",
+			"text": "This shape is a hard worker and I'm sure they'll prove their worth regardless of how they got the job.",
+			"schema": "high_SelfNurturance",
+			"schemaText": "This shape is a go-getter.",
+			"NPCTypeSchemaValue": "High"
+		}]
+
+	},
+	{
+		"SVkey": "AntiFaviortisum",
+		"SurfaceValueObject": [{
+			"subvalue": "familyPerson",
+			"text": "This shape has a big and loving family and I feel like the intention of hiring family members is good, You know, family helping family.",
+			"schema": "high_Nurturance",
+			"schemaText": "This shape looks out for their loved ones.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "graduate",
+			"text": "Getting a degree is not easy! I feel like whoever hires them, no matter how they're hired, made the right decision.",
+			"schema": "high_Growth",
+			"schemaText": "This shape spent a lot of time to better themselves.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "exploteative",
+			"text": "By hiring family members, businesses fail to recognize the hard work of those who do not rely on their connections.",
+			"schema": "low_Boundaries",
+			"schemaText": "This shape doesn't care about who they hurt.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "IsWealthy",
+			"text": "If nepotism is the way to achieve wealth for this shape, I don't think it's worth it.",
+			"schema": "low_FairDistribution",
+			"schemaText": "This shape needs to understand the importance of equality.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "adultbutnotworking",
+			"text": "Maybe hiring family is a good idea for those shapes who are struggling to get a job.",
+			"schema": "high_Empathy",
+			"schemaText": "We shouldn't judge shapes based on what's on the surface.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "startedAfamilyAtAyoungAge",
+			"text": "This shape started a family early and I feel like they understand the importance of relying on one's family for support.",
+			"schema": "high_Nurturance",
+			"schemaText": "This shape looks out for their loved ones.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "worksWithFamily",
+			"text": "This shape has a great dynamic with their family and it's a joy to see them bringing that into the workplace.",
+			"schema": "high_Nurturance",
+			"schemaText": "This shape looks out for their loved ones.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "hiredByAFamilymember",
+			"text": "I feel like I would also hire family members if they ask for my help, I don't think that makes you a bad shape.",
+			"schema": "high_Empathy",
+			"schemaText": "We shouldn't judge shapes based on what's on the surface.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "selfMadeCubeByDedication",
+			"text": "If a shape built their own career, I feel like it's fair for them to hire those they care about.",
+			"schema": "high_Nurturance",
+			"schemaText": "This shape looks out for their loved ones.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "conventional",
+			"text": "Family is the most important thing in a shape's life and I feel like it's normal for them to help out their family.",
+			"schema": "high_Nurturance",
+			"schemaText": "This shape looks out for their loved ones.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "nepotism",
+			"text": "Business and family shouldn't mix, this shape is not being fair to those who are actually qualified for the job.",
+			"schema": "low_FairDistribution",
+			"schemaText": "This shape needs to understand the importance of equality.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "WorksInAlcohol",
+			"text": "Well, I feel like as long as they're doing a good job, it doesn’t matter how they're hired.",
+			"schema": "high_Boundaries",
+			"schemaText": "I feel like this shape is doing their best.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "healerRole",
+			"text": "Well, I feel like as long as they're doing a good job, it doesn’t matter how they're hired.",
+			"schema": "high_Boundaries",
+			"schemaText": "I feel like this shape is doing their best.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "polluterRole",
+			"text": "Well, I feel like as long as they're doing a good job, it doesn’t matter how they're hired.",
+			"schema": "high_Boundaries",
+			"schemaText": "I feel like this shape is doing their best.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "riskTaker",
+			"text": "This shape likes to take risks and I feel like it's good to have their family support at work if... you know... things go badly.",
+			"schema": "high_SelfNurturance",
+			"schemaText": "This shape is a go-getter.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "butcherRole",
+			"text": "Well, I feel like as long as they're doing a good job, it doesn’t matter how they're hired.",
+			"schema": "high_Boundaries",
+			"schemaText": "I feel like this shape is doing their best.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "Teachingrole",
+			"text": "Well, I feel like as long as they're doing a good job, it doesn’t matter how they're hired.",
+			"schema": "high_Boundaries",
+			"schemaText": "I feel like this shape is doing their best.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "advancedCareer",
+			"text": "Imagine how hard it is to find a job these days. We have to use our resources to get to where we need to go.",
+			"schema": "high_SelfNurturance",
+			"schemaText": "This shape is a go-getter.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "generalJobs",
+			"text": "Well, I feel like as long as they're doing a good job, it doesn’t matter how they're hired.",
+			"schema": "high_Boundaries",
+			"schemaText": "I feel like this shape is doing their best.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "hardWorker",
+			"text": "This shape is a hard worker and I'm sure they'll prove their worth regardless of how they got the job.",
+			"schema": "high_SelfNurturance",
+			"schemaText": "This shape is a go-getter.",
+			"NPCTypeSchemaValue": "Low"
+		}]
+
+	},
+	{
+		"SVkey": "Shapesarenothingifnotsocial",
+		"SurfaceValueObject": [{
+			"subvalue": "InLovewithspouseoffriend",
+			"text": "I feel sorry for this shape's friend, that must be such a difficult situation.",
+			"schema": "low_Boundaries",
+			"schemaText": "I hope this shape understands the harm they're doing.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "socialLife",
+			"text": "Don't you think = being surrounded by shapes you love is the best thing? I feel like this shape would agree.",
+			"schema": "high_Nurturance",
+			"schemaText": "I love how friendly this shape is.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "hasalotofenemies",
+			"text": "This shape likes to be social but I feel like they wouldn't have so many enemies if they just listened more.",
+			"schema": "low_Nurturance",
+			"schemaText": "I wish this shape learns to care for others.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "likesToDate",
+			"text": "Dating these days seem so difficult. I commend this shape for getting themselves out there!",
+			"schema": "high_Growth",
+			"schemaText": "This shape is really brave.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "friendwithabestfriendsenemy",
+			"text": "This shape is so social that they even befriended their friend's enemy... I would be so betrayed if I were their friend.",
+			"schema": "low_Boundaries",
+			"schemaText": "I hope this shape understands the harm they're doing.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "exploteative",
+			"text": "I feel like this shape only makes 'useful' friends just so they can take advantage of them. I feel like overly social shapes are not all good.",
+			"schema": "low_Boundaries",
+			"schemaText": "I hope this shape understands the harm they're doing.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "hasAbestFriend",
+			"text": "It's always nice to see this shape and their best friend supporting each other through thick and thin, that's really special.",
+			"schema": "high_Nurturance",
+			"schemaText": "I love how friendly this shape is.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "InLoveWirhAnothersspuce",
+			"text": "I always see this shape flirting with everyone even though they are committed, their partner must feel awful.",
+			"schema": "low_Boundaries",
+			"schemaText": "I hope this shape understands the harm they're doing.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "startedAfamilyAtAyoungAge",
+			"text": "This shape had children so early! They're always out and out and I worry for their children.",
+			"schema": "low_Growth",
+			"schemaText": "This shape has a lot more to learn.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "MovesAlot",
+			"text": "Moving to a new place can be daunting and I feel like it wouldn't be a problem if you are as social as this shape. Home is where your friends are.",
+			"schema": "high_Growth",
+			"schemaText": "This shape is very mature.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "SusMovments",
+			"text": "Some might say this shape is up to something bad but I feel like there's nothing wrong with wanting to be alone and minding their own business.",
+			"schema": "low_Empathy",
+			"schemaText": "It's not good to judge shapes.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "DevorcedManyPeople",
+			"text": "This shape is always on the quest to find the one true love but they don't really care about those they've hurt.",
+			"schema": "low_Boundaries",
+			"schemaText": "I hope this shape understands the harm they're doing.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "isolated",
+			"text": "This shape likes to keep to themselves and there is nothing wrong with that.",
+			"schema": "low_Empathy",
+			"schemaText": "It's not good to judge shapes.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "TooTrustingOfEnemies",
+			"text": "This shape is so open and they trust everyone. I feel like that's very naive of them, honestly, I fear for this shape...",
+			"schema": "high_Nurturance",
+			"schemaText": "I love how friendly this shape is.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "reserved",
+			"text": "This shape doesn't open up to everyone, just the ones they truly trust. I think that's a smart decision.",
+			"schema": "low_Nurturance",
+			"schemaText": "I think this shape is happy with who they are.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "supportsImmigration",
+			"text": "This shape often say that we should trust the outsiders just like how we trust each other. I have to agree with that lovely sentiment.",
+			"schema": "high_Nurturance",
+			"schemaText": "I love how friendly this shape is.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "loner",
+			"text": "This shape likes to be alone and I feel like we should just respect their choice and their boundaries.",
+			"schema": "low_Nurturance",
+			"schemaText": "I think this shape is happy with who they are.",
+			"NPCTypeSchemaValue": "High"
+		}]
+
+	},
+	{
+		"SVkey": "WeArewNothingIfWeAreNotReserved",
+		"SurfaceValueObject": [{
+			"subvalue": "InLovewithspouseoffriend",
+			"text": "I feel sorry for this shape's friend, that must be such a difficult situation.",
+			"schema": "low_Boundaries",
+			"schemaText": "I hope this shape understands the harm they're doing.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "socialLife",
+			"text": "Don't you think = being surrounded by shapes you love is the best thing? I feel like this shape would agree.",
+			"schema": "high_Nurturance",
+			"schemaText": "I love how friendly this shape is.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "hasalotofenemies",
+			"text": "This shape likes to be social but I feel like they wouldn't have so many enemies if they just listened more.",
+			"schema": "low_Nurturance",
+			"schemaText": "I wish this shape learns to care for others.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "likesToDate",
+			"text": "Dating these days seem so difficult. I commend this shape for getting themselves out there!",
+			"schema": "high_Growth",
+			"schemaText": "This shape is really brave.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "friendwithabestfriendsenemy",
+			"text": "This shape is so social that they even befriended their friend's enemy... I would be so betrayed if I were their friend.",
+			"schema": "low_Boundaries",
+			"schemaText": "I hope this shape understands the harm they're doing.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "exploteative",
+			"text": "I feel like this shape only makes 'useful' friends just so they can take advantage of them. I feel like overly social shapes are not all good.",
+			"schema": "low_Boundaries",
+			"schemaText": "I hope this shape understands the harm they're doing.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "hasAbestFriend",
+			"text": "It's always nice to see this shape and their best friend supporting each other through thick and thin, that's really special.",
+			"schema": "high_Nurturance",
+			"schemaText": "I love how friendly this shape is.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "InLoveWirhAnothersspuce",
+			"text": "I always see this shape flirting with everyone even though they are committed, their partner must feel awful.",
+			"schema": "low_Boundaries",
+			"schemaText": "I hope this shape understands the harm they're doing.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "startedAfamilyAtAyoungAge",
+			"text": "This shape had children so early! They're always out and out and I worry for their children.",
+			"schema": "low_Growth",
+			"schemaText": "This shape has a lot more to learn.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "MovesAlot",
+			"text": "Moving to a new place can be daunting and I feel like it wouldn't be a problem if you are as social as this shape. Home is where your friends are.",
+			"schema": "high_Growth",
+			"schemaText": "This shape is very mature.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "SusMovments",
+			"text": "Some might say this shape is up to something bad but I feel like there's nothing wrong with wanting to be alone and minding their own business.",
+			"schema": "low_Empathy",
+			"schemaText": "It's not good to judge shapes.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "isolated",
+			"text": "This shape is always on the quest to find the one true love but they don't really care about those they've hurt.",
+			"schema": "low_Boundaries",
+			"schemaText": "I hope this shape understands the harm they're doing.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "DevorcedManyPeople",
+			"text": "This shape likes to keep to themselves and there is nothing wrong with that.",
+			"schema": "low_Empathy",
+			"schemaText": "It's not good to judge shapes.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "isolated",
+			"text": "This shape is so open and they trust everyone. I feel like that's very naive of them, honestly, I fear for this shape...",
+			"schema": "high_Nurturance",
+			"schemaText": "I love how friendly this shape is.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "TooTrustingOfEnemies",
+			"text": "This shape doesn't open up to everyone, just the ones they truly trust. I think that's a smart decision.",
+			"schema": "low_Nurturance",
+			"schemaText": "I think this shape is happy with who they are.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "reserved",
+			"text": "This shape often say that we should trust the outsiders just like how we trust each other. I have to agree with that lovely sentiment.",
+			"schema": "high_Nurturance",
+			"schemaText": "I love how friendly this shape is.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "supportsImmigration",
+			"text": "This shape likes to be alone and I feel like we should just respect their choice and their boundaries.",
+			"schema": "low_Nurturance",
+			"schemaText": "I think this shape is happy with who they are.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "loner",
+			"text": "This shape likes to keep to themselves and there is nothing wrong with that.",
+			"schema": "low_MoralWholeness",
+			"schemaText": "I think this shape is content with being alone.",
+			"NPCTypeSchemaValue": "Low"
+		}]
+
+	},
+	{
+		"SVkey": "FriendsAreTheJoyOFlife",
+		"SurfaceValueObject": [{
+			"subvalue": "InLoveWirhAnothersspuce",
+			"text": "We have to be careful who we're friends with, this shape is always hanging out with their friends instead of being with their partner. I wonder why...",
+			"schema": "low_Boundaries",
+			"schemaText": "It would be hard for me to trust this shape.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "InLovewithspouseoffriend",
+			"text": "I feel so bad for this shape's friend. Can you imagine how sad it would be if your friend is in love with your partner? We need to be careful who we are friends with.",
+			"schema": "low_Boundaries",
+			"schemaText": "It would be hard for me to trust this shape.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "socialLife",
+			"text": "This shape has so many friends and I feel like they understands why friends are the joy of life.",
+			"schema": "high_Nurturance",
+			"schemaText": "I hope all shapes can be as warm as this shape.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "hasalotofenemies",
+			"text": "I feel like this shape wouldn't have this many enemies if they are careful about who they are friends with.",
+			"schema": "low_Growth",
+			"schemaText": "This shape has a long way to go.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "friendwithabestfriendsenemy",
+			"text": "This shape has no loyalty and I don't think I would want a friend like this... I'd rather be alone.",
+			"schema": "low_Boundaries",
+			"schemaText": "It would be hard for me to trust this shape.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "loner",
+			"text": "I feel like we all have to take care of ourselves before we could properly care for others. So alone time can be great.",
+			"schema": "low_Nurturance",
+			"schemaText": "This shape enjoys their alone time.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "hasAbestFriend",
+			"text": "This shape is always hanging out with their best friend and everyone is envious of a friendship like that.",
+			"schema": "high_Nurturance",
+			"schemaText": "I hope all shapes can be as warm as this shape.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "MovesAlot",
+			"text": "This shape travels a lot and it must be really hard to meet new shapes. Their lack of friends doesn't make them a bad shape.",
+			"schema": "low_Nurturance",
+			"schemaText": "This shape enjoys their alone time.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "SusMovments",
+			"text": "This shape likes to keep to themselves. But we have to take care of ourselves before we can care for others.",
+			"schema": "low_Nurturance",
+			"schemaText": "This shape enjoys their alone time.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "TooTrustingOfEnemies",
+			"text": "You can't trust everyone. This shape is too trusting and friendly, I worry bad shapes will take advantage of that.",
+			"schema": "low_Growth",
+			"schemaText": "This shape has a long way to go.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "reserved",
+			"text": "This shape selects their friends very carefully and I feel like that's a wise decision. We don't need a lot of friends.",
+			"schema": "low_Nurturance",
+			"schemaText": "This shape enjoys their alone time.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "likesToDate",
+			"text": "Dating is scary but I feel like making a lot of friends to find out common interests is a good start.",
+			"schema": "high_Nurturance",
+			"schemaText": "I hope all shapes can be as warm as this shape.",
+			"NPCTypeSchemaValue": "High"
+		}]
+
+	},
+	{
+		"SVkey": "Loner",
+		"SurfaceValueObject": [{
+			"subvalue": "InLoveWirhAnothersspuce",
+			"text": "We have to be careful who we're friends with, this shape is always hanging out with their friends instead of being with their partner. I wonder why...",
+			"schema": "low_Boundaries",
+			"schemaText": "It would be hard for me to trust this shape.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "InLovewithspouseoffriend",
+			"text": "I feel so bad for this shape's friend. Can you imagine how sad it would be if your friend is in love with your partner? We need to be careful who we are friends with.",
+			"schema": "low_Boundaries",
+			"schemaText": "It would be hard for me to trust this shape.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "socialLife",
+			"text": "This shape has so many friends and I feel like they understands why friends are the joy of life.",
+			"schema": "high_Nurturance",
+			"schemaText": "I hope all shapes can be as warm as this shape.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "hasalotofenemies",
+			"text": "I feel like this shape wouldn't have this many enemies if they are careful about who they are friends with.",
+			"schema": "low_Growth",
+			"schemaText": "This shape has a long way to go.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "friendwithabestfriendsenemy",
+			"text": "This shape has no loyalty and I don't think I would want a friend like this... I'd rather be alone.",
+			"schema": "low_Boundaries",
+			"schemaText": "It would be hard for me to trust this shape.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "loner",
+			"text": "I feel like we all have to take care of ourselves before we could properly care for others. So alone time can be great.",
+			"schema": "low_Nurturance",
+			"schemaText": "This shape enjoys their alone time.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "hasAbestFriend",
+			"text": "This shape is always hanging out with their best friend and everyone is envious of a friendship like that.",
+			"schema": "high_Nurturance",
+			"schemaText": "I hope all shapes can be as warm as this shape.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "MovesAlot",
+			"text": "This shape travels a lot and it must be really hard to meet new shapes. Their lack of friends doesn't make them a bad shape.",
+			"schema": "low_Nurturance",
+			"schemaText": "This shape enjoys their alone time.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "SusMovments",
+			"text": "This shape likes to keep to themselves. But we have to take care of ourselves before we can care for others.",
+			"schema": "low_Nurturance",
+			"schemaText": "This shape enjoys their alone time.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "isolated",
+			"text": "You can't trust everyone. This shape is too trusting and friendly, I worry bad shapes will take advantage of that.",
+			"schema": "low_Growth",
+			"schemaText": "This shape has a long way to go.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "TooTrustingOfEnemies",
+			"text": "This shape selects their friends very carefully and I feel like that's a wise decision. We don't need a lot of friends.",
+			"schema": "low_Nurturance",
+			"schemaText": "This shape enjoys their alone time.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "reserved",
+			"text": "Dating is scary but I feel like making a lot of friends to find out common interests is a good start.",
+			"schema": "high_Nurturance",
+			"schemaText": "I hope all shapes can be as warm as this shape.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "likesToDate",
+			"text": "This shape has no self-control and keeps on dating random shapes. We should be more thoughtful about who we choose to date.",
+			"schema": "low_MoralEssence",
+			"schemaText": "I'm not a fan of this shape.",
+			"NPCTypeSchemaValue": "Low"
+		}]
+
+	},
+	{
+		"SVkey": "AnimalLover",
+		"SurfaceValueObject": [{
+			"subvalue": "ButcherButRegretful",
+			"text": "I think it's brave for this shape to come to the realization that what they did for a living is wrong.",
+			"schema": "high_Nurturance",
+			"schemaText": "This shape cares so much!",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "conventional",
+			"text": "This shape only cares about the rules and does what they thinks is right... I wish they can see animals as more than just food.",
+			"schema": "low_Empathy",
+			"schemaText": "This shape should be more empathetic.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "butcherRole",
+			"text": "This shape only cares about making money... No matter how much pain their work is bringing to the animals.",
+			"schema": "low_Nurturance",
+			"schemaText": "This shape cares only for themselves.",
+			"NPCTypeSchemaValue": "High"
+		}]
+
+	},
+	{
+		"SVkey": "AnimalLoverAnti",
+		"SurfaceValueObject": [{
+			"subvalue": "ButcherButRegretful",
+			"text": "I think it's brave for this shape to come to the realization that what they did for a living is wrong.",
+			"schema": "high_Nurturance",
+			"schemaText": "This shape cares so much!",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "conventional",
+			"text": "This shape only cares about the rules and does what they thinks is right... I wish they can see animals as more than just food.",
+			"schema": "low_Empathy",
+			"schemaText": "This shape should be more empathetic.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "butcherRole",
+			"text": "This shape only cares about making money... No matter how much pain their work is bringing to the animals.",
+			"schema": "low_Nurturance",
+			"schemaText": "This shape cares only for themselves.",
+			"NPCTypeSchemaValue": "Low"
+		}]
+
+	},
+	{
+		"SVkey": "Enviromentalist",
+		"SurfaceValueObject": [{
+			"subvalue": "ButcherButRegretful",
+			"text": "This shape cares so much about the environment and it all started when they felt bad about what they do for a living. That's really amazing.",
+			"schema": "high_Nurturance",
+			"schemaText": "This shape has a conscience.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "conventional",
+			"text": "This shape only cares about the 'natural order' and I wish they can understand the negative impact of focusing on that.",
+			"schema": "low_Growth",
+			"schemaText": "This shape needs to be more open-minded.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "polluterRole",
+			"text": "This shape only cares about making a living, even though what they're doing is bad.",
+			"schema": "low_Boundaries",
+			"schemaText": "This shape doesn't think about the consequence of their work.",
+			"NPCTypeSchemaValue": "High"
+		}]
+
+	},
+	{
+		"SVkey": "EnviromentalistAnti",
+		"SurfaceValueObject": [{
+			"subvalue": "ButcherButRegretful",
+			"text": "This shape cares so much about the environment and it all started when they felt bad about what they do for a living. That's really amazing.",
+			"schema": "high_Nurturance",
+			"schemaText": "This shape has a conscience.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "conventional",
+			"text": "This shape only cares about the 'natural order' and I wish they can understand the negative impact of focusing on that.",
+			"schema": "low_Growth",
+			"schemaText": "This shape needs to be more open-minded.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "polluterRole",
+			"text": "This shape only cares about making a living, even though what they're doing is bad.",
+			"schema": "low_Boundaries",
+			"schemaText": "This shape doesn't think about the consequence of their work.",
+			"NPCTypeSchemaValue": "Low"
+		}]
+
+	},
+	{
+		"SVkey": "SchoolIsCool",
+		"SurfaceValueObject": [{
+			"subvalue": "socialLife",
+			"text": "I learned how to find the right friends in school and I feel like this shape would agree with me.",
+			"schema": "high_Empathy",
+			"schemaText": "This shape knows how to connect with others.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "graduate",
+			"text": "Getting a degree is hard! I'm sure they learned valuable lessons and skills from school.",
+			"schema": "high_Growth",
+			"schemaText": "This shape made so much progress in life.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "adultbutnotworking",
+			"text": "I feel like school doesn't teach you real skills. This shape can't get a job because they lack real-world experience.",
+			"schema": "low_Strength",
+			"schemaText": "The school can't help those who don’t want to be helped.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "notworkingandrich",
+			"text": "This shape got rich without working. I feel like school played a very small role in their success.",
+			"schema": "low_Nurturance",
+			"schemaText": "I feel like this shape doesn't need school to know what they want.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "loner",
+			"text": "I feel like this shape knows what they want and I'm sure school doesn't teach you lessons like that.",
+			"schema": "low_Nurturance",
+			"schemaText": "I feel like this shape doesn't need school to know what they want.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "IsWealthy",
+			"text": "This shape's success is tied to their education. I feel like school opens so many doors for us.",
+			"schema": "high_Growth",
+			"schemaText": "This shape made so much progress in life.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "worksWithFamily",
+			"text": "This shape brings what they learned from school to work and I'd say that's a win-win for both the business and the family.",
+			"schema": "high_Growth",
+			"schemaText": "This shape made so much progress in life.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "getsFiredAlot",
+			"text": "No school can magically make you a good worker. I feel like this shape will only learn to be responsible by failing and succeeding in the real world.",
+			"schema": "low_Strength",
+			"schemaText": "The school can't help those who don’t want to be helped.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "AdventureSeeker",
+			"text": "I'm envious of this shape who's seen the big world and I feel like they can learn so many things school can't teach you.",
+			"schema": "low_Nurturance",
+			"schemaText": "I feel like this shape doesn't need school to know what they want.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "selfMadeCubeByDedication",
+			"text": "I feel like this shape built their own career not by learning that from school but from learning from life.",
+			"schema": "low_Nurturance",
+			"schemaText": "I feel like this shape doesn't need school to know what they want.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "likedToExperinceCulture",
+			"text": "The real world is the best school! You can learn so much from experiencing different cultures just like this shape.",
+			"schema": "low_Nurturance",
+			"schemaText": "I feel like this shape doesn't need school to know what they want.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "conventional",
+			"text": "School feels more like a place of indoctrination. This shape can't connect with anyone and I don't think school can teach you to become a friendly shape.",
+			"schema": "low_Empathy",
+			"schemaText": "This shape is a sticker of rules.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "flipflop",
+			"text": "The school does not prepare you for what type of jobs you should get, I feel like this shape will only find the right work by experiencing different work.",
+			"schema": "low_Nurturance",
+			"schemaText": "I feel like this shape doesn't need school to know what they want.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "WorksInAlcohol",
+			"text": "I don't think one needs a degree to sell drinks, I feel like this shape is doing fine without a degree.",
+			"schema": "low_SelfNurturance",
+			"schemaText": "This shape is great.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "healerRole",
+			"text": "I would feel a bit unsafe to have an undereducated shape to heal me. Maybe a degree is important in this case...",
+			"schema": "high_Boundaries",
+			"schemaText": "I trust qualified shapes like this one.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "polluterRole",
+			"text": "I don't think one needs a degree to work in a factory, I feel like this shape is doing fine without a degree.",
+			"schema": "low_SelfNurturance",
+			"schemaText": "This shape is great.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "riskTaker",
+			"text": "I feel school teaches you how to be safe, but this shape took risks and made so much progress in life. Life is a better school in my opinion.",
+			"schema": "low_Nurturance",
+			"schemaText": "I feel like this shape doesn't need school to know what they want.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "butcherRole",
+			"text": "I don't think one needs a degree to be a butcher, I feel like this shape is doing fine without a degree.",
+			"schema": "low_SelfNurturance",
+			"schemaText": "This shape is great.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "Teachingrole",
+			"text": "This shape has shaped many minds and I feel like you need to be educated to be a good educator.",
+			"schema": "high_Boundaries",
+			"schemaText": "I trust qualified shapes like this one.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "advancedCareer",
+			"text": "School prepares you for the real world and I feel like this shape wouldn't be promoted if they didn't have their degree.",
+			"schema": "high_Growth",
+			"schemaText": "This shape made so much progress in life.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "hardWorker",
+			"text": "I feel like every hard worker deserves my respect regardless of what kind of degree they have.",
+			"schema": "low_Growth",
+			"schemaText": "I respect this shape.",
+			"NPCTypeSchemaValue": "High"
+		}]
+
+	},
+	{
+		"SVkey": "schoolIsDrool",
+		"SurfaceValueObject": [{
+			"subvalue": "socialLife",
+			"text": "I learned how to find the right friends in school and I feel like this shape would agree with me.",
+			"schema": "high_Empathy",
+			"schemaText": "This shape knows how to connect with others.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "graduate",
+			"text": "Getting a degree is hard! I'm sure they learned valuable lessons and skills from school.",
+			"schema": "high_Growth",
+			"schemaText": "This shape made so much progress in life.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "adultbutnotworking",
+			"text": "I feel like school doesn't teach you real skills. This shape can't get a job because they lack real-world experience.",
+			"schema": "low_Strength",
+			"schemaText": "The school can't help those who don’t want to be helped.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "notworkingandrich",
+			"text": "This shape got rich without working. I feel like school played a very small role in their success.",
+			"schema": "low_Nurturance",
+			"schemaText": "I feel like this shape doesn't need school to know what they want.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "loner",
+			"text": "I feel like this shape knows what they want and I'm sure school doesn't teach you lessons like that.",
+			"schema": "low_Nurturance",
+			"schemaText": "I feel like this shape doesn't need school to know what they want.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "IsWealthy",
+			"text": "This shape's success is tied to their education. I feel like school opens so many doors for us.",
+			"schema": "high_Growth",
+			"schemaText": "This shape made so much progress in life.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "worksWithFamily",
+			"text": "This shape brings what they learned from school to work and I'd say that's a win-win for both the business and the family.",
+			"schema": "high_Growth",
+			"schemaText": "This shape made so much progress in life.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "getsFiredAlot",
+			"text": "No school can magically make you a good worker. I feel like this shape will only learn to be responsible by failing and succeeding in the real world.",
+			"schema": "low_Strength",
+			"schemaText": "The school can't help those who don’t want to be helped.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "AdventureSeeker",
+			"text": "I'm envious of this shape who's seen the big world and I feel like they can learn so many things school can't teach you.",
+			"schema": "low_Nurturance",
+			"schemaText": "I feel like this shape doesn't need school to know what they want.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "selfMadeCubeByDedication",
+			"text": "I feel like this shape built their own career not by learning that from school but from learning from life.",
+			"schema": "low_Nurturance",
+			"schemaText": "I feel like this shape doesn't need school to know what they want.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "likedToExperinceCulture",
+			"text": "The real world is the best school! You can learn so much from experiencing different cultures just like this shape.",
+			"schema": "low_Nurturance",
+			"schemaText": "I feel like this shape doesn't need school to know what they want.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "conventional",
+			"text": "School feels more like a place of indoctrination. This shape can't connect with anyone and I don't think school can teach you to become a friendly shape.",
+			"schema": "low_Empathy",
+			"schemaText": "This shape is a sticker of rules.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "flipflop",
+			"text": "The school does not prepare you for what type of jobs you should get, I feel like this shape will only find the right work by experiencing different work.",
+			"schema": "low_Nurturance",
+			"schemaText": "I feel like this shape doesn't need school to know what they want.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "WorksInAlcohol",
+			"text": "I don't think one needs a degree to sell drinks, I feel like this shape is doing fine without a degree.",
+			"schema": "low_SelfNurturance",
+			"schemaText": "This shape is great.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "healerRole",
+			"text": "I would feel a bit unsafe to have an undereducated shape to heal me. Maybe a degree is important in this case...",
+			"schema": "high_Boundaries",
+			"schemaText": "I trust qualified shapes like this one.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "polluterRole",
+			"text": "I don't think one needs a degree to work in a factory, I feel like this shape is doing fine without a degree.",
+			"schema": "low_SelfNurturance",
+			"schemaText": "This shape is great.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "riskTaker",
+			"text": "I feel school teaches you how to be safe, but this shape took risks and made so much progress in life. Life is a better school in my opinion.",
+			"schema": "low_Nurturance",
+			"schemaText": "I feel like this shape doesn't need school to know what they want.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "butcherRole",
+			"text": "I don't think one needs a degree to be a butcher, I feel like this shape is doing fine without a degree.",
+			"schema": "low_SelfNurturance",
+			"schemaText": "This shape is great.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "Teachingrole",
+			"text": "This shape has shaped many minds and I feel like you need to be educated to be a good educator.",
+			"schema": "high_Boundaries",
+			"schemaText": "I trust qualified shapes like this one.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "advancedCareer",
+			"text": "School prepares you for the real world and I feel like this shape wouldn't be promoted if they didn't have their degree.",
+			"schema": "high_Growth",
+			"schemaText": "This shape made so much progress in life.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "hardWorker",
+			"text": "I feel like every hard worker deserves my respect regardless of what kind of degree they have.",
+			"schema": "low_Growth",
+			"schemaText": "I respect this shape.",
+			"NPCTypeSchemaValue": "Low"
+		}]
+
+	},
+	{
+		"SVkey": "FamilyPerson",
+		"SurfaceValueObject": [{
+			"subvalue": "familyPerson",
+			"text": "It brings me joy to see this shape's wonderful family. Family is truly the key ingredient to happiness.",
+			"schema": "high_Nurturance",
+			"schemaText": "This shape is the happiest when they're surrounded by loved ones.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "adultbutnotworking",
+			"text": "I would be so worried if I'm this shape's parents. Family can be a great support system but shapes need to learn how to be independent someday.",
+			"schema": "low_Growth",
+			"schemaText": "This shape has a lot to learn.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "worksWithFamily",
+			"text": "This shape lives and works with their families. I feel that's really sweet.",
+			"schema": "high_Nurturance",
+			"schemaText": "This shape is the happiest when they're surrounded by loved ones.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "hiredByAFamilymember",
+			"text": "Family is a support system but it should also guide shapes to become self-sufficient. We all need to understand what we want instead of doing whatever comes our way.",
+			"schema": "low_Growth",
+			"schemaText": "This shape has a lot to learn.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "DevorcedManyPeople",
+			"text": "This shape really tried to make family life work but I think it's better for them to be alone instead of jumping into new relationships.",
+			"schema": "low_Nurturance",
+			"schemaText": "I feel like this shape is happier alone.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "marriedForLifeStyleNotLove",
+			"text": "I feel bad for this shape's partner because this shape only wants to be with them for their wealth.",
+			"schema": "low_Boundaries",
+			"schemaText": "This is not the best shape in my book.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "reserved",
+			"text": "This shape is so down to earth and I feel like you can tell that from their stable family life.",
+			"schema": "high_Boundaries",
+			"schemaText": "This shape is a role model.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "nepotism",
+			"text": "I really think that no one should exploit their connections, let alone their family. Nepotism is not a form of support, it's not great for any shape.",
+			"schema": "low_Growth",
+			"schemaText": "This shape has a lot to learn.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "conventional",
+			"text": "This shape does everything with great intentions and I feel like they would agree that family is the key to being a good shape.",
+			"schema": "high_Boundaries",
+			"schemaText": "This shape is a role model.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "startedAfamilyAtAyoungAge",
+			"text": "Some may think lowly of this shape for having children so early, but I think it's great that they get to experience both the hardship and the bliss of family life.",
+			"schema": "high_Nurturance",
+			"schemaText": "This shape is the happiest when they're surrounded by loved ones.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "widowedbutnotgrieving",
+			"text": "I feel awful for the children because their parent doesn't seem to be giving them enough time to grieve their dead parent by moving on so soon.",
+			"schema": "low_Nurturance",
+			"schemaText": "I feel like this shape is happier alone.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "marriedSomoneOlder",
+			"text": "I feel like we shouldn't judge the big age gap between them and their partner because love is love and familiar love is the best form of love.",
+			"schema": "high_Nurturance",
+			"schemaText": "This shape is the happiest when they're surrounded by loved ones.",
+			"NPCTypeSchemaValue": "High"
+		}]
+
+	},
+	{
+		"SVkey": "AselfMadeShapeWeAspireToBe",
+		"SurfaceValueObject": [{
+			"subvalue": "graduate",
+			"text": "Don't you think it's impressive that this shape got themselves a great education! I can't wait to see what they will make out of it.",
+			"schema": "high_Growth",
+			"schemaText": "I find this shape inspiring",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "adultbutnotworking",
+			"text": "Not everyone should try to start their own business... I feel like this shape needs to start something rather than just doing nothing. It creates a burden for those around them.",
+			"schema": "low_Growth",
+			"schemaText": "This shape should start small.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "notworkingandrich",
+			"text": "This shape is rich and they don't do much these days. Maybe that's one of the benefits of having your own business?",
+			"schema": "high_Growth",
+			"schemaText": "I find this shape inspiring",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "worksWithFamily",
+			"text": "This shape helps their family business and I feel like that's more honorable than being entrepreneurial.",
+			"schema": "high_Nurturance",
+			"schemaText": "This shape is a provider.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "hiredByAFamilymember",
+			"text": "This shape should learn basic responsibilities before they start their own thing. I feel like they really don't know what they want because they were hired by their family.",
+			"schema": "low_Growth",
+			"schemaText": "This shape should start small.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "getsFiredAlot",
+			"text": "I don't think a shape who's having issues holding onto a job should start their own career. It might be too much for them to handle.",
+			"schema": "low_Strength",
+			"schemaText": "This shape should be more responsible.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "RetiredYoung",
+			"text": "When I look at this shape, I can't stop but wondering maybe one of the benefits of having your own business is that you can retire early?",
+			"schema": "high_Growth",
+			"schemaText": "I find this shape inspiring",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "DiedBeforeRetired",
+			"text": "This shape dedicated their entire life to their work and missed out on life. I feel like we shouldn't put too much effort in being self-made. Life is too short.",
+			"schema": "low_Empathy",
+			"schemaText": "I feel sad for this shape.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "WorksInAlcohol",
+			"text": "I feel like we shouldn't judge a shape based on how entrepreneurial they are, as long as they're happy with their job, we should be happy for them.",
+			"schema": "low_SelfNurturance",
+			"schemaText": "This shape is a good worker.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "healerRole",
+			"text": "I feel like we shouldn't judge a shape based on how entrepreneurial they are, as long as they're happy with their job, we should be happy for them.",
+			"schema": "low_SelfNurturance",
+			"schemaText": "This shape is a good worker.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "polluterRole",
+			"text": "I feel like we shouldn't judge a shape based on how entrepreneurial they are, as long as they're happy with their job, we should be happy for them.",
+			"schema": "low_SelfNurturance",
+			"schemaText": "This shape is a good worker.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "riskTaker",
+			"text": "I love how this shape takes risks and I feel that's the core of the entrepreneurial spirit.",
+			"schema": "high_Growth",
+			"schemaText": "I find this shape inspiring",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "butcherRole",
+			"text": "I feel like we shouldn't judge a shape based on how entrepreneurial they are, as long as they're happy with their job, we should be happy for them.",
+			"schema": "low_SelfNurturance",
+			"schemaText": "This shape is a good worker.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "Teachingrole",
+			"text": "I feel like we shouldn't judge a shape based on how entrepreneurial they are, as long as they're happy with their job, we should be happy for them.",
+			"schema": "low_SelfNurturance",
+			"schemaText": "This shape is a good worker.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "advancedCareer",
+			"text": "I feel like we don't need to be entrepreneurs to prove our worth. This shape's promotions can be seen as a form of validation.",
+			"schema": "low_SelfNurturance",
+			"schemaText": "This shape is a good worker.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "hardWorker",
+			"text": "We don't need to be entrepreneurs to be hard workers! Every job has its role in society and we are all just doing our best.",
+			"schema": "low_SelfNurturance",
+			"schemaText": "This shape is a good worker.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "CustodianJobs",
+			"text": "I feel like we shouldn't judge a shape based on how entrepreneurial they are, as long as they're happy with their job, we should be happy for them.",
+			"schema": "low_SelfNurturance",
+			"schemaText": "This shape is a good worker.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "generalJobs",
+			"text": "I feel like we shouldn't judge a shape based on how entrepreneurial they are, as long as they're happy with their job, we should be happy for them.",
+			"schema": "low_SelfNurturance",
+			"schemaText": "This shape is a good worker.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "selfMadeCubeByDedication",
+			"text": "It's amazing to see this shape building their career from the ground up. We could all use a role model like them.",
+			"schema": "high_Growth",
+			"schemaText": "I find this shape inspiring",
+			"NPCTypeSchemaValue": "High"
+		}]
+
+	},
+	{
+		"SVkey": "ImmagretsWeGetTheJobDone",
+		"SurfaceValueObject": [{
+			"subvalue": "familyPerson",
+			"text": "This shape is truly a family shape. I feel like they understand the importance of accepting outsiders as one of our own.",
+			"schema": "high_Nurturance",
+			"schemaText": "This shape understands the importance of unity.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "graduate",
+			"text": "We could use different perspectives in our community and it's even better if they're as educated as this shape!",
+			"schema": "high_Boundaries",
+			"schemaText": "We need great shapes like this!",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "adultbutnotworking",
+			"text": "I feel bad saying this but we can't just offer charity to every shape who can't hold on to a job.",
+			"schema": "low_Empathy",
+			"schemaText": "We should be careful and protect our community.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "MovesAlot",
+			"text": "Shapes all have reasons to move and I feel like they must have so much to teach us from their travels.",
+			"schema": "high_Boundaries",
+			"schemaText": "We need great shapes like this!",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "SusMovments",
+			"text": "I'm not saying all outsiders are bad but I think it's important to read signs carefully just so we can protect ourselves.",
+			"schema": "low_Empathy",
+			"schemaText": "We should be careful and protect our community.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "selfMadeCubeByDedication",
+			"text": "We could all use some entrepreneurial spirit! Shapes like this can be a great asset to our community.",
+			"schema": "high_Boundaries",
+			"schemaText": "We need great shapes like this!",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "likedToExperinceCulture",
+			"text": "Different cultures can work together to build a more understanding and open community, I feel like that's really important.",
+			"schema": "high_Boundaries",
+			"schemaText": "We need great shapes like this!",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "supportsImmigration",
+			"text": "This shape sees the good in everyone and I feel that the world will be a better place if we're all like them.",
+			"schema": "high_Empathy",
+			"schemaText": "We should treat outsiders as our own.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "conventional",
+			"text": "This shape doesn't like to make snap judgments and I think it's important to challenge ourselves by embracing others.",
+			"schema": "high_Empathy",
+			"schemaText": "We should treat outsiders as our own.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "reserved",
+			"text": "I don't think it's wrong for this shape to take time to trust others. We have to protect ourselves.",
+			"schema": "low_Empathy",
+			"schemaText": "We should be careful and protect our community.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "flipflop",
+			"text": "I'm all for helping others but I feel like shapes should contribute to the community if they want to be a part of it.",
+			"schema": "low_Empathy",
+			"schemaText": "We should be careful and protect our community.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "riskTaker",
+			"text": "Our community will only get better if we accept outsiders who are willing to take risks like this shape.",
+			"schema": "high_Boundaries",
+			"schemaText": "We need great shapes like this!",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "advancedCareer",
+			"text": "I feel like shapes who have already achieved great success can bring so much to our community.",
+			"schema": "high_Boundaries",
+			"schemaText": "We need great shapes like this!",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "hardWorker",
+			"text": "We could use hard workers regardless of where they come from.",
+			"schema": "high_Boundaries",
+			"schemaText": "We need great shapes like this!",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "departed",
+			"text": "Don't you want this shape to be treated as well as they were treated here? We should be open to outsiders because new environments can be difficult for shapes.",
+			"schema": "high_Empathy",
+			"schemaText": "We should treat outsiders as our own.",
+			"NPCTypeSchemaValue": "High"
+		}]
+
+	},
+	{
+		"SVkey": "NiaeveteIsFiction",
+		"SurfaceValueObject": [{
+			"subvalue": "InLovewithspouseoffriend",
+			"text": "You have to be careful who you're befriending. You don't want a friend who would go after your partner.",
+			"schema": "low_Nurturance",
+			"schemaText": "This shape doesn't care who they hurt.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "hasalotofenemies",
+			"text": "I feel like if you see someone who has many enemies, you should stay away from them.",
+			"schema": "low_Boundaries",
+			"schemaText": "This shape is not great.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "friendwithabestfriendsenemy",
+			"text": "I can't imagine how sad I would be if my friend befriends my enemy. You can just blindly trust someone just because they are your friend.",
+			"schema": "low_Nurturance",
+			"schemaText": "This shape doesn't care who they hurt.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "InLoveWirhAnothersspuce",
+			"text": "This shape is not faithful to their partner. I feel so bad for the partner. This is why we can just trust everyone.",
+			"schema": "low_Nurturance",
+			"schemaText": "This shape doesn't care who they hurt.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "SusMovments",
+			"text": "I feel like if you see someone is up to no good, you should just trust your instinct. There's nothing wrong with wanting to protect yourself.",
+			"schema": "low_Boundaries",
+			"schemaText": "This shape can't be trusted.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "DevorcedManyPeople",
+			"text": "I feel awful for this shape's past partners. They were promised something forever but we can't trust flimsy promises.",
+			"schema": "low_Nurturance",
+			"schemaText": "This shape doesn't care who they hurt.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "WillActOnLove",
+			"text": "While following one's heart is great, I do feel like this shape might go after shapes who's not right for them.",
+			"schema": "low_Nurturance",
+			"schemaText": "This shape doesn't care who they hurt.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "liklyToHelpTheHomeless",
+			"text": "There are great shapes out there! Like this shape who helps others. We need a little faith in others.",
+			"schema": "high_Empathy",
+			"schemaText": "This shape proves shapes are good.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "TooTrustingOfEnemies",
+			"text": "I think this shape just sees the best in others and I believe it could inspire the good even in bad shapes.",
+			"schema": "high_Empathy",
+			"schemaText": "This shape proves shapes are good.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "doesNotGiveToThoseInNeed",
+			"text": "This shape never gives back. I feel like rich shapes are like this, we shouldn't expect them to be good just because they 'made it'.",
+			"schema": "low_Boundaries",
+			"schemaText": "This shape is not great.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "supportsImmigration",
+			"text": "We have to believe that shapes are good! This shape supports immigrants because they believe that and that makes them a good shape.",
+			"schema": "high_Empathy",
+			"schemaText": "This shape proves shapes are good.",
+			"NPCTypeSchemaValue": "Low"
+		}]
+
+	},
+	{
+		"SVkey": "SupportingComunities",
+		"SurfaceValueObject": [{
+			"subvalue": "worksWithFamily",
+			"text": "This shape is a contributing member of our community, they even work with their family. I feel like having that type of support system is great.",
+			"schema": "high_Nurturance",
+			"schemaText": "This shape cares about everyone!",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "liklyToHelpTheHomeless",
+			"text": "I'm constantly touched by the kindness of this shape who helps the helpless. This is what it means to be in a community where everyone supports each other.",
+			"schema": "high_Nurturance",
+			"schemaText": "This shape cares about everyone!",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "doesNotGiveToThoseInNeed",
+			"text": "You can't expect everyone in the community to be great. I feel like this shape is just taking advantage of the kindness of others and doesn't pay it forward. I wouldn't want to be in a community that includes shapes like this.",
+			"schema": "low_Nurturance",
+			"schemaText": "This shape needs to put others before them once in a while.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "supportsImmigration",
+			"text": "This shape said that we're all migrants at some point and I feel like that's really true.",
+			"schema": "high_Empathy",
+			"schemaText": "This shape is an empath.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "conventional",
+			"text": "It’ like this one who likes to gatekeep and dictates who gets to be in the community or not makes me not believe in blindly supporting the community.",
+			"schema": "low_Empathy",
+			"schemaText": "This shape needs to open their heart.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "reserved",
+			"text": "This shape thinks every outsider is a threat. I don't think I would support a community where that type of sentiment exists.",
+			"schema": "low_Empathy",
+			"schemaText": "This shape needs to open their heart.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "healerRole",
+			"text": "This shape does important work for our community! I'm very thankful for shapes like this.",
+			"schema": "high_Nurturance",
+			"schemaText": "This shape cares about everyone!",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "Teachingrole",
+			"text": "This shape does important work for our community! I'm very thankful for shapes like this.",
+			"schema": "high_Nurturance",
+			"schemaText": "This shape cares about everyone!",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "CustodianJobs",
+			"text": "This shape does important work for our community! I'm very thankful for shapes like this.",
+			"schema": "high_Nurturance",
+			"schemaText": "This shape cares about everyone!",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "departed",
+			"text": "It's great that this shape left to follow their dreams. We shouldn't see them as a traitor, we should support them.",
+			"schema": "low_Nurturance",
+			"schemaText": "This shape prioritizes what they want.",
+			"NPCTypeSchemaValue": "High"
+		}]
+
+	},
+	{
+		"SVkey": "LoverOfRisks",
+		"SurfaceValueObject": [{
+			"subvalue": "InLovewithspouseoffriend",
+			"text": "I feel like risks are fine as long as you have good intentions. If this shape takes a risk by going after their friend's partner, there will be chaos and unnecessary drama.",
+			"schema": "low_Boundaries",
+			"schemaText": "This shape's action could create harm.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "hasalotofenemies",
+			"text": "This shape loves risks over anything and I feel like that's why they made so many enemies.",
+			"schema": "low_Empathy",
+			"schemaText": "This shape can't connect with others.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "InLoveWirhAnothersspuce",
+			"text": "This shape will hurt their partner if they chase after someone who's not their partner.",
+			"schema": "low_Boundaries",
+			"schemaText": "This shape's action could create harm.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "MovesAlot",
+			"text": "I feel like it's important to honor your needs, just like this shape who's taking a risk to find out what makes them happy!",
+			"schema": "high_SelfNurturance",
+			"schemaText": "This shape knows how to take care of themselves.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "RetiredYoung",
+			"text": "I feel like this shape took risks when they're young and now they get to enjoy life. I think that's really great.",
+			"schema": "high_SelfNurturance",
+			"schemaText": "This shape knows how to take care of themselves.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "WillActOnLove",
+			"text": "Acting on love which is not meant to be only creates sadness. The risk in this case is not worth it.",
+			"schema": "low_Boundaries",
+			"schemaText": "This shape's action could create harm.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "AdventureSeeker",
+			"text": "I love how this shape is always looking for adventures and I'm sure they'll have a rich life.",
+			"schema": "high_Growth",
+			"schemaText": "This shape is a go-getter.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "TooTrustingOfEnemies",
+			"text": "This shape is too open but that's not always a good thing. I feel like you can't be a risk-taker if you don't know how to pick the right shape to trust.",
+			"schema": "low_Strength",
+			"schemaText": "This shape needs to be more careful.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "flipflop",
+			"text": "This shape keeps on changing jobs, I feel like they might learn to be more responsible if they just stayed in one job.",
+			"schema": "low_Growth",
+			"schemaText": "This shape has a long way to go.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "riskTaker",
+			"text": "Don't you agree that it's amazing how this shape never gives up on their dreams and keeps on taking risks?",
+			"schema": "high_Growth",
+			"schemaText": "This shape is a go-getter.",
+			"NPCTypeSchemaValue": "High"
+		}]
+
+	},
+	{
+		"SVkey": "LandISWhereThehrtIS",
+		"SurfaceValueObject": [{
+			"subvalue": "socialLife",
+			"text": "Your home is where your friends and family are, this shape has never left the city but they have a rich social life.",
+			"schema": "high_Nurturance",
+			"schemaText": "This shape is so kind and wonderful.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "familyPerson",
+			"text": "I think it's honorable for this shape to stay close to home to take care of their family.",
+			"schema": "high_Nurturance",
+			"schemaText": "This shape is so kind and wonderful.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "loner",
+			"text": "I feel exploring the world alone allows you to discover who you really are, we don't need to stay where we are born.",
+			"schema": "low_Growth",
+			"schemaText": "This shape is still discovering what they want in life.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "hasAbestFriend",
+			"text": "This shape stayed in this city because their best friend is here, I feel like you should be where your support system is.",
+			"schema": "high_Nurturance",
+			"schemaText": "This shape is so kind and wonderful.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "worksWithFamily",
+			"text": "This shape works with their family in the city and I always feel happy when I see them working with their family.",
+			"schema": "high_Nurturance",
+			"schemaText": "This shape is so kind and wonderful.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "hiredByAFamilymember",
+			"text": "This shape never got to discover what they want in life because they were hired by their family. Leaving home will help them to find themselves.",
+			"schema": "low_Growth",
+			"schemaText": "This shape is still discovering what they want in life.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "MovesAlot",
+			"text": "This shape needs to find and move to a space where they can thrive, I think that's lovely.",
+			"schema": "high_SelfNurturance",
+			"schemaText": "This shape knows what they want.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "SusMovments",
+			"text": "Shapes must find where they belong and I am sure they will find where they truly belong by visiting different places.",
+			"schema": "high_SelfNurturance",
+			"schemaText": "This shape knows what they want.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "supportsImmigration",
+			"text": "This shape often says how great our city is by looking at how many shapes want to move here! I agree with that 100%.",
+			"schema": "high_Boundaries",
+			"schemaText": "This shape is great!",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "conventional",
+			"text": "This shape is a pillar of our community and I can't imagine what it would be like if they just left.",
+			"schema": "high_Boundaries",
+			"schemaText": "This shape is great!",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "reserved",
+			"text": "This shape has always been a stable element of the community, they are respected by all because they understand how important home is.",
+			"schema": "high_Boundaries",
+			"schemaText": "This shape is great!",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "departed",
+			"text": "I know that this shape wants to move to a place where they can thrive, It's important to put yourself first!",
+			"schema": "low_Growth",
+			"schemaText": "This shape is still discovering what they want in life.",
+			"NPCTypeSchemaValue": "High"
+		}]
+
+	},
+	{
+		"SVkey": "youthAreTheFuture",
+		"SurfaceValueObject": [{
+			"subvalue": "familyPerson",
+			"text": "This shape has so much love in them and their children will pass that love on to so many other shapes.",
+			"schema": "high_Nurturance",
+			"schemaText": "This shape is caring and lovely.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "adultbutnotworking",
+			"text": "I feel bad for this shape's parents.... They must be so concerned.",
+			"schema": "low_Strength",
+			"schemaText": "I'm worried about this shape.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "worksWithFamily",
+			"text": "This shape keeps their family business alive and that's a responsible shape, their family must be so proud.",
+			"schema": "high_Nurturance",
+			"schemaText": "This shape is caring and lovely.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "RetiredYoung",
+			"text": "In some ways I feel like this shape can retire early is because the younger shapes are doing a good job.",
+			"schema": "high_SelfNurturance",
+			"schemaText": "I like this shape a lot.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "DiedBeforeRetired",
+			"text": "I feel like instead of believing the young shapes to change our future, we should care about those around us who are struggling. ",
+			"schema": "low_Growth",
+			"schemaText": "I feel bad for this shape.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "conventional",
+			"text": "This shape is a bit old-fashioned but I feel like the younger generation can help to open their mind.",
+			"schema": "high_Boundaries",
+			"schemaText": "I'm glad we have shapes like this in our society.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "Teachingrole",
+			"text": "I feel like, as a teacher, this shape knows what it means to trust the future generation to better our society.",
+			"schema": "high_Boundaries",
+			"schemaText": "I'm glad we have shapes like this in our society.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "hardWorker",
+			"text": "I feel like young shapes could be as much of a hard worker as this shape. We need to trust them.",
+			"schema": "high_Boundaries",
+			"schemaText": "I'm glad we have shapes like this in our society.",
+			"NPCTypeSchemaValue": "High"
+		}]
+
+	},
+	{
+		"SVkey": "suchUncharactristicBehaviorOhMy",
+		"SurfaceValueObject": [{
+			"subvalue": "InLovewithspouseoffriend",
+			"text": "This shape is in love with their friend's partner, I can't even imagine what kind of awkward situation they're putting their friends in.",
+			"schema": "low_Strength",
+			"schemaText": "This shape needs to learn the weight of their actions.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "hasalotofenemies",
+			"text": "This shape made a lot of many enemies. I can't imagine what it must be like interacting with something like this.",
+			"schema": "low_Boundaries",
+			"schemaText": "It's hard to sympathize with this shape.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "friendwithabestfriendsenemy",
+			"text": "Maybe this is befriending their friend's enemy because they want to resolve the conflict between them? We won't know until we know what's going on.",
+			"schema": "high_Empathy",
+			"schemaText": "We shouldn't judge this shape before we know who they are.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "exploteative",
+			"text": "I just can't feel for someone who benefits from taking advantage of others.",
+			"schema": "low_Boundaries",
+			"schemaText": "It's hard to sympathize with this shape.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "widowedbutnotgrieving",
+			"text": "We all grieve differently, if they feel like moving on is the best thing to do for them, then we shouldn't judge.",
+			"schema": "high_Empathy",
+			"schemaText": "We shouldn't judge this shape before we know who they are.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "adultbutnotworking",
+			"text": "Maybe there's a reason this shape can't work, you don't know what's going on in a shape's life.",
+			"schema": "high_Empathy",
+			"schemaText": "We shouldn't judge this shape before we know who they are.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "notworkingandrich",
+			"text": "Well, this shape seems to be doing fine even though they don't have a job. That's totally fine as long as they're a good shape",
+			"schema": "high_Empathy",
+			"schemaText": "We shouldn't judge this shape before we know who they are.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "loner",
+			"text": "This shape likes to keep it to themself. Maybe they have social anxieties, we don't know their life.",
+			"schema": "high_Empathy",
+			"schemaText": "We shouldn't judge this shape before we know who they are.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "InLoveWirhAnothersspuce",
+			"text": "Love is blind but love can also hurt others. I hope this shape makes the right decision in the end.",
+			"schema": "low_Strength",
+			"schemaText": "This shape needs to learn the weight of their actions.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "MovesAlot",
+			"text": "We all have to move for different reasons at some point in our life. I don't think it's weird for shapes to move often.",
+			"schema": "high_Empathy",
+			"schemaText": "We shouldn't judge this shape before we know who they are.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "getsFiredAlot",
+			"text": "We don't know what this shape is like at work and maybe working is just not for them.",
+			"schema": "high_Empathy",
+			"schemaText": "We shouldn't judge this shape before we know who they are.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "SusMovments",
+			"text": "We all have our reasons for the things we do, I don't think something that looks suspicious is so.",
+			"schema": "high_Empathy",
+			"schemaText": "We shouldn't judge this shape before we know who they are.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "RetiredYoung",
+			"text": "This shape must be very disciplined to be able to retire young, I don't think that makes them a weird shape.",
+			"schema": "high_Growth",
+			"schemaText": "This is a good shape.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "DevorcedManyPeople",
+			"text": "I can't imagine the chaos in this shape's life. I would feel so unsafe to meet someone like this.",
+			"schema": "low_Boundaries",
+			"schemaText": "It's hard to sympathize with this shape.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "TooTrustingOfEnemies",
+			"text": "I know this shape has a good heart and they make the world a better place. We could use a lot of shapes like them.",
+			"schema": "high_Nurturance",
+			"schemaText": "This shape looks out for their loved ones.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "conventional",
+			"text": "This shape is too stubborn to understand the intricate inner lives of other shapes.",
+			"schema": "low_Strength",
+			"schemaText": "This shape is too rigid.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "nepotism",
+			"text": "Nepotism is an ugly word but it's not that bad if it's about helping and protecting those you really care about.",
+			"schema": "high_Nurturance",
+			"schemaText": "This shape looks out for their loved ones.",
+			"NPCTypeSchemaValue": "Low"
+		}, {
+			"subvalue": "flipflop",
+			"text": "Maybe they're just having a hard time settling on a job they like, we shouldn't really make a snap judgment.",
+			"schema": "high_Empathy",
+			"schemaText": "We shouldn't judge this shape before we know who they are.",
+			"NPCTypeSchemaValue": "Low"
+		}]
+
+	},
+	{
+		"SVkey": "WeLiveForSpontaneity",
+		"SurfaceValueObject": [{
+			"subvalue": "InLovewithspouseoffriend",
+			"text": "Falling for someone who's attached can be a tricky situation and not to mention it's the partner of their friend. I don't think saying yes to life in this case applies.",
+			"schema": "low_Boundaries",
+			"schemaText": "This shape might cause more harm than they know.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "hasalotofenemies",
+			"text": "Saying yes to everything and everyone means you might be saying to unknown risks. I worry about shapes who's already made a lot of enemies.",
+			"schema": "low_Growth",
+			"schemaText": "This shape can't see the hidden dangers around them.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "likesToDate",
+			"text": "Carpe diem! It's always nice to see shapes who put themselves out there like this.",
+			"schema": "high_SelfNurturance",
+			"schemaText": "Good for this shape!",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "leftFotLoveIntrest",
+			"text": "I feel bad for this shape's partner who has to endure the betrayal. I don't think following one's heart is always the responsible thing to do.",
+			"schema": "low_Boundaries",
+			"schemaText": "This shape might cause more harm than they know.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "InLoveWirhAnothersspuce",
+			"text": "Falling for someone who's attached can be a tricky situation. I don't think saying yes to life is such a good idea.",
+			"schema": "low_Boundaries",
+			"schemaText": "This shape might cause more harm than they know.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "startedAfamilyAtAyoungAge",
+			"text": "While you can say that having young shapes while you're still young is irresponsible, I feel like this shape is doing their best and they have become so mature.",
+			"schema": "high_Growth",
+			"schemaText": "This shape is very mature.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "MovesAlot",
+			"text": "I feel like this shape is a dream chaser. Only the bravest of us can do that.",
+			"schema": "high_SelfNurturance",
+			"schemaText": "Good for this shape!",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "SusMovments",
+			"text": "We don't know what one is going through just by looking at them, I don't think we should make haste judgment like that.",
+			"schema": "low_Empathy",
+			"schemaText": "We shouldn't judge this shape.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "marriedForLifeStyleNotLove",
+			"text": "I tend not to judge, but I feel bad for this shape's partner who might not know they're just a wallet to their partner.",
+			"schema": "low_Boundaries",
+			"schemaText": "This shape might cause more harm than they know.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "WillActOnLove",
+			"text": "Love is rare so when it comes to you, we should all be like this shape and do something about it!",
+			"schema": "high_SelfNurturance",
+			"schemaText": "Good for this shape!",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "AdventureSeeker",
+			"text": "Memento mori. I'm inspired by this shape who's always seeking adventures!",
+			"schema": "high_SelfNurturance",
+			"schemaText": "Good for this shape!",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "TooTrustingOfEnemies",
+			"text": "Saying yes to everything might not be the best choice for a shape who's ready to believe everyone and everything.",
+			"schema": "low_Growth",
+			"schemaText": "This shape can't see the hidden dangers around them.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "likedToExperinceCulture",
+			"text": "The world has so much to offer! I admire this shape who loves to see things outside of their comfort zone.",
+			"schema": "high_SelfNurturance",
+			"schemaText": "Good for this shape!",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "flipflop",
+			"text": "Life is short so if you don't like something, you should be like this shape to do something about it.",
+			"schema": "high_SelfNurturance",
+			"schemaText": "Good for this shape!",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "riskTaker",
+			"text": "Risks can be rewarding and I think it's brave for this shape to take risks!",
+			"schema": "high_SelfNurturance",
+			"schemaText": "Good for this shape!",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "hardWorker",
+			"text": "I think this shape is the best example of work hard play hard!",
+			"schema": "high_SelfNurturance",
+			"schemaText": "Good for this shape!",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "departed",
+			"text": "Life takes you in unexpected directions! Good for this shape who says yes to life!",
+			"schema": "high_SelfNurturance",
+			"schemaText": "Good for this shape!",
+			"NPCTypeSchemaValue": "High"
+		}]
+
+	},
+	{
+		"SVkey": "AnAdventureWeSeek",
+		"SurfaceValueObject": [{
+			"subvalue": "InLovewithspouseoffriend",
+			"text": "Some would say love is an adventure, but not all adventures bring us happiness. I feel like this shape will only bring pain if they decided to follow their heart.",
+			"schema": "low_Boundaries",
+			"schemaText": "This shape might cause harm to themselves and those around them.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "hasalotofenemies",
+			"text": "This shape made a lot of enemies because they're too focused on what they wanted or what they can get out of things. I feel bad for those around them.",
+			"schema": "low_Strength",
+			"schemaText": "I hope this shape learns to care for others.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "likesToDate",
+			"text": "Dating is like an adventure, I admire the courage of this shape who likes to get themselves out there.",
+			"schema": "high_Growth",
+			"schemaText": "This shape is courageous.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "InLoveWirhAnothersspouce",
+			"text": "Imagine how sad this shape's partner must feel. Love is an adventure, but not everyone can find happiness.",
+			"schema": "low_Boundaries",
+			"schemaText": "This shape might cause harm to themselves and those around them.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "MovesAlot",
+			"text": "I like how this shape makes changes in their lives even if that means moving a lot. It takes courage to be that free!",
+			"schema": "high_Growth",
+			"schemaText": "This shape is courageous.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "RetiredYoung",
+			"text": "I hope this shape can go on adventures now that they've retired! Life is too short to be tied down to jobs and other mundane matters.",
+			"schema": "high_SelfNurturance",
+			"schemaText": "This shape listens to their needs.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "DevorcedManyPeople",
+			"text": "Love can be a great adventure but sometimes we ought to think about if we are hurting anyone in the process. This shape broke so many hearts and I don't know it's worth it.",
+			"schema": "low_Boundaries",
+			"schemaText": "This shape might cause harm to themselves and those around them.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "WillActOnLove",
+			"text": "We can't control who we love and I'm impressed by how brave this shape is!",
+			"schema": "high_Growth",
+			"schemaText": "This shape is courageous.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "AdventureSeeker",
+			"text": "When adventure comes your way, you must say yes! Like this shape who's been everywhere! What a life.",
+			"schema": "high_SelfNurturance",
+			"schemaText": "This shape listens to their needs.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "TooTrustingOfEnemies",
+			"text": "The world is big but full of danger, I fear for this shape who trust everyone.",
+			"schema": "low_SelfNurturance",
+			"schemaText": "I hope this shape can learn to protect themselves.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "likedToExperinceCulture",
+			"text": "The world is big and full of wonder, I'm glad that this shape is trying to better themselves by going to places and experiencing cultures.",
+			"schema": "high_SelfNurturance",
+			"schemaText": "This shape listens to their needs.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "flipflop",
+			"text": "This shape knows that there are bigger things in life than staying with one job.",
+			"schema": "high_SelfNurturance",
+			"schemaText": "This shape listens to their needs.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "riskTaker",
+			"text": "I love how this shape always takes the risky options. Though there might be dangers, there will also be great rewards.",
+			"schema": "high_Growth",
+			"schemaText": "This shape is courageous.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "advancedCareer",
+			"text": "This shape treats their career as an adventure and I feel happy that they're doing so well and are being rewarded.",
+			"schema": "high_Growth",
+			"schemaText": "This shape is courageous.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "departed",
+			"text": "We all need to find where we truly belong and it's brave that this shape is trying to figure that out.",
+			"schema": "high_SelfNurturance",
+			"schemaText": "This shape listens to their needs.",
+			"NPCTypeSchemaValue": "High"
+		}]
+
+	},
+	{
+		"SVkey": "MoneyMaker",
+		"SurfaceValueObject": [{
+			"subvalue": "graduate",
+			"text": "It must've taken a lot for this shape to get a great education so it would be nice to see them being rewarded.",
+			"schema": "high_Growth",
+			"schemaText": "This shape has come so far!",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "exploteative",
+			"text": "Money's power can be a force of corruption. Especially those who built their wealth by taking advantage of others.",
+			"schema": "low_FairDistribution",
+			"schemaText": "The world can be unfair.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "adultbutnotworking",
+			"text": "We don't know what happened in one's life for them to end up in this situation. We should try to understand them instead of judging them.",
+			"schema": "low_Empathy",
+			"schemaText": "Shapes before money!",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "notworkingandrich",
+			"text": "Some have to work to death to make as much money as this shape has, and this shape doesn’t even have to work.",
+			"schema": "low_FairDistribution",
+			"schemaText": "The world can be unfair.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "IsWealthy",
+			"text": "This shape is wealthy and it's nice that they're treating themselves to the finer things in life.",
+			"schema": "high_SelfNurturance",
+			"schemaText": "A happy shape listens to their needs.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "worksWithFamily",
+			"text": "This shape chose a stable income over discovering what they want. I feel sad that they don't get to experience life fully.",
+			"schema": "low_SelfNurturance",
+			"schemaText": "This shape doesn't know what they want in life.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "getsFiredAlot",
+			"text": "Making money doesn’t make us happy! Let's give this shape time to figure out what they want!",
+			"schema": "low_Empathy",
+			"schemaText": "Shapes before money!",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "RetiredYoung",
+			"text": "I feel like this shape made the right decision to retire early to see what life has to offer. They could only do that because they have money.",
+			"schema": "high_SelfNurturance",
+			"schemaText": "A happy shape listens to their needs.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "DiedBeforeRetired",
+			"text": "There is a certain sadness to a shape who died before they get to enjoy it.",
+			"schema": "low_SelfNurturance",
+			"schemaText": "This shape doesn't know what they want in life.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "IsRichButNotGenrous",
+			"text": "No matter how much power money has, it's worthless if they are used in ways that benefit the greater good.",
+			"schema": "low_Strength",
+			"schemaText": "This shape is self-serving.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "flipflop",
+			"text": "Making money can be tough, we shouldn't judge how one makes money or their quality of work isn't based on how often they change their jobs.",
+			"schema": "low_Empathy",
+			"schemaText": "Shapes before money!",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "WorksInAlcohol",
+			"text": "This shape works hard and I think it's important for them to be rewarded for their labor.",
+			"schema": "high_FairDistribution",
+			"schemaText": "This shape is responsible.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "healerRole",
+			"text": "This shape works hard and I think it's important for them to be rewarded for their labor.",
+			"schema": "high_FairDistribution",
+			"schemaText": "This shape is responsible.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "polluterRole",
+			"text": "This shape works hard and I think it's important for them to be rewarded for their labor.",
+			"schema": "high_FairDistribution",
+			"schemaText": "This shape is responsible.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "riskTaker",
+			"text": "It must've taken a lot of courage for this shape to take a risk and I think the money they've earned represents the benefit of the risks taken.",
+			"schema": "high_Growth",
+			"schemaText": "Good things come to those who work on themselves.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "butcherRole",
+			"text": "This shape works hard and I think it's important for them to be rewarded for their labor.",
+			"schema": "high_FairDistribution",
+			"schemaText": "This shape is responsible.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "Teachingrole",
+			"text": "This shape works hard and I think it's important for them to be rewarded for their labor.",
+			"schema": "high_FairDistribution",
+			"schemaText": "This shape is responsible.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "advancedCareer",
+			"text": "I feel happy for shapes who are rewarded for their good work! This shape deserves this promotion. In this case, money can be very validating.",
+			"schema": "high_Growth",
+			"schemaText": "Good things come to those who work on themselves.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "hardWorker",
+			"text": "Money can be validating for those who work really hard!",
+			"schema": "high_Growth",
+			"schemaText": "Good things come to those who work on themselves.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "CustodianJobs",
+			"text": "This shape works hard and I think it's important for them to be rewarded for their labor.",
+			"schema": "high_FairDistribution",
+			"schemaText": "This shape is responsible.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "generalJobs",
+			"text": "This shape works hard and I think it's important for them to be rewarded for their labor.",
+			"schema": "high_FairDistribution",
+			"schemaText": "This shape is responsible.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "selfMadeCubeByDedication",
+			"text": "Money is a good indicator that this shape has done a lot to get this far! I think that's wonderful.",
+			"schema": "high_Growth",
+			"schemaText": "This shape has come so far!",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "liklyToHelpTheHomeless",
+			"text": "This shape uses their money to help the helpless, I've always been touched and inspired by them.",
+			"schema": "high_Strength",
+			"schemaText": "This shape is altruistic.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "doesNotGiveToThoseInNeed",
+			"text": "There's no good to the power of money if your heart is as cold as this shape who never gives back.",
+			"schema": "low_Strength",
+			"schemaText": "This shape is self-serving.",
+			"NPCTypeSchemaValue": "High"
+		}]
+
+	},
+	{
+		"SVkey": "CarrerAboveAll",
+		"SurfaceValueObject": [{
+			"subvalue": "hasalotofenemies",
+			"text": "I don't think there's any point in advancing one's career if you end up making so many enemies like this shape.",
+			"schema": "low_Nurturance",
+			"schemaText": "This shape should care about those around them.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "exploteative",
+			"text": "This shape made built their wealth on others’ suffering, I just can't relate.",
+			"schema": "low_FairDistribution",
+			"schemaText": "The world is not as fair as we wish it to be.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "adultbutnotworking",
+			"text": "We don't know why they're not working, they must have their reasons.",
+			"schema": "low_Empathy",
+			"schemaText": "We should cut this shape some slack.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "notworkingandrich",
+			"text": "Some shapes don't need to work to be rich, we can't prove our worth through our wealth.",
+			"schema": "low_FairDistribution",
+			"schemaText": "The world is not as fair as we wish it to be.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "IsWealthy",
+			"text": "This shape's happiness must come from a sense of fulfillment at work, of course, the money is nice too.",
+			"schema": "high_SelfNurturance",
+			"schemaText": "This shape has a fulfilling life.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "worksWithFamily",
+			"text": "This shape work with their family and their closeness to their family is the secret ingredient to their success.",
+			"schema": "high_Nurturance",
+			"schemaText": "This shape is kind.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "hiredByAFamilymember",
+			"text": "Being hired by your family will make you doubt your capability.",
+			"schema": "low_Growth",
+			"schemaText": "This shape doesn't know their worth.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "MovesAlot",
+			"text": "I can't imagine what it feels like to uproot that many times for a job. It can't be easy.",
+			"schema": "low_Boundaries",
+			"schemaText": "This shape is not steady.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "getsFiredAlot",
+			"text": "The workplace can be toxic and difficult so we don't know what truly happened there.",
+			"schema": "low_Empathy",
+			"schemaText": "We should cut this shape some slack.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "RetiredYoung",
+			"text": "Working hard is a good investment in later enjoyment!",
+			"schema": "high_SelfNurturance",
+			"schemaText": "This shape has a fulfilling life.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "DiedBeforeRetired",
+			"text": "This shape could've done so much more than just their work. I feel bad for them.",
+			"schema": "low_SelfNurturance",
+			"schemaText": "Understanding what makes you happy is the most important thing.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "conventional",
+			"text": "I feel like this shape only works because they feel like they have to... A career isn't everything.",
+			"schema": "low_SelfNurturance",
+			"schemaText": "Understanding what makes you happy is the most important thing.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "nepotism",
+			"text": "Nepotism makes everyone doubt their self-worth because it's not based on merit.",
+			"schema": "low_FairDistribution",
+			"schemaText": "The world is not as fair as we wish it to be.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "flipflop",
+			"text": "We don't know why they change jobs so often, they must have their reasons.",
+			"schema": "low_Empathy",
+			"schemaText": "We should cut this shape some slack.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "WorksInAlcohol",
+			"text": "We all have to do our part in society, so a working shape is a great shape in my book.",
+			"schema": "high_Nurturance",
+			"schemaText": "A working shape is a responsible shape.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "healerRole",
+			"text": "Those who care for our health are my personal heroes.",
+			"schema": "high_Nurturance",
+			"schemaText": "A working shape is a responsible shape.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "polluterRole",
+			"text": "We all have to do our part in society, so a working shape is a great shape in my book.",
+			"schema": "high_Nurturance",
+			"schemaText": "A working shape is a responsible shape.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "riskTaker",
+			"text": "It's great to see those who take risks and are rewarded.",
+			"schema": "high_SelfNurturance",
+			"schemaText": "This shape has a fulfilling life.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "butcherRole",
+			"text": "We all have to do our part in society, so a working shape is a great shape in my book.",
+			"schema": "high_Nurturance",
+			"schemaText": "A working shape is a responsible shape.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "Teachingrole",
+			"text": "Teaching young shapes can't be easy! But it's an important job.",
+			"schema": "high_Nurturance",
+			"schemaText": "A working shape is a responsible shape.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "advancedCareer",
+			"text": "It's always great to see someone being rewarded for their hard work!",
+			"schema": "high_SelfNurturance",
+			"schemaText": "This shape has a fulfilling life.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "hardWorker",
+			"text": "Working hard doesn't equate to happiness, we should follow what makes us happy rather than bury ourselves in work.",
+			"schema": "low_SelfNurturance",
+			"schemaText": "Understanding what makes you happy is the most important thing.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "CustodianJobs",
+			"text": "We all have to do our part in society, so a working shape is a great shape in my book.",
+			"schema": "high_Nurturance",
+			"schemaText": "A working shape is a responsible shape.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "generalJobs",
+			"text": "We all have to do our part in society, so a working shape is a great shape in my book.",
+			"schema": "high_Nurturance",
+			"schemaText": "A working shape is a responsible shape.",
+			"NPCTypeSchemaValue": "High"
+		}, {
+			"subvalue": "selfMadeCubeByDedication",
+			"text": "A career can be great if that's what brings you joy and fulfillment!",
+			"schema": "high_SelfNurturance",
+			"schemaText": "This shape has a fulfilling life.",
+			"NPCTypeSchemaValue": "High"
+		}]
+
+	}
+
+
+]
