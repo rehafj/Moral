@@ -18,7 +18,7 @@
 		"BNPCsearchTranslation": ["this shape supports immigration", "this shape loves those who moved to our city", "this shape welcomes outsiders"]
 	},
 
-{
+	{
 		"SearchBarKey": "familyPerson",
 		"BNPCsearchTranslation": ["this shape has a big family", "this shape has a lot of young shapes", "this shape comes from a big family"]
 	},
@@ -115,23 +115,29 @@
 
 	{
 		"SearchBarKey": "likedToExperinceCulture",
-		"BNPCsearchTranslation": ["this shape likes to experience other cultures", this shape likes to experience new things", "this shape is open to experiencing new things, records show liked to travel"]
+		"BNPCsearchTranslation": ["this shape likes to experience other cultures", "this shape likes to experience new things ", "this shape is open to experiencing new things, records show liked to travel "]
 	},
 
 
 	{
 		"SearchBarKey": "liklyToHelpTheHomeless",
-		"BNPCsearchTranslation": ["this shape likes to help out others", this shape likes to give back to the community", "this shape is generous with their money and time"]
+		"BNPCsearchTranslation": ["this shape likes to help out others", "this shape likes to give back to the community ",
+			"this shape is generous with their money and time "
+		]
 	},
 
 	{
 		"SearchBarKey": "loner",
-		"BNPCsearchTranslation": ["this shape likes to be alone", this shape is a loner", "this shape seems lonely"]
+		"BNPCsearchTranslation": ["this shape likes to be alone", "this shape is a loner ",
+			"this shape seems lonely "
+		]
 	},
 
 	{
 		"SearchBarKey": "likesToDate",
-		"BNPCsearchTranslation": ["this shape likes to date", this shape goes on a lot of dates", "this shape is always with some new shape"]
+		"BNPCsearchTranslation": ["this shape likes to date", " this shape goes on a lot of dates ",
+			"this shape is always with some new shape "
+		]
 	},
 
 	{

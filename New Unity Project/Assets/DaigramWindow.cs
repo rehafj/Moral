@@ -7,6 +7,11 @@ public class DaigramWindow : MonoBehaviour
 {
 
     public GameObject CNPCUIResponceBoxPrefab;
+    public GameObject CNPCfmBox;
+    public GameObject PlayerReesponceBox;
+    public GameObject PlayerFMResponceBox;
+
+    public GameObject[] PlayerMotherAndFatherOptions = new GameObject[2];
     public RectTransform startPosition;
     public RectTransform currentPosition;
     public GameObject parentContent;
@@ -17,6 +22,13 @@ public class DaigramWindow : MonoBehaviour
     {
         currentPosition = startPosition;
         CNPCUIResponceBoxPrefab = Resources.Load<GameObject>("UIPrefabs/cnpcresponcediagrambox");
+        CNPCfmBox = Resources.Load<GameObject>("UIPrefabs/cnpcResponceFM");
+        PlayerReesponceBox = Resources.Load<GameObject>("UIPrefabs/playerReesponceVariant");
+        PlayerFMResponceBox = Resources.Load<GameObject>("UIPrefabs/PlayerResponceFM");
+
+        PlayerMotherAndFatherOptions[0] = Resources.Load<GameObject>("UIPrefabs/twoOpt/FAm");
+        PlayerMotherAndFatherOptions[1] = Resources.Load<GameObject>("UIPrefabs/twoOpt/MM"); ;
+
         GameObject temp = Instantiate(CNPCUIResponceBoxPrefab,  new Vector2(0,0), Quaternion.identity);
         temp.gameObject.transform.SetParent(parentContent.transform, false);
         Invoke("disableCanvas", 0.01f);
@@ -26,15 +38,61 @@ public class DaigramWindow : MonoBehaviour
 
 
     }
+    public enum boxTypes
+    {
+        playerNormal, PlayerFM, PlayerMM, CNPCNormal, CNPCFM, CNPCMM
+    }
 
+    public void DrawTwoOptions(int selectedNumber)
+    {
+        for(int i = 0; i <= 1; i++)
+        {
+            GameObject temp;
+         
+                temp = Instantiate(PlayerMotherAndFatherOptions[i], new Vector2(xPosition, yPostion), Quaternion.identity);
+
+
+            temp.gameObject.transform.SetParent(parentContent.transform, false);
+            temp.gameObject.GetComponentInChildren<Text>().color = Color.grey;
+            temp.gameObject.GetComponentInChildren<Image>().color = Color.grey;
+            xPosition += 240;
+
+            if ( i == selectedNumber)
+            {
+                temp.gameObject.GetComponentInChildren<Text>().color = Color.black;
+                temp.gameObject.GetComponentInChildren<Image>().color = Color.white;
+                yPostion -= 130;
+            }
+        } 
+    }
     void disableCanvas()
     {
         gameObject.SetActive(false);
     }
-    public void CreateSingleBox(float x, float y, Dialoug node, string text)
+    public void CreateSingleBox(float x, float y, Dialoug node, string text, boxTypes type )
     {
+        GameObject temp;
+        if (type == boxTypes.playerNormal)
+        {
+             temp = Instantiate(PlayerReesponceBox, new Vector2(xPosition, yPostion), Quaternion.identity);
 
-        GameObject temp = Instantiate(CNPCUIResponceBoxPrefab, new Vector2(x, yPostion) , Quaternion.identity);
+        }
+        else if(type == boxTypes.PlayerFM)
+        {
+             temp = Instantiate(PlayerFMResponceBox, new Vector2(xPosition, yPostion), Quaternion.identity);
+
+        }
+        else if (type == boxTypes.CNPCFM)
+        {
+             temp = Instantiate(CNPCfmBox, new Vector2(xPosition, yPostion), Quaternion.identity);
+
+        }
+        else 
+        {
+             temp = Instantiate(CNPCUIResponceBoxPrefab, new Vector2(xPosition, yPostion), Quaternion.identity);
+
+        }
+
         temp.gameObject.transform.SetParent(parentContent.transform, false);
         temp.gameObject.GetComponentInChildren<Text>().text = text;
         temp.gameObject.GetComponentInChildren<Text>().color = Color.black;
@@ -42,12 +100,34 @@ public class DaigramWindow : MonoBehaviour
 
         yPostion += -130;
     }
-    public void CreateMultipleBoxes( List<Dialoug> nodes, string text, string Selectedpattern)
+    public void CreateMultipleBoxes( List<Dialoug> nodes, string text, string Selectedpattern, boxTypes type)
     {
         //currentPosition.transform.position = new Vector2 (currentPosition.rect.x,  currentPosition.rect.y - 180);currentPosition.rect.position
         foreach(Dialoug d in nodes)
         {
-            GameObject temp = Instantiate(CNPCUIResponceBoxPrefab, new Vector2(xPosition, yPostion), Quaternion.identity);
+            GameObject temp;
+            if (type == boxTypes.playerNormal)
+            {
+                temp = Instantiate(PlayerReesponceBox, new Vector2(xPosition, yPostion), Quaternion.identity);
+
+            }
+            else if (type == boxTypes.PlayerFM)
+            {
+                temp = Instantiate(PlayerFMResponceBox, new Vector2(xPosition, yPostion), Quaternion.identity);
+
+            }
+            else if (type == boxTypes.CNPCFM)
+            {
+                temp = Instantiate(CNPCfmBox, new Vector2(xPosition, yPostion), Quaternion.identity);
+
+            }
+            else
+            {
+                 temp = Instantiate(CNPCUIResponceBoxPrefab, new Vector2(xPosition, yPostion), Quaternion.identity);
+
+            }
+
+
             temp.gameObject.transform.SetParent(parentContent.transform, false);
             temp.gameObject.GetComponentInChildren<Text>().text = d.mainOpinionOnAtopic;
             temp.gameObject.GetComponentInChildren<Text>().color = Color.grey;

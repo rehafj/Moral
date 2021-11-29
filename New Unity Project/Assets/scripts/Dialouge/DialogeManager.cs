@@ -105,8 +105,8 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     List<Dialoug> nonIntersectingNodes_generic; //something is wrong in this... 
     Queue<Dialoug> currentPlayerOptionsInInnerConversation = new Queue<Dialoug>();
     int innerConversationCounter = 0;
-
-
+    string CurrentCNPCSTANCE = "high";
+    string currentPlayerStance = "low";
     //find the player character when we end a conversation --- TODO
 
     void Awake()
@@ -156,7 +156,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         
         Dialoug introductionNode = new Dialoug(" introduction", " Player says: \nalong the lines of welcome...." + currentCNPC.ConversationalNpcName +
        " \n updated context text will start here  ", "graduate");
-        DiagramWindow.CreateSingleBox(0, 0, introductionNode, introductionNode.mainOpinionOnAtopic);
+        DiagramWindow.CreateSingleBox(0, 0, introductionNode, introductionNode.mainOpinionOnAtopic, DaigramWindow.boxTypes.playerNormal);
           yield return new WaitForSeconds(delay);
 
        //move this into its file 
@@ -309,8 +309,8 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                    currentNode.mainOpinionOnAtopic));
         addTextToTranscript(currentNode.UnbiasedOpeningStatment, true);
         addTextToTranscript(currentNode.mainOpinionOnAtopic, true);
-        DiagramWindow.CreateSingleBox(0, 0, currentNode, currentNode.UnbiasedOpeningStatment);
-        DiagramWindow.CreateSingleBox(0, 0, currentNode, currentNode.mainOpinionOnAtopic);
+        DiagramWindow.CreateSingleBox(0, 0, currentNode, currentNode.UnbiasedOpeningStatment, DaigramWindow.boxTypes.CNPCNormal);
+        DiagramWindow.CreateSingleBox(0, 0, currentNode, currentNode.mainOpinionOnAtopic, DaigramWindow.boxTypes.CNPCNormal);
         yield return currentCorutine;
         turnOnButtons();
         DisplayplayCurrentOpinions(currentTree);
@@ -442,7 +442,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                 PlayerButtons[1].onClick.AddListener(playerChoseMotherModel);
                 PlayerButtons[2].gameObject.SetActive(false);
                 PlayerButtons[3].gameObject.SetActive(false);
-
+                
             }
             else if(isInMoralModelArgumentLoop && !mainModelChoice) // after clicking moral models...?
                 {
@@ -470,18 +470,13 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
        
     }
 
-    private void PlayerDisagreedOnFlag(Dialoug d)
+    private void PlayerDisagreedOnFlag(Dialoug d)//player
     {
-        Debug.Log("are we here ever?");
-        Debug.Log("pattern chosen was" + d.Pattern);
-      StartCoroutine(  waitAndPrintFatherModelDissagreemnt(d));
+        
+      StartCoroutine(  waitAndPrintFatherModelDissagreemnt(d)); //1
     }
 
-    /*    private void PlayerDisagreedOnFlag(Dialoug d)
-        {
-            waitAndPrintFatherModelDissagreemnt(d);
-        }*/
-
+ 
     private void playerChoseMotherModel()
     {
         mainModelChoice = false;
@@ -501,9 +496,10 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         nonIntersectingNodes_generic = getNonIntersectingCoreValueNodesForATopic();
         setCurrentPlayerSFOptions();
         activatePlayerOptionsInButton(currentNode);
+       // DiagramWindow.DrawTwoOptions(0);
         //Debug.Log("player chose to argue with mother model");
 
-       // throw new NotImplementedException();
+        // throw new NotImplementedException();
     }
 
     void setCurrentPlayerSFOptions()
@@ -600,13 +596,13 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
     }
 
-    Dialoug currentCNPCStance = new Dialoug("","", "graduate");
-    public void playerArgueAboutFLag()
+    //Dialoug currentCNPCStance = new Dialoug("","", "graduate");
+    public void playerArgueAboutFLag() //not yet used - eremove this maybe? old code ---- 
     {
 
     
         Debug.Log("current stanc eis "+ currentNode.Pattern);
-        currentCNPCStance = currentNode;
+       // currentCNPCStance = currentNode;
         //present all flags for player as a sub menue 
         if(currentNode.getHeight() == 2) // change this into try /catch statments 
         {
@@ -745,7 +741,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         
         }
 
-        DiagramWindow.CreateMultipleBoxes( currentNode.parent.children,selectedText, pattern);
+        DiagramWindow.CreateMultipleBoxes( currentNode.parent.children,selectedText, pattern, DaigramWindow.boxTypes.playerNormal);
         turnOffButton();//new test comment 
         checkEndConversationAndMove();
 
@@ -1598,7 +1594,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         int r = UnityEngine.Random.Range(0, 2);
         foreach (CharacterSearchBarFacts fact in jsn.ListOfBNPCFacts)
         {
-            Debug.Log("called this for " + pattern + "with the key" + fact.SearchBarKey);
+            Debug.Log("!!!called this for " + pattern + "with the key" + fact.SearchBarKey);
 
             if (pattern.ToLower() == fact.SearchBarKey.ToLower())
             {
@@ -1660,9 +1656,12 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                                 currentNode.Rating, TypeOfPlayerTexts.agreement, false)));
             addTextToTranscript(getPlayerResponce(currentNode.MappedSurfaceValue,
                                 currentNode.Rating, TypeOfPlayerTexts.agreement,false), false);
+            DiagramWindow.CreateSingleBox(0, 0,currentNode, getPlayerResponce(currentNode.MappedSurfaceValue,
+                                currentNode.Rating, TypeOfPlayerTexts.agreement, false), DaigramWindow.boxTypes.playerNormal);
             yield return currentCorutine;
             currentCorutine = StartCoroutine(TypeInDialoug(text));
             addTextToTranscript(text,true);
+            DiagramWindow.CreateSingleBox(0, 0, currentNode,text, DaigramWindow.boxTypes.CNPCNormal);
             turnOffButton();//new test comment 
         }
          
@@ -1679,7 +1678,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             Debug.Log("does this happen?" + "heeeelp");
 
         }
-        else if (!currentTree.FullyExplored)
+        else if (!currentTree.FullyExplored) //todo update this to next cnpc
         {
           StartCoroutine(  startAconversation(currentTree));//at 0 
         }
@@ -1715,9 +1714,12 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                                  TypeOfPlayerTexts.disagreement, isMf))); // CAN REFACTOR THIS  //TOFRICKENDO changet his to currentnode.sv
             addTextToTranscript(getPlayerResponce(currentNode.MappedSurfaceValue, currentNode.Rating,
                                  TypeOfPlayerTexts.disagreement, isMf), false);
+            DiagramWindow.CreateSingleBox(0, 0, currentNode, getPlayerResponce(currentNode.MappedSurfaceValue, currentNode.Rating,
+                                 TypeOfPlayerTexts.disagreement, isMf), DaigramWindow.boxTypes.playerNormal);
             yield return currentCorutine;
             currentCorutine = StartCoroutine(TypeInDialoug(text));
             addTextToTranscript(text, true);
+            DiagramWindow.CreateSingleBox(0, 0, currentNode, text, DaigramWindow.boxTypes.CNPCNormal);
             yield return currentCorutine;
            
             //for tests - redo this in a cleaner way
@@ -1728,6 +1730,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                    currentNode.MappedSurfaceValue, currentNode.Pattern, currentMoralModelExploredPatterns, true)));
 
                 addTextToTranscript(currentCNPC.FatherModel.returnFatherModelArgumetnsText(currentNode.MappedSurfaceValue, currentNode.Pattern, new List<string>() { }, true), true);
+                DiagramWindow.CreateSingleBox(0, 0, currentNode, currentCNPC.FatherModel.returnFatherModelArgumetnsText(currentNode.MappedSurfaceValue, currentNode.Pattern, new List<string>() { }, true), DaigramWindow.boxTypes.CNPCFM);
 
                 // generate a new menu if player disagrees again 
                 //  FIXME   
@@ -1746,7 +1749,103 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
 
 
-    IEnumerator waitAndPrintFatherModelDissagreemnt( Dialoug node)   //so this works... but does nto when in larger scenartio.. 
+    IEnumerator waitAndPrintFatherModelDissagreemnt( Dialoug node)   //2
+    {
+        CurrentCNPCSTANCE =  currentCNPC.FatherModel.returnCurrentCnpcStance(currentNode.MappedSurfaceValue, currentNode.Pattern);
+        if(CurrentCNPCSTANCE.ToLower() == "high")
+        {
+            currentPlayerStance = "low";
+
+        } else if (CurrentCNPCSTANCE.ToLower() != "high")
+        {
+            currentPlayerStance = "high";
+        }
+
+        if (!currentTree.FullyExplored)
+        {
+
+            bool isMf = currentCNPC.IsMoralFocus(currentNode.MappedSurfaceValue);
+
+            //basic disagreement 1
+            yield return currentCorutine;
+           /* currentCorutine = StartCoroutine(TypeInDialoug("player disagreed by using, some kind of transition will be used here " + node.Pattern)); // CAN REFACTOR THIS  //TOFRICKENDO changet his to currentnode.sv
+            addTextToTranscript(("player disagreed by using " + node.Pattern), false);
+*/
+            string playerResponce = currentCNPC.FatherModel.returnFatherModelArgumetnsForAspecficString(
+                   currentNode.MappedSurfaceValue, node.Pattern, currentMoralModelExploredPatterns_PLAYER, currentPlayerStance);
+
+            currentMoralModelExploredPatterns_PLAYER.Add(node.Pattern);
+
+
+            //yield return currentCorutine;
+
+            if (playerResponce!= "GenericResponceGiven") { 
+                currentCNPC.PlayerScore += 1;
+                currentCorutine = StartCoroutine(TypeInDialoug("player says" + playerResponce));
+                DiagramWindow.CreateSingleBox(0, 0, currentNode, playerResponce, DaigramWindow.boxTypes.PlayerFM);
+
+                yield return currentCorutine;
+
+            }
+            else if(playerResponce == "GenericResponceGiven")
+            {
+                playerResponce = getGenricResponce(node.Pattern, currentPlayerStance);
+                currentCorutine = StartCoroutine(TypeInDialoug("player says" + playerResponce));
+                DiagramWindow.CreateSingleBox(0, 0, currentNode, playerResponce, DaigramWindow.boxTypes.playerNormal);
+
+                yield return currentCorutine;
+            }
+            addTextToTranscript(playerResponce, false);
+
+            yield return currentCorutine;
+
+
+            //npc responce move to it's own function --- 
+            string NPCResponce = currentCNPC.FatherModel.returnFatherModelArgumetnsText(
+                 currentNode.MappedSurfaceValue, currentNode.Pattern, currentMoralModelExploredPatterns, true);
+
+            if (NPCResponce != "GenericResponceGiven")
+            {
+                currentCNPC.CNPCScore += 1;
+                currentCorutine = StartCoroutine(TypeInDialoug(currentCNPC.name + " says:" + NPCResponce));
+                DiagramWindow.CreateSingleBox(0, 0, currentNode, NPCResponce, DaigramWindow.boxTypes.CNPCFM);
+
+                yield return currentCorutine;
+
+                //i changed this check for bugs me
+            }
+            else if (NPCResponce == "GenericResponceGiven")
+            {
+                NPCResponce = getGenricResponce(node.Pattern, currentPlayerStance);
+                currentCorutine = StartCoroutine(TypeInDialoug(currentCNPC.name +" says:"+ playerResponce));
+                DiagramWindow.CreateSingleBox(0, 0, currentNode, NPCResponce, DaigramWindow.boxTypes.playerNormal);
+
+                yield return currentCorutine;
+
+            }
+            addTextToTranscript(NPCResponce, true);
+
+
+            yield return currentCorutine;
+
+            currentMoralModelExploredPatterns.Add(currentNode.Pattern);
+                isInMoralModelArgumentLoop = true;
+            
+                mainModelChoice = true;
+            //enterSubConversationOnDisagreement();
+            //if npc wins end conversation set mainmodelchoice and in moralmodelarrg loop to false 
+            innerConversationCounter += 1;
+
+            currentCorutine = StartCoroutine(checkInnerConversationLoop());
+            yield return currentCorutine;
+
+        }
+        checkEndConversationAndMove();
+
+    }
+
+
+    IEnumerator waitAndPrintFatherModelDissagreemnt(Dialoug node, string stance)   //3 
     {
         Debug.Log("does this happen????");
 
@@ -1769,26 +1868,37 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             string playerResponce = currentCNPC.FatherModel.returnFatherModelArgumetnsText(
                     currentNode.MappedSurfaceValue, node.Pattern, currentMoralModelExploredPatterns, false);
 
-            currentCorutine = StartCoroutine(TypeInDialoug( "player says" +  playerResponce));
+            //currentCorutine = StartCoroutine(TypeInDialoug( "player says" +  playerResponce));
 
-            addTextToTranscript( playerResponce, false);
-            if(playerResponce!= "GenericResponceGiven") { currentCNPC.PlayerScore += 1; }
+            addTextToTranscript(playerResponce, false);
+            if (playerResponce != "GenericResponceGiven")
+            {
+                currentCNPC.PlayerScore += 1;
+                currentCorutine = StartCoroutine(TypeInDialoug("player says" + playerResponce));
+                yield return currentCorutine;
+
+            }
+            else if (playerResponce == "GenericResponceGiven")
+            {
+                playerResponce = getGenricResponce(node.Pattern, stance);
+            }
             yield return currentCorutine;
 
 
+            //npc responce move to it's own function --- 
             string NPCResponce = currentCNPC.FatherModel.returnFatherModelArgumetnsText(
                  currentNode.MappedSurfaceValue, node.Pattern, currentMoralModelExploredPatterns, true);
             currentCorutine = StartCoroutine(TypeInDialoug("NPCsays" + NPCResponce));
 
-            addTextToTranscript( NPCResponce, false);
+            addTextToTranscript(NPCResponce, false);
             if (NPCResponce != "GenericResponceGiven") { currentCNPC.PlayerScore += 1; }
 
             yield return currentCorutine;
 
             currentMoralModelExploredPatterns.Add(currentNode.Pattern);
-                isInMoralModelArgumentLoop = true;
-            
-                mainModelChoice = true;
+            isInMoralModelArgumentLoop = true;
+
+            mainModelChoice = true;
             //enterSubConversationOnDisagreement();
             //if npc wins end conversation set mainmodelchoice and in moralmodelarrg loop to false 
             innerConversationCounter += 1;
@@ -1801,9 +1911,29 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
     }
 
+    string getGenricResponce(string pattern, string stance)
+    {
+        foreach (GenericMoralModelResponces genericText in jsn.ListOfMoralModelsGenricResponces)
+        {
+            if(pattern.ToLower() == genericText.key.ToLower())
+            {
+                int r = UnityEngine.Random.Range(0, genericText.highGnericResponces.Count - 1);
+
+                if (stance.ToLower() == "high")
+                {
+                    return genericText.highGnericResponces[r];
+                }else
+                {
+                    return genericText.lowGnericResponces[r];
+
+                }
+            }
+        }
+        return "no generic responce found for the key" + pattern + stance;
+    }
 
     //player argues using a diff model but should the npc also change the topic?
-    IEnumerator waitAndPrintFatherModelDissagreemnt(Dialoug node, string SV)   //so this works... but does nto when in larger scenartio.. 
+    /*IEnumerator waitAndPrintFatherModelDissagreemnt(Dialoug node, string SV)   //so this works... but does nto when in larger scenartio.. 
     {
         Debug.Log("does this happen????");
 
@@ -1856,7 +1986,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         }
         checkEndConversationAndMove();
 
-    }
+    }*/
 
 
     IEnumerator  checkInnerConversationLoop()
@@ -1866,6 +1996,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         if (innerConversationCounter >= 2)
         {
             isInMoralModelArgumentLoop = false;
+            innerConversationCounter = 0;
 
             if (currentCNPC.PlayerScore >= currentCNPC.CNPCScore)
             {

@@ -5,7 +5,7 @@ using System.Linq;
 
 public class StrictFatherMorality : MoralModels
 {
-  
+
     // public bool isCentral; maybe make this into az thing to hold values
 
     Dictionary<string, bool> fatherSchemas = new Dictionary<string, bool>();
@@ -41,11 +41,24 @@ public class StrictFatherMorality : MoralModels
 
     }
 
-    public void  testFM()
+    public void testFM()
     {
         Debug.Log(JsonLoader.Instance.listOffATHERArguments.Count());
     }
     //make an overloaded method -- 
+
+    public string returnCurrentCnpcStance(string surfaceValue, string subvalue)
+    {
+        if (NPCfmHighValues.Contains(surfaceValue))
+            {
+                return  "high";
+            }
+            else
+            {
+                return "low";
+            }
+        
+    }
     public string returnFatherModelArgumetnsText(string surfaceValue, string subvalue,
                                           List<string> exploredSterings, bool isNPC)
     {//update this ti include updates high low lists / player or npc --- update to reflect player bool - update for sening in list of explored or some list 
@@ -127,6 +140,50 @@ public class StrictFatherMorality : MoralModels
 
     }
 
+    public string returnFatherModelArgumetnsForAspecficString(string surfaceValue, string subvalue,
+                                         List<string> exploredSterings, string stanceValue)
+    {//update this ti include updates high low lists / player or npc --- update to reflect player bool - update for sening in list of explored or some list 
+
+
+
+        if (stanceValue.ToLower() != "high" || stanceValue.ToLower() != "low")
+        {
+            stanceValue = "low";
+        }
+
+        // Debug.Log("!!!!!+ NPC WILL LOOK FOR SCHEMAS THAT HAVE" + NPCType);
+        string currentPatternCheck = subvalue;
+
+        int i = 0;
+        foreach (MoralModelArguments arg in JsonLoader.Instance.listOffATHERArguments)
+        {
+            // Debug.Log("arg.SVkey "+ arg.SVkey);
+
+            if (arg.SVkey == surfaceValue) //found the sv we wanted 
+            {
+                // Debug.Log("INSIDE SV KEY"+ arg.SVkey);
+                // Debug.Log("size of  arg.surfaceValueObjList"  + arg.SurfaceValueObject.Count);
+
+                foreach (SurfaceValueObject sobject in arg.SurfaceValueObject)
+                {
+                    string r = sobject.schema.Split('_').First();
+                  
+                    if (sobject.subvalue == subvalue && stanceValue.ToLower() == r)
+                    {
+                        return sobject.text;
+                    }
+                    
+                  
+
+                }
+            }
+        }
+
+        return "GenericResponceGiven";
+
+    }
+
+  
 
     public string returnAppendedSchemaText(string surfaceValue, string subvalue,
                                       List<string> exploredSterings, bool isNPC)

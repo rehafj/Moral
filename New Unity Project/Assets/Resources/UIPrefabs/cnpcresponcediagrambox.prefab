@@ -28,7 +28,7 @@ RectTransform:
   m_GameObject: {fileID: 434455455673570388}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
   m_Children:
   - {fileID: 434455456030804383}
   m_Father: {fileID: 5868493165046439768}
@@ -37,7 +37,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 121.88681}
+  m_SizeDelta: {x: 0, y: 87.151794}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &434455455673570391
 CanvasRenderer:
@@ -67,7 +67,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 4644047166829877689, guid: 36fbe0e26a1af2246906549776d42f77,
+  m_Sprite: {fileID: 1640998933015704602, guid: 9542de68617cc824a9bc87e4ffdb0a78,
     type: 3}
   m_Type: 3
   m_PreserveAspect: 0
@@ -91,9 +91,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 5
-    m_Right: 20
-    m_Top: 31
+    m_Left: 2
+    m_Right: -39
+    m_Top: 12
     m_Bottom: 211
   m_ChildAlignment: 4
   m_Spacing: 0
@@ -352,7 +352,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5716305699669061153}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -427,7 +427,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7625891602118648095}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
