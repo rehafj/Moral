@@ -647,7 +647,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     //refactor these --- 
     private void setPlayerPattern()
     {
-        PlayerButtons[0].GetComponentInChildren<Text>().text = "I agree with " + currentNode.Pattern;
+        PlayerButtons[0].GetComponentInChildren<Text>().text = "I agree ";
         PlayerButtons[1].GetComponentInChildren<Text>().text = "I don't agree with you there";
         PlayerButtons[2].GetComponentInChildren<Text>().text = "you know I heard other things about that cube"; //pull from a list of random strings later //TODO
         PlayerButtons[3].GetComponentInChildren<Text>().text = "you know what, lets talk about something else";
