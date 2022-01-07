@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class DaigramWindow : MonoBehaviour
 {
 
+
     public GameObject CNPCUIResponceBoxPrefab;
     public GameObject CNPCfmBox;
     public GameObject PlayerReesponceBox;

@@ -9,7 +9,7 @@ public class Dialoug   //restructure this badly....
 {
     public string Pattern; //set and used for the patern now 
 
-
+    public bool IsPlayer;
     public string UnbiasedOpeningStatment;
 
 

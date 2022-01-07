@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1115393834}
   - component: {fileID: 1115393835}
   - component: {fileID: 1115393840}
+  - component: {fileID: 7723506503367868871}
   m_Layer: 0
   m_Name: CNPCPrefab
   m_TagString: Untagged
@@ -153,3 +154,63 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7723506503367868871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6095037293463705035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ba3bbf9121e5894689765b765ee9f1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsFatherModel: 0
+  listOfContradictions:
+  - schoolIsDrool
+  - EnviromentalistAnti
+  - AnimalLoverAnti
+  - LoveIsForFools
+  - Loner
+  - 'AntiFaviortisum '
+  - WeArewNothingIfWeAreNotReserved
+  - TeetotaslerAnti
+  - Enviromentalist
+  - BTrueTYourHeart
+  - AnimalLover
+  - SchoolIsCool
+  - Shapesarenothingifnotsocial
+  - 'ProHiringFamily '
+  - FriendsAreTheJoyOFlife
+  - Teetotasler
+  contradictingValuesHigh:
+  - Enviromentalist
+  - BTrueTYourHeart
+  - AnimalLover
+  - SchoolIsCool
+  - Shapesarenothingifnotsocial
+  - 'ProHiringFamily '
+  - FriendsAreTheJoyOFlife
+  - Teetotasler
+  contradictingValuesLow:
+  - schoolIsDrool
+  - EnviromentalistAnti
+  - AnimalLoverAnti
+  - LoveIsForFools
+  - Loner
+  - 'AntiFaviortisum '
+  - WeArewNothingIfWeAreNotReserved
+  - TeetotaslerAnti
+  FatherModel: {fileID: 0}
+  MotherModel: {fileID: 0}
+  ConversationalNpcName: 
+  CNPCScore: 0
+  PlayerScore: 0
+  moralFocus: 
+  NPCCubeObject: {fileID: 0}
+  agentPrefabControl: {fileID: 0}
+  anim: {fileID: 0}
+  CnpcEmotion: 0
+  name: 
+  NpcValueRating: 0

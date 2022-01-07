@@ -11,12 +11,15 @@ public class CharacterManager : MonoBehaviour
 
     int characterCount = 3;
     //public List<Character> characters;
-    public  List<ConversationalCharacter> characters;
-    private List<string> firstNamesList = new List<string> { "Acute", "Arc", "Conic", "Cy", "Vert", "Point", "Hex", "Polly" };
-    private List<string> lastNamesList = new List<string> { "Segment", "Strip", "Gon", "Angle", "Metric", "Millimetre ", "Decimal" };
+    //public  List<ConversationalCharacter> characters;
+
+    public List<GameObject> ourConversationalCharacters;
+
     bool ActorInScene = false;
     public GameObject ActingCubes;
     public NavigationControl ActingCubeNavigation;
+
+    int currentcharacterIndexer = 0;
     void Awake()
     {
 
@@ -29,68 +32,89 @@ public class CharacterManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        Debug.Log("does this happpppppp");
+        ActingCubes = Resources.Load("prefabs/CNPCPrefab") as GameObject;
+        setUp();
     }
 
 
 
-  
+
 
     public List<InterestingCharacters> getCurrentBackgroundCharacterList()
     {
         return DialogeManager.Instance.conversedAboutCharectersList;
     }
 
-    string setCharacterName()
-    {
-        string name = firstNamesList[UnityEngine.Random.Range(0, firstNamesList.Count -1)] + " " +
-              lastNamesList[UnityEngine.Random.Range(0, lastNamesList.Count -1)];
-
-        return name;
-    }
-    void Start()
-    {
-        setUp();
-        ActingCubes = Resources.Load("prefabs/CNPCPrefab") as GameObject;
-
-    }
-
+  
 
     //new thing here - check if it bugs itout~ 
     private void setUp() ///this is hard coded but perhaps make values random in other runs 
     {
-        for(int i = 0; i <= characterCount; i++)
+        for (int i = 0; i <= characterCount; i++)
         {
             //ConversationalCharacter c = new ConversationalCharacter(setCharacterName());
-            characters.Add(new ConversationalCharacter(setCharacterName()));
+            GameObject t = Instantiate(ActingCubes, new Vector3(23.99f, -7.08f, 0f), Quaternion.identity);
+
+            if (i == 0)
+            {
+                t.SetActive(true);
+
+            } else
+            {
+                t.SetActive(false);
+
+            }
+            // t.AddComponent<ConversationalCharacter>();
+            // Debug.Log("value of added compnenet!" + t.GetComponent<ConversationalCharacter>().ConversationalNpcName);
+
+            ourConversationalCharacters.Add(t);
+            //characters.Add(new ConversationalCharacter(setCharacterName()));
         }
-    
-       
+
+
 
     }
 
+    //change this to startTheMarrch! or osmething like thaT :/
     public void instantiateCube()
     {
         if (!ActorInScene)
         {
-            Instantiate(ActingCubes, new Vector3(23.99f, -7.08f, 0f), Quaternion.identity);
+            GameObject t = Instantiate(ActingCubes, new Vector3(23.99f, -7.08f, 0f), Quaternion.identity);
+
             ActorInScene = true;
-        } else
+        }
+        else
         {
-            
+
             //DestroyImmediate(ActingCube,true);
-            GameObject t =  Resources.Load("prefabs/CNPCPrefab") as GameObject;
+            GameObject t = Resources.Load("prefabs/CNPCPrefab") as GameObject;
             ActingCubes = t;
             Instantiate(ActingCubes, new Vector3(23.99f, -7.08f, 0f), Quaternion.identity);
+            ActorInScene = false;
 
         }
 
 
     }
 
+    public void startTheMarch()
+    {
+        if (!ActorInScene)
+        {
+            ourConversationalCharacters[currentcharacterIndexer].SetActive(true);
+            ActorInScene = true;
+        }
+        else //todo otter --- update this to turn it on and delay when it's called in the other script - check if this woerks! 
+        { //startTheMarch needs to be cvalled before changing cnpcs... 
+            currentcharacterIndexer++;
+            ourConversationalCharacters[currentcharacterIndexer].SetActive(true);
+            ActorInScene = false;
 
-
-
-
+        }
+    }
 }
 
 

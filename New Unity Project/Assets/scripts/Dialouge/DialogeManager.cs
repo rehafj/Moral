@@ -12,26 +12,15 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     public static DialogeManager Instance { get; private set; }
 
 
-
-
-
     public string TranscriptString = "Before you can begin to determine what the composition of a particular paragraph will be, you must first decide on an argument and a working thesis statement for your paper. What is the most important idea that you are trying to convey to your reader? The information in each paragraph must be related to that idea. In other words, your paragraphs should remind your reader that there is a recurrent relationship between your thesis and the information in each paragraph. A working thesis functions like a seed from which your paper, and your ideas, will grow. The whole process is an organic one—a natural progression from a seed to a full-blown paper where there are direct, familial relationships between all of the ideas in the paper";
     public DaigramWindow DiagramWindow;
-
-
-
 
     public List<Tree> allCharacterConversationsTrees = new List<Tree>();
     private Tree currentTree ;
 
     public List<Dialoug> fullCharacterRootNodes;
 
-
-
     public List<Dialoug> currentPlayerOptions;
-
-
-
 
     public List<Dialoug> CurrentIntersectingSFMcorePatterns;
     public List<Dialoug> CurrentBNPCgenericPatterns;
@@ -46,7 +35,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     List<DialougStructure> midVaueOpinions = new List<DialougStructure>();
     List<DialougStructure> lowVaueOpinions = new List<DialougStructure>();
 
-    ConversationalCharacter currentCNPC; //change this depending on time and instantations --- also control the character 
+    public ConversationalCharacter currentCNPC; //change this depending on time and instantations --- also control the character 
 
     //add a node to check if explored 
     BackgroundCharacter bgchar;
@@ -84,7 +73,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
     //pubic for testing only -- change later 
     Dialoug currentNode;
-
+    
      int moralFocusCounter = 0; 
 
 
@@ -107,8 +96,11 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     int innerConversationCounter = 0;
     string CurrentCNPCSTANCE = "high";
     string currentPlayerStance = "low";
+
+    int counterLoopForSchema = 0;
     //find the player character when we end a conversation --- TODO
 
+    
     void Awake()
     {
 
@@ -122,30 +114,37 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             Destroy(gameObject);
         }
     }
-        public void Start()
+    public void Start()
     {
         bgchar = FindObjectOfType<BackgroundCharacter>();
         jsn = FindObjectOfType<JsonLoader>();
         DiagramWindow = FindObjectOfType<DaigramWindow>();
         AllOpinions = jsn.listOfConversations;
-        currentCNPC = FindObjectOfType<CharacterManager>().characters[0]; //hard coded with tim for now 
+        currentCNPC = FindObjectOfType<CharacterManager>().ourConversationalCharacters[0].GetComponent<ConversationalCharacter>(); //hard coded with tim for now 
+        Debug.Log("thissss"+ currentCNPC.ConversationalNpcName);
+
         OrgnizeCNPCOpinions();
-        CharacterManager.Instance.instantiateCube();
+        CharacterManager.Instance.startTheMarch();
         setUp();
-        StartCoroutine(startGame(5f,treeCounter)); //change this to the animations time / or agents path time
+        StartCoroutine(startGame(5f, treeCounter)); //change this to the animations time / or agents path time
 
         turnOffButton();//test only
+        currentMoralModelExploredPatterns = new List<string>();
+        currentMoralModelExploredPatterns_PLAYER = new List<string>();
+        // TranscriptString = "Before you can begin to determine what the composition of a particular paragraph will be, you must first decide on an argument and a working thesis statement for your paper. What is the most important idea that you are trying to convey to your reader? The information in each paragraph must be related to that idea. In other words, your paragraphs should remind your reader that there is a recurrent relationship between your thesis and the information in each paragraph. A working thesis functions like a seed from which your paper, and your ideas, will grow. The whole process is an organic one—a natural progression from a seed to a full-blown paper where there are direct, familial relationships between all of the ideas in the paper";
 
-       // TranscriptString = "Before you can begin to determine what the composition of a particular paragraph will be, you must first decide on an argument and a working thesis statement for your paper. What is the most important idea that you are trying to convey to your reader? The information in each paragraph must be related to that idea. In other words, your paragraphs should remind your reader that there is a recurrent relationship between your thesis and the information in each paragraph. A working thesis functions like a seed from which your paper, and your ideas, will grow. The whole process is an organic one—a natural progression from a seed to a full-blown paper where there are direct, familial relationships between all of the ideas in the paper";
-    
 
         //tests 
-    
+
     }
 
+    public Dialoug returnCurrentNode()
+    {
+        return currentNode;
+    }
     public void nextCubeInteractionTest()
     {
-        Debug.Log(CharacterManager.Instance.characters.Count);
+        Debug.Log(CharacterManager.Instance.ourConversationalCharacters.Count);
         startNextCubeConversation(3);
   
     }
@@ -153,9 +152,13 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     IEnumerator startGame(float delay, int treeIndexer)
     {
         if (currentCorutine != null) { yield return currentCorutine; }
-        
-        Dialoug introductionNode = new Dialoug(" introduction", " Player says: \nalong the lines of welcome...." + currentCNPC.ConversationalNpcName +
-       " \n updated context text will start here  ", "graduate");
+
+        Dialoug introductionNode = getAnIntroductionNode();
+
+
+
+      /*  Dialoug introductionNode = new Dialoug(" introduction", " Player says: \nalong the lines of welcome...." + currentCNPC.ConversationalNpcName +
+       " \n updated context text will start here  ", "graduate");*/
         DiagramWindow.CreateSingleBox(0, 0, introductionNode, introductionNode.mainOpinionOnAtopic, DaigramWindow.boxTypes.playerNormal);
           yield return new WaitForSeconds(delay);
 
@@ -170,6 +173,31 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         yield return currentCorutine;
 
     }
+
+    private Dialoug getAnIntroductionNode()
+    {
+        Dialoug Intronode = new Dialoug(" introduction" + CNPCIndexer.ToString(),
+            "Player says: \n " + getRandomIntroduction() , "graduate"); ;
+        return Intronode;
+
+
+    }
+
+    private string getRandomIntroduction()
+    {
+        int x = UnityEngine.Random.Range(0, 5);
+        string s = "Welcome + " + currentCNPC.ConversationalNpcName + "\n";
+        string[] intro = {
+          "Thanks for coming to argument Box, what rumors are on your mind?",
+          "Thanks for coming to argument Box, home of(mostly) vauge arguments, whats on your mind",
+          "Thanks for coming to the old AB, what's on your noodle doodle",
+          "Thanks for coming in, I am more than just a greeter, (or punching bag), what topics brought you in? ",
+          "Thanks for coming in lovly shape, your rumors are <mostly> safe here!, what's on your mind"   
+        };
+
+        return s + intro[x];
+    }
+
     IEnumerator startNextCubeConversation(float delay)
     {
         if (currentCorutine != null) { yield return currentCorutine; }
@@ -183,7 +211,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
         currentCorutine = StartCoroutine(TypeInDialoug(endingDilaoug.mainOpinionOnAtopic));
         CNPCIndexer += 1;
-        currentCNPC = FindObjectOfType<CharacterManager>().characters[CNPCIndexer];
+        currentCNPC = FindObjectOfType<CharacterManager>().ourConversationalCharacters[CNPCIndexer].GetComponent<ConversationalCharacter>();
         startGame(5, treeCounter);
 
 
@@ -714,10 +742,10 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
     private void moveConversationToAflag(Dialoug d)
     {
-        currentCorutine = StartCoroutine(moveConversationToAflag(d.Pattern));
+        currentCorutine = StartCoroutine(respondCharacterConversationToAFlag(d));
     }
 
-    private IEnumerator moveConversationToAflag(string pattern)
+    private IEnumerator respondCharacterConversationToAFlag(Dialoug d) //used by player! 
     {
 
         string selectedText="";
@@ -725,14 +753,15 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
        // StopAllCoroutines();
         GuidialougText.text = "";
         yield return currentCorutine;
-        currentCorutine = StartCoroutine(TypeInDialoug(getPlayerResponceToAflag(currentNode.MappedSurfaceValue, pattern, currentNode.Rating, TypeOfPlayerTexts.disAgreeOnAflag, false)));
+        currentCorutine = StartCoroutine(TypeInDialoug(getPlayerResponceToAflag(currentNode.MappedSurfaceValue, d.Pattern, currentNode.Rating, TypeOfPlayerTexts.disAgreeOnAflag, false)));
        //to do add somethin ghere -- to fix diagloig options
         yield return currentCorutine;
         currentCorutine = StartCoroutine(TypeInDialoug(currentNode.disagreementText));
         if (currentNode.Rating.ToLower() == "high")
         {
+            string appendedSchemaText = currentCNPC.FatherModel.returnAppendedSchemaText(d.MappedSurfaceValue, d.Pattern, currentMoralModelExploredPatterns_PLAYER, true);
             selectedText = currentCNPC.FatherModel.returnFatherModelArgumetnsText(
-                 currentNode.MappedSurfaceValue, currentNode.Pattern, new List<string>() { }, true);
+                 currentNode.MappedSurfaceValue, currentNode.Pattern, currentMoralModelExploredPatterns_PLAYER, true);
 
             currentCorutine = StartCoroutine(TypeInDialoug(selectedText));
 
@@ -741,7 +770,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         
         }
 
-        DiagramWindow.CreateMultipleBoxes( currentNode.parent.children,selectedText, pattern, DaigramWindow.boxTypes.playerNormal);
+        DiagramWindow.CreateMultipleBoxes( currentNode.parent.children,selectedText, d.Pattern , DaigramWindow.boxTypes.playerNormal);
         turnOffButton();//new test comment 
         checkEndConversationAndMove();
 
@@ -755,6 +784,8 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     {
         foreach (PlayerDialoug p in jsn.listOfPlayerDialougs)
         {
+           
+
             if (p.playerSurfaceValue == surfaceValue && p.playerNarrativeElements.rating == rating) //prints approproate high/mid/low if its not the moral focus argument
             {
                 if (!isMoralARG)
@@ -1618,7 +1649,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         for (int i = 0; i <= dialkougText.Length; i++)
         {
             isTyping = true;
-            enableClick();
+            //enableClick();
             GuidialougText.text = dialkougText.Substring(0, i);
             yield return new WaitForSeconds(0.05f);
         }
@@ -1717,6 +1748,8 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             DiagramWindow.CreateSingleBox(0, 0, currentNode, getPlayerResponce(currentNode.MappedSurfaceValue, currentNode.Rating,
                                  TypeOfPlayerTexts.disagreement, isMf), DaigramWindow.boxTypes.playerNormal);
             yield return currentCorutine;
+
+
             currentCorutine = StartCoroutine(TypeInDialoug(text));
             addTextToTranscript(text, true);
             DiagramWindow.CreateSingleBox(0, 0, currentNode, text, DaigramWindow.boxTypes.CNPCNormal);
@@ -1725,11 +1758,17 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             //for tests - redo this in a cleaner way
             if(currentNode.Rating.ToLower() == "high")
             {
-               currentCorutine = StartCoroutine(TypeInDialoug(
+                string s = "";
+
+                if (counterLoopForSchema <= 0)
+                {
+                    s = currentCNPC.FatherModel.returnAppendedSchemaText(currentNode.MappedSurfaceValue, currentNode.Pattern, currentMoralModelExploredPatterns, true);
+                }
+               currentCorutine = StartCoroutine(TypeInDialoug( s + 
                     currentCNPC.FatherModel.returnFatherModelArgumetnsText(
                    currentNode.MappedSurfaceValue, currentNode.Pattern, currentMoralModelExploredPatterns, true)));
 
-                addTextToTranscript(currentCNPC.FatherModel.returnFatherModelArgumetnsText(currentNode.MappedSurfaceValue, currentNode.Pattern, new List<string>() { }, true), true);
+                addTextToTranscript(currentCNPC.FatherModel.returnFatherModelArgumetnsText(currentNode.MappedSurfaceValue, currentNode.Pattern, currentMoralModelExploredPatterns, true), true);
                 DiagramWindow.CreateSingleBox(0, 0, currentNode, currentCNPC.FatherModel.returnFatherModelArgumetnsText(currentNode.MappedSurfaceValue, currentNode.Pattern, new List<string>() { }, true), DaigramWindow.boxTypes.CNPCFM);
 
                 // generate a new menu if player disagrees again 
@@ -1768,9 +1807,16 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
             //basic disagreement 1
             yield return currentCorutine;
-           /* currentCorutine = StartCoroutine(TypeInDialoug("player disagreed by using, some kind of transition will be used here " + node.Pattern)); // CAN REFACTOR THIS  //TOFRICKENDO changet his to currentnode.sv
-            addTextToTranscript(("player disagreed by using " + node.Pattern), false);
-*/
+            /* currentCorutine = StartCoroutine(TypeInDialoug("player disagreed by using, some kind of transition will be used here " + node.Pattern)); // CAN REFACTOR THIS  //TOFRICKENDO changet his to currentnode.sv
+             addTextToTranscript(("player disagreed by using " + node.Pattern), false);
+ */
+
+            string s = "";
+            if (counterLoopForSchema <= 0)
+            {
+                s = currentCNPC.FatherModel.returnAppendedSchemaText(currentNode.MappedSurfaceValue, node.Pattern, currentMoralModelExploredPatterns_PLAYER, false);
+            }
+            
             string playerResponce = currentCNPC.FatherModel.returnFatherModelArgumetnsForAspecficString(
                    currentNode.MappedSurfaceValue, node.Pattern, currentMoralModelExploredPatterns_PLAYER, currentPlayerStance);
 
@@ -1781,7 +1827,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
             if (playerResponce!= "GenericResponceGiven") { 
                 currentCNPC.PlayerScore += 1;
-                currentCorutine = StartCoroutine(TypeInDialoug("player says" + playerResponce));
+                currentCorutine = StartCoroutine(TypeInDialoug("player says" + s+ playerResponce));
                 DiagramWindow.CreateSingleBox(0, 0, currentNode, playerResponce, DaigramWindow.boxTypes.PlayerFM);
 
                 yield return currentCorutine;
@@ -1804,9 +1850,10 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             string NPCResponce = currentCNPC.FatherModel.returnFatherModelArgumetnsText(
                  currentNode.MappedSurfaceValue, currentNode.Pattern, currentMoralModelExploredPatterns, true);
 
+            Debug.Log("NPC responce" + NPCResponce);
             if (NPCResponce != "GenericResponceGiven")
             {
-                currentCNPC.CNPCScore += 1;
+                currentCNPC.CNPCScore += 1; //BUG HERE REPORT
                 currentCorutine = StartCoroutine(TypeInDialoug(currentCNPC.name + " says:" + NPCResponce));
                 DiagramWindow.CreateSingleBox(0, 0, currentNode, NPCResponce, DaigramWindow.boxTypes.CNPCFM);
 
@@ -1817,7 +1864,9 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             else if (NPCResponce == "GenericResponceGiven")
             {
                 NPCResponce = getGenricResponce(node.Pattern, currentPlayerStance);
-                currentCorutine = StartCoroutine(TypeInDialoug(currentCNPC.name +" says:"+ playerResponce));
+                
+                
+                currentCorutine = StartCoroutine(TypeInDialoug(currentCNPC.name +" says:"+ NPCResponce));
                 DiagramWindow.CreateSingleBox(0, 0, currentNode, NPCResponce, DaigramWindow.boxTypes.playerNormal);
 
                 yield return currentCorutine;
@@ -1917,8 +1966,8 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         {
             if(pattern.ToLower() == genericText.key.ToLower())
             {
-                int r = UnityEngine.Random.Range(0, genericText.highGnericResponces.Count - 1);
-
+                int r = UnityEngine.Random.Range(0, genericText.highGnericResponces.Count);
+                Debug.LogWarning(r);
                 if (stance.ToLower() == "high")
                 {
                     return genericText.highGnericResponces[r];

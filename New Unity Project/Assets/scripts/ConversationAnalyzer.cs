@@ -11,11 +11,23 @@ public class ConversationAnalyzer : MonoBehaviour
 
     public List<GameObject> listOfUIPrefabs;
 
+    public static Dialoug currentNode;
     public enum TypeOfConversation
     {
         rumor, CNPC_SV_statment, player_agreement, player_disagreement, CNPC_MM_argument
     }
 
+   public void testButton() {
+        Debug.Log("cliick!" + getCurrentNode().Pattern);
+        
+
+    }
+
+    //make other methods that specoify the type of conversation and instaniate the correct button type 
+    public Dialoug getCurrentNode() {
+
+        return DialogeManager.Instance.returnCurrentNode();
+    }
 
     void clickedOnRumor(Dialoug node)
     {

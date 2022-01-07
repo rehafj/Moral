@@ -9,6 +9,7 @@ public class ConversationalCharacter : MonoBehaviour
     //make these random as long as two contradicting pairs do not get put in the same list     /// <summary>
     /// you can add contradicitons to vlaues in these lists, High contains high values and low contains low values that are contradictiory to High
     /// </summary>
+    public bool IsFatherModel = false;
 
     public List<string> listOfContradictions = new List<string> {
                      "schoolIsDrool","EnviromentalistAnti","AnimalLoverAnti","LoveIsForFools","Loner","AntiFaviortisum ","WeArewNothingIfWeAreNotReserved","TeetotaslerAnti"
@@ -53,12 +54,23 @@ public class ConversationalCharacter : MonoBehaviour
     public GameObject NPCCubeObject;
     public  NavigationControl agentPrefabControl;
 
+    public Animator anim; 
+    public void Start()
+    {
+        anim = gameObject.GetComponent<Animator>();
+        Init(setCharacterName());
+    }
+    private List<string> firstNamesList = new List<string> { "Acute", "Arc", "Conic", "Cy", "Vert", "Point", "Hex", "Polly" };
+    private List<string> lastNamesList = new List<string> { "Segment", "Strip", "Gon", "Angle", "Metric", "Millimetre ", "Decimal" };
 
-    public void Awake()
-    { 
+    string setCharacterName()
+    {
+        string name = firstNamesList[UnityEngine.Random.Range(0, firstNamesList.Count - 1)] + " " +
+              lastNamesList[UnityEngine.Random.Range(0, lastNamesList.Count - 1)];
+
+        return name;
     }
 
-   
     public void setMoralFocusArea(string key)
     {
         moralFocus = key;
@@ -76,14 +88,20 @@ public class ConversationalCharacter : MonoBehaviour
     {
         happy, sad, angry, shocked, shy
     }
+
     public emotion CnpcEmotion;
+
+
+ 
+
+
     public enum RatingVlaues //NPC ratings for conversation basis
     {
        High, Mid, Low
     }
     public RatingVlaues NpcValueRating;
   
-    public ConversationalCharacter(string name ,RatingVlaues[] thirteenValues )
+   /* public ConversationalCharacter(string name ,RatingVlaues[] thirteenValues )
     {
         ConversationalNpcName = name;
         int i = 0;
@@ -113,11 +131,11 @@ public class ConversationalCharacter : MonoBehaviour
         moralFocus = FocusArea;
         FatherModel = new StrictFatherMorality();
 
-    }
+    }*/
 
     List<string> tempHighVlaue = new List<string>();
     //randomizing constructor /overloaded
-    public ConversationalCharacter(string name) //method used for random
+   /* public ConversationalCharacter(string name) //method used for random
     {
       //  //used to set up moral focus on high value flags
 
@@ -145,7 +163,40 @@ public class ConversationalCharacter : MonoBehaviour
         Debug.Log("check these values out : EnviromentalistAnti " + ConvCharacterMoralFactors["EnviromentalistAnti"] + "and ebviromentalist" +
          ConvCharacterMoralFactors["Enviromentalist"] + "school is cool followed by drool " + ConvCharacterMoralFactors["SchoolIsCool"] + ConvCharacterMoralFactors["schoolIsDrool"]);
 
+    }*/
+
+
+
+    public void Init (string name) //method used for random
+    {
+       
+        ConversationalNpcName = name;
+ 
+        int i = 0;
+
+        foreach (string s in keys)
+        {
+            int x = Random.Range(0, 3);
+
+            NpcValueRating = getRandomNPCValue(x); //rating 
+            if (NpcValueRating == RatingVlaues.High)
+            {
+                tempHighVlaue.Add(s);
+            }
+            ConvCharacterMoralFactors.Add(s, NpcValueRating);
+
+            i++;
+        }
+
+        FatherModel = new StrictFatherMorality();
+        setContradictingValues();
+        int index = UnityEngine.Random.Range(0, tempHighVlaue.Count);
+        setMoralFocusArea(tempHighVlaue[index]);
+        Debug.Log("check these values out : EnviromentalistAnti " + ConvCharacterMoralFactors["EnviromentalistAnti"] + "and ebviromentalist" +
+         ConvCharacterMoralFactors["Enviromentalist"] + "school is cool followed by drool " + ConvCharacterMoralFactors["SchoolIsCool"] + ConvCharacterMoralFactors["schoolIsDrool"]);
+
     }
+
 
     void setContradictingValues()
     {
@@ -246,7 +297,7 @@ public class ConversationalCharacter : MonoBehaviour
 
     void chooseARandomModel()
     {
-        FatherModel = new StrictFatherMorality(); // make it on a precentage but for now I do not have a mother model implemented 
+        FatherModel = new StrictFatherMorality(); 
     }
 
     internal string getMORALfOCUSAREA()
@@ -254,7 +305,33 @@ public class ConversationalCharacter : MonoBehaviour
         return moralFocus;
     }
 
+    //when we set father/mother model use the boolian value ----NOTETOSELF
    
-    
+    public  bool doesLikeBNPC(bool Defending) //appply mother model later //otter
+    {
+        bool likesBNPC = false;
+
+        if (IsFatherModel && Defending)
+        {
+            likesBNPC = true;
+        } else
+        {
+            likesBNPC = false;
+        }
+        return likesBNPC;
+    }
+
+
+    public bool evaluatePlayer()
+    {
+        return false;
+
+    }
+
+    public void playAnimation(string state)
+    {
+        
+    }
+
 }
 
