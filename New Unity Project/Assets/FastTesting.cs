@@ -1,86 +1,59 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
+using System.Linq;
+using System;
 
-[System.Serializable]
-public class DialogeManager : MonoBehaviour //TODO refactor this later, just for testing plopping things here for now 
+public class FastTesting : MonoBehaviour
 {
-    public static DialogeManager Instance { get; private set; }
+
+    public Text text;
+    public InputField input;
+
+    // Start is called before the first frame update
+  
 
 
-    public string TranscriptString = "";
-    //public DaigramWindow DiagramWindow;
 
     public List<Tree> allCharacterConversationsTrees = new List<Tree>();
-    private Tree currentTree ;
+    private Tree currentTree;
 
     public List<Dialoug> fullCharacterRootNodes;
-
     public List<Dialoug> currentPlayerOptions;
-
     public List<Dialoug> CurrentIntersectingSFMcorePatterns;
     public List<Dialoug> CurrentBNPCgenericPatterns;
     public List<Dialoug> currentTopicChoices;
-
     public int treeCounter = 3;
 
-    JsonLoader jsn;
+    public JsonLoader jsn;
 
     public List<DialougStructure> AllOpinions; //not done the best way but for rapid testing for now 
     List<DialougStructure> highVaueOpinions = new List<DialougStructure>();
     List<DialougStructure> midVaueOpinions = new List<DialougStructure>();
     List<DialougStructure> lowVaueOpinions = new List<DialougStructure>();
 
-    public ConversationalCharacter currentCNPC; //change this depending on time and instantations --- also control the character 
+    public ConversationalCharacter agent;
 
     //add a node to check if explored 
-    BackgroundCharacter bgchar;
-
-    List<String> currentThoughts;
+    public BackgroundCharacter bgchar;
     string selectedOpnion;
-
     public List<InterestingCharacters> conversedAboutCharectersList;
-
-
-    //ui stuff 
-    public string playerName = "playerName";
-    public GameObject InstructionsUI;
-    public Text instructionsText;
-
-    //this is messy - move UI stuff to its own script! 
-    public Text GuicharacterName;
-    public Text GuidialougText;
-    public Text[] CNPCoptionText;
-    public Button[] PlayerButtons;
-    [SerializeField] bool isTyping;
-    public int CNPCIndexer=0;
-    Coroutine currentCorutine;
-    Coroutine currentThoughtBubbleCorutine;
-
 
     InterestingCharacters currentIntrestingCharracter;
     public List<string> currentTopicsAboutCurrentCharacter; //this is what we are using and clearing 
-    string startingSceneText = "";
-
 
     //high good bad is low
-
-    //pubic for testing only -- change later 
     Dialoug currentNode;
-    
-     int moralFocusCounter = 0; 
 
+    int moralFocusCounter = 0;
 
-   public List<string> currentCNPCExploredSurfaceValues = new List<string>(); 
-   
+    public List<string> currentCNPCExploredSurfaceValues = new List<string>();
+
 
     //testing:
     bool isInMoralModelArgumentLoop = false;
-    int moralModelCounterLoop =0;
+    int moralModelCounterLoop = 0;
 
 
     public static List<string> currentMoralModelExploredPatterns = new List<string>();
@@ -97,48 +70,38 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     int counterLoopForSchema = 0;
 
     bool playerChoseAModel = false;
-    bool playerArguesWithFatherModel = false; //otter use this to gague whata rgu,ments are used when in authority or persuation 
-    //find the player character when we end a conversation --- TODO
+    bool playerArguesWithFatherModel = false;
 
-    
-    void Awake()
-    {
 
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
+    string playerName = "player";
+
+
     public void Start()
     {
+        Invoke("t", 2);
+
+
+
+    }
+
+    public void t()
+    {
         bgchar = FindObjectOfType<BackgroundCharacter>();
-        jsn = FindObjectOfType<JsonLoader>();
-       // DiagramWindow = FindObjectOfType<DaigramWindow>();
-        AllOpinions = jsn.listOfConversations;
-        currentCNPC = FindObjectOfType<CharacterManager>().ourConversationalCharacters[0].GetComponent<ConversationalCharacter>(); //hard coded with tim for now 
-
+        // DiagramWindow = FindObjectOfType<DaigramWindow>();
+        AllOpinions = jsn.listOfConversations; Debug.Log(AllOpinions.Count);
+        Debug.Log("agent" + agent.name);
         OrgnizeCNPCOpinions();
-        CharacterManager.Instance.startTheMarch();
         setUp();
-        StartCoroutine(startGame(5f, treeCounter)); //change this to the animations time / or agents path time
+        startGame(5f, treeCounter); //change this to the animations time / or agents path time
 
-        turnOffButton();//test only
         currentMoralModelExploredPatterns = new List<string>();
         currentMoralModelExploredPatterns_PLAYER = new List<string>();
-
-
-
     }
 
     private void resetConversationForNextCNPC()
     {
-         CurrentCNPCSTANCE = "high";
-         currentPlayerStance = "low";
+        CurrentCNPCSTANCE = "high";
+        currentPlayerStance = "low";
         innerConversationCounter = 0;
         moralModelCounterLoop = 0;
         isInMoralModelArgumentLoop = false;
@@ -151,36 +114,62 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     public void nextCubeInteractionTest()
     {
         Debug.Log(CharacterManager.Instance.ourConversationalCharacters.Count);
-        startNextCubeConversation(3);
-  
+      //  startNextCubeConversation(3);
+
     }
 
-    IEnumerator startGame(float delay, int treeIndexer)
+    void startGame(float delay, int treeIndexer)
     {
-        if (currentCorutine != null)
-        { 
-            yield return currentCorutine;
-        }
+        
 
         Dialoug introductionNode = getAnIntroductionNode();
 
-        //DiagramWindow.CreateSingleBox(0, 0, introductionNode, introductionNode.mainOpinionOnAtopic, DaigramWindow.boxTypes.playerNormal);
-          yield return new WaitForSeconds(delay);
+        printText(false, introductionNode.mainOpinionOnAtopic );
+      
 
-        //conversedAboutCharectersList = sortCharactersToBringUp(bgchar.GetFiltredCharerList());//fltred list of characters (with 5+ flags)
+        startAconversation(allCharacterConversationsTrees[treeIndexer]);
+    /*    if (firstConversation)
+        {
+            Debug.Log("should print");
+            setPlayerPattern();
 
-         currentCorutine = StartCoroutine(TypeInDialoug(introductionNode.mainOpinionOnAtopic));
-        yield return currentCorutine;
-
-        currentCorutine = StartCoroutine( startAconversation(allCharacterConversationsTrees[treeIndexer]));
-        yield return currentCorutine;
+        }*/
 
     }
 
+    void printText (bool isNPC, string t)
+    {
+        if (isNPC)
+        {
+            
+            text.text += "<color=#c6c5b9>\t" + t + "\n </color>";
+        }
+        else
+        {
+       /*     Color c = Color.blue;
+            text.color = c;*/
+            text.text += "  <color=#62929e>\t" + t + "</color> \n";
+        }
+    }
+    private void startAconversation(Tree chosenTree)
+    {
+        //  moralCounter = 0; //reset it for next character
+
+      currentNode = choseADialougNode(chosenTree.root.children);//i.e we are still in the same tree
+
+
+      printText(true, "<color=yellow> pattern: " + currentNode.Pattern + "</color> "+ currentNode.UnbiasedOpeningStatment +
+                     "\n <color=yellow>Mapped SV and  rating: " + currentNode.MappedSurfaceValue + " : "+
+                     agent.ConvCharacterMoralFactors[currentNode.MappedSurfaceValue].ToString() +
+                    "</color>" +  currentNode.mainOpinionOnAtopic + "\n");
+        setPlayerPattern();
+     //BAM   activatePlayerOptionsInButton(currentNode); //newcommentedout
+
+    }
     private Dialoug getAnIntroductionNode()
     {
-        Dialoug Intronode = new Dialoug(" introduction" + CNPCIndexer.ToString(),
-            "Player says: \n " + getRandomIntroduction() , "graduate"); ;
+        Dialoug Intronode = new Dialoug(" introduction" ,
+            getRandomIntroduction(), "graduate"); ;
         return Intronode;
 
 
@@ -189,39 +178,25 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     private string getRandomIntroduction()
     {
         int x = UnityEngine.Random.Range(0, 5);
-        string s = "Welcome  " + currentCNPC.ConversationalNpcName + "\n";
+        string s = "Welcome  " + agent.ConversationalNpcName + "\n";
         string[] intro = {
           "Thanks for coming to argument Box, what rumors are on your mind?",
           "Thanks for coming to argument Box, home of(mostly) vauge arguments, whats on your mind",
           "Thanks for coming to the old AB, what's on your noodle doodle",
           "Thanks for coming in, I am more than just a greeter, (or punching bag), what topics brought you in? ",
-          "Thanks for coming in lovly shape, your rumors are <mostly> safe here!, what's on your mind"   
+          "Thanks for coming in lovly shape, your rumors are <mostly> safe here!, what's on your mind"
         };
 
         return s + intro[x];
     }
 
-    IEnumerator startNextCubeConversation(float delay)
-    {
-        if (currentCorutine != null) { yield return currentCorutine; }
 
-        Dialoug endingDilaoug = new Dialoug(" introduction", " you time is up! Mr. " + currentCNPC.ConversationalNpcName +
-       " \n Please see yourself out, my next client is here", "graduate");
-        yield return new WaitForSeconds(delay);
-
-        currentCorutine = StartCoroutine(TypeInDialoug(endingDilaoug.mainOpinionOnAtopic));
-        CNPCIndexer += 1;
-        currentCNPC = FindObjectOfType<CharacterManager>().ourConversationalCharacters[CNPCIndexer].GetComponent<ConversationalCharacter>();
-        startGame(5, treeCounter);
-
-
-    }
 
 
     public void setUp()
     {
         conversedAboutCharectersList = sortCharactersToBringUp(bgchar.GetFiltredCharerList());
-
+        Debug.Log(conversedAboutCharectersList.Count);
         setUpTrees();
     }
     void setUpTrees()
@@ -235,80 +210,37 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             Tree tree = new Tree();
             tree.root = node;
             tree.root.children = returnListOfDialougNodes(character); //nodes with flags
-            foreach(Dialoug d in tree.root.children)
+            foreach (Dialoug d in tree.root.children)
             {
                 d.parent = tree.root;
                 //d.hatedFacts = getThingsHatedAboutBNPC(d,character);
-              
+
             }
             allCharacterConversationsTrees.Add(tree);
 
-          
+
         }
-        foreach( Tree  t in allCharacterConversationsTrees)
+        foreach (Tree t in allCharacterConversationsTrees)
         {
             //for debugging.... 
         }
 
-       
-        displayThoughts(allCharacterConversationsTrees);
-        currentTree = allCharacterConversationsTrees[treeCounter];     
-    }
 
-    public void addTextToTranscript(string text, bool NPCText)
-    {
-        if (NPCText)
-        {
-            TranscriptString += currentCNPC.ConversationalNpcName + ": " + text + "\n";
-        } else
-        {
-            TranscriptString += "We responded with" + ": " + text + "\n";
-        }
-
+        currentTree = allCharacterConversationsTrees[treeCounter];
     }
 
     public void startTheFirstConversation()
     {
-       StartCoroutine( startAconversation(allCharacterConversationsTrees[treeCounter]));//the first cgharacter in the list - yhionking about character....etc 
+        startAconversation(allCharacterConversationsTrees[treeCounter]);
 
     }
 
-    public void setConversationAndCnpc(ConversationalCharacter character, int treeCounter)
-    {
-        currentCNPC = character;
-        StartCoroutine(startAconversation(allCharacterConversationsTrees[treeCounter]));//the first cgharacter in the list - yhionking about character....etc 
 
-    }
-    private void displayControlOprions()
-    {
-
-    }
-    private IEnumerator startAconversation(Tree chosenTree)
-    {
-        //  moralCounter = 0; //reset it for next character
-        yield return currentCorutine;
-
-        currentNode = choseADialougNode(chosenTree.root.children);//i.e we are still in the same tree
-
-
-        currentCorutine = StartCoroutine(WaitAndPrintcompoundedStatments(currentNode.UnbiasedOpeningStatment,
-                   currentNode.mainOpinionOnAtopic));
-        addTextToTranscript(currentNode.UnbiasedOpeningStatment, true);
-        addTextToTranscript(currentNode.mainOpinionOnAtopic, true);
-       // DiagramWindow.CreateSingleBox(0, 0, currentNode, currentNode.UnbiasedOpeningStatment, DaigramWindow.boxTypes.CNPCNormal);
-       //DiagramWindow.CreateSingleBox(0, 0, currentNode, currentNode.mainOpinionOnAtopic, DaigramWindow.boxTypes.CNPCNormal);
-        yield return currentCorutine;
-        turnOnButtons();
-        DisplayplayCurrentOpinions(currentTree);
-        activatePlayerOptionsInButton(currentNode); //newcommentedout
-
-    }
     private void cNPCHoldingStance() //does not transfer control 
     {
 
-        StartCoroutine(WaitAndPrintcompoundedStatments("surface valuef for this flag"+currentNode.agreementText,
-                "presist on importance of moral flag "));
-        DisplayplayCurrentOpinions(currentTree);
+        text.text +=  "surface valuef for this flag" + currentNode.agreementText + 
+                "presist on importance of moral flag ";
 
     }
     Dialoug choseADialougNode(List<Dialoug> bgCharacterNOdes)
@@ -317,154 +249,202 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         int i = 0;
         foreach (Dialoug d in bgCharacterNOdes)
         {
-            Debug.Log("list size is " + bgCharacterNOdes.Count) ;
+            Debug.Log("list size is " + bgCharacterNOdes.Count);
 
-            Debug.Log("value of node" + d.Pattern + "is "+ d.Explored + "value of counter"+i);
+            Debug.Log("value of node" + d.Pattern + "is " + d.Explored + "value of counter" + i);
             if (!d.Explored)//element is not explored 
             {
                 d.Explored = true;
                 return d;
-            } i++;
+            }
+            i++;
             if (i >= bgCharacterNOdes.Count)//last element in the list 
             {
                 Debug.Log("last element of the list");
                 currentTree.FullyExplored = true;
-                break;  }
+                break;
+            }
         }
 
-     /*   bool fullyexplored = bgCharacterNOdes.All(x => x.Explored == false); */
-       
+
         return currentNode;
 
     }
 
 
 
-    void displayThoughts(Tree tree) //used for flags
+    List<Dialoug> temporaryListOfNodes = new List<Dialoug>();
+
+    void activatePlayerOptionsInButton(Dialoug node) //hardcoded for now - do this for the current height of the tree --- 
     {
-        int i = 0;
-        foreach (Text t in CNPCoptionText)
-        {
-            t.text = tree.root.children[i].thoughtBubbleText; //grabs first 4
-            i++;
-        }
-    }
-    void displayThoughts(List<Tree> tree) //used for general thinking about character 
-    {
-        int i = 0;
-        foreach (Text t in CNPCoptionText)
-        {
-            t.text = tree[i].root.thoughtBubbleText;
-            i++;
-        }
-    }
-    void activatePlayerOptionsInButton (Dialoug node) //hardcoded for now - do this for the current height of the tree --- 
-    {
-    
 
         if (node.getHeight() == 2)
-            {
+        {
+            Debug.Log("heioght is 2");
 
-            Debug.Log("line 396");
-
-            foreach (Button b in PlayerButtons)
-            {
-                b.gameObject.SetActive(true);
-                b.onClick.RemoveAllListeners();
-            }
 
             if (!isInMoralModelArgumentLoop)
-                {
-                    setPlayerPattern();
-                //for testing 
-                Debug.Log("line 410");
+            {
+                Debug.Log("not in moral model argument loop");
 
-                PlayerButtons[0].onClick.AddListener(playerAgrees);
-                PlayerButtons[1].onClick.AddListener(playerDissAgrees);
-                PlayerButtons[2].gameObject.SetActive(false);
-                PlayerButtons[3].gameObject.SetActive(false);
-                
-                /*   PlayerButtons[2].onClick.AddListener(playerArgueAboutFLag);//TOFIX
-                   PlayerButtons[3].onClick.AddListener(askAboutAnotherCharacter);//TOFIX*/
+                setPlayerPattern();
+              
+                if (typedResult == 1)
+                {
+                    Debug.Log("wtfff");
+
+                    //playerAgrees();
+                }
+                else if (typedResult == 2) { playerDissAgrees(); Debug.Log("!isInMoralModelArgumentLoop + typedResult== 3"); }
             }
             else if (isInMoralModelArgumentLoop && !playerChoseAModel)
-            { //otter  && mainModelChoice
-
-                Debug.Log("line 412");
-            //MORAL ARGUMENT LOOP MENUE 
-                    giveMoralModelChoice();
-                PlayerButtons[0].onClick.AddListener(playerChoseFatherModel);
-                PlayerButtons[1].onClick.AddListener(playerChoseMotherModel);
-                PlayerButtons[2].gameObject.SetActive(false);
-                PlayerButtons[3].gameObject.SetActive(false);
-                
-            }
-            else if(isInMoralModelArgumentLoop &&  playerChoseAModel) // after clicking moral models...? // && !mainModelChoice otter
             {
+                Debug.Log("isInMoralModelArgumentLoop && !playerChoseAModel ");
+
+                giveMoralModelChoice(); //BAM check where to actually give this option... 
+                if (typedResult == 1) {
+                    playerChoseFatherModel();
+                    Debug.Log("isInMoralModelArgumentLoop && !playerChoseAModel +  playerChoseFatherModel(); ");
+                } else if (typedResult == 2) { playerChoseMotherModel(); Debug.Log("isInMoralModelArgumentLoop && !playerChoseAModel +  mothermodel(); ");
+                }
+            }
+            else if (isInMoralModelArgumentLoop && playerChoseAModel) // after clicking moral models...? // && !mainModelChoice otter
+            {
+
+                Debug.Log("isInMoralModelArgumentLoop && playerChoseAModel ");
+
+
+                if (typedResult == 1) { playerChoseFatherModel(); } else if (typedResult == 2) { playerChoseMotherModel(); }
+
+
+
                 int maxoptions = 2;
-                int i = 0;
-                foreach(Button b in PlayerButtons)
+                temporaryListOfNodes.Clear();
+                for ( int i =0; i<=2; i++)
                 {
-                    b.gameObject.SetActive(true);
-                    if(i <= maxoptions)
+                    if (i <= maxoptions)
                     {
+
                         Dialoug d = currentPlayerOptionsInInnerConversation.Dequeue();
+                        text.text += i.ToString() + getButtonTextTranslation(d.Pattern);
+                        Debug.Log("adding node" + d.Pattern);
+                        temporaryListOfNodes.Add(d);
 
-                        b.GetComponentInChildren<Text>().text =  getButtonTextTranslation(d.Pattern);
 
-                        b.onClick.AddListener( delegate { PlayerDisagreedOnFlag(d); });
                     }
-                    i++;
+                    switch (typedResult)
+                    {
+                        case (1):
+                            PlayerDisagreedOnFlag(temporaryListOfNodes[0]);
+                            break;
+                        case (2):
+                            PlayerDisagreedOnFlag(temporaryListOfNodes[1]);
+                            break;
+                        case (3):
+                            PlayerDisagreedOnFlag(temporaryListOfNodes[2]);
+                            break;
+                        default:
+                            break; 
+                    }
 
                 }
-                PlayerButtons[3].gameObject.SetActive(true);
-                PlayerButtons[3].GetComponentInChildren<Text>().text = "change topic... NOT IMPLEMENTED";
 
             }
         }
-       
+
+        typedResult = 0;
+
     }
 
     private void PlayerDisagreedOnFlag(Dialoug d)//player
     {
-        
-      StartCoroutine(  waitAndPrintFatherModelDissagreemnt(d)); //1
+        waitAndPrintFatherModelDissagreemnt(d,true); //1
     }
 
- 
+
     private void playerChoseMotherModel()
     {
 
         currentIntersectingNodes = getIntersectingCoreValueNodesForATopic();
+        currentIntersectingNodes = shuffleDialougNodes(currentIntersectingNodes);
+
         nonIntersectingNodes_generic = getNonIntersectingCoreValueNodesForATopic();
+        nonIntersectingNodes_generic = shuffleDialougNodes(nonIntersectingNodes_generic);
+        //currentPlayerOptionsInInnerConversation
         setCurrentPlayerSFOptions();
+        presentFMMoptions();
+
         playerChoseAModel = true;
         playerArguesWithFatherModel = false;
-        activatePlayerOptionsInButton(currentNode);
-        //cvheck if cnpc is fm or mm
+    //bAM    activatePlayerOptionsInButton(currentNode);
     }
 
-  
+
     private void playerChoseFatherModel()
     {
+
         currentIntersectingNodes = getIntersectingCoreValueNodesForATopic();
+        currentIntersectingNodes =  shuffleDialougNodes(currentIntersectingNodes);
+
         nonIntersectingNodes_generic = getNonIntersectingCoreValueNodesForATopic();
-        setCurrentPlayerSFOptions();
+        nonIntersectingNodes_generic = shuffleDialougNodes(nonIntersectingNodes_generic);
+
+        setCurrentPlayerSFOptions();//node setup
+        presentFMMoptions();
         playerChoseAModel = true;
         playerArguesWithFatherModel = true;
-        activatePlayerOptionsInButton(currentNode);
+     //bam   activatePlayerOptionsInButton(currentNode);
 
-       // DiagramWindow.DrawTwoOptions(0);
+    }
+
+    void presentFMMoptions()
+    {
+        temporaryListOfNodes.Clear();
+        int maxoptions = 2;
+        for (int i = 0; i < maxoptions ; i++)
+        {
+            if (i <= maxoptions)
+            {
+
+                Dialoug d = currentPlayerOptionsInInnerConversation.Dequeue();
+                text.text += (i+1).ToString() + getButtonTextTranslation(d.Pattern) +"\n";
+
+                temporaryListOfNodes.Add(d);
+
+
+            }
+       
+
+        }
+    }
+
+    private List<Dialoug> shuffleDialougNodes(List<Dialoug> nodes)
+    {
+        //based on  Fisher-Yates shuffle algorithm - from delftstack
+        List<Dialoug> newList = new List<Dialoug>();
+        System.Random r = new System.Random();
+        for (int i = nodes.Count -1; i > 0; i--)
+        {
+            int j = r.Next(i+1);
+            Dialoug d = nodes[j];
+            nodes[j] = nodes[i];
+            nodes[i] = d;
+
+            newList.Add(d);
+        }
+
+        return newList;
     }
 
     void setCurrentPlayerSFOptions()
     {
 
         currentPlayerOptionsInInnerConversation.Clear();
-        foreach(Dialoug d in currentIntersectingNodes)
+        foreach (Dialoug d in currentIntersectingNodes)
         {
             currentPlayerOptionsInInnerConversation.Enqueue(d);
-        } foreach (Dialoug d in nonIntersectingNodes_generic)
+        }
+        foreach (Dialoug d in nonIntersectingNodes_generic)
         {
             currentPlayerOptionsInInnerConversation.Enqueue(d);
         }
@@ -473,33 +453,35 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     private List<Dialoug> getIntersectingCoreValueNodesForATopic()
     {
 
-       List<Dialoug> currentIntersectingNodesWithCoreValues = new List<Dialoug>();
+        List<Dialoug> currentIntersectingNodesWithCoreValues = new List<Dialoug>();
 
         CurrentBNPCPatterns.Clear();
         foreach (Dialoug d in currentNode.parent.children)
         {
-            Debug.Log(d.Pattern + "::::" + d.MappedSurfaceValue);
+           // Debug.Log(d.Pattern + "::::" + d.MappedSurfaceValue);
             CurrentBNPCPatterns.Add(d);
 
         }
         currentIntersectingNodesWithCoreValues.Clear();
-        if (currentCNPC.IsFatherModel)
-        {
-            foreach (Dialoug d in currentCNPC.FatherModel.returnIntersectingPatternNodes(CurrentBNPCPatterns, currentNode.MappedSurfaceValue, true))
-            {
-                currentIntersectingNodesWithCoreValues.Add(d);
 
-            }
-        }else 
+        if (agent.IsFatherModel)
         {
-            foreach (Dialoug d in currentCNPC.MotherModel.returnIntersectingPatternNodes(CurrentBNPCPatterns, currentNode.MappedSurfaceValue, true))
+            foreach (Dialoug d in agent.FatherModel.returnIntersectingPatternNodes(CurrentBNPCPatterns, currentNode.MappedSurfaceValue, true))
             {
                 currentIntersectingNodesWithCoreValues.Add(d);
 
             }
         }
-      
-        if(currentIntersectingNodesWithCoreValues.Count <= 0)
+        else
+        {
+            foreach (Dialoug d in agent.MotherModel.returnIntersectingPatternNodes(CurrentBNPCPatterns, currentNode.MappedSurfaceValue, true))
+            {
+                currentIntersectingNodesWithCoreValues.Add(d);
+
+            }
+        }
+
+        if (currentIntersectingNodesWithCoreValues.Count <= 0)
         {
             currentIntersectingNodesWithCoreValues.Add(CurrentBNPCPatterns[0]);
             Debug.Log("if this shows up we have no intersectomg core patterns, just returning the first element");
@@ -522,9 +504,9 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
         }
         currentNonIntersectingNodesWithCoreValues.Clear();
-        if (currentCNPC.IsFatherModel)
+        if (agent.IsFatherModel)
         {
-            foreach (Dialoug d in currentCNPC.FatherModel.returnIntersectingPatternNodes(CurrentBNPCPatterns, currentNode.MappedSurfaceValue, false))
+            foreach (Dialoug d in agent.FatherModel.returnIntersectingPatternNodes(CurrentBNPCPatterns, currentNode.MappedSurfaceValue, false))
             {
                 //logical bug somehwre here... 
                 currentNonIntersectingNodesWithCoreValues.Add(d);
@@ -532,9 +514,10 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
             }
 
-        } else
+        }
+        else
         {
-            foreach (Dialoug d in currentCNPC.MotherModel.returnIntersectingPatternNodes(CurrentBNPCPatterns, currentNode.MappedSurfaceValue, false))
+            foreach (Dialoug d in agent.MotherModel.returnIntersectingPatternNodes(CurrentBNPCPatterns, currentNode.MappedSurfaceValue, false))
             {
                 //logical bug somehwre here... 
                 currentNonIntersectingNodesWithCoreValues.Add(d);
@@ -542,9 +525,10 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
             }
         }
-        
+
         if (currentNonIntersectingNodesWithCoreValues.Count <= 0) //change this to something else opr don't use it via out ,ethod
         {
+            Debug.Log("no nnon intersecting nodes found");
             currentNonIntersectingNodesWithCoreValues.Add(CurrentBNPCPatterns[0]);
 
         }
@@ -552,188 +536,87 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     }
     private void giveMoralModelChoice()
     {
-        Debug.Log("does this happen?" + " giveMoralModelChoice moral choice");
-        PlayerButtons[0].GetComponentInChildren<Text>().text = "persuade with authority" ;
-        PlayerButtons[1].GetComponentInChildren<Text>().text = "Appeal to sensibility";
+        text.text += "1." + "persuade with authority" + "\n"+  "2. Appeal to sensibility \n";
     }
 
     void playerAgrees()
     {
-        //for daigraming
         string[] texts = { currentNode.agreementText, currentNode.disagreementText };
-       // DiagramWindow.CreateMultipleBoxes(texts, currentNode.agreementText);
 
-        StartCoroutine(waitAndPrintAgreement(currentNode.agreementText)); // need to restrucre this ---
-       // addTextToTranscript(currentNode.agreementText, false);
+        waitAndPrintAgreement(currentNode.agreementText);
     }
     private void playerDissAgrees()
     {   //for daigraming
         string[] texts = { currentNode.agreementText, currentNode.disagreementText };
         //DiagramWindow.CreateMultipleBoxes(texts, currentNode.disagreementText);
 
-        StartCoroutine(waitAndPrintDisagreement(currentNode.disagreementText)); //currentNode.getRandomHatedFact())
-       // addTextToTranscript(currentNode., false);
+       waitAndPrintDisagreement(currentNode.disagreementText); //currentNode.getRandomHatedFact())
+                                                                                // // // addTextToTranscript(currentNode., false);
 
     }
 
     //Dialoug currentCNPCStance = new Dialoug("","", "graduate");
-    public void playerArgueAboutFLag() //not yet used - eremove this maybe? old code ---- 
-    {
+   
 
-    
-        Debug.Log("current stanc eis "+ currentNode.Pattern);
-       // currentCNPCStance = currentNode;
-        //present all flags for player as a sub menue 
-        if(currentNode.getHeight() == 2) // change this into try /catch statments 
-        {
-          //  string selectedPatern="";
-            //FOR TESTING 
-            for (int i = 0; i < PlayerButtons.Length; i++) //OTHER FLAGS
-            {
-                PlayerButtons[i].GetComponentInChildren<Text>().text = "argue for flag ->" + currentNode.parent.children[i].Pattern;
-                if (currentNode.parent.children[i] == null)
-                {
-                    PlayerButtons[i].GetComponentInChildren<Text>().text = "no more flags - add logic to hide this option ";
-                }
-            }
-           // DiagramWindow.CreateMultipleBoxes(0, 0, currentNode.parent.children, )
-
-            argueForAflag();
-        }
-
-        else
-        {
-            Debug.LogError("something wonky happned - wrong height of tree ");
-        }
-
-    }
-
-    private void askAboutAnotherCharacter()
-    {
-  
-        currentNode = currentNode.parent; //went up on height --- 
-        Debug.Log("checking:"+ currentNode.getHeight());
-        if (currentNode.getHeight() == 1)
-        {
-            setPlayerButtonToAskAboutOtherCharacters();
-            askAboutAcharacter();
-        }
-        else
-        {
-            Debug.LogError("you are on the wrong height of the tree !");
-        }
-
-    }
     //refactor these --- 
     private void setPlayerPattern()
     {
-        PlayerButtons[0].GetComponentInChildren<Text>().text = "I agree ";
-        PlayerButtons[1].GetComponentInChildren<Text>().text = "I don't agree with you there";
-        PlayerButtons[2].GetComponentInChildren<Text>().text = "you know I heard other things about that cube"; //pull from a list of random strings later //TODO
-        PlayerButtons[3].GetComponentInChildren<Text>().text = "you know what, lets talk about something else";
+        text.text += " 1. I agree \n ";
+        text.text += " 2. I don't agree with you there  \n";
+ /*       text.text += "3. you know I heard other things about that cube  \n"; //pull from a list of random strings later //TODO
+        text.text += "4. you know what, lets talk about something else  \n";*/
     }
     private void setPlayerPatternDissagreement() //change this 
     {
-        PlayerButtons[0].GetComponentInChildren<Text>().text = "yeah I guess you are right";
-        PlayerButtons[1].GetComponentInChildren<Text>().text = "I still don't agree with you there";
-        PlayerButtons[2].GetComponentInChildren<Text>().text = "Dish more about that cube"; //pull from a list of random strings later //TODO
-        PlayerButtons[3].GetComponentInChildren<Text>().text = "you know what, lets talk about something else";
+        text.text += "1 yeah I guess you are right \n ";
+        text.text += " 2 I still don't agree with you therev \n";
+        text.text += "3 Dish more about that cub \ne"; //pull from a list of random strings later //TODO
+        text.text += "4 you know what, lets talk about something else \n";
     }
-    private void setPlayerButtonToAskAboutOtherCharacters()
-    {
-        int i = treeCounter;
-        foreach(Button b in PlayerButtons)
-        {
-            Debug.Log("denugging thoughy buybblrd" + allCharacterConversationsTrees[i].root.thoughtBubbleText);
-            b.GetComponentInChildren<Text>().text = "ask about" +
-                allCharacterConversationsTrees[i].root.thoughtBubbleText;
-                i++;
-        }
-        
-    }
-    private void askAboutAcharacter()
-    {
-        int i = treeCounter; 
-        foreach (Button b in PlayerButtons)
-        {
-            b.onClick.RemoveAllListeners();
-        }
-        foreach (Button b in PlayerButtons)
-        {
-            Debug.Log(i);
 
-            b.onClick.AddListener(() => moveConversationToSelectedTree(i) );
-            i++;
-        }
-
-    }
-    private  void argueForAflag( ) //refactor this later --- just takes in thee last item clicked 
-    {
-        int i = 0;
-        foreach (Button b in PlayerButtons)
-        {
-            b.onClick.RemoveAllListeners();
-        }
-        foreach (Button b in PlayerButtons)
-        {
-            Dialoug d = currentNode.parent.children[i];
-            b.onClick.AddListener(() =>  moveConversationToAflag(d));
-            i++;
-        }
-}
     private void moveConversationToSelectedTree(int treeIndex)
     {
-        //fix this --- it is always 4 as an index! 
-        Debug.Log("index of the tree" + treeIndex);
         currentTree = allCharacterConversationsTrees[treeIndex];
         StopAllCoroutines();
-        GuidialougText.text = "";
-        Debug.Log("current tree explorting " + currentTree.root.thoughtBubbleText);
-       StartCoroutine( startAconversation(currentTree));
+       startAconversation(currentTree);
     }
 
     private void moveConversationToAflag(Dialoug d)
     {
-        currentCorutine = StartCoroutine(respondCharacterConversationToAFlag(d));
+       respondCharacterConversationToAFlag(d);
     }
 
-    private IEnumerator respondCharacterConversationToAFlag(Dialoug d) //used by player! 
+    private void  respondCharacterConversationToAFlag(Dialoug d) //used by player! 
     {
 
-        string selectedText="";
-        Debug.Log("TRIED TO GO HERE");
-       // StopAllCoroutines();
-        GuidialougText.text = "";
-        yield return currentCorutine;
-        currentCorutine = StartCoroutine(TypeInDialoug(getPlayerResponceToAflag(currentNode.MappedSurfaceValue, d.Pattern, currentNode.Rating, TypeOfPlayerTexts.disAgreeOnAflag, false)));
-       //to do add somethin ghere -- to fix diagloig options
-        yield return currentCorutine;
-        currentCorutine = StartCoroutine(TypeInDialoug(currentNode.disagreementText));
+     
+        text.text += "\n " +getPlayerResponceToAflag(currentNode.MappedSurfaceValue, d.Pattern, currentNode.Rating, TypeOfPlayerTexts.disAgreeOnAflag, false);
+        //to do add somethin ghere -- to fix diagloig options
+        text.text += "\n " + currentNode.disagreementText;
         if (currentNode.Rating.ToLower() == "high")
         {
             string appendedSchemaText = "";
-            if (currentCNPC.IsFatherModel)
+            string selectedText = "";
+            if (agent.IsFatherModel)
             {
-                 appendedSchemaText = currentCNPC.FatherModel.returnAppendedSchemaText(d.MappedSurfaceValue, d.Pattern, currentMoralModelExploredPatterns_PLAYER, true);
-                selectedText = currentCNPC.FatherModel.returnFatherModelArgumetnsText(
-                     currentNode.MappedSurfaceValue, currentNode.Pattern, currentMoralModelExploredPatterns_PLAYER, true);
-            } else
-            {
-                appendedSchemaText = currentCNPC.MotherModel.returnAppendedSchemaText(d.MappedSurfaceValue, d.Pattern, currentMoralModelExploredPatterns_PLAYER, true);
-                selectedText = currentCNPC.MotherModel.returnNurturantModelArgumetnsText(
+                appendedSchemaText = agent.FatherModel.returnAppendedSchemaText(d.MappedSurfaceValue, d.Pattern, currentMoralModelExploredPatterns_PLAYER, true);
+                selectedText = agent.FatherModel.returnFatherModelArgumetnsText(
                      currentNode.MappedSurfaceValue, currentNode.Pattern, currentMoralModelExploredPatterns_PLAYER, true);
             }
-            
+            else
+            {
+                appendedSchemaText = agent.MotherModel.returnAppendedSchemaText(d.MappedSurfaceValue, d.Pattern, currentMoralModelExploredPatterns_PLAYER, true);
+                selectedText = agent.MotherModel.returnNurturantModelArgumetnsText(
+                     currentNode.MappedSurfaceValue, currentNode.Pattern, currentMoralModelExploredPatterns_PLAYER, true);
+            }
 
-            currentCorutine = StartCoroutine(TypeInDialoug(selectedText));
+
+            text.text += appendedSchemaText + selectedText;
 
 
-         //TODO update this with list pof current PLAYER patterns / coices 
-        
+
         }
 
-       // DiagramWindow.CreateMultipleBoxes( currentNode.parent.children,selectedText, d.Pattern , DaigramWindow.boxTypes.playerNormal);
-        turnOffButton();//new test comment 
         checkEndConversationAndMove();
 
 
@@ -746,47 +629,37 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     {
         foreach (PlayerDialoug p in jsn.listOfPlayerDialougs)
         {
-           
+
 
             if (p.playerSurfaceValue == surfaceValue && p.playerNarrativeElements.rating == rating) //prints approproate high/mid/low if its not the moral focus argument
             {
                 if (!isMoralARG)
                 {
-                    /*foreach (PlayerDisAgreementOnAflag f in p.playerNarrativeElements.playerDisAgreementOnAflag)
-                    {
-                        Debug.Log("THE f.flag " + f.flag + "and the patytern is " + arguedFlag);
-
-                        if (f.flag == arguedFlag)
-                        {
-
-                            return "PLAYER SAYS: \n" + f.textValue;
-                        }
-
-                    }*/
+                   
 
 
                 }
-                else // moral 
+                else 
                 {
                     Debug.Log("player is refrencing NPC moral focus argument");
                     if (playerResponceType == TypeOfPlayerTexts.agreement)
                     {
 
-                        return "PLAYER SAYS: \n" + p.playerNarrativeElements.playerInAgreementText;
+                        return  p.playerNarrativeElements.playerInAgreementText;
                     }
-                    else //player in disagement of moral focus 
+                    else 
                     {
-                        //special loop happens here 
+                     
                         if (moralFocusCounter == 0)
                         {
                             moralFocusCounter += 1;
-                            return "PLAYER SAYS: \n" + p.playerNarrativeElements.playerMoralDisagreementText[0]; //player can agree or disagree here 
+                            return  p.playerNarrativeElements.playerMoralDisagreementText[0]; //player can agree or disagree here 
 
                         }
                         else
                         {
                             moralFocusCounter = 0;
-                            return "PLAYER SAYS: \n" + p.playerNarrativeElements.playerMoralDisagreementText[1];
+                            return   p.playerNarrativeElements.playerMoralDisagreementText[1];
 
                         }
 
@@ -804,17 +677,17 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     void converseAboutNextCharacter()
     {
         treeCounter++;
-       StartCoroutine( startAconversation(allCharacterConversationsTrees[treeCounter]));//the first cgharacter in the list - yhionking about character....etc 
+       startAconversation(allCharacterConversationsTrees[treeCounter]);//the first cgharacter in the list - yhionking about character....etc 
 
     }
     Dialoug choseACharacterTree()
     {
-      //  int i = UnityEngine.Random.Range(0, allCharacterConversationsTrees.Count - 1); //do i want it to be random or just the next tree in the list cz they are sorted???
-        
+        //  int i = UnityEngine.Random.Range(0, allCharacterConversationsTrees.Count - 1); //do i want it to be random or just the next tree in the list cz they are sorted???
+
         if (!allCharacterConversationsTrees[treeCounter].FullyExplored)//currentTree.FullyExplored)
         {
             Debug.Log("you still hjavbe motr tyo do in this tree; --- can visit it later ");
-         
+
         }
         else //we fully explored the tree 
         {
@@ -828,19 +701,89 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
     }
 
+    public int typedResult;
+    bool firstConversation = true;
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            nextCubeInteractionTest();
+            typedResult = Convert.ToInt32(input.text);
+            input.text = "";
+            // activatePlayerOptionsInButton(currentNode);
+       
+
+            if (!isInMoralModelArgumentLoop)
+            {
+                firstConversation = false;
+                //setPlayerPattern();
+
+                Debug.Log("not in moral model argument loop - regular loop");
+
+                if (typedResult == 1)
+                {
+
+                    playerAgrees();
+                    //prints out agreement 
+                    //
+                }
+                else if (typedResult == 2)
+                {
+                    playerDissAgrees();
+                    Debug.Log("!isInMoralModelArgumentLoop + typedResult== 2");
+                }
+            } else if (isInMoralModelArgumentLoop && !playerChoseAModel)
+            {
+                Debug.Log("isInMoralModelArgumentLoop && !playerChoseAModel");
+
+                if (typedResult == 1)
+                {
+                    playerChoseFatherModel();
+                    Debug.Log("playuer chose father model");
+                }
+                else if (typedResult == 2)
+                {
+                   // playerChoseMotherModel();
+                    Debug.Log("player chose mother model ");
+                }
+            } else if(isInMoralModelArgumentLoop && playerChoseAModel)
+            {
+                switch (typedResult)
+                {
+                   
+                    case (1):
+                        Debug.Log("p[layer pressed node 0");
+                        Debug.Log(temporaryListOfNodes.Count);
+                        PlayerDisagreedOnFlag(temporaryListOfNodes[0]);
+                        break;
+                    case (2):
+                        Debug.Log("p[layer pressed node 1");
+
+                        PlayerDisagreedOnFlag(temporaryListOfNodes[1]);
+                        break;
+                    case (3):
+                        Debug.Log("p[layer pressed node 2");
+
+                        PlayerDisagreedOnFlag(temporaryListOfNodes[2]);
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+
+
         }
-      
+
+
+
     }
+
+    
 
     private void displayDialougOpinion()
     {
         StopAllCoroutines();
-        StartCoroutine(TypeInDialoug(currentNode.mainOpinionOnAtopic));
+        text.text += currentNode.mainOpinionOnAtopic +"\n";
     }
     private List<InterestingCharacters> sortCharactersToBringUp(List<InterestingCharacters> characterList)
     {
@@ -866,8 +809,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             }
             else
             {
-                /*  int r = UnityEngine.Random.Range(0, characterList.Count - 1);
-                  chosenCharacter = characterList.ElementAt(r);*/
+                
                 characterList.RemoveAt(i); therest.Add(chosenCharacter);
 
             }
@@ -877,8 +819,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         sortedList.AddRange(secondary);
         sortedList.AddRange(therest);
 
-        //perhaps make some of those random.. 
-
+        Debug.Log(sortedList.Count);
         return sortedList;
 
 
@@ -897,10 +838,10 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                    setCnpcDialoug(kvp.Key, character, "BiasedSVOpin", mappedKey),
                    mappedKey);
 
-              
+
                 node.UnbiasedOpeningStatment =
                     getIntroductionTopicString(kvp.Key, character); //unbaised opening statment  --- this is actually the inytoduction text 
-              
+
                 node.agreementText = setCnpcDialoug(kvp.Key, character, "PlayerAgreesWithCNPC", mappedKey);//general feelings about a topic  --- this is actually high 
 
                 node.disagreementText = setCnpcDialoug(kvp.Key, character, "PlayerDisAgreesWithCNPC", mappedKey);//nope - con here is as in low.... 
@@ -909,8 +850,8 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
                 if (node.Rating.ToLower() == "high")
                 {
-                   node.setupMoralFocusArguments(returnTopicText(highVaueOpinions, node.Pattern, "MoralFocusOne", node.MappedSurfaceValue),
-                       returnTopicText(highVaueOpinions, node.Pattern, "MoralFocusTwo", node.MappedSurfaceValue));
+                    node.setupMoralFocusArguments(returnTopicText(highVaueOpinions, node.Pattern, "MoralFocusOne", node.MappedSurfaceValue),
+                        returnTopicText(highVaueOpinions, node.Pattern, "MoralFocusTwo", node.MappedSurfaceValue));
 
 
                 }
@@ -924,7 +865,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                     node.setupMoralFocusArguments("error shouled not appear", "should not appear");
 
                 }
-             
+
 
 
                 nodes.Add(node);
@@ -937,27 +878,25 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
     }
 
-    
+
 
     private string setPlayerPattern(string key)
     {
-        //will change depeninding on input for now its set to just the key 
-        return key ; //will add logic about current cnpc thoughts and modding this later 
+        return key; //will add logic about current cnpc thoughts and modding this later 
     }
 
-    //2 opinionsa re split up into high mid and low 
     string returnTopicText(List<DialougStructure> opinions, string key, string flag, string mappedSV) //the sent in list is of high./mid or low 
     {//selecting intro and the first part of the body here --- 
         foreach (DialougStructure op in opinions) //ex: all high opp -- splits them up here as high mid and low 
         {
-            
+
 
             if (op.topic.Contains(mappedSV)) //get the translatiopn of they key but not ditect character keys.....  //TOFRICKENDO changet his to currentnode.sv
             {
-               // Debug.Log(op.topic.Contains(mapToCNPCMoralFactor(key)) + "for the key " + key);
+                // Debug.Log(op.topic.Contains(mapToCNPCMoralFactor(key)) + "for the key " + key);
                 selectedOpnion = op.topic.Split('_').Last(); //surface value is returned here = -  sv selected opinion 
-               // Debug.Log("selectedOpnion" + selectedOpnion +" AND FLAG "+ flag +"TOPIC"+op.topic);// FLAG isd what i send over to classify as intro text pt agreement or .... 
-                //selectedOpinion is the surface value
+                                                             // Debug.Log("selectedOpnion" + selectedOpnion +" AND FLAG "+ flag +"TOPIC"+op.topic);// FLAG isd what i send over to classify as intro text pt agreement or .... 
+                                                             //selectedOpinion is the surface value
 
                 //redo this super bad method 
                 if (flag == "BiasedSVOpin")
@@ -970,15 +909,15 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                 }
                 if (flag == "PlayerDisAgreesWithCNPC")
                 {
-                   // Debug.Log("setting disagreement text as " + op.NarrativeElements.disagreementtext);
+                    // Debug.Log("setting disagreement text as " + op.NarrativeElements.disagreementtext);
                     return op.NarrativeElements.disagreementtext;
-                } 
-                if( flag == "MoralFocusOne")
+                }
+                if (flag == "MoralFocusOne")
                 {
                     return op.NarrativeElements.moralFocusDisagreement[0];
 
                 }
-                if ( flag == "MoralFocusTwo")
+                if (flag == "MoralFocusTwo")
                 {
                     return op.NarrativeElements.moralFocusDisagreement[1];
 
@@ -990,7 +929,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
     string setNodeRating(string mappedSV)
     {
-        switch (currentCNPC.ConvCharacterMoralFactors[mappedSV]) //TOFRICKENDO changet his to currentnode.sv
+        switch (agent.ConvCharacterMoralFactors[mappedSV]) //TOFRICKENDO changet his to currentnode.sv
         {
             case ConversationalCharacter.RatingVlaues.High:
                 return "High"; //make this more generic - iof/else get topic or body (startingopinion) or contrasting one... nut need logic on each case i think of this is testign a thing for now 
@@ -1000,27 +939,26 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                 return "Low";
         }
     }
-        //1
-    private string setCnpcDialoug(string key, InterestingCharacters character, string flag, string mappedSV )
-     {//this is hard coded for now but later send in the conversational character (talking with )
-       // Debug.Log("yo what does this print?" + currentCNPC.ConvCharacterMoralFactors[mapToCNPCMoralFactor(key)]); ////gives us high mid oir low 
-        // high - low and mid results --- cool 
-        switch (currentCNPC.ConvCharacterMoralFactors[mappedSV])
+    //1
+    private string setCnpcDialoug(string key, InterestingCharacters character, string flag, string mappedSV)
+    {//this is hard coded for now but later send in the conversational character (talking with )
+     // high - low and mid results --- cool 
+        switch (agent.ConvCharacterMoralFactors[mappedSV])
         {
             case ConversationalCharacter.RatingVlaues.High:
                 return returnTopicText(highVaueOpinions, key, flag, mappedSV); //make this more generic - iof/else get topic or body (startingopinion) or contrasting one... nut need logic on each case i think of this is testign a thing for now 
             case ConversationalCharacter.RatingVlaues.Mid:
                 return returnTopicText(midVaueOpinions, key, flag, mappedSV);
             default://low
-                return returnTopicText(lowVaueOpinions, key, flag, mappedSV);                
+                return returnTopicText(lowVaueOpinions, key, flag, mappedSV);
         }
     }
-    private string returnpatternToSurfaceMapiing (string pattern)// has a bestfriend---- check this me 
+    private string returnpatternToSurfaceMapiing(string pattern)// has a bestfriend---- check this me 
     {
         List<string> temporarySurfaceValues = new List<string>();
         string mappedSV = "";
         temporarySurfaceValues = SVCollection.returnCompatibleSurfaceValues(pattern);
-        mappedSV = temporarySurfaceValues[UnityEngine.Random.Range(0, temporarySurfaceValues.Count())];      
+        mappedSV = temporarySurfaceValues[UnityEngine.Random.Range(0, temporarySurfaceValues.Count())];
         return mappedSV;
 
     }
@@ -1052,25 +990,17 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     }
 
 
-    //gui stuff 
-    private void DisplayplayCurrentOpinions(Tree currentCharacterTree) //text fields
-    {
-        foreach (Text t in CNPCoptionText) //send in flags to check if player or npc and get the rioght translation out
-        {
-            int r = UnityEngine.Random.Range(0, currentCharacterTree.root.children.Count - 1);
-            t.text = currentCharacterTree.root.children[r].thoughtBubbleText;
-        }
-    }
 
-    string getIntroductionTopicString(string key, InterestingCharacters character )
+
+    string getIntroductionTopicString(string key, InterestingCharacters character)
     {
-        //currentCNPC.ConvCharacterMoralFactors get the opinion t
+        //agent.ConvCharacterMoralFactors get the opinion t
         switch (key)
         {
             case ("startedAfamilyAtAyoungAge"):
                 return "I heard some shapes think that " + character.fullName + " started their family way too early.";
             case ("departed"):
-                return "I hear that " +character.fullName + " has left town to build a life elsewhere. Some shapes are very touchy about those who leaves their community.";
+                return "I hear that " + character.fullName + " has left town to build a life elsewhere. Some shapes are very touchy about those who leaves their community.";
             case "LandISWhereThehrtIS":
                 return "guess what I heard! " + character.fullName + " left town!, ";
             case ("familyPerson"):
@@ -1082,7 +1012,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
             case ("leftFotLoveIntrest"):
 
-               return " I heard that " + character.fullName + "left their significant other with " + character.GetLoverName();
+                return " I heard that " + character.fullName + "left their significant other with " + character.GetLoverName();
             case ("InLoveWirhAnothersspouce"):
                 return "I heard from somewhere that " + character.fullName + " is in love with their partner's friend! ";
             case ("WillActOnLove"):
@@ -1095,7 +1025,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             case ("BTrueTYourHeart"):
             case ("likesToDate"):
                 return "Maybe it’s something in the air," +
-                    "I feel like" +character.fullName + 
+                    "I feel like" + character.fullName +
                     ", like every shape in this town, is constantly either in love or chasing after someone";
 
 
@@ -1122,7 +1052,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
 
             case ("WorksInAlcohol"):
-                return "I think" +character.fullName + "sells booze for a living";
+                return "I think" + character.fullName + "sells booze for a living";
             case "Teetotasler":
                 return character.fullName + "wokrs in alchohol, wonder what that field is like";
 
@@ -1133,10 +1063,10 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             case ("CustodianJobs"):
                 return "I think" + character.fullName + " work as " + character.Lastoccupation; ;
             case ("SupportingComunities"):
-                return "text about supporting comunities.." ;
+                return "text about supporting comunities..";
 
             case ("polluterRole"):
-                return "I think" + character.fullName + "\'s job contributes to pollution\n I think they work as " + character.Lastoccupation; 
+                return "I think" + character.fullName + "\'s job contributes to pollution\n I think they work as " + character.Lastoccupation;
             case ("Enviromentalist"):
                 return "You know what I want to talk about!" + character.fullName + "\'s job! \n I think they work as " + character.Lastoccupation;
             case ("selfMadeCube"):
@@ -1161,9 +1091,9 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             case ("SchoolIsCool"):
                 return "I believe" + character.fullName + "works in a school as a." + character.Lastoccupation;
             case ("butcherRole"):
-                return "I think" +character.fullName + "works in a butcher shop.";
+                return "I think" + character.fullName + "works in a butcher shop.";
             case ("AnimalLover"):
-                return "You know what I want to talk about!" + character.fullName + "\'s job! \n I think they work as " + character.Lastoccupation +"in a farm";
+                return "You know what I want to talk about!" + character.fullName + "\'s job! \n I think they work as " + character.Lastoccupation + "in a farm";
 
             case ("MovesAlot"):
                 return "Oh yeah, " + character.fullName + "moves a lot, like a lot. Some shapes call that adventurous and some call that lack of sense of belonging.";
@@ -1188,7 +1118,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             case ("graduate"):
                 return "I heard" + character.fullName + "has a fancy degree. Shapes often think that a good degree is the key to a good job and a comfortable life.";
             case ("worksWithFamily"):
-                return "I heard that" +character.fullName + "lives and works with their family.";
+                return "I heard that" + character.fullName + "lives and works with their family.";
             case ("hiredByAFamilymember"):
                 return "I heard from someone that" + character.fullName + "got their job because of their family member";
 
@@ -1198,7 +1128,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                 return "It’s not very nice to speak ill of the dead but " + character.fullName + " died before they could retire. Really makes you think about what their life could’ve been if they had done a different job or cared more about things other than work. Or maybe they liked their job and that’s what made them happy. Who can really say.";
             case ("DevorcedManyPeople"):
 
-                return "This might be rude to say but I have lost count of how many partners" +character.fullName + "had";
+                return "This might be rude to say but I have lost count of how many partners" + character.fullName + "had";
             case ("marriedSomoneOlder"):
                 return "they settled down with an older partner";
             case ("marriedForLifeStyleNotLove"):
@@ -1206,7 +1136,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             case ("AdventureSeeker"):
                 return "So I’ve heard that " + character.fullName + " is a thrill-seeker, they are always on the hunt for the next adventure instead of… you know... doing what other shapes do.";
             case ("liklyToHelpTheHomeless"):
-                return "I bet if you asked anyone in this town, they will tell you that" +character.fullName +
+                return "I bet if you asked anyone in this town, they will tell you that" + character.fullName +
                     "has a good heart. I heard they always help out those who are less fortunate";
             case ("isolated"):
                 return "I know " + character.fullName + " lives alone and I’ve never seen them with anyone… I wonder what they do all day. A bit of out of the ordinary to say the least.";
@@ -1219,14 +1149,14 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             case ("conventional"):
                 return "Most shapes would describe" + character.fullName +
                     "as responsible, conventional, and a bit by-the - book or stubborn depending on who you ask.";
-           
+
             case ("ArtSeller"):
             case ("doesNotGiveToThoseInNeed"):
                 return "Well… this might be a bit mean to say but I hear that" + character.fullName + " is quite... independent, some people call that selfish but that’s not my word.";
             case ("supportsImmigration"):
                 return "Oh yeah, " + character.fullName + " is very vocal about supporting outsiders moving and working in our city.";
             case ("reserved"):
-          
+
                 return "If you want to get to know " + character.fullName + ", it’s gonna take some time. They open up very slowly.";
             default:
                 return "missed a tag SOMEWHERE!" + key + "was not authored";
@@ -1313,9 +1243,9 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             case ("selfMadeCube"):
             case ("selfMadeCubeByDedication"):
                 return ("they pulled themselves by their bootstraps");
-           
 
-             
+
+
             case ("MovesAlot"):
                 return "they sure moved alot ";
             case ("SusMovments"):
@@ -1364,12 +1294,12 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
         }
     }
-  //for the player 
+    //for the player 
     string translatePlayerOptionIntoText(string key)
     {
         switch (key)
         {
-  
+
 
             case ("MovesAlot"):
             case ("SusMovments"):
@@ -1463,22 +1393,23 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                 {
                     if (playerResponceType == TypeOfPlayerTexts.agreement)
                     {
-                        return "PLAYER SAYS: \n"+   p.playerNarrativeElements.playerInAgreementText;
+                        return  p.playerNarrativeElements.playerInAgreementText;
 
                     }
-                  
-                    else {
-                        return "PLAYER SAYS: \n" +  p.playerNarrativeElements.playerDisagreementText;
+
+                    else
+                    {
+                        return  p.playerNarrativeElements.playerDisagreementText;
                     }
-                 
-                } 
+
+                }
                 else // moral 
                 {
                     Debug.Log("player is refrencing NPC moral focus argument");
                     if (playerResponceType == TypeOfPlayerTexts.agreement)
                     {
 
-                        return "PLAYER SAYS: \n" + p.playerNarrativeElements.playerInAgreementText;
+                        return p.playerNarrativeElements.playerInAgreementText;
                     }
                     else //player in disagement of moral focus 
                     {
@@ -1486,13 +1417,13 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                         if (moralFocusCounter == 0)
                         {
                             moralFocusCounter += 1;
-                            return "PLAYER SAYS: \n" + p.playerNarrativeElements.playerMoralDisagreementText[0]; //player can agree or disagree here 
+                            return  p.playerNarrativeElements.playerMoralDisagreementText[0]; //player can agree or disagree here 
 
                         }
                         else
                         {
                             moralFocusCounter = 0;
-                            return "PLAYER SAYS: \n" + p.playerNarrativeElements.playerMoralDisagreementText[1];
+                            return  p.playerNarrativeElements.playerMoralDisagreementText[1];
 
                         }
 
@@ -1504,17 +1435,16 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         return "No string found!";
     }
 
-    public void setPlayerName(Text text)
+    public void setPlayerName(Text t)
     {
-        playerName = text.text;
-        instructionsText.text = "thanks " + playerName + "!";
+        playerName = t.text;
+        text.text = "thanks " + playerName + "!";
         Invoke("disableInstructionsUI", 2);
         //InstructionsUI.SetActive(false);
     }
 
     void disableInstructionsUI()
     {
-        InstructionsUI.SetActive(false);
         startTheInteraction();
     }
 
@@ -1523,56 +1453,11 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
         setUp();
     }
 
-    void disableorEnablePlayerButtons()
+   
+
+
+    public string getButtonTextTranslation(string pattern)
     {
-
-        foreach (Button b in PlayerButtons)
-        {
-            if (b.IsActive()) //if the button is active deactivate it
-            {
-                b.gameObject.SetActive(false);
-            }
-            else
-            {
-                b.gameObject.SetActive(true);
-            }
-        }
-    }
-    void enableClick()
-    {
-        foreach (Button b in PlayerButtons)
-        {
-            if (isTyping) //if the button is active deactivate it
-            {
-                b.interactable = false;
-
-            }
-            else
-            {
-                b.interactable = true;
-            }
-        }
-    }
-
-    void turnOffButton()
-    {
-        foreach (Button b in PlayerButtons)
-        {
-            b.gameObject.SetActive(false);
-            b.interactable = false;
-        }
-    }
-
-    void turnOnButtons()
-    {
-        foreach (Button b in PlayerButtons)
-        {
-            b.gameObject.SetActive(true);
-            b.interactable = true;
-        }
-    }
-
-    public string getButtonTextTranslation(string pattern) {
 
         Debug.Log("called this for " + pattern);
         int r = UnityEngine.Random.Range(0, 2);
@@ -1582,13 +1467,13 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
             if (pattern.ToLower() == fact.SearchBarKey.ToLower())
             {
-                Debug.Log("called this for " + pattern + "with the key"+ fact.SearchBarKey);
+                Debug.Log("called this for " + pattern + "with the key" + fact.SearchBarKey);
 
-                return "but" +  fact.BNPCsearchTranslation[r];
+                return "but" + fact.BNPCsearchTranslation[r];
             }
         }
 
-        return  "no translation found for the pattern "+ pattern ;
+        return "no translation found for the pattern " + pattern;
     }
 
     [SerializeField] bool checkCorutine;
@@ -1596,165 +1481,117 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     {
         return checkCorutine;
     }
-    IEnumerator TypeInDialoug(string dialkougText)
-    {
-        checkCorutine = false;
-        for (int i = 0; i <= dialkougText.Length; i++)
-        {
-            isTyping = true;
-            //enableClick();
-            GuidialougText.text = dialkougText.Substring(0, i);
-            yield return new WaitForSeconds(0.05f);
-        }
-        isTyping = false;
-        enableClick();
-        yield return new WaitForSeconds(2);
-        checkCorutine = true;
-    }
 
 
 
-    IEnumerator waitAndPrint(Dialoug node)   //so this works... but does nto when in larger scenartio.. 
+    void  waitAndPrintAgreement(string t)   //so this works... but does nto when in larger scenartio.. 
     {
 
-        yield return currentCorutine;
-        currentCorutine = StartCoroutine(TypeInDialoug(node.mainOpinionOnAtopic));
-
-    }
-
-    IEnumerator waitAndPrint(string text)   //so this works... but does nto when in larger scenartio.. 
-    {
-
-        yield return currentCorutine;
-        currentCorutine = StartCoroutine(TypeInDialoug(text));
-
-    }
-
-    IEnumerator waitAndPrintAgreement(string text)   //so this works... but does nto when in larger scenartio.. 
-    {
 
         if (!currentTree.FullyExplored)
         {
-            yield return currentCorutine;
-            currentCorutine = StartCoroutine(TypeInDialoug(getPlayerResponce(currentNode.MappedSurfaceValue, 
-                                currentNode.Rating, TypeOfPlayerTexts.agreement, false)));
-            addTextToTranscript(getPlayerResponce(currentNode.MappedSurfaceValue,
-                                currentNode.Rating, TypeOfPlayerTexts.agreement,false), false);
-          //  DiagramWindow.CreateSingleBox(0, 0,currentNode, getPlayerResponce(currentNode.MappedSurfaceValue,
-                               // currentNode.Rating, TypeOfPlayerTexts.agreement, false), DaigramWindow.boxTypes.playerNormal);
-            yield return currentCorutine;
-            currentCNPC.playAnimation(ConversationalCharacter.emotion.happyDance);
-            currentCorutine = StartCoroutine(TypeInDialoug(text));
-            addTextToTranscript(text,true);
-           // DiagramWindow.CreateSingleBox(0, 0, currentNode,text, DaigramWindow.boxTypes.CNPCNormal);
-            turnOffButton();//new test comment 
+            printText(false, getPlayerResponce(currentNode.MappedSurfaceValue,
+                                currentNode.Rating, TypeOfPlayerTexts.agreement, false));
+
+
+
+
+            printText(true, t);
+
         }
-         
+
 
         checkEndConversationAndMove();
     }
 
     private void checkEndConversationAndMove()
     {
-
-        if (isInMoralModelArgumentLoop)
+      
+        if (isInMoralModelArgumentLoop && !playerChoseAModel)
         {
-            activatePlayerOptionsInButton(currentNode);
-            Debug.Log("does this happen?" + "heeeelp");
+            giveMoralModelChoice();
+            // activatePlayerOptionsInButton(currentNode);
+            Debug.Log("need to check something here ----");
+       
+        } 
+        else  if (isInMoralModelArgumentLoop && playerChoseAModel)
+        {
+                Debug.Log("need to check something here ----");
+                Debug.Log("does this happen?" + "heeeelp");
 
         }
         else if (!currentTree.FullyExplored) //todo update this to next cnpc
         {
-          StartCoroutine(  startAconversation(currentTree));//at 0 
+           startAconversation(currentTree);//at 0 
         }
         else
         {
-            Debug.Log("Done with the tree");
             converseAboutNextCharacter();
         }
 
     }
-    IEnumerator waitAndPrintMoralAreas(string text)
+    void  waitAndPrintMoralAreas(string t)
     {
-        yield return currentCorutine;
-        currentCorutine = StartCoroutine(TypeInDialoug(text));
-        yield return currentCorutine;
+        text.text += (t);
         cNPCHoldingStance();
     }
 
-    IEnumerator waitAndPrintDisagreement(string text)   //so this works... but does nto when in larger scenartio.. 
+    void waitAndPrintDisagreement(string t)   //so this works... but does nto when in larger scenartio.. 
     {
-
-
-        //remove this later but for now... 
-        List<string> exploredPattensForDefense = new List<string>(); //move to global level and clear it later 
+        Debug.Log(currentTree.root.Pattern);
         if (!currentTree.FullyExplored)
-        {   
+        {
 
-            bool isMf = currentCNPC.IsMoralFocus(currentNode.MappedSurfaceValue); 
+            bool isMf = agent.IsMoralFocus(currentNode.MappedSurfaceValue);
 
             //basic disagreement 1
-            yield return currentCorutine;
-            currentCorutine = StartCoroutine(TypeInDialoug(getPlayerResponce(currentNode.MappedSurfaceValue, currentNode.Rating,
-                                 TypeOfPlayerTexts.disagreement, isMf))); // CAN REFACTOR THIS  //TOFRICKENDO changet his to currentnode.sv
-            addTextToTranscript(getPlayerResponce(currentNode.MappedSurfaceValue, currentNode.Rating,
-                                 TypeOfPlayerTexts.disagreement, isMf), false);
-            //DiagramWindow.CreateSingleBox(0, 0, currentNode, getPlayerResponce(currentNode.MappedSurfaceValue, currentNode.Rating,
-              //                   TypeOfPlayerTexts.disagreement, isMf), DaigramWindow.boxTypes.playerNormal);
-            yield return currentCorutine;
+            printText(false, getPlayerResponce(currentNode.MappedSurfaceValue, currentNode.Rating,
+                                  TypeOfPlayerTexts.disagreement, isMf));
 
 
-            currentCorutine = StartCoroutine(TypeInDialoug(text));
-            addTextToTranscript(text, true);
-           // DiagramWindow.CreateSingleBox(0, 0, currentNode, text, DaigramWindow.boxTypes.CNPCNormal);
-            yield return currentCorutine;
+            printText(true, t);
 
-            //for tests - redo this in a cleaner way
             if (currentNode.Rating.ToLower() == "high")
             {
                 string s = "";
 
                 if (counterLoopForSchema <= 0)
                 {
-                    if (currentCNPC.IsFatherModel)
+                    if (agent.IsFatherModel)
                     {
-                        s = currentCNPC.FatherModel.returnAppendedSchemaText(currentNode.MappedSurfaceValue, currentNode.Pattern, currentMoralModelExploredPatterns, true);
+                        s = "<color=red> fatherModel used </color>"+  agent.FatherModel.returnAppendedSchemaText(currentNode.MappedSurfaceValue, currentNode.Pattern, currentMoralModelExploredPatterns, true);
 
-                    } else
+                    }
+                    else
                     {
-                        s = currentCNPC.MotherModel.returnAppendedSchemaText(currentNode.MappedSurfaceValue, currentNode.Pattern, currentMoralModelExploredPatterns, true);
+                        s = "<color=blue> NurturanParent used </color>" + agent.MotherModel.returnAppendedSchemaText(currentNode.MappedSurfaceValue, currentNode.Pattern, currentMoralModelExploredPatterns, true);
 
                     }
 
                 }
                 string arg = "";
 
-                if (currentCNPC.IsFatherModel)
+                if (agent.IsFatherModel)
                 {
-                    arg = currentCNPC.FatherModel.returnFatherModelArgumetnsText(
+                    arg = "<color=red> fatherModel used </color>" +agent.FatherModel.returnFatherModelArgumetnsText(
                    currentNode.MappedSurfaceValue, currentNode.Pattern, currentMoralModelExploredPatterns, true);
                 }
                 else
                 {
-                    arg = currentCNPC.MotherModel.returnNurturantModelArgumetnsText(
+                    arg = "<color=blue> NurturanParent used </color>"+ agent.MotherModel.returnNurturantModelArgumetnsText(
                   currentNode.MappedSurfaceValue, currentNode.Pattern, currentMoralModelExploredPatterns, true);
                 }
 
-                currentCorutine = StartCoroutine(TypeInDialoug(s + arg));
+                printText(true, s + "\n" + arg);
 
-                addTextToTranscript((s + arg), true);//currentCNPC.FatherModel.returnFatherModelArgumetnsText(currentNode.MappedSurfaceValue, currentNode.Pattern, currentMoralModelExploredPatterns, true
-               // DiagramWindow.CreateSingleBox(0, 0, currentNode, // currentCNPC.FatherModel.returnFatherModelArgumetnsText(currentNode.MappedSurfaceValue, currentNode.Pattern, new List<string>() { }, true), DaigramWindow.boxTypes.CNPCFM);
-
-                // generate a new menu if player disagrees again 
-                //  FIXME   
+                                           
 
                 currentMoralModelExploredPatterns.Add(currentNode.Pattern);
                 isInMoralModelArgumentLoop = true;
-                //mainModelChoice = true;
-                //enterSubConversationOnDisagreement();
+             
             }
-     
-           
+
+
         }
         checkEndConversationAndMove();
 
@@ -1762,133 +1599,132 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
 
 
 
-    IEnumerator waitAndPrintFatherModelDissagreemnt( Dialoug node)   //2
+    void waitAndPrintFatherModelDissagreemnt(Dialoug node, bool playerChoseFM)   //2 // add isNPC/PLAYER? NO it's in already
     {
-        CurrentCNPCSTANCE =  currentCNPC.FatherModel.returnCurrentCnpcStance(currentNode.MappedSurfaceValue, currentNode.Pattern);
 
-        if (currentCNPC.IsFatherModel)
+        if (agent.IsFatherModel)
         {
-            CurrentCNPCSTANCE = currentCNPC.FatherModel.returnCurrentCnpcStance(currentNode.MappedSurfaceValue, currentNode.Pattern);
+            CurrentCNPCSTANCE = agent.FatherModel.returnCurrentCnpcStance(currentNode.MappedSurfaceValue, currentNode.Pattern);
+
+            if (CurrentCNPCSTANCE.ToLower() == "high")
+            {
+                text.text += "<color=yellow> NPC IS Defending/ likes this person</Color> using <color=red> father model</color>";
+                currentPlayerStance = "low";
+
+            }
+            else
+            {
+                text.text += "<color=yellow> NPC IS attacking/ dislikes this person</Color> using <color=red> father model</color>";
+                currentPlayerStance = "high";
+                    }
 
         }
-        else
+        else //refactor this into one method me //otter //bam
         {
-            CurrentCNPCSTANCE = currentCNPC.MotherModel.returnCurrentCnpcStance(currentNode.MappedSurfaceValue, currentNode.Pattern);
+            CurrentCNPCSTANCE = agent.MotherModel.returnCurrentCnpcStance(currentNode.MappedSurfaceValue, currentNode.Pattern);
+          
+            if (CurrentCNPCSTANCE.ToLower() == "high")
+            {
+                text.text += "<color=yellow> NPC IS Defending/ likes this person</Color> using <color=blue> nurturant model</color>";
+                currentPlayerStance = "low";
+            }
+            else
+            {
+                text.text += "<color=yellow> NPC IS attacking/ dislikes this person</Color> using <color=blue> nurturant model</color>";
+                currentPlayerStance = "high";
+
+            }
 
         }
 
-
-        if (CurrentCNPCSTANCE.ToLower() == "high")
-        {
-            currentPlayerStance = "low";
-
-        } else if (CurrentCNPCSTANCE.ToLower() != "high")
-        {
-            currentPlayerStance = "high";
-        }
 
         if (!currentTree.FullyExplored)
         {
 
-            bool isMf = currentCNPC.IsMoralFocus(currentNode.MappedSurfaceValue);
+            bool isMf = agent.IsMoralFocus(currentNode.MappedSurfaceValue);
 
             //basic disagreement 1
-            yield return currentCorutine;
 
 
             string s = "";
             if (counterLoopForSchema <= 0)
             {
-                if (currentCNPC.IsFatherModel)
+                if (agent.IsFatherModel)
                 {
-                    s = currentCNPC.FatherModel.returnAppendedSchemaText(currentNode.MappedSurfaceValue, node.Pattern, currentMoralModelExploredPatterns_PLAYER, false);
+                    s = agent.FatherModel.returnAppendedSchemaText(currentNode.MappedSurfaceValue, node.Pattern, currentMoralModelExploredPatterns_PLAYER, false);
 
-                } else
+                }
+                else
                 {
-                    s = currentCNPC.MotherModel.returnAppendedSchemaText(currentNode.MappedSurfaceValue, node.Pattern, currentMoralModelExploredPatterns_PLAYER, false);
+                    s = agent.MotherModel.returnAppendedSchemaText(currentNode.MappedSurfaceValue, node.Pattern, currentMoralModelExploredPatterns_PLAYER, false);
 
                 }
             }
             //otter - change base don ig player chose father / mother model //change this!!! 
-            string playerResponce = currentCNPC.FatherModel.returnFatherModelArgumetnsForAspecficString(
-                   currentNode.MappedSurfaceValue, node.Pattern, currentMoralModelExploredPatterns_PLAYER, currentPlayerStance);
+            string playerResponce = agent.FatherModel.returnFatherModelArgumetnsForAspecficString(
+                   currentNode.MappedSurfaceValue, node.Pattern,
+                   currentMoralModelExploredPatterns_PLAYER, currentPlayerStance);
 
             currentMoralModelExploredPatterns_PLAYER.Add(node.Pattern);
 
 
-            //yield return currentCorutine;
 
-            if (playerResponce!= "GenericResponceGiven") { 
-                currentCNPC.PlayerScore += 1;
-                currentCorutine = StartCoroutine(TypeInDialoug("player says" + s+ playerResponce));
-                //DiagramWindow.CreateSingleBox(0, 0, currentNode, playerResponce, DaigramWindow.boxTypes.PlayerFM);
-
-                yield return currentCorutine;
+            if (playerResponce != "GenericResponceGiven")
+            {
+                agent.PlayerScore += 1;
+                text.text += "\n " + s + playerResponce;
+             
 
             }
-            else if(playerResponce == "GenericResponceGiven")
+            else if (playerResponce == "GenericResponceGiven")
             {
                 playerResponce = getGenricResponce(node.Pattern, currentPlayerStance);
-                currentCorutine = StartCoroutine(TypeInDialoug("player says" + playerResponce));
-               // DiagramWindow.CreateSingleBox(0, 0, currentNode, playerResponce, DaigramWindow.boxTypes.playerNormal);
+                text.text += "\n " +  playerResponce;
 
-                yield return currentCorutine;
             }
-            addTextToTranscript(playerResponce, false);
 
-            yield return currentCorutine;
-
-
-            //npc responce move to it's own function --- 
             string NPCResponce = "";
 
-            if (currentCNPC.IsFatherModel)
+            if (agent.IsFatherModel)
             {
-                currentCNPC.FatherModel.returnFatherModelArgumetnsText(
+                agent.FatherModel.returnFatherModelArgumetnsText(
                               currentNode.MappedSurfaceValue, currentNode.Pattern, currentMoralModelExploredPatterns, true);
-            } else
+            }
+            else
             {
-                currentCNPC.MotherModel.returnNurturantModelArgumetnsText(
+                agent.MotherModel.returnNurturantModelArgumetnsText(
               currentNode.MappedSurfaceValue, currentNode.Pattern, currentMoralModelExploredPatterns, true);
             }
 
             Debug.Log("NPC responce" + NPCResponce);
             if (NPCResponce != "GenericResponceGiven")
             {
-                currentCNPC.CNPCScore += 1; //BUG HERE REPORT
-                currentCorutine = StartCoroutine(TypeInDialoug(currentCNPC.ConversationalNpcName + " says:" + NPCResponce));
-               // DiagramWindow.CreateSingleBox(0, 0, currentNode, NPCResponce, DaigramWindow.boxTypes.CNPCFM);
+                agent.CNPCScore += 1; //BUG HERE REPORT
+                text.text += NPCResponce;
+               
 
-                yield return currentCorutine;
-
-                //i changed this check for bugs me
             }
             else if (NPCResponce == "GenericResponceGiven")
             {
                 NPCResponce = getGenricResponce(node.Pattern, currentPlayerStance);
-                
-                
-                currentCorutine = StartCoroutine(TypeInDialoug(currentCNPC.ConversationalNpcName + " says:"+ NPCResponce));
-               // DiagramWindow.CreateSingleBox(0, 0, currentNode, NPCResponce, DaigramWindow.boxTypes.playerNormal);
 
-                yield return currentCorutine;
+
+                text.text += "\n " +  agent.ConversationalNpcName + " says:" + NPCResponce;
+                // DiagramWindow.CreateSingleBox(0, 0, currentNode, NPCResponce, DaigramWindow.boxTypes.playerNormal);
+
 
             }
-            addTextToTranscript(NPCResponce, true);   // otter --- the text gerwe awas blacnk if iot was a mother model thing... 
+            // // addTextToTranscript(NPCResponce, true);   // otter --- the text gerwe awas blacnk if iot was a mother model thing... 
 
 
-            yield return currentCorutine;
 
             currentMoralModelExploredPatterns.Add(currentNode.Pattern);
-                isInMoralModelArgumentLoop = true;
-            
-               // mainModelChoice = true; //otter 
-            //enterSubConversationOnDisagreement();
-            //if npc wins end conversation set mainmodelchoice and in moralmodelarrg loop to false 
+            isInMoralModelArgumentLoop = true;
+
+         
             innerConversationCounter += 1;
 
-            currentCorutine = StartCoroutine(checkInnerConversationLoop());
-            yield return currentCorutine;
+           checkInnerConversationLoop();
 
         }
         checkEndConversationAndMove();
@@ -1900,14 +1736,15 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     {
         foreach (GenericMoralModelResponces genericText in jsn.ListOfMoralModelsGenricResponces)
         {
-            if(pattern.ToLower() == genericText.key.ToLower())
+            if (pattern.ToLower() == genericText.key.ToLower())
             {
                 int r = UnityEngine.Random.Range(0, genericText.highGnericResponces.Count);
                 Debug.LogWarning(r);
                 if (stance.ToLower() == "high")
                 {
                     return genericText.highGnericResponces[r];
-                }else
+                }
+                else
                 {
                     return genericText.lowGnericResponces[r];
 
@@ -1918,80 +1755,56 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     }
 
 
-    IEnumerator  checkInnerConversationLoop()
+    void checkInnerConversationLoop()
     {
-        yield return currentCorutine;
 
         if (innerConversationCounter >= 2)
         {
             isInMoralModelArgumentLoop = false;
             innerConversationCounter = 0;
 
-            if (currentCNPC.PlayerScore >= currentCNPC.CNPCScore)
+            if (agent.PlayerScore >= agent.CNPCScore)
             {
 
-                currentCorutine = StartCoroutine(TypeInDialoug("player " + "\'" + "wins" + "\'" + "convo  -- in future build start with next cnpc instead of current one/move to next convo"));
-            } else
+                text.text += "\n " +  "player " + "\'" + "wins" + "\'" + "convo  -- in future build start with next cnpc instead of current one/move to next convo";
+            }
+            else
             {
-                currentCorutine = StartCoroutine(TypeInDialoug("CNPC " + "\'" + "wins" + "\'" + "convo - future will build with next cnpc instead of current one/ move to next convo" ));
+                text.text += "\n " + "CNPC " + "\'" + "wins" + "\'" + "convo - future will build with next cnpc instead of current one/ move to next convo";
 
             }
-            yield return currentCorutine;
 
         }
     }
 
     private void enterSubConversationOnDisagreement() //for now... 
     {
-       // activateSubMenu();
+        // activateSubMenu();
     }
 
     private void populateDisagreementOptions()
     {
         // intersectingSFMcorePatterns.Add()
 
-        
+
         throw new NotImplementedException();
     }
 
 
-    IEnumerator WaitAndPrintcompoundedStatments(string textOne, string textTwo)   //so this works... but does nto when in larger scenartio.. 
+ 
+    void DisplayNodeIntroTopic(Dialoug d)
     {
-
-        yield return currentCorutine;
-        currentCorutine = StartCoroutine(TypeInDialoug(textOne));
-        yield return currentCorutine;
-        currentCorutine = StartCoroutine(TypeInDialoug(textTwo));
-    }
-    IEnumerator WaitAndPrintcompoundedStatments(Dialoug node1, Dialoug node2)   //so this works... but does nto when in larger scenartio.. 
-    {
-
-        yield return currentCorutine;
-        currentCorutine = StartCoroutine(TypeInDialoug(node1.mainOpinionOnAtopic));
-        yield return currentCorutine;
-        currentCorutine = StartCoroutine(TypeInDialoug(node2.mainOpinionOnAtopic));
-    }
-    Coroutine DisplayNodeIntroTopic(Dialoug d)
-    {
-        Coroutine c = StartCoroutine(TypeInDialoug(d.UnbiasedOpeningStatment));
-        return c;
+        text.text += "\n " +d.UnbiasedOpeningStatment;
+    
 
     }
 
-    IEnumerator waitAndTest()
-    {
-        yield return new WaitUntil(() => isTyping == true);
 
-    }
 
 
 }
 
 
 
-public class Tree
-{
-    public Dialoug root { get; set; }
-    public bool FullyExplored = false;
-}
 
+   

@@ -53,7 +53,7 @@ public class Dialoug   //restructure this badly....
 
 
     }
-
+   
     public string GetAFact()
     {
         return factsOnTopic[0];

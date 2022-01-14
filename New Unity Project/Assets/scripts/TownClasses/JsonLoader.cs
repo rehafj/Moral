@@ -116,8 +116,8 @@ public class JsonLoader : MonoBehaviour
         //FOR TESTING-REMOVE ME 
         PrintOutAConversation();
 
-        Debug.Log(returnFatherModelArgumetnsText("BTrueTYourHeart",
-            "InLovewithspouseoffriend", exFlads, true));
+        /*Debug.Log(returnFatherModelArgumetnsText("BTrueTYourHeart",
+            "InLovewithspouseoffriend", exFlads, true));*/
     }
 
     
@@ -129,11 +129,11 @@ public class JsonLoader : MonoBehaviour
         {
             if(responce.key== "adultbutnotworking")
             {
-                Debug.Log("found the good repsonce" + responce.highGnericResponces[0]);
+                //Debug.Log("found the good repsonce" + responce.highGnericResponces[0]);
             }
         }
 
-        Debug.Log(ListOfBNPCFacts.Count);
+       // Debug.Log(ListOfBNPCFacts.Count);
        foreach( CharacterSearchBarFacts FACT in ListOfBNPCFacts)
         {
             if(FACT.SearchBarKey == "butcherRole")

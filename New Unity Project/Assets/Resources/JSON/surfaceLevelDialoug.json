@@ -522,7 +522,7 @@
 		"topic": "High_youthAreTheFuture",
 		"NarrativeElements": {
 			"surfaceOpinionOnTopic": "You know, young shapes these days have the best ideas. In fact, I believe they can make a real difference.",
-			"agreementText": "Am I right? Thanks for agreeing with me. Youth are the future!",
+			"agreementText": " Thanks for agreeing with me. Youth are the future!",
 			"disagreementtext": "How can you say that?! The young shapes are literally changing the world!",
 			"moralFocusAgreement": "Youth are the future! Haha.",
 			"moralFocusDisagreement": ["Young shapes know the risk of bettering the world because they have to live in it longer than those who are older.", "Young shapes are exposed to more new knowledge and experiences, which is the key to real change.", "You might be too old-fashioned to welcome much needed new changes."]

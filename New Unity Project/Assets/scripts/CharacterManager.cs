@@ -33,7 +33,6 @@ public class CharacterManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-        Debug.Log("does this happpppppp");
         ActingCubes = Resources.Load("prefabs/CNPCPrefab") as GameObject;
         setUp();
     }

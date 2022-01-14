@@ -8,7 +8,7 @@ public class MoralModels : MonoBehaviour
 {
     JsonLoader jsn;
 
-    public void Start()
+    public virtual void Start()
     {
         jsn = FindObjectOfType<JsonLoader>();
     }

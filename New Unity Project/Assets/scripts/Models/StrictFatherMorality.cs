@@ -23,7 +23,12 @@ public class StrictFatherMorality : MoralModels
 
     List<string> NPCfmHighValues = new List<string>() //what the NPC looks for - ig its not herte NPC looks for low 
     {
-       "BTrueTYourHeart","Teetotasler","ProHiringFamily","Shapesarenothingifnotsocial","FriendsAreTheJoyOFlife","AnimalLover","Enviromentalist","SchoolIsCool","FamilyPerson","AselfMadeShapeWeAspireToBe","ImmagretsWeGetTheJobDone","SupportingComunities","LoverOfRisks","LandISWhereThehrtIS","youthAreTheFuture","WeLiveForSpontaneity","AnAdventureWeSeek","MoneyMaker","CarrerAboveAll"
+       "BTrueTYourHeart","Teetotasler","ProHiringFamily",
+        "Shapesarenothingifnotsocial","FriendsAreTheJoyOFlife",
+        "AnimalLover","Enviromentalist","SchoolIsCool","FamilyPerson",
+        "AselfMadeShapeWeAspireToBe","ImmagretsWeGetTheJobDone","SupportingComunities"
+        ,"LoverOfRisks","LandISWhereThehrtIS","youthAreTheFuture","WeLiveForSpontaneity",
+        "AnAdventureWeSeek","MoneyMaker","CarrerAboveAll"
 
     };
 
@@ -34,10 +39,9 @@ public class StrictFatherMorality : MoralModels
     // do this in an overloaded method 
 
     JsonLoader jsn;
-    public void Start()
+    public override void  Start()
     {
         jsn = FindObjectOfType<JsonLoader>();
-        Debug.Log("did we find a json object?" + jsn);
 
     }
 
@@ -105,27 +109,18 @@ public class StrictFatherMorality : MoralModels
 
         }
 
-        // Debug.Log("!!!!!+ NPC WILL LOOK FOR SCHEMAS THAT HAVE" + NPCType);
         string currentPatternCheck = subvalue;
 
         int i = 0;
         foreach (MoralModelArguments arg in JsonLoader.Instance.listOffATHERArguments)
         {
-            // Debug.Log("arg.SVkey "+ arg.SVkey);
 
             if (arg.SVkey == surfaceValue) //found the sv we wanted 
             {
-                // Debug.Log("INSIDE SV KEY"+ arg.SVkey);
-                // Debug.Log("size of  arg.surfaceValueObjList"  + arg.SurfaceValueObject.Count);
-
                 foreach (SurfaceValueObject sobject in arg.SurfaceValueObject)
                 {
                     string r = sobject.schema.Split('_').First();
-                    //Debug.Log("!!!!!+ r value" + r);
-
-                    /*      Debug.Log("!!!!!+ !exploredSterings.Contains(currentPatternCheck) value" +
-                         !exploredSterings.Contains(currentPatternCheck)); *///after the furst time it becomes false 
-
+                  
                     if (sobject.subvalue == subvalue && NPCType.ToLower() == r)
                     {
                         exploredSterings.Add(subvalue);
@@ -133,7 +128,6 @@ public class StrictFatherMorality : MoralModels
                     }
                     else if (!exploredSterings.Contains(currentPatternCheck))
                     {
-                        //   Debug.Log(" inside if it does not cvontained explorex strings !!!!!+ ! does thios happen ?  " + r + "and npc type" + NPCType.ToLower());
 
                         if (NPCType.ToLower() == r)
                         {
@@ -143,8 +137,7 @@ public class StrictFatherMorality : MoralModels
 
                         foreach (string s in exploredSterings)
                         {
-                            // Debug.Log("!!!!!+ exploredSterings npw adds" + s);
-
+                            //for debugging purp // delete
                         }
                         i++;
                         currentPatternCheck = arg.SurfaceValueObject[i].subvalue; //slight logic bug in counter if the current checked one was in rthe middle of the list -- 
@@ -153,7 +146,6 @@ public class StrictFatherMorality : MoralModels
                 }
             }
         }
-
         return "GenericResponceGiven";
 
     }
@@ -172,7 +164,6 @@ public class StrictFatherMorality : MoralModels
         // Debug.Log("!!!!!+ NPC WILL LOOK FOR SCHEMAS THAT HAVE" + NPCType);
         string currentPatternCheck = subvalue;
 
-        int i = 0;
         foreach (MoralModelArguments arg in JsonLoader.Instance.listOffATHERArguments)
         {
             // Debug.Log("arg.SVkey "+ arg.SVkey);
@@ -196,12 +187,10 @@ public class StrictFatherMorality : MoralModels
                 }
             }
         }
-
         return "GenericResponceGiven";
 
     }
 
-  
 
     public string returnAppendedSchemaText(string surfaceValue, string subvalue,
                                       List<string> exploredSterings, bool isNPC)
@@ -248,7 +237,7 @@ public class StrictFatherMorality : MoralModels
                     if (sobject.subvalue == subvalue && NPCType.ToLower() == r) //low or high
                     {
                         exploredSterings.Add(subvalue);//.change this to the npc or player list of static flags ( if cnpc flag )
-                        return sobject.schemaText;
+                        return "<color=yellow> schema:"+ sobject.schema + "</color>" + sobject.schemaText;
                     }
                     else if (!exploredSterings.Contains(currentPatternCheck))
                     {
@@ -256,7 +245,7 @@ public class StrictFatherMorality : MoralModels
 
                         if (NPCType.ToLower() == r) // add a check if bnpc has this flag  here 
                         {
-                            return sobject.schemaText + "_" + sobject.subvalue; //else return the first thing that is high 
+                            return sobject.schemaText + "<color=yellow>_" + sobject.subvalue +"</color>"; //else return the first thing that is high 
 
                         }
                         exploredSterings.Add(currentPatternCheck);//.change this to the npc or player list of static flags ( if cnpc flag )
@@ -331,7 +320,7 @@ public class StrictFatherMorality : MoralModels
                         {
                             temp.Add(d);
                         }
-                    } else if(!returnIntersecting &&d.Pattern!=s)
+                    } else if(!returnIntersecting && d.Pattern!=s)
                     {
                         temp.Add(d);
                     }
@@ -352,14 +341,7 @@ public class StrictFatherMorality : MoralModels
     }
     public StrictFatherMorality()
     {
-        if (Random.Range(0, 10) >= 4)
-        {
-            isPragmatic = true;
-        }
-        else
-        {
-            isPragmatic = false;
-        }
+        isPragmatic = Random.Range(0, 10) >= 4 ? true : false;
     }
 
     

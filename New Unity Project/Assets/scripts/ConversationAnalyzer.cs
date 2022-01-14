@@ -19,9 +19,14 @@ public class ConversationAnalyzer : MonoBehaviour
 
    public void testButton() {
         Debug.Log("cliick!" + getCurrentNode().Pattern);
-        
-
     }
+
+    public enum nodeTypes
+    {
+        intro, rumor, initialOpin, OpinionOnShape, schemaText,
+    }
+
+    public nodeTypes type;
 
     //make other methods that specoify the type of conversation and instaniate the correct button type 
     public Dialoug getCurrentNode() {

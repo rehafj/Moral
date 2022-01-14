@@ -60,6 +60,18 @@ public class ConversationalCharacter : MonoBehaviour
         anim = gameObject.GetComponent<Animator>();
         Init(setCharacterName());
     }
+
+    public void ChangeModel()
+    {
+        if (IsFatherModel)
+        {
+            IsFatherModel = false;
+        } else
+        {
+            IsFatherModel = true;
+
+        }
+    }
     private List<string> firstNamesList = new List<string> { "Acute", "Arc", "Conic", "Cy", "Vert", "Point", "Hex", "Polly" };
     private List<string> lastNamesList = new List<string> { "Segment", "Strip", "Gon", "Angle", "Metric", "Millimetre ", "Decimal" };
 
@@ -86,13 +98,10 @@ public class ConversationalCharacter : MonoBehaviour
     } 
     public enum emotion
     {
-        happy, sad, angry, shocked, shy
+        happy, sad, angry, shocked, shy, wtf, acceptanceDefeat, happyDance
     }
 
     public emotion CnpcEmotion;
-
-
- 
 
 
     public enum RatingVlaues //NPC ratings for conversation basis
@@ -101,69 +110,9 @@ public class ConversationalCharacter : MonoBehaviour
     }
     public RatingVlaues NpcValueRating;
   
-   /* public ConversationalCharacter(string name ,RatingVlaues[] thirteenValues )
-    {
-        ConversationalNpcName = name;
-        int i = 0;
-      
-        foreach(string s in keys)
-        {
-            ConvCharacterMoralFactors.Add(s, thirteenValues[i]);
-            
-            i++;
-        }
-
-        FatherModel = new StrictFatherMorality();
-    }
-
-    public ConversationalCharacter(string name, RatingVlaues[] thirteenValues, string FocusArea)
-    {
-        ConversationalNpcName = name;
-        int i = 0;
-
-        foreach (string s in keys)
-        {
-            ConvCharacterMoralFactors.Add(s, thirteenValues[i]);
-
-            i++;
-        }
-
-        moralFocus = FocusArea;
-        FatherModel = new StrictFatherMorality();
-
-    }*/
 
     List<string> tempHighVlaue = new List<string>();
-    //randomizing constructor /overloaded
-   /* public ConversationalCharacter(string name) //method used for random
-    {
-      //  //used to set up moral focus on high value flags
-
-        ConversationalNpcName = name;
-        int i = 0;
-
-        foreach (string s in keys)
-        {
-            int x = Random.Range(0, 3);
-           
-            NpcValueRating = getRandomNPCValue(x); //rating 
-            if (NpcValueRating == RatingVlaues.High )
-            {
-                tempHighVlaue.Add(s);
-            }
-            ConvCharacterMoralFactors.Add(s, NpcValueRating);
-
-            i++;
-        }
-      
-        FatherModel = new StrictFatherMorality();
-        setContradictingValues();
-        int index = UnityEngine.Random.Range(0, tempHighVlaue.Count);
-        setMoralFocusArea(tempHighVlaue[index]);
-        Debug.Log("check these values out : EnviromentalistAnti " + ConvCharacterMoralFactors["EnviromentalistAnti"] + "and ebviromentalist" +
-         ConvCharacterMoralFactors["Enviromentalist"] + "school is cool followed by drool " + ConvCharacterMoralFactors["SchoolIsCool"] + ConvCharacterMoralFactors["schoolIsDrool"]);
-
-    }*/
+  
 
 
 
@@ -176,7 +125,7 @@ public class ConversationalCharacter : MonoBehaviour
 
         foreach (string s in keys)
         {
-            int x = Random.Range(0, 3);
+            int x = Random.Range(0, 100);
 
             NpcValueRating = getRandomNPCValue(x); //rating 
             if (NpcValueRating == RatingVlaues.High)
@@ -189,13 +138,24 @@ public class ConversationalCharacter : MonoBehaviour
         }
 
         FatherModel = new StrictFatherMorality();
+        MotherModel = new NurturantParentMorality();
         setContradictingValues();
         int index = UnityEngine.Random.Range(0, tempHighVlaue.Count);
         setMoralFocusArea(tempHighVlaue[index]);
-        Debug.Log("check these values out : EnviromentalistAnti " + ConvCharacterMoralFactors["EnviromentalistAnti"] + "and ebviromentalist" +
-         ConvCharacterMoralFactors["Enviromentalist"] + "school is cool followed by drool " + ConvCharacterMoralFactors["SchoolIsCool"] + ConvCharacterMoralFactors["schoolIsDrool"]);
+        ahereToModel();
 
+
+        /*Debug.Log("check these values out : EnviromentalistAnti " + ConvCharacterMoralFactors["EnviromentalistAnti"] + "and ebviromentalist" +
+         ConvCharacterMoralFactors["Enviromentalist"] + "school is cool followed by drool " + ConvCharacterMoralFactors["SchoolIsCool"] + ConvCharacterMoralFactors["schoolIsDrool"]);
+*/
     }
+
+    private void ahereToModel()
+    {
+        int r = UnityEngine.Random.Range(0, 100);
+        this.IsFatherModel = (r <= 50)?  true : false;
+    }
+
 
 
     void setContradictingValues()
@@ -205,38 +165,13 @@ public class ConversationalCharacter : MonoBehaviour
         {
             if (ConvCharacterMoralFactors[s] == RatingVlaues.High && listOfContradictions.Contains(s))
             {
+
+
                 ConvCharacterMoralFactors[getContradictingString(s)] = RatingVlaues.Low;
             }
 
 
         }
-
-        /*
-         * 
-         *     if (contradictingValuesHigh.Contains(s) && ConvCharacterMoralFactors[s] == RatingVlaues.High)
-                    {
-                        ConvCharacterMoralFactors[getContradictingString(s)] = RatingVlaues.Low; // this would still result in 
-                        Debug.Log("the thing that changed was " + s + "this was changed: ConvCharacterMoralFactors[" + getContradictingString(s) + "]:" + ConvCharacterMoralFactors[getContradictingString(s)]);
-
-                        tempHighVlaue.Remove(s);
-                    }
-                    else if (contradictingValuesLow.Contains(s) && ConvCharacterMoralFactors[s] == RatingVlaues.Low)
-                    {
-                        ConvCharacterMoralFactors[getContradictingString(s)] = RatingVlaues.High;
-                        Debug.Log("the thing that changed was " + s + "this was changed: ConvCharacterMoralFactors[" + getContradictingString(s) + "]:" + ConvCharacterMoralFactors[getContradictingString(s)]);
-
-                        tempHighVlaue.Add(s);
-                    }
-         * 
-         * 
-                foreach (KeyValuePair<string, RatingVlaues> k  in ConvCharacterMoralFactors)
-                {
-                    if (contradictingValuesHigh.Contains(k.Key) && k.Value == RatingVlaues.High)//loveisgood
-                    {
-                        ConvCharacterMoralFactors[getContradictingString(k.Key)] = RatingVlaues.Low;
-                        tempHighVlaue.Add(k.Key);
-                    }
-                }*/
 
 
     }
@@ -286,13 +221,18 @@ public class ConversationalCharacter : MonoBehaviour
     {
        
         switch (x)
-        {
-            case (0):
+        { 
+            case int n when (n <= 10):
                 return RatingVlaues.Low;
-            case (1): return RatingVlaues.Mid;
+            case int n when   (n > 10 && n <40):
+                return RatingVlaues.Mid;
+            case int n when (n >=40):
+                return RatingVlaues.High;
             default:
                 return RatingVlaues.High;
         }
+
+
     }
 
     void chooseARandomModel()
@@ -313,10 +253,10 @@ public class ConversationalCharacter : MonoBehaviour
 
         if (IsFatherModel && Defending)
         {
-            likesBNPC = true;
+            likesBNPC = true; //i.e. high valyue 
         } else
         {
-            likesBNPC = false;
+            likesBNPC = false; //i.e. low values
         }
         return likesBNPC;
     }
@@ -328,9 +268,85 @@ public class ConversationalCharacter : MonoBehaviour
 
     }
 
-    public void playAnimation(string state)
+    public void playAnimation(emotion emot )
     {
-        
+        switch (emot)
+        {
+            case (emotion.sad):
+          {
+            anim.Play("cube_notAgree"); //otter change me! add another animation 
+            break;
+                }
+            case (emotion.shocked):
+                {
+                    anim.Play("cube_shocked");
+                    break;
+                }
+            case (emotion.shy):
+                {
+                    anim.Play("Cube_shyleyGivesUp");
+                    break;
+                }
+            case (emotion.angry):
+                {
+                    anim.Play("cube_Angry");
+                    break;
+                }
+            case (emotion.wtf):
+                {
+                    anim.Play("cube_notAgree");
+                    break;
+                }
+            case (emotion.acceptanceDefeat):
+                {
+                    anim.Play("Cube_shyleyGivesUp");
+                    break;
+                }
+            case (emotion.happy):
+                {
+                    anim.Play("Cube_shyleyGivesUp");
+                    break;
+                }
+            case (emotion.happyDance):
+                {
+                    anim.Play("cube_happyDance");
+                    break;
+                }
+            default:
+                anim.Play("Cube_Happy");
+
+                break;
+
+        }
+    }
+
+    public enum animatorFlags
+    {
+        isAngry, IsConceeded
+    }
+    public void changeConstanteMood(animatorFlags  animFlaf)
+    {
+        switch (animFlaf)
+        {
+            case (animatorFlags.isAngry)://right now angry is the only state that needs an exit flag rto return to normal 
+                {
+                    anim.SetBool("isAngry", true);
+                    anim.SetBool("IsShocked", false);
+                    anim.SetBool("isConceeded", false);
+                    anim.SetBool("isSad", false);
+                    break;
+                }
+            default:
+                {
+                    anim.SetBool("isAngry", false);
+                    anim.SetBool("IsShocked", false);
+                    anim.SetBool("isConceeded", false);
+                    anim.SetBool("isSad", false);
+                    break;
+                }
+
+        }
+      
     }
 
 }

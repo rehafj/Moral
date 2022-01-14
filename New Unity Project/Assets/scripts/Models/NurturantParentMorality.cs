@@ -22,6 +22,8 @@ public class NurturantParentMorality:MoralModels {
 
     protected bool isPragmatic;
 
+    JsonLoader jsn;
+
     public string ReturnSchema(string tag, Dialoug characterNode) //used in combo with flags to construt arguments, this returns the schema accoring to father models 
     {
         Debug.Log(" tag is " + tag + "charanode" + characterNode);
@@ -86,11 +88,52 @@ public class NurturantParentMorality:MoralModels {
         return schemaName;
     }
     //add self deispline and self reliance 
+    public override void Start()
+    {
+        jsn = FindObjectOfType<JsonLoader>();
+        testMM();
+    }
+
+    public void testMM()
+    {
+        Debug.Log(JsonLoader.Instance.listOfNurturantModelArguments.Count());
+    }
+
+
 
     public bool resultsInSelfIntrest()
     {
         return true;
     }
+
+
+    public string returnCurrentCnpcStance(string surfaceValue, string subvalue)
+    {
+        if (NPCNPHighValues.Contains(surfaceValue))
+        {
+            return "high";
+        }
+        else
+        {
+            return "low";
+        }
+
+    }
+
+    public bool isCNPCDefendingValueLikesBNPC(string surfaceValue)
+    {
+
+        if (NPCNPHighValues.Contains(surfaceValue))
+        {
+            return true; //high (defend /likes)
+        }
+        else
+        {
+            return false;
+        }
+
+    }
+
 
     public string returnNurturantModelArgumetnsText(string surfaceValue, string subvalue,
                                        List<string> exploredSterings, bool isNPC)
@@ -121,36 +164,27 @@ public class NurturantParentMorality:MoralModels {
 
         }
 
-        // Debug.Log("!!!!!+ NPC WILL LOOK FOR SCHEMAS THAT HAVE" + NPCType);
         string currentPatternCheck = subvalue;
 
         int i = 0;
-        foreach (MoralModelArguments arg in JsonLoader.Instance.listOffATHERArguments)
+        foreach (MoralModelArguments arg in JsonLoader.Instance.listOfNurturantModelArguments)
         {
-            // Debug.Log("arg.SVkey "+ arg.SVkey);
 
-            if (arg.SVkey == surfaceValue) //found the sv we wanted 
+            if (arg.SVkey == surfaceValue)
             {
-                // Debug.Log("INSIDE SV KEY"+ arg.SVkey);
-                // Debug.Log("size of  arg.surfaceValueObjList"  + arg.SurfaceValueObject.Count);
-
+               
                 foreach (SurfaceValueObject sobject in arg.SurfaceValueObject)
                 {
                     string r = sobject.schema.Split('_').First();
-                    //Debug.Log("!!!!!+ r value" + r);
-
-                    /*      Debug.Log("!!!!!+ !exploredSterings.Contains(currentPatternCheck) value" +
-                         !exploredSterings.Contains(currentPatternCheck)); *///after the furst time it becomes false 
-
+           
                     if (sobject.subvalue == subvalue && NPCType.ToLower() == r)
                     {
-                        exploredSterings.Add(subvalue);
+                        exploredSterings.Add(subvalue); //change to the static instance located on the cnpc 
+                        //this . character. listofexploredtopics . add /// [pomy 
                         return sobject.text;
                     }
                     else if (!exploredSterings.Contains(currentPatternCheck))
                     {
-                        //   Debug.Log(" inside if it does not cvontained explorex strings !!!!!+ ! does thios happen ?  " + r + "and npc type" + NPCType.ToLower());
-
                         if (NPCType.ToLower() == r)
                         {
                             return sobject.text + "_" + sobject.subvalue; //else return the first thing that is high 
@@ -169,10 +203,46 @@ public class NurturantParentMorality:MoralModels {
                 }
             }
         }
-
         return "GenericResponceGiven";
 
     }
+
+
+
+    public string returnNPtextForAGivenString(string surfaceValue, string subvalue,
+                                       List<string> exploredSterings, string stanceValue)
+    {//update this ti include updates high low lists / player or npc --- update to reflect player bool - update for sening in list of explored or some list 
+
+
+
+        if (stanceValue.ToLower() != "high" || stanceValue.ToLower() != "low")
+        {
+            stanceValue = "low";
+        }
+
+        string currentPatternCheck = subvalue;
+
+        foreach (MoralModelArguments arg in JsonLoader.Instance.listOfNurturantModelArguments)
+        {
+
+            if (arg.SVkey == surfaceValue) //found the sv we wanted 
+            {
+                
+                foreach (SurfaceValueObject sobject in arg.SurfaceValueObject)
+                {
+                    string r = sobject.schema.Split('_').First();
+
+                    if (sobject.subvalue == subvalue && stanceValue.ToLower() == r)
+                    {
+                        return sobject.text;
+                    }
+                }
+            }
+        }
+        return "GenericResponceGiven";
+
+    }
+
 
     public string returnAppendedSchemaText(string surfaceValue, string subvalue,
                                       List<string> exploredSterings, bool isNPC)
@@ -206,10 +276,10 @@ public class NurturantParentMorality:MoralModels {
         string currentPatternCheck = subvalue;
 
         int i = 0;
-        foreach (MoralModelArguments arg in JsonLoader.Instance.listOffATHERArguments)
+        foreach (MoralModelArguments arg in JsonLoader.Instance.listOfNurturantModelArguments)
         {
 
-            if (arg.SVkey == surfaceValue) //found the sv we wanted 
+            if (arg.SVkey == surfaceValue) 
             {
 
                 foreach (SurfaceValueObject sobject in arg.SurfaceValueObject)
@@ -317,20 +387,14 @@ public class NurturantParentMorality:MoralModels {
         }
         catch (System.Exception)
         {
-            Debug.LogError(sv + "does not exhisit");
+            Debug.LogError(sv + "does not exist");
             throw;
         }
 
     }
     public NurturantParentMorality()
     {
-        if (Random.Range(0, 10) >= 4)
-        {
-            isPragmatic = true;
-        }
-        else
-        {
-            isPragmatic = false;
-        }
+        isPragmatic = Random.Range(0, 10) >= 4 ? true : false;
+
     }
 }
