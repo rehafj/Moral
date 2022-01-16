@@ -396,14 +396,14 @@ public class FastTesting : MonoBehaviour
      //bam   activatePlayerOptionsInButton(currentNode);
 
     }
-
+    //TICKTICKBOOM REACHED HERE ( TITLE OF MOVIE ) 
     void presentFMMoptions()
     {
         temporaryListOfNodes.Clear();
-        int maxoptions = 2;
+        int maxoptions = 3;
         for (int i = 0; i < maxoptions ; i++)
         {
-            if (i <= maxoptions)
+            if (i <= maxoptions )
             {
 
                 Dialoug d = currentPlayerOptionsInInnerConversation.Dequeue();
