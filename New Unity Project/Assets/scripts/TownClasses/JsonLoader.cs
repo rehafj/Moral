@@ -136,8 +136,8 @@ public class JsonLoader : MonoBehaviour
        // Debug.Log(ListOfBNPCFacts.Count);
        foreach( CharacterSearchBarFacts FACT in ListOfBNPCFacts)
         {
-            if(FACT.SearchBarKey == "butcherRole")
-            Debug.Log(FACT.BNPCsearchTranslation[UnityEngine.Random.Range(0,2)]);
+         /*   if(FACT.SearchBarKey == "butcherRole")
+            Debug.Log(FACT.BNPCsearchTranslation[UnityEngine.Random.Range(0,2)]);*/
         }
         /*foreach (ModelArguements argument in listOfArguments)
         {

@@ -180,14 +180,17 @@ public class NurturantParentMorality:MoralModels {
                     if (sobject.subvalue == subvalue && NPCType.ToLower() == r)
                     {
                         exploredSterings.Add(subvalue); //change to the static instance located on the cnpc 
-                        //this . character. listofexploredtopics . add /// [pomy 
-                        return sobject.text;
+                        string t = NPCType.ToLower() == "high" ? "defend" : "oppose";
+                        return "<color=blue> FM used for the pattern  " + subvalue + " under the SV: "
+                            + surfaceValue + "</color> " + sobject.text + "<color=yellow> to " + t + "</color>";
+
                     }
                     else if (!exploredSterings.Contains(currentPatternCheck))
                     {
                         if (NPCType.ToLower() == r)
                         {
-                            return sobject.text + "_" + sobject.subvalue; //else return the first thing that is high 
+                            return "<color=blue> FM used for the pattern  " + subvalue + "under the SV: "
+                           + surfaceValue + "</color> " + sobject.text + "element number " + i; //else return the first thing that is high 
                         }
                         exploredSterings.Add(currentPatternCheck);
 
@@ -207,8 +210,38 @@ public class NurturantParentMorality:MoralModels {
 
     }
 
+    public List<KeyValuePair<string, string>> returnAllPossibleCounterArgumentsDebugging(string schemaResult)
+    {
+        List<KeyValuePair<string, string>> svAndText = new List<KeyValuePair<string, string>>();
+        foreach (MoralModelArguments arg in JsonLoader.Instance.listOfNurturantModelArguments)
+        {
+            foreach (SurfaceValueObject svo in arg.SurfaceValueObject)
+            {
+                if (svo.schema.Split('_').First().ToLower() == schemaResult)
+                {
+                    svAndText.Add(new KeyValuePair<string, string>("surfaceValue:" + arg.SVkey, svo.schemaText + " |text|: " + svo.text + "for subvalue" + svo.subvalue));
+                }
+            }
+        }
+        return svAndText;
+    }
+    public List<KeyValuePair<string, string>> returnAllPossibleCounterArgumentsDebugging(string schemaResult, List<string> intersectingPatterns)
+    {
+        List<KeyValuePair<string, string>> svAndText = new List<KeyValuePair<string, string>>();
+        foreach (MoralModelArguments arg in JsonLoader.Instance.listOfNurturantModelArguments)
+        {
+            foreach (SurfaceValueObject svo in arg.SurfaceValueObject)
+            {
+                if (svo.schema.Split('_').First().ToLower() == schemaResult && intersectingPatterns.Contains(svo.subvalue))
+                {
+                    svAndText.Add(new KeyValuePair<string, string>("surfaceValue:" + arg.SVkey, svo.schemaText + " |text|: " + svo.text + "for subvalue" + svo.subvalue));
+                }
+            }
+        }
+        return svAndText;
 
-
+        //TICKTICKBOOM make a similar method that just returns a string at random and returns the pattern so the p[layuer would have a possible win using this... 
+    }
     public string returnNPtextForAGivenString(string surfaceValue, string subvalue,
                                        List<string> exploredSterings, string stanceValue)
     {//update this ti include updates high low lists / player or npc --- update to reflect player bool - update for sening in list of explored or some list 
@@ -289,7 +322,7 @@ public class NurturantParentMorality:MoralModels {
                     if (sobject.subvalue == subvalue && NPCType.ToLower() == r) //low or high
                     {
                         exploredSterings.Add(subvalue);//.change this to the npc or player list of static flags ( if cnpc flag )
-                        return sobject.schemaText;
+                        return "<color=yellow> schema:" + sobject.schema + "</color>" + sobject.schemaText;
                     }
                     else if (!exploredSterings.Contains(currentPatternCheck))
                     {
@@ -297,7 +330,7 @@ public class NurturantParentMorality:MoralModels {
 
                         if (NPCType.ToLower() == r) // add a check if bnpc has this flag  here 
                         {
-                            return sobject.schemaText + "_" + sobject.subvalue; //else return the first thing that is high 
+                            return "<color=yellow> schema:" + sobject.schema + "</color>" + sobject.schemaText + "<color=yellow>_" + sobject.subvalue + "</color>"; //else return the first thing that is high 
 
                         }
                         exploredSterings.Add(currentPatternCheck);//.change this to the npc or player list of static flags ( if cnpc flag )

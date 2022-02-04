@@ -696,7 +696,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
     {
         currentCorutine = StartCoroutine(respondCharacterConversationToAFlag(d));
     }
-
+    List<string> currentBNPCPatterns; //globlize this
     private IEnumerator respondCharacterConversationToAFlag(Dialoug d) //used by player! 
     {
 
@@ -716,7 +716,8 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             {
                  appendedSchemaText = currentCNPC.FatherModel.returnAppendedSchemaText(d.MappedSurfaceValue, d.Pattern, currentMoralModelExploredPatterns_PLAYER, true);
                 selectedText = currentCNPC.FatherModel.returnFatherModelArgumetnsText(
-                     currentNode.MappedSurfaceValue, currentNode.Pattern, currentMoralModelExploredPatterns_PLAYER, true);
+                     currentNode.MappedSurfaceValue, currentNode.Pattern,
+                     currentMoralModelExploredPatterns_PLAYER, currentBNPCPatterns, true);
             } else
             {
                 appendedSchemaText = currentCNPC.MotherModel.returnAppendedSchemaText(d.MappedSurfaceValue, d.Pattern, currentMoralModelExploredPatterns_PLAYER, true);
@@ -1732,7 +1733,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
                 if (currentCNPC.IsFatherModel)
                 {
                     arg = currentCNPC.FatherModel.returnFatherModelArgumetnsText(
-                   currentNode.MappedSurfaceValue, currentNode.Pattern, currentMoralModelExploredPatterns, true);
+                   currentNode.MappedSurfaceValue, currentNode.Pattern, currentMoralModelExploredPatterns, currentBNPCPatterns, true);
                 }
                 else
                 {
@@ -1845,7 +1846,7 @@ public class DialogeManager : MonoBehaviour //TODO refactor this later, just for
             if (currentCNPC.IsFatherModel)
             {
                 currentCNPC.FatherModel.returnFatherModelArgumetnsText(
-                              currentNode.MappedSurfaceValue, currentNode.Pattern, currentMoralModelExploredPatterns, true);
+                              currentNode.MappedSurfaceValue, currentNode.Pattern, currentMoralModelExploredPatterns, currentBNPCPatterns, true);
             } else
             {
                 currentCNPC.MotherModel.returnNurturantModelArgumetnsText(

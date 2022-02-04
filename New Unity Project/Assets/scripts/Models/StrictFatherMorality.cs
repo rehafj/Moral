@@ -79,11 +79,121 @@ public class StrictFatherMorality : MoralModels
         }
 
     }
-
-
-    public string returnFatherModelArgumetnsText(string surfaceValue, string subvalue,
-                                          List<string> exploredSterings, bool isNPC)
+    /// <summary>
+    /// used for the first check
+    /// </summary>
+    /// <param name="surfaceValue"></param>
+    /// <param name="subvalue"></param>
+    /// <param name="exploredStrings"></param>
+    /// <param name="isNPC"></param>
+    /// <returns></returns>
+    public string returnFatherModelFirstArgument(string surfaceValue, string subvalue,
+                                           List<string> exploredStrings,
+                                           bool isNPC) // 
     {//update this ti include updates high low lists / player or npc --- update to reflect player bool - update for sening in list of explored or some list 
+
+        exploredStrings.Add("");
+        foreach (string s in exploredStrings)
+        {
+            Debug.Log(" pre enterting the loop --- the explored topics are" + s);
+
+        }
+
+        string NPCType = "High";
+
+        if (isNPC)
+        {
+            if (NPCfmHighValues.Contains(surfaceValue))
+            {
+                NPCType = "High";
+            }
+            else
+            {
+                NPCType = "Low";
+            }
+        }
+        else //bug //i.e. player type here
+        {
+            if (NPCfmHighValues.Contains(surfaceValue))
+            {
+                NPCType = "Low";
+            }
+            else
+            {
+                NPCType = "High";
+            }
+
+        }
+
+        string currentPatternCheck = subvalue;
+
+        foreach (MoralModelArguments arg in JsonLoader.Instance.listOffATHERArguments)
+        {
+
+
+            if (arg.SVkey == surfaceValue) //found the SV
+            {
+                int i = -1;
+
+                foreach (SurfaceValueObject sobject in arg.SurfaceValueObject)
+                {
+                    Debug.Log("help!@!!!!!!!!!!!!!!! does the explored string list containin " + currentPatternCheck + exploredStrings.Contains(currentPatternCheck));
+                    Debug.Log("what is this  statment" + !exploredStrings.Contains(currentPatternCheck));
+
+                    string r = sobject.schema.Split('_').First();
+
+                   
+
+                        if (!exploredStrings.Contains(subvalue)) //always false why? no 10 true
+                        {
+
+                            Debug.Log("test"); 
+                            Debug.Log("testing for the pattern" + currentPatternCheck + "currentPatternCheck with sobject.subvalue " + sobject.subvalue);
+
+
+                            if (sobject.subvalue == currentPatternCheck && NPCType.ToLower() == r) //i.e. the sent in pattern matches the argument
+                            {
+
+                                Debug.Log("2--does this cond fail" + NPCType.ToLower() == r);
+
+                                string t = NPCType.ToLower() == "high" ? "defend" : "oppose";
+
+                                Debug.Log("found " + sobject.subvalue);
+                                return "<color=red> FM used for the pattern  " + subvalue + " under the SV: " + surfaceValue + "</color> " + sobject.text + "<color=yellow> to " + t + "</color>_" + sobject.subvalue;
+
+
+                            }//add it to explored?
+                        }
+                        else
+                        {
+                            i++;
+                            currentPatternCheck = arg.SurfaceValueObject[i].subvalue;
+
+                        }
+
+                    }
+
+
+                }
+
+            }
+
+        Debug.Log("nothing found");
+        return "GenericResponceGiven";
+
+    } 
+    public string returnFatherModelArgumetnsText(string surfaceValue, string subvalue,
+                                          List<string> exploredStrings,
+                                          List<string> currentBNPCPatterns, bool isNPC)
+    {//update this ti include updates high low lists / player or npc --- update to reflect player bool - update for sening in list of explored or some list 
+
+        exploredStrings.Add("");
+        foreach(string s in exploredStrings)
+        {
+            Debug.Log(" the explored topics are" + s);
+
+        }
+
         string NPCType = "High";
 
         if (isNPC)
@@ -111,43 +221,100 @@ public class StrictFatherMorality : MoralModels
 
         string currentPatternCheck = subvalue;
 
-        int i = 0;
+        string chosenPattern =""; 
+
         foreach (MoralModelArguments arg in JsonLoader.Instance.listOffATHERArguments)
         {
+            //check the subvalue first.. 
 
-            if (arg.SVkey == surfaceValue) //found the sv we wanted 
+            if (arg.SVkey == surfaceValue) //found the SV
             {
-                foreach (SurfaceValueObject sobject in arg.SurfaceValueObject)
+                int i = -1;
+
+                foreach (string bnpcPattern in currentBNPCPatterns)
                 {
-                    string r = sobject.schema.Split('_').First();
-                  
-                    if (sobject.subvalue == subvalue && NPCType.ToLower() == r)
+                    Debug.Log("checking for the pattern " + bnpcPattern +"under bnpc patterns for the sv " + arg.SVkey);
+
+                    if (!exploredStrings.Contains(bnpcPattern))
                     {
-                        exploredSterings.Add(subvalue);
-                        return sobject.text;
-                    }
-                    else if (!exploredSterings.Contains(currentPatternCheck))
-                    {
+                        Debug.Log("the explored strings does not contain " + bnpcPattern);
 
-                        if (NPCType.ToLower() == r)
+
+                        foreach (SurfaceValueObject sobject in arg.SurfaceValueObject)
                         {
-                            return sobject.text + "_" + sobject.subvalue; //else return the first thing that is high 
-                        }
-                        exploredSterings.Add(currentPatternCheck);
+                            Debug.Log("comparing the evalues of subvalue and current pattern " +
+                                bnpcPattern + "with" + sobject.subvalue);
+                            Debug.Log(sobject.subvalue);
 
-                        foreach (string s in exploredSterings)
-                        {
-                            //for debugging purp // delete
+                            string r = sobject.schema.Split('_').First();
+
+                            Debug.Log(r);
+                            Debug.Log("value of noc's attack vs defend +  NPCType.ToLower() == r " + NPCType.ToLower() == r);
+
+
+                            if (sobject.subvalue == bnpcPattern && NPCType.ToLower() == r)
+                            {
+                                Debug.Log("2--does this cond fail" + NPCType.ToLower() == r);
+
+                                string t = NPCType.ToLower() == "high" ? "defend" : "oppose";
+
+                                Debug.Log("found " + sobject.subvalue);
+                                return "<color=red> FM used for the pattern  " + subvalue + " under the SV: " + surfaceValue + "</color> " + sobject.text + "<color=yellow> to " + t + "</color>_" + sobject.subvalue;
+
+                            }
+                            else
+                            {
+                                chosenPattern = sobject.subvalue; // weak 
+                                /*i++;
+                                currentPatternCheck = arg.SurfaceValueObject[i].subvalue;*/
+
+                            }
+
+
+
                         }
-                        i++;
-                        currentPatternCheck = arg.SurfaceValueObject[i].subvalue; //slight logic bug in counter if the current checked one was in rthe middle of the list -- 
+
                     }
+                }
 
+            }
+        }
+        Debug.Log("nothing found + would send in a random weak argument fopr the pattern " + chosenPattern);
+        return "GenericResponceGiven"; // + random pnpc  pattern 
+
+    }
+
+    
+    public List< KeyValuePair<string, string>> returnAllPossibleCounterArgumentsDebugging(string stance)
+    {
+        List<KeyValuePair<string, string>> svAndText = new List<KeyValuePair<string, string>>();
+        foreach (MoralModelArguments arg in JsonLoader.Instance.listOffATHERArguments)
+        {
+            foreach (SurfaceValueObject svo in arg.SurfaceValueObject)
+            {
+                if(svo.schema.Split('_').First().ToLower() == stance) //low or high
+                {
+                    svAndText.Add(new KeyValuePair<string, string> ( arg.SVkey, "with the transitional schema text \'"+svo.schemaText + " \'and the actual point" + svo.text + "for subvalue" + svo.subvalue));
                 }
             }
         }
-        return "GenericResponceGiven";
+        return svAndText;
+    }
 
+    public List<KeyValuePair<string, string>> returnAllPossibleCounterArgumentsDebugging(string stance, List<string> intersectingPatterns)
+    {
+        List<KeyValuePair<string, string>> svAndText = new List<KeyValuePair<string, string>>();
+        foreach (MoralModelArguments arg in JsonLoader.Instance.listOffATHERArguments)
+        {
+            foreach (SurfaceValueObject svo in arg.SurfaceValueObject)
+            {
+                if (svo.schema.Split('_').First().ToLower() == stance && intersectingPatterns.Contains(svo.subvalue)) //low or high
+                {
+                    svAndText.Add(new KeyValuePair<string, string>(arg.SVkey, "with the transitional schema text \'" + svo.schemaText + " \'and the actual point" + svo.text + "for subvalue" + svo.subvalue));
+                }
+            }
+        }
+        return svAndText;
     }
 
     public string returnFatherModelArgumetnsForAspecficString(string surfaceValue, string subvalue,
@@ -193,7 +360,9 @@ public class StrictFatherMorality : MoralModels
 
 
     public string returnAppendedSchemaText(string surfaceValue, string subvalue,
-                                      List<string> exploredSterings, bool isNPC)
+                                      List<string> exploredSterings, bool isNPC) //change this!!!! 
+
+
     {//update this ti include updates high low lists / player or npc --- update to reflect player bool - update for sening in list of explored or some list 
         string NPCType = "High";
 
@@ -223,7 +392,7 @@ public class StrictFatherMorality : MoralModels
 
         string currentPatternCheck = subvalue;
 
-        int i = 0;
+        int i = -1;
         foreach (MoralModelArguments arg in JsonLoader.Instance.listOffATHERArguments)
         {
             
@@ -236,8 +405,8 @@ public class StrictFatherMorality : MoralModels
                     
                     if (sobject.subvalue == subvalue && NPCType.ToLower() == r) //low or high
                     {
-                        exploredSterings.Add(subvalue);//.change this to the npc or player list of static flags ( if cnpc flag )
-                        return "<color=yellow> schema:"+ sobject.schema + "</color>" + sobject.schemaText;
+                       // exploredSterings.Add(subvalue);//.change this to the npc or player list of static flags ( if cnpc flag )
+                        return "<color=yellow> the schema used is:"+ sobject.schema + "</color>" + sobject.schemaText;
                     }
                     else if (!exploredSterings.Contains(currentPatternCheck))
                     {
@@ -245,16 +414,12 @@ public class StrictFatherMorality : MoralModels
 
                         if (NPCType.ToLower() == r) // add a check if bnpc has this flag  here 
                         {
-                            return sobject.schemaText + "<color=yellow>_" + sobject.subvalue +"</color>"; //else return the first thing that is high 
-
+                            return "<color=yellow> the schema used is:" + sobject.schema + "</color>" + sobject.schemaText + "<color=yellow>_" + sobject.subvalue +"</color>"; //else return the first thing that is high 
+                            //debug whatever uses this!!!! AGHHHHHHHHHHHHHHHH
                         }
-                        exploredSterings.Add(currentPatternCheck);//.change this to the npc or player list of static flags ( if cnpc flag )
+                      //  exploredSterings.Add(currentPatternCheck);//.change this to the npc or player list of static flags ( if cnpc flag )
 
-                        foreach (string s in exploredSterings)
-                        {
-                            // Debug.Log("!!!!!+ exploredSterings npw adds" + s);
-
-                        }
+                      
                         i++;
                         currentPatternCheck = arg.SurfaceValueObject[i].subvalue; //slight logic bug in counter if the current checked one was in rthe middle of the list -- 
                     }
@@ -345,18 +510,6 @@ public class StrictFatherMorality : MoralModels
     }
 
     
-  /*  public string ReturnSchema(string pattern, Dialoug characterNode)
-    {
-       base.returnSchemaValue()
-    }
-*/
-
-    //retutired 
- 
-
-    //add self deispline and self reliance 
-
-
     public bool resultsInSelfIntrest()
     {
         //max welth - free stuff = badf in moral 

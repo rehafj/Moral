@@ -27,7 +27,7 @@ public class Transcript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.C))
         {
             Debug.Log("coppying to buffer");
-            EditorGUIUtility.systemCopyBuffer = logForBuffer.text;
+           // EditorGUIUtility.systemCopyBuffer = logForBuffer.text;
         }
     }
 

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
 using System;
+using System.IO;
 
 public class FastTesting : MonoBehaviour
 {
@@ -12,9 +13,9 @@ public class FastTesting : MonoBehaviour
     public InputField input;
 
     // Start is called before the first frame update
-  
 
 
+    int characterLimit = 20000;
 
     public List<Tree> allCharacterConversationsTrees = new List<Tree>();
     private Tree currentTree;
@@ -41,14 +42,12 @@ public class FastTesting : MonoBehaviour
     public List<InterestingCharacters> conversedAboutCharectersList;
 
     InterestingCharacters currentIntrestingCharracter;
-    public List<string> currentTopicsAboutCurrentCharacter; //this is what we are using and clearing 
 
     //high good bad is low
     Dialoug currentNode;
 
     int moralFocusCounter = 0;
 
-    public List<string> currentCNPCExploredSurfaceValues = new List<string>();
 
 
     //testing:
@@ -63,6 +62,8 @@ public class FastTesting : MonoBehaviour
     List<Dialoug> currentIntersectingNodes;
     List<Dialoug> nonIntersectingNodes_generic; //something is wrong in this... 
     Queue<Dialoug> currentPlayerOptionsInInnerConversation = new Queue<Dialoug>();
+
+    List<string> currentBNPCPatterns = new List<string>(); //why oth dies and strings --- what did i do here?
     int innerConversationCounter = 0;
     string CurrentCNPCSTANCE = "high";
     string currentPlayerStance = "low";
@@ -78,6 +79,7 @@ public class FastTesting : MonoBehaviour
 
     public void Start()
     {
+        initiFile();
         Invoke("t", 2);
 
 
@@ -88,11 +90,13 @@ public class FastTesting : MonoBehaviour
     {
         bgchar = FindObjectOfType<BackgroundCharacter>();
         // DiagramWindow = FindObjectOfType<DaigramWindow>();
-        AllOpinions = jsn.listOfConversations; Debug.Log(AllOpinions.Count);
-        Debug.Log("agent" + agent.name);
+        AllOpinions = jsn.listOfConversations; 
+        //Debug.Log(AllOpinions.Count);
+        //Debug.Log("agent" + agent.ConversationalNpcName);
         OrgnizeCNPCOpinions();
         setUp();
         startGame(5f, treeCounter); //change this to the animations time / or agents path time
+       Debug.Log("is it part of father mdoel " + agent.IsFatherModel);
 
         currentMoralModelExploredPatterns = new List<string>();
         currentMoralModelExploredPatterns_PLAYER = new List<string>();
@@ -100,12 +104,22 @@ public class FastTesting : MonoBehaviour
 
     private void resetConversationForNextCNPC()
     {
+        //Debug.Log("reseting agent and conversations");
         CurrentCNPCSTANCE = "high";
         currentPlayerStance = "low";
         innerConversationCounter = 0;
         moralModelCounterLoop = 0;
         isInMoralModelArgumentLoop = false;
         counterLoopForSchema = 0;
+        currentMoralModelExploredPatterns.Clear();
+        currentMoralModelExploredPatterns_PLAYER.Clear();
+          agent = new ConversationalCharacter();
+        //agent.ResetTestingAgent();
+        agent.PlayerScore = 0;
+        agent.CNPCScore = 0;
+        startNextRound();
+
+
     }
     public Dialoug returnCurrentNode()
     {
@@ -128,13 +142,17 @@ public class FastTesting : MonoBehaviour
       
 
         startAconversation(allCharacterConversationsTrees[treeIndexer]);
-    /*    if (firstConversation)
-        {
-            Debug.Log("should print");
-            setPlayerPattern();
 
-        }*/
+    }
 
+    void startNextRound()
+    {
+        Dialoug introductionNode = getAnIntroductionNode();
+
+        printText(false, introductionNode.mainOpinionOnAtopic);
+        converseAboutNextCharacter();
+
+        //startAconversation(allCharacterConversationsTrees[treeCounter+1]);
     }
 
     void printText (bool isNPC, string t)
@@ -142,26 +160,48 @@ public class FastTesting : MonoBehaviour
         if (isNPC)
         {
             
-            text.text += "<color=#c6c5b9>\t" + t + "\n </color>";
+            text.text += "<color=#c6c5b9>" + t + "\n </color>";
+            WriteToFile("npc text:  "+ t + " \n");
         }
         else
         {
        /*     Color c = Color.blue;
             text.color = c;*/
-            text.text += "  <color=#62929e>\t" + t + "</color> \n";
+            text.text += "  <color=#62929e>" + t + "</color> \n";
+            WriteToFile("PLAYER text:  " + t + " \n");
+
         }
     }
+
     private void startAconversation(Tree chosenTree)
     {
         //  moralCounter = 0; //reset it for next character
 
+     
       currentNode = choseADialougNode(chosenTree.root.children);//i.e we are still in the same tree
 
+        //  Debug.Log("current node" + currentNode.Pattern);
+                text.text += "<color=orange> other possible mappings for the pattern </color> " + currentNode.Pattern + "  <color=orange>includes:\n</color>";
+        WriteToFile(" other possible mappings for the pattern </color> " + currentNode.Pattern + "  <color=orange>includes:\n</color>");
+        printAdditionalInformation(returnAllPossibleSubToSVMapping(currentNode));
 
-      printText(true, "<color=yellow> pattern: " + currentNode.Pattern + "</color> "+ currentNode.UnbiasedOpeningStatment +
-                     "\n <color=yellow>Mapped SV and  rating: " + currentNode.MappedSurfaceValue + " : "+
+        printText(true, "<color=yellow> initial pattern: " + currentNode.Pattern + "</color> "+ currentNode.UnbiasedOpeningStatment +
+                     "\n <color=yellow> Mapped SV:  " + currentNode.MappedSurfaceValue + " Rating: "+
                      agent.ConvCharacterMoralFactors[currentNode.MappedSurfaceValue].ToString() +
-                    "</color>" +  currentNode.mainOpinionOnAtopic + "\n");
+                    "</color> \n" +  currentNode.mainOpinionOnAtopic + "\n");
+
+        text.text += "<color=orange>other possible mappings for the SV includes:\n</color>";
+        WriteToFile("<color=orange>other possible mappings for the SV includes:\n</color>");
+
+        printAdditionalInformation(returnAllPossibleSVOpeningStrings(currentNode.MappedSurfaceValue));
+
+        currentBNPCPatterns.Clear();//should this be cleared? check it out me psyduck
+        foreach (Dialoug d in currentNode.parent.children)
+        {
+            currentBNPCPatterns.Add(d.Pattern);
+            Debug.Log(d.MappedSurfaceValue + "!!!");
+        }
+
         setPlayerPattern();
      //BAM   activatePlayerOptionsInButton(currentNode); //newcommentedout
 
@@ -241,6 +281,8 @@ public class FastTesting : MonoBehaviour
 
         text.text +=  "surface valuef for this flag" + currentNode.agreementText + 
                 "presist on importance of moral flag ";
+        WriteToFile("surface valuef for this flag" + currentNode.agreementText +
+                "presist on importance of moral flag ");
 
     }
     Dialoug choseADialougNode(List<Dialoug> bgCharacterNOdes)
@@ -249,9 +291,9 @@ public class FastTesting : MonoBehaviour
         int i = 0;
         foreach (Dialoug d in bgCharacterNOdes)
         {
-            Debug.Log("list size is " + bgCharacterNOdes.Count);
+           // Debug.Log("list size is " + bgCharacterNOdes.Count);
 
-            Debug.Log("value of node" + d.Pattern + "is " + d.Explored + "value of counter" + i);
+           // Debug.Log("value of node" + d.Pattern + "is " + d.Explored + "value of counter" + i);
             if (!d.Explored)//element is not explored 
             {
                 d.Explored = true;
@@ -275,90 +317,11 @@ public class FastTesting : MonoBehaviour
 
     List<Dialoug> temporaryListOfNodes = new List<Dialoug>();
 
-    void activatePlayerOptionsInButton(Dialoug node) //hardcoded for now - do this for the current height of the tree --- 
-    {
-
-        if (node.getHeight() == 2)
-        {
-            Debug.Log("heioght is 2");
-
-
-            if (!isInMoralModelArgumentLoop)
-            {
-                Debug.Log("not in moral model argument loop");
-
-                setPlayerPattern();
-              
-                if (typedResult == 1)
-                {
-                    Debug.Log("wtfff");
-
-                    //playerAgrees();
-                }
-                else if (typedResult == 2) { playerDissAgrees(); Debug.Log("!isInMoralModelArgumentLoop + typedResult== 3"); }
-            }
-            else if (isInMoralModelArgumentLoop && !playerChoseAModel)
-            {
-                Debug.Log("isInMoralModelArgumentLoop && !playerChoseAModel ");
-
-                giveMoralModelChoice(); //BAM check where to actually give this option... 
-                if (typedResult == 1) {
-                    playerChoseFatherModel();
-                    Debug.Log("isInMoralModelArgumentLoop && !playerChoseAModel +  playerChoseFatherModel(); ");
-                } else if (typedResult == 2) { playerChoseMotherModel(); Debug.Log("isInMoralModelArgumentLoop && !playerChoseAModel +  mothermodel(); ");
-                }
-            }
-            else if (isInMoralModelArgumentLoop && playerChoseAModel) // after clicking moral models...? // && !mainModelChoice otter
-            {
-
-                Debug.Log("isInMoralModelArgumentLoop && playerChoseAModel ");
-
-
-                if (typedResult == 1) { playerChoseFatherModel(); } else if (typedResult == 2) { playerChoseMotherModel(); }
-
-
-
-                int maxoptions = 2;
-                temporaryListOfNodes.Clear();
-                for ( int i =0; i<=2; i++)
-                {
-                    if (i <= maxoptions)
-                    {
-
-                        Dialoug d = currentPlayerOptionsInInnerConversation.Dequeue();
-                        text.text += i.ToString() + getButtonTextTranslation(d.Pattern);
-                        Debug.Log("adding node" + d.Pattern);
-                        temporaryListOfNodes.Add(d);
-
-
-                    }
-                    switch (typedResult)
-                    {
-                        case (1):
-                            PlayerDisagreedOnFlag(temporaryListOfNodes[0]);
-                            break;
-                        case (2):
-                            PlayerDisagreedOnFlag(temporaryListOfNodes[1]);
-                            break;
-                        case (3):
-                            PlayerDisagreedOnFlag(temporaryListOfNodes[2]);
-                            break;
-                        default:
-                            break; 
-                    }
-
-                }
-
-            }
-        }
-
-        typedResult = 0;
-
-    }
+  
 
     private void PlayerDisagreedOnFlag(Dialoug d)//player
     {
-        waitAndPrintFatherModelDissagreemnt(d,true); //1
+        waitAndPrintFatherModelDissagreemnt(d, playerArguesWithFatherModel); //1
     }
 
 
@@ -407,15 +370,15 @@ public class FastTesting : MonoBehaviour
             {
 
                 Dialoug d = currentPlayerOptionsInInnerConversation.Dequeue();
-                text.text += (i+1).ToString() + getButtonTextTranslation(d.Pattern) +"\n";
-
+                text.text += (i+1).ToString() + getButtonTextTranslation(d.Pattern) +"under the topic[" + currentNode.MappedSurfaceValue +"]\n";
+                WriteToFile((i + 1).ToString() + getButtonTextTranslation(d.Pattern) + "\n");
                 temporaryListOfNodes.Add(d);
 
 
             }
-       
-
         }
+        text.text += "4. change topic \n";
+        WriteToFile("4. change topic \n");
     }
 
     private List<Dialoug> shuffleDialougNodes(List<Dialoug> nodes)
@@ -499,7 +462,7 @@ public class FastTesting : MonoBehaviour
         CurrentBNPCPatterns.Clear();
         foreach (Dialoug d in currentNode.parent.children)
         {
-            Debug.Log(d.Pattern + "::::" + d.MappedSurfaceValue);
+            //Debug.Log(d.Pattern + "::::" + d.MappedSurfaceValue);
             CurrentBNPCPatterns.Add(d);
 
         }
@@ -510,7 +473,7 @@ public class FastTesting : MonoBehaviour
             {
                 //logical bug somehwre here... 
                 currentNonIntersectingNodesWithCoreValues.Add(d);
-                Debug.Log(d.Pattern + "added for the sv (non intersecting)" + d.MappedSurfaceValue);
+               // Debug.Log(d.Pattern + "added for the sv (non intersecting)" + d.MappedSurfaceValue);
 
             }
 
@@ -537,6 +500,7 @@ public class FastTesting : MonoBehaviour
     private void giveMoralModelChoice()
     {
         text.text += "1." + "persuade with authority" + "\n"+  "2. Appeal to sensibility \n";
+        WriteToFile("1." + "persuade with authority" + "\n" + "2. Appeal to sensibility \n");
     }
 
     void playerAgrees()
@@ -547,8 +511,6 @@ public class FastTesting : MonoBehaviour
     }
     private void playerDissAgrees()
     {   //for daigraming
-        string[] texts = { currentNode.agreementText, currentNode.disagreementText };
-        //DiagramWindow.CreateMultipleBoxes(texts, currentNode.disagreementText);
 
        waitAndPrintDisagreement(currentNode.disagreementText); //currentNode.getRandomHatedFact())
                                                                                 // // // addTextToTranscript(currentNode., false);
@@ -563,6 +525,7 @@ public class FastTesting : MonoBehaviour
     {
         text.text += " 1. I agree \n ";
         text.text += " 2. I don't agree with you there  \n";
+    WriteToFile(" 1. I agree \n "+ " 2. I don't agree with you there  \n:");
  /*       text.text += "3. you know I heard other things about that cube  \n"; //pull from a list of random strings later //TODO
         text.text += "4. you know what, lets talk about something else  \n";*/
     }
@@ -572,6 +535,8 @@ public class FastTesting : MonoBehaviour
         text.text += " 2 I still don't agree with you therev \n";
         text.text += "3 Dish more about that cub \ne"; //pull from a list of random strings later //TODO
         text.text += "4 you know what, lets talk about something else \n";
+       
+
     }
 
     private void moveConversationToSelectedTree(int treeIndex)
@@ -581,49 +546,6 @@ public class FastTesting : MonoBehaviour
        startAconversation(currentTree);
     }
 
-    private void moveConversationToAflag(Dialoug d)
-    {
-       respondCharacterConversationToAFlag(d);
-    }
-
-    private void  respondCharacterConversationToAFlag(Dialoug d) //used by player! 
-    {
-
-     
-        text.text += "\n " +getPlayerResponceToAflag(currentNode.MappedSurfaceValue, d.Pattern, currentNode.Rating, TypeOfPlayerTexts.disAgreeOnAflag, false);
-        //to do add somethin ghere -- to fix diagloig options
-        text.text += "\n " + currentNode.disagreementText;
-        if (currentNode.Rating.ToLower() == "high")
-        {
-            string appendedSchemaText = "";
-            string selectedText = "";
-            if (agent.IsFatherModel)
-            {
-                appendedSchemaText = agent.FatherModel.returnAppendedSchemaText(d.MappedSurfaceValue, d.Pattern, currentMoralModelExploredPatterns_PLAYER, true);
-                selectedText = agent.FatherModel.returnFatherModelArgumetnsText(
-                     currentNode.MappedSurfaceValue, currentNode.Pattern, currentMoralModelExploredPatterns_PLAYER, true);
-            }
-            else
-            {
-                appendedSchemaText = agent.MotherModel.returnAppendedSchemaText(d.MappedSurfaceValue, d.Pattern, currentMoralModelExploredPatterns_PLAYER, true);
-                selectedText = agent.MotherModel.returnNurturantModelArgumetnsText(
-                     currentNode.MappedSurfaceValue, currentNode.Pattern, currentMoralModelExploredPatterns_PLAYER, true);
-            }
-
-
-            text.text += appendedSchemaText + selectedText;
-
-
-
-        }
-
-        checkEndConversationAndMove();
-
-
-
-
-
-    }
 
     string getPlayerResponceToAflag(string surfaceValue, string arguedFlag, string rating, TypeOfPlayerTexts playerResponceType, bool isMoralARG) //change this intyo player responce
     {
@@ -671,13 +593,13 @@ public class FastTesting : MonoBehaviour
         return "No string found!";
     }
 
-
-
-
     void converseAboutNextCharacter()
     {
         treeCounter++;
-       startAconversation(allCharacterConversationsTrees[treeCounter]);//the first cgharacter in the list - yhionking about character....etc 
+        Debug.Log(allCharacterConversationsTrees[treeCounter].root.children[0].Pattern); //psyduck 
+       
+        
+        startAconversation(allCharacterConversationsTrees[treeCounter]);//the first cgharacter in the list - yhionking about character....etc 
 
     }
     Dialoug choseACharacterTree()
@@ -703,22 +625,63 @@ public class FastTesting : MonoBehaviour
 
     public int typedResult;
     bool firstConversation = true;
+
+    void WriteToFile(string s)
+    {
+        string path = Application.dataPath + "/Output.txt";
+        File.AppendAllText(path, s);
+    }
+    void initiFile()
+    {
+        string path = Application.dataPath + "/Output.txt";
+        if (!File.Exists(path))
+        {
+            File.WriteAllText(path, "logging data \n");
+        }
+        clearFile();
+    }
+
+    private void clearFile()
+    {
+        string path = Application.dataPath + "/Output.txt";
+
+        File.AppendAllText(path, "new file!");
+
+        using (var FileWriter = new StreamWriter(path, false))
+        {
+            FileWriter.WriteLine("");
+        }
+        UnityEditor.AssetDatabase.Refresh(); //psyduck
+    }
+
     public void Update()
     {
+        Debug.Log(text.text.Length);
+        if (text.text.Length >= characterLimit)
+        {
+            clearFile();
+            text.text = "had to clear due to unity's charatcer limit of 65k verts"; 
+            WriteToFile(text.text);
+            text.text = "clearing text window and writing to file - check out file titiled output!";
+        }
+        if (Input.GetKeyDown(KeyCode.M)) {
+
+            agent.ChangeModel();
+        }
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            WriteToFile(text.text);
+            text.text = "clearing text and writing to file";
+        }
         if (Input.GetKeyDown(KeyCode.Space))
         {
             typedResult = Convert.ToInt32(input.text);
-            input.text = "";
-            // activatePlayerOptionsInButton(currentNode);
-       
+            input.text = "";       
 
             if (!isInMoralModelArgumentLoop)
             {
                 firstConversation = false;
-                //setPlayerPattern();
-
                 Debug.Log("not in moral model argument loop - regular loop");
-
                 if (typedResult == 1)
                 {
 
@@ -742,32 +705,70 @@ public class FastTesting : MonoBehaviour
                 }
                 else if (typedResult == 2)
                 {
-                   // playerChoseMotherModel();
+                    playerChoseMotherModel();
                     Debug.Log("player chose mother model ");
                 }
             } else if(isInMoralModelArgumentLoop && playerChoseAModel)
             {
-                switch (typedResult)
+                Debug.Log("inside options choice!");
+                if (!PlayerChnagesTopic)
                 {
-                   
-                    case (1):
-                        Debug.Log("p[layer pressed node 0");
-                        Debug.Log(temporaryListOfNodes.Count);
-                        PlayerDisagreedOnFlag(temporaryListOfNodes[0]);
-                        break;
-                    case (2):
-                        Debug.Log("p[layer pressed node 1");
+                    switch (typedResult)
+                    {
 
-                        PlayerDisagreedOnFlag(temporaryListOfNodes[1]);
-                        break;
-                    case (3):
-                        Debug.Log("p[layer pressed node 2");
+                        case (1):
+                            Debug.Log("player pressed node 0");
+                            Debug.Log(temporaryListOfNodes.Count);
+                            PlayerDisagreedOnFlag(temporaryListOfNodes[0]);
+                            break;
+                        case (2):
+                            Debug.Log("player pressed node 1");
 
-                        PlayerDisagreedOnFlag(temporaryListOfNodes[2]);
-                        break;
-                    default:
-                        break;
+                            PlayerDisagreedOnFlag(temporaryListOfNodes[1]); //TICKTICKBOOM - bug here 
+                            break;
+                        case (3):
+                            Debug.Log("player pressed node 2");
+
+                            PlayerDisagreedOnFlag(temporaryListOfNodes[2]);
+                            break;
+                        case (4):
+                            PlayerSwitchesTopics();
+                            break;
+                        default:
+                            break;
+                    }
+                } else
+                {
+                    switch (typedResult)
+                    {
+
+                        case (1):
+                           
+                            PlayerchangeTopic(CurrentBNPCPatterns[0]);
+                            break;
+                        case (2):
+                         
+
+                            PlayerchangeTopic(CurrentBNPCPatterns[1]);
+                            break;
+                        case (3):
+                           
+
+                            PlayerchangeTopic(CurrentBNPCPatterns[2]);
+                            break;
+                        case (4):
+                            PlayerchangeTopic(CurrentBNPCPatterns[3]);
+
+                            break;
+                        default:
+                            break;
+                    }
+
+                    
                 }
+               
+
+                
             }
 
 
@@ -777,8 +778,20 @@ public class FastTesting : MonoBehaviour
 
 
     }
-
+    public bool PlayerChnagesTopic = false;
     
+    private void PlayerSwitchesTopics()
+    {
+        PlayerChnagesTopic = true;
+        int i = 0;
+        foreach (Dialoug d in CurrentBNPCPatterns)
+        {
+            i++;
+            text.text += i+".some transliation into topic for " + d.MappedSurfaceValue +"\n";
+            WriteToFile(i + ".some transliation into topic for " + d.MappedSurfaceValue + "\n");
+        }
+
+    }
 
     private void displayDialougOpinion()
     {
@@ -819,7 +832,7 @@ public class FastTesting : MonoBehaviour
         sortedList.AddRange(secondary);
         sortedList.AddRange(therest);
 
-        Debug.Log(sortedList.Count);
+       // Debug.Log(sortedList.Count);
         return sortedList;
 
 
@@ -1463,7 +1476,7 @@ public class FastTesting : MonoBehaviour
         int r = UnityEngine.Random.Range(0, 2);
         foreach (CharacterSearchBarFacts fact in jsn.ListOfBNPCFacts)
         {
-            Debug.Log("!!!called this for " + pattern + "with the key" + fact.SearchBarKey);
+            //Debug.Log("!!!called this for " + pattern + "with the key" + fact.SearchBarKey);
 
             if (pattern.ToLower() == fact.SearchBarKey.ToLower())
             {
@@ -1498,6 +1511,10 @@ public class FastTesting : MonoBehaviour
 
             printText(true, t);
 
+        } else
+        {
+            treeCounter++;
+               currentTree = allCharacterConversationsTrees[treeCounter];
         }
 
 
@@ -1511,13 +1528,14 @@ public class FastTesting : MonoBehaviour
         {
             giveMoralModelChoice();
             // activatePlayerOptionsInButton(currentNode);
-            Debug.Log("need to check something here ----");
+           // Debug.Log("need to check something here ----");
        
         } 
         else  if (isInMoralModelArgumentLoop && playerChoseAModel)
         {
-                Debug.Log("need to check something here ----");
-                Debug.Log("does this happen?" + "heeeelp");
+
+            playerChoseAModel = false;
+            giveMoralModelChoice();
 
         }
         else if (!currentTree.FullyExplored) //todo update this to next cnpc
@@ -1525,10 +1543,36 @@ public class FastTesting : MonoBehaviour
            startAconversation(currentTree);//at 0 
         }
         else
-        {
-            converseAboutNextCharacter();
+        { /*treeCounter++;
+               currentTree = allCharacterConversationsTrees[treeCounter];*/
+            converseAboutNextCharacter();//what cuases the bug --- ? works with agreeing tho .. 
         }
 
+    }
+
+    void testGiveInnerLoopPlayerOptions()
+    {
+        switch (typedResult)
+        {
+
+            case (1):
+                Debug.Log("player pressed node 0");
+                Debug.Log(temporaryListOfNodes.Count);
+                PlayerDisagreedOnFlag(temporaryListOfNodes[0]);
+                break;
+            case (2):
+                Debug.Log("player pressed node 1");
+
+                PlayerDisagreedOnFlag(temporaryListOfNodes[1]);
+                break;
+            case (3):
+                Debug.Log("player pressed node 2");
+
+                PlayerDisagreedOnFlag(temporaryListOfNodes[2]);
+                break;
+            default:
+                break;
+        }
     }
     void  waitAndPrintMoralAreas(string t)
     {
@@ -1537,19 +1581,22 @@ public class FastTesting : MonoBehaviour
     }
 
     void waitAndPrintDisagreement(string t)   //so this works... but does nto when in larger scenartio.. 
-    {
-        Debug.Log(currentTree.root.Pattern);
+    { //first disagreemwent 
         if (!currentTree.FullyExplored)
         {
 
             bool isMf = agent.IsMoralFocus(currentNode.MappedSurfaceValue);
+            text.text += "<color=orange> is this text part of the moral  focus area? " + isMf + "\n</color>";
+            WriteToFile("<color=orange> is this text part of the moral  focus area? " + isMf + "\n</color>");
 
             //basic disagreement 1
             printText(false, getPlayerResponce(currentNode.MappedSurfaceValue, currentNode.Rating,
                                   TypeOfPlayerTexts.disagreement, isMf));
 
-
+            WriteToFile(getPlayerResponce(currentNode.MappedSurfaceValue, currentNode.Rating,
+                                  TypeOfPlayerTexts.disagreement, isMf));
             printText(true, t);
+            WriteToFile(t);
 
             if (currentNode.Rating.ToLower() == "high")
             {
@@ -1559,64 +1606,149 @@ public class FastTesting : MonoBehaviour
                 {
                     if (agent.IsFatherModel)
                     {
-                        s = "<color=red> fatherModel used </color>"+  agent.FatherModel.returnAppendedSchemaText(currentNode.MappedSurfaceValue, currentNode.Pattern, currentMoralModelExploredPatterns, true);
-
+                        text.text += "<color=orange> what is the cnpc's stance (high/defend) (low/attack)" + agent.FatherModel.returnCurrentCnpcStance(currentNode.MappedSurfaceValue, currentNode.Pattern) + "\n </color>";
+                        WriteToFile("what is the cnpc's stance (high/defend) (low/attack)" + agent.FatherModel.returnCurrentCnpcStance(currentNode.MappedSurfaceValue, currentNode.Pattern) + "\n ");
+                        s = "using the father model  " +  agent.FatherModel.returnAppendedSchemaText(currentNode.MappedSurfaceValue, currentNode.Pattern, currentMoralModelExploredPatterns, true);
+                    
                     }
                     else
                     {
-                        s = "<color=blue> NurturanParent used </color>" + agent.MotherModel.returnAppendedSchemaText(currentNode.MappedSurfaceValue, currentNode.Pattern, currentMoralModelExploredPatterns, true);
+                        text.text += "<color=orange> what is the cnpc's stance (high/defend) (low/attack)" + agent.MotherModel.returnCurrentCnpcStance(currentNode.MappedSurfaceValue, currentNode.Pattern) + "\n </color>";
+                        WriteToFile(" what is the cnpc's stance (high/defend) (low/attack)" + agent.MotherModel.returnCurrentCnpcStance(currentNode.MappedSurfaceValue, currentNode.Pattern) + "\n ");
+
+                        s = "using the nurturanParent model " + agent.MotherModel.returnAppendedSchemaText(currentNode.MappedSurfaceValue, currentNode.Pattern, currentMoralModelExploredPatterns, true);
 
                     }
+                    counterLoopForSchema += 1;
 
                 }
                 string arg = "";
 
                 if (agent.IsFatherModel)
                 {
-                    arg = "<color=red> fatherModel used </color>" +agent.FatherModel.returnFatherModelArgumetnsText(
+
+
+                    arg = "<color=red> using the father model  </color>" +agent.FatherModel.returnFatherModelFirstArgument(
                    currentNode.MappedSurfaceValue, currentNode.Pattern, currentMoralModelExploredPatterns, true);
                 }
                 else
                 {
-                    arg = "<color=blue> NurturanParent used </color>"+ agent.MotherModel.returnNurturantModelArgumetnsText(
+                    arg = "<color=blue> using the nurturanParent model </color>" + agent.MotherModel.returnNurturantModelArgumetnsText(
                   currentNode.MappedSurfaceValue, currentNode.Pattern, currentMoralModelExploredPatterns, true);
                 }
 
-                printText(true, s + "\n" + arg);
-
-                                           
-
                 currentMoralModelExploredPatterns.Add(currentNode.Pattern);
+
+                
+
+                if (arg != "GenericResponceGiven")
+                {
+                    agent.CNPCScore += 1;
+                  /*  text.text += "<color=yellow>  \n" + "current score --- player" + agent.PlayerScore + "npc score" +
+                                agent.CNPCScore + " </color> \n";*/
+                    //printText(true, arg);
+
+
+                }
+                else if (arg == "GenericResponceGiven")
+                {
+                   string p =  getarandomBNPCPattern();
+                    arg = getGenricResponce(p,  CurrentCNPCSTANCE);
+                    //printText(true, arg);
+
+                }
+
+                printText(true, s + "\n" + arg);
+                if (agent.IsFatherModel)
+                {
+
+                    printAllCounterSrgumentsForAstance(agent.FatherModel.returnAllPossibleCounterArgumentsDebugging(getPlayerStance(), currentBNPCPatterns), CurrentCNPCSTANCE);
+                    WriteToFileAllCounterSrgumentsForAstance(agent.FatherModel.returnAllPossibleCounterArgumentsDebugging(CurrentCNPCSTANCE), getPlayerStance());
+                } else
+                {
+                    printAllCounterSrgumentsForAstance(agent.MotherModel.returnAllPossibleCounterArgumentsDebugging(getPlayerStance(), currentBNPCPatterns), CurrentCNPCSTANCE);
+
+                    WriteToFileAllCounterSrgumentsForAstance(agent.MotherModel.returnAllPossibleCounterArgumentsDebugging(getPlayerStance()), CurrentCNPCSTANCE);
+
+                }
+                // currentMoralModelExploredPatterns.Add(currentNode.Pattern);
                 isInMoralModelArgumentLoop = true;
+
+                
              
             }
 
 
-        }
+        } 
+            else
+            {
+                treeCounter++;
+                currentTree = allCharacterConversationsTrees[treeCounter];
+            }
+        
         checkEndConversationAndMove();
 
     }
 
+   
+    void PlayerchangeTopic(Dialoug node)
+    {
+        currentNode = node;
+        text.text += "player changed topics too" + node.MappedSurfaceValue;
+        if (playerArguesWithFatherModel)
+        {
+            playerChoseFatherModel();
+        } else
+        {
+            playerChoseMotherModel();
+        }
+        PlayerChnagesTopic = false;
 
+    }
+
+    string getPlayerStance()
+    {
+        if (CurrentCNPCSTANCE.ToLower() == "high")
+        {
+            return "low";
+        }
+        else
+        {
+            return "high";
+        }
+    }
+
+    private string getarandomBNPCPattern()
+    {
+
+        int r = UnityEngine.Random.Range(0, currentBNPCPatterns.Count);
+        return currentBNPCPatterns[r];
+    }
+
+    //ticktickboom
 
     void waitAndPrintFatherModelDissagreemnt(Dialoug node, bool playerChoseFM)   //2 // add isNPC/PLAYER? NO it's in already
     {
 
-        if (agent.IsFatherModel)
+        //prints only player responce not npc??? 
+       
+/*        currentBNPCPatterns
+*/        if (agent.IsFatherModel)
         {
             CurrentCNPCSTANCE = agent.FatherModel.returnCurrentCnpcStance(currentNode.MappedSurfaceValue, currentNode.Pattern);
 
             if (CurrentCNPCSTANCE.ToLower() == "high")
             {
-                text.text += "<color=yellow> NPC IS Defending/ likes this person</Color> using <color=red> father model</color>";
+                text.text += "<color=yellow> NPC IS Defending/ likes this person</Color> using <color=red> father model</color> +\n" + "<color=yellow> Player IS Opposing BNPC </color> +\n";
+                WriteToFile("<color=yellow> NPC IS Defending/ likes this person</Color> using <color=red> father model</color> +\n" + "<color=yellow> Player IS Opposing BNPC </color> +\n");
                 currentPlayerStance = "low";
 
             }
             else
             {
-                text.text += "<color=yellow> NPC IS attacking/ dislikes this person</Color> using <color=red> father model</color>";
+                text.text += "<color=yellow> NPC IS attacking/ dislikes this person</Color> using <color=red> father model</color> +\n" + "<color=yellow> Player IS defending BNPC </color> +\n";
                 currentPlayerStance = "high";
-                    }
+            }
 
         }
         else //refactor this into one method me //otter //bam
@@ -1625,12 +1757,16 @@ public class FastTesting : MonoBehaviour
           
             if (CurrentCNPCSTANCE.ToLower() == "high")
             {
-                text.text += "<color=yellow> NPC IS Defending/ likes this person</Color> using <color=blue> nurturant model</color>";
+                text.text += "<color=yellow> NPC IS Defending/ likes this person</Color> using <color=blue> nurturant model</color> +\n";
+                WriteToFile("<color=yellow> NPC IS Defending/ likes this person</Color> using <color=blue> nurturant model</color> +\n");
+                
                 currentPlayerStance = "low";
             }
             else
             {
-                text.text += "<color=yellow> NPC IS attacking/ dislikes this person</Color> using <color=blue> nurturant model</color>";
+                text.text += "<color=yellow> NPC IS attacking/ dislikes this person</Color> using <color=blue> nurturant model</color> +\n";
+                WriteToFile(" <color=yellow> NPC IS attacking / dislikes this person </ Color > using < color = blue > nurturant model </ color > +\n");
+
                 currentPlayerStance = "high";
 
             }
@@ -1645,7 +1781,7 @@ public class FastTesting : MonoBehaviour
 
             //basic disagreement 1
 
-
+            //refactor me and just call wait and print disagreement recursivly
             string s = "";
             if (counterLoopForSchema <= 0)
             {
@@ -1659,74 +1795,121 @@ public class FastTesting : MonoBehaviour
                     s = agent.MotherModel.returnAppendedSchemaText(currentNode.MappedSurfaceValue, node.Pattern, currentMoralModelExploredPatterns_PLAYER, false);
 
                 }
+                counterLoopForSchema += 1;
             }
-            //otter - change base don ig player chose father / mother model //change this!!! 
-            string playerResponce = agent.FatherModel.returnFatherModelArgumetnsForAspecficString(
-                   currentNode.MappedSurfaceValue, node.Pattern,
-                   currentMoralModelExploredPatterns_PLAYER, currentPlayerStance);
-
-            currentMoralModelExploredPatterns_PLAYER.Add(node.Pattern);
+            //otter - change based on if player chose father / mother model //change this!!! 
 
 
+            string playerResponce = "";
+           if (playerChoseFM)
+            {
+                playerResponce = s +  agent.FatherModel.returnFatherModelArgumetnsForAspecficString(
+                 currentNode.MappedSurfaceValue, node.Pattern,
+                 currentMoralModelExploredPatterns_PLAYER, currentPlayerStance);
+
+            } else if (!playerChoseFM)
+            {
+                playerResponce = s + agent.MotherModel.returnNPtextForAGivenString(
+               currentNode.MappedSurfaceValue, node.Pattern,
+               currentMoralModelExploredPatterns_PLAYER, currentPlayerStance);
+            }
+
+
+            currentMoralModelExploredPatterns_PLAYER.Add(node.Pattern); //make sure it is no longer an optopn for the olayer otter
 
             if (playerResponce != "GenericResponceGiven")
             {
                 agent.PlayerScore += 1;
-                text.text += "\n " + s + playerResponce;
+                text.text += "<color=yellow>  \n" + "current score --- player" + agent.PlayerScore + " \n npc score -----" +
+                            agent.CNPCScore + " </color> \n";
+                WriteToFile("<color=yellow>  \n" + "current score --- player" + agent.PlayerScore + " \n npc score -----" +
+                            agent.CNPCScore + " </color> \n");
+                printText(false, playerResponce);
              
 
             }
             else if (playerResponce == "GenericResponceGiven")
             {
                 playerResponce = getGenricResponce(node.Pattern, currentPlayerStance);
-                text.text += "\n " +  playerResponce;
+                printText(false, playerResponce);
 
             }
-
+            //need to add a cond that returns us to this loop and check if list is empty for the qued up nodes 
             string NPCResponce = "";
-
+            string r = " ";
             if (agent.IsFatherModel)
             {
-                agent.FatherModel.returnFatherModelArgumetnsText(
-                              currentNode.MappedSurfaceValue, currentNode.Pattern, currentMoralModelExploredPatterns, true);
+
+                foreach(string n in currentMoralModelExploredPatterns)
+                {
+                    Debug.Log(n);
+                }
+                NPCResponce = agent.FatherModel.returnFatherModelArgumetnsText(
+                              currentNode.MappedSurfaceValue, currentNode.Pattern,
+                              currentMoralModelExploredPatterns, currentBNPCPatterns, true);
+
+                
+                /* r = NPCResponce.Split('_').Last();
+                Debug.Log("this should give us a pattern " + r);
+                NPCResponce = NPCResponce.Split('_').First();
+*/
+
+
+                Debug.Log("full npc responce" + NPCResponce);
+                //currentMoralModelExploredPatterns.Add(r);
+
             }
             else
             {
-                agent.MotherModel.returnNurturantModelArgumetnsText(
+                Debug.Log("went to mm responces");
+                NPCResponce = agent.MotherModel.returnNurturantModelArgumetnsText(
               currentNode.MappedSurfaceValue, currentNode.Pattern, currentMoralModelExploredPatterns, true);
             }
 
             Debug.Log("NPC responce" + NPCResponce);
+
             if (NPCResponce != "GenericResponceGiven")
             {
                 agent.CNPCScore += 1; //BUG HERE REPORT
-                text.text += NPCResponce;
-               
+                text.text += "<color=yellow>  \n" + "current score --- player" + agent.PlayerScore + "\n npc score" +
+                    agent.CNPCScore + " </color> \n";
+                    
+                printText(true, NPCResponce);   
 
             }
             else if (NPCResponce == "GenericResponceGiven")
             {
-                NPCResponce = getGenricResponce(node.Pattern, currentPlayerStance);
+                if (r != " ") //something buggy here.... otter
+                {
+                    NPCResponce = getGenricResponce(getarandomBNPCPattern(), currentPlayerStance);
 
+                }else
+                {
+                    NPCResponce = getGenricResponce(getarandomBNPCPattern(), currentPlayerStance);
 
-                text.text += "\n " +  agent.ConversationalNpcName + " says:" + NPCResponce;
-                // DiagramWindow.CreateSingleBox(0, 0, currentNode, NPCResponce, DaigramWindow.boxTypes.playerNormal);
+                }
+                // currentMoralModelExploredPatterns.Add(node.Pattern);
+
+                printText(true, NPCResponce);
 
 
             }
-            // // addTextToTranscript(NPCResponce, true);   // otter --- the text gerwe awas blacnk if iot was a mother model thing... 
 
-
-
-            currentMoralModelExploredPatterns.Add(currentNode.Pattern);
+            // currentMoralModelExploredPatterns.Add(currentNode.Pattern);
             isInMoralModelArgumentLoop = true;
 
          
             innerConversationCounter += 1;
-
+            Debug.Log("innerConversationCounter: " + innerConversationCounter);
            checkInnerConversationLoop();
 
-        }
+        } 
+            else
+            {
+                treeCounter++;
+                currentTree = allCharacterConversationsTrees[treeCounter];
+            }
+        
         checkEndConversationAndMove();
 
     }
@@ -1742,16 +1925,18 @@ public class FastTesting : MonoBehaviour
                 Debug.LogWarning(r);
                 if (stance.ToLower() == "high")
                 {
-                    return genericText.highGnericResponces[r];
+                    return "<color=green> the pattern " + pattern + "failed the model check and produced a generic defending statment </color>" +
+                         genericText.highGnericResponces[r];
                 }
                 else
                 {
-                    return genericText.lowGnericResponces[r];
+                    return "<color=green> the pattern " + pattern + "failed the model check and produced a generic defending statment </color>" +
+                     genericText.lowGnericResponces[r];
 
                 }
             }
         }
-        return "no generic responce found for the key" + pattern + stance;
+        return "no generic responce found for the key" + pattern +  stance;
     }
 
 
@@ -1762,18 +1947,24 @@ public class FastTesting : MonoBehaviour
         {
             isInMoralModelArgumentLoop = false;
             innerConversationCounter = 0;
-
+            counterLoopForSchema = 0;
             if (agent.PlayerScore >= agent.CNPCScore)
             {
 
-                text.text += "\n " +  "player " + "\'" + "wins" + "\'" + "convo  -- in future build start with next cnpc instead of current one/move to next convo";
+                text.text += "\n " +  "player " + "\'" + "wins" + "\'" + "convo \n";// -- in future build start with next cnpc instead of current one/move to next convo
             }
             else
             {
-                text.text += "\n " + "CNPC " + "\'" + "wins" + "\'" + "convo - future will build with next cnpc instead of current one/ move to next convo";
+                text.text += "\n " + "CNPC " + "\'" + "wins" + "\'" + "convo  \n";
 
             }
 
+            resetConversationForNextCNPC();
+
+
+        } else
+        {
+            checkEndConversationAndMove();
         }
     }
 
@@ -1791,7 +1982,6 @@ public class FastTesting : MonoBehaviour
     }
 
 
- 
     void DisplayNodeIntroTopic(Dialoug d)
     {
         text.text += "\n " +d.UnbiasedOpeningStatment;
@@ -1799,12 +1989,198 @@ public class FastTesting : MonoBehaviour
 
     }
 
+    //additional debugging and fast testing methids 
+
+    List<string> returnAllPossibleSubToSVMapping(Dialoug node)
+    {
+        List<string> temporarySurfaceValues = new List<string>();
+        temporarySurfaceValues = SVCollection.returnCompatibleSurfaceValues(node.Pattern);
+        return temporarySurfaceValues;
+    }
+
+    List<string> returnAllPossibleSVOpeningStrings(string SV)
+    {
+        List<string> LISToFsurfaceOpinions = new List<string>();
+        string[] ratings = { "high", "mid", "low" };
+
+        foreach (string r in ratings)
+        {
+
+            foreach (DialougStructure op in highVaueOpinions)
+            {
+                if (op.topic.Split('_').Last().ToLower() == SV.ToLower())
+                {
+                    LISToFsurfaceOpinions.Add("The SV \'" + SV + "\' with a rating of " + r + ":" + op.NarrativeElements.surfaceOpinionOnTopic);
+                }
+            }
+
+        }
+
+        return LISToFsurfaceOpinions;
+    }
+    void printAdditionalInformation(string s)
+    {
+        text.text += "<color=orange> Additional information: </color> <color=#ff6d00> " + s + "</color> \n";
+    }
+    void printAdditionalInformation(string[] sArray)
+    {
+
+        text.text += "<color=orange>Additional information:</color>";
+
+        foreach (string s in sArray)
+        {
+            text.text += "<color=#ff6d00> [ " + s + " ]</color> ";
+
+        }
+        text.text += "\n ";
+
+    }
+
+    void WriteToFileAllCounterSrgumentsForAstance(List <KeyValuePair<string,string>> li, string stance)
+    {
+        int i = 0;
+        text.text += "check out the textfile, the resultin text is too big for unity's UI!";
+            
+           string s =  "<color=orange>Additional information: --- NOTE: This list includes all possible responces (without BNPC intersections)  -- </color>\n";
+       
+            foreach (KeyValuePair<string, string> kvp in li)
+            {
+                i++;
+                s+= "<color=#ff6d00> By using the " + i + ".  SV[" + kvp.Key + "]" + " Responce " + kvp.Value + "</color> \n";
+            }
+        WriteToFile(s);
+
+    }
+    void printAllCounterSrgumentsForAstance(List<KeyValuePair<string, string>> li, string stance)
+    {
+        int i = 0;
+
+        string s = "<color=orange>Additional information: --- NOTE: This list includes just the intersecting patterns! for the stance  -- </color>\n "+ stance;
+        string firstFive = "";
+        foreach (KeyValuePair<string, string> kvp in li)
+        {
+            i++;
+            if (i <= 5)
+            {
+                firstFive += "<color=#ff6d00> By using the " + i + ".  SV[" + kvp.Key + "]" + " Responce " + kvp.Value + "</color> \n";
+            }
+            s += "<color=#ff6d00> By using the " + i + ".  SV[" + kvp.Key + "]" + " Responce " + kvp.Value + "</color> \n";
+        
+        }
+        if(s.Length > 30000 && text.text.Length >=30000)
+        {
+            text.text += "sadly printing the text here is too big! please refer to the output file! for the complete list";
+            WriteToFile(s);
+
+        } else
+        {
+            text.text += "printing the first five elements: refer to output file for more information \n";
+            text.text += firstFive;
+            WriteToFile(s);
+        }
+        
+
+    }
+
+
+    void printAdditionalInformation(List<string> sArray)
+    {
+
+        text.text += "<color=orange>Additional information:</color> ";
+        WriteToFile("<color=orange>Additional information:</color> ");
+        foreach (string s in sArray)
+        {
+            text.text += "<color=#ff6d00> [ " + s + " ]</color> ";
+            WriteToFile("<color=#ff6d00> [ " + s + " ]</color>");
+        }
+        text.text += "\n ";
+        WriteToFile("\n");
+
+
+    }
 
 
 
 }
 
 
+/*   void activatePlayerOptionsInButton(Dialoug node) //hardcoded for now - do this for the current height of the tree --- 
+    {
+
+        if (node.getHeight() == 2)
+        {
+            Debug.Log("heioght is 2");
 
 
-   
+            if (!isInMoralModelArgumentLoop)
+            {
+                Debug.Log("not in moral model argument loop");
+
+                setPlayerPattern();
+              
+                if (typedResult == 1)
+                {
+                    Debug.Log("wtfff");
+
+                    //playerAgrees();
+                }
+                else if (typedResult == 2) { playerDissAgrees(); Debug.Log("!isInMoralModelArgumentLoop + typedResult== 3"); }
+            }
+            else if (isInMoralModelArgumentLoop && !playerChoseAModel)
+            {
+                Debug.Log("isInMoralModelArgumentLoop && !playerChoseAModel ");
+
+                giveMoralModelChoice(); //BAM check where to actually give this option... 
+                if (typedResult == 1) {
+                    playerChoseFatherModel();
+                    Debug.Log("isInMoralModelArgumentLoop && !playerChoseAModel +  playerChoseFatherModel(); ");
+                } else if (typedResult == 2) { playerChoseMotherModel(); Debug.Log("isInMoralModelArgumentLoop && !playerChoseAModel +  mothermodel(); ");
+                }
+            }
+            else if (isInMoralModelArgumentLoop && playerChoseAModel) // after clicking moral models...? // && !mainModelChoice otter
+            {
+
+                Debug.Log("isInMoralModelArgumentLoop && playerChoseAModel ");
+
+
+                if (typedResult == 1) { playerChoseFatherModel(); } else if (typedResult == 2) { playerChoseMotherModel(); }
+
+
+
+                int maxoptions = 2;
+                temporaryListOfNodes.Clear();
+                for ( int i =0; i<=2; i++)
+                {
+                    if (i <= maxoptions)
+                    {
+
+                        Dialoug d = currentPlayerOptionsInInnerConversation.Dequeue();
+                        text.text += i.ToString() + getButtonTextTranslation(d.Pattern);
+                        Debug.Log("adding node" + d.Pattern);
+                        temporaryListOfNodes.Add(d);
+
+
+                    }
+                    switch (typedResult)
+                    {
+                        case (1):
+                            PlayerDisagreedOnFlag(temporaryListOfNodes[0]);
+                            break;
+                        case (2):
+                            PlayerDisagreedOnFlag(temporaryListOfNodes[1]);
+                            break;
+                        case (3):
+                            PlayerDisagreedOnFlag(temporaryListOfNodes[2]);
+                            break;
+                        default:
+                            break; 
+                    }
+
+                }
+
+            }
+        }
+
+        typedResult = 0;
+
+    }*/

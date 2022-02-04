@@ -61,6 +61,41 @@ public class ConversationalCharacter : MonoBehaviour
         Init(setCharacterName());
     }
 
+    public void ResetTestingAgent()
+    {
+        setCharacterName();
+        changeValueStances();
+
+    }
+
+    private void changeValueStances()
+    {
+        
+        int i = 0;
+        tempHighVlaue.Clear();
+        foreach (string s in keys)
+        {
+            int x = Random.Range(0, 100);
+
+            NpcValueRating = getRandomNPCValue(x); //rating 
+            if (NpcValueRating == RatingVlaues.High)
+            {
+                tempHighVlaue.Add(s);
+            }
+            ConvCharacterMoralFactors[s] = NpcValueRating;
+
+            i++;
+        }
+
+       
+        setContradictingValues();
+        int index = UnityEngine.Random.Range(0, tempHighVlaue.Count);
+        setMoralFocusArea(tempHighVlaue[index]);
+        ahereToModel();
+
+
+    }
+
     public void ChangeModel()
     {
         if (IsFatherModel)
@@ -143,11 +178,6 @@ public class ConversationalCharacter : MonoBehaviour
         int index = UnityEngine.Random.Range(0, tempHighVlaue.Count);
         setMoralFocusArea(tempHighVlaue[index]);
         ahereToModel();
-
-
-        /*Debug.Log("check these values out : EnviromentalistAnti " + ConvCharacterMoralFactors["EnviromentalistAnti"] + "and ebviromentalist" +
-         ConvCharacterMoralFactors["Enviromentalist"] + "school is cool followed by drool " + ConvCharacterMoralFactors["SchoolIsCool"] + ConvCharacterMoralFactors["schoolIsDrool"]);
-*/
     }
 
     private void ahereToModel()
