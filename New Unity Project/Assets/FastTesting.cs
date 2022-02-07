@@ -14,7 +14,7 @@ public class FastTesting : MonoBehaviour
 
     // Start is called before the first frame update
 
-
+    
     int characterLimit = 20000;
 
     public List<Tree> allCharacterConversationsTrees = new List<Tree>();
@@ -181,17 +181,17 @@ public class FastTesting : MonoBehaviour
       currentNode = choseADialougNode(chosenTree.root.children);//i.e we are still in the same tree
 
         //  Debug.Log("current node" + currentNode.Pattern);
-                text.text += "<color=orange> other possible mappings for the pattern </color> " + currentNode.Pattern + "  <color=orange>includes:\n</color>";
-        WriteToFile(" other possible mappings for the pattern </color> " + currentNode.Pattern + "  <color=orange>includes:\n</color>");
-        printAdditionalInformation(returnAllPossibleSubToSVMapping(currentNode));
+
 
         printText(true, "<color=yellow> initial pattern: " + currentNode.Pattern + "</color> "+ currentNode.UnbiasedOpeningStatment +
                      "\n <color=yellow> Mapped SV:  " + currentNode.MappedSurfaceValue + " Rating: "+
                      agent.ConvCharacterMoralFactors[currentNode.MappedSurfaceValue].ToString() +
                     "</color> \n" +  currentNode.mainOpinionOnAtopic + "\n");
-
-        text.text += "<color=orange>other possible mappings for the SV includes:\n</color>";
-        WriteToFile("<color=orange>other possible mappings for the SV includes:\n</color>");
+        text.text += "<color=orange> other possible mappings for the pattern </color> " + currentNode.Pattern + "  <color=orange>includes:\n</color>";
+        WriteToFile(" other possible mappings for the pattern </color> " + currentNode.Pattern + "  <color=orange>includes:\n</color>");
+        printAdditionalInformation(returnAllPossibleSubToSVMapping(currentNode));
+        text.text += "<color=orange>other possible  SV sentences include:\n</color>";
+        WriteToFile("<color=orange>other possible mappings for  SVsentences include:\n</color>");
 
         printAdditionalInformation(returnAllPossibleSVOpeningStrings(currentNode.MappedSurfaceValue));
 
@@ -209,7 +209,7 @@ public class FastTesting : MonoBehaviour
     private Dialoug getAnIntroductionNode()
     {
         Dialoug Intronode = new Dialoug(" introduction" ,
-            getRandomIntroduction(), "graduate"); ;
+            getRandomIntroduction(), "graduate"); 
         return Intronode;
 
 
@@ -659,7 +659,7 @@ public class FastTesting : MonoBehaviour
         Debug.Log(text.text.Length);
         if (text.text.Length >= characterLimit)
         {
-            clearFile();
+            //clearFile();
             text.text = "had to clear due to unity's charatcer limit of 65k verts"; 
             WriteToFile(text.text);
             text.text = "clearing text window and writing to file - check out file titiled output!";
@@ -739,30 +739,47 @@ public class FastTesting : MonoBehaviour
                     }
                 } else
                 {
-                    switch (typedResult)
+                    if (typedResult <= CurrentBNPCPatterns.Count)
                     {
+                        switch (typedResult)
+                        {
 
-                        case (1):
-                           
-                            PlayerchangeTopic(CurrentBNPCPatterns[0]);
-                            break;
-                        case (2):
-                         
+                            case (1):
 
-                            PlayerchangeTopic(CurrentBNPCPatterns[1]);
-                            break;
-                        case (3):
-                           
+                                PlayerchangeTopic(CurrentBNPCPatterns[0]);
+                                break;
+                            case (2):
 
-                            PlayerchangeTopic(CurrentBNPCPatterns[2]);
-                            break;
-                        case (4):
-                            PlayerchangeTopic(CurrentBNPCPatterns[3]);
 
-                            break;
-                        default:
-                            break;
+                                PlayerchangeTopic(CurrentBNPCPatterns[1]);
+                                break;
+                            case (3):
+
+
+                                PlayerchangeTopic(CurrentBNPCPatterns[2]);
+                                break;
+                            case (4):
+                                PlayerchangeTopic(CurrentBNPCPatterns[3]);
+
+                                break;
+                            case (5):
+                                PlayerchangeTopic(CurrentBNPCPatterns[4]);
+
+                                break;
+                            case (6):
+                                PlayerchangeTopic(CurrentBNPCPatterns[5]);
+
+                                break;
+                            case (7):
+                                if (CurrentBNPCPatterns.Count <= typedResult)
+                                    PlayerchangeTopic(CurrentBNPCPatterns[6]);
+
+                                break;
+                            default:
+                                break;
+                        }
                     }
+                        
 
                     
                 }
@@ -1690,7 +1707,20 @@ public class FastTesting : MonoBehaviour
 
     }
 
-   
+
+    List<string> returnCurrentListOfBNPCPatternNames()
+    {
+        List<string> temp = new List<string>();
+        foreach (Dialoug d in CurrentBNPCPatterns)
+        {
+            temp.Add(d.Pattern);
+            
+        }
+        return temp;
+    }
+
+
+
     void PlayerchangeTopic(Dialoug node)
     {
         currentNode = node;
@@ -1967,7 +1997,7 @@ public class FastTesting : MonoBehaviour
             checkEndConversationAndMove();
         }
     }
-
+    // bdwabad //
     private void enterSubConversationOnDisagreement() //for now... 
     {
         // activateSubMenu();
