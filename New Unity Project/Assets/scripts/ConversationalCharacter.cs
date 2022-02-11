@@ -68,6 +68,12 @@ public class ConversationalCharacter : MonoBehaviour
 
     }
 
+    public string returnCNPCFeelingOnAtopic(string sv)
+    {
+        Debug.Log("returns high/mid/low" + sv + ConvCharacterMoralFactors[sv].ToString());
+        return ConvCharacterMoralFactors[sv].ToString();
+
+    }
     private void changeValueStances()
     {
         
@@ -275,7 +281,6 @@ public class ConversationalCharacter : MonoBehaviour
         return moralFocus;
     }
 
-    //when we set father/mother model use the boolian value ----NOTETOSELF
    
     public  bool doesLikeBNPC(bool Defending) //appply mother model later //otter
     {

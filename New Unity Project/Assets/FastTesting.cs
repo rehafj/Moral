@@ -63,7 +63,10 @@ public class FastTesting : MonoBehaviour
     List<Dialoug> nonIntersectingNodes_generic; //something is wrong in this... 
     Queue<Dialoug> currentPlayerOptionsInInnerConversation = new Queue<Dialoug>();
 
-    List<string> currentBNPCPatterns = new List<string>(); //why oth dies and strings --- what did i do here?
+    List<Dialoug> temporaryListOfNodes = new List<Dialoug>();
+
+
+  //  List<string> currentBNPCPatterns = new List<string>(); / removed - double check it did not break stuff ?
     int innerConversationCounter = 0;
     string CurrentCNPCSTANCE = "high";
     string currentPlayerStance = "low";
@@ -75,6 +78,13 @@ public class FastTesting : MonoBehaviour
 
 
     string playerName = "player";
+
+    List<string> probedAboutSV = new List<string>(); // same way we got the other sv ////
+    enum TypeOfPlayerTexts
+    {
+        agreement, disagreement, disAgreeOnAflag
+    }
+    TypeOfPlayerTexts typeOfPlayerTexts;
 
 
     public void Start()
@@ -113,7 +123,7 @@ public class FastTesting : MonoBehaviour
         counterLoopForSchema = 0;
         currentMoralModelExploredPatterns.Clear();
         currentMoralModelExploredPatterns_PLAYER.Clear();
-          agent = new ConversationalCharacter();
+         // agent = new ConversationalCharacter();
         //agent.ResetTestingAgent();
         agent.PlayerScore = 0;
         agent.CNPCScore = 0;
@@ -180,7 +190,7 @@ public class FastTesting : MonoBehaviour
      
       currentNode = choseADialougNode(chosenTree.root.children);//i.e we are still in the same tree
 
-        //  Debug.Log("current node" + currentNode.Pattern);
+         Debug.Log("is this ok ? current node when statyinhg  asvonbrtdasytion --- " + currentNode.Pattern + currentNode.MappedSurfaceValue);
 
 
         printText(true, "<color=yellow> initial pattern: " + currentNode.Pattern + "</color> "+ currentNode.UnbiasedOpeningStatment +
@@ -195,11 +205,11 @@ public class FastTesting : MonoBehaviour
 
         printAdditionalInformation(returnAllPossibleSVOpeningStrings(currentNode.MappedSurfaceValue));
 
-        currentBNPCPatterns.Clear();//should this be cleared? check it out me psyduck
+        CurrentBNPCPatterns.Clear();//should this be cleared? check it out me psyduck
         foreach (Dialoug d in currentNode.parent.children)
         {
-            currentBNPCPatterns.Add(d.Pattern);
-            Debug.Log(d.MappedSurfaceValue + "!!!");
+            CurrentBNPCPatterns.Add(d);
+            Debug.Log("starting a new conversation mapped SV"+ d.MappedSurfaceValue + " for the pattern " + d.Pattern);
         }
 
         setPlayerPattern();
@@ -291,9 +301,7 @@ public class FastTesting : MonoBehaviour
         int i = 0;
         foreach (Dialoug d in bgCharacterNOdes)
         {
-           // Debug.Log("list size is " + bgCharacterNOdes.Count);
 
-           // Debug.Log("value of node" + d.Pattern + "is " + d.Explored + "value of counter" + i);
             if (!d.Explored)//element is not explored 
             {
                 d.Explored = true;
@@ -307,17 +315,9 @@ public class FastTesting : MonoBehaviour
                 break;
             }
         }
-
-
         return currentNode;
 
     }
-
-
-
-    List<Dialoug> temporaryListOfNodes = new List<Dialoug>();
-
-  
 
     private void PlayerDisagreedOnFlag(Dialoug d)//player
     {
@@ -330,9 +330,11 @@ public class FastTesting : MonoBehaviour
 
         currentIntersectingNodes = getIntersectingCoreValueNodesForATopic();
         currentIntersectingNodes = shuffleDialougNodes(currentIntersectingNodes);
+      
 
-        nonIntersectingNodes_generic = getNonIntersectingCoreValueNodesForATopic();
+        nonIntersectingNodes_generic = getNonIntersectingCoreValueNodesForATopic(currentIntersectingNodes);
         nonIntersectingNodes_generic = shuffleDialougNodes(nonIntersectingNodes_generic);
+    
         //currentPlayerOptionsInInnerConversation
         setCurrentPlayerSFOptions();
         presentFMMoptions();
@@ -348,9 +350,15 @@ public class FastTesting : MonoBehaviour
 
         currentIntersectingNodes = getIntersectingCoreValueNodesForATopic();
         currentIntersectingNodes =  shuffleDialougNodes(currentIntersectingNodes);
+       // text.text += "shuffled as";
+       // printAdditionalInformation(currentIntersectingNodes);
 
-        nonIntersectingNodes_generic = getNonIntersectingCoreValueNodesForATopic();
+
+        nonIntersectingNodes_generic = getNonIntersectingCoreValueNodesForATopic(currentIntersectingNodes);
         nonIntersectingNodes_generic = shuffleDialougNodes(nonIntersectingNodes_generic);
+       // text.text += "shuffled as";
+       // printAdditionalInformation(nonIntersectingNodes_generic);
+
 
         setCurrentPlayerSFOptions();//node setup
         presentFMMoptions();
@@ -383,6 +391,7 @@ public class FastTesting : MonoBehaviour
 
     private List<Dialoug> shuffleDialougNodes(List<Dialoug> nodes)
     {
+       
         //based on  Fisher-Yates shuffle algorithm - from delftstack
         List<Dialoug> newList = new List<Dialoug>();
         System.Random r = new System.Random();
@@ -401,7 +410,7 @@ public class FastTesting : MonoBehaviour
 
     void setCurrentPlayerSFOptions()
     {
-
+        text.text += "adding all above nodes in a que \n";
         currentPlayerOptionsInInnerConversation.Clear();
         foreach (Dialoug d in currentIntersectingNodes)
         {
@@ -415,20 +424,25 @@ public class FastTesting : MonoBehaviour
 
     private List<Dialoug> getIntersectingCoreValueNodesForATopic()
     {
-
+        string s = "\n";
         List<Dialoug> currentIntersectingNodesWithCoreValues = new List<Dialoug>();
-
-        CurrentBNPCPatterns.Clear();
+        s += "The current BNPC patterns are ";
+       CurrentBNPCPatterns.Clear();
+       
         foreach (Dialoug d in currentNode.parent.children)
         {
            // Debug.Log(d.Pattern + "::::" + d.MappedSurfaceValue);
             CurrentBNPCPatterns.Add(d);
-
+            s += "<color=yellow>[" + d.Pattern + "]  </color>";
         }
+
+        s += "\n of those patterns the  current intersecting core patterns ";
+        
         currentIntersectingNodesWithCoreValues.Clear();
 
         if (agent.IsFatherModel)
         {
+            s += "<color=red> by father model standars </color> for the SV  [" + currentNode.MappedSurfaceValue +"] include: \n";
             foreach (Dialoug d in agent.FatherModel.returnIntersectingPatternNodes(CurrentBNPCPatterns, currentNode.MappedSurfaceValue, true))
             {
                 currentIntersectingNodesWithCoreValues.Add(d);
@@ -437,64 +451,91 @@ public class FastTesting : MonoBehaviour
         }
         else
         {
+            s += "<color= blue> nurturant model include </color> and the SV " + currentNode.MappedSurfaceValue + "include \n";
+
             foreach (Dialoug d in agent.MotherModel.returnIntersectingPatternNodes(CurrentBNPCPatterns, currentNode.MappedSurfaceValue, true))
             {
                 currentIntersectingNodesWithCoreValues.Add(d);
-
+                s += "<color=yellow>[" + d.Pattern + "] </color> ";
             }
         }
 
         if (currentIntersectingNodesWithCoreValues.Count <= 0)
         {
+            s += "[ NONE INTERSECT, ADDING THE FIRST ELement as a default answer ( leads to loss ) ]";
+
             currentIntersectingNodesWithCoreValues.Add(CurrentBNPCPatterns[0]);
             Debug.Log("if this shows up we have no intersectomg core patterns, just returning the first element");
         }
+
+        text.text += "\n" +  s;
+        WriteToFile(s);
         return currentIntersectingNodesWithCoreValues;
     }
 
 
 
-    private List<Dialoug> getNonIntersectingCoreValueNodesForATopic()
+    private List<Dialoug> getNonIntersectingCoreValueNodesForATopic(List<Dialoug>  intersectingNodes)
     {
+        string s = "\n";
 
         List<Dialoug> currentNonIntersectingNodesWithCoreValues = new List<Dialoug>();
+        s += "The current BNPC patterns are ";
 
         CurrentBNPCPatterns.Clear();
         foreach (Dialoug d in currentNode.parent.children)
         {
             //Debug.Log(d.Pattern + "::::" + d.MappedSurfaceValue);
             CurrentBNPCPatterns.Add(d);
+            s += "<color=yellow>[" + d.Pattern + "]  </color>";
 
         }
+        s += "\n of those patterns the  non intersecting patterns are \n ";
+
         currentNonIntersectingNodesWithCoreValues.Clear();
-        if (agent.IsFatherModel)
+
+   
+
+
+
+        foreach (Dialoug d in CurrentBNPCPatterns)
         {
-            foreach (Dialoug d in agent.FatherModel.returnIntersectingPatternNodes(CurrentBNPCPatterns, currentNode.MappedSurfaceValue, false))
+
+            if (!getpatternNamesInAlistOfDialoges(intersectingNodes).Contains(d.Pattern))
             {
-                //logical bug somehwre here... 
                 currentNonIntersectingNodesWithCoreValues.Add(d);
-               // Debug.Log(d.Pattern + "added for the sv (non intersecting)" + d.MappedSurfaceValue);
+                s += "<color=yellow>[" + d.Pattern + "]  </color>";
 
             }
 
-        }
-        else
-        {
-            foreach (Dialoug d in agent.MotherModel.returnIntersectingPatternNodes(CurrentBNPCPatterns, currentNode.MappedSurfaceValue, false))
-            {
-                //logical bug somehwre here... 
-                currentNonIntersectingNodesWithCoreValues.Add(d);
-                Debug.Log(d.Pattern + "added for the sv (non intersecting)" + d.MappedSurfaceValue);
+            /* foreach (Dialoug d2 in intersectingNodes)
+             {
+                 if (d.Pattern == d2.Pattern )
+                 {
+                     //currentNonIntersectingNodesWithCoreValues.Remove(d);
+                 } else
+                 {
+                     currentNonIntersectingNodesWithCoreValues.Add(d);
+                     s += "<color=yellow>[" + d.Pattern + "]  </color>";
 
-            }
+                 }
+             }*/
+
         }
+
+    
+
 
         if (currentNonIntersectingNodesWithCoreValues.Count <= 0) //change this to something else opr don't use it via out ,ethod
         {
+            s += "[ all nodes INTERSECT, ADDING THE FIRST ELement as a default answer ( leads to win sit ) ]";
+
             Debug.Log("no nnon intersecting nodes found");
             currentNonIntersectingNodesWithCoreValues.Add(CurrentBNPCPatterns[0]);
 
         }
+        text.text += "\n" + s;
+        WriteToFile(s);
         return currentNonIntersectingNodesWithCoreValues;
     }
     private void giveMoralModelChoice()
@@ -517,10 +558,7 @@ public class FastTesting : MonoBehaviour
 
     }
 
-    //Dialoug currentCNPCStance = new Dialoug("","", "graduate");
-   
 
-    //refactor these --- 
     private void setPlayerPattern()
     {
         text.text += " 1. I agree \n ";
@@ -596,7 +634,7 @@ public class FastTesting : MonoBehaviour
     void converseAboutNextCharacter()
     {
         treeCounter++;
-        Debug.Log(allCharacterConversationsTrees[treeCounter].root.children[0].Pattern); //psyduck 
+        Debug.Log(" is this ok ?" + allCharacterConversationsTrees[treeCounter].root.children[0].Pattern); //psyduck 
        
         
         startAconversation(allCharacterConversationsTrees[treeCounter]);//the first cgharacter in the list - yhionking about character....etc 
@@ -656,6 +694,12 @@ public class FastTesting : MonoBehaviour
 
     public void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Alpha0))
+        {
+
+            printOutCheatSheet();
+        }
+
         Debug.Log(text.text.Length);
         if (text.text.Length >= characterLimit)
         {
@@ -779,21 +823,9 @@ public class FastTesting : MonoBehaviour
                                 break;
                         }
                     }
-                        
-
-                    
                 }
-               
-
-                
-            }
-
-
-
+             }
         }
-
-
-
     }
     public bool PlayerChnagesTopic = false;
     
@@ -849,11 +881,7 @@ public class FastTesting : MonoBehaviour
         sortedList.AddRange(secondary);
         sortedList.AddRange(therest);
 
-       // Debug.Log(sortedList.Count);
         return sortedList;
-
-
-
     }
     private List<Dialoug> returnListOfDialougNodes(InterestingCharacters character) //change name later 
     {
@@ -895,17 +923,10 @@ public class FastTesting : MonoBehaviour
                     node.setupMoralFocusArguments("error shouled not appear", "should not appear");
 
                 }
-
-
-
                 nodes.Add(node);
-
-
             }
         }
         return nodes;
-
-
     }
 
 
@@ -990,15 +1011,11 @@ public class FastTesting : MonoBehaviour
         temporarySurfaceValues = SVCollection.returnCompatibleSurfaceValues(pattern);
         mappedSV = temporarySurfaceValues[UnityEngine.Random.Range(0, temporarySurfaceValues.Count())];
         return mappedSV;
-
     }
     private string ReturnAgreement(List<DialougStructure> highVaueOpinions, string key)
     {
         throw new NotImplementedException();
     }
-    //HELOME - update below mapping for more than 1 to 1 
-
-    // helper functions 
     private void OrgnizeCNPCOpinions()
     {
 
@@ -1018,9 +1035,6 @@ public class FastTesting : MonoBehaviour
             }
         }
     }
-
-
-
 
     string getIntroductionTopicString(string key, InterestingCharacters character)
     {
@@ -1190,14 +1204,8 @@ public class FastTesting : MonoBehaviour
                 return "If you want to get to know " + character.fullName + ", it’s gonna take some time. They open up very slowly.";
             default:
                 return "missed a tag SOMEWHERE!" + key + "was not authored";
-
-
         }
     }
-
-    //if occupation - then dialoug button - what baout where they work --- need to find some statments like the npc one but for players 
-    //for the NPC --- 
-
     string translateOpinionIntoText(string key)
     {
         switch (key)
@@ -1273,9 +1281,6 @@ public class FastTesting : MonoBehaviour
             case ("selfMadeCube"):
             case ("selfMadeCubeByDedication"):
                 return ("they pulled themselves by their bootstraps");
-
-
-
             case ("MovesAlot"):
                 return "they sure moved alot ";
             case ("SusMovments"):
@@ -1406,12 +1411,119 @@ public class FastTesting : MonoBehaviour
         }
     }
 
-    enum TypeOfPlayerTexts
+    string  returnPlayerProbeAboutDiscovredTopics(Dialoug node)
     {
-        agreement, disagreement, disAgreeOnAflag
-    }
-    TypeOfPlayerTexts typeOfPlayerTexts;
+        //player says how do you feel about ... <SV> 
+        string s = " as you may have noticed I  <color=yellow>";
+        string NPCFeelings = agent.returnCNPCFeelingOnAtopic(node.MappedSurfaceValue);
+        if (NPCFeelings.ToLower() == "high"){
+            s += "[ deeply care about ] ";
+        } else if (NPCFeelings.ToLower() == "mid")
+        {
+            s += "[ somewhat care about ] ";
+        }
+        else
+        {
+            s += "[ don't really care about ] ";
+        }
 
+        s += "</color> "+node.MappedSurfaceValue;
+
+        return s;
+    }
+
+/*    List<string> returnPossibleTopicsFromAPattern(Dialoug d)
+    {
+        //return possible mappings 
+        //since you mentioned + pattern --- what do you think about --- < possible svs>?
+
+        List<string> li = returnAllPossibleSubToSVMapping(d);
+        foreach (string s in li)
+        {
+            Debug.Log("probe about" + s);
+        }
+    }*/
+
+
+    void printOutCheatSheet()
+    {
+        
+        string o = "";
+        o += "printing out a cheat sheet involving the CNPC " + agent.ConversationalNpcName + "\n";
+        o += "The cnpc uses ";
+        if (agent.IsFatherModel)
+        {
+            o += "<color=red> the strict father model in deeply cared about topics </color> \n";
+        }else
+        {
+            o += "<color=blue> the nurturant parent model in deeply cared about topics </color> \n";
+
+        }
+        int  i = 0;
+        foreach (Dialoug d in CurrentBNPCPatterns)
+        {
+            o += i +". The current  BNPC " + currentNode.parent.Pattern + " has the pattern <color=#fcecae>[" + d.Pattern + "]</color> \n";
+            o += "that pattern is currently mapped to the SV <color=yellow>[" +d.MappedSurfaceValue+"] </color> \n";
+            foreach (string s in returnAllPossibleSubToSVMapping(d))
+            {
+                o += "the pattern <color=#fcecae>[" + d.Pattern + "]  </color> could be mapped to <color=yellow> [" + s + "] </color> where " + returnPlayerProbenpcFeelingOnKnowntopic(s) +"\n";
+            }
+            o += "\n";
+            i++;
+        }
+
+        if(probedAboutSV.Count <= 0)
+        {
+            o += "the player did not probe about any topics ";
+        }
+
+        text.text += o;
+        WriteToFile(o);
+    }
+    string returnPlayerProbenpcFeelingOnKnowntopic(string sv)
+    {
+        //player says how do you feel about ... <SV> 
+        string s = "The CNPC  " + agent.ConversationalNpcName + "  <color=orange>";
+        string NPCFeelings = agent.returnCNPCFeelingOnAtopic(sv);
+        if (NPCFeelings.ToLower() == "high")
+        {
+            s += "\"deeply cares about \"";
+        }
+        else if (NPCFeelings.ToLower() == "mid")
+        {
+            s += "\" somewhat cares about\"";
+        }
+        else
+        {
+            s += "\" does not really care about \" ";
+        }
+
+        s += "</color> the SV " + sv;
+
+        return s;
+    }
+    string returnPlayerProbenpcFeelingOnKnowntopic(Dialoug node)
+    {
+        //player says how do you feel about ... <SV> 
+        string s = "The CNPC  "+ agent.ConversationalNpcName + "  <color=yellow>";
+        string NPCFeelings = agent.returnCNPCFeelingOnAtopic(node.MappedSurfaceValue);
+        if (NPCFeelings.ToLower() == "high")
+        {
+            s += "\"deeply cares about \"";
+        }
+        else if (NPCFeelings.ToLower() == "mid")
+        {
+            s += "\" somewhat cares about\"";
+        }
+        else
+        {
+            s += "\" does not really care about \" ";
+        }
+
+        s += "</color>" + node.MappedSurfaceValue;
+
+        return s;
+    }
     string getPlayerResponce(string surfaceValue, string rating, TypeOfPlayerTexts playerResponceType, bool isMoralARG) //change this intyo player responce
     {
 
@@ -1447,14 +1559,12 @@ public class FastTesting : MonoBehaviour
                         if (moralFocusCounter == 0)
                         {
                             moralFocusCounter += 1;
-                            return  p.playerNarrativeElements.playerMoralDisagreementText[0]; //player can agree or disagree here 
-
+                            return  p.playerNarrativeElements.playerMoralDisagreementText[0]; 
                         }
                         else
                         {
                             moralFocusCounter = 0;
                             return  p.playerNarrativeElements.playerMoralDisagreementText[1];
-
                         }
 
                     }
@@ -1482,10 +1592,6 @@ public class FastTesting : MonoBehaviour
     {
         setUp();
     }
-
-   
-
-
     public string getButtonTextTranslation(string pattern)
     {
 
@@ -1502,29 +1608,21 @@ public class FastTesting : MonoBehaviour
                 return "but" + fact.BNPCsearchTranslation[r];
             }
         }
-
         return "no translation found for the pattern " + pattern;
     }
-
+      
     [SerializeField] bool checkCorutine;
     bool isItTypying()
     {
         return checkCorutine;
     }
 
-
-
     void  waitAndPrintAgreement(string t)   //so this works... but does nto when in larger scenartio.. 
     {
-
-
         if (!currentTree.FullyExplored)
         {
             printText(false, getPlayerResponce(currentNode.MappedSurfaceValue,
                                 currentNode.Rating, TypeOfPlayerTexts.agreement, false));
-
-
-
 
             printText(true, t);
 
@@ -1533,8 +1631,6 @@ public class FastTesting : MonoBehaviour
             treeCounter++;
                currentTree = allCharacterConversationsTrees[treeCounter];
         }
-
-
         checkEndConversationAndMove();
     }
 
@@ -1544,9 +1640,7 @@ public class FastTesting : MonoBehaviour
         if (isInMoralModelArgumentLoop && !playerChoseAModel)
         {
             giveMoralModelChoice();
-            // activatePlayerOptionsInButton(currentNode);
-           // Debug.Log("need to check something here ----");
-       
+            // activatePlayerOptionsInButton(currentNode);       
         } 
         else  if (isInMoralModelArgumentLoop && playerChoseAModel)
         {
@@ -1603,8 +1697,8 @@ public class FastTesting : MonoBehaviour
         {
 
             bool isMf = agent.IsMoralFocus(currentNode.MappedSurfaceValue);
-            text.text += "<color=orange> is this text part of the moral  focus area? " + isMf + "\n</color>";
-            WriteToFile("<color=orange> is this text part of the moral  focus area? " + isMf + "\n</color>");
+           /* text.text += "<color=orange> is this text part of the moral  focus area? " + isMf + "\n</color>";
+            WriteToFile("<color=orange> is this text part of the moral  focus area? " + isMf + "\n</color>");*/
 
             //basic disagreement 1
             printText(false, getPlayerResponce(currentNode.MappedSurfaceValue, currentNode.Rating,
@@ -1679,11 +1773,11 @@ public class FastTesting : MonoBehaviour
                 if (agent.IsFatherModel)
                 {
 
-                    printAllCounterSrgumentsForAstance(agent.FatherModel.returnAllPossibleCounterArgumentsDebugging(getPlayerStance(), currentBNPCPatterns), CurrentCNPCSTANCE);
+                    printAllCounterSrgumentsForAstance(agent.FatherModel.returnAllPossibleCounterArgumentsDebugging(getPlayerStance(), getCurrentListOfBNPCPatternNames()), CurrentCNPCSTANCE);
                     WriteToFileAllCounterSrgumentsForAstance(agent.FatherModel.returnAllPossibleCounterArgumentsDebugging(CurrentCNPCSTANCE), getPlayerStance());
                 } else
                 {
-                    printAllCounterSrgumentsForAstance(agent.MotherModel.returnAllPossibleCounterArgumentsDebugging(getPlayerStance(), currentBNPCPatterns), CurrentCNPCSTANCE);
+                    printAllCounterSrgumentsForAstance(agent.MotherModel.returnAllPossibleCounterArgumentsDebugging(getPlayerStance(), getCurrentListOfBNPCPatternNames()), CurrentCNPCSTANCE);
 
                     WriteToFileAllCounterSrgumentsForAstance(agent.MotherModel.returnAllPossibleCounterArgumentsDebugging(getPlayerStance()), CurrentCNPCSTANCE);
 
@@ -1708,7 +1802,7 @@ public class FastTesting : MonoBehaviour
     }
 
 
-    List<string> returnCurrentListOfBNPCPatternNames()
+    List<string> getCurrentListOfBNPCPatternNames()
     {
         List<string> temp = new List<string>();
         foreach (Dialoug d in CurrentBNPCPatterns)
@@ -1720,11 +1814,22 @@ public class FastTesting : MonoBehaviour
     }
 
 
+    List<string> getpatternNamesInAlistOfDialoges(List<Dialoug> li)
+    {
+        List<string> temp = new List<string>();
+        foreach (Dialoug d in li)
+        {
+            temp.Add(d.Pattern);
+
+        }
+        return temp;
+    }
+
 
     void PlayerchangeTopic(Dialoug node)
     {
         currentNode = node;
-        text.text += "player changed topics too" + node.MappedSurfaceValue;
+        text.text += "player changed topics to" + node.MappedSurfaceValue;
         if (playerArguesWithFatherModel)
         {
             playerChoseFatherModel();
@@ -1733,6 +1838,11 @@ public class FastTesting : MonoBehaviour
             playerChoseMotherModel();
         }
         PlayerChnagesTopic = false;
+
+    }
+
+    void ProbeAbout()
+    {
 
     }
 
@@ -1751,8 +1861,8 @@ public class FastTesting : MonoBehaviour
     private string getarandomBNPCPattern()
     {
 
-        int r = UnityEngine.Random.Range(0, currentBNPCPatterns.Count);
-        return currentBNPCPatterns[r];
+        int r = UnityEngine.Random.Range(0, getCurrentListOfBNPCPatternNames().Count);
+        return getCurrentListOfBNPCPatternNames()[r];
     }
 
     //ticktickboom
@@ -1876,7 +1986,7 @@ public class FastTesting : MonoBehaviour
                 }
                 NPCResponce = agent.FatherModel.returnFatherModelArgumetnsText(
                               currentNode.MappedSurfaceValue, currentNode.Pattern,
-                              currentMoralModelExploredPatterns, currentBNPCPatterns, true);
+                              currentMoralModelExploredPatterns, getCurrentListOfBNPCPatternNames(), true);
 
                 
                 /* r = NPCResponce.Split('_').Last();
@@ -1989,7 +2099,7 @@ public class FastTesting : MonoBehaviour
 
             }
 
-            resetConversationForNextCNPC();
+            resetConversationForNextCNPC(); //bugged out here --- 
 
 
         } else
@@ -2035,14 +2145,35 @@ public class FastTesting : MonoBehaviour
 
         foreach (string r in ratings)
         {
-
-            foreach (DialougStructure op in highVaueOpinions)
+            if(r== "high")
             {
-                if (op.topic.Split('_').Last().ToLower() == SV.ToLower())
+                foreach (DialougStructure op in highVaueOpinions)
                 {
-                    LISToFsurfaceOpinions.Add("The SV \'" + SV + "\' with a rating of " + r + ":" + op.NarrativeElements.surfaceOpinionOnTopic);
+                    if (op.topic.Split('_').Last().ToLower() == SV.ToLower())
+                    {
+                        LISToFsurfaceOpinions.Add("The SV \'" + SV + "\' with a rating of " + r + ":" + op.NarrativeElements.surfaceOpinionOnTopic);
+                    }
+                }
+            }else if (r == "mid")
+            {
+                foreach (DialougStructure op in midVaueOpinions)
+                {
+                    if (op.topic.Split('_').Last().ToLower() == SV.ToLower())
+                    {
+                        LISToFsurfaceOpinions.Add("The SV \'" + SV + "\' with a rating of " + r + ":" + op.NarrativeElements.surfaceOpinionOnTopic);
+                    }
+                }
+            } else
+            {
+                foreach (DialougStructure op in lowVaueOpinions)
+                {
+                    if (op.topic.Split('_').Last().ToLower() == SV.ToLower())
+                    {
+                        LISToFsurfaceOpinions.Add("The SV \'" + SV + "\' with a rating of " + r + ":" + op.NarrativeElements.surfaceOpinionOnTopic);
+                    }
                 }
             }
+          
 
         }
 
@@ -2065,7 +2196,21 @@ public class FastTesting : MonoBehaviour
         text.text += "\n ";
 
     }
+    void printAdditionalInformation(List<Dialoug> sArray)
+    {
+        string s = "";
+        s += "<color=orange>Additional information:</color>";
 
+        foreach (Dialoug d in sArray)
+        {
+            s += "<color=#ff6d00> [ " + s + " ]</color> ";
+
+        }
+
+        text.text += s + "\n ";
+        WriteToFile(s);
+
+    }
     void WriteToFileAllCounterSrgumentsForAstance(List <KeyValuePair<string,string>> li, string stance)
     {
         int i = 0;
