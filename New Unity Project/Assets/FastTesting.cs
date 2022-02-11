@@ -79,7 +79,7 @@ public class FastTesting : MonoBehaviour
 
     string playerName = "player";
 
-    List<string> probedAboutSV = new List<string>(); // same way we got the other sv ////
+    List<Dialoug> probedAboutList = new List<Dialoug>(); // same way we got the other sv ////
     enum TypeOfPlayerTexts
     {
         agreement, disagreement, disAgreeOnAflag
@@ -114,6 +114,7 @@ public class FastTesting : MonoBehaviour
 
     private void resetConversationForNextCNPC()
     {
+        text.text += "reseting varibles/ fields for next BNPC \n";
         //Debug.Log("reseting agent and conversations");
         CurrentCNPCSTANCE = "high";
         currentPlayerStance = "low";
@@ -385,8 +386,10 @@ public class FastTesting : MonoBehaviour
 
             }
         }
-        text.text += "4. change topic \n";
-        WriteToFile("4. change topic \n");
+        text.text += "4. probe about \n";
+        WriteToFile("4. probe about \n");
+        text.text += "5. change topic \n";
+        WriteToFile("5. change topic \n");
     }
 
     private List<Dialoug> shuffleDialougNodes(List<Dialoug> nodes)
@@ -755,7 +758,7 @@ public class FastTesting : MonoBehaviour
             } else if(isInMoralModelArgumentLoop && playerChoseAModel)
             {
                 Debug.Log("inside options choice!");
-                if (!PlayerChnagesTopic)
+                if (!PlayerChnagesTopic && !playerProbedMenuOpen)
                 {
                     switch (typedResult)
                     {
@@ -776,12 +779,45 @@ public class FastTesting : MonoBehaviour
                             PlayerDisagreedOnFlag(temporaryListOfNodes[2]);
                             break;
                         case (4):
+                            ProbeAbout();
+                            break;
+                        case (5)://change this 
+                            PlayerSwitchesTopics();
+                            break;
+                        default:
+                            break;
+                    } 
+                }
+                else if (playerProbedMenuOpen)
+                {
+
+                    switch (typedResult)
+                    {
+
+                        case (1):
+                          
+                            playerInquireAboutASV(probedAboutList[0]);
+                            break;
+                        case (2):
+                            Debug.Log("player pressed node 1");
+
+                            playerInquireAboutASV(probedAboutList[1]); break;
+                        case (3):
+                            Debug.Log("player pressed node 2");
+
+                            playerInquireAboutASV(probedAboutList[2]); break;
+                        case (4):
+                            playerInquireAboutASV(probedAboutList[3]);
+                            break;
+                        case (5)://change this 
                             PlayerSwitchesTopics();
                             break;
                         default:
                             break;
                     }
-                } else
+
+                }
+                else
                 {
                     if (typedResult <= CurrentBNPCPatterns.Count)
                     {
@@ -836,8 +872,8 @@ public class FastTesting : MonoBehaviour
         foreach (Dialoug d in CurrentBNPCPatterns)
         {
             i++;
-            text.text += i+".some transliation into topic for " + d.MappedSurfaceValue +"\n";
-            WriteToFile(i + ".some transliation into topic for " + d.MappedSurfaceValue + "\n");
+            text.text += i+".some transliation into topic for [" + d.MappedSurfaceValue +" ]\n";
+            WriteToFile(i + ".some transliation into topic for [" + d.MappedSurfaceValue + "]\n");
         }
 
     }
@@ -1472,9 +1508,17 @@ public class FastTesting : MonoBehaviour
             i++;
         }
 
-        if(probedAboutSV.Count <= 0)
+        if(probedAboutList.Count <= 0)
         {
-            o += "the player did not probe about any topics ";
+            o += "the player did not probe about any topics \n";
+        } else
+        {
+           o+=  "the avaible topics to probe are : \n";
+            foreach(Dialoug d in probedAboutList)
+            {
+                o += "[" + d.Pattern + "] under the SV ["+ d.MappedSurfaceValue+ "]";
+            }
+            o += "\n";
         }
 
         text.text += o;
@@ -1619,6 +1663,7 @@ public class FastTesting : MonoBehaviour
 
     void  waitAndPrintAgreement(string t)   //so this works... but does nto when in larger scenartio.. 
     {
+        probedAboutList.Add(currentNode);
         if (!currentTree.FullyExplored)
         {
             printText(false, getPlayerResponce(currentNode.MappedSurfaceValue,
@@ -1717,7 +1762,7 @@ public class FastTesting : MonoBehaviour
                 {
                     if (agent.IsFatherModel)
                     {
-                        text.text += "<color=orange> what is the cnpc's stance (high/defend) (low/attack)" + agent.FatherModel.returnCurrentCnpcStance(currentNode.MappedSurfaceValue, currentNode.Pattern) + "\n </color>";
+                        text.text += "<color=orange> what is the cnpc's stance (high/defend) | (low/attack) : " + agent.FatherModel.returnCurrentCnpcStance(currentNode.MappedSurfaceValue, currentNode.Pattern) + "\n </color>";
                         WriteToFile("what is the cnpc's stance (high/defend) (low/attack)" + agent.FatherModel.returnCurrentCnpcStance(currentNode.MappedSurfaceValue, currentNode.Pattern) + "\n ");
                         s = "using the father model  " +  agent.FatherModel.returnAppendedSchemaText(currentNode.MappedSurfaceValue, currentNode.Pattern, currentMoralModelExploredPatterns, true);
                     
@@ -1749,27 +1794,35 @@ public class FastTesting : MonoBehaviour
                 }
 
                 currentMoralModelExploredPatterns.Add(currentNode.Pattern);
+                text.text += "adding <color=yellow>[" + currentNode.Pattern + "] </color>'s node as part of the CNPC's explored patterns";
 
-                
+
+
 
                 if (arg != "GenericResponceGiven")
                 {
                     agent.CNPCScore += 1;
-                  /*  text.text += "<color=yellow>  \n" + "current score --- player" + agent.PlayerScore + "npc score" +
-                                agent.CNPCScore + " </color> \n";*/
-                    //printText(true, arg);
+                    text.text += "the full argument made by the cnpc was " + s +" "+  arg +"this argument resulted in a corrrect use of the model as the CNPC did not default to a generic responce under this SV [" + currentNode.MappedSurfaceValue + "]\n";
+                    WriteToFile("the full argument made by the cnpc was " + s + " " + arg + "this argument resulted in a corrrect use of the model as the CNPC did not default to a generic responce under this SV [" + currentNode.MappedSurfaceValue + "]\n");
+                    text.text += "<color=yellow>  \n" + "cthe current score is player -> " + agent.PlayerScore + "CNPC -> " +
+                                agent.CNPCScore + " </color> \n";
+
+                    
 
 
                 }
                 else if (arg == "GenericResponceGiven")
                 {
+
                    string p =  getarandomBNPCPattern();
                     arg = getGenricResponce(p,  CurrentCNPCSTANCE);
-                    //printText(true, arg);
+                    text.text += "The argument resulted in a generic responce as \n ";
+                    printText(true, s + "\n" + arg);
 
                 }
 
-                printText(true, s + "\n" + arg);
+               /* printText(true, s + "\n" + arg);*/
+
                 if (agent.IsFatherModel)
                 {
 
@@ -1784,13 +1837,15 @@ public class FastTesting : MonoBehaviour
                 }
                 // currentMoralModelExploredPatterns.Add(currentNode.Pattern);
                 isInMoralModelArgumentLoop = true;
-
-                
-             
-            }
+                text.text += "in morral model argument loop?" + isInMoralModelArgumentLoop;
 
 
-        } 
+               
+                text.text += "Adding  the pattern [" + currentNode.Pattern + "] that is mapped to [" + currentNode.MappedSurfaceValue + "]\n";
+            } // end of high check --- 
+
+            probedAboutList.Add(currentNode);
+        } //fully explored tree  
             else
             {
                 treeCounter++;
@@ -1841,9 +1896,38 @@ public class FastTesting : MonoBehaviour
 
     }
 
+    bool playerProbedMenuOpen = false;
+
     void ProbeAbout()
     {
+        playerProbedMenuOpen = true;
+        int i = 0;
 
+        if (probedAboutList.Count <= 0)
+        {
+            text.text += "nothing discored\n";
+            WriteToFile("nothing discored\n");
+        }
+        else {
+
+            foreach (Dialoug d in probedAboutList)
+            {
+                i++;
+                text.text += i + "inquire about " + d.MappedSurfaceValue + " ]\n";
+                WriteToFile(i + "inquire about " + d.MappedSurfaceValue + "]\n");
+            }
+
+        }
+
+     
+
+    }
+
+    void playerInquireAboutASV(Dialoug d)
+    {
+        printText(false, "what do you think about " +d.MappedSurfaceValue);
+        printText(true, returnPlayerProbeAboutDiscovredTopics(d));
+        playerProbedMenuOpen = false;
     }
 
     string getPlayerStance()
@@ -1876,6 +1960,7 @@ public class FastTesting : MonoBehaviour
 */        if (agent.IsFatherModel)
         {
             CurrentCNPCSTANCE = agent.FatherModel.returnCurrentCnpcStance(currentNode.MappedSurfaceValue, currentNode.Pattern);
+
 
             if (CurrentCNPCSTANCE.ToLower() == "high")
             {
@@ -1916,7 +2001,8 @@ public class FastTesting : MonoBehaviour
 
         if (!currentTree.FullyExplored)
         {
-
+            text.text += "the current tree (bgchar) has not been fully explored\n";
+            
             bool isMf = agent.IsMoralFocus(currentNode.MappedSurfaceValue);
 
             //basic disagreement 1
@@ -1956,20 +2042,25 @@ public class FastTesting : MonoBehaviour
 
 
             currentMoralModelExploredPatterns_PLAYER.Add(node.Pattern); //make sure it is no longer an optopn for the olayer otter
-
+            text.text += "adding " +node.Pattern +"to the list of explored patterns by the player -- should this be per SV?\n";
+            //if the topic chnaged clear playerexplored patterns and cnpc's explored patterns
             if (playerResponce != "GenericResponceGiven")
             {
                 agent.PlayerScore += 1;
-                text.text += "<color=yellow>  \n" + "current score --- player" + agent.PlayerScore + " \n npc score -----" +
-                            agent.CNPCScore + " </color> \n";
-                WriteToFile("<color=yellow>  \n" + "current score --- player" + agent.PlayerScore + " \n npc score -----" +
-                            agent.CNPCScore + " </color> \n");
+           
+
+                text.text += "<color=yellow>  \n" + "the current score is:  player -> " + agent.PlayerScore + "CNPC -> " +
+                                agent.CNPCScore + " </color> \n";
+                text.text += "the player's choice resulted in the use of  moral model argument\n";
                 printText(false, playerResponce);
              
 
             }
             else if (playerResponce == "GenericResponceGiven")
             {
+
+                text.text += "the player's choice resulted in the of a generic argument\n";
+
                 playerResponce = getGenricResponce(node.Pattern, currentPlayerStance);
                 printText(false, playerResponce);
 
@@ -1979,16 +2070,19 @@ public class FastTesting : MonoBehaviour
             string r = " ";
             if (agent.IsFatherModel)
             {
-
+                string t ="the CNPC's current explored patterns include: ";
                 foreach(string n in currentMoralModelExploredPatterns)
                 {
                     Debug.Log(n);
+                    t += "[" + n + "]";
                 }
-                NPCResponce = agent.FatherModel.returnFatherModelArgumetnsText(
+                t += "\n";
+
+               NPCResponce = agent.FatherModel.returnFatherModelArgumetnsText(
                               currentNode.MappedSurfaceValue, currentNode.Pattern,
                               currentMoralModelExploredPatterns, getCurrentListOfBNPCPatternNames(), true);
 
-                
+                string usedPattern = "";
                 /* r = NPCResponce.Split('_').Last();
                 Debug.Log("this should give us a pattern " + r);
                 NPCResponce = NPCResponce.Split('_').First();
@@ -2010,8 +2104,8 @@ public class FastTesting : MonoBehaviour
 
             if (NPCResponce != "GenericResponceGiven")
             {
-                agent.CNPCScore += 1; //BUG HERE REPORT
-                text.text += "<color=yellow>  \n" + "current score --- player" + agent.PlayerScore + "\n npc score" +
+                agent.CNPCScore += 1; //BUG HERE REPORT.
+                text.text += "<color=yellow>  \n" + "current score ---player" + agent.PlayerScore + "\n npc score" +
                     agent.CNPCScore + " </color> \n";
                     
                 printText(true, NPCResponce);   
@@ -2221,7 +2315,7 @@ public class FastTesting : MonoBehaviour
             foreach (KeyValuePair<string, string> kvp in li)
             {
                 i++;
-                s+= "<color=#ff6d00> By using the " + i + ".  SV[" + kvp.Key + "]" + " Responce " + kvp.Value + "</color> \n";
+                s+= "<color=#ff6d00> By using the " + i + ".  SV [" + kvp.Key + "]" + " Responce " + kvp.Value + "</color> \n";
             }
         WriteToFile(s);
 
@@ -2237,9 +2331,9 @@ public class FastTesting : MonoBehaviour
             i++;
             if (i <= 5)
             {
-                firstFive += "<color=#ff6d00> By using the " + i + ".  SV[" + kvp.Key + "]" + " Responce " + kvp.Value + "</color> \n";
+                firstFive += "<color=#ff6d00> By using the " + i + ".  SV [" + kvp.Key + "]" + " Responce " + kvp.Value + "</color> \n";
             }
-            s += "<color=#ff6d00> By using the " + i + ".  SV[" + kvp.Key + "]" + " Responce " + kvp.Value + "</color> \n";
+            s += "<color=#ff6d00> By using the " + i + ".  SV [" + kvp.Key + "]" + " Responce " + kvp.Value + "</color> \n";
         
         }
         if(s.Length > 30000 && text.text.Length >=30000)
@@ -2249,7 +2343,7 @@ public class FastTesting : MonoBehaviour
 
         } else
         {
-            text.text += "printing the first five elements: refer to output file for more information \n";
+            text.text += "The total possible counter arguments with constraining the result to the current BNPC patterns are ["+ i+ " ] \n printing the first five elements: refer to output file for more information \n";
             text.text += firstFive;
             WriteToFile(s);
         }

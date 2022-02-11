@@ -234,7 +234,7 @@ public class NurturantParentMorality:MoralModels {
             {
                 if (svo.schema.Split('_').First().ToLower() == schemaResult && intersectingPatterns.Contains(svo.subvalue))
                 {
-                    svAndText.Add(new KeyValuePair<string, string>("surfaceValue:" + arg.SVkey, svo.schemaText + " |text|: " + svo.text + "for subvalue" + svo.subvalue));
+                    svAndText.Add(new KeyValuePair<string, string>("surfaceValue: and schema text are: " + arg.SVkey, svo.schemaText + " | argument text|: " + svo.text + "for subvalue" + svo.subvalue));
                 }
             }
         }

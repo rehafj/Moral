@@ -294,7 +294,7 @@ public class StrictFatherMorality : MoralModels
             {
                 if(svo.schema.Split('_').First().ToLower() == stance) //low or high
                 {
-                    svAndText.Add(new KeyValuePair<string, string> ( arg.SVkey, "with the transitional schema text \'"+svo.schemaText + " \'and the actual point" + svo.text + "for subvalue" + svo.subvalue));
+                    svAndText.Add(new KeyValuePair<string, string> ( arg.SVkey, "with the transitional schema text \'"+svo.schemaText + " \'and the actual point" + svo.text + "for subvalue :" + svo.subvalue));
                 }
             }
         }
@@ -310,7 +310,9 @@ public class StrictFatherMorality : MoralModels
             {
                 if (svo.schema.Split('_').First().ToLower() == stance && intersectingPatterns.Contains(svo.subvalue)) //low or high
                 {
-                    svAndText.Add(new KeyValuePair<string, string>(arg.SVkey, "with the transitional schema text \'" + svo.schemaText + " \'and the actual point" + svo.text + "for subvalue" + svo.subvalue));
+                    svAndText.Add(new KeyValuePair<string, string>(arg.SVkey,
+                        "with the transitional schema text \'" + svo.schemaText + " \'and the argument  : " 
+                        + svo.text + " for subvalue " + svo.subvalue));
                 }
             }
         }
@@ -406,15 +408,16 @@ public class StrictFatherMorality : MoralModels
                     if (sobject.subvalue == subvalue && NPCType.ToLower() == r) //low or high
                     {
                        // exploredSterings.Add(subvalue);//.change this to the npc or player list of static flags ( if cnpc flag )
-                        return "<color=yellow> the schema used is:"+ sobject.schema + "</color>" + sobject.schemaText;
+                        return " the schema used is: <color=yellow> [ " + sobject.schema + " ]</color> \n and the schema translation text is: " + sobject.schemaText;
                     }
                     else if (!exploredSterings.Contains(currentPatternCheck))
                     {
+                        
                         //   Debug.Log(" inside if it does not cvontained explorex strings !!!!!+ ! does thios happen ?  " + r + "and npc type" + NPCType.ToLower());
 
                         if (NPCType.ToLower() == r) // add a check if bnpc has this flag  here 
                         {
-                            return "<color=yellow> the schema used is:" + sobject.schema + "</color>" + sobject.schemaText + "<color=yellow>_" + sobject.subvalue +"</color>"; //else return the first thing that is high 
+                            return " the schema used is: <color=yellow> [" + sobject.schema + "] </color>" + sobject.schemaText + "<color=yellow> \n and the schema translation text is: " + sobject.subvalue +"</color>"; //else return the first thing that is high 
                             //debug whatever uses this!!!! AGHHHHHHHHHHHHHHHH
                         }
                       //  exploredSterings.Add(currentPatternCheck);//.change this to the npc or player list of static flags ( if cnpc flag )
