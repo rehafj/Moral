@@ -159,7 +159,7 @@ public class StrictFatherMorality : MoralModels
                                 string t = NPCType.ToLower() == "high" ? "defend" : "oppose";
 
                                 Debug.Log("found " + sobject.subvalue);
-                                return "<color=red> FM used for the pattern  " + subvalue + " under the SV: " + surfaceValue + "</color> " + sobject.text + "<color=yellow> to " + t + "</color>_" + sobject.subvalue;
+                                return "<color=red> FM used  the pattern [ " + subvalue + " ] under the SV: [" + surfaceValue + "] </color> \n" + sobject.text + "<color=yellow> to " + t + "</color>_" + sobject.subvalue;
 
 
                             }//add it to explored?
@@ -417,7 +417,7 @@ public class StrictFatherMorality : MoralModels
 
                         if (NPCType.ToLower() == r) // add a check if bnpc has this flag  here 
                         {
-                            return " the schema used is: <color=yellow> [" + sobject.schema + "] </color>" + sobject.schemaText + "<color=yellow> \n and the schema translation text is: " + sobject.subvalue +"</color>"; //else return the first thing that is high 
+                            return " the schema used is: <color=yellow> [" + sobject.schema + "] </color> : " + sobject.schemaText + "<color=yellow> \n  the schema translation text is: " + sobject.subvalue +"</color>\n"; //else return the first thing that is high 
                             //debug whatever uses this!!!! AGHHHHHHHHHHHHHHHH
                         }
                       //  exploredSterings.Add(currentPatternCheck);//.change this to the npc or player list of static flags ( if cnpc flag )

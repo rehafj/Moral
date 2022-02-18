@@ -172,7 +172,7 @@ public class FastTesting : MonoBehaviour
         {
             
             text.text += "<color=#c6c5b9>" + t + "\n </color>";
-            WriteToFile("npc text:  "+ t + " \n");
+            WriteToFile("\n npc text:  "+ t + " \n");
         }
         else
         {
@@ -449,6 +449,7 @@ public class FastTesting : MonoBehaviour
             foreach (Dialoug d in agent.FatherModel.returnIntersectingPatternNodes(CurrentBNPCPatterns, currentNode.MappedSurfaceValue, true))
             {
                 currentIntersectingNodesWithCoreValues.Add(d);
+                s += "<color=yellow>[" + d.Pattern + "] </color> ";
 
             }
         }
@@ -703,7 +704,7 @@ public class FastTesting : MonoBehaviour
             printOutCheatSheet();
         }
 
-        Debug.Log(text.text.Length);
+      //  Debug.Log(text.text.Length);
         if (text.text.Length >= characterLimit)
         {
             //clearFile();
@@ -1516,7 +1517,7 @@ public class FastTesting : MonoBehaviour
            o+=  "the avaible topics to probe are : \n";
             foreach(Dialoug d in probedAboutList)
             {
-                o += "[" + d.Pattern + "] under the SV ["+ d.MappedSurfaceValue+ "]";
+                o += "[" + d.Pattern + "] under the SV ["+ d.MappedSurfaceValue+ "]\n";
             }
             o += "\n";
         }
@@ -1762,7 +1763,7 @@ public class FastTesting : MonoBehaviour
                 {
                     if (agent.IsFatherModel)
                     {
-                        text.text += "<color=orange> what is the cnpc's stance (high/defend) | (low/attack) : " + agent.FatherModel.returnCurrentCnpcStance(currentNode.MappedSurfaceValue, currentNode.Pattern) + "\n </color>";
+                        text.text += "\n<color=orange> what is the cnpc's stance (high/defend) | (low/attack) : " + agent.FatherModel.returnCurrentCnpcStance(currentNode.MappedSurfaceValue, currentNode.Pattern) + "\n </color>";
                         WriteToFile("what is the cnpc's stance (high/defend) (low/attack)" + agent.FatherModel.returnCurrentCnpcStance(currentNode.MappedSurfaceValue, currentNode.Pattern) + "\n ");
                         s = "using the father model  " +  agent.FatherModel.returnAppendedSchemaText(currentNode.MappedSurfaceValue, currentNode.Pattern, currentMoralModelExploredPatterns, true);
                     
@@ -1794,7 +1795,7 @@ public class FastTesting : MonoBehaviour
                 }
 
                 currentMoralModelExploredPatterns.Add(currentNode.Pattern);
-                text.text += "adding <color=yellow>[" + currentNode.Pattern + "] </color>'s node as part of the CNPC's explored patterns";
+                text.text += "adding <color=yellow>[" + currentNode.Pattern + "] </color>'s node as part of the CNPC's explored patterns\n";
 
 
 
@@ -1802,8 +1803,8 @@ public class FastTesting : MonoBehaviour
                 if (arg != "GenericResponceGiven")
                 {
                     agent.CNPCScore += 1;
-                    text.text += "the full argument made by the cnpc was " + s +" "+  arg +"this argument resulted in a corrrect use of the model as the CNPC did not default to a generic responce under this SV [" + currentNode.MappedSurfaceValue + "]\n";
-                    WriteToFile("the full argument made by the cnpc was " + s + " " + arg + "this argument resulted in a corrrect use of the model as the CNPC did not default to a generic responce under this SV [" + currentNode.MappedSurfaceValue + "]\n");
+                    text.text += "the full argument made by the cnpc was :" + s +" "+  arg +"\nthis argument resulted in a corrrect use of the model as the CNPC did not default to a generic response under this SV [" + currentNode.MappedSurfaceValue + "]\n";
+                    WriteToFile("the full argument made by the cnpc was :" + s + " " + arg + "\nthis argument resulted in a corrrect use of the model as the CNPC did not default to a generic response under this SV [" + currentNode.MappedSurfaceValue + "]\n");
                     text.text += "<color=yellow>  \n" + "cthe current score is player -> " + agent.PlayerScore + "CNPC -> " +
                                 agent.CNPCScore + " </color> \n";
 
@@ -2100,7 +2101,7 @@ public class FastTesting : MonoBehaviour
               currentNode.MappedSurfaceValue, currentNode.Pattern, currentMoralModelExploredPatterns, true);
             }
 
-            Debug.Log("NPC responce" + NPCResponce);
+            //Debug.Log("NPC responce" + NPCResponce);
 
             if (NPCResponce != "GenericResponceGiven")
             {
@@ -2134,7 +2135,7 @@ public class FastTesting : MonoBehaviour
 
          
             innerConversationCounter += 1;
-            Debug.Log("innerConversationCounter: " + innerConversationCounter);
+          //  Debug.Log("innerConversationCounter: " + innerConversationCounter);
            checkInnerConversationLoop();
 
         } 
